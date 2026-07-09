@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dailyblip — AI for creators, caught up in 60 seconds</title>
+<meta name="description" content="The Daily Blip: everything that happened in AI for people who make things — image, video, music, and words — compressed into a 60-second brief.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071A1F;
+  --ink-2:#0C242B;
+  --ink-3:#123039;
+  --line:rgba(158,216,210,.13);
+  --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1;
+  --dim:#9AB7B2;
+  --faint:#5E7D79;
+  --amber:#FFB454;
+  --amber-deep:#E58E2B;
+  --aqua:#63D8C6;
+  --red:#FF7A6B;
+  --display:"Bricolage Grotesque",sans-serif;
+  --body:"Spline Sans",sans-serif;
+  --mono:"Spline Sans Mono",monospace;
+  --radius:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:15.5px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(1200px 500px at 75% -10%, rgba(99,216,198,.06), transparent 60%),
+    radial-gradient(900px 600px at 8% 110%, rgba(255,180,84,.05), transparent 55%);
+}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
+::selection{background:rgba(255,180,84,.35)}
+
+/* ---------- ticker ---------- */
+.ticker{
+  position:relative;z-index:2;
+  border-bottom:1px solid var(--line);
+  background:var(--ink-2);
+  overflow:hidden;white-space:nowrap;
+  font-family:var(--mono);font-size:12px;letter-spacing:.02em;
+  display:flex;align-items:center;
+}
+.ticker-label{
+  flex:0 0 auto;padding:7px 14px;
+  color:var(--amber);border-right:1px solid var(--line);
+  background:var(--ink-2);position:relative;z-index:2;
+  display:flex;gap:8px;align-items:center;
+}
+.ticker-viewport{flex:1;overflow:hidden}
+.ticker-track{display:inline-block;padding:7px 0;animation:tick 55s linear infinite}
+.ticker-track span{color:var(--dim);margin-right:3.5em}
+.ticker-track b{color:var(--text);font-weight:500}
+.ticker-track em{color:var(--amber);font-style:normal}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker:hover .ticker-track{animation-play-state:paused}
+
+/* ---------- stale banner (dead man's switch) ---------- */
+.stale{
+  display:none;position:relative;z-index:2;
+  background:rgba(255,180,84,.1);border-bottom:1px solid rgba(255,180,84,.3);
+  padding:8px 24px;text-align:center;
+  font-family:var(--mono);font-size:12px;color:var(--amber);
+}
+
+/* ---------- creator spotlight ---------- */
+.spotlight{margin-top:26px}
+.spot-head{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--aqua);display:flex;align-items:center;gap:10px;margin-bottom:12px;
+}
+.spot-head::before{content:"✦"}
+.spot-head::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(99,216,198,.4),transparent)}
+.spot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.spot-card{
+  border:1px solid rgba(99,216,198,.3);border-radius:var(--radius);
+  background:linear-gradient(165deg,rgba(99,216,198,.07),var(--ink-2) 55%);
+  padding:16px 18px;transition:border-color .15s ease, transform .15s ease;
+}
+.spot-card:hover{border-color:rgba(99,216,198,.6);transform:translateY(-2px)}
+.spot-card h3{font-family:var(--display);font-weight:640;font-size:16px;line-height:1.35;margin-bottom:6px}
+.spot-card h3 a:hover{color:var(--aqua)}
+.spot-card p{color:var(--dim);font-size:13px;line-height:1.5}
+.spot-card .foot{margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--faint)}
+.story .spot-flag{color:var(--aqua);font-size:10.5px;letter-spacing:.08em}
+
+/* ---------- header ---------- */
+header{
+  position:relative;z-index:2;
+  max-width:1180px;margin:0 auto;padding:30px 24px 0;
+}
+.masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.wordmark{font-family:var(--display);font-weight:750;font-size:clamp(28px,4.5vw,42px);letter-spacing:-.02em;display:flex;align-items:center;gap:2px}
+.wordmark .blip-dot{
+  width:.34em;height:.34em;border-radius:50%;
+  background:var(--amber);display:inline-block;margin-left:.18em;
+  box-shadow:0 0 0 0 rgba(255,180,84,.6);
+  animation:ping 2.4s ease-out infinite;
+}
+@keyframes ping{
+  0%{box-shadow:0 0 0 0 rgba(255,180,84,.55)}
+  70%{box-shadow:0 0 0 14px rgba(255,180,84,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,180,84,0)}
+}
+.wordmark .ai-hl{color:var(--amber)}
+.headmeta{font-family:var(--mono);font-size:12px;color:var(--dim);display:flex;gap:18px;align-items:center}
+.headmeta .live{color:var(--aqua)}
+.headmeta .live::before{content:"●";margin-right:6px;animation:blink 2s steps(2) infinite}
+@keyframes blink{50%{opacity:.35}}
+.tagline{margin-top:6px;color:var(--dim);font-size:14.5px}
+
+nav.cats{
+  display:flex;gap:6px;flex-wrap:wrap;
+  margin-top:22px;padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.cat{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;
+  padding:6px 13px;border-radius:999px;border:1px solid var(--line);
+  color:var(--dim);transition:all .15s ease;
+}
+.cat:hover{border-color:var(--line-strong);color:var(--text)}
+.cat.active{background:var(--amber);border-color:var(--amber);color:#20160a;font-weight:600}
+.cat .count{opacity:.6;margin-left:5px}
+
+/* ---------- layout ---------- */
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:26px 24px 80px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;margin-top:34px}
+
+/* ---------- THE BLIP briefing ---------- */
+.brief{
+  border:1px solid var(--line-strong);
+  border-radius:14px;
+  background:linear-gradient(160deg,var(--ink-2),rgba(18,48,57,.55));
+  overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,1fr) 250px;
+}
+.brief-main{padding:26px 28px 24px}
+.brief-eyebrow{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);display:flex;align-items:center;gap:10px;
+}
+.brief-eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--amber-deep),transparent);opacity:.5}
+.brief h1{
+  font-family:var(--display);font-weight:700;font-size:clamp(22px,3.2vw,30px);
+  letter-spacing:-.015em;margin:10px 0 4px;
+}
+.brief-sub{color:var(--dim);font-size:14px;margin-bottom:18px}
+.brief-sub b{color:var(--text);font-weight:600}
+
+.brief-items{list-style:none;display:flex;flex-direction:column}
+.brief-item{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:11px 10px;margin:0 -10px;border-radius:8px;
+  cursor:pointer;transition:background .15s ease;
+  border-top:1px solid var(--line);
+}
+.brief-item:first-child{border-top:none}
+.brief-item:hover{background:rgba(99,216,198,.06)}
+.brief-item .marker{
+  flex:0 0 auto;width:22px;height:22px;margin-top:2px;border-radius:50%;
+  border:1.5px solid var(--amber-deep);position:relative;
+  display:grid;place-items:center;
+  font-family:var(--mono);font-size:10.5px;color:var(--amber);
+  transition:all .2s ease;
+}
+.brief-item.read .marker{background:var(--amber);border-color:var(--amber);color:#20160a;font-weight:700}
+.brief-item.read .marker::after{content:"✓"}
+.brief-item.read .num{display:none}
+.brief-item p{font-size:14.5px;line-height:1.5;color:var(--text)}
+.brief-item.read p{color:var(--faint)}
+.brief-item p b{color:var(--amber);font-weight:600}
+.brief-item.read p b{color:var(--faint)}
+.brief-item .secs{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:4px}
+
+.brief-progress{margin-top:16px;display:flex;align-items:center;gap:14px}
+.pbar{flex:1;height:4px;border-radius:99px;background:rgba(158,216,210,.12);overflow:hidden}
+.pbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--amber-deep),var(--amber));border-radius:99px;transition:width .35s ease}
+.pstat{font-family:var(--mono);font-size:11.5px;color:var(--dim);white-space:nowrap}
+.pstat.done{color:var(--aqua)}
+
+/* radar scope */
+.scope{
+  border-left:1px solid var(--line);
+  background:radial-gradient(circle at 50% 50%, rgba(99,216,198,.05), transparent 70%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:20px;gap:12px;
+}
+.scope-title{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.radar{position:relative;width:180px;height:180px}
+.radar svg{width:100%;height:100%;display:block}
+.sweep{
+  position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg, rgba(99,216,198,.28), transparent 18%);
+  animation:sweep 5s linear infinite;
+  -webkit-mask:radial-gradient(circle, black 98%, transparent 100%);
+  mask:radial-gradient(circle, black 98%, transparent 100%);
+}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.radar .blip{
+  position:absolute;width:8px;height:8px;border-radius:50%;
+  background:var(--amber);transform:translate(-50%,-50%);
+  box-shadow:0 0 6px rgba(255,180,84,.8);
+  transition:all .2s ease;
+}
+.radar .blip.hot{width:13px;height:13px;box-shadow:0 0 14px rgba(255,180,84,1)}
+.radar .blip.read{background:var(--faint);box-shadow:none}
+.scope-caption{font-family:var(--mono);font-size:10.5px;color:var(--faint);text-align:center;line-height:1.6}
+.scope-caption b{color:var(--aqua);font-weight:500}
+
+/* ---------- feed ---------- */
+.feed-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.feed-title{font-family:var(--display);font-weight:650;font-size:20px;letter-spacing:-.01em}
+.search{
+  flex:0 1 260px;display:flex;align-items:center;gap:8px;
+  border:1px solid var(--line);border-radius:8px;padding:7px 12px;
+  background:var(--ink-2);
+}
+.search input{
+  flex:1;background:none;border:none;outline:none;color:var(--text);
+  font-family:var(--mono);font-size:12.5px;min-width:0;
+}
+.search input::placeholder{color:var(--faint)}
+.search svg{flex:0 0 auto;opacity:.5}
+
+.story{
+  display:block;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--ink-2);padding:18px 20px;margin-bottom:12px;
+  transition:border-color .15s ease, transform .15s ease;
+}
+.story:hover{border-color:var(--line-strong);transform:translateX(3px)}
+.story.top-story{border-color:rgba(255,180,84,.45);background:linear-gradient(155deg,rgba(255,180,84,.07),var(--ink-2) 45%)}
+.story-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:8px}
+.tag{
+  padding:2px 9px;border-radius:4px;font-size:11px;letter-spacing:.03em;
+  border:1px solid var(--line-strong);color:var(--dim);
+}
+.tag.c-image{color:#F1B27A;border-color:rgba(241,178,122,.4)}
+.tag.c-video{color:#9BD8C9;border-color:rgba(155,216,201,.4)}
+.tag.c-music{color:#C9B8F2;border-color:rgba(201,184,242,.4)}
+.tag.c-writing{color:#9FC1F5;border-color:rgba(159,193,245,.4)}
+.tag.c-tools{color:#E8D998;border-color:rgba(232,217,152,.4)}
+.tag.c-rights{color:#F0A9A9;border-color:rgba(240,169,169,.4)}
+.tag.c-industry{color:#A9E3B8;border-color:rgba(169,227,184,.4)}
+.badge{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:4px}
+.badge.breaking{background:rgba(255,122,107,.16);color:var(--red)}
+.badge.hot{background:rgba(255,180,84,.16);color:var(--amber)}
+.badge.new{background:rgba(99,216,198,.14);color:var(--aqua)}
+.story h3{
+  font-family:var(--display);font-weight:640;font-size:18.5px;line-height:1.32;
+  letter-spacing:-.008em;margin-bottom:6px;
+}
+.story h3 a:hover{color:var(--amber)}
+.story.top-story h3{font-size:24px}
+.story p{color:var(--dim);font-size:14px;line-height:1.55}
+.story .foot{margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+.story .foot b{color:var(--dim);font-weight:500}
+.top-label{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:8px;display:flex;align-items:center;gap:8px;
+}
+.top-label::before{content:"◉"}
+.empty{
+  border:1px dashed var(--line-strong);border-radius:var(--radius);
+  padding:36px;text-align:center;color:var(--faint);font-family:var(--mono);font-size:13px;
+  display:none;
+}
+.loadmore{
+  width:100%;padding:12px;border:1px solid var(--line);border-radius:var(--radius);
+  font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-top:6px;
+  transition:all .15s ease;
+}
+.loadmore:hover{border-color:var(--amber-deep);color:var(--amber)}
+
+/* ---------- sidebar ---------- */
+aside{display:flex;flex-direction:column;gap:26px}
+.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink-2);padding:18px 18px 16px}
+.panel h4{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.panel h4::after{content:"";flex:1;height:1px;background:var(--line)}
+.mrow{display:flex;align-items:center;justify-content:space-between;padding:5.5px 0;font-size:13.5px}
+.mrow .mname{color:var(--text)}
+.mrow .mstate{font-family:var(--mono);font-size:11px;display:flex;align-items:center;gap:6px}
+.mstate.live{color:var(--aqua)}.mstate.preview{color:var(--amber)}.mstate.limited{color:var(--dim)}.mstate.rumored{color:var(--faint)}.mstate.sunset{color:var(--red)}
+.mstate i{font-style:normal}
+.tooldrop-name{font-family:var(--display);font-weight:650;font-size:15.5px;color:var(--text);margin-bottom:5px}
+.tooldrop-body{font-size:13.5px;line-height:1.55;color:var(--dim)}
+.tooldrop-meta{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:9px}
+.tooldrop-meta a{color:var(--amber)}
+.srow{display:flex;align-items:center;justify-content:space-between;padding:4.5px 0;font-size:13px;color:var(--dim)}
+.srow .sbar{flex:0 0 84px;height:3px;border-radius:99px;background:rgba(158,216,210,.1);margin-left:12px;overflow:hidden}
+.srow .sbar i{display:block;height:100%;background:var(--aqua);opacity:.65;border-radius:99px}
+.srow .sn{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:10px;min-width:26px;text-align:right}
+.num-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.num-cell{border:1px solid var(--line);border-radius:8px;padding:12px 12px 10px}
+.num-cell b{display:block;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--amber)}
+.num-cell span{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.04em}
+.topics{display:flex;flex-wrap:wrap;gap:7px}
+.topic{
+  font-family:var(--mono);font-size:11.5px;padding:5px 11px;border-radius:999px;
+  border:1px solid var(--line);color:var(--dim);transition:all .15s ease;
+}
+.topic:hover{border-color:var(--amber-deep);color:var(--amber)}
+.subscribe p{color:var(--dim);font-size:13px;margin-bottom:12px}
+.subscribe .row{display:flex;gap:8px}
+.subscribe input{
+  flex:1;background:var(--ink);border:1px solid var(--line);border-radius:7px;
+  padding:9px 12px;color:var(--text);font-family:var(--mono);font-size:12px;outline:none;min-width:0;
+}
+.subscribe input:focus{border-color:var(--aqua)}
+.subscribe button{
+  background:var(--amber);color:#20160a;font-weight:600;font-size:13px;
+  border-radius:7px;padding:9px 16px;transition:filter .15s;
+}
+.subscribe button:hover{filter:brightness(1.1)}
+.sub-ok{display:none;color:var(--aqua);font-family:var(--mono);font-size:12px;margin-top:10px}
+
+/* ---------- footer ---------- */
+footer{
+  position:relative;z-index:1;
+  border-top:1px solid var(--line);margin-top:20px;
+  padding:26px 24px 40px;
+}
+.foot-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px;color:var(--faint)}
+.foot-in a:hover{color:var(--amber)}
+.foot-links{display:flex;gap:18px}
+
+/* focus states */
+a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--aqua);outline-offset:2px;border-radius:4px;
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .cols{grid-template-columns:1fr}
+  .brief{grid-template-columns:1fr}
+  .scope{border-left:none;border-top:1px solid var(--line);flex-direction:row;justify-content:space-around}
+  .radar{width:130px;height:130px}
+}
+@media(max-width:560px){
+  .brief-main{padding:20px 18px}
+  .scope{flex-direction:column}
+  .headmeta{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+  .sweep{animation:none;opacity:.25}
+  .wordmark .blip-dot,.headmeta .live::before{animation:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ticker -->
+<div class="ticker" role="marquee" aria-label="Latest headlines">
+  <div class="ticker-label"><span aria-hidden="true">⦿</span> INCOMING</div>
+  <div class="ticker-viewport"><div class="ticker-track" id="tickerTrack"></div></div>
+</div>
+
+<div class="stale" id="staleBanner">⚠ feed paused — showing last known signals from <span id="staleDate"></span></div>
+
+<header>
+  <div class="masthead">
+    <div class="wordmark">d<span class="ai-hl">ai</span>lyblip<span class="blip-dot" aria-hidden="true"></span></div>
+    <div class="headmeta">
+      <span id="dateline"></span>
+      <span id="lastSync"></span>
+      <span class="live">signal strong</span>
+    </div>
+  </div>
+  <p class="tagline">Everything that happened in AI for people who make things — image, video, music, and words — compressed into a 60-second brief.</p>
+  <nav class="cats" id="catNav" aria-label="Filter by category"></nav>
+</header>
+
+<div class="wrap">
+
+  <!-- THE BLIP -->
+  <section class="brief" aria-labelledby="briefTitle">
+    <div class="brief-main">
+      <div class="brief-eyebrow" id="briefEyebrow">The Daily Blip</div>
+      <h1 id="briefTitle"></h1>
+      <p class="brief-sub">Ranked by impact. Tap each to mark it read — <b>~60 seconds</b> total. Tap the text to jump to the full story.</p>
+      <ul class="brief-items" id="briefItems"></ul>
+      <div class="brief-progress">
+        <div class="pbar"><i id="pbarFill"></i></div>
+        <div class="pstat" id="pstat"></div>
+      </div>
+    </div>
+    <div class="scope" aria-hidden="true">
+      <div class="scope-title">signal scope</div>
+      <div class="radar">
+        <svg viewBox="0 0 180 180">
+          <circle cx="90" cy="90" r="88" fill="none" stroke="rgba(158,216,210,.18)" stroke-width="1"/>
+          <circle cx="90" cy="90" r="60" fill="none" stroke="rgba(158,216,210,.12)" stroke-width="1"/>
+          <circle cx="90" cy="90" r="32" fill="none" stroke="rgba(158,216,210,.12)" stroke-width="1"/>
+          <line x1="2" y1="90" x2="178" y2="90" stroke="rgba(158,216,210,.08)"/>
+          <line x1="90" y1="2" x2="90" y2="178" stroke="rgba(158,216,210,.08)"/>
+        </svg>
+        <div class="sweep"></div>
+        <div id="blips"></div>
+      </div>
+      <div class="scope-caption"><b id="blipCount">6 blips</b> on scope<br>distance = hours since detection</div>
+    </div>
+  </section>
+
+  <!-- CREATOR SPOTLIGHT -->
+  <section class="spotlight" id="spotlightWrap" style="display:none" aria-label="Creator spotlight">
+    <div class="spot-head">creator spotlight — people making cool things</div>
+    <div class="spot-grid" id="spotGrid"></div>
+  </section>
+
+  <div class="cols">
+    <!-- FEED -->
+    <main>
+      <div class="feed-head">
+        <h2 class="feed-title">The feed</h2>
+        <div class="search">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/></svg>
+          <input type="search" id="searchInput" placeholder="search the signal…" aria-label="Search stories">
+        </div>
+      </div>
+      <div id="feedList"></div>
+      <div class="empty" id="emptyState">no blips on this frequency — try another filter</div>
+      <button class="loadmore" id="loadMore">pull older signals ↓</button>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="panel">
+        <h4>creative stack radar</h4>
+        <div id="modelList"></div>
+      </div>
+      <div class="panel" id="tooldropPanel" style="display:none">
+        <h4>tool drop of the day</h4>
+        <div class="tooldrop-name" id="tdName"></div>
+        <div class="tooldrop-body" id="tdBlurb"></div>
+        <div class="tooldrop-meta" id="tdMeta"></div>
+      </div>
+      <div class="panel">
+        <h4>today's numbers</h4>
+        <div class="num-grid" id="numGrid"></div>
+      </div>
+      <div class="panel">
+        <h4>loudest sources</h4>
+        <div id="sourceList"></div>
+      </div>
+      <div class="panel">
+        <h4>trending frequencies</h4>
+        <div class="topics" id="topicList"></div>
+      </div>
+      <div class="panel" id="yearagoPanel" style="display:none">
+        <h4>one year ago today</h4>
+        <div class="tooldrop-body" id="yaBody"></div>
+        <div class="tooldrop-meta"><a id="yaLink" href="#">read that day's blip →</a></div>
+      </div>
+      <div class="panel subscribe">
+        <h4>the blip, in your inbox</h4>
+        <p>One email, 6 a.m. daily. What changed in your creative stack — and nothing else.</p>
+        <!-- Set data-buttondown to your Buttondown username to go live -->
+        <form class="row" id="subForm" data-buttondown="">
+          <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+          <button type="submit" id="subBtn">Get it</button>
+        </form>
+        <div class="sub-ok" id="subOk">✓ You're on the list. First blip lands tomorrow.</div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-in">
+    <div>dailyblip // the AI brief for people who make things // rescanned every 20 min</div>
+    <div class="foot-links">
+      <a href="archive/">archive</a><a href="data/feed.json">json</a><a href="#">about</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============ FALLBACK DATA ============
+   Used when data/feed.json is missing (local preview, first deploy).
+   Once the pipeline runs, feed.json overrides everything below. */
+const CATS = [
+  {id:"all", label:"all"},
+  {id:"spotlight", label:"✦ spotlight"},
+  {id:"image", label:"image"},
+  {id:"video", label:"video"},
+  {id:"music", label:"music & audio"},
+  {id:"writing", label:"writing"},
+  {id:"tools", label:"tools & workflow"},
+  {id:"rights", label:"rights & rulings"},
+  {id:"industry", label:"industry"},
+];
+
+let FEED = {
+  issue: 192,
+  generated_at: null,
+  brief: {
+    title: "Wednesday, July 8 — six things creators need to know",
+    items: [
+      {secs:10, story:"s1", html:"<b>Meta launched Muse</b> — an image model that works from your own photo library. Restoration, style transfer, product shots; aimed straight at Firefly and Imagen."},
+      {secs:10, story:"s2", html:"<b>Sora is sunsetting</b>: the app closed in April and the API dies September 24. Eleven weeks to migrate any pipeline that touches it."},
+      {secs:9, story:"s3", html:"<b>Midjourney V8.1 is now the default</b> — native 2K, 4–5x faster, and a Draft Mode for cheap ideation before final renders."},
+      {secs:11, story:"s4", html:"July video rankings: <b>Runway Gen-4.5 for control</b>, Veo 3.1 for realism, Gemini Omni Flash at $0.10/sec for fast iteration. Pick by workflow, not leaderboard."},
+      {secs:11, story:"s8", html:"<b>Copyright clarity is forming</b>: AI-assisted work is protectable in many places if you can show human direction. Start keeping your prompt and edit history."},
+      {secs:9, story:"s9", html:"<b>Fable 5 goes pay-per-use today</b>; Sonnet 5 and Opus 4.8 stay bundled — writers, check which model your stack defaults to."},
+    ],
+  },
+  stories: [
+    {id:"s1", cat:"image", badge:"breaking", top:true, hrs:2, src:"Meta", read:"3 min",
+     title:"Meta Launches Muse, an Image Model Built Around Your Own Photos",
+     dek:"Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen."},
+    {id:"s2", cat:"video", badge:"hot", hrs:3, src:"OpenAI", read:"4 min",
+     title:"The Sora Countdown: App Already Gone, API Sunsets September 24",
+     dek:"OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column."},
+    {id:"s3", cat:"image", badge:"hot", hrs:5, src:"Midjourney", read:"3 min",
+     title:"Midjourney V8.1 Becomes the Default: Native 2K, 4–5x Faster, Draft Mode",
+     dek:"The new default model ships native 2K HD output, a big speed jump, better prompt adherence, and a Draft Mode built for rapid ideation before you commit render credits to a final."},
+    {id:"s4", cat:"video", badge:"new", hrs:6, src:"BuildMVPFast", read:"6 min",
+     title:"July Video Rankings: Runway Gen-4.5 Owns Control, Veo 3.1 Owns Realism",
+     dek:"The month's big comparison crowns Runway Gen-4.5 the pro-workflow pick — camera direction, structured prompting, music videos and previs — while Veo 3.1 and Seedance 2.5 lead on raw realism. Kling 3.0 Turbo and Pika stay the daily drivers."},
+    {id:"s5", cat:"video", badge:"new", hrs:7, src:"Google", read:"3 min",
+     title:"Gemini Omni Flash Prices Fast Video Iteration at $0.10 per Second",
+     dek:"Google's conversational video model is built for quick back-and-forth edits rather than one-shot renders — a different bet on how creators actually work, and cheap enough to iterate freely."},
+    {id:"s6", spotlight:true, cat:"music", badge:"hot", hrs:8, src:"Yuyjo / NoHo Arts", read:"5 min",
+     title:"Beat-Sync Goes Mainstream: Full AI Music Videos From a Finished Track",
+     dek:"Tools like Freebeat and Neural Frames now analyze BPM and transients to cut visuals to beat drops, hold character consistency, and lip-sync avatars across 6-minute videos — indie artists are shipping label-grade visuals on no budget."},
+    {id:"s7", cat:"video", badge:"new", hrs:9, src:"Kling", read:"3 min",
+     title:"Kling O3 Brings 15-Second Multi-Shot Scenes With Voice-Persistent Characters",
+     dek:"Multi-shot generation, character voices that persist across cuts, and native audio push Kling toward short-film territory rather than clip stitching."},
+    {id:"s8", cat:"rights", badge:"hot", hrs:10, src:"Digen / legal wires", read:"5 min",
+     title:"Copyright Consensus Forming: AI-Assisted Work Is Protectable — With Receipts",
+     dek:"Many jurisdictions now extend protection to AI-assisted works when there's demonstrable human-in-the-loop direction: custom prompting, manual editing, creative decisions. Practical takeaway — keep your prompt and edit history."},
+    {id:"s9", cat:"writing", badge:"new", hrs:12, src:"Anthropic", read:"3 min",
+     title:"Fable 5 Goes Pay-Per-Use Today — Writers, Check Your Stack",
+     dek:"Claude Fable 5 now costs $10/M input and $50/M output tokens on every subscriber tier, while Sonnet 5 ($2/$10 intro) and Opus 4.8 stay bundled. For long-form drafting, the bundled models are the value play."},
+    {id:"s10", cat:"image", badge:"new", hrs:14, src:"OpenAI", read:"3 min",
+     title:"GPT Image 2: Natural-Language Edits, 2K Output, Multilingual Text",
+     dek:"OpenAI's image model has become the instruction-follower of the field — revise existing visuals and apply targeted edits by just describing them, with text rendering that finally survives non-English scripts."},
+    {id:"s11", cat:"tools", badge:"new", hrs:16, src:"Expert Consumers", read:"4 min",
+     title:"CapCut's One-Workspace Play: Seedance 2.0 Video, GPT Image 2, and Seedmusic",
+     dek:"The everything-suite pitch is landing with small content teams: video generation, image editing, and AI music in one workflow, ending the tool-switching tax between five subscriptions."},
+    {id:"s12", cat:"rights", badge:"new", hrs:18, src:"Cloudflare", read:"3 min",
+     title:"Cloudflare's September 15 Deadline Splits Search Crawlers From AI Crawlers",
+     dek:"After the cutoff, mixed-use bots get blocked by default from ad-carrying pages. If you publish content, this is the biggest default-setting change yet in who gets to train on your work."},
+    {id:"s13", spotlight:true, cat:"industry", badge:"new", hrs:20, src:"Today", read:"2 min",
+     title:"AI Actor Tilly Norwood Lands Her First Feature Film",
+     dek:"'Misaligned,' a coming-of-age story about a girl AI bot set in the Tillyverse, makes the synthetic performer's leap to features official — and reopens every argument about human performers at once."},
+    {id:"s14", cat:"video", badge:"new", hrs:22, src:"BuildMVPFast", read:"3 min",
+     title:"Wan 2.7 Is the Open Option for Local and Custom Video Pipelines",
+     dek:"If local control or custom pipelines matter more than leaderboard wins, Wan remains the meaningful open-weight choice — structure-preserving transforms and no per-second meter running."},
+    {id:"s15", cat:"tools", badge:"new", hrs:26, src:"Artlist", read:"4 min",
+     title:"The Model Buffet: Platforms Now Bundle 14+ Image Models Under One License",
+     dek:"Artlist's toolkit stacks Nano Banana, GPT Image 2, Seedream 5.0, Wan 2.7 and more behind one subscription with commercial licensing sorted — a hedge against betting your whole aesthetic on one model."},
+    {id:"s16", cat:"video", badge:"new", hrs:30, src:"xAI", read:"3 min",
+     title:"Grok Imagine Video 1.5 Adds Native Synced Audio and Faster Image-to-Video",
+     dek:"A real contender for social-first output if you already live inside X — quick-turn clips with sound baked in, tuned for the feed rather than the timeline."},
+    {id:"s17", spotlight:true, cat:"music", badge:"new", hrs:34, src:"Digen", read:"4 min",
+     title:"'Acting Prompts' Arrive: Performance Capture Synthesis Maps Vocals to Avatars",
+     dek:"The new wave of lip-sync tools reads vocal nuance and maps it onto digital performers — direct emotional transitions by timestamp ('melancholy to euphoria at 02:15') like a VFX house, from your phone."},
+    {id:"s18", cat:"writing", badge:"new", hrs:40, src:"Anthropic", read:"3 min",
+     title:"One Week In: Claude Sonnet 5 Is the New Default for Long-Form Drafting",
+     dek:"Launched July 1 at $2/$10 introductory pricing and bundled into subscriptions, Sonnet 5 has quickly become the workhorse recommendation for novelists, scriptwriters and newsletter writers."},
+    {id:"s19", cat:"industry", badge:"new", hrs:44, src:"Fortune", read:"4 min",
+     title:"Anthropic Overtakes OpenAI on Revenue for the First Time",
+     dek:"A $47B annualized run rate versus OpenAI's $25–33B. The broader signal for creators: the money is consolidating around a handful of labs whose pricing decisions now ripple straight into your tool subscriptions."},
+  ],
+  models: [
+    {n:"Midjourney V8.1", s:"live", i:"●"},
+    {n:"Runway Gen-4.5", s:"live", i:"●"},
+    {n:"Veo 3.1", s:"live", i:"●"},
+    {n:"Gemini Omni Flash", s:"live", i:"●"},
+    {n:"Kling 3.0 Turbo / O3", s:"live", i:"●"},
+    {n:"Seedance 2.5", s:"live", i:"●"},
+    {n:"GPT Image 2", s:"live", i:"●"},
+    {n:"Seedream 5.0", s:"live", i:"●"},
+    {n:"Wan 2.7 (open)", s:"live", i:"●"},
+    {n:"Grok Imagine 1.5", s:"live", i:"●"},
+    {n:"Sora 2", s:"sunset", i:"◐"},
+    {n:"Claude Sonnet 5", s:"live", i:"●"},
+  ],
+  sources: [
+    {n:"Runway Research", c:31},{n:"Midjourney Updates", c:26},{n:"r/StableDiffusion", c:22},
+    {n:"r/aivideo", c:17},{n:"Artlist Blog", c:13},{n:"Hugging Face", c:11},
+    {n:"TechCrunch AI", c:10},{n:"Suno Community", c:8},
+  ],
+  topics: ["#sora-sunset","#midjourney-v8","#beat-sync","#copyright-clarity","#character-consistency","#draft-mode","#muse","#open-video"],
+  tooldrop: {
+    name:"Kaiber Superstudio",
+    blurb:"A canvas-style playground for mixing models, styles and assets — moodboard your way to a finished video instead of prompt-roulette.",
+    meta:"image · video · animation — free tier",
+    url:"#",
+  },
+  stats: { scanned_last_run: 147, published_today: 18, sources_live: 21 },
+};
+
+/* ============ APP ============ */
+const $ = s => document.querySelector(s);
+let activeCat = "all", query = "", visible = 8;
+const readSet = new Set();
+
+function storyHrs(s){
+  if(s.ts){ return Math.max(1, Math.round((Date.now() - new Date(s.ts)) / 3.6e6)); }
+  return s.hrs || 1;
+}
+function ago(h){ return h<24 ? `${h} hr ago` : `${Math.floor(h/24)}d ${h%24}h ago`; }
+function esc(t){ const d=document.createElement("div"); d.textContent=t??""; return d.innerHTML; }
+/* model-generated brief HTML: only <b> survives; everything else is escaped */
+function sanB(html){ return esc(html).replace(/&lt;(\/?)b&gt;/gi,"<$1b>"); }
+function matchCat(s){
+  if(activeCat==="all") return true;
+  if(activeCat==="spotlight") return !!s.spotlight;
+  return s.cat===activeCat;
+}
+
+function renderHeader(){
+  $("#dateline").textContent = new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+  if(FEED.generated_at){
+    const mins = Math.max(1, Math.round((Date.now()-new Date(FEED.generated_at))/6e4));
+    $("#lastSync").textContent = `last sync ${mins<60?mins+" min":Math.round(mins/60)+" hr"} ago`;
+  } else $("#lastSync").textContent = "sample data";
+}
+
+function renderTicker(){
+  const tick = FEED.stories.slice(0,8).map(s=>`<span><em>▸</em> <b>${esc(s.title)}</b> · ${storyHrs(s)}h ago</span>`).join("");
+  $("#tickerTrack").innerHTML = tick + tick;
+}
+
+function renderCats(){
+  $("#catNav").innerHTML = CATS.map(c=>{
+    const n = c.id==="all" ? FEED.stories.length
+      : c.id==="spotlight" ? FEED.stories.filter(s=>s.spotlight).length
+      : FEED.stories.filter(s=>s.cat===c.id).length;
+    return `<button class="cat${c.id===activeCat?" active":""}" data-cat="${c.id}">${c.label}<span class="count">${n}</span></button>`;
+  }).join("");
+}
+
+function renderBrief(){
+  const items = FEED.brief?.items || [];
+  $("#briefTitle").textContent = FEED.brief?.title || "";
+  $("#briefEyebrow").textContent = `The Daily Blip · Issue ${String(FEED.issue||1).padStart(4,"0")}`;
+  $("#blipCount").textContent = `${items.length} blips`;
+  $("#briefItems").innerHTML = items.map((b,i)=>`
+    <li class="brief-item${readSet.has(i)?" read":""}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
+      <span class="marker"><span class="num">${i+1}</span></span>
+      <p>${sanB(b.html)}</p>
+      <span class="secs">${b.secs}s</span>
+    </li>`).join("");
+  const pct = items.length ? readSet.size/items.length*100 : 0;
+  $("#pbarFill").style.width = pct+"%";
+  const st = $("#pstat");
+  if(items.length && readSet.size===items.length){ st.textContent="✓ you're caught up — nice."; st.classList.add("done"); }
+  else { st.textContent=`${readSet.size} / ${items.length} · ${readSet.size===0?"not caught up":"catching up…"}`; st.classList.remove("done"); }
+  renderBlips();
+}
+
+function renderBlips(){
+  const items = FEED.brief?.items || [];
+  const angles=[35,95,160,215,275,330];
+  $("#blips").innerHTML = items.map((b,i)=>{
+    const s = FEED.stories.find(x=>x.id===b.story);
+    const h = s ? storyHrs(s) : 6;
+    const r = 18 + Math.min(h,14)/14*66;
+    const a = angles[i%angles.length]*Math.PI/180;
+    const x = 90 + r*Math.cos(a), y = 90 + r*Math.sin(a);
+    return `<span class="blip${readSet.has(i)?" read":""}" data-i="${i}" style="left:${x/1.8}%;top:${y/1.8}%"></span>`;
+  }).join("");
+}
+
+function renderFeed(){
+  const list = FEED.stories.filter(s =>
+    matchCat(s) &&
+    (!query || (s.title+" "+s.dek).toLowerCase().includes(query))
+  );
+  const shown = list.slice(0, visible);
+  $("#feedList").innerHTML = shown.map(s=>{
+    const cat = CATS.find(c=>c.id===s.cat) || {label:s.cat};
+    const h3 = s.url && s.url !== "#"
+      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`
+      : esc(s.title);
+    const also = s.also?.length ? ` · also via ${esc(s.also.join(", "))}` : "";
+    return `
+    <article class="story${s.top?" top-story":""}" id="${s.id}" tabindex="0">
+      ${s.top?'<div class="top-label">top signal</div>':""}
+      <div class="story-meta">
+        <span class="tag c-${s.cat}">${cat.label}</span>
+        <span class="badge ${s.badge}">${s.badge}</span>
+        ${s.spotlight?'<span class="spot-flag">✦ spotlight</span>':""}
+        <span>${ago(storyHrs(s))}</span>
+      </div>
+      <h3>${h3}</h3>
+      <p>${esc(s.dek)}</p>
+      <div class="foot">via <b>${esc(s.src)}</b> · ${esc(s.read)} read${also}</div>
+    </article>`;
+  }).join("");
+  $("#emptyState").style.display = list.length ? "none" : "block";
+  $("#loadMore").style.display = list.length > visible ? "block" : "none";
+}
+
+function renderSpotlight(){
+  const spots = FEED.stories.filter(s=>s.spotlight).slice(0,3);
+  $("#spotlightWrap").style.display = spots.length ? "block" : "none";
+  $("#spotGrid").innerHTML = spots.map(s=>{
+    const h3 = s.url && s.url !== "#"
+      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
+    return `<div class="spot-card"><h3>${h3}</h3><p>${esc(s.dek)}</p>
+      <div class="foot">via ${esc(s.src)} · ${ago(storyHrs(s))}</div></div>`;
+  }).join("");
+}
+
+function renderSidebar(){
+  $("#modelList").innerHTML = (FEED.models||[]).map(m=>`
+    <div class="mrow"><span class="mname">${esc(m.n)}</span><span class="mstate ${m.s}"><i>${m.i}</i>${m.s}</span></div>`).join("");
+
+  const td = FEED.tooldrop;
+  if(td){
+    $("#tooldropPanel").style.display = "block";
+    $("#tdName").textContent = td.name;
+    $("#tdBlurb").textContent = td.blurb;
+    $("#tdMeta").innerHTML = esc(td.meta) + (td.url && td.url!=="#" ? ` · <a href="${esc(td.url)}" target="_blank" rel="noopener">try it →</a>` : "");
+  }
+
+  const st = FEED.stats || {};
+  $("#numGrid").innerHTML = `
+    <div class="num-cell"><b>${st.scanned_last_run ?? "—"}</b><span>signals scanned</span></div>
+    <div class="num-cell"><b>${st.published_today ?? "—"}</b><span>published today</span></div>
+    <div class="num-cell"><b>${st.sources_live ?? "—"}</b><span>sources live</span></div>
+    <div class="num-cell"><b>${FEED.generated_at ? Math.max(1,Math.round((Date.now()-new Date(FEED.generated_at))/6e4))+"m" : "—"}</b><span>since last sync</span></div>`;
+
+  const srcs = FEED.sources||[];
+  const maxC = Math.max(1,...srcs.map(s=>s.c));
+  $("#sourceList").innerHTML = srcs.map(s=>`
+    <div class="srow"><span>${esc(s.n)}</span><span class="sbar"><i style="width:${s.c/maxC*100}%"></i></span><span class="sn">${s.c}</span></div>`).join("");
+
+  $("#topicList").innerHTML = (FEED.topics||[]).map(t=>`<button class="topic">${esc(t)}</button>`).join("");
+
+  const ya = FEED.yearago;
+  if(ya && ya.title){
+    $("#yearagoPanel").style.display = "block";
+    $("#yaBody").textContent = `${ya.date}: ${ya.title}`;
+    $("#yaLink").href = ya.href || "archive/";
+  }
+}
+
+function renderAll(){
+  renderHeader(); renderTicker(); renderCats(); renderBrief(); renderSpotlight(); renderFeed(); renderSidebar();
+}
+
+/* ---- events (delegated; bound once) ---- */
+$("#catNav").addEventListener("click", e=>{
+  const b = e.target.closest(".cat"); if(!b) return;
+  activeCat = b.dataset.cat; visible = 8;
+  renderCats(); renderFeed();
+});
+$("#searchInput").addEventListener("input", e=>{ query = e.target.value.trim().toLowerCase(); visible=8; renderFeed(); });
+$("#loadMore").addEventListener("click", ()=>{ visible += 8; renderFeed(); });
+
+function toggleBrief(li){
+  const i = +li.dataset.i;
+  readSet.has(i) ? readSet.delete(i) : readSet.add(i);
+  renderBrief();
+}
+function resetFilters(){
+  if(activeCat!=="all"||query){ activeCat="all"; query=""; $("#searchInput").value=""; renderCats(); }
+  visible = FEED.stories.length; renderFeed();
+}
+$("#briefItems").addEventListener("click", e=>{
+  const li = e.target.closest(".brief-item"); if(!li) return;
+  if(e.target.closest("p")){
+    resetFilters();
+    const t = document.getElementById(li.dataset.story);
+    if(t){ t.scrollIntoView({behavior:"smooth", block:"center"});
+      t.style.borderColor="var(--amber)"; setTimeout(()=>t.style.borderColor="",1400); }
+    if(!readSet.has(+li.dataset.i)){ readSet.add(+li.dataset.i); renderBrief(); }
+  } else toggleBrief(li);
+});
+$("#briefItems").addEventListener("keydown", e=>{
+  if(e.key==="Enter"||e.key===" "){ const li=e.target.closest(".brief-item"); if(li){ e.preventDefault(); toggleBrief(li);} }
+});
+$("#briefItems").addEventListener("mouseover", e=>{
+  const li = e.target.closest(".brief-item"); if(!li) return;
+  document.querySelector(`.blip[data-i="${li.dataset.i}"]`)?.classList.add("hot");
+});
+$("#briefItems").addEventListener("mouseout", e=>{
+  const li = e.target.closest(".brief-item"); if(!li) return;
+  document.querySelector(`.blip[data-i="${li.dataset.i}"]`)?.classList.remove("hot");
+});
+$("#topicList").addEventListener("click", e=>{
+  const t = e.target.closest(".topic"); if(!t) return;
+  const q = t.textContent.replace("#","").split("-")[0];
+  $("#searchInput").value = q; query = q.toLowerCase(); visible=8; renderFeed();
+  $("#feedList").scrollIntoView({behavior:"smooth"});
+});
+
+/* subscribe — posts to Buttondown when data-buttondown is set, demo mode otherwise */
+$("#subForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const email = $("#subEmail").value;
+  if(!email || !email.includes("@")){
+    $("#subEmail").focus(); $("#subEmail").style.borderColor="var(--red)";
+    setTimeout(()=>$("#subEmail").style.borderColor="",1200); return;
+  }
+  const user = $("#subForm").dataset.buttondown;
+  if(user){
+    try{
+      await fetch(`https://buttondown.com/api/emails/embed-subscribe/${user}`,{
+        method:"POST", mode:"no-cors",
+        headers:{"Content-Type":"application/x-www-form-urlencoded"},
+        body:new URLSearchParams({email}),
+      });
+    }catch{}
+  }
+  $("#subOk").style.display="block"; $("#subEmail").value="";
+});
+
+/* ---- boot: hydrate from feed.json, fall back to embedded sample ---- */
+(async function boot(){
+  try{
+    const res = await fetch("data/feed.json", {cache:"no-store"});
+    if(res.ok){
+      const data = await res.json();
+      if(Array.isArray(data.stories) && data.stories.length) FEED = {...FEED, ...data};
+    }
+  }catch{ /* local file:// preview — fallback data is fine */ }
+  // Dead man's switch: if the pipeline has been silent for 48h, say so
+  // instead of presenting stale news as fresh.
+  if(FEED.generated_at && Date.now() - new Date(FEED.generated_at) > 48*3600*1000){
+    $("#staleDate").textContent = new Date(FEED.generated_at).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+    $("#staleBanner").style.display = "block";
+  }
+  renderAll();
+})();
+</script>
+</body>
+</html>

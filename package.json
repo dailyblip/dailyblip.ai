@@ -1,0 +1,23 @@
+{
+  "name": "dailyblip",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "dailyblip \u2014 the AI brief for people who make things",
+  "scripts": {
+    "ingest": "node pipeline/ingest.js",
+    "brief": "node pipeline/brief.js",
+    "tooldrop": "node pipeline/tooldrop.js",
+    "newsletter": "node pipeline/newsletter.js",
+    "serve": "npx serve docs",
+    "archive": "node pipeline/archive.js",
+    "curator": "node pipeline/curator.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "rss-parser": "^3.13.0"
+  }
+}

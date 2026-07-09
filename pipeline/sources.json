@@ -1,0 +1,85 @@
+{
+  "_comment": "News feeds power the main story feed. tool_feeds power the daily tool drop. hint = default category nudge given to the classifier. Add/remove freely \u2014 the pipeline adapts. Showcase-heavy feeds (80 Level, subreddit tops) exist mainly to feed the Creator Spotlight.",
+  "feeds": [
+    {
+      "name": "TechCrunch AI",
+      "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+      "hint": "industry"
+    },
+    {
+      "name": "The Verge AI",
+      "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "hint": "industry"
+    },
+    {
+      "name": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/feed/",
+      "hint": "industry"
+    },
+    {
+      "name": "Runway Research",
+      "url": "https://runwayml.com/blog/rss.xml",
+      "hint": "video"
+    },
+    {
+      "name": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/feed.xml",
+      "hint": "tools"
+    },
+    {
+      "name": "Google DeepMind",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "hint": "industry"
+    },
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "hint": "industry"
+    },
+    {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/rss.xml",
+      "hint": "writing"
+    },
+    {
+      "name": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/top/.rss?t=day",
+      "hint": "image"
+    },
+    {
+      "name": "r/aivideo",
+      "url": "https://www.reddit.com/r/aivideo/top/.rss?t=day",
+      "hint": "video"
+    },
+    {
+      "name": "r/SunoAI",
+      "url": "https://www.reddit.com/r/SunoAI/top/.rss?t=day",
+      "hint": "music"
+    },
+    {
+      "name": "Artlist Blog",
+      "url": "https://artlist.io/blog/feed/",
+      "hint": "tools"
+    },
+    {
+      "name": "80 Level",
+      "url": "https://80.lv/feed/",
+      "hint": "video"
+    },
+    {
+      "name": "r/midjourney",
+      "url": "https://www.reddit.com/r/midjourney/top/.rss?t=day",
+      "hint": "image"
+    }
+  ],
+  "tool_feeds": [
+    {
+      "name": "Product Hunt AI",
+      "url": "https://www.producthunt.com/feed?category=artificial-intelligence"
+    },
+    {
+      "name": "FutureTools",
+      "url": "https://www.futuretools.io/news/rss.xml"
+    }
+  ]
+}

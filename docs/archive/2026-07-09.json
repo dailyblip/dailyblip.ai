@@ -1,0 +1,197 @@
+{
+  "date": "2026-07-09",
+  "issue": 192,
+  "brief": {
+    "title": "Wednesday, July 8 — six things creators need to know",
+    "items": [
+      {
+        "secs": 10,
+        "story": "s1",
+        "html": "<b>Meta launched Muse</b> — an image model that works from your own photo library. Restoration, style transfer, product shots; aimed straight at Firefly and Imagen."
+      },
+      {
+        "secs": 10,
+        "story": "s2",
+        "html": "<b>Sora is sunsetting</b>: the app closed in April and the API dies September 24. Eleven weeks to migrate any pipeline that touches it."
+      },
+      {
+        "secs": 9,
+        "story": "s3",
+        "html": "<b>Midjourney V8.1 is now the default</b> — native 2K, 4–5x faster, and a Draft Mode for cheap ideation before final renders."
+      },
+      {
+        "secs": 11,
+        "story": "s4",
+        "html": "July video rankings: <b>Runway Gen-4.5 for control</b>, Veo 3.1 for realism, Gemini Omni Flash at $0.10/sec for fast iteration. Pick by workflow, not leaderboard."
+      },
+      {
+        "secs": 11,
+        "story": "s8",
+        "html": "<b>Copyright clarity is forming</b>: AI-assisted work is protectable in many places if you can show human direction. Start keeping your prompt and edit history."
+      },
+      {
+        "secs": 9,
+        "story": "s9",
+        "html": "<b>Fable 5 goes pay-per-use today</b>; Sonnet 5 and Opus 4.8 stay bundled — writers, check which model your stack defaults to."
+      }
+    ],
+    "date": "2026-07-09T18:17:32.589Z"
+  },
+  "tooldrop": {
+    "name": "Kaiber Superstudio",
+    "blurb": "A canvas-style playground for mixing models, styles and assets — moodboard your way to a finished video instead of prompt-roulette.",
+    "meta": "image · video · animation — free tier",
+    "url": "#",
+    "date": "2026-07-09T18:17:32.589Z"
+  },
+  "stories": [
+    {
+      "id": "s1",
+      "cat": "image",
+      "badge": "breaking",
+      "top": true,
+      "src": "Meta",
+      "read": "3 min",
+      "title": "Meta Launches Muse, an Image Model Built Around Your Own Photos",
+      "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
+      "ts": "2026-07-09T16:17:32.572Z"
+    },
+    {
+      "id": "s2",
+      "cat": "video",
+      "badge": "hot",
+      "src": "OpenAI",
+      "read": "4 min",
+      "title": "The Sora Countdown: App Already Gone, API Sunsets September 24",
+      "dek": "OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.",
+      "ts": "2026-07-09T15:17:32.572Z"
+    },
+    {
+      "id": "s3",
+      "cat": "image",
+      "badge": "hot",
+      "src": "Midjourney",
+      "read": "3 min",
+      "title": "Midjourney V8.1 Becomes the Default: Native 2K, 4–5x Faster, Draft Mode",
+      "dek": "The new default model ships native 2K HD output, a big speed jump, better prompt adherence, and a Draft Mode built for rapid ideation before you commit render credits to a final.",
+      "ts": "2026-07-09T13:17:32.572Z"
+    },
+    {
+      "id": "s4",
+      "cat": "video",
+      "badge": "new",
+      "src": "BuildMVPFast",
+      "read": "6 min",
+      "title": "July Video Rankings: Runway Gen-4.5 Owns Control, Veo 3.1 Owns Realism",
+      "dek": "The month's big comparison crowns Runway Gen-4.5 the pro-workflow pick — camera direction, structured prompting, music videos and previs — while Veo 3.1 and Seedance 2.5 lead on raw realism. Kling 3.0 Turbo and Pika stay the daily drivers.",
+      "ts": "2026-07-09T12:17:32.572Z"
+    },
+    {
+      "id": "s5",
+      "cat": "video",
+      "badge": "new",
+      "src": "Google",
+      "read": "3 min",
+      "title": "Gemini Omni Flash Prices Fast Video Iteration at $0.10 per Second",
+      "dek": "Google's conversational video model is built for quick back-and-forth edits rather than one-shot renders — a different bet on how creators actually work, and cheap enough to iterate freely.",
+      "ts": "2026-07-09T11:17:32.572Z"
+    },
+    {
+      "id": "s6",
+      "spotlight": true,
+      "cat": "music",
+      "badge": "hot",
+      "src": "Yuyjo / NoHo Arts",
+      "read": "5 min",
+      "title": "Beat-Sync Goes Mainstream: Full AI Music Videos From a Finished Track",
+      "dek": "Tools like Freebeat and Neural Frames now analyze BPM and transients to cut visuals to beat drops, hold character consistency, and lip-sync avatars across 6-minute videos — indie artists are shipping label-grade visuals on no budget.",
+      "ts": "2026-07-09T10:17:32.572Z"
+    },
+    {
+      "id": "s7",
+      "cat": "video",
+      "badge": "new",
+      "src": "Kling",
+      "read": "3 min",
+      "title": "Kling O3 Brings 15-Second Multi-Shot Scenes With Voice-Persistent Characters",
+      "dek": "Multi-shot generation, character voices that persist across cuts, and native audio push Kling toward short-film territory rather than clip stitching.",
+      "ts": "2026-07-09T09:17:32.572Z"
+    },
+    {
+      "id": "s8",
+      "cat": "rights",
+      "badge": "hot",
+      "src": "Digen / legal wires",
+      "read": "5 min",
+      "title": "Copyright Consensus Forming: AI-Assisted Work Is Protectable — With Receipts",
+      "dek": "Many jurisdictions now extend protection to AI-assisted works when there's demonstrable human-in-the-loop direction: custom prompting, manual editing, creative decisions. Practical takeaway — keep your prompt and edit history.",
+      "ts": "2026-07-09T08:17:32.572Z"
+    },
+    {
+      "id": "s9",
+      "cat": "writing",
+      "badge": "new",
+      "src": "Anthropic",
+      "read": "3 min",
+      "title": "Fable 5 Goes Pay-Per-Use Today — Writers, Check Your Stack",
+      "dek": "Claude Fable 5 now costs $10/M input and $50/M output tokens on every subscriber tier, while Sonnet 5 ($2/$10 intro) and Opus 4.8 stay bundled. For long-form drafting, the bundled models are the value play.",
+      "ts": "2026-07-09T06:17:32.572Z"
+    },
+    {
+      "id": "s10",
+      "cat": "image",
+      "badge": "new",
+      "src": "OpenAI",
+      "read": "3 min",
+      "title": "GPT Image 2: Natural-Language Edits, 2K Output, Multilingual Text",
+      "dek": "OpenAI's image model has become the instruction-follower of the field — revise existing visuals and apply targeted edits by just describing them, with text rendering that finally survives non-English scripts.",
+      "ts": "2026-07-09T04:17:32.572Z"
+    },
+    {
+      "id": "s11",
+      "cat": "tools",
+      "badge": "new",
+      "src": "Expert Consumers",
+      "read": "4 min",
+      "title": "CapCut's One-Workspace Play: Seedance 2.0 Video, GPT Image 2, and Seedmusic",
+      "dek": "The everything-suite pitch is landing with small content teams: video generation, image editing, and AI music in one workflow, ending the tool-switching tax between five subscriptions.",
+      "ts": "2026-07-09T02:17:32.572Z"
+    },
+    {
+      "id": "s12",
+      "cat": "rights",
+      "badge": "new",
+      "src": "Cloudflare",
+      "read": "3 min",
+      "title": "Cloudflare's September 15 Deadline Splits Search Crawlers From AI Crawlers",
+      "dek": "After the cutoff, mixed-use bots get blocked by default from ad-carrying pages. If you publish content, this is the biggest default-setting change yet in who gets to train on your work.",
+      "ts": "2026-07-09T00:17:32.572Z"
+    },
+    {
+      "id": "s13",
+      "spotlight": true,
+      "cat": "industry",
+      "badge": "new",
+      "src": "Today",
+      "read": "2 min",
+      "title": "AI Actor Tilly Norwood Lands Her First Feature Film",
+      "dek": "'Misaligned,' a coming-of-age story about a girl AI bot set in the Tillyverse, makes the synthetic performer's leap to features official — and reopens every argument about human performers at once.",
+      "ts": "2026-07-08T22:17:32.572Z"
+    },
+    {
+      "id": "s14",
+      "cat": "video",
+      "badge": "new",
+      "src": "BuildMVPFast",
+      "read": "3 min",
+      "title": "Wan 2.7 Is the Open Option for Local and Custom Video Pipelines",
+      "dek": "If local control or custom pipelines matter more than leaderboard wins, Wan remains the meaningful open-weight choice — structure-preserving transforms and no per-second meter running.",
+      "ts": "2026-07-08T20:17:32.572Z"
+    }
+  ],
+  "stats": {
+    "scanned_last_run": 147,
+    "published_today": 18,
+    "sources_live": 21
+  }
+}
