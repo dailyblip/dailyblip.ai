@@ -2,7 +2,7 @@
 // Candidates come from dedicated tool feeds + launch-flavored feed stories.
 // History check prevents repeats; URL check prevents featuring vaporware.
 import Parser from "rss-parser";
-import { askJSON, MODELS } from "./lib/claude.js";
+import { askJSON } from "./lib/claude.js";
 import { loadFeed, saveFeed, loadFeatured, saveFeatured, loadSources } from "./lib/store.js";
 
 const PICK_SYSTEM = `You choose the "Tool Drop of the Day" for dailyblip, a site for AI content creators. From the candidates, pick ONE tool.
