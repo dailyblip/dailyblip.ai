@@ -85,7 +85,7 @@ async function main() {
   // remove it from the pool and ask again.
   for (let round = 0; round < 3 && candidates.length; round++) {
     const result = await askJSON({
-      model: MODELS.write,
+      role: "write",
       system: PICK_SYSTEM,
       prompt: JSON.stringify(candidates.map((c, i) => ({ i, ...c }))),
       maxTokens: 1000,
