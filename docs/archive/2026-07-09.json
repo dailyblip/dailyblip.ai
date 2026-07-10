@@ -1,60 +1,229 @@
 {
   "date": "2026-07-09",
-  "issue": 192,
+  "issue": 193,
   "brief": {
-    "title": "Wednesday, July 8 — six things creators need to know",
+    "title": "Thursday, July 9 — six things creators need to know",
     "items": [
       {
-        "secs": 10,
-        "story": "s1",
-        "html": "<b>Meta launched Muse</b> — an image model that works from your own photo library. Restoration, style transfer, product shots; aimed straight at Firefly and Imagen."
+        "story": "s_132c70a2f06679b6",
+        "html": "<b>OpenAI's Atlas browser sunsets August 9</b> — agentic browsing moves to ChatGPT desktop and Chrome, so migrate any Atlas workflows now.",
+        "secs": 10
       },
       {
-        "secs": 10,
-        "story": "s2",
-        "html": "<b>Sora is sunsetting</b>: the app closed in April and the API dies September 24. Eleven weeks to migrate any pipeline that touches it."
+        "story": "s_9491981398fceeeb",
+        "html": "GPT-5.6 launches in three tiers: <b>Sol is 54% more token-efficient for coding</b>, with Terra and Luna covering enterprise and science tasks.",
+        "secs": 10
       },
       {
-        "secs": 9,
-        "story": "s3",
-        "html": "<b>Midjourney V8.1 is now the default</b> — native 2K, 4–5x faster, and a Draft Mode for cheap ideation before final renders."
+        "story": "s_fbe93ef80d6a6a67",
+        "html": "Meta's Muse Image can generate photos using <b>any public Instagram account you tag</b> — go private now if you don't want your images used.",
+        "secs": 10
       },
       {
-        "secs": 11,
-        "story": "s4",
-        "html": "July video rankings: <b>Runway Gen-4.5 for control</b>, Veo 3.1 for realism, Gemini Omni Flash at $0.10/sec for fast iteration. Pick by workflow, not leaderboard."
+        "story": "s_9de14e96265af218",
+        "html": "NYT alleges <b>OpenAI concealed copyright-detection tools</b> that could search training data and chat logs — a development writers should track closely.",
+        "secs": 10
       },
       {
-        "secs": 11,
-        "story": "s8",
-        "html": "<b>Copyright clarity is forming</b>: AI-assisted work is protectable in many places if you can show human direction. Start keeping your prompt and edit history."
+        "story": "s_ffdb0d5985a23df3",
+        "html": "Google now adds <b>AI-disclosure labels to Search, YouTube, and Discover ads</b> — if you make AI-assisted ads, expect clients to ask about compliance.",
+        "secs": 10
       },
       {
-        "secs": 9,
-        "story": "s9",
-        "html": "<b>Fable 5 goes pay-per-use today</b>; Sonnet 5 and Opus 4.8 stay bundled — writers, check which model your stack defaults to."
+        "story": "s_edec3357e039a3e0",
+        "html": "Character.AI launched <b>interactive microdramas where viewers chat with AI characters</b> and alter storylines in real-time across romance, horror, and survival genres.",
+        "secs": 10
       }
     ],
-    "date": "2026-07-09T18:17:32.589Z"
+    "date": "2026-07-10T03:32:08.487Z"
   },
   "tooldrop": {
     "name": "Kaiber Superstudio",
     "blurb": "A canvas-style playground for mixing models, styles and assets — moodboard your way to a finished video instead of prompt-roulette.",
     "meta": "image · video · animation — free tier",
     "url": "#",
-    "date": "2026-07-09T18:17:32.589Z"
+    "date": "2026-07-09T18:27:40.257Z"
   },
   "stories": [
+    {
+      "id": "s_2922cfdde0d796dd",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "OpenAI names GPT-5.6 as preferred model for Microsoft 365 Copilot",
+      "dek": "OpenAI announced GPT-5.6 will power Microsoft's productivity suite, signaling continued partnership despite reports Microsoft is building competing in-house models.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/",
+      "ts": "2026-07-10T00:16:54.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_3e171b9d1ff3d14d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "Microsoft's carbon emissions rise 25% due to AI datacenters",
+      "dek": "Microsoft's 2026 sustainability report shows 25% increase in emissions from 2025, driven primarily by datacenter expansion for AI infrastructure.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/963728/microsoft-sustainability-report-2026",
+      "ts": "2026-07-10T00:04:13.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_880ee3c2d5501c1e",
+      "cat": "industry",
+      "badge": "breaking",
+      "spotlight": false,
+      "title": "OpenAI's #2 executive Fidji Simo steps down from full-time role",
+      "dek": "Simo, who led OpenAI's applications division, is transitioning to part-time advisory after extended medical leave. Her departure creates a leadership gap as OpenAI pursues an IPO.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/",
+      "ts": "2026-07-09T23:38:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "top": true
+    },
+    {
+      "id": "s_9491981398fceeeb",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "OpenAI launches GPT-5.6 family with three model tiers",
+      "dek": "GPT-5.6 comes in three variants (Sol, Terra, Luna) with improvements in coding, enterprise work, and science. Sol is 54% more token-efficient for coding tasks.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/",
+      "ts": "2026-07-09T22:24:24.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_14a2cc90aef5b07a",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "OpenAI shuts down Atlas browser, moves features to ChatGPT desktop and Chrome",
+      "dek": "Atlas, OpenAI's AI browser launched in October, is sunsetting after less than a year. Agentic browsing features will shift to ChatGPT's desktop app and a Chrome extension.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/",
+      "ts": "2026-07-09T22:03:54.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_132c70a2f06679b6",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "title": "OpenAI shuts down Atlas browser less than a year after launch",
+      "dek": "ChatGPT Atlas, announced in October, is sunsetting by August 9. The agentic browsing features will move to ChatGPT desktop and Chrome.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963654/openai-chatgpt-atlas-ai-browser-shut-down-sunset",
+      "ts": "2026-07-09T20:34:05.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_ffdb0d5985a23df3",
+      "cat": "rights",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Google adds AI disclosure labels to Search, YouTube, and Discover ads",
+      "dek": "Users can now see whether ads were created or edited with AI through a label in My Ad Center, expanding transparency beyond election ads.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963628/google-ai-generated-ads-label",
+      "ts": "2026-07-09T20:11:38.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_241317adaedd7479",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Meta launches Muse Spark 1.1 for agentic AI coding tasks",
+      "dek": "Meta's multimodal coding model handles complex workflows, bug fixes, and large code migrations to compete with OpenAI and Anthropic's offerings.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/",
+      "ts": "2026-07-09T19:40:45.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_9de14e96265af218",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "New York Times says OpenAI hid evidence of copyright detection tools",
+      "dek": "Publishers allege OpenAI concealed its ability to search training data and chat logs for copyrighted content, escalating the copyright infringement lawsuit.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+      "ts": "2026-07-09T19:05:58.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_76107e209263173a",
+      "cat": "rights",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Google now discloses AI-made and AI-edited ads across Search, YouTube, and Discover",
+      "dek": "Users can see whether ads were created or edited with AI via a new label in Google's My Ad Center, expanding disclosure beyond election ads.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/",
+      "ts": "2026-07-09T18:40:51.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_74bc3599582dfa3b",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Government safety review of frontier AI models remains opaque",
+      "dek": "OpenAI's Sol and Anthropic's Fable received government clearance for release, but the safety review process between regulators and labs is unclear to outside observers.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/how-did-the-government-decide-openais-frontier-model-was-safe-to-release/",
+      "ts": "2026-07-09T18:22:39.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_fbe93ef80d6a6a67",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "How to prevent Meta's AI from using your Instagram photos",
+      "dek": "Meta's Muse Image lets any user generate AI photos using public Instagram accounts by tagging them. Private accounts and under-18 profiles are excluded.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/",
+      "ts": "2026-07-09T17:56:47.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_8c91b0e5893bd1c9",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Meta's custom AI chips enter production in September",
+      "dek": "Meta's modular MTIA chips, co-designed with Broadcom and manufactured by TSMC, aim to reduce GPU costs as component shortages persist.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/",
+      "ts": "2026-07-09T17:17:37.000Z",
+      "read": "3 min",
+      "also": []
+    },
     {
       "id": "s1",
       "cat": "image",
       "badge": "breaking",
-      "top": true,
       "src": "Meta",
       "read": "3 min",
       "title": "Meta Launches Muse, an Image Model Built Around Your Own Photos",
       "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
-      "ts": "2026-07-09T16:17:32.572Z"
+      "ts": "2026-07-09T16:27:40.256Z"
     },
     {
       "id": "s2",
@@ -64,7 +233,20 @@
       "read": "4 min",
       "title": "The Sora Countdown: App Already Gone, API Sunsets September 24",
       "dek": "OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.",
-      "ts": "2026-07-09T15:17:32.572Z"
+      "ts": "2026-07-09T15:27:40.256Z"
+    },
+    {
+      "id": "s_c4a0826144b97f0b",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Anthropic's Claude adds Reflect dashboard to track AI usage habits",
+      "dek": "Claude's new Reflect feature visualizes user AI habits and usage patterns, subtly reinforcing Claude's role in daily workflows.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/",
+      "ts": "2026-07-09T14:53:09.000Z",
+      "read": "3 min",
+      "also": []
     },
     {
       "id": "s3",
@@ -74,7 +256,33 @@
       "read": "3 min",
       "title": "Midjourney V8.1 Becomes the Default: Native 2K, 4–5x Faster, Draft Mode",
       "dek": "The new default model ships native 2K HD output, a big speed jump, better prompt adherence, and a Draft Mode built for rapid ideation before you commit render credits to a final.",
-      "ts": "2026-07-09T13:17:32.572Z"
+      "ts": "2026-07-09T13:27:40.256Z"
+    },
+    {
+      "id": "s_2b56d024188e1825",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "Open-source tool Ollama raises $65M with nearly 9M users",
+      "dek": "Ollama, which lets developers run AI models on their PCs, grew to 9M users and 176K GitHub stars before raising Series B funding to expand.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/",
+      "ts": "2026-07-09T13:00:00.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_edec3357e039a3e0",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "title": "Character.AI creates microdramas where users can chat with and roleplay characters",
+      "dek": "Character.AI launched three original microdramas (romance, horror, survival) letting viewers 18+ chat with AI characters and alter storylines in real-time.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/character-ai-enters-the-microdrama-arena-with-its-own-productions-but-with-a-twist/",
+      "ts": "2026-07-09T13:00:00.000Z",
+      "read": "3 min",
+      "also": []
     },
     {
       "id": "s4",
@@ -84,7 +292,7 @@
       "read": "6 min",
       "title": "July Video Rankings: Runway Gen-4.5 Owns Control, Veo 3.1 Owns Realism",
       "dek": "The month's big comparison crowns Runway Gen-4.5 the pro-workflow pick — camera direction, structured prompting, music videos and previs — while Veo 3.1 and Seedance 2.5 lead on raw realism. Kling 3.0 Turbo and Pika stay the daily drivers.",
-      "ts": "2026-07-09T12:17:32.572Z"
+      "ts": "2026-07-09T12:27:40.256Z"
     },
     {
       "id": "s5",
@@ -94,7 +302,7 @@
       "read": "3 min",
       "title": "Gemini Omni Flash Prices Fast Video Iteration at $0.10 per Second",
       "dek": "Google's conversational video model is built for quick back-and-forth edits rather than one-shot renders — a different bet on how creators actually work, and cheap enough to iterate freely.",
-      "ts": "2026-07-09T11:17:32.572Z"
+      "ts": "2026-07-09T11:27:40.256Z"
     },
     {
       "id": "s6",
@@ -105,7 +313,7 @@
       "read": "5 min",
       "title": "Beat-Sync Goes Mainstream: Full AI Music Videos From a Finished Track",
       "dek": "Tools like Freebeat and Neural Frames now analyze BPM and transients to cut visuals to beat drops, hold character consistency, and lip-sync avatars across 6-minute videos — indie artists are shipping label-grade visuals on no budget.",
-      "ts": "2026-07-09T10:17:32.572Z"
+      "ts": "2026-07-09T10:27:40.256Z"
     },
     {
       "id": "s7",
@@ -115,7 +323,7 @@
       "read": "3 min",
       "title": "Kling O3 Brings 15-Second Multi-Shot Scenes With Voice-Persistent Characters",
       "dek": "Multi-shot generation, character voices that persist across cuts, and native audio push Kling toward short-film territory rather than clip stitching.",
-      "ts": "2026-07-09T09:17:32.572Z"
+      "ts": "2026-07-09T09:27:40.256Z"
     },
     {
       "id": "s8",
@@ -125,7 +333,7 @@
       "read": "5 min",
       "title": "Copyright Consensus Forming: AI-Assisted Work Is Protectable — With Receipts",
       "dek": "Many jurisdictions now extend protection to AI-assisted works when there's demonstrable human-in-the-loop direction: custom prompting, manual editing, creative decisions. Practical takeaway — keep your prompt and edit history.",
-      "ts": "2026-07-09T08:17:32.572Z"
+      "ts": "2026-07-09T08:27:40.256Z"
     },
     {
       "id": "s9",
@@ -135,7 +343,7 @@
       "read": "3 min",
       "title": "Fable 5 Goes Pay-Per-Use Today — Writers, Check Your Stack",
       "dek": "Claude Fable 5 now costs $10/M input and $50/M output tokens on every subscriber tier, while Sonnet 5 ($2/$10 intro) and Opus 4.8 stay bundled. For long-form drafting, the bundled models are the value play.",
-      "ts": "2026-07-09T06:17:32.572Z"
+      "ts": "2026-07-09T06:27:40.256Z"
     },
     {
       "id": "s10",
@@ -145,7 +353,7 @@
       "read": "3 min",
       "title": "GPT Image 2: Natural-Language Edits, 2K Output, Multilingual Text",
       "dek": "OpenAI's image model has become the instruction-follower of the field — revise existing visuals and apply targeted edits by just describing them, with text rendering that finally survives non-English scripts.",
-      "ts": "2026-07-09T04:17:32.572Z"
+      "ts": "2026-07-09T04:27:40.256Z"
     },
     {
       "id": "s11",
@@ -155,43 +363,12 @@
       "read": "4 min",
       "title": "CapCut's One-Workspace Play: Seedance 2.0 Video, GPT Image 2, and Seedmusic",
       "dek": "The everything-suite pitch is landing with small content teams: video generation, image editing, and AI music in one workflow, ending the tool-switching tax between five subscriptions.",
-      "ts": "2026-07-09T02:17:32.572Z"
-    },
-    {
-      "id": "s12",
-      "cat": "rights",
-      "badge": "new",
-      "src": "Cloudflare",
-      "read": "3 min",
-      "title": "Cloudflare's September 15 Deadline Splits Search Crawlers From AI Crawlers",
-      "dek": "After the cutoff, mixed-use bots get blocked by default from ad-carrying pages. If you publish content, this is the biggest default-setting change yet in who gets to train on your work.",
-      "ts": "2026-07-09T00:17:32.572Z"
-    },
-    {
-      "id": "s13",
-      "spotlight": true,
-      "cat": "industry",
-      "badge": "new",
-      "src": "Today",
-      "read": "2 min",
-      "title": "AI Actor Tilly Norwood Lands Her First Feature Film",
-      "dek": "'Misaligned,' a coming-of-age story about a girl AI bot set in the Tillyverse, makes the synthetic performer's leap to features official — and reopens every argument about human performers at once.",
-      "ts": "2026-07-08T22:17:32.572Z"
-    },
-    {
-      "id": "s14",
-      "cat": "video",
-      "badge": "new",
-      "src": "BuildMVPFast",
-      "read": "3 min",
-      "title": "Wan 2.7 Is the Open Option for Local and Custom Video Pipelines",
-      "dek": "If local control or custom pipelines matter more than leaderboard wins, Wan remains the meaningful open-weight choice — structure-preserving transforms and no per-second meter running.",
-      "ts": "2026-07-08T20:17:32.572Z"
+      "ts": "2026-07-09T02:27:40.256Z"
     }
   ],
   "stats": {
-    "scanned_last_run": 147,
-    "published_today": 18,
-    "sources_live": 21
+    "scanned_last_run": 25,
+    "published_today": 26,
+    "sources_live": 14
   }
 }

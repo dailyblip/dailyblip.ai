@@ -1,41 +1,41 @@
 {
-  "issue": 192,
-  "generated_at": "2026-07-10T03:14:48.309Z",
+  "issue": 193,
+  "generated_at": "2026-07-10T03:32:10.984Z",
   "brief": {
-    "title": "Wednesday, July 8 — six things creators need to know",
+    "title": "Thursday, July 9 — six things creators need to know",
     "items": [
       {
-        "secs": 10,
-        "story": "s1",
-        "html": "<b>Meta launched Muse</b> — an image model that works from your own photo library. Restoration, style transfer, product shots; aimed straight at Firefly and Imagen."
+        "story": "s_132c70a2f06679b6",
+        "html": "<b>OpenAI's Atlas browser sunsets August 9</b> — agentic browsing moves to ChatGPT desktop and Chrome, so migrate any Atlas workflows now.",
+        "secs": 10
       },
       {
-        "secs": 10,
-        "story": "s2",
-        "html": "<b>Sora is sunsetting</b>: the app closed in April and the API dies September 24. Eleven weeks to migrate any pipeline that touches it."
+        "story": "s_9491981398fceeeb",
+        "html": "GPT-5.6 launches in three tiers: <b>Sol is 54% more token-efficient for coding</b>, with Terra and Luna covering enterprise and science tasks.",
+        "secs": 10
       },
       {
-        "secs": 9,
-        "story": "s3",
-        "html": "<b>Midjourney V8.1 is now the default</b> — native 2K, 4–5x faster, and a Draft Mode for cheap ideation before final renders."
+        "story": "s_fbe93ef80d6a6a67",
+        "html": "Meta's Muse Image can generate photos using <b>any public Instagram account you tag</b> — go private now if you don't want your images used.",
+        "secs": 10
       },
       {
-        "secs": 11,
-        "story": "s4",
-        "html": "July video rankings: <b>Runway Gen-4.5 for control</b>, Veo 3.1 for realism, Gemini Omni Flash at $0.10/sec for fast iteration. Pick by workflow, not leaderboard."
+        "story": "s_9de14e96265af218",
+        "html": "NYT alleges <b>OpenAI concealed copyright-detection tools</b> that could search training data and chat logs — a development writers should track closely.",
+        "secs": 10
       },
       {
-        "secs": 11,
-        "story": "s8",
-        "html": "<b>Copyright clarity is forming</b>: AI-assisted work is protectable in many places if you can show human direction. Start keeping your prompt and edit history."
+        "story": "s_ffdb0d5985a23df3",
+        "html": "Google now adds <b>AI-disclosure labels to Search, YouTube, and Discover ads</b> — if you make AI-assisted ads, expect clients to ask about compliance.",
+        "secs": 10
       },
       {
-        "secs": 9,
-        "story": "s9",
-        "html": "<b>Fable 5 goes pay-per-use today</b>; Sonnet 5 and Opus 4.8 stay bundled — writers, check which model your stack defaults to."
+        "story": "s_edec3357e039a3e0",
+        "html": "Character.AI launched <b>interactive microdramas where viewers chat with AI characters</b> and alter storylines in real-time across romance, horror, and survival genres.",
+        "secs": 10
       }
     ],
-    "date": "2026-07-09T18:27:40.257Z"
+    "date": "2026-07-10T03:32:08.487Z"
   },
   "stories": [
     {
