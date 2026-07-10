@@ -28,7 +28,8 @@ jobs:
         run: |
           git config user.name "dailyblip-bot"
           git config user.email "actions@users.noreply.github.com"
-          git pull --rebase
           git add pipeline/sources.json data
-          git diff --cached --quiet || git commit -m "curator: $(date -u +'%Y-%m-%d')"
+          git diff --cached --quiet && exit 0
+          git commit -m "curator: $(date -u +'%Y-%m-%d')"
+          git pull --rebase --autostash
           git push
