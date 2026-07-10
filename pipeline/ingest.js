@@ -9,6 +9,7 @@ import {
   loadSources, loadHealth, saveHealth, readJSON, PATHS,
 } from "./lib/store.js";
 import { hash, canonicalUrl, dedupeCluster } from "./lib/text.js";
+import { fetchRedditWithScores, passesRedditGate } from "./lib/reddit.js";
 import path from "node:path";
 
 const OVERRIDES_PATH = path.join(path.dirname(PATHS.seen), "overrides.json");
@@ -21,24 +22,60 @@ const MAX_SPOTLIGHT = 3;
 
 const CATEGORIES = ["image", "video", "music", "writing", "tools", "rights", "industry"];
 
-const CLASSIFY_SYSTEM = `You are the wire editor for dailyblip, an AI-news site for CONTENT CREATORS — people who make images, video, music, and writing with AI. You receive raw RSS items, each with an article excerpt fetched from the source page, and decide what runs.
+const CLASSIFY_SYSTEM = `You are the wire editor for dailyblip, an AI-news site for CONTENT CREATORS — image, video, music, writing. You have ZERO TOLERANCE for AI slop. Being ruthless here is the entire point.
 
 For each item return:
-- keep (boolean): true only if a working creator would care. Keep: model/tool launches and updates, pricing changes, creative-workflow techniques, copyright/licensing developments, platform policy affecting creators' content, major industry news that ripples into creative tools, and maker stories (see spotlight). Drop: enterprise B2B minutiae, funding rounds with no product, academic papers with no usable tool, listicle/SEO filler, sponsored content, ads.
-- spotlight (boolean): true if the story is primarily about a PERSON or small team CREATING something interesting with AI — a filmmaker's AI short, an indie artist's AI-visual album, a game or comic or art project, a novel workflow someone built. Company/product/policy news is never spotlight. Be picky: spotlight is a showcase, not a category.
-- category: one of ${JSON.stringify(CATEGORIES)}. "rights" = copyright, licensing, crawler/scraping policy. "tools" = workflow suites, plugins, platforms. Spotlight stories still get the category of their medium.
-- badge: "breaking" (major, <6h old), "hot" (big story), or "new" (default).
-- headline: the title, cleaned — sentence-cased claims, no clickbait, no trailing site names, max 90 chars.
-- dek: 1–2 sentences (max 45 words) IN YOUR OWN WORDS. Ground every claim ONLY in the provided title/snippet/excerpt — if the excerpt doesn't support a detail, leave it out. Concrete over hype. Never copy source wording.
-- read_min: estimated read time of the source, 2–6.
+- keep (boolean): true only if this clears the bar. Keep: real model/tool launches and updates, pricing changes, sunsets and deadlines, workflow techniques a working creator would use, copyright/licensing developments, platform policy affecting creators, industry news that ripples into creative tools, and genuine maker stories (see spotlight rules). DROP hard: enterprise B2B minutiae, funding rounds with no shipped product, academic papers with no usable tool, listicle/SEO filler, sponsored content, ads, tutorials from content mills, generic "AI is changing everything" think-pieces.
 
-Return a JSON array, same order as input: {"keep":bool,"spotlight":bool,"category":"...","badge":"...","headline":"...","dek":"...","read_min":n}. JSON only.`;
+- spotlight (boolean): true ONLY if this is a person or small team who MADE something praise-worthy with AI. Judge like a working professional creator:
+    REJECT — generic "AI aesthetic" with no distinctive point of view; visible artifacts (bad hands, warped text, morphing objects/faces); recycled prompt tropes ("cinematic, hyperrealistic, 8K, trending on artstation"); NSFW, waifu-bait, anime/game character portraits with no unique execution; "workflow" posts that are really product ads; explainer videos with an AI voiceover; anything a working creator would be embarrassed to put on a reel.
+    ACCEPT — deliberate artistic choices, a specific point of view, evidence of technical control (character consistency, cohesive style, deliberate composition), work that would earn a nod from a professional in that medium.
+  Product/policy news is never spotlight. When in doubt, REJECT.
+
+- quality (integer 1–10): honest editorial rating.
+    1–3 = slop or fluff, should have been dropped (keep=false).
+    4–5 = tolerable industry news, worth including but not featured.
+    6–7 = solid, meaningful signal for creators.
+    8–9 = must-read, moves the needle.
+    10 = era-defining.
+  Be stingy — most items are 4–6. Only spotlight-worthy work or genuinely major releases score 8+.
+
+- category: one of ${JSON.stringify(CATEGORIES)}. "rights" = copyright, licensing, crawler policy. "tools" = suites, plugins, platforms. Spotlight stories still get their medium's category.
+- badge: "breaking" (major, <6h old), "hot" (big story), "new" (default).
+- headline: title cleaned — sentence-cased claims, no clickbait, no site names, max 90 chars.
+- dek: 1–2 sentences (max 45 words) IN YOUR OWN WORDS. Ground every claim ONLY in the title/snippet/excerpt provided — if the excerpt doesn't support a detail, leave it out. Concrete over hype. Never copy source wording.
+- read_min: source read time estimate, 2–6.
+
+For Reddit sources, you are told community score and comment count. Treat those as validation but not as a pass — a 5,000-upvote post can still be slop and gets rejected on its merits.
+
+Return a JSON array in the same order as input: {"keep":bool,"spotlight":bool,"quality":n,"category":"...","badge":"...","headline":"...","dek":"...","read_min":n}. JSON only.`;
 
 async function fetchAllFeeds(feeds) {
   const parser = new Parser({ timeout: 15000, headers: { "user-agent": "dailyblip-ingest/1.0" } });
   const perFeed = {};
+  const active = feeds.filter((f) => !f.disabled);
+
   const results = await Promise.allSettled(
-    feeds.filter((f) => !f.disabled).map(async (f) => {
+    active.map(async (f) => {
+      // Reddit sources go through the JSON API so we have upvote + comment
+      // counts to gate on. Non-Reddit sources use the regular RSS parser.
+      if (f.reddit_tier) {
+        const posts = await fetchRedditWithScores(f.url);
+        const raw = posts.length;
+        const gated = posts.filter((p) => passesRedditGate(p, f.reddit_tier));
+        perFeed[f.name] = { ok: true, count: gated.length, raw, filtered: raw - gated.length };
+        return gated.map((p) => ({
+          title: p.title,
+          url: p.external_url || p.url,
+          snippet: p.snippet,
+          published: p.published,
+          source: f.name,
+          hint: f.hint,
+          community_score: p.score,
+          community_comments: p.num_comments,
+        }));
+      }
+
       const parsed = await parser.parseURL(f.url);
       const items = (parsed.items || []).map((item) => ({
         title: (item.title || "").trim(),
@@ -52,7 +89,7 @@ async function fetchAllFeeds(feeds) {
       return items;
     })
   );
-  const active = feeds.filter((f) => !f.disabled);
+
   const items = [];
   results.forEach((r, i) => {
     if (r.status === "fulfilled") items.push(...r.value);
@@ -133,17 +170,16 @@ async function main() {
   }
 
   // 3. Ground each item in real article text before summarizing.
-  const excerpts = await Promise.all(
-     items.map((it) => Promise.race([
-       fetchExcerpt(it.url),
-       new Promise((r) => setTimeout(() => r(""), 10000))
-     ]))
-   );
+  const excerpts = await Promise.all(items.map((it) => fetchExcerpt(it.url)));
 
   // 4. One batched Claude call classifies + writes deks for the whole run.
   const payload = items.map((it, i) => ({
     i, title: it.title, snippet: it.snippet, article_excerpt: excerpts[i],
     source: it.source, category_hint: it.hint,
+    ...(it.community_score !== undefined && {
+      community_score: it.community_score,
+      community_comments: it.community_comments,
+    }),
   }));
   const verdicts = await askJSON({
     role: "classify",
@@ -152,16 +188,23 @@ async function main() {
     maxTokens: 8000,
   });
 
-  // 5. Merge keepers into the feed.
+  // 5. Merge keepers into the feed. Hard quality floor: nothing under 4 ships.
+  const MIN_QUALITY = 4;
+  const SPOTLIGHT_MIN_QUALITY = 7;
   const kept = [];
+  let sloppedOut = 0;
   verdicts.forEach((v, i) => {
     const src = items[i];
-    if (!v?.keep || !src) return;
+    if (!v || !src) return;
+    const quality = Math.min(10, Math.max(1, Number(v.quality) || 5));
+    if (!v.keep || quality < MIN_QUALITY) { sloppedOut++; return; }
     kept.push({
       id: "s_" + hash(canonicalUrl(src.url)),
       cat: CATEGORIES.includes(v.category) ? v.category : (src.hint || "industry"),
       badge: ["breaking", "hot", "new"].includes(v.badge) ? v.badge : "new",
-      spotlight: !!v.spotlight,
+      // Spotlight requires BOTH the model saying yes AND the quality bar.
+      spotlight: !!v.spotlight && quality >= SPOTLIGHT_MIN_QUALITY,
+      quality,
       title: v.headline || src.title,
       dek: v.dek || "",
       src: src.source,
@@ -169,6 +212,7 @@ async function main() {
       ts: src.published,
       read: `${Math.min(6, Math.max(2, v.read_min || 3))} min`,
       also: src.also_covered_by || [],
+      ...(src.community_score !== undefined && { community_score: src.community_score }),
     });
   });
 
@@ -196,10 +240,13 @@ async function main() {
   }
 
   // "top" flag: only auto-assign if the admin hasn't pinned one.
+  // Top slot has a real quality floor — no mediocre stories at the top.
   const adminPinnedTop = feed.stories.find((s) => s.top && (s.locked || s.manual));
   if (!adminPinnedTop) {
     feed.stories.forEach((s) => delete s.top);
-    const top = feed.stories.find((s) => s.badge === "breaking") || feed.stories.find((s) => s.badge === "hot");
+    const top = feed.stories.find((s) => s.badge === "breaking" && (s.quality ?? 5) >= 7)
+      || feed.stories.find((s) => s.badge === "hot" && (s.quality ?? 5) >= 7)
+      || feed.stories.find((s) => (s.quality ?? 5) >= 8);
     if (top) top.top = true;
   }
 
@@ -212,12 +259,13 @@ async function main() {
   feed.stats = {
     ...feed.stats,
     scanned_last_run: scanned,
+    slopped_last_run: sloppedOut,
     published_today: feed.stories.filter((s) => Date.now() - new Date(s.ts) < 24 * 3600 * 1000).length,
     sources_live: feeds.filter((f) => !f.disabled).length,
   };
 
   saveFeed(feed); saveSeen(seen);
-  console.log(`ingest: scanned ${scanned}, kept ${kept.length} (${kept.filter(k=>k.spotlight).length} spotlight), feed now ${feed.stories.length} stories.`);
+  console.log(`ingest: scanned ${scanned}, slop-rejected ${sloppedOut}, kept ${kept.length} (${kept.filter(k=>k.spotlight).length} spotlight), feed now ${feed.stories.length} stories.`);
 }
 
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
