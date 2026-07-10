@@ -1,6 +1,6 @@
 {
   "issue": 195,
-  "generated_at": "2026-07-10T22:26:51.087Z",
+  "generated_at": "2026-07-10T22:29:56.804Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
@@ -49,14 +49,13 @@
       "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
       "ts": "2026-07-10T21:00:29.000Z",
       "read": "3 min",
-      "also": [],
-      "top": true
+      "also": []
     },
     {
       "id": "s_1d85656f77c8e03e",
       "cat": "industry",
       "badge": "hot",
-      "spotlight": false,
+      "spotlight": true,
       "title": "Hugging Face CEO: companies switching from paid APIs to open-source AI models",
       "dek": "As costs scale, enterprises are moving away from proprietary APIs toward open-source alternatives, raising concerns about centralized control by a handful of labs.",
       "src": "TechCrunch AI",
@@ -407,7 +406,7 @@
       "id": "s_3e171b9d1ff3d14d",
       "cat": "industry",
       "badge": "hot",
-      "spotlight": false,
+      "spotlight": true,
       "title": "Microsoft's carbon emissions rise 25% due to AI datacenters",
       "dek": "Microsoft's 2026 sustainability report shows 25% increase in emissions from 2025, driven primarily by datacenter expansion for AI infrastructure.",
       "src": "The Verge AI",
@@ -453,7 +452,8 @@
       "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/",
       "ts": "2026-07-09T22:24:24.000Z",
       "read": "3 min",
-      "also": []
+      "also": [],
+      "top": true
     },
     {
       "id": "s_14a2cc90aef5b07a",
