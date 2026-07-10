@@ -1,41 +1,41 @@
 {
-  "issue": 194,
-  "generated_at": "2026-07-10T18:10:49.100Z",
+  "issue": 195,
+  "generated_at": "2026-07-10T18:13:20.649Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
       {
-        "story": "s2",
-        "html": "<b>Sora API sunsets September 24</b> — the app is already gone, giving you an 11-week window to migrate any video pipeline off the platform now.",
+        "story": "s_132c70a2f06679b6",
+        "html": "<b>OpenAI's Atlas browser sunsets August 9</b> — agentic browsing moves to ChatGPT desktop and Chrome, so update any workflows that depend on it now.",
         "secs": 10
       },
       {
-        "story": "s_16830069eb2915f6",
-        "html": "OpenAI now risks <b>judicial sanctions for allegedly deleting ChatGPT logs</b> sought as evidence in the NYT copyright case — a major escalation writers should watch.",
+        "story": "s_9491981398fceeeb",
+        "html": "OpenAI's new <b>GPT-5.6 Sol is 54% more token-efficient for coding tasks</b>, arriving in three tiers (Sol, Terra, Luna) with gains in enterprise and science work too.",
+        "secs": 10
+      },
+      {
+        "story": "s_3fd5be624e9b45ce",
+        "html": "Instagram will <b>label AI-generated content rather than filter it</b>, letting creators stay visible while users control their own feed preferences.",
+        "secs": 9
+      },
+      {
+        "story": "s_fbe93ef80d6a6a67",
+        "html": "Meta's Muse Image lets anyone generate AI photos using <b>public Instagram accounts by tagging them</b> — go private now if you don't want your images used as source material.",
         "secs": 11
       },
       {
-        "story": "s3",
-        "html": "<b>Midjourney V8.1 is now the default</b>, shipping native 2K output, 4–5x faster speeds, and a Draft Mode to test ideas before spending render credits.",
+        "story": "s_10db03d8139e44b4",
+        "html": "New <b>INT4 W4A4 quantized image models in ComfyUI match INT8 quality</b> at smaller file size, meaning faster local runs without a visible drop in output.",
         "secs": 10
       },
       {
-        "story": "s_ba6ef68cb3be2005",
-        "html": "<b>ChatGPT Work lets AI agents run autonomously for hours</b>, removing previous time-limit constraints — useful if you automate long creative or production workflows.",
-        "secs": 10
-      },
-      {
-        "story": "s_6b0fd45dbfe0af31",
-        "html": "<b>FL Studio 2026 upgrades Gopher from tutorial helper to hands-on mixing assistant</b>, making it the most capable AI production tool built into a major DAW yet.",
-        "secs": 10
-      },
-      {
-        "story": "s_81903600b8406df1",
-        "html": "A new ComfyUI node enables <b>INT4 fast inference for Krea2 Turbo on just 6GB VRAM</b>, opening ultra-low-memory 4-bit model runs to entry-level GPU owners.",
-        "secs": 10
+        "story": "s_5012f89709d598db",
+        "html": "ComfyUI now has <b>native SeedVR2 upscaling for both images and video</b>, demonstrated working alongside the INT4 Krea 2 pipeline.",
+        "secs": 9
       }
     ],
-    "date": "2026-07-10T14:28:54.873Z"
+    "date": "2026-07-10T18:13:18.414Z"
   },
   "stories": [
     {
