@@ -1,0 +1,46 @@
+name: Daily Blip
+on:
+  schedule:
+    - cron: "0 13 * * *"   # 13:00 UTC = 6am PDT (adjust to 14:00 for PST in winter)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pipeline
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Write the brief
+        run: node pipeline/brief.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Pick the tool drop
+        run: node pipeline/tooldrop.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: Write the archive
+        run: node pipeline/archive.js
+      - name: Commit
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase
+          git add data docs/data docs/archive
+          git diff --cached --quiet || git commit -m "daily blip: $(date -u +'%Y-%m-%d')"
+          git push
+      - name: Send newsletter
+        run: node pipeline/newsletter.js
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          SITE_URL: https://dailyblip.ai
