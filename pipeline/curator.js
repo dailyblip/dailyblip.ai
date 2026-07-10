@@ -137,5 +137,4 @@ async function main() {
   await checkGraveyard();
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
-.then(() => process.exit(0))
+main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
