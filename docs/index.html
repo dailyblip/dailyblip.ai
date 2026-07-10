@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -386,7 +387,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
       <span class="live">signal strong</span>
     </div>
   </div>
-  <p class="tagline">Everything that happened in AI for people who make things — image, video, music, and words — compressed into a 60-second brief.</p>
+  <p class="tagline">A ruthlessly curated AI-creator brief — only the signal, none of the slop. Compressed into 60 seconds daily.</p>
   <nav class="cats" id="catNav" aria-label="Filter by category"></nav>
 </header>
 
@@ -741,7 +742,7 @@ function renderSidebar(){
   const st = FEED.stats || {};
   $("#numGrid").innerHTML = `
     <div class="num-cell"><b>${st.scanned_last_run ?? "—"}</b><span>signals scanned</span></div>
-    <div class="num-cell"><b>${st.published_today ?? "—"}</b><span>published today</span></div>
+    <div class="num-cell"><b>${st.slopped_last_run ?? "—"}</b><span>slop rejected</span></div>
     <div class="num-cell"><b>${st.sources_live ?? "—"}</b><span>sources live</span></div>
     <div class="num-cell"><b>${FEED.generated_at ? Math.max(1,Math.round((Date.now()-new Date(FEED.generated_at))/6e4))+"m" : "—"}</b><span>since last sync</span></div>`;
 
