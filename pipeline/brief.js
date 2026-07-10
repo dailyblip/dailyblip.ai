@@ -63,5 +63,4 @@ async function main() {
   console.log(`brief: issue ${feed.issue} written with ${gated.items.length} items.`);
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
-.then(() => process.exit(0))
+main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
