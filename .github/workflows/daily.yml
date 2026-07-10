@@ -35,9 +35,10 @@ jobs:
         run: |
           git config user.name "dailyblip-bot"
           git config user.email "actions@users.noreply.github.com"
-          git pull --rebase
           git add data docs/data docs/archive
-          git diff --cached --quiet || git commit -m "daily blip: $(date -u +'%Y-%m-%d')"
+          git diff --cached --quiet && exit 0
+          git commit -m "daily blip: $(date -u +'%Y-%m-%d')"
+          git pull --rebase --autostash
           git push
       - name: Send newsletter
         run: node pipeline/newsletter.js
