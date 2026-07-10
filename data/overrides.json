@@ -1,5 +1,12 @@
-   {
-     "blocked_ids": [],
-     "blocked_terms": [],
-     "pinned_spotlight": []
-   }
+{
+  "blocked_ids": [
+    "s_924796fd6cc93bfe",
+    "s_535d8c83d9458c76",
+    "s_2ec50b23edb09c7d",
+    "s_1399542739acbd4a",
+    "s_7e89fb2f6558a3a2",
+    "s_8e25d8db0570735f"
+  ],
+  "blocked_terms": [],
+  "pinned_spotlight": []
+}
