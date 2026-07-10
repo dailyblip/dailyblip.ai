@@ -44,17 +44,20 @@
     {
       "name": "r/StableDiffusion",
       "url": "https://www.reddit.com/r/StableDiffusion/top/.rss?t=day",
-      "hint": "image"
+      "hint": "image",
+      "reddit_tier": "showcase"
     },
     {
       "name": "r/aivideo",
       "url": "https://www.reddit.com/r/aivideo/top/.rss?t=day",
-      "hint": "video"
+      "hint": "video",
+      "reddit_tier": "showcase"
     },
     {
       "name": "r/SunoAI",
       "url": "https://www.reddit.com/r/SunoAI/top/.rss?t=day",
-      "hint": "music"
+      "hint": "music",
+      "reddit_tier": "showcase"
     },
     {
       "name": "Artlist Blog",
@@ -69,7 +72,8 @@
     {
       "name": "r/midjourney",
       "url": "https://www.reddit.com/r/midjourney/top/.rss?t=day",
-      "hint": "image"
+      "hint": "image",
+      "reddit_tier": "showcase"
     }
   ],
   "tool_feeds": [
