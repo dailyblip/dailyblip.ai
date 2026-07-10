@@ -1,6 +1,6 @@
 {
   "issue": 195,
-  "generated_at": "2026-07-10T21:44:29.051Z",
+  "generated_at": "2026-07-10T22:26:51.087Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
@@ -53,19 +53,6 @@
       "top": true
     },
     {
-      "id": "s_924796fd6cc93bfe",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": true,
-      "title": "A longer excerpt about the gods of my world",
-      "dek": "AI-assisted worldbuilding and narrative by community creator.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usxryp/a_longer_excerpt_about_the_gods_of_my_world/",
-      "ts": "2026-07-10T19:34:36.000Z",
-      "read": "2 min",
-      "also": []
-    },
-    {
       "id": "s_1d85656f77c8e03e",
       "cat": "industry",
       "badge": "hot",
@@ -76,45 +63,6 @@
       "url": "https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/",
       "ts": "2026-07-10T19:00:00.000Z",
       "read": "4 min",
-      "also": []
-    },
-    {
-      "id": "s_535d8c83d9458c76",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": true,
-      "title": "Making of the Rings of Power Season 3 Finale (Parody)",
-      "dek": "AI-generated video parody by community creator.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usw6qa/making_of_the_rings_of_power_season_3_finale/",
-      "ts": "2026-07-10T18:37:06.000Z",
-      "read": "2 min",
-      "also": []
-    },
-    {
-      "id": "s_2ec50b23edb09c7d",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": true,
-      "title": "Chronicles of Carnivex: Fall of the Black Blade | Episode 2",
-      "dek": "AI-generated video series by community creator.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usuxko/chronicles_of_carnivex_fall_of_the_black_blade/",
-      "ts": "2026-07-10T17:52:43.000Z",
-      "read": "2 min",
-      "also": []
-    },
-    {
-      "id": "s_1399542739acbd4a",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "I never wanted to be in this war",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usuwf4/i_never_wanted_to_be_in_this_war/",
-      "ts": "2026-07-10T17:51:34.000Z",
-      "read": "2 min",
       "also": []
     },
     {
@@ -157,19 +105,6 @@
       "also": []
     },
     {
-      "id": "s_7e89fb2f6558a3a2",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Fight fire with the Pressurized Aqueous Suppression Emitter",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usqxu3/fight_fire_with_the_pressurized_aqueous/",
-      "ts": "2026-07-10T15:29:15.000Z",
-      "read": "2 min",
-      "also": []
-    },
-    {
       "id": "s_9a91f2fd509de00b",
       "cat": "video",
       "badge": "new",
@@ -179,19 +114,6 @@
       "src": "r/aivideo",
       "url": "https://www.reddit.com/r/aivideo/comments/1usoodg/spain_vs_belgium_feral_kingdoms_blood_and_gold/",
       "ts": "2026-07-10T14:05:33.000Z",
-      "read": "2 min",
-      "also": []
-    },
-    {
-      "id": "s_8e25d8db0570735f",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "It would be a much better world",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1uso5vf/it_would_be_a_much_better_world_prove_me_wrong/",
-      "ts": "2026-07-10T13:45:55.000Z",
       "read": "2 min",
       "also": []
     },
