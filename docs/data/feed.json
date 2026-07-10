@@ -1,6 +1,6 @@
 {
   "issue": 194,
-  "generated_at": "2026-07-10T14:29:07.667Z",
+  "generated_at": "2026-07-10T18:10:49.100Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
@@ -39,15 +39,158 @@
   },
   "stories": [
     {
-      "id": "s_81903600b8406df1",
+      "id": "s_e50b15150fd00f1e",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Krea 2 integration added to Diffusion Desk local UI",
+      "dek": "Developer integrates Krea 2 into Diffusion Desk, a Forge-like local image generation interface built with C++ instead of Python.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1ustokp/comfy_native_seedvr2_workflow/",
+      "ts": "2026-07-10T17:08:19.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_10db03d8139e44b4",
       "cat": "image",
       "badge": "new",
       "spotlight": true,
+      "title": "INT4 W4A4 quantization reaches image model quality near INT8",
+      "dek": "Creator tests newly merged INT4 W4A4 models in ComfyUI, finding visual output nearly indistinguishable from INT8 at smaller file size and lower VRAM.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usqymj/art_style_mixing/",
+      "ts": "2026-07-10T15:30:06.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_3fd5be624e9b45ce",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "Instagram won't filter AI content, but will label it",
+      "dek": "Meta's head of Instagram says the platform will label AI-generated content rather than remove it from feeds, letting users control their own visibility preferences.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
+      "ts": "2026-07-10T13:45:02.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_5244feb84148957b",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": true,
+      "title": "Creator tests Ideogram 4 locally for realistic smartphone photography",
+      "dek": "Artist shares workflow results using open-weight Ideogram 4 in ComfyUI, focusing on natural lighting and photorealism without cinematic polish.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usn6wl/ideogram_4_results_surprisingly_realistic_image/",
+      "ts": "2026-07-10T13:07:00.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_038c1ce14623ecc3",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "ComfyUI workflow documenter extracts custom nodes and settings from PNGs",
+      "dek": "Free, browser-based tool automatically documents ComfyUI workflows—extracting custom node packs, models, and settings from saved files. Fully offline, no server required.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usmz52/drop_any_comfyui_workflow_or_png_get_instant_docs/",
+      "ts": "2026-07-10T12:58:38.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_15ebc3c3102e441c",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": true,
+      "title": "Creator explores art style mixing in Krea 2 with weighted LoRAs",
+      "dek": "Artist discovers Krea 2 enables precise control over blended art styles via weighted LoRAs, comparing the workflow to Stable Diffusion 1.5/SDXL era flexibility.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usme1e/krea2_klein_iii/",
+      "ts": "2026-07-10T12:33:39.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_0ed139a48d96fd76",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Guide to LoRA training fundamentals and caption strategies",
+      "dek": "Technical writeup explaining base model training concepts and LoRA caption practices for fine-tuning diffusion models.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1uskjka/little_more_t2i_tests_ideogram4_int8_convrot/",
+      "ts": "2026-07-10T11:08:41.000Z",
+      "read": "4 min",
+      "also": []
+    },
+    {
+      "id": "s_3a6e9021ecabca6b",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Testing Ideogram 4 and Krea 2 with INT8 quantization",
+      "dek": "Creator benchmarks quantized Ideogram 4 and Krea 2 models in ComfyUI, showing inference times and VRAM usage on RTX 4070 Super.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usij7k/few_test_images_ideogram4_int8_convrot_krea2_int8/",
+      "ts": "2026-07-10T09:20:45.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_d227c01975ac31ba",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Krea 2 Turbo INT4 quantization cuts model to 11.88 GB",
+      "dek": "Creator tests mixed-precision W4A4 ConvRot conversion for Krea 2 Turbo, achieving smaller file size and faster inference than INT8 on consumer GPUs.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usi2hq/krea_2_turbo_int4_convrot_works_at_1188_gb_and_is/",
+      "ts": "2026-07-10T08:54:10.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_81903600b8406df1",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
       "title": "ComfyUI INT4 fast inference for Krea2 Turbo on 6GB VRAM",
       "dek": "Developer shares new custom node enabling ultra-low-memory 4-bit model runs in ComfyUI on entry-level GPUs.",
       "src": "r/StableDiffusion",
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1ushlb4/fast_int4_w4a4_inference_in_comfyui_is_here_krea2/",
       "ts": "2026-07-10T08:25:28.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_5012f89709d598db",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "ComfyUI adds native SeedVR2 upscaling for images and video",
+      "dek": "ComfyUI now natively supports SeedVR2 upscaling, demonstrated in workflow using INT4 Krea 2 model.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usgr43/lora_captionbasic_and_practice/",
+      "ts": "2026-07-10T07:36:14.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_ca1c525e3ab05a6a",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Artist explores nightmare creature CGI with local diffusion in ComfyUI",
+      "dek": "Creator shares horror creature render results using open-weight model and ComfyUI, exploring disturbing VFX aesthetics.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1uscxt6/int4_w4a4_is_insane/",
+      "ts": "2026-07-10T04:09:44.000Z",
       "read": "2 min",
       "also": []
     },
@@ -128,6 +271,32 @@
       "url": "https://arstechnica.com/ai/2026/07/openai-wants-its-new-tool-to-do-your-work-for-you-and-with-you/",
       "ts": "2026-07-09T21:25:55.000Z",
       "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_3d791cf08ced814e",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Higher resolution input improves Krea 2 Turbo realism and variety",
+      "dek": "Creator discovers that increasing Krea 2 Turbo's starting resolution from 1MP to 2.5–6MP boosts photographic diversity and detail while maintaining 5-step inference.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1us3fkj/increasing_krea_2_turbo_starting_resolution/",
+      "ts": "2026-07-09T21:19:55.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_2487a466605cb453",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "John William Waterhouse style LoRA released for Krea 2",
+      "dek": "A new artistic style LoRA trained on romantic painter Waterhouse is available for Krea 2, best used with trigger words and no stylizers.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1us39sz/krea2_john_william_waterhouse_style_lora/",
+      "ts": "2026-07-09T21:13:53.000Z",
+      "read": "2 min",
       "also": []
     },
     {
@@ -222,6 +391,19 @@
       "also": []
     },
     {
+      "id": "s_400326415dcf66e1",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "hfviewer adds interactive architecture visualization for diffusion models",
+      "dek": "Free website now displays architectures for FLUX.1 Dev, Krea 2, and Qwen Image with adjustable granularity for exploring model details.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1uryfu9/krea_2_in_diffusion_desk/",
+      "ts": "2026-07-09T18:19:06.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
       "id": "s_fbe93ef80d6a6a67",
       "cat": "rights",
       "badge": "hot",
@@ -264,7 +446,7 @@
       "id": "s_c76f2244dd85d2ed",
       "cat": "image",
       "badge": "new",
-      "spotlight": true,
+      "spotlight": false,
       "title": "Creator comparison: Krea2 Turbo vs. Krea2 Raw + LoRA across 80 samples",
       "dek": "Artist benchmarked output diversity and prompt adherence between Krea2 Turbo and Raw+LoRA configurations.",
       "src": "r/StableDiffusion",
@@ -346,7 +528,7 @@
       "id": "s_dbfec7af6197ee5c",
       "cat": "image",
       "badge": "new",
-      "spotlight": true,
+      "spotlight": false,
       "title": "Krea2 quantization check: FP8 vs. BF16 output quality",
       "dek": "Creator tests whether precision format affects Krea2 output, finding minimal visible difference.",
       "src": "r/StableDiffusion",
@@ -590,37 +772,6 @@
       "title": "Grok Imagine Video 1.5 Adds Native Synced Audio and Faster Image-to-Video",
       "dek": "A real contender for social-first output if you already live inside X — quick-turn clips with sound baked in, tuned for the feed rather than the timeline.",
       "ts": "2026-07-08T12:27:40.256Z"
-    },
-    {
-      "id": "s17",
-      "spotlight": false,
-      "cat": "music",
-      "badge": "new",
-      "src": "Digen",
-      "read": "4 min",
-      "title": "'Acting Prompts' Arrive: Performance Capture Synthesis Maps Vocals to Avatars",
-      "dek": "The new wave of lip-sync tools reads vocal nuance and maps it onto digital performers — direct emotional transitions by timestamp ('melancholy to euphoria at 02:15') like a VFX house, from your phone.",
-      "ts": "2026-07-08T08:27:40.256Z"
-    },
-    {
-      "id": "s18",
-      "cat": "writing",
-      "badge": "new",
-      "src": "Anthropic",
-      "read": "3 min",
-      "title": "One Week In: Claude Sonnet 5 Is the New Default for Long-Form Drafting",
-      "dek": "Launched July 1 at $2/$10 introductory pricing and bundled into subscriptions, Sonnet 5 has quickly become the workhorse recommendation for novelists, scriptwriters and newsletter writers.",
-      "ts": "2026-07-08T02:27:40.256Z"
-    },
-    {
-      "id": "s19",
-      "cat": "industry",
-      "badge": "new",
-      "src": "Fortune",
-      "read": "4 min",
-      "title": "Anthropic Overtakes OpenAI on Revenue for the First Time",
-      "dek": "A $47B annualized run rate versus OpenAI's $25–33B. The broader signal for creators: the money is consolidating around a handful of labs whose pricing decisions now ripple straight into your tool subscriptions.",
-      "ts": "2026-07-07T22:27:40.256Z"
     }
   ],
   "models": [
@@ -738,7 +889,7 @@
   },
   "stats": {
     "scanned_last_run": 25,
-    "published_today": 31,
+    "published_today": 28,
     "sources_live": 14
   }
 }
