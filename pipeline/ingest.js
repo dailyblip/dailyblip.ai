@@ -133,7 +133,12 @@ async function main() {
   }
 
   // 3. Ground each item in real article text before summarizing.
-  const excerpts = await Promise.all(items.map((it) => fetchExcerpt(it.url)));
+  const excerpts = await Promise.all(
+     items.map((it) => Promise.race([
+       fetchExcerpt(it.url),
+       new Promise((r) => setTimeout(() => r(""), 10000))
+     ]))
+   );
 
   // 4. One batched Claude call classifies + writes deks for the whole run.
   const payload = items.map((it, i) => ({
