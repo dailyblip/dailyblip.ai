@@ -1,25 +1,25 @@
 {
   "TechCrunch AI": {
     "days": {
-      "2026-07-10": 20
+      "2026-07-10": 40
     },
     "consecutive_failures": 0
   },
   "The Verge AI": {
     "days": {
-      "2026-07-10": 10
+      "2026-07-10": 20
     },
     "consecutive_failures": 0
   },
   "Hugging Face Blog": {
     "days": {
-      "2026-07-10": 822
+      "2026-07-10": 1645
     },
     "consecutive_failures": 0
   },
   "Ars Technica AI": {
     "days": {
-      "2026-07-10": 20
+      "2026-07-10": 40
     },
     "consecutive_failures": 0
   },
@@ -27,23 +27,23 @@
     "days": {
       "2026-07-10": 25
     },
-    "consecutive_failures": 0
+    "consecutive_failures": 1
   },
   "Google DeepMind": {
     "days": {
-      "2026-07-10": 100
+      "2026-07-10": 200
     },
     "consecutive_failures": 0
   },
   "OpenAI News": {
     "days": {
-      "2026-07-10": 1039
+      "2026-07-10": 2079
     },
     "consecutive_failures": 0
   },
   "80 Level": {
     "days": {
-      "2026-07-10": 10
+      "2026-07-10": 20
     },
     "consecutive_failures": 0
   },
@@ -51,36 +51,36 @@
     "days": {
       "2026-07-10": 0
     },
-    "consecutive_failures": 1
+    "consecutive_failures": 2
   },
   "Anthropic News": {
     "days": {
       "2026-07-10": 0
     },
-    "consecutive_failures": 1
+    "consecutive_failures": 2
   },
   "r/StableDiffusion": {
     "days": {
-      "2026-07-10": 0
+      "2026-07-10": 25
     },
-    "consecutive_failures": 1
+    "consecutive_failures": 0
   },
   "r/SunoAI": {
     "days": {
       "2026-07-10": 0
     },
-    "consecutive_failures": 1
+    "consecutive_failures": 2
   },
   "Artlist Blog": {
     "days": {
       "2026-07-10": 0
     },
-    "consecutive_failures": 1
+    "consecutive_failures": 2
   },
   "r/midjourney": {
     "days": {
       "2026-07-10": 0
     },
-    "consecutive_failures": 1
+    "consecutive_failures": 2
   }
 }
