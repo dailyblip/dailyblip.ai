@@ -1,6 +1,6 @@
 {
   "issue": 192,
-  "generated_at": "2026-07-09T18:27:40.257Z",
+  "generated_at": "2026-07-10T03:14:48.309Z",
   "brief": {
     "title": "Wednesday, July 8 — six things creators need to know",
     "items": [
@@ -39,10 +39,179 @@
   },
   "stories": [
     {
+      "id": "s_2922cfdde0d796dd",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "OpenAI names GPT-5.6 as preferred model for Microsoft 365 Copilot",
+      "dek": "OpenAI announced GPT-5.6 will power Microsoft's productivity suite, signaling continued partnership despite reports Microsoft is building competing in-house models.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/",
+      "ts": "2026-07-10T00:16:54.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_3e171b9d1ff3d14d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "Microsoft's carbon emissions rise 25% due to AI datacenters",
+      "dek": "Microsoft's 2026 sustainability report shows 25% increase in emissions from 2025, driven primarily by datacenter expansion for AI infrastructure.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/963728/microsoft-sustainability-report-2026",
+      "ts": "2026-07-10T00:04:13.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_880ee3c2d5501c1e",
+      "cat": "industry",
+      "badge": "breaking",
+      "spotlight": false,
+      "title": "OpenAI's #2 executive Fidji Simo steps down from full-time role",
+      "dek": "Simo, who led OpenAI's applications division, is transitioning to part-time advisory after extended medical leave. Her departure creates a leadership gap as OpenAI pursues an IPO.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/",
+      "ts": "2026-07-09T23:38:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "top": true
+    },
+    {
+      "id": "s_9491981398fceeeb",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "OpenAI launches GPT-5.6 family with three model tiers",
+      "dek": "GPT-5.6 comes in three variants (Sol, Terra, Luna) with improvements in coding, enterprise work, and science. Sol is 54% more token-efficient for coding tasks.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/",
+      "ts": "2026-07-09T22:24:24.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_14a2cc90aef5b07a",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "OpenAI shuts down Atlas browser, moves features to ChatGPT desktop and Chrome",
+      "dek": "Atlas, OpenAI's AI browser launched in October, is sunsetting after less than a year. Agentic browsing features will shift to ChatGPT's desktop app and a Chrome extension.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/",
+      "ts": "2026-07-09T22:03:54.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_132c70a2f06679b6",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "title": "OpenAI shuts down Atlas browser less than a year after launch",
+      "dek": "ChatGPT Atlas, announced in October, is sunsetting by August 9. The agentic browsing features will move to ChatGPT desktop and Chrome.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963654/openai-chatgpt-atlas-ai-browser-shut-down-sunset",
+      "ts": "2026-07-09T20:34:05.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_ffdb0d5985a23df3",
+      "cat": "rights",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Google adds AI disclosure labels to Search, YouTube, and Discover ads",
+      "dek": "Users can now see whether ads were created or edited with AI through a label in My Ad Center, expanding transparency beyond election ads.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/963628/google-ai-generated-ads-label",
+      "ts": "2026-07-09T20:11:38.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_241317adaedd7479",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Meta launches Muse Spark 1.1 for agentic AI coding tasks",
+      "dek": "Meta's multimodal coding model handles complex workflows, bug fixes, and large code migrations to compete with OpenAI and Anthropic's offerings.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/",
+      "ts": "2026-07-09T19:40:45.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_9de14e96265af218",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "New York Times says OpenAI hid evidence of copyright detection tools",
+      "dek": "Publishers allege OpenAI concealed its ability to search training data and chat logs for copyrighted content, escalating the copyright infringement lawsuit.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
+      "ts": "2026-07-09T19:05:58.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_76107e209263173a",
+      "cat": "rights",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Google now discloses AI-made and AI-edited ads across Search, YouTube, and Discover",
+      "dek": "Users can see whether ads were created or edited with AI via a new label in Google's My Ad Center, expanding disclosure beyond election ads.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/google-will-now-disclose-which-ads-are-made-with-ai/",
+      "ts": "2026-07-09T18:40:51.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_74bc3599582dfa3b",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Government safety review of frontier AI models remains opaque",
+      "dek": "OpenAI's Sol and Anthropic's Fable received government clearance for release, but the safety review process between regulators and labs is unclear to outside observers.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/how-did-the-government-decide-openais-frontier-model-was-safe-to-release/",
+      "ts": "2026-07-09T18:22:39.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_fbe93ef80d6a6a67",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "How to prevent Meta's AI from using your Instagram photos",
+      "dek": "Meta's Muse Image lets any user generate AI photos using public Instagram accounts by tagging them. Private accounts and under-18 profiles are excluded.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/how-to-stop-metas-ai-image-generator-from-using-your-instagram-photos/",
+      "ts": "2026-07-09T17:56:47.000Z",
+      "read": "2 min",
+      "also": []
+    },
+    {
+      "id": "s_8c91b0e5893bd1c9",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Meta's custom AI chips enter production in September",
+      "dek": "Meta's modular MTIA chips, co-designed with Broadcom and manufactured by TSMC, aim to reduce GPU costs as component shortages persist.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/",
+      "ts": "2026-07-09T17:17:37.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
       "id": "s1",
       "cat": "image",
       "badge": "breaking",
-      "top": true,
       "src": "Meta",
       "read": "3 min",
       "title": "Meta Launches Muse, an Image Model Built Around Your Own Photos",
@@ -60,6 +229,19 @@
       "ts": "2026-07-09T15:27:40.256Z"
     },
     {
+      "id": "s_c4a0826144b97f0b",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Anthropic's Claude adds Reflect dashboard to track AI usage habits",
+      "dek": "Claude's new Reflect feature visualizes user AI habits and usage patterns, subtly reinforcing Claude's role in daily workflows.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/anthropics-new-claude-feature-is-quietly-selling-you-on-ai/",
+      "ts": "2026-07-09T14:53:09.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
       "id": "s3",
       "cat": "image",
       "badge": "hot",
@@ -68,6 +250,32 @@
       "title": "Midjourney V8.1 Becomes the Default: Native 2K, 4–5x Faster, Draft Mode",
       "dek": "The new default model ships native 2K HD output, a big speed jump, better prompt adherence, and a Draft Mode built for rapid ideation before you commit render credits to a final.",
       "ts": "2026-07-09T13:27:40.256Z"
+    },
+    {
+      "id": "s_2b56d024188e1825",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "Open-source tool Ollama raises $65M with nearly 9M users",
+      "dek": "Ollama, which lets developers run AI models on their PCs, grew to 9M users and 176K GitHub stars before raising Series B funding to expand.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/popular-open-source-ai-developer-tool-ollama-raises-65m-grows-to-nearly-9m-users/",
+      "ts": "2026-07-09T13:00:00.000Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_edec3357e039a3e0",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "title": "Character.AI creates microdramas where users can chat with and roleplay characters",
+      "dek": "Character.AI launched three original microdramas (romance, horror, survival) letting viewers 18+ chat with AI characters and alter storylines in real-time.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/09/character-ai-enters-the-microdrama-arena-with-its-own-productions-but-with-a-twist/",
+      "ts": "2026-07-09T13:00:00.000Z",
+      "read": "3 min",
+      "also": []
     },
     {
       "id": "s4",
@@ -203,7 +411,7 @@
     },
     {
       "id": "s17",
-      "spotlight": true,
+      "spotlight": false,
       "cat": "music",
       "badge": "new",
       "src": "Digen",
@@ -347,8 +555,8 @@
     "date": "2026-07-09T18:27:40.257Z"
   },
   "stats": {
-    "scanned_last_run": 147,
-    "published_today": 18,
-    "sources_live": 21
+    "scanned_last_run": 25,
+    "published_today": 26,
+    "sources_live": 14
   }
 }
