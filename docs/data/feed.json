@@ -1,6 +1,6 @@
 {
   "issue": 200,
-  "generated_at": "2026-07-11T16:12:14.907Z",
+  "generated_at": "2026-07-11T17:42:38.270Z",
   "brief": {
     "title": "Saturday, July 11 — six things creators need to know",
     "items": [
@@ -51,7 +51,7 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 103,
+      "heat": 100,
       "move": 0,
       "top": true
     },
@@ -68,7 +68,7 @@
       "ts": "2026-07-10T23:55:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
+      "heat": 84,
       "move": 0
     },
     {
@@ -84,8 +84,8 @@
       "ts": "2026-07-11T14:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 83,
-      "move": 1
+      "heat": 80,
+      "move": 0
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -100,8 +100,8 @@
       "ts": "2026-07-10T17:31:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 81,
-      "move": -1
+      "heat": 78,
+      "move": 0
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -116,7 +116,7 @@
       "ts": "2026-07-10T21:12:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 77,
+      "heat": 73,
       "move": 0
     },
     {
@@ -132,7 +132,7 @@
       "ts": "2026-07-10T16:50:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
+      "heat": 70,
       "move": 0
     },
     {
@@ -147,7 +147,7 @@
       "ts": "2026-07-10T21:00:29.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
+      "heat": 68,
       "move": 0
     },
     {
@@ -163,7 +163,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_132c70a2f06679b6",
@@ -178,7 +178,7 @@
       "read": "2 min",
       "also": [],
       "heat": 65,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s1",
@@ -190,7 +190,7 @@
       "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
       "ts": "2026-07-09T16:27:40.256Z",
       "heat": 65,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -205,8 +205,8 @@
       "ts": "2026-07-10T18:48:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 64,
-      "move": -3
+      "heat": 61,
+      "move": 0
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -220,8 +220,8 @@
       "ts": "2026-07-10T19:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 62,
-      "move": -3
+      "heat": 59,
+      "move": 0
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -251,7 +251,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -266,7 +266,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_9491981398fceeeb",
@@ -281,7 +281,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -296,7 +296,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_9de14e96265af218",
@@ -311,7 +311,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_16830069eb2915f6",
@@ -326,7 +326,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_fbe93ef80d6a6a67",
@@ -341,7 +341,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_ad27224f77dabb8d",
@@ -356,7 +356,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s2",
@@ -368,7 +368,7 @@
       "dek": "OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.",
       "ts": "2026-07-09T15:27:40.256Z",
       "heat": 58,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -383,8 +383,8 @@
       "ts": "2026-07-10T19:04:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 54,
-      "move": -9
+      "heat": 51,
+      "move": 0
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -398,7 +398,7 @@
       "ts": "2026-07-10T17:08:19.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
+      "heat": 50,
       "move": 0
     },
     {
@@ -413,7 +413,7 @@
       "ts": "2026-07-10T15:41:14.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 51,
+      "heat": 50,
       "move": 0
     },
     {
@@ -428,7 +428,7 @@
       "ts": "2026-07-10T15:30:06.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 51,
+      "heat": 50,
       "move": 0
     },
     {
@@ -936,7 +936,7 @@
     "date": "2026-07-11T16:12:14.849Z"
   },
   "stats": {
-    "scanned_last_run": 1,
+    "scanned_last_run": 0,
     "published_today": 13,
     "sources_live": 14,
     "slopped_last_run": 1
