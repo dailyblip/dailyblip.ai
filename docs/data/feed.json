@@ -1,6 +1,6 @@
 {
   "issue": 199,
-  "generated_at": "2026-07-11T04:11:04.863Z",
+  "generated_at": "2026-07-11T05:49:28.917Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
@@ -51,7 +51,7 @@
       "ts": "2026-07-10T23:55:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 98,
+      "heat": 96,
       "move": 0,
       "top": true
     },
@@ -84,7 +84,7 @@
       "ts": "2026-07-10T17:31:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 91,
+      "heat": 90,
       "move": 0
     },
     {
@@ -100,7 +100,7 @@
       "ts": "2026-07-10T21:12:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 87,
+      "heat": 85,
       "move": 0
     },
     {
@@ -132,7 +132,7 @@
       "ts": "2026-07-10T16:50:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 83,
+      "heat": 81,
       "move": 0
     },
     {
@@ -147,7 +147,7 @@
       "ts": "2026-07-10T21:00:29.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
+      "heat": 80,
       "move": 0
     },
     {
@@ -163,7 +163,7 @@
       "ts": "2026-07-10T18:48:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 75,
+      "heat": 73,
       "move": 0
     },
     {
@@ -178,7 +178,7 @@
       "ts": "2026-07-10T19:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 73,
+      "heat": 71,
       "move": 0
     },
     {
@@ -193,23 +193,7 @@
       "ts": "2026-07-10T13:45:02.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
-      "move": 0
-    },
-    {
-      "id": "s_5ebc8099c0f86311",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "title": "Indie studio discusses level redesign and vehicle mechanics for sequel",
-      "dek": "Brinemedia dev talks workflow decisions for Stunt Paradise 2—scaling levels and adding mechanics. Useful design interview but light on concrete technical detail.",
-      "src": "80 Level",
-      "url": "https://80.lv/articles/how-an-indie-studio-created-a-sequel-of-a-driving-platformer-game/",
-      "ts": "2026-07-10T19:04:00.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 65,
+      "heat": 66,
       "move": 0
     },
     {
@@ -225,7 +209,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_132c70a2f06679b6",
@@ -240,7 +224,7 @@
       "read": "2 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s1",
@@ -252,7 +236,23 @@
       "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
       "ts": "2026-07-09T16:27:40.256Z",
       "heat": 65,
-      "move": 0
+      "move": 1
+    },
+    {
+      "id": "s_5ebc8099c0f86311",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "title": "Indie studio discusses level redesign and vehicle mechanics for sequel",
+      "dek": "Brinemedia dev talks workflow decisions for Stunt Paradise 2—scaling levels and adding mechanics. Useful design interview but light on concrete technical detail.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/how-an-indie-studio-created-a-sequel-of-a-driving-platformer-game/",
+      "ts": "2026-07-10T19:04:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 63,
+      "move": -3
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -266,7 +266,7 @@
       "ts": "2026-07-10T17:08:19.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 63,
+      "heat": 61,
       "move": 0
     },
     {
@@ -281,7 +281,7 @@
       "ts": "2026-07-10T15:41:14.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 62,
+      "heat": 60,
       "move": 0
     },
     {
@@ -296,52 +296,7 @@
       "ts": "2026-07-10T15:30:06.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 61,
-      "move": 0
-    },
-    {
-      "id": "s_5244feb84148957b",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Creator tests Ideogram 4 locally for realistic smartphone photography",
-      "dek": "Artist shares workflow results using open-weight Ideogram 4 in ComfyUI, focusing on natural lighting and photorealism without cinematic polish.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usn6wl/ideogram_4_results_surprisingly_realistic_image/",
-      "ts": "2026-07-10T13:07:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 59,
-      "move": 0
-    },
-    {
-      "id": "s_038c1ce14623ecc3",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "title": "ComfyUI workflow documenter extracts custom nodes and settings from PNGs",
-      "dek": "Free, browser-based tool automatically documents ComfyUI workflows—extracting custom node packs, models, and settings from saved files. Fully offline, no server required.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usmz52/drop_any_comfyui_workflow_or_png_get_instant_docs/",
-      "ts": "2026-07-10T12:58:38.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 59,
-      "move": 0
-    },
-    {
-      "id": "s_15ebc3c3102e441c",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Creator explores art style mixing in Krea 2 with weighted LoRAs",
-      "dek": "Artist discovers Krea 2 enables precise control over blended art styles via weighted LoRAs, comparing the workflow to Stable Diffusion 1.5/SDXL era flexibility.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usme1e/krea2_klein_iii/",
-      "ts": "2026-07-10T12:33:39.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 58,
+      "heat": 60,
       "move": 0
     },
     {
@@ -357,7 +312,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -372,7 +327,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_9491981398fceeeb",
@@ -387,7 +342,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -402,7 +357,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_9de14e96265af218",
@@ -417,7 +372,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_16830069eb2915f6",
@@ -432,7 +387,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_fbe93ef80d6a6a67",
@@ -447,7 +402,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_ad27224f77dabb8d",
@@ -462,7 +417,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s2",
@@ -474,7 +429,52 @@
       "dek": "OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.",
       "ts": "2026-07-09T15:27:40.256Z",
       "heat": 58,
-      "move": 0
+      "move": 3
+    },
+    {
+      "id": "s_5244feb84148957b",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Creator tests Ideogram 4 locally for realistic smartphone photography",
+      "dek": "Artist shares workflow results using open-weight Ideogram 4 in ComfyUI, focusing on natural lighting and photorealism without cinematic polish.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usn6wl/ideogram_4_results_surprisingly_realistic_image/",
+      "ts": "2026-07-10T13:07:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 57,
+      "move": -9
+    },
+    {
+      "id": "s_038c1ce14623ecc3",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "ComfyUI workflow documenter extracts custom nodes and settings from PNGs",
+      "dek": "Free, browser-based tool automatically documents ComfyUI workflows—extracting custom node packs, models, and settings from saved files. Fully offline, no server required.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usmz52/drop_any_comfyui_workflow_or_png_get_instant_docs/",
+      "ts": "2026-07-10T12:58:38.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 57,
+      "move": -9
+    },
+    {
+      "id": "s_15ebc3c3102e441c",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Creator explores art style mixing in Krea 2 with weighted LoRAs",
+      "dek": "Artist discovers Krea 2 enables precise control over blended art styles via weighted LoRAs, comparing the workflow to Stable Diffusion 1.5/SDXL era flexibility.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usme1e/krea2_klein_iii/",
+      "ts": "2026-07-10T12:33:39.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 57,
+      "move": -9
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -488,7 +488,7 @@
       "ts": "2026-07-10T11:08:41.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 57,
+      "heat": 55,
       "move": 0
     },
     {
@@ -503,7 +503,7 @@
       "ts": "2026-07-10T11:06:55.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 57,
+      "heat": 55,
       "move": 0
     },
     {
@@ -518,7 +518,7 @@
       "ts": "2026-07-10T09:20:45.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 55,
+      "heat": 54,
       "move": 0
     },
     {
@@ -533,7 +533,7 @@
       "ts": "2026-07-10T08:54:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 55,
+      "heat": 53,
       "move": 0
     },
     {
@@ -548,7 +548,7 @@
       "ts": "2026-07-10T08:25:28.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
+      "heat": 53,
       "move": 0
     },
     {
@@ -563,7 +563,7 @@
       "ts": "2026-07-10T07:36:14.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
+      "heat": 52,
       "move": 0
     },
     {
