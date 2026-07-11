@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Editorial Standards — dailyblip</title>
+<meta name="description" content="How dailyblip curates: community-validation thresholds, the slop filter, the first-source rule, and our corrections policy.">
+<link rel="canonical" href="https://dailyblip.ai/standards.html">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79; --amber:#FFB454; --aqua:#63D8C6;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:15.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:680px;margin:0 auto;padding:36px 24px 80px}
+.back{font-family:var(--mono);font-size:12px;color:var(--faint)}
+.back a{color:var(--faint)} .back a:hover{color:var(--amber)}
+h1{font-family:var(--display);font-weight:750;font-size:clamp(28px,5vw,40px);letter-spacing:-.02em;margin:18px 0 10px}
+.lede{color:var(--dim);font-size:16px;margin-bottom:36px}
+h2{font-family:var(--display);font-weight:650;font-size:20px;margin:34px 0 10px;letter-spacing:-.01em}
+p{color:var(--dim);margin-bottom:14px}
+p b, p strong{color:var(--text)}
+.rule{
+  border-left:3px solid var(--amber);padding:2px 0 2px 16px;margin:18px 0;
+  color:var(--text);font-size:15px;
+}
+.foot-note{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:12px;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="back"><a href="/">← dailyblip</a></div>
+  <h1>Editorial Standards</h1>
+  <p class="lede">dailyblip exists because the AI-creator space drowns in noise. These are the rules the site runs on — enforced in code, not just promised.</p>
+
+  <h2>The zero-slop guarantee</h2>
+  <p>Every story is scored for editorial quality before it can publish. Content that shows generic AI aesthetics with no point of view, visible artifacts, recycled prompt tropes, disguised ads, or engagement bait is rejected — regardless of how popular it is. The number of items rejected each run is published live on the homepage ("slop rejected").</p>
+  <div class="rule">When in doubt, we reject. A smaller feed of great work beats a larger feed of okay work.</div>
+
+  <h2>Community validation before consideration</h2>
+  <p>User-generated content must earn its way in with real community proof before our filter even looks at it. Showcase work from creator communities requires hundreds of upvotes, substantial discussion, a strong approval ratio, and at least a day of community scrutiny. Institutional sources (official lab blogs, professional newsrooms) skip this gate — they carry their own editorial accountability.</p>
+
+  <h2>The first-source rule</h2>
+  <p>We link the primary source whenever one exists. If an outlet is covering a company's announcement, we link the announcement. Aggregating aggregators multiplies errors and buries credit; we don't do it.</p>
+
+  <h2>Original words, always</h2>
+  <p>Every summary on this site is written in our own words from the source material. We never reproduce source text, and every story links out — this site is a router to good work, not a replacement for it.</p>
+
+  <h2>The Creator Spotlight bar</h2>
+  <p>Spotlight placement is the site's highest honor and hardest gate: work must show deliberate artistic choices, technical control, and a specific point of view — the standard a working professional in that medium would apply. Company news, product launches, and policy stories are never Spotlight, no matter how big.</p>
+
+  <h2>Corrections</h2>
+  <p>When we get something wrong, we fix it quickly and without drama. Corrections are made directly to the story. If you spot an error, the fastest route is the contact link in the footer.</p>
+
+  <h2>Sponsorship &amp; disclosure</h2>
+  <p>Editorial placement is never for sale. If a sponsored slot ever exists on this site, it will be visibly labeled as such and will never occupy the brief, the top signal, or the Spotlight. Affiliate links, where used, never influence whether or how a tool is covered.</p>
+
+  <h2>How it's enforced</h2>
+  <p>These rules live as code in the site's pipeline: hard community-validation thresholds, a quality floor below which nothing publishes, a stricter floor for Spotlight and top-signal placement, and human review through the site's admin tools. The system fails safe — when a check can't be verified, the content doesn't run.</p>
+
+  <div class="foot-note">Last updated July 2026 · dailyblip.ai</div>
+</div>
+</body>
+</html>
