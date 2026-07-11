@@ -23,38 +23,6 @@ const MAX_SPOTLIGHT = 3;
 
 const CATEGORIES = ["image", "video", "music", "writing", "tools", "rights", "industry"];
 
-// Tools whose live availability we monitor every run — the status strip.
-const STATUS_TARGETS = [
-  { n: "Midjourney", url: "https://www.midjourney.com" },
-  { n: "Runway", url: "https://runwayml.com" },
-  { n: "Sora", url: "https://sora.com" },
-  { n: "Kling", url: "https://klingai.com" },
-  { n: "Pika", url: "https://pika.art" },
-  { n: "Suno", url: "https://suno.com" },
-  { n: "Udio", url: "https://www.udio.com" },
-  { n: "ElevenLabs", url: "https://elevenlabs.io" },
-  { n: "Claude", url: "https://claude.ai" },
-  { n: "ChatGPT", url: "https://chatgpt.com" },
-  { n: "Gemini", url: "https://gemini.google.com" },
-  { n: "Leonardo", url: "https://leonardo.ai" },
-];
-
-async function checkToolStatus() {
-  const checks = await Promise.allSettled(
-    STATUS_TARGETS.map(async (t) => {
-      const res = await fetch(t.url, {
-        method: "GET", redirect: "follow",
-        signal: AbortSignal.timeout(9000),
-        headers: { "user-agent": "Mozilla/5.0 (dailyblip status check)" },
-      });
-      return { n: t.n, s: res.ok ? "up" : "issue" };
-    })
-  );
-  return checks.map((c, i) =>
-    c.status === "fulfilled" ? c.value : { n: STATUS_TARGETS[i].n, s: "unknown" }
-  );
-}
-
 // Signal heat: how alive a story is right now. Recomputed every run so the
 // ranking shifts through the day — the reason to reload the page.
 function heatScore(s) {
@@ -206,9 +174,9 @@ async function main() {
   items = dedupeCluster(items).slice(0, MAX_NEW_PER_RUN);
   for (const it of items) seen[hash(canonicalUrl(it.url))] = new Date().toISOString();
 
-const scanned = items.length;
+  const scanned = items.length;
   if (!items.length) {
-    console.log("ingest: nothing new — recomputing heat and tool status anyway.");
+    console.log("ingest: nothing new — recomputing heat anyway.");
     const prevRank = new Map(
       [...feed.stories].sort((a, b) => (b.heat ?? 0) - (a.heat ?? 0)).map((s, i) => [s.id, i])
     );
@@ -218,8 +186,6 @@ const scanned = items.length;
       const was = prevRank.get(s.id);
       s.move = was === undefined ? "new" : was - i;
     });
-    feed.tool_status = await checkToolStatus();
-    feed.tool_status_at = new Date().toISOString();
     feed.stats = { ...feed.stats, scanned_last_run: 0, sources_live: feeds.filter((f) => !f.disabled).length };
     saveFeed(feed); saveSeen(seen);
     writeRss(feed);
@@ -323,10 +289,6 @@ const scanned = items.length;
     const was = prevRank.get(s.id);
     s.move = was === undefined ? "new" : was - i; // positive = climbed
   });
-
-  // Live tool status strip.
-  feed.tool_status = await checkToolStatus();
-  feed.tool_status_at = new Date().toISOString();
 
   feed.stats = {
     ...feed.stats,
