@@ -1,41 +1,41 @@
 {
-  "issue": 198,
-  "generated_at": "2026-07-11T04:02:37.899Z",
+  "issue": 199,
+  "generated_at": "2026-07-11T04:08:45.925Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
       {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed its week-old Instagram deepfake tool</b> after backlash — it let anyone generate AI images of public accounts without owner consent or notification.",
+        "story": "s_81903600b8406df1",
+        "html": "A new ComfyUI custom node enables <b>INT4 inference for Krea 2 Turbo on 6 GB VRAM</b> — worth adding if you're on an entry-level GPU.",
         "secs": 10
       },
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership directed theft of confidential project codes and unreleased product details.",
+        "story": "s_10db03d8139e44b4",
+        "html": "<b>INT4 W4A4 quantized image models</b> in ComfyUI now match INT8 quality at smaller file size and lower VRAM — test before assuming quality loss.",
+        "secs": 10
+      },
+      {
+        "story": "s_5012f89709d598db",
+        "html": "ComfyUI now <b>natively supports SeedVR2 upscaling</b> for both images and video — update your install to access it without extra nodes.",
         "secs": 9
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> as costs scale — worth auditing your own toolchain dependencies now.",
-        "secs": 10
-      },
-      {
-        "story": "s_5244feb84148957b",
-        "html": "Open-weight <b>Ideogram 4 runs locally in ComfyUI</b>, delivering realistic smartphone-style photography with natural lighting — no cinematic filter required.",
+        "story": "s_15ebc3c3102e441c",
+        "html": "Krea 2 lets you <b>blend art styles via weighted LoRAs</b>, offering SD 1.5/SDXL-era fine-tuning flexibility in a newer generation model.",
         "secs": 9
       },
       {
-        "story": "s_038c1ce14623ecc3",
-        "html": "A free browser-based tool <b>auto-documents ComfyUI workflows from saved PNGs</b>, extracting custom nodes, models, and settings — fully offline, no server needed.",
-        "secs": 10
+        "story": "s_3fd5be624e9b45ce",
+        "html": "Instagram confirms it will <b>label AI-generated content rather than filter it</b>, letting individual users control their own feed visibility.",
+        "secs": 9
       },
       {
-        "story": "s_1c07dda2c1408621",
-        "html": "One artist <b>turned hand-drawn pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — genuinely inventive execution.",
-        "secs": 10
+        "story": "s_9199a23f1066af9c",
+        "html": "A free open-source <b>browser-based procedural ivy and tree generator</b> lets 3D environment artists paint vine growth paths directly onto meshes in real time.",
+        "secs": 11
       }
     ],
-    "date": "2026-07-11T03:56:41.359Z"
+    "date": "2026-07-11T04:08:36.207Z"
   },
   "stories": [
     {

@@ -13,8 +13,8 @@
   .back{font-family:monospace;font-size:12px;color:#5E7D79}</style></head><body>
 <p class="back"><a href="./">← archive</a> · <a href="../">dailyblip</a></p>
 <h1>Friday, July 10 — six things creators need to know</h1>
-<p class="meta">Issue 198 · 2026-07-10</p>
-<h2>The brief</h2><div class="item"><span style="color:#E58E2B">1.</span> Meta <b>killed its week-old Instagram deepfake tool</b> after backlash — it let anyone generate AI images of public accounts without owner consent or notification.</div><div class="item"><span style="color:#E58E2B">2.</span> Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership directed theft of confidential project codes and unreleased product details.</div><div class="item"><span style="color:#E58E2B">3.</span> Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> as costs scale — worth auditing your own toolchain dependencies now.</div><div class="item"><span style="color:#E58E2B">4.</span> Open-weight <b>Ideogram 4 runs locally in ComfyUI</b>, delivering realistic smartphone-style photography with natural lighting — no cinematic filter required.</div><div class="item"><span style="color:#E58E2B">5.</span> A free browser-based tool <b>auto-documents ComfyUI workflows from saved PNGs</b>, extracting custom nodes, models, and settings — fully offline, no server needed.</div><div class="item"><span style="color:#E58E2B">6.</span> One artist <b>turned hand-drawn pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — genuinely inventive execution.</div>
+<p class="meta">Issue 199 · 2026-07-10</p>
+<h2>The brief</h2><div class="item"><span style="color:#E58E2B">1.</span> A new ComfyUI custom node enables <b>INT4 inference for Krea 2 Turbo on 6 GB VRAM</b> — worth adding if you're on an entry-level GPU.</div><div class="item"><span style="color:#E58E2B">2.</span> <b>INT4 W4A4 quantized image models</b> in ComfyUI now match INT8 quality at smaller file size and lower VRAM — test before assuming quality loss.</div><div class="item"><span style="color:#E58E2B">3.</span> ComfyUI now <b>natively supports SeedVR2 upscaling</b> for both images and video — update your install to access it without extra nodes.</div><div class="item"><span style="color:#E58E2B">4.</span> Krea 2 lets you <b>blend art styles via weighted LoRAs</b>, offering SD 1.5/SDXL-era fine-tuning flexibility in a newer generation model.</div><div class="item"><span style="color:#E58E2B">5.</span> Instagram confirms it will <b>label AI-generated content rather than filter it</b>, letting individual users control their own feed visibility.</div><div class="item"><span style="color:#E58E2B">6.</span> A free open-source <b>browser-based procedural ivy and tree generator</b> lets 3D environment artists paint vine growth paths directly onto meshes in real time.</div>
 <h2>Tool drop</h2><div class="story"><h3>Chiro Visuals Ivy &amp; Fig Generator</h3><p>Browser tool that grows procedural vines and fig trees on 3D meshes in real time. Paint paths, get organic foliage fast — built for environment artists.</p></div>
 <h2>The feed that day</h2><div class="story">
       <h3><a href="https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/" rel="noopener">Godot Road Generator adds procedural intersection lanes</a></h3>
@@ -43,8 +43,6 @@
       <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/StableDiffusion/comments/1usqymj/art_style_mixing/" rel="noopener">INT4 W4A4 quantization reaches image model quality near INT8</a></h3>
       <p>Creator tests newly merged INT4 W4A4 models in ComfyUI, finding visual output nearly indistinguishable from INT8 at smaller file size and lower VRAM.</p><div class="meta">image · via r/StableDiffusion</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1usoodg/spain_vs_belgium_feral_kingdoms_blood_and_gold/" rel="noopener">Spain vs Belgium | Feral Kingdoms: Blood and Gold</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
       <h3><a href="https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters" rel="noopener">Instagram won't filter AI content, but will label it</a></h3>
       <p>Meta's head of Instagram says the platform will label AI-generated content rather than remove it from feeds, letting users control their own visibility preferences.</p><div class="meta">industry · via The Verge AI</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/StableDiffusion/comments/1usn6wl/ideogram_4_results_surprisingly_realistic_image/" rel="noopener">Creator tests Ideogram 4 locally for realistic smartphone photography</a></h3>
@@ -57,28 +55,14 @@
       <p>Technical writeup explaining base model training concepts and LoRA caption practices for fine-tuning diffusion models.</p><div class="meta">tools · via r/StableDiffusion</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/aivideo/comments/1uski8x/knitting_championship/" rel="noopener">Knitting Championship</a></h3>
       <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1usjlr9/famous_football_players_as_game_of_thrones/" rel="noopener">Famous Football Players as Game of Thrones characters</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/StableDiffusion/comments/1usij7k/few_test_images_ideogram4_int8_convrot_krea2_int8/" rel="noopener">Testing Ideogram 4 and Krea 2 with INT8 quantization</a></h3>
       <p>Creator benchmarks quantized Ideogram 4 and Krea 2 models in ComfyUI, showing inference times and VRAM usage on RTX 4070 Super.</p><div class="meta">image · via r/StableDiffusion</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/StableDiffusion/comments/1usi2hq/krea_2_turbo_int4_convrot_works_at_1188_gb_and_is/" rel="noopener">Krea 2 Turbo INT4 quantization cuts model to 11.88 GB</a></h3>
       <p>Creator tests mixed-precision W4A4 ConvRot conversion for Krea 2 Turbo, achieving smaller file size and faster inference than INT8 on consumer GPUs.</p><div class="meta">image · via r/StableDiffusion</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/StableDiffusion/comments/1ushlb4/fast_int4_w4a4_inference_in_comfyui_is_here_krea2/" rel="noopener">ComfyUI INT4 fast inference for Krea2 Turbo on 6GB VRAM</a></h3>
       <p>Developer shares new custom node enabling ultra-low-memory 4-bit model runs in ComfyUI on entry-level GPUs.</p><div class="meta">image · via r/StableDiffusion</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1ushdig/how_the_worldcup_should_end/" rel="noopener">How the worldcup should end</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/StableDiffusion/comments/1usgr43/lora_captionbasic_and_practice/" rel="noopener">ComfyUI adds native SeedVR2 upscaling for images and video</a></h3>
       <p>ComfyUI now natively supports SeedVR2 upscaling, demonstrated in workflow using INT4 Krea 2 model.</p><div class="meta">image · via r/StableDiffusion</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1usfbam/wd40_for_men/" rel="noopener">WD40 for men</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1useurg/exotic_trip_amazon_forest/" rel="noopener">Exotic Trip: Amazon Forest</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1usd6d2/dont_skip_leg_day/" rel="noopener">Don't skip leg day</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
       <h3><a href="https://www.reddit.com/r/StableDiffusion/comments/1uscxt6/int4_w4a4_is_insane/" rel="noopener">Artist explores nightmare creature CGI with local diffusion in ComfyUI</a></h3>
-      <p>Creator shares horror creature render results using open-weight model and ComfyUI, exploring disturbing VFX aesthetics.</p><div class="meta">image · via r/StableDiffusion</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1usc5zm/a_space_possum_ate_the_radioactive_scanner_and/" rel="noopener">A space possum ate the radioactive scanner</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div><div class="story">
-      <h3><a href="https://www.reddit.com/r/aivideo/comments/1usbrze/the_witchs_moon_mushroom/" rel="noopener">The Witch's Moon Mushroom</a></h3>
-      <p>AI-generated video creation by community member.</p><div class="meta">video · via r/aivideo</div></div>
+      <p>Creator shares horror creature render results using open-weight model and ComfyUI, exploring disturbing VFX aesthetics.</p><div class="meta">image · via r/StableDiffusion</div></div>
 </body></html>

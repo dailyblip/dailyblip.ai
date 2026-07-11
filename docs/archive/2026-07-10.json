@@ -1,41 +1,41 @@
 {
   "date": "2026-07-10",
-  "issue": 198,
+  "issue": 199,
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
       {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed its week-old Instagram deepfake tool</b> after backlash — it let anyone generate AI images of public accounts without owner consent or notification.",
+        "story": "s_81903600b8406df1",
+        "html": "A new ComfyUI custom node enables <b>INT4 inference for Krea 2 Turbo on 6 GB VRAM</b> — worth adding if you're on an entry-level GPU.",
         "secs": 10
       },
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership directed theft of confidential project codes and unreleased product details.",
+        "story": "s_10db03d8139e44b4",
+        "html": "<b>INT4 W4A4 quantized image models</b> in ComfyUI now match INT8 quality at smaller file size and lower VRAM — test before assuming quality loss.",
+        "secs": 10
+      },
+      {
+        "story": "s_5012f89709d598db",
+        "html": "ComfyUI now <b>natively supports SeedVR2 upscaling</b> for both images and video — update your install to access it without extra nodes.",
         "secs": 9
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> as costs scale — worth auditing your own toolchain dependencies now.",
-        "secs": 10
-      },
-      {
-        "story": "s_5244feb84148957b",
-        "html": "Open-weight <b>Ideogram 4 runs locally in ComfyUI</b>, delivering realistic smartphone-style photography with natural lighting — no cinematic filter required.",
+        "story": "s_15ebc3c3102e441c",
+        "html": "Krea 2 lets you <b>blend art styles via weighted LoRAs</b>, offering SD 1.5/SDXL-era fine-tuning flexibility in a newer generation model.",
         "secs": 9
       },
       {
-        "story": "s_038c1ce14623ecc3",
-        "html": "A free browser-based tool <b>auto-documents ComfyUI workflows from saved PNGs</b>, extracting custom nodes, models, and settings — fully offline, no server needed.",
-        "secs": 10
+        "story": "s_3fd5be624e9b45ce",
+        "html": "Instagram confirms it will <b>label AI-generated content rather than filter it</b>, letting individual users control their own feed visibility.",
+        "secs": 9
       },
       {
-        "story": "s_1c07dda2c1408621",
-        "html": "One artist <b>turned hand-drawn pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — genuinely inventive execution.",
-        "secs": 10
+        "story": "s_9199a23f1066af9c",
+        "html": "A free open-source <b>browser-based procedural ivy and tree generator</b> lets 3D environment artists paint vine growth paths directly onto meshes in real time.",
+        "secs": 11
       }
     ],
-    "date": "2026-07-11T03:56:41.359Z"
+    "date": "2026-07-11T04:08:36.207Z"
   },
   "tooldrop": {
     "name": "Chiro Visuals Ivy & Fig Generator",
@@ -59,7 +59,7 @@
       "read": "2 min",
       "also": [],
       "heat": 84,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_1c07dda2c1408621",
@@ -74,9 +74,8 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "top": true,
       "heat": 112,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_98d85122ab641d19",
@@ -91,8 +90,9 @@
       "ts": "2026-07-10T23:55:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 99,
-      "move": 1
+      "heat": 98,
+      "move": 0,
+      "top": true
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -107,7 +107,7 @@
       "ts": "2026-07-10T21:12:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 88,
+      "heat": 87,
       "move": 0
     },
     {
@@ -122,8 +122,8 @@
       "ts": "2026-07-10T21:00:29.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": -2
+      "heat": 82,
+      "move": 0
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -138,8 +138,8 @@
       "ts": "2026-07-10T19:04:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 66,
-      "move": -5
+      "heat": 65,
+      "move": 0
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -153,8 +153,8 @@
       "ts": "2026-07-10T19:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 74,
-      "move": -2
+      "heat": 73,
+      "move": 0
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -169,7 +169,7 @@
       "ts": "2026-07-10T18:48:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 76,
+      "heat": 75,
       "move": 0
     },
     {
@@ -186,7 +186,7 @@
       "read": "5 min",
       "also": [],
       "heat": 92,
-      "move": 6
+      "move": 0
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -200,8 +200,8 @@
       "ts": "2026-07-10T17:08:19.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -5
+      "heat": 63,
+      "move": 0
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -216,8 +216,8 @@
       "ts": "2026-07-10T16:50:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 84,
-      "move": 5
+      "heat": 83,
+      "move": 0
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -231,8 +231,8 @@
       "ts": "2026-07-10T15:41:14.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 63,
-      "move": -4
+      "heat": 62,
+      "move": 0
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -247,22 +247,7 @@
       "read": "2 min",
       "also": [],
       "heat": 62,
-      "move": -4
-    },
-    {
-      "id": "s_9a91f2fd509de00b",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Spain vs Belgium | Feral Kingdoms: Blood and Gold",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usoodg/spain_vs_belgium_feral_kingdoms_blood_and_gold/",
-      "ts": "2026-07-10T14:05:33.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 61,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -276,8 +261,8 @@
       "ts": "2026-07-10T13:45:02.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": 5
+      "heat": 68,
+      "move": 0
     },
     {
       "id": "s_5244feb84148957b",
@@ -291,8 +276,8 @@
       "ts": "2026-07-10T13:07:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 60,
-      "move": -3
+      "heat": 59,
+      "move": 0
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -306,8 +291,8 @@
       "ts": "2026-07-10T12:58:38.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 60,
-      "move": -3
+      "heat": 59,
+      "move": 0
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -322,7 +307,7 @@
       "read": "2 min",
       "also": [],
       "heat": 59,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -336,8 +321,8 @@
       "ts": "2026-07-10T11:08:41.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 58,
-      "move": -3
+      "heat": 57,
+      "move": -9
     },
     {
       "id": "s_959d825718f0d41f",
@@ -351,23 +336,8 @@
       "ts": "2026-07-10T11:06:55.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 58,
-      "move": -3
-    },
-    {
-      "id": "s_2ba1528e758d75cc",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Famous Football Players as Game of Thrones characters",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usjlr9/famous_football_players_as_game_of_thrones/",
-      "ts": "2026-07-10T10:20:04.000Z",
-      "read": "2 min",
-      "also": [],
       "heat": 57,
-      "move": -12
+      "move": -9
     },
     {
       "id": "s_3a6e9021ecabca6b",
@@ -381,8 +351,8 @@
       "ts": "2026-07-10T09:20:45.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 56,
-      "move": -12
+      "heat": 55,
+      "move": 0
     },
     {
       "id": "s_d227c01975ac31ba",
@@ -396,8 +366,8 @@
       "ts": "2026-07-10T08:54:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 56,
-      "move": -12
+      "heat": 55,
+      "move": 0
     },
     {
       "id": "s_81903600b8406df1",
@@ -411,23 +381,8 @@
       "ts": "2026-07-10T08:25:28.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 55,
-      "move": -12
-    },
-    {
-      "id": "s_dc3bc19b6989427a",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "How the worldcup should end",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1ushdig/how_the_worldcup_should_end/",
-      "ts": "2026-07-10T08:12:57.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 55,
-      "move": -12
+      "heat": 54,
+      "move": 0
     },
     {
       "id": "s_5012f89709d598db",
@@ -442,52 +397,7 @@
       "read": "2 min",
       "also": [],
       "heat": 54,
-      "move": -12
-    },
-    {
-      "id": "s_6096b993f0c7444b",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "WD40 for men",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usfbam/wd40_for_men/",
-      "ts": "2026-07-10T06:15:29.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 53,
-      "move": -12
-    },
-    {
-      "id": "s_767c337f8f88a7a1",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Exotic Trip: Amazon Forest",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1useurg/exotic_trip_amazon_forest/",
-      "ts": "2026-07-10T05:50:01.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 53,
-      "move": -12
-    },
-    {
-      "id": "s_cfde52d72b49c103",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Don't skip leg day",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usd6d2/dont_skip_leg_day/",
-      "ts": "2026-07-10T04:21:20.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 51,
-      "move": -12
+      "move": 0
     },
     {
       "id": "s_ca1c525e3ab05a6a",
@@ -501,38 +411,8 @@
       "ts": "2026-07-10T04:09:44.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 51,
-      "move": -12
-    },
-    {
-      "id": "s_6588171c0af10387",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "A space possum ate the radioactive scanner",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usc5zm/a_space_possum_ate_the_radioactive_scanner_and/",
-      "ts": "2026-07-10T03:31:37.000Z",
-      "read": "2 min",
-      "also": [],
       "heat": 50,
-      "move": -12
-    },
-    {
-      "id": "s_80eda01ec97ca2e4",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "The Witch's Moon Mushroom",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usbrze/the_witchs_moon_mushroom/",
-      "ts": "2026-07-10T03:12:28.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -12
+      "move": 0
     }
   ],
   "stats": {
