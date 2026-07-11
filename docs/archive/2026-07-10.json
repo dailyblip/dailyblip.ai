@@ -1,48 +1,48 @@
 {
   "date": "2026-07-10",
-  "issue": 197,
+  "issue": 198,
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "INT4 W4A4 quantized image models in ComfyUI now deliver <b>visual quality nearly identical to INT8</b> at smaller file size and lower VRAM — worth swapping in your workflow.",
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>killed its week-old Instagram deepfake tool</b> after backlash — it let anyone generate AI images of public accounts without owner consent or notification.",
         "secs": 10
       },
       {
-        "story": "s_5012f89709d598db",
-        "html": "ComfyUI now has <b>native SeedVR2 upscaling</b> for both images and video, demonstrated alongside the INT4 Krea 2 model — update your ComfyUI install to get it.",
-        "secs": 10
-      },
-      {
-        "story": "s_3fd5be624e9b45ce",
-        "html": "Instagram will <b>label AI-generated content rather than remove it</b>, letting users control their own feed visibility — factor this into your publishing strategy now.",
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership directed theft of confidential project codes and unreleased product details.",
         "secs": 9
       },
       {
-        "story": "s_9199a23f1066af9c",
-        "html": "A free open-source <b>browser-based procedural ivy and foliage generator</b> lets 3D environment artists paint vine paths directly onto meshes for fast real-time iteration.",
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> as costs scale — worth auditing your own toolchain dependencies now.",
         "secs": 10
       },
       {
-        "story": "s_15ebc3c3102e441c",
-        "html": "Krea 2 supports <b>precise art-style blending via weighted LoRAs</b>, offering SDXL-era flexibility — explore the workflow if you've been locked into single-style outputs.",
+        "story": "s_5244feb84148957b",
+        "html": "Open-weight <b>Ideogram 4 runs locally in ComfyUI</b>, delivering realistic smartphone-style photography with natural lighting — no cinematic filter required.",
         "secs": 9
       },
       {
-        "story": "s_419f10878bb7a91d",
-        "html": "With <b>21,000-plus Steam releases annually</b>, an indie publisher with 14 years of data warns shipping speed and marketing volume alone no longer move the needle.",
+        "story": "s_038c1ce14623ecc3",
+        "html": "A free browser-based tool <b>auto-documents ComfyUI workflows from saved PNGs</b>, extracting custom nodes, models, and settings — fully offline, no server needed.",
+        "secs": 10
+      },
+      {
+        "story": "s_1c07dda2c1408621",
+        "html": "One artist <b>turned hand-drawn pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — genuinely inventive execution.",
         "secs": 10
       }
     ],
-    "date": "2026-07-11T03:02:22.490Z"
+    "date": "2026-07-11T03:56:41.359Z"
   },
   "tooldrop": {
-    "name": "Chiro Visuals Ivy Generator",
-    "blurb": "Browser-based tool that grows procedural ivy and fig vines on 3D meshes in real time. Paint paths, get organic foliage fast — open-source and free.",
-    "meta": "3d · visual — free, open-source",
+    "name": "Chiro Visuals Ivy & Fig Generator",
+    "blurb": "Browser tool that grows procedural vines and fig trees on 3D meshes in real time. Paint paths, get organic foliage fast — built for environment artists.",
+    "meta": "3d · generative — free, open-source",
     "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
-    "date": "2026-07-11T03:02:36.572Z"
+    "date": "2026-07-11T03:56:50.501Z"
   },
   "stories": [
     {
@@ -57,7 +57,9 @@
       "url": "https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/",
       "ts": "2026-07-11T14:00:00.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 84,
+      "move": -4
     },
     {
       "id": "s_1c07dda2c1408621",
@@ -72,7 +74,9 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "top": true
+      "top": true,
+      "heat": 112,
+      "move": 1
     },
     {
       "id": "s_98d85122ab641d19",
@@ -86,7 +90,9 @@
       "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
       "ts": "2026-07-10T23:55:07.000Z",
       "read": "3 min",
-      "also": []
+      "also": [],
+      "heat": 99,
+      "move": 1
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -100,7 +106,9 @@
       "url": "https://80.lv/articles/this-elastic-and-dynamic-cube-animation-was-made-using-a-blender-add-on/",
       "ts": "2026-07-10T21:12:00.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 88,
+      "move": 0
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -113,7 +121,9 @@
       "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
       "ts": "2026-07-10T21:00:29.000Z",
       "read": "3 min",
-      "also": []
+      "also": [],
+      "heat": 83,
+      "move": -2
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -127,7 +137,9 @@
       "url": "https://80.lv/articles/how-an-indie-studio-created-a-sequel-of-a-driving-platformer-game/",
       "ts": "2026-07-10T19:04:00.000Z",
       "read": "4 min",
-      "also": []
+      "also": [],
+      "heat": 66,
+      "move": -5
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -140,7 +152,9 @@
       "url": "https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/",
       "ts": "2026-07-10T19:00:00.000Z",
       "read": "4 min",
-      "also": []
+      "also": [],
+      "heat": 74,
+      "move": -2
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -154,7 +168,9 @@
       "url": "https://80.lv/articles/behind-creation-of-nitro-express-checks-and-balances-skin-for-hunt-showdown-1896/",
       "ts": "2026-07-10T18:48:00.000Z",
       "read": "4 min",
-      "also": []
+      "also": [],
+      "heat": 76,
+      "move": 0
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -168,7 +184,9 @@
       "url": "https://80.lv/articles/indie-game-publishing-the-21k-game-problem/",
       "ts": "2026-07-10T17:31:00.000Z",
       "read": "5 min",
-      "also": []
+      "also": [],
+      "heat": 92,
+      "move": 6
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -181,7 +199,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1ustokp/comfy_native_seedvr2_workflow/",
       "ts": "2026-07-10T17:08:19.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 64,
+      "move": -5
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -195,7 +215,9 @@
       "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
       "ts": "2026-07-10T16:50:00.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 84,
+      "move": 5
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -208,7 +230,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1usr9i4/blursed_predator/",
       "ts": "2026-07-10T15:41:14.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 63,
+      "move": -4
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -221,7 +245,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1usqymj/art_style_mixing/",
       "ts": "2026-07-10T15:30:06.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 62,
+      "move": -4
     },
     {
       "id": "s_9a91f2fd509de00b",
@@ -234,7 +260,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1usoodg/spain_vs_belgium_feral_kingdoms_blood_and_gold/",
       "ts": "2026-07-10T14:05:33.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 61,
+      "move": -4
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -247,7 +275,9 @@
       "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
       "ts": "2026-07-10T13:45:02.000Z",
       "read": "3 min",
-      "also": []
+      "also": [],
+      "heat": 69,
+      "move": 5
     },
     {
       "id": "s_5244feb84148957b",
@@ -260,7 +290,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1usn6wl/ideogram_4_results_surprisingly_realistic_image/",
       "ts": "2026-07-10T13:07:00.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 60,
+      "move": -3
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -273,7 +305,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1usmz52/drop_any_comfyui_workflow_or_png_get_instant_docs/",
       "ts": "2026-07-10T12:58:38.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 60,
+      "move": -3
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -286,7 +320,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1usme1e/krea2_klein_iii/",
       "ts": "2026-07-10T12:33:39.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 59,
+      "move": -3
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -299,7 +335,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1uskjka/little_more_t2i_tests_ideogram4_int8_convrot/",
       "ts": "2026-07-10T11:08:41.000Z",
       "read": "4 min",
-      "also": []
+      "also": [],
+      "heat": 58,
+      "move": -3
     },
     {
       "id": "s_959d825718f0d41f",
@@ -312,7 +350,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1uski8x/knitting_championship/",
       "ts": "2026-07-10T11:06:55.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 58,
+      "move": -3
     },
     {
       "id": "s_2ba1528e758d75cc",
@@ -325,7 +365,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1usjlr9/famous_football_players_as_game_of_thrones/",
       "ts": "2026-07-10T10:20:04.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 57,
+      "move": -12
     },
     {
       "id": "s_3a6e9021ecabca6b",
@@ -338,7 +380,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1usij7k/few_test_images_ideogram4_int8_convrot_krea2_int8/",
       "ts": "2026-07-10T09:20:45.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 56,
+      "move": -12
     },
     {
       "id": "s_d227c01975ac31ba",
@@ -351,7 +395,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1usi2hq/krea_2_turbo_int4_convrot_works_at_1188_gb_and_is/",
       "ts": "2026-07-10T08:54:10.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 56,
+      "move": -12
     },
     {
       "id": "s_81903600b8406df1",
@@ -364,7 +410,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1ushlb4/fast_int4_w4a4_inference_in_comfyui_is_here_krea2/",
       "ts": "2026-07-10T08:25:28.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 55,
+      "move": -12
     },
     {
       "id": "s_dc3bc19b6989427a",
@@ -377,7 +425,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1ushdig/how_the_worldcup_should_end/",
       "ts": "2026-07-10T08:12:57.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 55,
+      "move": -12
     },
     {
       "id": "s_5012f89709d598db",
@@ -390,7 +440,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1usgr43/lora_captionbasic_and_practice/",
       "ts": "2026-07-10T07:36:14.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 54,
+      "move": -12
     },
     {
       "id": "s_6096b993f0c7444b",
@@ -403,7 +455,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1usfbam/wd40_for_men/",
       "ts": "2026-07-10T06:15:29.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 53,
+      "move": -12
     },
     {
       "id": "s_767c337f8f88a7a1",
@@ -416,7 +470,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1useurg/exotic_trip_amazon_forest/",
       "ts": "2026-07-10T05:50:01.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 53,
+      "move": -12
     },
     {
       "id": "s_cfde52d72b49c103",
@@ -429,7 +485,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1usd6d2/dont_skip_leg_day/",
       "ts": "2026-07-10T04:21:20.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 51,
+      "move": -12
     },
     {
       "id": "s_ca1c525e3ab05a6a",
@@ -442,7 +500,9 @@
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1uscxt6/int4_w4a4_is_insane/",
       "ts": "2026-07-10T04:09:44.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 51,
+      "move": -12
     },
     {
       "id": "s_6588171c0af10387",
@@ -455,7 +515,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1usc5zm/a_space_possum_ate_the_radioactive_scanner_and/",
       "ts": "2026-07-10T03:31:37.000Z",
       "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 50,
+      "move": -12
     },
     {
       "id": "s_80eda01ec97ca2e4",
@@ -468,46 +530,9 @@
       "url": "https://www.reddit.com/r/aivideo/comments/1usbrze/the_witchs_moon_mushroom/",
       "ts": "2026-07-10T03:12:28.000Z",
       "read": "2 min",
-      "also": []
-    },
-    {
-      "id": "s_8b07a3a2688e9c39",
-      "cat": "music",
-      "badge": "new",
-      "spotlight": false,
-      "title": "AELORIA: A Celtic Elven Fantasy AI Music Video",
-      "dek": "AI-generated music video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1us9y9m/aeloria_a_celtic_elven_fantasy_ai_music_video/",
-      "ts": "2026-07-10T01:48:06.000Z",
-      "read": "2 min",
-      "also": []
-    },
-    {
-      "id": "s_7450e04d7677bb91",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Dropping Bodies for the Export",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1us9omz/dropping_bodies_for_the_export/",
-      "ts": "2026-07-10T01:35:43.000Z",
-      "read": "2 min",
-      "also": []
-    },
-    {
-      "id": "s_f2379eceafd20cc0",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "World War II Lost Footage: Aliens Attack (Short Film)",
-      "dek": "AI-generated short film by community creator.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1us99qs/world_war_ii_lost_footage_aliens_attack_short_film/",
-      "ts": "2026-07-10T01:16:37.000Z",
-      "read": "2 min",
-      "also": []
+      "also": [],
+      "heat": 50,
+      "move": -12
     }
   ],
   "stats": {
