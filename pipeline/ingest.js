@@ -11,6 +11,7 @@ import {
 import { hash, canonicalUrl, dedupeCluster } from "./lib/text.js";
 import { fetchRedditWithScores, passesRedditGate } from "./lib/reddit.js";
 import path from "node:path";
+import fsMod from "node:fs";
 
 const OVERRIDES_PATH = path.join(path.dirname(PATHS.seen), "overrides.json");
 const loadOverrides = () => readJSON(OVERRIDES_PATH, { blocked_ids: [], blocked_terms: [], pinned_spotlight: [] });
@@ -21,6 +22,50 @@ const MAX_NEW_PER_RUN = 25;
 const MAX_SPOTLIGHT = 3;
 
 const CATEGORIES = ["image", "video", "music", "writing", "tools", "rights", "industry"];
+
+// Tools whose live availability we monitor every run — the status strip.
+const STATUS_TARGETS = [
+  { n: "Midjourney", url: "https://www.midjourney.com" },
+  { n: "Runway", url: "https://runwayml.com" },
+  { n: "Sora", url: "https://sora.com" },
+  { n: "Kling", url: "https://klingai.com" },
+  { n: "Pika", url: "https://pika.art" },
+  { n: "Suno", url: "https://suno.com" },
+  { n: "Udio", url: "https://www.udio.com" },
+  { n: "ElevenLabs", url: "https://elevenlabs.io" },
+  { n: "Claude", url: "https://claude.ai" },
+  { n: "ChatGPT", url: "https://chatgpt.com" },
+  { n: "Gemini", url: "https://gemini.google.com" },
+  { n: "Leonardo", url: "https://leonardo.ai" },
+];
+
+async function checkToolStatus() {
+  const checks = await Promise.allSettled(
+    STATUS_TARGETS.map(async (t) => {
+      const res = await fetch(t.url, {
+        method: "GET", redirect: "follow",
+        signal: AbortSignal.timeout(9000),
+        headers: { "user-agent": "Mozilla/5.0 (dailyblip status check)" },
+      });
+      return { n: t.n, s: res.ok ? "up" : "issue" };
+    })
+  );
+  return checks.map((c, i) =>
+    c.status === "fulfilled" ? c.value : { n: STATUS_TARGETS[i].n, s: "unknown" }
+  );
+}
+
+// Signal heat: how alive a story is right now. Recomputed every run so the
+// ranking shifts through the day — the reason to reload the page.
+function heatScore(s) {
+  const quality = (s.quality ?? 5) * 10;
+  const corroboration = (s.also?.length || 0) * 12;
+  const hoursOld = Math.max(0, (Date.now() - new Date(s.ts)) / 3.6e6);
+  const freshness = Math.max(0, 24 - hoursOld);                // 0–24
+  const community = s.community_score ? Math.log10(1 + s.community_score) * 8 : 0;
+  const badgeBoost = s.badge === "breaking" ? 15 : s.badge === "hot" ? 8 : 0;
+  return Math.round(quality + corroboration + freshness + community + badgeBoost);
+}
 
 const CLASSIFY_SYSTEM = `You are the wire editor for dailyblip, an AI-news site for CONTENT CREATORS — image, video, music, writing. You have ZERO TOLERANCE for AI slop. Being ruthless here is the entire point.
 
@@ -256,6 +301,21 @@ async function main() {
     if (s.spotlight && ++spotCount > MAX_SPOTLIGHT) s.spotlight = false;
   }
 
+  // Signal heat: score every story, remember old ranks, record movement.
+  const prevRank = new Map(
+    [...feed.stories].sort((a, b) => (b.heat ?? 0) - (a.heat ?? 0)).map((s, i) => [s.id, i])
+  );
+  for (const s of feed.stories) s.heat = heatScore(s);
+  const newOrder = [...feed.stories].sort((a, b) => b.heat - a.heat);
+  newOrder.forEach((s, i) => {
+    const was = prevRank.get(s.id);
+    s.move = was === undefined ? "new" : was - i; // positive = climbed
+  });
+
+  // Live tool status strip.
+  feed.tool_status = await checkToolStatus();
+  feed.tool_status_at = new Date().toISOString();
+
   feed.stats = {
     ...feed.stats,
     scanned_last_run: scanned,
@@ -265,7 +325,35 @@ async function main() {
   };
 
   saveFeed(feed); saveSeen(seen);
+  writeRss(feed);
   console.log(`ingest: scanned ${scanned}, slop-rejected ${sloppedOut}, kept ${kept.length} (${kept.filter(k=>k.spotlight).length} spotlight), feed now ${feed.stories.length} stories.`);
+}
+
+// RSS output — distribution surface for readers, newsletter tools, and bots.
+function writeRss(feed) {
+  const xmlEsc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const site = process.env.SITE_URL || "https://dailyblip.ai";
+  const items = feed.stories.slice(0, 20).map((s) => `
+    <item>
+      <title>${xmlEsc(s.title)}</title>
+      <link>${xmlEsc(s.url && s.url !== "#" ? s.url : site)}</link>
+      <guid isPermaLink="false">${xmlEsc(s.id)}</guid>
+      <description>${xmlEsc(s.dek)}</description>
+      <category>${xmlEsc(s.cat)}</category>
+      <pubDate>${new Date(s.ts).toUTCString()}</pubDate>
+    </item>`).join("");
+  const rss = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>dailyblip — AI creator signal, zero slop</title>
+    <link>${site}</link>
+    <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
+    <language>en-us</language>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>${items}
+  </channel>
+</rss>
+`;
+  fsMod.writeFileSync(path.join(path.dirname(PATHS.feed), "..", "feed.xml"), rss);
 }
 
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
