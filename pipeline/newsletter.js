@@ -1,42 +1,91 @@
 // pipeline/newsletter.js — runs daily after brief.js + tooldrop.js.
 // Sends the Daily Blip to subscribers via Buttondown (https://buttondown.com).
 // Requires BUTTONDOWN_API_KEY. Skips gracefully if unset (useful pre-launch).
+//
+// Email design note: dark backgrounds are unreliable across email clients
+// (Outlook desktop strips them, Gmail dark mode can invert unexpectedly), so
+// this template uses a safe white body with the brand's ink/amber/aqua used
+// as accents — same palette, email-safe layout. Buttondown automatically
+// appends its own unsubscribe footer after this HTML; do not add one here.
 import { loadFeed } from "./lib/store.js";
 
 const SITE_URL = process.env.SITE_URL || "https://dailyblip.ai";
+
+// Brand palette (see docs/index.html :root for the source of truth)
+const INK = "#071A1F";
+const AMBER = "#FFB454";
+const AMBER_DEEP = "#E58E2B";
+const AQUA = "#63D8C6";
+const TEXT = "#1a2b2f";
+const DIM = "#5b6b6e";
+const FAINT = "#93a0a2";
+const LINE = "#e7ecec";
 
 function renderEmail(feed) {
   const items = feed.brief.items
     .map(
       (it, i) => `
       <tr>
-        <td style="vertical-align:top;padding:10px 12px 10px 0;color:#E58E2B;font-weight:700;">${i + 1}</td>
-        <td style="padding:10px 0;border-top:1px solid #e3e3e3;font-size:15px;line-height:1.5;color:#222;">
-          ${it.html} <span style="color:#999;font-size:12px;">· ${it.secs}s</span>
+        <td style="vertical-align:top;padding:13px 14px 13px 0;width:26px;">
+          <div style="width:24px;height:24px;border-radius:50%;background:${AMBER};color:${INK};
+            font-weight:700;font-size:12px;text-align:center;line-height:24px;font-family:'SF Mono',Consolas,monospace;">${i + 1}</div>
+        </td>
+        <td style="padding:13px 0;border-top:1px solid ${LINE};font-size:15px;line-height:1.55;color:${TEXT};font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;">
+          ${it.html} <span style="color:${FAINT};font-size:11.5px;font-family:'SF Mono',Consolas,monospace;">· ${it.secs}s</span>
         </td>
       </tr>`
     )
     .join("");
 
   const tool = feed.tooldrop
-    ? `<div style="margin-top:28px;padding:16px;border:1px solid #e3e3e3;border-radius:8px;">
-         <div style="font-size:11px;letter-spacing:.12em;color:#999;">TOOL DROP OF THE DAY</div>
-         <div style="font-weight:700;margin:6px 0 4px;">${feed.tooldrop.name}</div>
-         <div style="font-size:14px;color:#444;">${feed.tooldrop.blurb}</div>
-         <div style="font-size:12px;color:#999;margin-top:6px;">${feed.tooldrop.meta} · <a href="${feed.tooldrop.url}">try it</a></div>
-       </div>`
+    ? `<table role="presentation" width="100%" style="margin-top:26px;border-collapse:collapse;">
+        <tr><td style="padding:18px 20px;border:1px solid rgba(99,216,198,.35);border-radius:10px;background:rgba(99,216,198,.06);">
+          <div style="font-size:10.5px;letter-spacing:.14em;color:${AQUA};font-weight:700;font-family:'SF Mono',Consolas,monospace;">✦ TOOL DROP OF THE DAY</div>
+          <div style="font-weight:700;font-size:16px;margin:8px 0 5px;color:${TEXT};font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;">${feed.tooldrop.name}</div>
+          <div style="font-size:13.5px;color:${DIM};line-height:1.5;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;">${feed.tooldrop.blurb}</div>
+          <div style="font-size:11.5px;color:${FAINT};margin-top:8px;font-family:'SF Mono',Consolas,monospace;">${feed.tooldrop.meta} · <a href="${feed.tooldrop.url}" style="color:${AMBER_DEEP};text-decoration:none;">try it →</a></div>
+        </td></tr>
+      </table>`
     : "";
 
+  const issue = feed.issue ? `Issue ${String(feed.issue).padStart(4, "0")}` : "";
+
   return `
-  <div style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;max-width:560px;margin:0 auto;">
-    <h1 style="font-size:20px;">${feed.brief.title}</h1>
-    <p style="color:#666;font-size:14px;">Your 60-second catch-up on AI for creators.</p>
-    <table style="border-collapse:collapse;width:100%;">${items}</table>
+<div style="background:#f4f7f7;padding:28px 12px;">
+<table role="presentation" width="100%" style="max-width:600px;margin:0 auto;border-collapse:collapse;background:#ffffff;border-radius:14px;overflow:hidden;border:1px solid ${LINE};">
+
+  <!-- header bar -->
+  <tr><td style="background:${INK};padding:22px 28px;">
+    <div style="font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:24px;letter-spacing:-.01em;color:#E9F4F1;">
+      d<span style="color:${AMBER};">ai</span>lyblip<span style="color:${AMBER};">●</span>
+    </div>
+    <div style="font-family:'SF Mono',Consolas,monospace;font-size:10.5px;color:#9AB7B2;letter-spacing:.08em;margin-top:4px;">
+      AI CREATOR SIGNAL · ZERO SLOP ${issue ? " · " + issue : ""}
+    </div>
+  </td></tr>
+
+  <!-- brief -->
+  <tr><td style="padding:26px 28px 22px;">
+    <div style="font-family:'SF Mono',Consolas,monospace;font-size:10.5px;letter-spacing:.14em;color:${AMBER_DEEP};font-weight:700;">THE DAILY BLIP</div>
+    <h1 style="font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:21px;letter-spacing:-.01em;color:${TEXT};margin:8px 0 4px;">${feed.brief.title}</h1>
+    <p style="color:${DIM};font-size:13.5px;font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif;margin:0 0 14px;">Your 60-second catch-up on AI for creators.</p>
+    <table role="presentation" width="100%" style="border-collapse:collapse;">${items}</table>
     ${tool}
-    <p style="margin-top:28px;font-size:13px;color:#999;">
-      Full stories, the feed, and the creative stack radar → <a href="${SITE_URL}">${SITE_URL.replace("https://", "")}</a>
+  </td></tr>
+
+  <!-- footer -->
+  <tr><td style="padding:20px 28px 26px;border-top:1px solid ${LINE};">
+    <p style="margin:0;font-size:12.5px;color:${FAINT};font-family:'SF Mono',Consolas,monospace;line-height:1.7;">
+      Full stories, the live feed, and your creative stack →
+      <a href="${SITE_URL}" style="color:${AMBER_DEEP};text-decoration:none;font-weight:600;">${SITE_URL.replace("https://", "")}</a><br>
+      <a href="${SITE_URL}/showcase.html" style="color:${FAINT};text-decoration:none;">showcase</a> ·
+      <a href="${SITE_URL}/standards.html" style="color:${FAINT};text-decoration:none;">standards</a> ·
+      <a href="${SITE_URL}/archive/" style="color:${FAINT};text-decoration:none;">archive</a>
     </p>
-  </div>`;
+  </td></tr>
+
+</table>
+</div>`;
 }
 
 async function main() {
@@ -56,7 +105,7 @@ async function main() {
     method: "POST",
     headers: { Authorization: `Token ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
-      subject: `The Daily Blip · ${feed.brief.title.split("—")[0].trim()}`,
+      subject: `🟠 The Daily Blip · ${feed.brief.title.split("—")[0].trim()}`,
       body: renderEmail(feed),
       status: "about_to_send",
     }),
