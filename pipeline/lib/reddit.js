@@ -31,8 +31,12 @@ export async function fetchRedditWithScores(rssUrl) {
 // Community-validation gates. These are intentionally strict — the whole
 // point of the anti-slop layer is that user-generated content must earn
 // its way in with actual community proof.
+//
+// showcase: raised to 1,000+ upvotes on 2026-07-11 — 500 was letting through
+// merely-popular AI video that wasn't actually good, just good enough to
+// scroll past and tap. 1K is a much harder bar to clear by accident.
 export const REDDIT_TIERS = {
-  showcase: { minScore: 500, minComments: 20, minAgeHours: 24, minRatio: 0.85 },
+  showcase: { minScore: 1000, minComments: 30, minAgeHours: 24, minRatio: 0.88 },
   discussion: { minScore: 200, minComments: 15, minAgeHours: 12, minRatio: 0.80 },
   news: { minScore: 100, minComments: 5, minAgeHours: 6, minRatio: 0.75 },
 };
