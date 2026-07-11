@@ -206,11 +206,23 @@ async function main() {
   items = dedupeCluster(items).slice(0, MAX_NEW_PER_RUN);
   for (const it of items) seen[hash(canonicalUrl(it.url))] = new Date().toISOString();
 
-  const scanned = items.length;
+const scanned = items.length;
   if (!items.length) {
-    console.log("ingest: nothing new.");
+    console.log("ingest: nothing new — recomputing heat and tool status anyway.");
+    const prevRank = new Map(
+      [...feed.stories].sort((a, b) => (b.heat ?? 0) - (a.heat ?? 0)).map((s, i) => [s.id, i])
+    );
+    for (const s of feed.stories) s.heat = heatScore(s);
+    const newOrder = [...feed.stories].sort((a, b) => b.heat - a.heat);
+    newOrder.forEach((s, i) => {
+      const was = prevRank.get(s.id);
+      s.move = was === undefined ? "new" : was - i;
+    });
+    feed.tool_status = await checkToolStatus();
+    feed.tool_status_at = new Date().toISOString();
     feed.stats = { ...feed.stats, scanned_last_run: 0, sources_live: feeds.filter((f) => !f.disabled).length };
     saveFeed(feed); saveSeen(seen);
+    writeRss(feed);
     return;
   }
 
