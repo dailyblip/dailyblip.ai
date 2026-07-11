@@ -107,8 +107,18 @@ async function main() {
     delete feed.yearago;
   }
 
+  // SEO: sitemap listing everything Google should index.
+  const site = process.env.SITE_URL || "https://dailyblip.ai";
+  const days = fs.readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.html$/.test(f));
+  const urls = [
+    `${site}/`, `${site}/showcase.html`, `${site}/standards.html`, `${site}/archive/`,
+    ...days.map((d) => `${site}/archive/${d}`),
+  ].map((u) => `  <url><loc>${u}</loc></url>`).join("\n");
+  fs.writeFileSync(path.join(dir, "..", "sitemap.xml"),
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
+
   saveFeed(feed);
-  console.log(`archive: wrote ${today}, index rebuilt${feed.yearago ? ", year-ago panel set" : ""}.`);
+  console.log(`archive: wrote ${today}, index + sitemap rebuilt${feed.yearago ? ", year-ago panel set" : ""}.`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
