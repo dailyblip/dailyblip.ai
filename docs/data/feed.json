@@ -1,6 +1,6 @@
 {
   "issue": 200,
-  "generated_at": "2026-07-11T17:42:38.270Z",
+  "generated_at": "2026-07-11T20:31:31.085Z",
   "brief": {
     "title": "Saturday, July 11 — six things creators need to know",
     "items": [
@@ -51,7 +51,7 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 100,
+      "heat": 97,
       "move": 0,
       "top": true
     },
@@ -68,23 +68,7 @@
       "ts": "2026-07-10T23:55:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": 0
-    },
-    {
-      "id": "s_dabdfae8cca17885",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "title": "Godot Road Generator adds procedural intersection lanes",
-      "dek": "TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.",
-      "src": "80 Level",
-      "url": "https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/",
-      "ts": "2026-07-11T14:00:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 80,
+      "heat": 81,
       "move": 0
     },
     {
@@ -101,7 +85,23 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 1
+    },
+    {
+      "id": "s_dabdfae8cca17885",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "title": "Godot Road Generator adds procedural intersection lanes",
+      "dek": "TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/",
+      "ts": "2026-07-11T14:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 77,
+      "move": -1
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -116,7 +116,7 @@
       "ts": "2026-07-10T21:12:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 73,
+      "heat": 71,
       "move": 0
     },
     {
@@ -147,7 +147,7 @@
       "ts": "2026-07-10T21:00:29.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
+      "heat": 65,
       "move": 0
     },
     {
@@ -205,7 +205,7 @@
       "ts": "2026-07-10T18:48:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 61,
+      "heat": 60,
       "move": 0
     },
     {
@@ -220,7 +220,7 @@
       "ts": "2026-07-10T19:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 59,
+      "heat": 58,
       "move": 0
     },
     {
@@ -383,7 +383,7 @@
       "ts": "2026-07-10T19:04:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 51,
+      "heat": 50,
       "move": 0
     },
     {

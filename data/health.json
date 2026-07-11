@@ -2,28 +2,28 @@
   "TechCrunch AI": {
     "days": {
       "2026-07-10": 100,
-      "2026-07-11": 260
+      "2026-07-11": 280
     },
     "consecutive_failures": 0
   },
   "The Verge AI": {
     "days": {
       "2026-07-10": 50,
-      "2026-07-11": 130
+      "2026-07-11": 140
     },
     "consecutive_failures": 0
   },
   "Hugging Face Blog": {
     "days": {
       "2026-07-10": 4114,
-      "2026-07-11": 10699
+      "2026-07-11": 11522
     },
     "consecutive_failures": 0
   },
   "Ars Technica AI": {
     "days": {
       "2026-07-10": 100,
-      "2026-07-11": 260
+      "2026-07-11": 280
     },
     "consecutive_failures": 0
   },
@@ -32,26 +32,26 @@
       "2026-07-10": 50,
       "2026-07-11": 0
     },
-    "consecutive_failures": 14
+    "consecutive_failures": 15
   },
   "Google DeepMind": {
     "days": {
       "2026-07-10": 500,
-      "2026-07-11": 1300
+      "2026-07-11": 1400
     },
     "consecutive_failures": 0
   },
   "OpenAI News": {
     "days": {
       "2026-07-10": 5199,
-      "2026-07-11": 13520
+      "2026-07-11": 14560
     },
     "consecutive_failures": 0
   },
   "80 Level": {
     "days": {
       "2026-07-10": 50,
-      "2026-07-11": 130
+      "2026-07-11": 140
     },
     "consecutive_failures": 0
   },
@@ -60,41 +60,41 @@
       "2026-07-10": 0,
       "2026-07-11": 0
     },
-    "consecutive_failures": 18
+    "consecutive_failures": 19
   },
   "Anthropic News": {
     "days": {
       "2026-07-10": 0,
       "2026-07-11": 0
     },
-    "consecutive_failures": 18
+    "consecutive_failures": 19
   },
   "r/StableDiffusion": {
     "days": {
       "2026-07-10": 50,
       "2026-07-11": 0
     },
-    "consecutive_failures": 15
+    "consecutive_failures": 16
   },
   "r/SunoAI": {
     "days": {
       "2026-07-10": 0,
       "2026-07-11": 0
     },
-    "consecutive_failures": 18
+    "consecutive_failures": 19
   },
   "Artlist Blog": {
     "days": {
       "2026-07-10": 0,
       "2026-07-11": 0
     },
-    "consecutive_failures": 18
+    "consecutive_failures": 19
   },
   "r/midjourney": {
     "days": {
       "2026-07-10": 0,
       "2026-07-11": 0
     },
-    "consecutive_failures": 18
+    "consecutive_failures": 19
   }
 }
