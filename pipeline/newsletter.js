@@ -82,6 +82,9 @@ function renderEmail(feed) {
       <a href="${SITE_URL}/standards.html" style="color:${FAINT};text-decoration:none;">standards</a> ·
       <a href="${SITE_URL}/archive/" style="color:${FAINT};text-decoration:none;">archive</a>
     </p>
+    <p style="margin:14px 0 0;font-size:11px;color:${FAINT};font-family:'SF Mono',Consolas,monospace;">
+      Wrong tools in your stack, or want fewer emails? Manage your subscription with the link below.
+    </p>
   </td></tr>
 
 </table>
