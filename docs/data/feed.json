@@ -1,41 +1,41 @@
 {
-  "issue": 199,
-  "generated_at": "2026-07-11T14:38:03.070Z",
+  "issue": 200,
+  "generated_at": "2026-07-11T16:12:14.907Z",
   "brief": {
-    "title": "Friday, July 10 — six things creators need to know",
+    "title": "Saturday, July 11 — six things creators need to know",
     "items": [
       {
-        "story": "s_81903600b8406df1",
-        "html": "A new ComfyUI custom node enables <b>INT4 inference for Krea 2 Turbo on 6 GB VRAM</b> — worth adding if you're on an entry-level GPU.",
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>shut down its Instagram AI deepfake tool</b> after one week of backlash — it let anyone generate images of public accounts without owner consent.",
         "secs": 10
       },
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "<b>INT4 W4A4 quantized image models</b> in ComfyUI now match INT8 quality at smaller file size and lower VRAM — test before assuming quality loss.",
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership including hardware chief Tang Tan directed a pattern of leaking confidential project details.",
         "secs": 10
       },
       {
-        "story": "s_5012f89709d598db",
-        "html": "ComfyUI now <b>natively supports SeedVR2 upscaling</b> for both images and video — update your install to access it without extra nodes.",
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> as costs scale — worth factoring into your toolchain decisions now.",
+        "secs": 10
+      },
+      {
+        "story": "s_dabdfae8cca17885",
+        "html": "Godot's Road Generator plugin <b>now supports procedural intersection lanes</b> with collision meshes and AI pathfinding — update if you build game environments.",
         "secs": 9
       },
       {
-        "story": "s_15ebc3c3102e441c",
-        "html": "Krea 2 lets you <b>blend art styles via weighted LoRAs</b>, offering SD 1.5/SDXL-era fine-tuning flexibility in a newer generation model.",
+        "story": "s_e50b15150fd00f1e",
+        "html": "Krea 2 is now <b>integrated into Diffusion Desk</b>, a lightweight C++-based local image UI — an option if you want to skip Python-heavy setups.",
         "secs": 9
       },
       {
-        "story": "s_3fd5be624e9b45ce",
-        "html": "Instagram confirms it will <b>label AI-generated content rather than filter it</b>, letting individual users control their own feed visibility.",
-        "secs": 9
-      },
-      {
-        "story": "s_9199a23f1066af9c",
-        "html": "A free open-source <b>browser-based procedural ivy and tree generator</b> lets 3D environment artists paint vine growth paths directly onto meshes in real time.",
-        "secs": 11
+        "story": "s_1c07dda2c1408621",
+        "html": "An artist <b>converted 2D pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — a clean technique worth studying.",
+        "secs": 10
       }
     ],
-    "date": "2026-07-11T04:08:36.207Z"
+    "date": "2026-07-11T16:12:01.790Z"
   },
   "stories": [
     {
@@ -929,11 +929,11 @@
     "#open-video"
   ],
   "tooldrop": {
-    "name": "Chiro Visuals Ivy & Fig Generator",
-    "blurb": "Browser tool that grows procedural vines and fig trees on 3D meshes in real time. Paint paths, get organic foliage fast — built for environment artists.",
+    "name": "Chiro Visuals Foliage Generator",
+    "blurb": "Browser-based tool for 3D artists: paint paths on any mesh to grow procedural ivy or fig trees in real-time. No software install, open-source.",
     "meta": "3d · generative — free, open-source",
     "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
-    "date": "2026-07-11T03:56:50.501Z"
+    "date": "2026-07-11T16:12:14.849Z"
   },
   "stats": {
     "scanned_last_run": 1,

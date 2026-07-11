@@ -1,0 +1,259 @@
+{
+  "date": "2026-07-11",
+  "issue": 200,
+  "brief": {
+    "title": "Saturday, July 11 — six things creators need to know",
+    "items": [
+      {
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>shut down its Instagram AI deepfake tool</b> after one week of backlash — it let anyone generate images of public accounts without owner consent.",
+        "secs": 10
+      },
+      {
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership including hardware chief Tang Tan directed a pattern of leaking confidential project details.",
+        "secs": 10
+      },
+      {
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> as costs scale — worth factoring into your toolchain decisions now.",
+        "secs": 10
+      },
+      {
+        "story": "s_dabdfae8cca17885",
+        "html": "Godot's Road Generator plugin <b>now supports procedural intersection lanes</b> with collision meshes and AI pathfinding — update if you build game environments.",
+        "secs": 9
+      },
+      {
+        "story": "s_e50b15150fd00f1e",
+        "html": "Krea 2 is now <b>integrated into Diffusion Desk</b>, a lightweight C++-based local image UI — an option if you want to skip Python-heavy setups.",
+        "secs": 9
+      },
+      {
+        "story": "s_1c07dda2c1408621",
+        "html": "An artist <b>converted 2D pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — a clean technique worth studying.",
+        "secs": 10
+      }
+    ],
+    "date": "2026-07-11T16:12:01.790Z"
+  },
+  "tooldrop": {
+    "name": "Chiro Visuals Foliage Generator",
+    "blurb": "Browser-based tool for 3D artists: paint paths on any mesh to grow procedural ivy or fig trees in real-time. No software install, open-source.",
+    "meta": "3d · generative — free, open-source",
+    "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
+    "date": "2026-07-11T16:12:14.849Z"
+  },
+  "stories": [
+    {
+      "id": "s_1c07dda2c1408621",
+      "cat": "video",
+      "badge": "hot",
+      "spotlight": true,
+      "quality": 8,
+      "title": "Artist transforms 2D pencil sketch into navigable 3D world",
+      "dek": "Leteramma scanned hand drawings, remapped paper as emission, and composed them into a traversable animation using Blender's geometry nodes. Specific technical execution with clear artistic intent.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/check-out-what-it-is-like-to-be-inside-a-pencil-sketch/",
+      "ts": "2026-07-11T06:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 103,
+      "move": 0,
+      "top": true
+    },
+    {
+      "id": "s_98d85122ab641d19",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "title": "Meta kills Instagram AI feature allowing deepfakes of public accounts",
+      "dek": "Meta shut down a week-old tool that let users generate AI images by tagging public Instagram accounts without owner consent. The feature lacked notification and faced immediate backlash.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
+      "ts": "2026-07-10T23:55:07.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 87,
+      "move": 0
+    },
+    {
+      "id": "s_dabdfae8cca17885",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "title": "Godot Road Generator adds procedural intersection lanes",
+      "dek": "TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/",
+      "ts": "2026-07-11T14:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 83,
+      "move": 1
+    },
+    {
+      "id": "s_419f10878bb7a91d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "title": "Indie publisher on why shipping speed and marketing volume fail in 2026",
+      "dek": "Skystone Games' Naicker reflects on 14 years and 21k+ annual Steam releases—a structural reality check for indie devs on what actually moves needles in saturation.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/indie-game-publishing-the-21k-game-problem/",
+      "ts": "2026-07-10T17:31:00.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 81,
+      "move": -1
+    },
+    {
+      "id": "s_5cec1af73b884a0e",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 7,
+      "title": "Artist uses SMEAR add-on to create elastic cube animation",
+      "dek": "ymt3d demonstrates Blender deformation technique via SMEAR plugin, producing painterly, bouncy cube motion with shadow detail. Clear tool use with deliberate stylistic control.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/this-elastic-and-dynamic-cube-animation-was-made-using-a-blender-add-on/",
+      "ts": "2026-07-10T21:12:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 77,
+      "move": 0
+    },
+    {
+      "id": "s_9199a23f1066af9c",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "title": "Browser-based procedural ivy and fig tree generator launches open-source",
+      "dek": "Chiro Visuals' Three.js tool generates organic foliage in real-time—paint paths on meshes to grow procedural vines. Practical for 3D environment artists seeking fast iteration.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
+      "ts": "2026-07-10T16:50:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 72,
+      "move": 0
+    },
+    {
+      "id": "s_a4ad473125ca0f67",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "title": "Apple sues OpenAI for trade secret theft by former employees",
+      "dek": "Apple alleges OpenAI's senior leadership, including hardware chief Tang Tan, directed a pattern of theft involving confidential project codes, Apple hardware in interviews, and details about unreleased products.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+      "ts": "2026-07-10T21:00:29.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 71,
+      "move": 0
+    },
+    {
+      "id": "s_aa7a527942ee048d",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "title": "3D artist breaks down golden gun skin creation in Marmoset and Substance",
+      "dek": "Sheynin walks through hard-surface workflow for Hunt: Showdown prop—material setup, detailing, and rendering pipeline. Solid technical reference for game artists.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/behind-creation-of-nitro-express-checks-and-balances-skin-for-hunt-showdown-1896/",
+      "ts": "2026-07-10T18:48:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 64,
+      "move": -3
+    },
+    {
+      "id": "s_1d85656f77c8e03e",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": true,
+      "title": "Hugging Face CEO: companies switching from paid APIs to open-source AI models",
+      "dek": "As costs scale, enterprises are moving away from proprietary APIs toward open-source alternatives, raising concerns about centralized control by a handful of labs.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/",
+      "ts": "2026-07-10T19:00:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 62,
+      "move": -3
+    },
+    {
+      "id": "s_5ebc8099c0f86311",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "title": "Indie studio discusses level redesign and vehicle mechanics for sequel",
+      "dek": "Brinemedia dev talks workflow decisions for Stunt Paradise 2—scaling levels and adding mechanics. Useful design interview but light on concrete technical detail.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/how-an-indie-studio-created-a-sequel-of-a-driving-platformer-game/",
+      "ts": "2026-07-10T19:04:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 54,
+      "move": -9
+    },
+    {
+      "id": "s_e50b15150fd00f1e",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Krea 2 integration added to Diffusion Desk local UI",
+      "dek": "Developer integrates Krea 2 into Diffusion Desk, a Forge-like local image generation interface built with C++ instead of Python.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1ustokp/comfy_native_seedvr2_workflow/",
+      "ts": "2026-07-10T17:08:19.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 53,
+      "move": 0
+    },
+    {
+      "id": "s_b86afc4b2d83da6d",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Blursed Predator",
+      "dek": "AI-generated video creation by community member.",
+      "src": "r/aivideo",
+      "url": "https://www.reddit.com/r/aivideo/comments/1usr9i4/blursed_predator/",
+      "ts": "2026-07-10T15:41:14.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 51,
+      "move": 0
+    },
+    {
+      "id": "s_10db03d8139e44b4",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "INT4 W4A4 quantization reaches image model quality near INT8",
+      "dek": "Creator tests newly merged INT4 W4A4 models in ComfyUI, finding visual output nearly indistinguishable from INT8 at smaller file size and lower VRAM.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usqymj/art_style_mixing/",
+      "ts": "2026-07-10T15:30:06.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 51,
+      "move": 0
+    }
+  ],
+  "stats": {
+    "scanned_last_run": 1,
+    "published_today": 13,
+    "sources_live": 14,
+    "slopped_last_run": 1
+  }
+}
