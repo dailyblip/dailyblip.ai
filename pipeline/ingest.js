@@ -186,6 +186,12 @@ async function main() {
       const was = prevRank.get(s.id);
       s.move = was === undefined ? "new" : was - i;
     });
+    feed.stories.sort((a, b) => {
+      if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
+      const heatDiff = (b.heat ?? 0) - (a.heat ?? 0);
+      if (heatDiff !== 0) return heatDiff;
+      return new Date(b.ts) - new Date(a.ts);
+    });
     feed.stats = { ...feed.stats, scanned_last_run: 0, sources_live: feeds.filter((f) => !f.disabled).length };
     saveFeed(feed); saveSeen(seen);
     writeRss(feed);
@@ -288,6 +294,15 @@ async function main() {
   newOrder.forEach((s, i) => {
     const was = prevRank.get(s.id);
     s.move = was === undefined ? "new" : was - i; // positive = climbed
+  });
+
+  // Final story order: top signal always leads, then by heat, then recency.
+  // Every consumer of feed.json (site, RSS, archive) sees this same order.
+  feed.stories.sort((a, b) => {
+    if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
+    const heatDiff = (b.heat ?? 0) - (a.heat ?? 0);
+    if (heatDiff !== 0) return heatDiff;
+    return new Date(b.ts) - new Date(a.ts);
   });
 
   feed.stats = {
