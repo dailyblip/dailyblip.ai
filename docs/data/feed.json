@@ -1,6 +1,6 @@
 {
   "issue": 199,
-  "generated_at": "2026-07-11T05:49:28.917Z",
+  "generated_at": "2026-07-11T06:27:03.571Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
@@ -51,7 +51,7 @@
       "ts": "2026-07-10T23:55:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 96,
+      "heat": 95,
       "move": 0,
       "top": true
     },
@@ -84,7 +84,7 @@
       "ts": "2026-07-10T17:31:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 90,
+      "heat": 89,
       "move": 0
     },
     {
@@ -120,6 +120,21 @@
       "move": 0
     },
     {
+      "id": "s_a4ad473125ca0f67",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "title": "Apple sues OpenAI for trade secret theft by former employees",
+      "dek": "Apple alleges OpenAI's senior leadership, including hardware chief Tang Tan, directed a pattern of theft involving confidential project codes, Apple hardware in interviews, and details about unreleased products.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+      "ts": "2026-07-10T21:00:29.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 80,
+      "move": 0
+    },
+    {
       "id": "s_9199a23f1066af9c",
       "cat": "tools",
       "badge": "new",
@@ -131,21 +146,6 @@
       "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
       "ts": "2026-07-10T16:50:00.000Z",
       "read": "2 min",
-      "also": [],
-      "heat": 81,
-      "move": 0
-    },
-    {
-      "id": "s_a4ad473125ca0f67",
-      "cat": "rights",
-      "badge": "breaking",
-      "spotlight": false,
-      "title": "Apple sues OpenAI for trade secret theft by former employees",
-      "dek": "Apple alleges OpenAI's senior leadership, including hardware chief Tang Tan, directed a pattern of theft involving confidential project codes, Apple hardware in interviews, and details about unreleased products.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
-      "ts": "2026-07-10T21:00:29.000Z",
-      "read": "3 min",
       "also": [],
       "heat": 80,
       "move": 0
@@ -163,7 +163,7 @@
       "ts": "2026-07-10T18:48:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 73,
+      "heat": 72,
       "move": 0
     },
     {
@@ -193,7 +193,7 @@
       "ts": "2026-07-10T13:45:02.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 66,
+      "heat": 65,
       "move": 0
     },
     {
@@ -209,7 +209,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_132c70a2f06679b6",
@@ -224,7 +224,7 @@
       "read": "2 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s1",
@@ -236,7 +236,7 @@
       "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
       "ts": "2026-07-09T16:27:40.256Z",
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -252,7 +252,7 @@
       "read": "4 min",
       "also": [],
       "heat": 63,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -281,7 +281,7 @@
       "ts": "2026-07-10T15:41:14.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 60,
+      "heat": 59,
       "move": 0
     },
     {
@@ -296,7 +296,7 @@
       "ts": "2026-07-10T15:30:06.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 60,
+      "heat": 59,
       "move": 0
     },
     {
@@ -312,7 +312,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -327,7 +327,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_9491981398fceeeb",
@@ -342,7 +342,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -357,7 +357,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_9de14e96265af218",
@@ -372,7 +372,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_16830069eb2915f6",
@@ -387,7 +387,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_fbe93ef80d6a6a67",
@@ -402,7 +402,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_ad27224f77dabb8d",
@@ -417,7 +417,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s2",
@@ -429,7 +429,7 @@
       "dek": "OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.",
       "ts": "2026-07-09T15:27:40.256Z",
       "heat": 58,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_5244feb84148957b",
@@ -444,7 +444,7 @@
       "read": "2 min",
       "also": [],
       "heat": 57,
-      "move": -9
+      "move": 0
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -459,7 +459,7 @@
       "read": "2 min",
       "also": [],
       "heat": 57,
-      "move": -9
+      "move": 0
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -473,8 +473,8 @@
       "ts": "2026-07-10T12:33:39.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 57,
-      "move": -9
+      "heat": 56,
+      "move": 0
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -518,7 +518,7 @@
       "ts": "2026-07-10T09:20:45.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
+      "heat": 53,
       "move": 0
     },
     {
@@ -533,7 +533,7 @@
       "ts": "2026-07-10T08:54:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
+      "heat": 52,
       "move": 0
     },
     {
@@ -548,7 +548,7 @@
       "ts": "2026-07-10T08:25:28.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
+      "heat": 52,
       "move": 0
     },
     {
@@ -563,7 +563,7 @@
       "ts": "2026-07-10T07:36:14.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 52,
+      "heat": 51,
       "move": 0
     },
     {
