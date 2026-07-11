@@ -1,6 +1,6 @@
 {
   "issue": 199,
-  "generated_at": "2026-07-11T06:27:03.571Z",
+  "generated_at": "2026-07-11T10:44:29.285Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
@@ -51,7 +51,7 @@
       "ts": "2026-07-10T23:55:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 95,
+      "heat": 91,
       "move": 0,
       "top": true
     },
@@ -68,7 +68,7 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 112,
+      "heat": 107,
       "move": 0
     },
     {
@@ -83,22 +83,6 @@
       "url": "https://80.lv/articles/indie-game-publishing-the-21k-game-problem/",
       "ts": "2026-07-10T17:31:00.000Z",
       "read": "5 min",
-      "also": [],
-      "heat": 89,
-      "move": 0
-    },
-    {
-      "id": "s_5cec1af73b884a0e",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": true,
-      "quality": 7,
-      "title": "Artist uses SMEAR add-on to create elastic cube animation",
-      "dek": "ymt3d demonstrates Blender deformation technique via SMEAR plugin, producing painterly, bouncy cube motion with shadow detail. Clear tool use with deliberate stylistic control.",
-      "src": "80 Level",
-      "url": "https://80.lv/articles/this-elastic-and-dynamic-cube-animation-was-made-using-a-blender-add-on/",
-      "ts": "2026-07-10T21:12:00.000Z",
-      "read": "2 min",
       "also": [],
       "heat": 85,
       "move": 0
@@ -117,22 +101,23 @@
       "read": "2 min",
       "also": [],
       "heat": 84,
-      "move": 0
+      "move": 1
     },
     {
-      "id": "s_a4ad473125ca0f67",
-      "cat": "rights",
-      "badge": "breaking",
-      "spotlight": false,
-      "title": "Apple sues OpenAI for trade secret theft by former employees",
-      "dek": "Apple alleges OpenAI's senior leadership, including hardware chief Tang Tan, directed a pattern of theft involving confidential project codes, Apple hardware in interviews, and details about unreleased products.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
-      "ts": "2026-07-10T21:00:29.000Z",
-      "read": "3 min",
+      "id": "s_5cec1af73b884a0e",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 7,
+      "title": "Artist uses SMEAR add-on to create elastic cube animation",
+      "dek": "ymt3d demonstrates Blender deformation technique via SMEAR plugin, producing painterly, bouncy cube motion with shadow detail. Clear tool use with deliberate stylistic control.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/this-elastic-and-dynamic-cube-animation-was-made-using-a-blender-add-on/",
+      "ts": "2026-07-10T21:12:00.000Z",
+      "read": "2 min",
       "also": [],
       "heat": 80,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -147,8 +132,23 @@
       "ts": "2026-07-10T16:50:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 80,
-      "move": 0
+      "heat": 76,
+      "move": 1
+    },
+    {
+      "id": "s_a4ad473125ca0f67",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "title": "Apple sues OpenAI for trade secret theft by former employees",
+      "dek": "Apple alleges OpenAI's senior leadership, including hardware chief Tang Tan, directed a pattern of theft involving confidential project codes, Apple hardware in interviews, and details about unreleased products.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
+      "ts": "2026-07-10T21:00:29.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 75,
+      "move": -1
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -163,7 +163,7 @@
       "ts": "2026-07-10T18:48:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 72,
+      "heat": 68,
       "move": 0
     },
     {
@@ -178,22 +178,7 @@
       "ts": "2026-07-10T19:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 71,
-      "move": 0
-    },
-    {
-      "id": "s_3fd5be624e9b45ce",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "Instagram won't filter AI content, but will label it",
-      "dek": "Meta's head of Instagram says the platform will label AI-generated content rather than remove it from feeds, letting users control their own visibility preferences.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
-      "ts": "2026-07-10T13:45:02.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 65,
+      "heat": 66,
       "move": 0
     },
     {
@@ -209,7 +194,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_132c70a2f06679b6",
@@ -224,7 +209,7 @@
       "read": "2 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s1",
@@ -236,7 +221,22 @@
       "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
       "ts": "2026-07-09T16:27:40.256Z",
       "heat": 65,
-      "move": 0
+      "move": 1
+    },
+    {
+      "id": "s_3fd5be624e9b45ce",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "title": "Instagram won't filter AI content, but will label it",
+      "dek": "Meta's head of Instagram says the platform will label AI-generated content rather than remove it from feeds, letting users control their own visibility preferences.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
+      "ts": "2026-07-10T13:45:02.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 61,
+      "move": -3
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -251,52 +251,7 @@
       "ts": "2026-07-10T19:04:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 63,
-      "move": 0
-    },
-    {
-      "id": "s_e50b15150fd00f1e",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Krea 2 integration added to Diffusion Desk local UI",
-      "dek": "Developer integrates Krea 2 into Diffusion Desk, a Forge-like local image generation interface built with C++ instead of Python.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1ustokp/comfy_native_seedvr2_workflow/",
-      "ts": "2026-07-10T17:08:19.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 61,
-      "move": 0
-    },
-    {
-      "id": "s_b86afc4b2d83da6d",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Blursed Predator",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usr9i4/blursed_predator/",
-      "ts": "2026-07-10T15:41:14.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 59,
-      "move": 0
-    },
-    {
-      "id": "s_10db03d8139e44b4",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "INT4 W4A4 quantization reaches image model quality near INT8",
-      "dek": "Creator tests newly merged INT4 W4A4 models in ComfyUI, finding visual output nearly indistinguishable from INT8 at smaller file size and lower VRAM.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usqymj/art_style_mixing/",
-      "ts": "2026-07-10T15:30:06.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 59,
+      "heat": 58,
       "move": 0
     },
     {
@@ -312,7 +267,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -327,7 +282,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_9491981398fceeeb",
@@ -342,7 +297,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -357,7 +312,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_9de14e96265af218",
@@ -372,7 +327,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_16830069eb2915f6",
@@ -387,7 +342,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_fbe93ef80d6a6a67",
@@ -402,7 +357,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_ad27224f77dabb8d",
@@ -417,7 +372,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s2",
@@ -429,7 +384,52 @@
       "dek": "OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.",
       "ts": "2026-07-09T15:27:40.256Z",
       "heat": 58,
-      "move": 0
+      "move": 3
+    },
+    {
+      "id": "s_e50b15150fd00f1e",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Krea 2 integration added to Diffusion Desk local UI",
+      "dek": "Developer integrates Krea 2 into Diffusion Desk, a Forge-like local image generation interface built with C++ instead of Python.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1ustokp/comfy_native_seedvr2_workflow/",
+      "ts": "2026-07-10T17:08:19.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 56,
+      "move": -9
+    },
+    {
+      "id": "s_b86afc4b2d83da6d",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "title": "Blursed Predator",
+      "dek": "AI-generated video creation by community member.",
+      "src": "r/aivideo",
+      "url": "https://www.reddit.com/r/aivideo/comments/1usr9i4/blursed_predator/",
+      "ts": "2026-07-10T15:41:14.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 55,
+      "move": -9
+    },
+    {
+      "id": "s_10db03d8139e44b4",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "title": "INT4 W4A4 quantization reaches image model quality near INT8",
+      "dek": "Creator tests newly merged INT4 W4A4 models in ComfyUI, finding visual output nearly indistinguishable from INT8 at smaller file size and lower VRAM.",
+      "src": "r/StableDiffusion",
+      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usqymj/art_style_mixing/",
+      "ts": "2026-07-10T15:30:06.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 55,
+      "move": -9
     },
     {
       "id": "s_5244feb84148957b",
@@ -443,7 +443,7 @@
       "ts": "2026-07-10T13:07:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 57,
+      "heat": 52,
       "move": 0
     },
     {
@@ -458,7 +458,7 @@
       "ts": "2026-07-10T12:58:38.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 57,
+      "heat": 52,
       "move": 0
     },
     {
@@ -473,7 +473,7 @@
       "ts": "2026-07-10T12:33:39.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 56,
+      "heat": 52,
       "move": 0
     },
     {
@@ -488,7 +488,7 @@
       "ts": "2026-07-10T11:08:41.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 55,
+      "heat": 50,
       "move": 0
     },
     {
@@ -503,7 +503,7 @@
       "ts": "2026-07-10T11:06:55.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 55,
+      "heat": 50,
       "move": 0
     },
     {
@@ -518,7 +518,7 @@
       "ts": "2026-07-10T09:20:45.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
+      "heat": 50,
       "move": 0
     },
     {
@@ -533,7 +533,7 @@
       "ts": "2026-07-10T08:54:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 52,
+      "heat": 50,
       "move": 0
     },
     {
@@ -548,7 +548,7 @@
       "ts": "2026-07-10T08:25:28.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 52,
+      "heat": 50,
       "move": 0
     },
     {
@@ -563,7 +563,7 @@
       "ts": "2026-07-10T07:36:14.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 51,
+      "heat": 50,
       "move": 0
     },
     {
