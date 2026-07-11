@@ -1,41 +1,41 @@
 {
-  "issue": 196,
-  "generated_at": "2026-07-11T03:01:23.766Z",
+  "issue": 197,
+  "generated_at": "2026-07-11T03:02:36.634Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
       {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed the Instagram AI tagging feature</b> one week after launch following backlash over deepfakes of public accounts without consent — update your privacy settings.",
+        "story": "s_10db03d8139e44b4",
+        "html": "INT4 W4A4 quantized image models in ComfyUI now deliver <b>visual quality nearly identical to INT8</b> at smaller file size and lower VRAM — worth swapping in your workflow.",
         "secs": 10
       },
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership including hardware chief Tang Tan directed staff to steal confidential project codes and unreleased product details.",
-        "secs": 11
-      },
-      {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face's CEO says <b>enterprises are abandoning paid APIs for open-source models</b> as costs scale — worth reassessing your stack if you're paying per-token at volume.",
+        "story": "s_5012f89709d598db",
+        "html": "ComfyUI now has <b>native SeedVR2 upscaling</b> for both images and video, demonstrated alongside the INT4 Krea 2 model — update your ComfyUI install to get it.",
         "secs": 10
       },
       {
-        "story": "s_81903600b8406df1",
-        "html": "A new ComfyUI custom node enables <b>4-bit Krea 2 Turbo inference on 6 GB VRAM</b>, opening fast local image generation to entry-level GPU owners.",
+        "story": "s_3fd5be624e9b45ce",
+        "html": "Instagram will <b>label AI-generated content rather than remove it</b>, letting users control their own feed visibility — factor this into your publishing strategy now.",
         "secs": 9
       },
       {
-        "story": "s_038c1ce14623ecc3",
-        "html": "A free browser-based tool <b>auto-documents ComfyUI workflows from saved PNGs</b>, extracting custom nodes, models, and settings — fully offline, no server needed.",
+        "story": "s_9199a23f1066af9c",
+        "html": "A free open-source <b>browser-based procedural ivy and foliage generator</b> lets 3D environment artists paint vine paths directly onto meshes for fast real-time iteration.",
         "secs": 10
       },
       {
-        "story": "s_1c07dda2c1408621",
-        "html": "Artist Leteramma <b>converted hand-drawn pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission mapping — a compelling pipeline for 2D-to-3D work.",
+        "story": "s_15ebc3c3102e441c",
+        "html": "Krea 2 supports <b>precise art-style blending via weighted LoRAs</b>, offering SDXL-era flexibility — explore the workflow if you've been locked into single-style outputs.",
+        "secs": 9
+      },
+      {
+        "story": "s_419f10878bb7a91d",
+        "html": "With <b>21,000-plus Steam releases annually</b>, an indie publisher with 14 years of data warns shipping speed and marketing volume alone no longer move the needle.",
         "secs": 10
       }
     ],
-    "date": "2026-07-11T01:51:54.591Z"
+    "date": "2026-07-11T03:02:22.490Z"
   },
   "stories": [
     {
@@ -929,11 +929,11 @@
     "#open-video"
   ],
   "tooldrop": {
-    "name": "Chiro Visuals Ivy & Fig Tree Generator",
-    "blurb": "Browser tool for 3D artists: paint paths on any mesh to grow procedural ivy or fig vines in real-time, no software install needed.",
-    "meta": "3d · environment art — free, open-source",
+    "name": "Chiro Visuals Ivy Generator",
+    "blurb": "Browser-based tool that grows procedural ivy and fig vines on 3D meshes in real time. Paint paths, get organic foliage fast — open-source and free.",
+    "meta": "3d · visual — free, open-source",
     "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
-    "date": "2026-07-11T01:52:04.493Z"
+    "date": "2026-07-11T03:02:36.572Z"
   },
   "stats": {
     "scanned_last_run": 0,
