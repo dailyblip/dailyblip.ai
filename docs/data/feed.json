@@ -1,41 +1,41 @@
 {
-  "issue": 195,
-  "generated_at": "2026-07-11T01:40:00.592Z",
+  "issue": 196,
+  "generated_at": "2026-07-11T01:52:04.550Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
       {
-        "story": "s_132c70a2f06679b6",
-        "html": "<b>OpenAI's Atlas browser sunsets August 9</b> — agentic browsing moves to ChatGPT desktop and Chrome, so update any workflows that depend on it now.",
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>killed the Instagram AI tagging feature</b> one week after launch following backlash over deepfakes of public accounts without consent — update your privacy settings.",
         "secs": 10
       },
       {
-        "story": "s_9491981398fceeeb",
-        "html": "OpenAI's new <b>GPT-5.6 Sol is 54% more token-efficient for coding tasks</b>, arriving in three tiers (Sol, Terra, Luna) with gains in enterprise and science work too.",
-        "secs": 10
-      },
-      {
-        "story": "s_3fd5be624e9b45ce",
-        "html": "Instagram will <b>label AI-generated content rather than filter it</b>, letting creators stay visible while users control their own feed preferences.",
-        "secs": 9
-      },
-      {
-        "story": "s_fbe93ef80d6a6a67",
-        "html": "Meta's Muse Image lets anyone generate AI photos using <b>public Instagram accounts by tagging them</b> — go private now if you don't want your images used as source material.",
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership including hardware chief Tang Tan directed staff to steal confidential project codes and unreleased product details.",
         "secs": 11
       },
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "New <b>INT4 W4A4 quantized image models in ComfyUI match INT8 quality</b> at smaller file size, meaning faster local runs without a visible drop in output.",
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face's CEO says <b>enterprises are abandoning paid APIs for open-source models</b> as costs scale — worth reassessing your stack if you're paying per-token at volume.",
         "secs": 10
       },
       {
-        "story": "s_5012f89709d598db",
-        "html": "ComfyUI now has <b>native SeedVR2 upscaling for both images and video</b>, demonstrated working alongside the INT4 Krea 2 pipeline.",
+        "story": "s_81903600b8406df1",
+        "html": "A new ComfyUI custom node enables <b>4-bit Krea 2 Turbo inference on 6 GB VRAM</b>, opening fast local image generation to entry-level GPU owners.",
         "secs": 9
+      },
+      {
+        "story": "s_038c1ce14623ecc3",
+        "html": "A free browser-based tool <b>auto-documents ComfyUI workflows from saved PNGs</b>, extracting custom nodes, models, and settings — fully offline, no server needed.",
+        "secs": 10
+      },
+      {
+        "story": "s_1c07dda2c1408621",
+        "html": "Artist Leteramma <b>converted hand-drawn pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission mapping — a compelling pipeline for 2D-to-3D work.",
+        "secs": 10
       }
     ],
-    "date": "2026-07-10T18:13:18.414Z"
+    "date": "2026-07-11T01:51:54.591Z"
   },
   "stories": [
     {
@@ -929,11 +929,11 @@
     "#open-video"
   ],
   "tooldrop": {
-    "name": "ChatCut",
-    "blurb": "An AI video editor that lets you cut and edit footage through chat prompts — built for creators who'd rather describe edits than drag timelines.",
-    "meta": "video — free tier",
-    "url": "https://www.producthunt.com/products/chatcut-ai-video-editor",
-    "date": "2026-07-10T14:29:07.599Z"
+    "name": "Chiro Visuals Ivy & Fig Tree Generator",
+    "blurb": "Browser tool for 3D artists: paint paths on any mesh to grow procedural ivy or fig vines in real-time, no software install needed.",
+    "meta": "3d · environment art — free, open-source",
+    "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
+    "date": "2026-07-11T01:52:04.493Z"
   },
   "stats": {
     "scanned_last_run": 2,
