@@ -1,6 +1,6 @@
 {
   "issue": 198,
-  "generated_at": "2026-07-11T03:57:21.632Z",
+  "generated_at": "2026-07-11T04:02:37.899Z",
   "brief": {
     "title": "Friday, July 10 — six things creators need to know",
     "items": [
@@ -67,7 +67,6 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "top": true,
       "heat": 112,
       "move": 0
     },
@@ -85,7 +84,8 @@
       "read": "3 min",
       "also": [],
       "heat": 98,
-      "move": 0
+      "move": 0,
+      "top": true
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -243,21 +243,6 @@
       "move": 0
     },
     {
-      "id": "s_9a91f2fd509de00b",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Spain vs Belgium | Feral Kingdoms: Blood and Gold",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usoodg/spain_vs_belgium_feral_kingdoms_blood_and_gold/",
-      "ts": "2026-07-10T14:05:33.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 60,
-      "move": 0
-    },
-    {
       "id": "s_3fd5be624e9b45ce",
       "cat": "industry",
       "badge": "hot",
@@ -348,21 +333,6 @@
       "move": -9
     },
     {
-      "id": "s_2ba1528e758d75cc",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Famous Football Players as Game of Thrones characters",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usjlr9/famous_football_players_as_game_of_thrones/",
-      "ts": "2026-07-10T10:20:04.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 56,
-      "move": 0
-    },
-    {
       "id": "s_3a6e9021ecabca6b",
       "cat": "image",
       "badge": "new",
@@ -408,21 +378,6 @@
       "move": 0
     },
     {
-      "id": "s_dc3bc19b6989427a",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "How the worldcup should end",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1ushdig/how_the_worldcup_should_end/",
-      "ts": "2026-07-10T08:12:57.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 54,
-      "move": 0
-    },
-    {
       "id": "s_5012f89709d598db",
       "cat": "image",
       "badge": "new",
@@ -438,51 +393,6 @@
       "move": 0
     },
     {
-      "id": "s_6096b993f0c7444b",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "WD40 for men",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usfbam/wd40_for_men/",
-      "ts": "2026-07-10T06:15:29.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 52,
-      "move": 0
-    },
-    {
-      "id": "s_767c337f8f88a7a1",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Exotic Trip: Amazon Forest",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1useurg/exotic_trip_amazon_forest/",
-      "ts": "2026-07-10T05:50:01.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 52,
-      "move": 0
-    },
-    {
-      "id": "s_cfde52d72b49c103",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Don't skip leg day",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usd6d2/dont_skip_leg_day/",
-      "ts": "2026-07-10T04:21:20.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": 0
-    },
-    {
       "id": "s_ca1c525e3ab05a6a",
       "cat": "image",
       "badge": "new",
@@ -492,36 +402,6 @@
       "src": "r/StableDiffusion",
       "url": "https://www.reddit.com/r/StableDiffusion/comments/1uscxt6/int4_w4a4_is_insane/",
       "ts": "2026-07-10T04:09:44.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": 0
-    },
-    {
-      "id": "s_6588171c0af10387",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "A space possum ate the radioactive scanner",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usc5zm/a_space_possum_ate_the_radioactive_scanner_and/",
-      "ts": "2026-07-10T03:31:37.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": 0
-    },
-    {
-      "id": "s_80eda01ec97ca2e4",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "The Witch's Moon Mushroom",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usbrze/the_witchs_moon_mushroom/",
-      "ts": "2026-07-10T03:12:28.000Z",
       "read": "2 min",
       "also": [],
       "heat": 50,
