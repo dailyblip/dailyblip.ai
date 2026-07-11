@@ -87,22 +87,6 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
 @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .ticker:hover .ticker-track{animation-play-state:paused}
 
-/* ---------- tool status strip ---------- */
-.status-strip{
-  display:none;position:relative;z-index:2;
-  border-bottom:1px solid var(--line);background:var(--ink);
-  padding:6px 24px;overflow-x:auto;white-space:nowrap;
-  font-family:var(--mono);font-size:11px;color:var(--faint);
-  -webkit-overflow-scrolling:touch;scrollbar-width:none;
-}
-.status-strip::-webkit-scrollbar{display:none}
-.status-strip .st{margin-right:20px;display:inline-flex;align-items:center;gap:5px}
-.status-strip .st i{font-style:normal;font-size:9px}
-.status-strip .st.up i{color:var(--aqua)}
-.status-strip .st.issue i{color:var(--red)}
-.status-strip .st.unknown i{color:var(--faint)}
-.status-strip .st-label{color:var(--amber);margin-right:16px;letter-spacing:.1em}
-
 /* ---------- heat movement arrows ---------- */
 .mv{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.02em}
 .mv.up{color:var(--aqua)}
@@ -422,7 +406,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   <div class="ticker-viewport"><div class="ticker-track" id="tickerTrack"></div></div>
 </div>
 
-<div class="status-strip" id="statusStrip" aria-label="Tool availability"></div>
 <div class="stale" id="staleBanner">⚠ feed paused — showing last known signals from <span id="staleDate"></span></div>
 
 <header>
@@ -723,17 +706,6 @@ function renderStreak(){
   else chip.classList.remove("show");
 }
 
-function renderStatusStrip(){
-  const strip = $("#statusStrip");
-  const status = FEED.tool_status;
-  if(!status || !status.length){ strip.style.display = "none"; return; }
-  const shown = status.filter(t => t.s !== "unknown");
-  if(!shown.length){ strip.style.display = "none"; return; }
-  strip.style.display = "block";
-  strip.innerHTML = `<span class="st-label">STACK STATUS</span>` + shown.map(t =>
-    `<span class="st ${t.s}"><i>●</i>${esc(t.n)}${t.s==="issue"?" ⚠":""}</span>`).join("");
-}
-
 function moveArrow(s){
   if(s.move === "new") return `<span class="mv nw">★ new</span>`;
   if(typeof s.move === "number" && s.move > 1) return `<span class="mv up">▲${s.move}</span>`;
@@ -928,7 +900,7 @@ function renderSidebar(){
 }
 
 function renderAll(){
-  renderHeader(); renderStatusStrip(); renderStreak(); renderTicker(); renderCats(); renderBrief(); renderForYou(); renderSpotlight(); renderFeed(); renderSidebar();
+  renderHeader(); renderStreak(); renderTicker(); renderCats(); renderBrief(); renderForYou(); renderSpotlight(); renderFeed(); renderSidebar();
 }
 
 /* ---- events (delegated; bound once) ---- */
