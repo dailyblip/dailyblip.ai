@@ -284,9 +284,14 @@ async function main() {
   let sloppedOut = 0;
   verdicts.forEach((v, i) => {
     const src = items[i];
-    if (!v || !src) return;
+    if (!v || !src) { console.log(`classify: [NO VERDICT] ${src?.source || "?"} — "${(src?.title || "").slice(0,70)}"`); return; }
     const quality = Math.min(10, Math.max(1, Number(v.quality) || 5));
-    if (!v.keep || quality < MIN_QUALITY) { sloppedOut++; return; }
+    if (!v.keep || quality < MIN_QUALITY) {
+      sloppedOut++;
+      console.log(`classify: [REJECTED q${quality}${!v.keep ? " keep=false" : ""}] ${src.source} — "${src.title.slice(0,70)}"`);
+      return;
+    }
+    console.log(`classify: [KEPT q${quality}${v.spotlight ? " SPOTLIGHT" : ""}] ${src.source} — "${src.title.slice(0,70)}"`);
     kept.push({
       id: "s_" + hash(canonicalUrl(src.url)),
       cat: CATEGORIES.includes(v.category) ? v.category : (src.hint || "industry"),
@@ -320,6 +325,7 @@ async function main() {
   feed.stories = [...byId.values()]
     .sort((a, b) => new Date(b.ts) - new Date(a.ts))
     .slice(0, MAX_STORIES);
+  console.log(`merge: ${kept.length} kept this run, feed.json now holds ${feed.stories.length} stories total (cap ${MAX_STORIES}).`);
 
   // Force pinned spotlights on regardless of the classifier's opinion.
   for (const s of feed.stories) if (pinnedSpot.has(s.id)) s.spotlight = true;
