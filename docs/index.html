@@ -516,7 +516,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
         <h4>the blip, in your inbox</h4>
         <p>One email, 6 a.m. daily. What changed in your creative stack — and nothing else.</p>
         <!-- Set data-buttondown to your Buttondown username to go live -->
-        <form class="row" id="subForm" data-buttondown="dailyblip.ai">
+        <form class="row" id="subForm" data-buttondown="">
           <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
           <button type="submit" id="subBtn">Get it</button>
         </form>
@@ -780,7 +780,13 @@ function renderFeed(){
   const list = FEED.stories.filter(s =>
     matchCat(s) &&
     (!query || (s.title+" "+s.dek).toLowerCase().includes(query))
-  );
+  ).sort((a,b) => {
+    // Top signal always leads. After that, strictly chronological — newest
+    // first. Heat (▲/▼ arrows) is still shown per-card but no longer used
+    // to decide order, per an explicit call to keep sorting predictable.
+    if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
+    return new Date(b.ts) - new Date(a.ts);
+  });
   const shown = list.slice(0, visible);
   $("#feedList").innerHTML = shown.map(s=>{
     const cat = CATS.find(c=>c.id===s.cat) || {label:s.cat};
