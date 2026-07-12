@@ -1,54 +1,72 @@
 {
   "date": "2026-07-12",
-  "issue": 203,
+  "issue": 204,
   "brief": {
     "title": "Sunday, July 12 — six things creators need to know",
     "items": [
       {
-        "story": "s2",
-        "html": "<b>Sora API sunsets September 24</b> — the app is already gone, giving you an 11-week window to migrate any video pipeline off OpenAI's generator.",
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leaders including hardware chief Tang Tan directed a pattern of stealing confidential project codes and unreleased product details.",
+        "secs": 11
+      },
+      {
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>killed its week-old Instagram AI tagging feature</b> after backlash — the tool had let anyone generate deepfakes of public accounts without the owner's knowledge or consent.",
         "secs": 10
       },
       {
-        "story": "s_8c1ac48f2dbd0d44",
-        "html": "Kyutai released <b>MuScriptor, an open-weight music-to-MIDI transcription model</b> trained on 170k recordings, letting musicians extract multi-instrument MIDI from full mixes.",
+        "story": "s_81903600b8406df1",
+        "html": "A new ComfyUI custom node enables <b>INT4 inference for Krea 2 Turbo on 6 GB VRAM</b> — check your GPU tier, this opens consumer-grade runs of a previously memory-hungry model.",
         "secs": 10
       },
       {
-        "story": "s_16830069eb2915f6",
-        "html": "OpenAI risks <b>judicial sanctions for allegedly concealing and deleting ChatGPT logs</b> sought as evidence in the New York Times copyright lawsuit — watch this closely.",
+        "story": "s_10db03d8139e44b4",
+        "html": "INT4 W4A4 quantized image models in ComfyUI now <b>produce output nearly indistinguishable from INT8</b> at smaller file size — worth testing before defaulting to heavier weights.",
         "secs": 10
       },
       {
-        "story": "s1",
-        "html": "Meta launched <b>Muse, an image model that draws on your own photo library</b>, competing directly with Adobe Firefly and Google Imagen for personal creative workflows.",
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face's CEO warns <b>enterprises are abandoning paid AI APIs for open-source models</b> as costs scale — a structural shift worth tracking if your workflow depends on proprietary APIs.",
         "secs": 10
       },
       {
-        "story": "s_9491981398fceeeb",
-        "html": "OpenAI's new <b>GPT-5.6 Sol is 54% more token-efficient for coding tasks</b> and ships in three tiers — Sol, Terra, and Luna — check which fits your stack.",
-        "secs": 10
-      },
-      {
-        "story": "s_038c1ce14623ecc3",
-        "html": "A free browser-based tool now <b>auto-documents ComfyUI workflows by extracting custom nodes and settings from saved PNGs</b> — fully offline, no server required.",
+        "story": "s_9199a23f1066af9c",
+        "html": "A free browser-based <b>procedural ivy and fig tree generator</b> launched open-source, letting 3D environment artists paint and grow organic foliage on meshes in real time with no install required.",
         "secs": 10
       }
     ],
-    "date": "2026-07-12T16:15:39.861Z"
+    "date": "2026-07-12T16:34:54.072Z"
   },
   "tooldrop": {
     "name": "MuScriptor",
-    "blurb": "Open-weight model that transcribes multi-instrument audio recordings into MIDI. Useful for musicians wanting editable notation from any mix, no subscription needed.",
+    "blurb": "Open-weight model from Kyutai that transcribes multi-instrument audio recordings into MIDI. Useful for musicians who want to extract notation or stems from existing tracks.",
     "meta": "music · midi — free (open weight)",
     "url": "https://www.marktechpost.com/2026/07/10/kyutai-releases-muscriptor-an-open-weight-decoder-only-transformer-for-multi-instrument-music-transcription-to-midi/",
-    "date": "2026-07-12T16:15:51.636Z"
+    "date": "2026-07-12T16:35:01.947Z"
   },
-  "stories": [],
+  "stories": [
+    {
+      "id": "s_5bbc3a5ef63f4579",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple's scrapped self-driving car seeded Neural Engine AI chip architecture",
+      "dek": "Failed autonomous vehicle project led to development of on-device AI processing capabilities that became core to Apple Silicon's performance.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra",
+      "ts": "2026-07-12T16:27:06.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 53
+    }
+  ],
   "stats": {
     "scanned_last_run": 1,
-    "published_today": 0,
+    "published_today": 1,
     "sources_live": 10,
-    "slopped_last_run": 1
+    "slopped_last_run": 0
   }
 }
