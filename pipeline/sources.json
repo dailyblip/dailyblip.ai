@@ -75,7 +75,7 @@
     },
     {
       "name": "80 Level",
-      "url": "https://80.lv/feed/",
+      "url": "https://80.lv/feed",
       "hint": "video",
       "tier": "journalism"
     }
