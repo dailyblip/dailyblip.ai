@@ -1,6 +1,6 @@
 {
   "issue": 202,
-  "generated_at": "2026-07-12T03:13:53.060Z",
+  "generated_at": "2026-07-12T04:06:30.682Z",
   "brief": {
     "title": "Saturday, July 11 — six things creators need to know",
     "items": [
@@ -51,7 +51,7 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
+      "heat": 90,
       "move": 0,
       "top": true
     },
@@ -68,8 +68,8 @@
       "ts": "2026-07-11T14:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 71,
-      "move": 0
+      "heat": 70,
+      "move": -1
     },
     {
       "id": "s_98d85122ab641d19",
@@ -101,7 +101,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -116,7 +116,24 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": -1
+    },
+    {
+      "id": "s_8c1ac48f2dbd0d44",
+      "cat": "music",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Kyutai releases MuScriptor: open-weight music-to-MIDI transcription model",
+      "dek": "Decoder-only transformer trained on 170k recordings plus 1.45M synthetic MIDI, transcribes multi-instrument mixes. Open weight; actionable for musicians.",
+      "src": "MarkTechPost",
+      "url": "https://www.marktechpost.com/2026/07/10/kyutai-releases-muscriptor-an-open-weight-decoder-only-transformer-for-multi-instrument-music-transcription-to-midi/",
+      "ts": "2026-07-10T20:21:08.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 78,
+      "move": 50
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -132,7 +149,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -147,7 +164,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -163,7 +180,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -179,7 +196,7 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -194,7 +211,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -210,7 +227,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -225,7 +242,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -240,7 +257,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -255,7 +272,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_5244feb84148957b",
@@ -270,7 +287,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -285,7 +302,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -300,7 +317,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -315,7 +332,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_959d825718f0d41f",
@@ -330,7 +347,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_3a6e9021ecabca6b",
@@ -345,7 +362,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_d227c01975ac31ba",
@@ -360,7 +377,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_81903600b8406df1",
@@ -375,7 +392,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_5012f89709d598db",
@@ -390,7 +407,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_ca1c525e3ab05a6a",
@@ -405,7 +422,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_8b07a3a2688e9c39",
@@ -420,7 +437,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_7450e04d7677bb91",
@@ -435,7 +452,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_f2379eceafd20cc0",
@@ -450,7 +467,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_2922cfdde0d796dd",
@@ -465,7 +482,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -480,7 +497,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_880ee3c2d5501c1e",
@@ -495,7 +512,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_769060e02311f3cb",
@@ -510,7 +527,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_9491981398fceeeb",
@@ -525,7 +542,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -540,7 +557,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_e77145a44b286dd2",
@@ -555,7 +572,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_ba6ef68cb3be2005",
@@ -570,7 +587,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_3d791cf08ced814e",
@@ -585,7 +602,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_2487a466605cb453",
@@ -600,7 +617,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_132c70a2f06679b6",
@@ -615,7 +632,7 @@
       "read": "2 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_ffdb0d5985a23df3",
@@ -630,7 +647,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_241317adaedd7479",
@@ -645,7 +662,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_9de14e96265af218",
@@ -660,7 +677,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_16830069eb2915f6",
@@ -675,7 +692,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_76107e209263173a",
@@ -690,7 +707,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_74bc3599582dfa3b",
@@ -705,7 +722,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_400326415dcf66e1",
@@ -720,7 +737,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_fbe93ef80d6a6a67",
@@ -735,7 +752,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_8c91b0e5893bd1c9",
@@ -750,7 +767,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_ad27224f77dabb8d",
@@ -765,7 +782,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_c76f2244dd85d2ed",
@@ -780,7 +797,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s1",
@@ -792,7 +809,7 @@
       "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
       "ts": "2026-07-09T16:27:40.256Z",
       "heat": 65,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s2",
@@ -804,7 +821,7 @@
       "dek": "OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.",
       "ts": "2026-07-09T15:27:40.256Z",
       "heat": 58,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_c4a0826144b97f0b",
@@ -819,7 +836,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -1
     }
   ],
   "models": [
@@ -936,10 +953,10 @@
     "date": "2026-07-12T03:13:52.997Z"
   },
   "stats": {
-    "scanned_last_run": 1,
+    "scanned_last_run": 7,
     "published_today": 2,
     "sources_live": 10,
-    "slopped_last_run": 1
+    "slopped_last_run": 6
   },
   "tool_status": [
     {
