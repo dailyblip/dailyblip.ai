@@ -120,6 +120,11 @@ async function fetchAllFeeds(feeds) {
       console.warn(`feed failed: ${active[i].name} — ${r.reason?.message || r.reason}`);
     }
   });
+  // Diagnostic: one line per healthy feed so a "scanned 0" run is explainable
+  // from the log alone (did sources return nothing, or did filters eat it?).
+  for (const [name, info] of Object.entries(perFeed)) {
+    if (info.ok) console.log(`feed ok: ${name} — ${info.count} items`);
+  }
   return { items, perFeed };
 }
 
@@ -169,15 +174,20 @@ async function main() {
   recordHealth(perFeed);
 
   const cutoff = Date.now() - LOOKBACK_HOURS * 3600 * 1000;
-  let items = raw.filter((it) => {
-    if (!it.title || !it.url) return false;
-    if (new Date(it.published).getTime() < cutoff) return false;
+  const rawCount = raw.length;
+  const fresh = raw.filter((it) => it.title && it.url && new Date(it.published).getTime() >= cutoff);
+  let items = fresh.filter((it) => {
     const id = "s_" + hash(canonicalUrl(it.url));
     if (blockedIds.has(id)) return false;
     const titleLower = it.title.toLowerCase();
     if (blockedTerms.some((t) => titleLower.includes(t))) return false;
     return !seen[hash(canonicalUrl(it.url))];
   });
+  // Diagnostic funnel: shows exactly where items die. "already-seen" is
+  // normal and healthy — each 20-min run only processes the delta since
+  // the previous run; everything older was ingested (or slop-rejected)
+  // in earlier runs and is remembered in data/seen.json.
+  console.log(`funnel: ${rawCount} fetched → ${fresh.length} within ${LOOKBACK_HOURS}h → ${items.length} new (not yet seen)`);
 
   // 2. Cluster near-duplicate coverage of the same event.
   items = dedupeCluster(items).slice(0, MAX_NEW_PER_RUN);
