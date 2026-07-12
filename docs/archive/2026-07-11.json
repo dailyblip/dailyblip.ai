@@ -1,48 +1,48 @@
 {
   "date": "2026-07-11",
-  "issue": 201,
+  "issue": 202,
   "brief": {
     "title": "Saturday, July 11 — six things creators need to know",
     "items": [
       {
-        "story": "s2",
-        "html": "<b>Sora API sunsets September 24</b> — the app is already gone, so migrate any video pipeline dependencies now inside your 11-week window.",
-        "secs": 10
-      },
-      {
-        "story": "s1",
-        "html": "Meta launched <b>Muse, a personal-photo image model</b>, putting it directly against Adobe Firefly and Google Imagen for portraits, product shots, and room restyling.",
-        "secs": 10
-      },
-      {
-        "story": "s_9491981398fceeeb",
-        "html": "OpenAI's new <b>GPT-5.6 family ships in three tiers</b> — Sol is 54% more token-efficient for coding, worth checking if AI-assisted writing or scripting is in your stack.",
-        "secs": 10
-      },
-      {
-        "story": "s_9de14e96265af218",
-        "html": "The NYT lawsuit escalated: publishers allege <b>OpenAI concealed copyright-detection tools</b> that could search training data and chat logs for protected content.",
-        "secs": 10
-      },
-      {
-        "story": "s_10db03d8139e44b4",
-        "html": "New ComfyUI tests show <b>INT4 W4A4 quantization matches INT8 image quality</b> at smaller file size — worth switching if VRAM is your bottleneck.",
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>killed its Instagram AI deepfake tagging tool</b> within a week after backlash — check your own account's privacy settings now.",
         "secs": 9
       },
       {
-        "story": "s_038c1ce14623ecc3",
-        "html": "A free browser-based tool now <b>auto-documents ComfyUI workflows</b> from saved PNGs, extracting every custom node and model setting — fully offline.",
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is suing OpenAI for <b>trade secret theft by senior employees</b>, including hardware chief Tang Tan, over confidential project codes and unreleased products.",
+        "secs": 10
+      },
+      {
+        "story": "s_14a2cc90aef5b07a",
+        "html": "OpenAI's <b>Atlas browser sunsets August 9</b> — agentic browsing moves to ChatGPT desktop and a Chrome extension, so migrate any browser workflows now.",
+        "secs": 10
+      },
+      {
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> at scale — worth auditing whether proprietary costs still make sense.",
         "secs": 9
+      },
+      {
+        "story": "s_d227c01975ac31ba",
+        "html": "Krea 2 Turbo in <b>INT4 W4A4 drops to 11.88 GB</b>, enabling faster inference on consumer GPUs — a practical swap if VRAM is your bottleneck.",
+        "secs": 9
+      },
+      {
+        "story": "s_1c07dda2c1408621",
+        "html": "An artist <b>turned hand-drawn pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — a rare end-to-end technique demo.",
+        "secs": 10
       }
     ],
-    "date": "2026-07-12T01:03:53.469Z"
+    "date": "2026-07-12T03:13:27.601Z"
   },
   "tooldrop": {
-    "name": "Chiro Visuals Ivy & Fig Generator",
-    "blurb": "Browser-based tool for 3D artists: paint paths on any mesh to grow procedural ivy or fig vines in real-time, no download needed.",
-    "meta": "3d · generative art — free, open-source",
+    "name": "Chiro Visuals Ivy Generator",
+    "blurb": "Browser-based tool that grows procedural ivy and fig vines on 3D meshes in real time. Paint paths, adjust, export — built for environment artists who need quick organic foliage.",
+    "meta": "3d · generative — free, open-source",
     "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
-    "date": "2026-07-12T01:04:05.073Z"
+    "date": "2026-07-12T03:13:52.997Z"
   },
   "stories": [
     {
@@ -58,25 +58,9 @@
       "ts": "2026-07-11T06:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
+      "heat": 91,
       "move": 0,
       "top": true
-    },
-    {
-      "id": "s_98d85122ab641d19",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "title": "Meta kills Instagram AI feature allowing deepfakes of public accounts",
-      "dek": "Meta shut down a week-old tool that let users generate AI images by tagging public Instagram accounts without owner consent. The feature lacked notification and faced immediate backlash.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/",
-      "ts": "2026-07-10T23:55:07.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": 0
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -91,14 +75,14 @@
       "ts": "2026-07-11T14:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 74,
+      "heat": 71,
       "move": 0
     }
   ],
   "stats": {
-    "scanned_last_run": 0,
-    "published_today": 13,
-    "sources_live": 14,
+    "scanned_last_run": 1,
+    "published_today": 2,
+    "sources_live": 10,
     "slopped_last_run": 1
   }
 }
