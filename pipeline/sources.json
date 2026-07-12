@@ -71,13 +71,36 @@
       "name": "Artlist Blog",
       "url": "https://artlist.io/blog/feed/",
       "hint": "tools",
-      "tier": "journalism"
+      "tier": "journalism",
+      "disabled": true,
+      "disabled_reason": "Still 403s even after switching to a realistic browser User-Agent (tried 2026-07-12) -- their bot-protection is likely a JavaScript challenge that a simple server-side fetch can never pass, not a header-based filter. Fixing this properly would need a headless-browser fetch, which is out of scope for this pipeline's architecture. Disabled rather than left burning a failed request every 20 minutes."
     },
     {
       "name": "80 Level",
       "url": "https://80.lv/feed",
       "hint": "video",
       "tier": "journalism"
+    },
+    {
+      "name": "VentureBeat AI",
+      "url": "https://venturebeat.com/category/ai/feed/",
+      "hint": "industry",
+      "tier": "journalism",
+      "_comment": "Confirmed live 2026-07-12 via direct fetch -- high frequency, broad AI industry coverage."
+    },
+    {
+      "name": "DailyAI",
+      "url": "https://dailyai.com/feed",
+      "hint": "industry",
+      "tier": "journalism",
+      "_comment": "Confirmed live 2026-07-12 -- daily AI news publication, real RSS content-type verified."
+    },
+    {
+      "name": "Unite.AI",
+      "url": "https://www.unite.ai/feed/",
+      "hint": "tools",
+      "tier": "journalism",
+      "_comment": "Confirmed live 2026-07-12 -- covers AI tools/products frequently, real RSS content-type verified."
     }
   ],
   "tool_feeds": [
