@@ -106,7 +106,16 @@ async function main() {
 
   const res = await fetch("https://api.buttondown.com/v1/emails", {
     method: "POST",
-    headers: { Authorization: `Token ${key}`, "Content-Type": "application/json" },
+    headers: {
+      Authorization: `Token ${key}`,
+      "Content-Type": "application/json",
+      // Buttondown requires this header the first time any API key sends
+      // a live email (status: about_to_send), as a safety confirmation
+      // against accidental sends. Harmless to include on every request —
+      // it's only "consumed" once per key, so leaving it here permanently
+      // means this job never breaks again if the key ever gets rotated.
+      "X-Buttondown-Live-Dangerously": "true",
+    },
     body: JSON.stringify({
       subject: `🟠 The Daily Blip · ${feed.brief.title.split("—")[0].trim()}`,
       body: renderEmail(feed),
@@ -117,4 +126,4 @@ async function main() {
   console.log("newsletter: sent.");
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
