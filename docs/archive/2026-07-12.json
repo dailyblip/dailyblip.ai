@@ -1,0 +1,54 @@
+{
+  "date": "2026-07-12",
+  "issue": 203,
+  "brief": {
+    "title": "Sunday, July 12 — six things creators need to know",
+    "items": [
+      {
+        "story": "s2",
+        "html": "<b>Sora API sunsets September 24</b> — the app is already gone, giving you an 11-week window to migrate any video pipeline off OpenAI's generator.",
+        "secs": 10
+      },
+      {
+        "story": "s_8c1ac48f2dbd0d44",
+        "html": "Kyutai released <b>MuScriptor, an open-weight music-to-MIDI transcription model</b> trained on 170k recordings, letting musicians extract multi-instrument MIDI from full mixes.",
+        "secs": 10
+      },
+      {
+        "story": "s_16830069eb2915f6",
+        "html": "OpenAI risks <b>judicial sanctions for allegedly concealing and deleting ChatGPT logs</b> sought as evidence in the New York Times copyright lawsuit — watch this closely.",
+        "secs": 10
+      },
+      {
+        "story": "s1",
+        "html": "Meta launched <b>Muse, an image model that draws on your own photo library</b>, competing directly with Adobe Firefly and Google Imagen for personal creative workflows.",
+        "secs": 10
+      },
+      {
+        "story": "s_9491981398fceeeb",
+        "html": "OpenAI's new <b>GPT-5.6 Sol is 54% more token-efficient for coding tasks</b> and ships in three tiers — Sol, Terra, and Luna — check which fits your stack.",
+        "secs": 10
+      },
+      {
+        "story": "s_038c1ce14623ecc3",
+        "html": "A free browser-based tool now <b>auto-documents ComfyUI workflows by extracting custom nodes and settings from saved PNGs</b> — fully offline, no server required.",
+        "secs": 10
+      }
+    ],
+    "date": "2026-07-12T16:15:39.861Z"
+  },
+  "tooldrop": {
+    "name": "MuScriptor",
+    "blurb": "Open-weight model that transcribes multi-instrument audio recordings into MIDI. Useful for musicians wanting editable notation from any mix, no subscription needed.",
+    "meta": "music · midi — free (open weight)",
+    "url": "https://www.marktechpost.com/2026/07/10/kyutai-releases-muscriptor-an-open-weight-decoder-only-transformer-for-multi-instrument-music-transcription-to-midi/",
+    "date": "2026-07-12T16:15:51.636Z"
+  },
+  "stories": [],
+  "stats": {
+    "scanned_last_run": 1,
+    "published_today": 0,
+    "sources_live": 10,
+    "slopped_last_run": 1
+  }
+}
