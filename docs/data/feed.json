@@ -1,41 +1,41 @@
 {
-  "issue": 200,
-  "generated_at": "2026-07-11T23:38:29.307Z",
+  "issue": 201,
+  "generated_at": "2026-07-12T01:04:05.136Z",
   "brief": {
     "title": "Saturday, July 11 — six things creators need to know",
     "items": [
       {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>shut down its Instagram AI deepfake tool</b> after one week of backlash — it let anyone generate images of public accounts without owner consent.",
+        "story": "s2",
+        "html": "<b>Sora API sunsets September 24</b> — the app is already gone, so migrate any video pipeline dependencies now inside your 11-week window.",
         "secs": 10
       },
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership including hardware chief Tang Tan directed a pattern of leaking confidential project details.",
+        "story": "s1",
+        "html": "Meta launched <b>Muse, a personal-photo image model</b>, putting it directly against Adobe Firefly and Google Imagen for portraits, product shots, and room restyling.",
         "secs": 10
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source models</b> as costs scale — worth factoring into your toolchain decisions now.",
+        "story": "s_9491981398fceeeb",
+        "html": "OpenAI's new <b>GPT-5.6 family ships in three tiers</b> — Sol is 54% more token-efficient for coding, worth checking if AI-assisted writing or scripting is in your stack.",
         "secs": 10
       },
       {
-        "story": "s_dabdfae8cca17885",
-        "html": "Godot's Road Generator plugin <b>now supports procedural intersection lanes</b> with collision meshes and AI pathfinding — update if you build game environments.",
+        "story": "s_9de14e96265af218",
+        "html": "The NYT lawsuit escalated: publishers allege <b>OpenAI concealed copyright-detection tools</b> that could search training data and chat logs for protected content.",
+        "secs": 10
+      },
+      {
+        "story": "s_10db03d8139e44b4",
+        "html": "New ComfyUI tests show <b>INT4 W4A4 quantization matches INT8 image quality</b> at smaller file size — worth switching if VRAM is your bottleneck.",
         "secs": 9
       },
       {
-        "story": "s_e50b15150fd00f1e",
-        "html": "Krea 2 is now <b>integrated into Diffusion Desk</b>, a lightweight C++-based local image UI — an option if you want to skip Python-heavy setups.",
+        "story": "s_038c1ce14623ecc3",
+        "html": "A free browser-based tool now <b>auto-documents ComfyUI workflows</b> from saved PNGs, extracting every custom node and model setting — fully offline.",
         "secs": 9
-      },
-      {
-        "story": "s_1c07dda2c1408621",
-        "html": "An artist <b>converted 2D pencil sketches into a navigable 3D world</b> using Blender geometry nodes and paper-as-emission remapping — a clean technique worth studying.",
-        "secs": 10
       }
     ],
-    "date": "2026-07-11T16:12:01.790Z"
+    "date": "2026-07-12T01:03:53.469Z"
   },
   "stories": [
     {
@@ -929,11 +929,11 @@
     "#open-video"
   ],
   "tooldrop": {
-    "name": "Chiro Visuals Foliage Generator",
-    "blurb": "Browser-based tool for 3D artists: paint paths on any mesh to grow procedural ivy or fig trees in real-time. No software install, open-source.",
-    "meta": "3d · generative — free, open-source",
+    "name": "Chiro Visuals Ivy & Fig Generator",
+    "blurb": "Browser-based tool for 3D artists: paint paths on any mesh to grow procedural ivy or fig vines in real-time, no download needed.",
+    "meta": "3d · generative art — free, open-source",
     "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
-    "date": "2026-07-11T16:12:14.849Z"
+    "date": "2026-07-12T01:04:05.073Z"
   },
   "stats": {
     "scanned_last_run": 0,
