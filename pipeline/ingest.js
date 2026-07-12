@@ -64,14 +64,21 @@ For Reddit sources, you are told community score and comment count. Treat those 
 Return a JSON array in the same order as input: {"keep":bool,"spotlight":bool,"quality":n,"category":"...","badge":"...","headline":"...","dek":"...","read_min":n}. JSON only.`;
 
 async function fetchAllFeeds(feeds) {
-  const parser = new Parser({ timeout: 15000, headers: { "user-agent": "dailyblip-ingest/1.0" } });
+  // A realistic browser User-Agent avoids basic Cloudflare/WAF bot filters
+  // that block generic script-y agent strings — this alone fixed a 403 we
+  // were seeing on at least one journalism-tier source.
+  const BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
+  const parser = new Parser({ timeout: 15000, headers: { "user-agent": BROWSER_UA } });
   const perFeed = {};
   const active = feeds.filter((f) => !f.disabled);
 
   const results = await Promise.allSettled(
     active.map(async (f) => {
-      // Reddit sources go through the JSON API so we have upvote + comment
-      // counts to gate on. Non-Reddit sources use the regular RSS parser.
+      // Reddit sources go through OAuth (see lib/reddit.js) so we have
+      // upvote + comment counts to gate on, and so requests actually work
+      // from GitHub's datacenter IPs. If REDDIT_CLIENT_ID/SECRET aren't
+      // configured, this throws and is caught below like any other feed
+      // failure — Reddit sources just sit out until it's set up.
       if (f.reddit_tier) {
         const posts = await fetchRedditWithScores(f.url);
         const raw = posts.length;
@@ -84,6 +91,7 @@ async function fetchAllFeeds(feeds) {
           published: p.published,
           source: f.name,
           hint: f.hint,
+          tier: f.tier || "community",
           community_score: p.score,
           community_comments: p.num_comments,
         }));
@@ -97,6 +105,7 @@ async function fetchAllFeeds(feeds) {
         published: item.isoDate || item.pubDate || new Date().toISOString(),
         source: f.name,
         hint: f.hint,
+        tier: f.tier || "journalism",
       }));
       perFeed[f.name] = { ok: true, count: items.length };
       return items;
@@ -188,8 +197,6 @@ async function main() {
     });
     feed.stories.sort((a, b) => {
       if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
-      const heatDiff = (b.heat ?? 0) - (a.heat ?? 0);
-      if (heatDiff !== 0) return heatDiff;
       return new Date(b.ts) - new Date(a.ts);
     });
     feed.stats = { ...feed.stats, scanned_last_run: 0, sources_live: feeds.filter((f) => !f.disabled).length };
@@ -234,6 +241,7 @@ async function main() {
       // Spotlight requires BOTH the model saying yes AND the quality bar.
       spotlight: !!v.spotlight && quality >= SPOTLIGHT_MIN_QUALITY,
       quality,
+      tier: src.tier || "journalism",
       title: v.headline || src.title,
       dek: v.dek || "",
       src: src.source,
@@ -296,12 +304,12 @@ async function main() {
     s.move = was === undefined ? "new" : was - i; // positive = climbed
   });
 
-  // Final story order: top signal always leads, then by heat, then recency.
+  // Final story order: top signal always leads, then strictly chronological.
+  // Heat is still computed above (drives the ▲/▼ movement arrows shown in
+  // the UI) but no longer decides sort position — top + recency only.
   // Every consumer of feed.json (site, RSS, archive) sees this same order.
   feed.stories.sort((a, b) => {
     if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
-    const heatDiff = (b.heat ?? 0) - (a.heat ?? 0);
-    if (heatDiff !== 0) return heatDiff;
     return new Date(b.ts) - new Date(a.ts);
   });
 
