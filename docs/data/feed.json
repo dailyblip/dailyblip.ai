@@ -1,6 +1,6 @@
 {
   "issue": 204,
-  "generated_at": "2026-07-12T19:11:44.025Z",
+  "generated_at": "2026-07-12T21:35:35.288Z",
   "brief": {
     "title": "Sunday, July 12 — six things creators need to know",
     "items": [
@@ -52,7 +52,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 0,
+      "move": 1,
       "top": true
     },
     {
@@ -69,8 +69,8 @@
       "ts": "2026-07-12T16:27:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": 0
+      "heat": 87,
+      "move": -1
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -970,10 +970,10 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stats": {
-    "scanned_last_run": 0,
+    "scanned_last_run": 1,
     "published_today": 1,
     "sources_live": 11,
-    "slopped_last_run": 0
+    "slopped_last_run": 1
   },
   "tool_status": [
     {
