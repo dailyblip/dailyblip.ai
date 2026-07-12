@@ -1,79 +1,83 @@
 {
-  "_comment": "News feeds power the main story feed. tool_feeds power the daily tool drop. hint = default category nudge given to the classifier. Add/remove freely \u2014 the pipeline adapts. Showcase-heavy feeds (80 Level, subreddit tops) exist mainly to feed the Creator Spotlight.",
+  "_comment": "News feeds power the main story feed. tool_feeds power the daily tool drop. hint = default category nudge given to the classifier. tier = 'journalism' (official blogs, professional newsrooms -- eligible for the Daily Blip). Reddit sources were removed on 2026-07-11: Reddit now blocks unauthenticated requests from datacenter/cloud IPs like GitHub Actions, and the owner chose not to register a Reddit account for OAuth access. If you want Reddit back, see pipeline/lib/reddit.js -- the OAuth-based fetcher is still there, just unused; it needs REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET set to activate. Add/remove sources freely \u2014 the pipeline adapts.",
   "feeds": [
     {
       "name": "TechCrunch AI",
       "url": "https://techcrunch.com/category/artificial-intelligence/feed/",
-      "hint": "industry"
+      "hint": "industry",
+      "tier": "journalism"
     },
     {
       "name": "The Verge AI",
       "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-      "hint": "industry"
+      "hint": "industry",
+      "tier": "journalism"
     },
     {
       "name": "Ars Technica AI",
       "url": "https://arstechnica.com/ai/feed/",
-      "hint": "industry"
+      "hint": "industry",
+      "tier": "journalism"
     },
     {
       "name": "Runway Research",
       "url": "https://runwayml.com/blog/rss.xml",
-      "hint": "video"
+      "hint": "video",
+      "tier": "journalism",
+      "disabled": true,
+      "disabled_reason": "No working RSS feed found anywhere on runwayml.com as of 2026 -- they publish to /news and /changelog pages with no <link rel=alternate> RSS pointer. Re-enable if you find a working feed URL."
     },
     {
       "name": "Hugging Face Blog",
       "url": "https://huggingface.co/blog/feed.xml",
-      "hint": "tools"
+      "hint": "tools",
+      "tier": "journalism"
     },
     {
       "name": "Google DeepMind",
       "url": "https://deepmind.google/blog/rss.xml",
-      "hint": "industry"
+      "hint": "industry",
+      "tier": "journalism"
     },
     {
       "name": "OpenAI News",
       "url": "https://openai.com/news/rss.xml",
-      "hint": "industry"
+      "hint": "industry",
+      "tier": "journalism"
     },
     {
       "name": "Anthropic News",
       "url": "https://www.anthropic.com/rss.xml",
-      "hint": "writing"
+      "hint": "writing",
+      "tier": "journalism",
+      "disabled": true,
+      "disabled_reason": "Anthropic discontinued their public RSS feed entirely -- confirmed via independent re-verification in 2026 (their news page carries no RSS pointer anymore). Not a wrong URL issue; there's genuinely no feed to point at. Anthropic coverage still reaches the site via TechCrunch, The Verge, and OpenAI/industry coverage of Claude releases."
     },
     {
-      "name": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/top/.rss?t=day",
-      "hint": "image",
-      "reddit_tier": "showcase"
+      "name": "MarkTechPost",
+      "url": "https://www.marktechpost.com/feed/",
+      "hint": "industry",
+      "tier": "journalism",
+      "_comment": "Added to help fill the gap left by Anthropic/Runway RSS discontinuation. Confirmed live and high-frequency as of mid-2026 -- broad AI model/paper/launch coverage."
     },
     {
-      "name": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/top/.rss?t=day",
-      "hint": "video",
-      "reddit_tier": "showcase"
-    },
-    {
-      "name": "r/SunoAI",
-      "url": "https://www.reddit.com/r/SunoAI/top/.rss?t=day",
-      "hint": "music",
-      "reddit_tier": "showcase"
+      "name": "Cloudflare Blog",
+      "url": "https://blog.cloudflare.com/rss/",
+      "hint": "rights",
+      "tier": "journalism",
+      "_comment": "Major industry outlet, per request. Note: Reuters no longer runs public RSS feeds (confirmed dead as of 2026) and Fortune's exact current feed URL couldn't be confidence-verified, so neither was added speculatively -- adding a guessed URL just to have it would likely show up as a permanent 'feed failed' entry. If you find working feed URLs for either, send them over and they're a one-line add to this file."
     },
     {
       "name": "Artlist Blog",
       "url": "https://artlist.io/blog/feed/",
-      "hint": "tools"
+      "hint": "tools",
+      "tier": "journalism"
     },
     {
       "name": "80 Level",
       "url": "https://80.lv/feed/",
-      "hint": "video"
-    },
-    {
-      "name": "r/midjourney",
-      "url": "https://www.reddit.com/r/midjourney/top/.rss?t=day",
-      "hint": "image",
-      "reddit_tier": "showcase"
+      "hint": "video",
+      "tier": "journalism"
     }
   ],
   "tool_feeds": [
