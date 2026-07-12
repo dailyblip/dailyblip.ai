@@ -69,6 +69,26 @@ async function fetchAllFeeds(feeds) {
   // were seeing on at least one journalism-tier source.
   const BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
   const parser = new Parser({ timeout: 15000, headers: { "user-agent": BROWSER_UA } });
+
+  // Some feeds ship genuinely malformed XML (a stray "&" that isn't part of
+  // a valid entity, e.g. "R&D" instead of "R&amp;D"). rss-parser's strict
+  // XML parser chokes on this with "Invalid character in entity name" and
+  // fails the whole feed. Fetch raw text ourselves first and repair any
+  // bare ampersands before handing it to the parser — cheap, safe, and
+  // fixes an entire class of "feed failed" errors that aren't actually
+  // dead feeds, just slightly invalid ones.
+  async function fetchAndParseRss(parser, url) {
+    const res = await fetch(url, {
+      redirect: "follow",
+      signal: AbortSignal.timeout(15000),
+      headers: { "user-agent": BROWSER_UA },
+    });
+    if (!res.ok) throw new Error(`Status code ${res.status}`);
+    let xml = await res.text();
+    // Escape any "&" not already part of a recognized entity.
+    xml = xml.replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)/g, "&amp;");
+    return parser.parseString(xml);
+  }
   const perFeed = {};
   const active = feeds.filter((f) => !f.disabled);
 
@@ -97,7 +117,7 @@ async function fetchAllFeeds(feeds) {
         }));
       }
 
-      const parsed = await parser.parseURL(f.url);
+      const parsed = await fetchAndParseRss(parser, f.url);
       const items = (parsed.items || []).map((item) => ({
         title: (item.title || "").trim(),
         url: item.link || item.guid || "",
@@ -176,6 +196,25 @@ async function main() {
   const cutoff = Date.now() - LOOKBACK_HOURS * 3600 * 1000;
   const rawCount = raw.length;
   const fresh = raw.filter((it) => it.title && it.url && new Date(it.published).getTime() >= cutoff);
+
+  // Per-source freshness breakdown — the aggregate "X within 48h" number
+  // can hide a source-specific bug (e.g. a date-parsing failure making a
+  // frequently-updated feed look falsely old). This shows, per source:
+  // how many items it returned vs. how many of those are actually fresh,
+  // plus the single newest timestamp seen from that source so a broken
+  // date parse (e.g. epoch 0, or a wildly future/past date) is obvious.
+  const bySource = {};
+  for (const it of raw) {
+    const s = (bySource[it.source] ||= { total: 0, freshCount: 0, newest: null });
+    s.total++;
+    const t = new Date(it.published).getTime();
+    if (t >= cutoff) s.freshCount++;
+    if (!s.newest || t > new Date(s.newest).getTime()) s.newest = it.published;
+  }
+  for (const [name, s] of Object.entries(bySource)) {
+    console.log(`freshness: ${name} — ${s.freshCount}/${s.total} within ${LOOKBACK_HOURS}h, newest item: ${s.newest}`);
+  }
+
   let items = fresh.filter((it) => {
     const id = "s_" + hash(canonicalUrl(it.url));
     if (blockedIds.has(id)) return false;
