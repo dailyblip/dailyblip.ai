@@ -85,6 +85,10 @@ async function fetchAllFeeds(feeds) {
     });
     if (!res.ok) throw new Error(`Status code ${res.status}`);
     let xml = await res.text();
+    // Strip a leading UTF-8 byte-order-mark if present — a common cause of
+    // "Non-whitespace before first tag" errors. Invisible in most editors,
+    // but strict XML parsers correctly reject it before the declaration.
+    xml = xml.replace(/^\uFEFF/, "");
     // Escape any "&" not already part of a recognized entity.
     xml = xml.replace(/&(?!amp;|lt;|gt;|quot;|apos;|#\d+;|#x[0-9a-fA-F]+;)/g, "&amp;");
     return parser.parseString(xml);
