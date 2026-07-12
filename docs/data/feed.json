@@ -1,6 +1,6 @@
 {
   "issue": 202,
-  "generated_at": "2026-07-12T11:44:54.799Z",
+  "generated_at": "2026-07-12T15:39:53.175Z",
   "brief": {
     "title": "Saturday, July 11 — six things creators need to know",
     "items": [
@@ -68,8 +68,8 @@
       "ts": "2026-07-11T14:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 62,
-      "move": -4
+      "heat": 60,
+      "move": 0
     },
     {
       "id": "s_98d85122ab641d19",
@@ -116,7 +116,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -512,7 +512,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_769060e02311f3cb",
@@ -632,7 +632,7 @@
       "read": "2 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_ffdb0d5985a23df3",
@@ -809,7 +809,7 @@
       "dek": "Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.",
       "ts": "2026-07-09T16:27:40.256Z",
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s2",
@@ -953,10 +953,10 @@
     "date": "2026-07-12T03:13:52.997Z"
   },
   "stats": {
-    "scanned_last_run": 0,
-    "published_today": 2,
+    "scanned_last_run": 1,
+    "published_today": 0,
     "sources_live": 10,
-    "slopped_last_run": 6
+    "slopped_last_run": 1
   },
   "tool_status": [
     {
