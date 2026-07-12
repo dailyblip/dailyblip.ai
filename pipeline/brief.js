@@ -23,21 +23,33 @@ Also write:
 
 Return JSON: {"title":"...","items":[{"story":"...","html":"...","secs":n}, ...6 items]}. JSON only.`;
 
+// A story counts as "journalism-tier" if it's explicitly tagged that way,
+// or — for older stories saved before the tier field existed — if it has
+// no community_score (the tell-tale sign of a Reddit-sourced item).
+function isJournalism(s) {
+  if (s.tier) return s.tier === "journalism";
+  return s.community_score === undefined;
+}
+
 async function main() {
   const feed = loadFeed();
   const dayMs = 26 * 3600 * 1000;
-  let candidates = feed.stories
+  const eligible = feed.stories.filter(isJournalism);
+  const excludedCount = feed.stories.length - eligible.length;
+
+  let candidates = eligible
     .filter((s) => Date.now() - new Date(s.ts) < dayMs)
     .map(({ id, cat, badge, spotlight, title, dek, ts }) => ({ id, cat, badge, spotlight, title, dek, ts }));
 
   if (candidates.length < 6) {
-    console.warn(`brief: only ${candidates.length} fresh stories — widening to 48h.`);
-    candidates = feed.stories.map(({ id, cat, badge, spotlight, title, dek, ts }) => ({ id, cat, badge, spotlight, title, dek, ts }));
+    console.warn(`brief: only ${candidates.length} fresh journalism-tier stories — widening to 48h.`);
+    candidates = eligible.map(({ id, cat, badge, spotlight, title, dek, ts }) => ({ id, cat, badge, spotlight, title, dek, ts }));
   }
   if (candidates.length < 4) {
-    console.warn("brief: too few stories to write a brief; keeping yesterday's.");
+    console.warn("brief: too few journalism-tier stories to write a brief; keeping yesterday's.");
     return;
   }
+  console.log(`brief: ${candidates.length} eligible candidates (excluded ${excludedCount} community/Reddit-sourced stories from consideration).`);
 
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long", month: "long", day: "numeric", timeZone: "America/Los_Angeles",
