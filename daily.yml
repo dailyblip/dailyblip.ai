@@ -1,7 +1,11 @@
 name: Daily Blip
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC = 6am PDT (adjust to 14:00 for PST in winter)
+    # 10:00 UTC = 6:00 AM Eastern (EDT). NOTE: GitHub cron has no timezone
+    # support — in winter (EST, UTC-5) this fires at 5:00 AM Eastern.
+    # If you prefer 6:00 AM year-round in winter too, change to "0 11 * * *"
+    # each November and back to "0 10 * * *" each March.
+    - cron: "0 10 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -14,13 +18,13 @@ concurrency:
 jobs:
   daily:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-      - run: npm ci
+      - run: npm install
       - name: Write the brief
         run: node pipeline/brief.js
         env:
@@ -31,13 +35,16 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Write the archive
         run: node pipeline/archive.js
+        env:
+          SITE_URL: https://dailyblip.ai
       - name: Commit
         run: |
           git config user.name "dailyblip-bot"
           git config user.email "actions@users.noreply.github.com"
-          git pull --rebase
-          git add data docs/data docs/archive
-          git diff --cached --quiet || git commit -m "daily blip: $(date -u +'%Y-%m-%d')"
+          git add data docs
+          git diff --cached --quiet && exit 0
+          git commit -m "daily blip: $(date -u +'%Y-%m-%d')"
+          git pull --rebase --autostash
           git push
       - name: Send newsletter
         run: node pipeline/newsletter.js
