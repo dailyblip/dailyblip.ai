@@ -58,7 +58,8 @@
       "url": "https://www.marktechpost.com/feed/",
       "hint": "industry",
       "tier": "journalism",
-      "_comment": "Added to help fill the gap left by Anthropic/Runway RSS discontinuation. Confirmed live and high-frequency as of mid-2026 -- broad AI model/paper/launch coverage."
+      "disabled": true,
+      "disabled_reason": "Their feed has more than one kind of XML malformation. First fix (escaping bare ampersands, 2026-07-12) resolved one error but exposed a second, different one ('unexpected close tag') on the very next run. Rather than keep guessing at increasingly specific patches for genuinely broken XML on their end, disabled after two attempts. Re-enable if they ever fix their feed, or if you want to try again."
     },
     {
       "name": "Cloudflare Blog",
