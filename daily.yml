@@ -1,10 +1,9 @@
 name: Daily Blip
 on:
   schedule:
-    # 10:00 UTC = 6:00 AM Eastern (EDT). NOTE: GitHub cron has no timezone
-    # support — in winter (EST, UTC-5) this fires at 5:00 AM Eastern.
-    # If you prefer 6:00 AM year-round in winter too, change to "0 11 * * *"
-    # each November and back to "0 10 * * *" each March.
+    # 10:00 UTC = 6:00 AM Eastern (EDT, summer). In winter (EST, UTC-5)
+    # this becomes 5:00 AM Eastern -- nudge to "0 11 * * *" each November
+    # and back to "0 10 * * *" each March if you want 6am exactly year-round.
     - cron: "0 10 * * *"
   workflow_dispatch: {}
 
