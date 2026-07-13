@@ -1,2 +1,11 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'><url><loc>https://dailyblip.ai/</loc></url><url><loc>https://dailyblip.ai/showcase.html</loc></url><url><loc>https://dailyblip.ai/standards.html</loc></url><url><loc>https://dailyblip.ai/archive/</loc></url></urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://dailyblip.ai/</loc></url>
+  <url><loc>https://dailyblip.ai/showcase.html</loc></url>
+  <url><loc>https://dailyblip.ai/standards.html</loc></url>
+  <url><loc>https://dailyblip.ai/archive/</loc></url>
+  <url><loc>https://dailyblip.ai/archive/2026-07-09.html</loc></url>
+  <url><loc>https://dailyblip.ai/archive/2026-07-10.html</loc></url>
+  <url><loc>https://dailyblip.ai/archive/2026-07-11.html</loc></url>
+  <url><loc>https://dailyblip.ai/archive/2026-07-12.html</loc></url>
+</urlset>

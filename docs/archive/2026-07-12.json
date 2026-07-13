@@ -1,41 +1,41 @@
 {
   "date": "2026-07-12",
-  "issue": 206,
+  "issue": 207,
   "brief": {
     "items": [
       {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed its week-old Instagram AI deepfake tool</b> after backlash — public accounts were generable without owner consent or notification.",
+        "story": "s_14a2cc90aef5b07a",
+        "html": "OpenAI's <b>Atlas browser sunsets by August 9</b> — agentic browsing moves to ChatGPT desktop and Chrome, so migrate any workflows now.",
         "secs": 10
       },
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leadership including hardware chief Tang Tan directed a pattern of confidential leaks.",
+        "story": "s_8c1ac48f2dbd0d44",
+        "html": "Kyutai released <b>MuScriptor, a free open-weight music-to-MIDI transcription model</b> trained on 170k recordings that handles full multi-instrument mixes.",
         "secs": 10
       },
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "New <b>INT4 W4A4 quantized image models in ComfyUI</b> hit near-INT8 quality at smaller file size and lower VRAM — worth testing on your local rig.",
+        "story": "s_16830069eb2915f6",
+        "html": "OpenAI faces <b>sanctions threat for allegedly hiding and deleting ChatGPT logs</b> sought as evidence in the New York Times copyright lawsuit.",
         "secs": 10
       },
       {
-        "story": "s_9199a23f1066af9c",
-        "html": "A free browser-based <b>procedural ivy and fig tree generator</b> lets 3D environment artists paint foliage paths onto meshes in real time — open-source.",
+        "story": "s_dabdfae8cca17885",
+        "html": "Godot's open-source <b>Road Generator plugin now handles procedural intersection lanes</b> with customizable geometry, collision meshes, and AI pathfinding.",
         "secs": 10
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face's CEO says <b>enterprises are ditching paid APIs for open-source AI models</b> as costs scale — check whether your stack is over-reliant on proprietary endpoints.",
-        "secs": 11
+        "story": "s_9491981398fceeeb",
+        "html": "OpenAI's new <b>GPT-5.6 Sol tier is 54% more token-efficient for coding</b> — three model variants now available across enterprise and consumer tiers.",
+        "secs": 9
       },
       {
-        "story": "s_e519e02d1415570b",
-        "html": "Fantasy artist Pierre Ignaszewski breaks down <b>Photoshop and Blender fundamentals for character painting</b>, covering value, composition, and figure separation workflows.",
+        "story": "s_1c07dda2c1408621",
+        "html": "Artist Leteramma used <b>Blender geometry nodes to turn hand-drawn pencil sketches into a navigable 3D animated world</b> — paper remapped as emission.",
         "secs": 10
       }
     ],
-    "title": "Sunday, July 12 — six things creators need to know",
-    "date": "2026-07-13T03:59:50.243Z",
+    "title": "Monday, July 13 — six things creators need to know",
+    "date": "2026-07-13T04:19:51.139Z",
     "edition": "am"
   },
   "tooldrop": {
