@@ -1,7 +1,10 @@
 name: Daily Blip
 on:
   schedule:
-    - cron: "0 13 * * *"   # 13:00 UTC = 6am PDT (adjust to 14:00 for PST in winter)
+    # 10:00 UTC = 6:00 AM Eastern (EDT, summer). In winter (EST, UTC-5)
+    # this becomes 5:00 AM Eastern -- nudge to "0 11 * * *" each November
+    # and back to "0 10 * * *" each March if you want 6am exactly year-round.
+    - cron: "0 10 * * *"
   workflow_dispatch: {}
 
 permissions:
@@ -31,11 +34,13 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Write the archive
         run: node pipeline/archive.js
+        env:
+          SITE_URL: https://dailyblip.ai
       - name: Commit
         run: |
           git config user.name "dailyblip-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data docs/data docs/archive
+          git add data docs
           git diff --cached --quiet && exit 0
           git commit -m "daily blip: $(date -u +'%Y-%m-%d')"
           git pull --rebase --autostash
