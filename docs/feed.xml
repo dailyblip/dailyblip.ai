@@ -5,14 +5,14 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 18:57:36 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 22:14:42 GMT</lastBuildDate>
     <item>
-      <title>Patreon blocks AI crawlers from scraping creator content for model training</title>
-      <link>https://petapixel.com/2026/07/13/patreon-blocks-ai-crawlers-from-copying-content-creators-deserve-compenstion/</link>
-      <guid isPermaLink="false">s_d4b36e47cd240b18</guid>
-      <description>Patreon partnered with Cloudflare to prevent AI training crawlers from using published work. CEO Jack Conte framed move as compensation protection for creators.</description>
+      <title>Apple sues OpenAI over alleged trade secret theft by former employee</title>
+      <link>https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/</link>
+      <guid isPermaLink="false">s_b4553fdd41168ce5</guid>
+      <description>Apple claims a security bug allowed a departed engineer to maintain confidential server access after joining OpenAI, alleging conspiracy to steal proprietary information.</description>
       <category>rights</category>
-      <pubDate>Mon, 13 Jul 2026 16:25:37 GMT</pubDate>
+      <pubDate>Mon, 13 Jul 2026 19:17:51 GMT</pubDate>
     </item>
     <item>
       <title>Director Antonio Milo breaks down CGI parasite character campaign in Unreal Engine</title>
@@ -37,6 +37,14 @@
       <description>Lawsuit details claims of unauthorized network access, employee recruitment with requests for proprietary hardware, and coordinated information extraction.</description>
       <category>industry</category>
       <pubDate>Mon, 13 Jul 2026 17:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Patreon blocks AI crawlers from scraping creator content for model training</title>
+      <link>https://petapixel.com/2026/07/13/patreon-blocks-ai-crawlers-from-copying-content-creators-deserve-compenstion/</link>
+      <guid isPermaLink="false">s_d4b36e47cd240b18</guid>
+      <description>Patreon partnered with Cloudflare to prevent AI training crawlers from using published work. CEO Jack Conte framed move as compensation protection for creators.</description>
+      <category>rights</category>
+      <pubDate>Mon, 13 Jul 2026 16:25:37 GMT</pubDate>
     </item>
     <item>
       <title>Anthropic localizes Claude pricing to Indian rupees, second-largest market</title>
@@ -157,14 +165,6 @@
       <description>Megapixel and dynamic range shootout for high-end gear. Technical reference for photographers weighing sensor choices.</description>
       <category>image</category>
       <pubDate>Sat, 11 Jul 2026 14:01:34 GMT</pubDate>
-    </item>
-    <item>
-      <title>Godot Road Generator adds procedural intersection lanes</title>
-      <link>https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/</link>
-      <guid isPermaLink="false">s_dabdfae8cca17885</guid>
-      <description>TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.</description>
-      <category>tools</category>
-      <pubDate>Sat, 11 Jul 2026 14:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
