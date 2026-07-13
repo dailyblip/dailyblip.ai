@@ -1,0 +1,141 @@
+{
+  "date": "2026-07-13",
+  "issue": 210,
+  "brief": {
+    "items": [
+      {
+        "story": "s_da64ea9b487e106b",
+        "html": "Blender 5.2 RC drops today with a <b>new scene project brush and sculpting refinements</b> — download and test before the stable release locks in your pipeline.",
+        "secs": 10
+      },
+      {
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is suing OpenAI, alleging senior leaders including hardware chief Tang Tan <b>directed a pattern of trade secret theft</b> involving confidential project codes and unreleased hardware details.",
+        "secs": 11
+      },
+      {
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>killed a week-old Instagram AI tool</b> that let anyone generate deepfakes of public accounts by tagging them — the feature had no consent or owner notification.",
+        "secs": 10
+      },
+      {
+        "story": "s_10db03d8139e44b4",
+        "html": "New INT4 W4A4 quantization hits <b>near-INT8 image quality at lower VRAM and smaller file size</b> in ComfyUI — worth swapping into your local generation stack now.",
+        "secs": 10
+      },
+      {
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face CEO says enterprises are <b>switching from paid AI APIs to open-source models</b> at scale — review your toolchain costs before your clients ask why you haven't.",
+        "secs": 10
+      },
+      {
+        "story": "s_9199a23f1066af9c",
+        "html": "A free open-source <b>browser-based procedural ivy and fig tree generator</b> launched, letting 3D environment artists paint organic foliage paths onto meshes in real time.",
+        "secs": 10
+      }
+    ],
+    "title": "Monday, July 13 — six things creators need to know",
+    "date": "2026-07-13T17:32:46.333Z",
+    "edition": "am"
+  },
+  "tooldrop": {
+    "name": "MuScriptor",
+    "blurb": "Open-weight model from Kyutai that transcribes multi-instrument audio recordings into MIDI. Useful for musicians who want to extract notation or stems from existing tracks.",
+    "meta": "music · midi — free (open weight)",
+    "url": "https://www.marktechpost.com/2026/07/10/kyutai-releases-muscriptor-an-open-weight-decoder-only-transformer-for-multi-instrument-music-transcription-to-midi/",
+    "date": "2026-07-12T16:35:01.947Z"
+  },
+  "stories": [
+    {
+      "id": "s_da64ea9b487e106b",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Blender 5.2 release candidate adds new sculpting brush tools",
+      "dek": "Blender 5.2 RC introduces scene project brush and sculpting refinements. Solid tooling update for 3D artists.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/3d-artist-shares-a-tutorial-on-new-sculpting-features-in-blender-5-2/",
+      "ts": "2026-07-13T12:01:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 83,
+      "move": 53
+    },
+    {
+      "id": "s_e49b9851718e08d2",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "3D artist creates Wolverine in comic book toon shader style",
+      "dek": "Tian Jin and Vincent Ménier demonstrate deliberate shader control to achieve stylized comic aesthetic in Blender. Strong technical execution and distinctive visual point of view.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/3d-take-on-wolverine-with-a-toon-shader-inspired-by-a-comic-book-aesthetic/",
+      "ts": "2026-07-13T08:21:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 89,
+      "move": 57
+    },
+    {
+      "id": "s_b1c0426dab3224e8",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Game artist Jenny Mati details multi-tool workflow for scene composition",
+      "dek": "Creator walks through practical pipeline: Maya base, sketch, V-Ray rendering, and post-work for depth and atmosphere. Concrete technique.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/art/digital-art/how-to-combine-software-to-create-art-for-game-scenery",
+      "ts": "2026-07-13T08:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 79,
+      "move": 52
+    },
+    {
+      "id": "s_1224235fee688e2d",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Indie team films live-action reference for cinematic platformer Deer & Boy",
+      "dek": "Developers of Deer & Boy use practical motion reference to animate character movement. Shows deliberate craft and technical discipline in animation workflow.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/indie-developers-film-themselves-as-animation-reference-for-their-cinematic-platformer/",
+      "ts": "2026-07-13T07:44:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 88,
+      "move": 58
+    },
+    {
+      "id": "s_5bbc3a5ef63f4579",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple's scrapped self-driving car seeded Neural Engine AI chip architecture",
+      "dek": "Failed autonomous vehicle project led to development of on-device AI processing capabilities that became core to Apple Silicon's performance.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra",
+      "ts": "2026-07-12T16:27:06.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 71,
+      "move": -7
+    }
+  ],
+  "stats": {
+    "scanned_last_run": 15,
+    "published_today": 5,
+    "sources_live": 14,
+    "slopped_last_run": 11
+  }
+}

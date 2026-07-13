@@ -1,41 +1,41 @@
 {
-  "issue": 209,
-  "generated_at": "2026-07-13T13:29:31.843Z",
+  "issue": 210,
+  "generated_at": "2026-07-13T17:32:53.896Z",
   "brief": {
     "items": [
       {
-        "story": "s_8c1ac48f2dbd0d44",
-        "html": "Kyutai released <b>MuScriptor, a free open-weight music-to-MIDI transcription model</b> trained on 1.45M recordings that converts multi-instrument mixes — worth adding to your audio stack.",
+        "story": "s_da64ea9b487e106b",
+        "html": "Blender 5.2 RC drops today with a <b>new scene project brush and sculpting refinements</b> — download and test before the stable release locks in your pipeline.",
         "secs": 10
       },
       {
-        "story": "s_14a2cc90aef5b07a",
-        "html": "OpenAI is <b>sunsetting its Atlas browser by August 9</b> — agentic browsing moves to ChatGPT desktop and Chrome, so migrate any Atlas-dependent workflows now.",
-        "secs": 9
+        "story": "s_a4ad473125ca0f67",
+        "html": "Apple is suing OpenAI, alleging senior leaders including hardware chief Tang Tan <b>directed a pattern of trade secret theft</b> involving confidential project codes and unreleased hardware details.",
+        "secs": 11
       },
       {
-        "story": "s_dabdfae8cca17885",
-        "html": "The open-source <b>Godot Road Generator now supports procedural intersection lanes</b> with customizable geometry, collision meshes, and AI pathfinding via a new community update.",
+        "story": "s_98d85122ab641d19",
+        "html": "Meta <b>killed a week-old Instagram AI tool</b> that let anyone generate deepfakes of public accounts by tagging them — the feature had no consent or owner notification.",
         "secs": 10
       },
       {
-        "story": "s_ffdb0d5985a23df3",
-        "html": "Google is adding <b>AI disclosure labels to all Search, YouTube, and Discover ads</b> — clients may start asking whether your delivered assets need flagging.",
-        "secs": 9
-      },
-      {
-        "story": "s_9491981398fceeeb",
-        "html": "OpenAI launched <b>GPT-5.6 in three tiers (Sol, Terra, Luna)</b>, with Sol showing 54% better token efficiency on coding tasks — test it against your current writing pipeline.",
+        "story": "s_10db03d8139e44b4",
+        "html": "New INT4 W4A4 quantization hits <b>near-INT8 image quality at lower VRAM and smaller file size</b> in ComfyUI — worth swapping into your local generation stack now.",
         "secs": 10
       },
       {
-        "story": "s_1c07dda2c1408621",
-        "html": "An artist scanned hand-drawn sketches and <b>built a fully navigable 3D world from pencil drawings</b> using Blender's geometry nodes and paper-as-emission remapping.",
-        "secs": 9
+        "story": "s_1d85656f77c8e03e",
+        "html": "Hugging Face CEO says enterprises are <b>switching from paid AI APIs to open-source models</b> at scale — review your toolchain costs before your clients ask why you haven't.",
+        "secs": 10
+      },
+      {
+        "story": "s_9199a23f1066af9c",
+        "html": "A free open-source <b>browser-based procedural ivy and fig tree generator</b> launched, letting 3D environment artists paint organic foliage paths onto meshes in real time.",
+        "secs": 10
       }
     ],
     "title": "Monday, July 13 — six things creators need to know",
-    "date": "2026-07-13T04:41:13.205Z",
+    "date": "2026-07-13T17:32:46.333Z",
     "edition": "am"
   },
   "stories": [
