@@ -1,11 +1,22 @@
 name: Daily Blip
 on:
   schedule:
-    # 10:00 UTC = 6:00 AM Eastern (EDT, summer). In winter (EST, UTC-5)
-    # this becomes 5:00 AM Eastern -- nudge to "0 11 * * *" each November
-    # and back to "0 10 * * *" each March if you want 6am exactly year-round.
+    # 10:00 UTC = 6:00 AM Eastern (EDT, summer). 22:00 UTC = 6:00 PM Eastern
+    # (EDT, summer). NOTE: GitHub cron has no timezone support — in winter
+    # (EST, UTC-5) these fire at 5:00 AM / 5:00 PM Eastern instead. Nudge to
+    # "0 11 * * *" / "0 23 * * *" each November and back each March if you
+    # want 6am/6pm exactly year-round.
     - cron: "0 10 * * *"
-  workflow_dispatch: {}
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: "Which edition to run (only used for manual triggers)"
+        type: choice
+        default: am
+        options:
+          - am
+          - pm
 
 permissions:
   contents: write
@@ -17,35 +28,60 @@ concurrency:
 jobs:
   daily:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
       - run: npm install
-      - name: Write the brief
-        run: node pipeline/brief.js
+
+      # Figure out which edition this run is. Scheduled runs are identified
+      # by which exact cron string fired them (GitHub exposes this as
+      # github.event.schedule); manual runs use the workflow_dispatch input.
+      - name: Determine edition
+        id: edition
+        run: |
+          if [ "${{ github.event.schedule }}" = "0 22 * * *" ]; then
+            echo "value=pm" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 10 * * *" ]; then
+            echo "value=am" >> "$GITHUB_OUTPUT"
+          else
+            echo "value=${{ github.event.inputs.edition || 'am' }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Write the brief (${{ steps.edition.outputs.value }})
+        run: node pipeline/brief.js ${{ steps.edition.outputs.value }}
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # Tool Drop stays once-a-day (AM only) — "tool of the day" means one
+      # pick per day, not one per edition.
       - name: Pick the tool drop
+        if: steps.edition.outputs.value == 'am'
         run: node pipeline/tooldrop.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       - name: Write the archive
         run: node pipeline/archive.js
         env:
           SITE_URL: https://dailyblip.ai
+
       - name: Commit
         run: |
           git config user.name "dailyblip-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data docs
           git diff --cached --quiet && exit 0
-          git commit -m "daily blip: $(date -u +'%Y-%m-%d')"
+          git commit -m "${{ steps.edition.outputs.value }} blip: $(date -u +'%Y-%m-%d %H:%M') UTC"
           git pull --rebase --autostash
           git push
+
+      # Newsletter stays once-a-day (AM only) — subscribers were promised
+      # "one email daily," and the PM edition is a web-only refresh.
       - name: Send newsletter
+        if: steps.edition.outputs.value == 'am'
         run: node pipeline/newsletter.js
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
