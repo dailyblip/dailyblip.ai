@@ -1,5 +1,5 @@
 {
-  "_comment": "News feeds power the main story feed. tool_feeds power the daily tool drop. hint = default category nudge given to the classifier. tier = 'journalism' (official blogs, professional newsrooms -- eligible for the Daily Blip). Reddit sources were removed on 2026-07-11: Reddit now blocks unauthenticated requests from datacenter/cloud IPs like GitHub Actions, and the owner chose not to register a Reddit account for OAuth access. If you want Reddit back, see pipeline/lib/reddit.js -- the OAuth-based fetcher is still there, just unused; it needs REDDIT_CLIENT_ID/REDDIT_CLIENT_SECRET set to activate. Add/remove sources freely \u2014 the pipeline adapts.",
+  "_comment": "News feeds power the main story feed. tool_feeds power the daily tool drop. hint = default category nudge given to the classifier. tier = 'journalism' (official blogs, professional newsrooms -- eligible for the Daily Blip). Reddit history, for anyone reading this later: removed 2026-07-11 (unauthenticated requests blocked from datacenter IPs), re-enabled 2026-07-13 with a real OAuth app + a two-stage quality gate (numeric thresholds + actual comment-sentiment reading), then removed AGAIN 2026-07-13 same day once Reddit's 'Responsible Builder Policy' turned out to require manual approval for new API access (no longer 2-minute self-service) -- owner decided the wait/rejection odds weren't worth it, and isn't a Reddit fan regardless. The OAuth-based fetcher, the two-stage gate, and the showcase_small tier all still exist in pipeline/lib/reddit.js, fully dormant -- reactivating just needs approved credentials and the source entries added back (see git history for the exact 5-subreddit block if wanted later). Add/remove sources freely \u2014 the pipeline adapts.",
   "feeds": [
     {
       "name": "TechCrunch AI",
@@ -102,6 +102,27 @@
       "hint": "tools",
       "tier": "journalism",
       "_comment": "Confirmed live 2026-07-12 -- covers AI tools/products frequently, real RSS content-type verified."
+    },
+    {
+      "name": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/feed",
+      "hint": "tools",
+      "tier": "journalism",
+      "_comment": "Confirmed live 2026-07-12 via direct fetch (application/xml). Broad art/design/tech site with a dedicated AI section; classifier filters for creator relevance same as other broad-focus sources."
+    },
+    {
+      "name": "PetaPixel",
+      "url": "https://feeds.feedburner.com/PetaPixel",
+      "hint": "image",
+      "tier": "journalism",
+      "_comment": "Confirmed live 2026-07-12 via direct fetch -- real current content, multiple posts/day. Mostly camera gear but regularly covers AI photo/video editing tools (e.g. Apple Image Playground) -- classifier filters for relevance."
+    },
+    {
+      "name": "Midjourney Updates",
+      "url": "https://updates.midjourney.com/rss/",
+      "hint": "image",
+      "tier": "journalism",
+      "_comment": "Added 2026-07-13. Confirmed the base site (updates.midjourney.com) is a live, actively-posted Ghost blog (meta-generator: Ghost 6.51, posts multiple times/month, sometimes same-day) -- Ghost always exposes /rss/ as a platform default, though the exact XML wasn't independently fetched due to tool restrictions. If this shows 'feed failed' on the first run, tell me and I'll re-verify the exact path. Closer to source than waiting for journalism coverage of Midjourney releases."
     }
   ],
   "tool_feeds": [
