@@ -1,6 +1,6 @@
 {
   "issue": 208,
-  "generated_at": "2026-07-13T04:36:14.838Z",
+  "generated_at": "2026-07-13T04:40:32.915Z",
   "brief": {
     "items": [
       {
@@ -53,7 +53,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1,
+      "move": 0,
       "top": true
     },
     {
@@ -105,7 +105,7 @@
       "read": "4 min",
       "also": [],
       "heat": 88,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_e662af7aa0e3d019",
