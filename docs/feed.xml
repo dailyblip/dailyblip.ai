@@ -5,14 +5,70 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 13 Jul 2026 13:29:31 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 13 Jul 2026 18:57:36 GMT</lastBuildDate>
     <item>
-      <title>Artist transforms 2D pencil sketch into navigable 3D world</title>
-      <link>https://80.lv/articles/check-out-what-it-is-like-to-be-inside-a-pencil-sketch/</link>
-      <guid isPermaLink="false">s_1c07dda2c1408621</guid>
-      <description>Leteramma scanned hand drawings, remapped paper as emission, and composed them into a traversable animation using Blender's geometry nodes. Specific technical execution with clear artistic intent.</description>
+      <title>Patreon blocks AI crawlers from scraping creator content for model training</title>
+      <link>https://petapixel.com/2026/07/13/patreon-blocks-ai-crawlers-from-copying-content-creators-deserve-compenstion/</link>
+      <guid isPermaLink="false">s_d4b36e47cd240b18</guid>
+      <description>Patreon partnered with Cloudflare to prevent AI training crawlers from using published work. CEO Jack Conte framed move as compensation protection for creators.</description>
+      <category>rights</category>
+      <pubDate>Mon, 13 Jul 2026 16:25:37 GMT</pubDate>
+    </item>
+    <item>
+      <title>Director Antonio Milo breaks down CGI parasite character campaign in Unreal Engine</title>
+      <link>https://80.lv/articles/building-captain-itch-designing-a-character-led-cgi-campaign-with-unreal-engine/</link>
+      <guid isPermaLink="false">s_b3ca6a4a0a3df0f9</guid>
+      <description>SuperBlimp's Captain Itch campaign demonstrates hand-keyed character animation, Houdini grooming, and Unreal rendering pipeline for stylized creature design with deliberate artistic control.</description>
       <category>video</category>
-      <pubDate>Sat, 11 Jul 2026 06:00:00 GMT</pubDate>
+      <pubDate>Mon, 13 Jul 2026 18:25:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple sues OpenAI for alleged trade secret theft and employee poaching</title>
+      <link>https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/</link>
+      <guid isPermaLink="false">s_ecbc76a36f0e024f</guid>
+      <description>Apple's 41-page complaint alleges OpenAI systematically extracted confidential information through current and former employees, including requests for unreleased hardware at interviews.</description>
+      <category>industry</category>
+      <pubDate>Mon, 13 Jul 2026 18:22:10 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple alleges OpenAI systematically stole trade secrets and hardware details</title>
+      <link>https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims</link>
+      <guid isPermaLink="false">s_6358ddebecad3055</guid>
+      <description>Lawsuit details claims of unauthorized network access, employee recruitment with requests for proprietary hardware, and coordinated information extraction.</description>
+      <category>industry</category>
+      <pubDate>Mon, 13 Jul 2026 17:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Anthropic localizes Claude pricing to Indian rupees, second-largest market</title>
+      <link>https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/</link>
+      <guid isPermaLink="false">s_d8c4f12b71f9e00d</guid>
+      <description>Claude subscribers in India can now pay in rupees on web and apps, though UPI support still pending. India accounts for 5.8% of global Claude usage.</description>
+      <category>tools</category>
+      <pubDate>Mon, 13 Jul 2026 15:34:59 GMT</pubDate>
+    </item>
+    <item>
+      <title>Clément Doranlo showcases motion-captured aerial dance with custom armor in Maya</title>
+      <link>https://80.lv/articles/beautiful-aerial-dance-3d-animation-full-of-calm-grace/</link>
+      <guid isPermaLink="false">s_bf08d7596331b820</guid>
+      <description>Riverskin project demonstrates advanced rigging, animation, and character design with deliberate aesthetic choices. Work exhibits technical control and artistic vision across modeling and post-production.</description>
+      <category>video</category>
+      <pubDate>Mon, 13 Jul 2026 15:31:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Defenders adopt prompt injection tactics to disable malicious AI agents</title>
+      <link>https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/</link>
+      <guid isPermaLink="false">s_0b9a256573f21194</guid>
+      <description>&quot;Context bombing&quot; uses attacker techniques defensively, flooding AI systems with contradictory instructions to prevent harmful behavior before it executes.</description>
+      <category>industry</category>
+      <pubDate>Mon, 13 Jul 2026 15:06:34 GMT</pubDate>
+    </item>
+    <item>
+      <title>Director flattens 3D character head to match wide-angle lens distortion in Blender</title>
+      <link>https://80.lv/articles/this-3d-character-is-actually-flat-it-s-crazy/</link>
+      <guid isPermaLink="false">s_b6491befe496676a</guid>
+      <description>Dust of the Simulacrum director Eit Mitsufuchi reveals sophisticated technique: intentional 3D-to-2D morphing using Blender's Lattice modifier for stylized wide-angle effects. Masterful execution of intentional distortion.</description>
+      <category>video</category>
+      <pubDate>Mon, 13 Jul 2026 14:32:00 GMT</pubDate>
     </item>
     <item>
       <title>Blender 5.2 release candidate adds new sculpting brush tools</title>
@@ -109,62 +165,6 @@
       <description>TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.</description>
       <category>tools</category>
       <pubDate>Sat, 11 Jul 2026 14:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Summer 2026 astrophotography guide: eclipses, meteor showers, planetary alignments</title>
-      <link>https://petapixel.com/2026/07/11/capture-the-night-promasters-summer-2026-astrophotography-guide/</link>
-      <guid isPermaLink="false">s_cca9d9854a8b2b2e</guid>
-      <description>Seasonal event calendar with equipment recommendations. Planning resource for photographers targeting night-sky work.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 13:30:14 GMT</pubDate>
-    </item>
-    <item>
-      <title>Indie game Kidbash: Super Legend uses Blender + SNES-style rendering</title>
-      <link>https://www.creativebloq.com/3d/video-game-design/kidbash-super-legend-is-built-in-blender-but-rendered-like-a-classic-snes-game</link>
-      <guid isPermaLink="false">s_7fcf1c64331ce573</guid>
-      <description>Blender-to-retro-graphics pipeline revives Donkey Kong Country's technique. Technical approach worth noting for game devs.</description>
-      <category>video</category>
-      <pubDate>Sat, 11 Jul 2026 13:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Street photography remains vital despite ubiquitous cameras</title>
-      <link>https://petapixel.com/2026/07/11/we-need-street-photography-now-more-than-ever/</link>
-      <guid isPermaLink="false">s_5e8fda4219f983fc</guid>
-      <description>Argument that contemporary image-making lacks deliberate vision. Conceptual primer for photographers building intentional practice.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 11:30:36 GMT</pubDate>
-    </item>
-    <item>
-      <title>Marvel Cosmic Invasion logo designed with custom font and organic elements</title>
-      <link>https://www.creativebloq.com/design/logos-icons/how-a-designer-created-the-dirty-organic-insectoid-logo-for-marvel-cosmic-invasion</link>
-      <guid isPermaLink="false">s_6e1e0d51aedb6c51</guid>
-      <description>Designer breakdown of gooey, insectoid branding using custom typography. Practical design methodology for branded campaigns.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 11:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Speed painting workflow teaches gesture control and spontaneity</title>
-      <link>https://www.creativebloq.com/art/digital-art/spontaneous-speed-painting-could-help-you-to-trust-your-art</link>
-      <guid isPermaLink="false">s_29c38c6158cba3ce</guid>
-      <description>Artist Duy An Lam demonstrates loose pose work and energy flow before refinement. Applicable technique for digital painters building confidence.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 10:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Insta360 and Bambu Lab collaborate on 3D printing integration</title>
-      <link>https://www.creativebloq.com/3d/3d-printing/as-a-photographer-the-new-insta360-x-bambu-lab-collab-makes-me-incredibly-happy</link>
-      <guid isPermaLink="false">s_fa50b26f80fe5e5b</guid>
-      <description>360-camera and 3D printer partnership. Relevant hardware development for creators exploring mixed modalities.</description>
-      <category>tools</category>
-      <pubDate>Sat, 11 Jul 2026 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Meta kills Instagram AI feature allowing deepfakes of public accounts</title>
-      <link>https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/</link>
-      <guid isPermaLink="false">s_98d85122ab641d19</guid>
-      <description>Meta shut down a week-old tool that let users generate AI images by tagging public Instagram accounts without owner consent. The feature lacked notification and faced immediate backlash.</description>
-      <category>rights</category>
-      <pubDate>Fri, 10 Jul 2026 23:55:07 GMT</pubDate>
     </item>
   </channel>
 </rss>

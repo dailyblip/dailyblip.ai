@@ -1,6 +1,6 @@
 {
   "issue": 210,
-  "generated_at": "2026-07-13T17:32:53.896Z",
+  "generated_at": "2026-07-13T18:57:36.258Z",
   "brief": {
     "items": [
       {
@@ -40,21 +40,141 @@
   },
   "stories": [
     {
-      "id": "s_1c07dda2c1408621",
-      "cat": "video",
-      "badge": "hot",
+      "id": "s_d4b36e47cd240b18",
+      "cat": "rights",
+      "badge": "breaking",
       "spotlight": false,
       "quality": 8,
-      "title": "Artist transforms 2D pencil sketch into navigable 3D world",
-      "dek": "Leteramma scanned hand drawings, remapped paper as emission, and composed them into a traversable animation using Blender's geometry nodes. Specific technical execution with clear artistic intent.",
+      "tier": "journalism",
+      "title": "Patreon blocks AI crawlers from scraping creator content for model training",
+      "dek": "Patreon partnered with Cloudflare to prevent AI training crawlers from using published work. CEO Jack Conte framed move as compensation protection for creators.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/13/patreon-blocks-ai-crawlers-from-copying-content-creators-deserve-compenstion/",
+      "ts": "2026-07-13T16:25:37.000Z",
+      "read": "2 min",
+      "also": [],
+      "top": true,
+      "heat": 116,
+      "move": 55
+    },
+    {
+      "id": "s_b3ca6a4a0a3df0f9",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Director Antonio Milo breaks down CGI parasite character campaign in Unreal Engine",
+      "dek": "SuperBlimp's Captain Itch campaign demonstrates hand-keyed character animation, Houdini grooming, and Unreal rendering pipeline for stylized creature design with deliberate artistic control.",
       "src": "80 Level",
-      "url": "https://80.lv/articles/check-out-what-it-is-like-to-be-inside-a-pencil-sketch/",
-      "ts": "2026-07-11T06:00:00.000Z",
+      "url": "https://80.lv/articles/building-captain-itch-designing-a-character-led-cgi-campaign-with-unreal-engine/",
+      "ts": "2026-07-13T18:25:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 103,
+      "move": 50
+    },
+    {
+      "id": "s_ecbc76a36f0e024f",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple sues OpenAI for alleged trade secret theft and employee poaching",
+      "dek": "Apple's 41-page complaint alleges OpenAI systematically extracted confidential information through current and former employees, including requests for unreleased hardware at interviews.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/",
+      "ts": "2026-07-13T18:22:10.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 91,
+      "move": 48
+    },
+    {
+      "id": "s_6358ddebecad3055",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple alleges OpenAI systematically stole trade secrets and hardware details",
+      "dek": "Lawsuit details claims of unauthorized network access, employee recruitment with requests for proprietary hardware, and coordinated information extraction.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
+      "ts": "2026-07-13T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
-      "move": -1,
-      "top": true
+      "heat": 90,
+      "move": 48
+    },
+    {
+      "id": "s_d8c4f12b71f9e00d",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Anthropic localizes Claude pricing to Indian rupees, second-largest market",
+      "dek": "Claude subscribers in India can now pay in rupees on web and apps, though UPI support still pending. India accounts for 5.8% of global Claude usage.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/",
+      "ts": "2026-07-13T15:34:59.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 99,
+      "move": 52
+    },
+    {
+      "id": "s_bf08d7596331b820",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Clément Doranlo showcases motion-captured aerial dance with custom armor in Maya",
+      "dek": "Riverskin project demonstrates advanced rigging, animation, and character design with deliberate aesthetic choices. Work exhibits technical control and artistic vision across modeling and post-production.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/beautiful-aerial-dance-3d-animation-full-of-calm-grace/",
+      "ts": "2026-07-13T15:31:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 101,
+      "move": 54
+    },
+    {
+      "id": "s_0b9a256573f21194",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Defenders adopt prompt injection tactics to disable malicious AI agents",
+      "dek": "\"Context bombing\" uses attacker techniques defensively, flooding AI systems with contradictory instructions to prevent harmful behavior before it executes.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
+      "ts": "2026-07-13T15:06:34.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 80,
+      "move": 48
+    },
+    {
+      "id": "s_b6491befe496676a",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 9,
+      "tier": "journalism",
+      "title": "Director flattens 3D character head to match wide-angle lens distortion in Blender",
+      "dek": "Dust of the Simulacrum director Eit Mitsufuchi reveals sophisticated technique: intentional 3D-to-2D morphing using Blender's Lattice modifier for stylized wide-angle effects. Masterful execution of intentional distortion.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/this-3d-character-is-actually-flat-it-s-crazy/",
+      "ts": "2026-07-13T14:32:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 110,
+      "move": 58
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -70,14 +190,14 @@
       "ts": "2026-07-13T12:01:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 83,
-      "move": 53
+      "heat": 77,
+      "move": -13
     },
     {
       "id": "s_e49b9851718e08d2",
       "cat": "image",
       "badge": "new",
-      "spotlight": true,
+      "spotlight": false,
       "quality": 7,
       "tier": "journalism",
       "title": "3D artist creates Wolverine in comic book toon shader style",
@@ -87,8 +207,8 @@
       "ts": "2026-07-13T08:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 89,
-      "move": 57
+      "heat": 83,
+      "move": -8
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -104,14 +224,14 @@
       "ts": "2026-07-13T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": 52
+      "heat": 73,
+      "move": -11
     },
     {
       "id": "s_1224235fee688e2d",
       "cat": "video",
       "badge": "new",
-      "spotlight": true,
+      "spotlight": false,
       "quality": 7,
       "tier": "journalism",
       "title": "Indie team films live-action reference for cinematic platformer Deer & Boy",
@@ -121,8 +241,8 @@
       "ts": "2026-07-13T07:44:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 88,
-      "move": 58
+      "heat": 83,
+      "move": -8
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -138,8 +258,8 @@
       "ts": "2026-07-12T16:27:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
-      "move": -7
+      "heat": 68,
+      "move": -11
     },
     {
       "id": "s_efecb35d7b427474",
@@ -156,13 +276,13 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_db4ca1dcfacb9a2b",
       "cat": "image",
       "badge": "new",
-      "spotlight": true,
+      "spotlight": false,
       "quality": 8,
       "tier": "journalism",
       "title": "Hasselblad XPan editorial shoot demonstrates panoramic film storytelling",
@@ -173,7 +293,7 @@
       "read": "4 min",
       "also": [],
       "heat": 80,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_e662af7aa0e3d019",
@@ -190,7 +310,7 @@
       "read": "4 min",
       "also": [],
       "heat": 80,
-      "move": -3
+      "move": -7
     },
     {
       "id": "s_e519e02d1415570b",
@@ -207,7 +327,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_b2beb695d675ec33",
@@ -224,7 +344,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_1f8d572b50f537be",
@@ -241,7 +361,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -257,7 +377,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_cca9d9854a8b2b2e",
@@ -274,7 +394,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_7fcf1c64331ce573",
@@ -291,7 +411,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_5e8fda4219f983fc",
@@ -308,7 +428,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_6e1e0d51aedb6c51",
@@ -325,7 +445,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -342,7 +462,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -359,7 +479,23 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
+    },
+    {
+      "id": "s_1c07dda2c1408621",
+      "cat": "video",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 8,
+      "title": "Artist transforms 2D pencil sketch into navigable 3D world",
+      "dek": "Leteramma scanned hand drawings, remapped paper as emission, and composed them into a traversable animation using Blender's geometry nodes. Specific technical execution with clear artistic intent.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/check-out-what-it-is-like-to-be-inside-a-pencil-sketch/",
+      "ts": "2026-07-11T06:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 88,
+      "move": -5
     },
     {
       "id": "s_98d85122ab641d19",
@@ -375,7 +511,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -6
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -391,7 +527,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -406,7 +542,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -2
+      "move": -8
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -423,7 +559,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -6
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -439,7 +575,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -454,7 +590,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -470,7 +606,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -486,7 +622,7 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -6
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -501,7 +637,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -517,7 +653,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -532,7 +668,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -547,7 +683,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -562,7 +698,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_5244feb84148957b",
@@ -577,7 +713,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -592,7 +728,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -607,7 +743,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -622,7 +758,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_959d825718f0d41f",
@@ -637,7 +773,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_3a6e9021ecabca6b",
@@ -652,7 +788,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_d227c01975ac31ba",
@@ -667,7 +803,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_81903600b8406df1",
@@ -682,7 +818,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_5012f89709d598db",
@@ -697,7 +833,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_ca1c525e3ab05a6a",
@@ -712,7 +848,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_8b07a3a2688e9c39",
@@ -727,7 +863,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_7450e04d7677bb91",
@@ -742,7 +878,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_f2379eceafd20cc0",
@@ -757,7 +893,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_2922cfdde0d796dd",
@@ -772,7 +908,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -787,7 +923,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_880ee3c2d5501c1e",
@@ -802,7 +938,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -2
+      "move": -8
     },
     {
       "id": "s_769060e02311f3cb",
@@ -817,7 +953,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_9491981398fceeeb",
@@ -832,7 +968,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -847,7 +983,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_e77145a44b286dd2",
@@ -862,127 +998,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_ba6ef68cb3be2005",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "title": "OpenAI's ChatGPT Work enables agents to run autonomous tasks for hours",
-      "dek": "ChatGPT Work allows AI agents to execute sustained workflows independently, solving previous time-limit constraints in agent mode.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/ai/2026/07/openai-wants-its-new-tool-to-do-your-work-for-you-and-with-you/",
-      "ts": "2026-07-09T21:25:55.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_3d791cf08ced814e",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Higher resolution input improves Krea 2 Turbo realism and variety",
-      "dek": "Creator discovers that increasing Krea 2 Turbo's starting resolution from 1MP to 2.5–6MP boosts photographic diversity and detail while maintaining 5-step inference.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1us3fkj/increasing_krea_2_turbo_starting_resolution/",
-      "ts": "2026-07-09T21:19:55.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_2487a466605cb453",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "John William Waterhouse style LoRA released for Krea 2",
-      "dek": "A new artistic style LoRA trained on romantic painter Waterhouse is available for Krea 2, best used with trigger words and no stylizers.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1us39sz/krea2_john_william_waterhouse_style_lora/",
-      "ts": "2026-07-09T21:13:53.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_132c70a2f06679b6",
-      "cat": "tools",
-      "badge": "breaking",
-      "spotlight": false,
-      "title": "OpenAI shuts down Atlas browser less than a year after launch",
-      "dek": "ChatGPT Atlas, announced in October, is sunsetting by August 9. The agentic browsing features will move to ChatGPT desktop and Chrome.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/963654/openai-chatgpt-atlas-ai-browser-shut-down-sunset",
-      "ts": "2026-07-09T20:34:05.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 65,
-      "move": -2
-    },
-    {
-      "id": "s_ffdb0d5985a23df3",
-      "cat": "rights",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Google adds AI disclosure labels to Search, YouTube, and Discover ads",
-      "dek": "Users can now see whether ads were created or edited with AI through a label in My Ad Center, expanding transparency beyond election ads.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/963628/google-ai-generated-ads-label",
-      "ts": "2026-07-09T20:11:38.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_241317adaedd7479",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Meta launches Muse Spark 1.1 for agentic AI coding tasks",
-      "dek": "Meta's multimodal coding model handles complex workflows, bug fixes, and large code migrations to compete with OpenAI and Anthropic's offerings.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/09/meta-enters-the-crowded-ai-coding-battle-with-muse-spark-1-1/",
-      "ts": "2026-07-09T19:40:45.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_9de14e96265af218",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "New York Times says OpenAI hid evidence of copyright detection tools",
-      "dek": "Publishers allege OpenAI concealed its ability to search training data and chat logs for copyrighted content, escalating the copyright infringement lawsuit.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/09/new-york-times-says-openai-hid-evidence-in-chatgpt-copyright-trial/",
-      "ts": "2026-07-09T19:05:58.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 58,
-      "move": -4
-    },
-    {
-      "id": "s_16830069eb2915f6",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "OpenAI faces sanctions threat for hiding ChatGPT logs in NYT copyright lawsuit",
-      "dek": "OpenAI is accused of concealing and deleting ChatGPT logs sought as evidence in the New York Times copyright case, risking judicial sanctions.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/tech-policy/2026/07/openai-faked-inability-to-search-training-data-hid-billions-of-logs-nyt-says/",
-      "ts": "2026-07-09T18:57:53.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 58,
-      "move": -4
+      "move": -8
     }
   ],
   "models": [
@@ -1099,10 +1115,10 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stats": {
-    "scanned_last_run": 15,
-    "published_today": 5,
+    "scanned_last_run": 22,
+    "published_today": 12,
     "sources_live": 14,
-    "slopped_last_run": 11
+    "slopped_last_run": 14
   },
   "tool_status": [
     {
