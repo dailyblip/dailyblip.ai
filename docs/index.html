@@ -317,6 +317,26 @@ nav.cats{
 }
 .loadmore:hover{border-color:var(--amber-deep);color:var(--amber)}
 
+/* ---------- older signals (stale-trim) ---------- */
+.older-toggle{
+  width:100%;padding:13px;margin-top:10px;border:1px dashed var(--line-strong);
+  border-radius:var(--radius);font-family:var(--mono);font-size:12px;
+  color:var(--faint);letter-spacing:.03em;transition:all .15s ease;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.older-toggle::before{content:"◷"}
+.older-toggle:hover{border-color:var(--line-strong);color:var(--dim);background:rgba(158,216,210,.03)}
+.older-signals{margin-top:12px;opacity:.62;transition:opacity .15s ease}
+.older-signals:hover{opacity:.85}
+.older-signals .story{padding:14px 18px;margin-bottom:9px}
+.older-signals .story h3{font-size:16.5px}
+.older-signals .story p{font-size:13px}
+.older-signals-head{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:10px;display:flex;align-items:center;gap:8px;
+}
+.older-signals-head::after{content:"";height:1px;flex:1;background:var(--line)}
+
 /* ---------- sidebar ---------- */
 aside{display:flex;flex-direction:column;gap:26px}
 .panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink-2);padding:18px 18px 16px}
@@ -481,6 +501,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
       <div id="feedList"></div>
       <div class="empty" id="emptyState">no blips on this frequency — try another filter</div>
       <button class="loadmore" id="loadMore">pull older signals ↓</button>
+
+      <button class="older-toggle" id="olderToggle" style="display:none">
+        <span id="olderToggleLabel"></span>
+      </button>
+      <div id="olderSignalsList" class="older-signals" style="display:none"></div>
     </main>
 
     <!-- SIDEBAR -->
@@ -743,7 +768,8 @@ function renderCats(){
 function renderBrief(){
   const items = FEED.brief?.items || [];
   $("#briefTitle").textContent = FEED.brief?.title || "";
-  $("#briefEyebrow").textContent = `The Daily Blip · Issue ${String(FEED.issue||1).padStart(4,"0")}`;
+  const editionLabel = FEED.brief?.edition === "pm" ? "EVENING EDITION" : "MORNING EDITION";
+  $("#briefEyebrow").textContent = `The Daily Blip · Issue ${String(FEED.issue||1).padStart(4,"0")} · ${editionLabel}`;
   $("#blipCount").textContent = `${items.length} blips`;
   $("#briefItems").innerHTML = items.map((b,i)=>`
     <li class="brief-item${readSet.has(i)?" read":""}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
@@ -776,6 +802,14 @@ function renderBlips(){
   }).join("");
 }
 
+// Anything older than this (and not the Top Signal story) gets pulled out
+// of the main flow and tucked behind a collapsed "older signals" toggle —
+// so the page never shows a 3-day-old story with the same visual weight
+// as something from an hour ago. This is the single biggest lever for the
+// site *feeling* current regardless of how much genuinely new content
+// exists on a given day.
+const STALE_HOURS = 36;
+
 function renderFeed(){
   const list = FEED.stories.filter(s =>
     matchCat(s) &&
@@ -787,33 +821,58 @@ function renderFeed(){
     if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
     return new Date(b.ts) - new Date(a.ts);
   });
-  const shown = list.slice(0, visible);
-  $("#feedList").innerHTML = shown.map(s=>{
-    const cat = CATS.find(c=>c.id===s.cat) || {label:s.cat};
-    const h3 = s.url && s.url !== "#"
-      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`
-      : esc(s.title);
-    const also = s.also?.length ? ` · also via ${esc(s.also.join(", "))}` : "";
-    const hits = stackHits(s);
-    const stackFlag = hits.size ? `<span class="stack-flag" title="Affects your stack: ${esc(stackToolLabel(hits))}">affects your stack</span>` : "";
-    return `
-    <article class="story${s.top?" top-story":""}" id="${s.id}" tabindex="0">
-      ${s.top?'<div class="top-label">top signal</div>':""}
-      <div class="story-meta">
-        <span class="tag c-${s.cat}">${cat.label}</span>
-        <span class="badge ${s.badge}">${s.badge}</span>
-        ${moveArrow(s)}
-        ${s.spotlight?'<span class="spot-flag">✦ spotlight</span>':""}
-        ${stackFlag}
-        <span>${ago(storyHrs(s))}</span>
-      </div>
-      <h3>${h3}</h3>
-      <p>${esc(s.dek)}</p>
-      <div class="foot">via <b>${esc(s.src)}</b> · ${esc(s.read)} read${also}</div>
-    </article>`;
-  }).join("");
+
+  // Split: Top Signal is always "fresh" regardless of age (it's pinned for
+  // a reason). Everything else past STALE_HOURS moves to the older bucket.
+  const fresh = list.filter(s => s.top || storyHrs(s) < STALE_HOURS);
+  const stale = list.filter(s => !s.top && storyHrs(s) >= STALE_HOURS);
+
+  const shown = fresh.slice(0, visible);
+  $("#feedList").innerHTML = shown.map(s => storyCardHtml(s)).join("");
   $("#emptyState").style.display = list.length ? "none" : "block";
-  $("#loadMore").style.display = list.length > visible ? "block" : "none";
+  $("#loadMore").style.display = fresh.length > visible ? "block" : "none";
+
+  const olderToggle = $("#olderToggle");
+  const olderList = $("#olderSignalsList");
+  if (!stale.length) {
+    olderToggle.style.display = "none";
+    olderList.style.display = "none";
+  } else {
+    olderToggle.style.display = "flex";
+    $("#olderToggleLabel").textContent = olderList.dataset.open === "1"
+      ? "hide older signals ↑"
+      : `show ${stale.length} older signal${stale.length===1?"":"s"} (36h+) ↓`;
+    olderList.innerHTML = `<div class="older-signals-head">older signals — still here, just not pretending to be new</div>`
+      + stale.map(s => storyCardHtml(s)).join("");
+  }
+}
+
+/** Extracted so both the fresh list and the older-signals bucket render
+ *  identical cards — the only difference is the de-emphasized wrapper
+ *  the older section applies via CSS (.older-signals), not the markup. */
+function storyCardHtml(s){
+  const cat = CATS.find(c=>c.id===s.cat) || {label:s.cat};
+  const h3 = s.url && s.url !== "#"
+    ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`
+    : esc(s.title);
+  const also = s.also?.length ? ` · also via ${esc(s.also.join(", "))}` : "";
+  const hits = stackHits(s);
+  const stackFlag = hits.size ? `<span class="stack-flag" title="Affects your stack: ${esc(stackToolLabel(hits))}">affects your stack</span>` : "";
+  return `
+  <article class="story${s.top?" top-story":""}" id="${s.id}" tabindex="0">
+    ${s.top?'<div class="top-label">top signal</div>':""}
+    <div class="story-meta">
+      <span class="tag c-${s.cat}">${cat.label}</span>
+      <span class="badge ${s.badge}">${s.badge}</span>
+      ${moveArrow(s)}
+      ${s.spotlight?'<span class="spot-flag">✦ spotlight</span>':""}
+      ${stackFlag}
+      <span>${ago(storyHrs(s))}</span>
+    </div>
+    <h3>${h3}</h3>
+    <p>${esc(s.dek)}</p>
+    <div class="foot">via <b>${esc(s.src)}</b> · ${esc(s.read)} read${also}</div>
+  </article>`;
 }
 
 function renderSpotlight(){
@@ -917,6 +976,13 @@ $("#catNav").addEventListener("click", e=>{
 });
 $("#searchInput").addEventListener("input", e=>{ query = e.target.value.trim().toLowerCase(); visible=8; renderFeed(); });
 $("#loadMore").addEventListener("click", ()=>{ visible += 8; renderFeed(); });
+$("#olderToggle").addEventListener("click", ()=>{
+  const el = $("#olderSignalsList");
+  const open = el.dataset.open === "1";
+  el.dataset.open = open ? "0" : "1";
+  el.style.display = open ? "none" : "block";
+  renderFeed(); // just to refresh the toggle label text
+});
 
 function toggleBrief(li){
   const i = +li.dataset.i;
