@@ -1,21 +1,170 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<rss version='2.0'><channel><title>dailyblip</title><link>https://dailyblip.ai</link><description>AI creator signal, zero slop</description>
-    <item><title>Meta Launches Muse, an Image Model Built Around Your Own Photos</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s1</guid><description>Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen.</description><pubDate>Thu, 09 Jul 2026 16:27:40 GMT</pubDate></item>
-    <item><title>The Sora Countdown: App Already Gone, API Sunsets September 24</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s2</guid><description>OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column.</description><pubDate>Thu, 09 Jul 2026 15:27:40 GMT</pubDate></item>
-    <item><title>Midjourney V8.1 Becomes the Default: Native 2K, 4–5x Faster, Draft Mode</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s3</guid><description>The new default model ships native 2K HD output, a big speed jump, better prompt adherence, and a Draft Mode built for rapid ideation before you commit render credits to a final.</description><pubDate>Thu, 09 Jul 2026 13:27:40 GMT</pubDate></item>
-    <item><title>July Video Rankings: Runway Gen-4.5 Owns Control, Veo 3.1 Owns Realism</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s4</guid><description>The month's big comparison crowns Runway Gen-4.5 the pro-workflow pick — camera direction, structured prompting, music videos and previs — while Veo 3.1 and Seedance 2.5 lead on raw realism. Kling 3.0 Turbo and Pika stay the daily drivers.</description><pubDate>Thu, 09 Jul 2026 12:27:40 GMT</pubDate></item>
-    <item><title>Gemini Omni Flash Prices Fast Video Iteration at $0.10 per Second</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s5</guid><description>Google's conversational video model is built for quick back-and-forth edits rather than one-shot renders — a different bet on how creators actually work, and cheap enough to iterate freely.</description><pubDate>Thu, 09 Jul 2026 11:27:40 GMT</pubDate></item>
-    <item><title>Beat-Sync Goes Mainstream: Full AI Music Videos From a Finished Track</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s6</guid><description>Tools like Freebeat and Neural Frames now analyze BPM and transients to cut visuals to beat drops, hold character consistency, and lip-sync avatars across 6-minute videos — indie artists are shipping label-grade visuals on no budget.</description><pubDate>Thu, 09 Jul 2026 10:27:40 GMT</pubDate></item>
-    <item><title>Kling O3 Brings 15-Second Multi-Shot Scenes With Voice-Persistent Characters</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s7</guid><description>Multi-shot generation, character voices that persist across cuts, and native audio push Kling toward short-film territory rather than clip stitching.</description><pubDate>Thu, 09 Jul 2026 09:27:40 GMT</pubDate></item>
-    <item><title>Copyright Consensus Forming: AI-Assisted Work Is Protectable — With Receipts</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s8</guid><description>Many jurisdictions now extend protection to AI-assisted works when there's demonstrable human-in-the-loop direction: custom prompting, manual editing, creative decisions. Practical takeaway — keep your prompt and edit history.</description><pubDate>Thu, 09 Jul 2026 08:27:40 GMT</pubDate></item>
-    <item><title>Fable 5 Goes Pay-Per-Use Today — Writers, Check Your Stack</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s9</guid><description>Claude Fable 5 now costs $10/M input and $50/M output tokens on every subscriber tier, while Sonnet 5 ($2/$10 intro) and Opus 4.8 stay bundled. For long-form drafting, the bundled models are the value play.</description><pubDate>Thu, 09 Jul 2026 06:27:40 GMT</pubDate></item>
-    <item><title>GPT Image 2: Natural-Language Edits, 2K Output, Multilingual Text</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s10</guid><description>OpenAI's image model has become the instruction-follower of the field — revise existing visuals and apply targeted edits by just describing them, with text rendering that finally survives non-English scripts.</description><pubDate>Thu, 09 Jul 2026 04:27:40 GMT</pubDate></item>
-    <item><title>CapCut's One-Workspace Play: Seedance 2.0 Video, GPT Image 2, and Seedmusic</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s11</guid><description>The everything-suite pitch is landing with small content teams: video generation, image editing, and AI music in one workflow, ending the tool-switching tax between five subscriptions.</description><pubDate>Thu, 09 Jul 2026 02:27:40 GMT</pubDate></item>
-    <item><title>Cloudflare's September 15 Deadline Splits Search Crawlers From AI Crawlers</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s12</guid><description>After the cutoff, mixed-use bots get blocked by default from ad-carrying pages. If you publish content, this is the biggest default-setting change yet in who gets to train on your work.</description><pubDate>Thu, 09 Jul 2026 00:27:40 GMT</pubDate></item>
-    <item><title>AI Actor Tilly Norwood Lands Her First Feature Film</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s13</guid><description>'Misaligned,' a coming-of-age story about a girl AI bot set in the Tillyverse, makes the synthetic performer's leap to features official — and reopens every argument about human performers at once.</description><pubDate>Wed, 08 Jul 2026 22:27:40 GMT</pubDate></item>
-    <item><title>Wan 2.7 Is the Open Option for Local and Custom Video Pipelines</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s14</guid><description>If local control or custom pipelines matter more than leaderboard wins, Wan remains the meaningful open-weight choice — structure-preserving transforms and no per-second meter running.</description><pubDate>Wed, 08 Jul 2026 20:27:40 GMT</pubDate></item>
-    <item><title>The Model Buffet: Platforms Now Bundle 14+ Image Models Under One License</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s15</guid><description>Artlist's toolkit stacks Nano Banana, GPT Image 2, Seedream 5.0, Wan 2.7 and more behind one subscription with commercial licensing sorted — a hedge against betting your whole aesthetic on one model.</description><pubDate>Wed, 08 Jul 2026 16:27:40 GMT</pubDate></item>
-    <item><title>Grok Imagine Video 1.5 Adds Native Synced Audio and Faster Image-to-Video</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s16</guid><description>A real contender for social-first output if you already live inside X — quick-turn clips with sound baked in, tuned for the feed rather than the timeline.</description><pubDate>Wed, 08 Jul 2026 12:27:40 GMT</pubDate></item>
-    <item><title>'Acting Prompts' Arrive: Performance Capture Synthesis Maps Vocals to Avatars</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s17</guid><description>The new wave of lip-sync tools reads vocal nuance and maps it onto digital performers — direct emotional transitions by timestamp ('melancholy to euphoria at 02:15') like a VFX house, from your phone.</description><pubDate>Wed, 08 Jul 2026 08:27:40 GMT</pubDate></item>
-    <item><title>One Week In: Claude Sonnet 5 Is the New Default for Long-Form Drafting</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s18</guid><description>Launched July 1 at $2/$10 introductory pricing and bundled into subscriptions, Sonnet 5 has quickly become the workhorse recommendation for novelists, scriptwriters and newsletter writers.</description><pubDate>Wed, 08 Jul 2026 02:27:40 GMT</pubDate></item>
-    <item><title>Anthropic Overtakes OpenAI on Revenue for the First Time</title><link>https://dailyblip.ai</link><guid isPermaLink='false'>s19</guid><description>A $47B annualized run rate versus OpenAI's $25–33B. The broader signal for creators: the money is consolidating around a handful of labs whose pricing decisions now ripple straight into your tool subscriptions.</description><pubDate>Tue, 07 Jul 2026 22:27:40 GMT</pubDate></item></channel></rss>
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>dailyblip — AI creator signal, zero slop</title>
+    <link>https://dailyblip.ai</link>
+    <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 13 Jul 2026 04:35:18 GMT</lastBuildDate>
+    <item>
+      <title>Artist transforms 2D pencil sketch into navigable 3D world</title>
+      <link>https://80.lv/articles/check-out-what-it-is-like-to-be-inside-a-pencil-sketch/</link>
+      <guid isPermaLink="false">s_1c07dda2c1408621</guid>
+      <description>Leteramma scanned hand drawings, remapped paper as emission, and composed them into a traversable animation using Blender's geometry nodes. Specific technical execution with clear artistic intent.</description>
+      <category>video</category>
+      <pubDate>Sat, 11 Jul 2026 06:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple's scrapped self-driving car seeded Neural Engine AI chip architecture</title>
+      <link>https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra</link>
+      <guid isPermaLink="false">s_5bbc3a5ef63f4579</guid>
+      <description>Failed autonomous vehicle project led to development of on-device AI processing capabilities that became core to Apple Silicon's performance.</description>
+      <category>industry</category>
+      <pubDate>Sun, 12 Jul 2026 16:27:06 GMT</pubDate>
+    </item>
+    <item>
+      <title>25 best James Webb Space Telescope photos in four-year retrospective</title>
+      <link>https://petapixel.com/2026/07/12/the-25-best-james-webb-space-telescope-photos/</link>
+      <guid isPermaLink="false">s_efecb35d7b427474</guid>
+      <description>Curated collection of high-resolution astronomical imagery. Reference resource for photographers seeking inspirational compositions and lighting.</description>
+      <category>image</category>
+      <pubDate>Sun, 12 Jul 2026 13:00:37 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hasselblad XPan editorial shoot demonstrates panoramic film storytelling</title>
+      <link>https://petapixel.com/2026/07/12/running-on-film-with-the-hasselblad-xpan/</link>
+      <guid isPermaLink="false">s_db4ca1dcfacb9a2b</guid>
+      <description>Sports photographer Maud shot on XPan to tell a running narrative in few frames. Deliberate constraint-based technique with clear conceptual intent.</description>
+      <category>image</category>
+      <pubDate>Sun, 12 Jul 2026 12:30:27 GMT</pubDate>
+    </item>
+    <item>
+      <title>Photographer prioritizes intention over reaction in mountain and personal work</title>
+      <link>https://petapixel.com/2026/07/12/how-intention-changes-your-photography/</link>
+      <guid isPermaLink="false">s_e662af7aa0e3d019</guid>
+      <description>Decades-long practice rethinking deliberate vision versus documentation reflex. Philosophical framework applicable across mediums.</description>
+      <category>image</category>
+      <pubDate>Sun, 12 Jul 2026 12:01:47 GMT</pubDate>
+    </item>
+    <item>
+      <title>Fantasy artist shares digital painting workflow: Photoshop and Blender fundamentals</title>
+      <link>https://www.creativebloq.com/art/digital-art/how-to-build-a-digital-painting-from-the-ground-up-using-photoshop-and-blender</link>
+      <guid isPermaLink="false">s_e519e02d1415570b</guid>
+      <description>Pierre Ignaszewski walks through composition, value, and layering techniques for character work. Practical breakdown of separating figures and managing detail hierarchy.</description>
+      <category>tools</category>
+      <pubDate>Sun, 12 Jul 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>ASUS ProArt PZ14 Windows tablet for digital artists reviewed</title>
+      <link>https://www.creativebloq.com/tech/laptops/asus-proart-pz14-review-a-better-windows-tablet-but-not-a-perfect-one</link>
+      <guid isPermaLink="false">s_b2beb695d675ec33</guid>
+      <description>Two-in-one drawing device with tradeoffs. Hardware review relevant to creators evaluating tablets; mixed verdict noted.</description>
+      <category>tools</category>
+      <pubDate>Sun, 12 Jul 2026 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>High-resolution full-frame camera sensor comparison: Canon, Nikon, Sony flagships</title>
+      <link>https://petapixel.com/2026/07/11/which-high-resolution-full-frame-camera-has-the-best-sensor/</link>
+      <guid isPermaLink="false">s_1f8d572b50f537be</guid>
+      <description>Megapixel and dynamic range shootout for high-end gear. Technical reference for photographers weighing sensor choices.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 14:01:34 GMT</pubDate>
+    </item>
+    <item>
+      <title>Godot Road Generator adds procedural intersection lanes</title>
+      <link>https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/</link>
+      <guid isPermaLink="false">s_dabdfae8cca17885</guid>
+      <description>TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.</description>
+      <category>tools</category>
+      <pubDate>Sat, 11 Jul 2026 14:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Summer 2026 astrophotography guide: eclipses, meteor showers, planetary alignments</title>
+      <link>https://petapixel.com/2026/07/11/capture-the-night-promasters-summer-2026-astrophotography-guide/</link>
+      <guid isPermaLink="false">s_cca9d9854a8b2b2e</guid>
+      <description>Seasonal event calendar with equipment recommendations. Planning resource for photographers targeting night-sky work.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 13:30:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>Indie game Kidbash: Super Legend uses Blender + SNES-style rendering</title>
+      <link>https://www.creativebloq.com/3d/video-game-design/kidbash-super-legend-is-built-in-blender-but-rendered-like-a-classic-snes-game</link>
+      <guid isPermaLink="false">s_7fcf1c64331ce573</guid>
+      <description>Blender-to-retro-graphics pipeline revives Donkey Kong Country's technique. Technical approach worth noting for game devs.</description>
+      <category>video</category>
+      <pubDate>Sat, 11 Jul 2026 13:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Street photography remains vital despite ubiquitous cameras</title>
+      <link>https://petapixel.com/2026/07/11/we-need-street-photography-now-more-than-ever/</link>
+      <guid isPermaLink="false">s_5e8fda4219f983fc</guid>
+      <description>Argument that contemporary image-making lacks deliberate vision. Conceptual primer for photographers building intentional practice.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 11:30:36 GMT</pubDate>
+    </item>
+    <item>
+      <title>Marvel Cosmic Invasion logo designed with custom font and organic elements</title>
+      <link>https://www.creativebloq.com/design/logos-icons/how-a-designer-created-the-dirty-organic-insectoid-logo-for-marvel-cosmic-invasion</link>
+      <guid isPermaLink="false">s_6e1e0d51aedb6c51</guid>
+      <description>Designer breakdown of gooey, insectoid branding using custom typography. Practical design methodology for branded campaigns.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 11:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Speed painting workflow teaches gesture control and spontaneity</title>
+      <link>https://www.creativebloq.com/art/digital-art/spontaneous-speed-painting-could-help-you-to-trust-your-art</link>
+      <guid isPermaLink="false">s_29c38c6158cba3ce</guid>
+      <description>Artist Duy An Lam demonstrates loose pose work and energy flow before refinement. Applicable technique for digital painters building confidence.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Insta360 and Bambu Lab collaborate on 3D printing integration</title>
+      <link>https://www.creativebloq.com/3d/3d-printing/as-a-photographer-the-new-insta360-x-bambu-lab-collab-makes-me-incredibly-happy</link>
+      <guid isPermaLink="false">s_fa50b26f80fe5e5b</guid>
+      <description>360-camera and 3D printer partnership. Relevant hardware development for creators exploring mixed modalities.</description>
+      <category>tools</category>
+      <pubDate>Sat, 11 Jul 2026 07:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Meta kills Instagram AI feature allowing deepfakes of public accounts</title>
+      <link>https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/</link>
+      <guid isPermaLink="false">s_98d85122ab641d19</guid>
+      <description>Meta shut down a week-old tool that let users generate AI images by tagging public Instagram accounts without owner consent. The feature lacked notification and faced immediate backlash.</description>
+      <category>rights</category>
+      <pubDate>Fri, 10 Jul 2026 23:55:07 GMT</pubDate>
+    </item>
+    <item>
+      <title>Artist uses SMEAR add-on to create elastic cube animation</title>
+      <link>https://80.lv/articles/this-elastic-and-dynamic-cube-animation-was-made-using-a-blender-add-on/</link>
+      <guid isPermaLink="false">s_5cec1af73b884a0e</guid>
+      <description>ymt3d demonstrates Blender deformation technique via SMEAR plugin, producing painterly, bouncy cube motion with shadow detail. Clear tool use with deliberate stylistic control.</description>
+      <category>video</category>
+      <pubDate>Fri, 10 Jul 2026 21:12:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple sues OpenAI for trade secret theft by former employees</title>
+      <link>https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/</link>
+      <guid isPermaLink="false">s_a4ad473125ca0f67</guid>
+      <description>Apple alleges OpenAI's senior leadership, including hardware chief Tang Tan, directed a pattern of theft involving confidential project codes, Apple hardware in interviews, and details about unreleased products.</description>
+      <category>rights</category>
+      <pubDate>Fri, 10 Jul 2026 21:00:29 GMT</pubDate>
+    </item>
+    <item>
+      <title>Kyutai releases MuScriptor: open-weight music-to-MIDI transcription model</title>
+      <link>https://www.marktechpost.com/2026/07/10/kyutai-releases-muscriptor-an-open-weight-decoder-only-transformer-for-multi-instrument-music-transcription-to-midi/</link>
+      <guid isPermaLink="false">s_8c1ac48f2dbd0d44</guid>
+      <description>Decoder-only transformer trained on 170k recordings plus 1.45M synthetic MIDI, transcribes multi-instrument mixes. Open weight; actionable for musicians.</description>
+      <category>music</category>
+      <pubDate>Fri, 10 Jul 2026 20:21:08 GMT</pubDate>
+    </item>
+    <item>
+      <title>Indie studio discusses level redesign and vehicle mechanics for sequel</title>
+      <link>https://80.lv/articles/how-an-indie-studio-created-a-sequel-of-a-driving-platformer-game/</link>
+      <guid isPermaLink="false">s_5ebc8099c0f86311</guid>
+      <description>Brinemedia dev talks workflow decisions for Stunt Paradise 2—scaling levels and adding mechanics. Useful design interview but light on concrete technical detail.</description>
+      <category>industry</category>
+      <pubDate>Fri, 10 Jul 2026 19:04:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
