@@ -1,41 +1,42 @@
 {
   "date": "2026-07-12",
-  "issue": 204,
+  "issue": 205,
   "brief": {
-    "title": "Sunday, July 12 — six things creators need to know",
     "items": [
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leaders including hardware chief Tang Tan directed a pattern of stealing confidential project codes and unreleased product details.",
-        "secs": 11
-      },
-      {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed its week-old Instagram AI tagging feature</b> after backlash — the tool had let anyone generate deepfakes of public accounts without the owner's knowledge or consent.",
+        "story": "s_8c1ac48f2dbd0d44",
+        "html": "Kyutai's <b>MuScriptor open-weight model transcribes multi-instrument mixes to MIDI</b>, trained on 170k recordings plus 1.45M synthetic files — download and test it now.",
         "secs": 10
       },
       {
-        "story": "s_81903600b8406df1",
-        "html": "A new ComfyUI custom node enables <b>INT4 inference for Krea 2 Turbo on 6 GB VRAM</b> — check your GPU tier, this opens consumer-grade runs of a previously memory-hungry model.",
+        "story": "s_14a2cc90aef5b07a",
+        "html": "OpenAI is <b>sunsetting the Atlas browser</b> — agentic browsing moves to ChatGPT desktop and a Chrome extension, so update your workflow before the shutdown.",
+        "secs": 9
+      },
+      {
+        "story": "s_9491981398fceeeb",
+        "html": "OpenAI launched <b>GPT-5.6 in three tiers (Sol, Terra, Luna)</b>, with Sol delivering 54% better token efficiency on coding tasks — check which tier fits your stack.",
         "secs": 10
       },
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "INT4 W4A4 quantized image models in ComfyUI now <b>produce output nearly indistinguishable from INT8</b> at smaller file size — worth testing before defaulting to heavier weights.",
+        "story": "s_16830069eb2915f6",
+        "html": "OpenAI risks judicial sanctions after allegedly <b>concealing and deleting ChatGPT logs</b> sought as evidence in the New York Times copyright lawsuit.",
+        "secs": 9
+      },
+      {
+        "story": "s_dabdfae8cca17885",
+        "html": "Godot's open-source Road Generator plugin now <b>adds procedural intersection lanes with AI pathfinding and collision meshes</b> — useful free upgrade for game environment work.",
         "secs": 10
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face's CEO warns <b>enterprises are abandoning paid AI APIs for open-source models</b> as costs scale — a structural shift worth tracking if your workflow depends on proprietary APIs.",
-        "secs": 10
-      },
-      {
-        "story": "s_9199a23f1066af9c",
-        "html": "A free browser-based <b>procedural ivy and fig tree generator</b> launched open-source, letting 3D environment artists paint and grow organic foliage on meshes in real time with no install required.",
+        "story": "s_1c07dda2c1408621",
+        "html": "Artist Leteramma used Blender geometry nodes to <b>turn hand-drawn pencil sketches into a fully traversable 3D animated world</b> — the paper itself remapped as emission lighting.",
         "secs": 10
       }
     ],
-    "date": "2026-07-12T16:34:54.072Z"
+    "title": "Sunday, July 12 — six things creators need to know",
+    "date": "2026-07-13T03:52:00.790Z",
+    "edition": "am"
   },
   "tooldrop": {
     "name": "MuScriptor",
@@ -59,14 +60,99 @@
       "ts": "2026-07-12T16:27:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": 53
+      "heat": 81,
+      "move": -2
+    },
+    {
+      "id": "s_efecb35d7b427474",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "25 best James Webb Space Telescope photos in four-year retrospective",
+      "dek": "Curated collection of high-resolution astronomical imagery. Reference resource for photographers seeking inspirational compositions and lighting.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/12/the-25-best-james-webb-space-telescope-photos/",
+      "ts": "2026-07-12T13:00:37.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 69,
+      "move": 38
+    },
+    {
+      "id": "s_db4ca1dcfacb9a2b",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Hasselblad XPan editorial shoot demonstrates panoramic film storytelling",
+      "dek": "Sports photographer Maud shot on XPan to tell a running narrative in few frames. Deliberate constraint-based technique with clear conceptual intent.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/12/running-on-film-with-the-hasselblad-xpan/",
+      "ts": "2026-07-12T12:30:27.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 89,
+      "move": 49
+    },
+    {
+      "id": "s_e662af7aa0e3d019",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Photographer prioritizes intention over reaction in mountain and personal work",
+      "dek": "Decades-long practice rethinking deliberate vision versus documentation reflex. Philosophical framework applicable across mediums.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/12/how-intention-changes-your-photography/",
+      "ts": "2026-07-12T12:01:47.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 88,
+      "move": 49
+    },
+    {
+      "id": "s_e519e02d1415570b",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Fantasy artist shares digital painting workflow: Photoshop and Blender fundamentals",
+      "dek": "Pierre Ignaszewski walks through composition, value, and layering techniques for character work. Practical breakdown of separating figures and managing detail hierarchy.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/art/digital-art/how-to-build-a-digital-painting-from-the-ground-up-using-photoshop-and-blender",
+      "ts": "2026-07-12T12:00:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 68,
+      "move": 40
+    },
+    {
+      "id": "s_b2beb695d675ec33",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "ASUS ProArt PZ14 Windows tablet for digital artists reviewed",
+      "dek": "Two-in-one drawing device with tradeoffs. Hardware review relevant to creators evaluating tablets; mixed verdict noted.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/tech/laptops/asus-proart-pz14-review-a-better-windows-tablet-but-not-a-perfect-one",
+      "ts": "2026-07-12T07:00:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 53,
+      "move": 23
     }
   ],
   "stats": {
-    "scanned_last_run": 1,
-    "published_today": 1,
-    "sources_live": 10,
-    "slopped_last_run": 0
+    "scanned_last_run": 19,
+    "published_today": 6,
+    "sources_live": 14,
+    "slopped_last_run": 7
   }
 }

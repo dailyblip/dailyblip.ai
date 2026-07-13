@@ -1,41 +1,42 @@
 {
-  "issue": 204,
-  "generated_at": "2026-07-13T03:45:27.168Z",
+  "issue": 205,
+  "generated_at": "2026-07-13T03:52:16.727Z",
   "brief": {
-    "title": "Sunday, July 12 — six things creators need to know",
     "items": [
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is <b>suing OpenAI for trade secret theft</b>, alleging senior leaders including hardware chief Tang Tan directed a pattern of stealing confidential project codes and unreleased product details.",
-        "secs": 11
-      },
-      {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed its week-old Instagram AI tagging feature</b> after backlash — the tool had let anyone generate deepfakes of public accounts without the owner's knowledge or consent.",
+        "story": "s_8c1ac48f2dbd0d44",
+        "html": "Kyutai's <b>MuScriptor open-weight model transcribes multi-instrument mixes to MIDI</b>, trained on 170k recordings plus 1.45M synthetic files — download and test it now.",
         "secs": 10
       },
       {
-        "story": "s_81903600b8406df1",
-        "html": "A new ComfyUI custom node enables <b>INT4 inference for Krea 2 Turbo on 6 GB VRAM</b> — check your GPU tier, this opens consumer-grade runs of a previously memory-hungry model.",
+        "story": "s_14a2cc90aef5b07a",
+        "html": "OpenAI is <b>sunsetting the Atlas browser</b> — agentic browsing moves to ChatGPT desktop and a Chrome extension, so update your workflow before the shutdown.",
+        "secs": 9
+      },
+      {
+        "story": "s_9491981398fceeeb",
+        "html": "OpenAI launched <b>GPT-5.6 in three tiers (Sol, Terra, Luna)</b>, with Sol delivering 54% better token efficiency on coding tasks — check which tier fits your stack.",
         "secs": 10
       },
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "INT4 W4A4 quantized image models in ComfyUI now <b>produce output nearly indistinguishable from INT8</b> at smaller file size — worth testing before defaulting to heavier weights.",
+        "story": "s_16830069eb2915f6",
+        "html": "OpenAI risks judicial sanctions after allegedly <b>concealing and deleting ChatGPT logs</b> sought as evidence in the New York Times copyright lawsuit.",
+        "secs": 9
+      },
+      {
+        "story": "s_dabdfae8cca17885",
+        "html": "Godot's open-source Road Generator plugin now <b>adds procedural intersection lanes with AI pathfinding and collision meshes</b> — useful free upgrade for game environment work.",
         "secs": 10
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face's CEO warns <b>enterprises are abandoning paid AI APIs for open-source models</b> as costs scale — a structural shift worth tracking if your workflow depends on proprietary APIs.",
-        "secs": 10
-      },
-      {
-        "story": "s_9199a23f1066af9c",
-        "html": "A free browser-based <b>procedural ivy and fig tree generator</b> launched open-source, letting 3D environment artists paint and grow organic foliage on meshes in real time with no install required.",
+        "story": "s_1c07dda2c1408621",
+        "html": "Artist Leteramma used Blender geometry nodes to <b>turn hand-drawn pencil sketches into a fully traversable 3D animated world</b> — the paper itself remapped as emission lighting.",
         "secs": 10
       }
     ],
-    "date": "2026-07-12T16:34:54.072Z"
+    "title": "Sunday, July 12 — six things creators need to know",
+    "date": "2026-07-13T03:52:00.790Z",
+    "edition": "am"
   },
   "stories": [
     {
