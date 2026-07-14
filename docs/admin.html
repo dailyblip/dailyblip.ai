@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -223,6 +224,11 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
       <label style="margin-top:14px">Pinned spotlight IDs <span class="tip">force these stories into the spotlight rail</span></label>
       <input id="ovPinnedSpot" placeholder="s_abc123, s_def456">
     </div>
+
+    <div class="panel" style="margin-top:14px">
+      <h3>Pin suggestions <span class="tip">auto-detected when a story is covered by 3+ of your sources — never applied automatically, your call each time</span></h3>
+      <div id="pinSuggestList"></div>
+    </div>
   </div>
 
   <div id="paneNew" style="display:none">
@@ -277,7 +283,7 @@ function saveCfg(){ localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); }
 
 /* --- state --- */
 let feed = null, feedSha = null;
-let overrides = { blocked_ids: [], blocked_terms: [], pinned_spotlight: [] };
+let overrides = { blocked_ids: [], blocked_terms: [], pinned_spotlight: [], pinned_brief: [], pin_suggestions: [], dismissed_pin_suggestions: [] };
 let overridesSha = null;
 let dirty = false;
 let expanded = new Set();
@@ -383,7 +389,7 @@ async function bootLoad(){
     const [f, o] = await Promise.all([readFile(FEED_PATH), readFile(OVR_PATH)]);
     if (!f.data) throw new Error("feed.json not found in this repo");
     feed = f.data; feedSha = f.sha;
-    if (o.data) { overrides = { blocked_ids: [], blocked_terms: [], pinned_spotlight: [], ...o.data }; overridesSha = o.sha; }
+    if (o.data) { overrides = { blocked_ids: [], blocked_terms: [], pinned_spotlight: [], pinned_brief: [], pin_suggestions: [], dismissed_pin_suggestions: [], ...o.data }; overridesSha = o.sha; }
     else { overridesSha = null; }
     renderAll();
     markClean();
@@ -445,6 +451,22 @@ function renderStories(){
       feed.stories.forEach(x => { if (x !== story) delete x.top; });
       story.top = !story.top; markDirty(); renderStories();
     });
+    el.querySelector(".btn-pin")?.addEventListener("click", () => {
+      overrides.pinned_brief = overrides.pinned_brief || [];
+      const existing = overrides.pinned_brief.find(p => p.id === story.id);
+      if (existing) {
+        // Toggle off: unpin immediately rather than waiting for editions to run out.
+        overrides.pinned_brief = overrides.pinned_brief.filter(p => p.id !== story.id);
+        delete story.pinned_brief;
+      } else {
+        overrides.pinned_brief.push({ id: story.id, editions_remaining: 2 });
+        story.pinned_brief = true;
+        // Clean up any pending suggestion for this story now that it's
+        // directly pinned — no need to also show it as "awaiting confirm."
+        overrides.pin_suggestions = (overrides.pin_suggestions || []).filter(p => p.id !== story.id);
+      }
+      markDirty(); renderStories(); renderOverrides();
+    });
     el.querySelector(".btn-del")?.addEventListener("click", () => {
       if (!confirm(`Delete "${story.title.slice(0,60)}${story.title.length>60?"…":""}"?\nIt will be added to the blocklist so it can't come back.`)) return;
       if (!overrides.blocked_ids.includes(story.id)) overrides.blocked_ids.push(story.id);
@@ -483,6 +505,7 @@ function storyCard(s, isBlocked){
       <span class="tag-pill">${esc(s.badge)}</span>
       ${s.spotlight ? '<span class="tag-pill" style="color:#63D8C6;border-color:rgba(99,216,198,.5)">✦ spotlight</span>' : ""}
       ${s.top ? '<span class="tag-pill" style="color:#FFB454;border-color:rgba(255,180,84,.6)">◉ top</span>' : ""}
+      ${s.pinned_brief ? '<span class="tag-pill" style="color:#FFB454;border-color:rgba(255,180,84,.6)">📌 pinned to brief</span>' : ""}
       ${s.locked ? '<span class="tag-pill" style="color:#FFB454;border-color:rgba(255,180,84,.6)">🔒 locked</span>' : ""}
       <span>${ago(s.ts)} ago · via ${esc(s.src)}</span>
     </div>
@@ -493,6 +516,7 @@ function storyCard(s, isBlocked){
       <button class="btn amber ${s.locked?"on":""} btn-lock" title="Locked stories aren't touched by the ingest merge">🔒 ${s.locked?"unlock":"lock"}</button>
       <button class="btn aqua ${s.spotlight?"on":""} btn-spot">✦ spotlight</button>
       <button class="btn amber ${s.top?"on":""} btn-top">◉ top</button>
+      <button class="btn aqua ${s.pinned_brief?"on":""} btn-pin" title="Force this story into the brief for 2 editions">📌 ${s.pinned_brief?"pinned":"pin to brief"}</button>
       <button class="btn red btn-del">delete</button>
       ${s.url && s.url !== "#" ? `<a class="btn" href="${esc(s.url)}" target="_blank" rel="noopener">↗ source</a>` : ""}
     </div>
@@ -591,6 +615,45 @@ function renderOverrides(){
   $("#ovBlocked").value = (overrides.blocked_ids || []).join("\n");
   $("#ovBlockedTerms").value = (overrides.blocked_terms || []).join(", ");
   $("#ovPinnedSpot").value = (overrides.pinned_spotlight || []).join(", ");
+  renderPinSuggestions();
+}
+
+function renderPinSuggestions(){
+  const list = overrides.pin_suggestions || [];
+  const box = $("#pinSuggestList");
+  if (!list.length) { box.innerHTML = `<div class="empty" style="padding:14px 0">no pending suggestions right now</div>`; return; }
+  box.innerHTML = list.map(sug => {
+    const story = feed.stories.find(s => s.id === sug.id);
+    const title = story ? story.title : sug.id;
+    return `
+    <div class="pin-suggest-row" data-pin="${esc(sug.id)}" style="display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line,rgba(158,216,210,.13))">
+      <div style="flex:1;min-width:0">
+        <div style="font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(title)}</div>
+        <div class="tip">covered by ${sug.source_count} sources: ${esc((sug.sources||[]).join(", "))}</div>
+      </div>
+      <button class="btn primary pin-confirm">📌 pin (2 editions)</button>
+      <button class="btn pin-dismiss">dismiss</button>
+    </div>`;
+  }).join("");
+  $$(".pin-suggest-row").forEach(row => {
+    const id = row.dataset.pin;
+    row.querySelector(".pin-confirm")?.addEventListener("click", () => {
+      overrides.pinned_brief = overrides.pinned_brief || [];
+      if (!overrides.pinned_brief.find(p => p.id === id)) {
+        overrides.pinned_brief.push({ id, editions_remaining: 2 });
+      }
+      const story = feed.stories.find(s => s.id === id);
+      if (story) story.pinned_brief = true;
+      overrides.pin_suggestions = (overrides.pin_suggestions || []).filter(p => p.id !== id);
+      markDirty(); renderPinSuggestions(); renderStories(); toast("pinned for 2 editions");
+    });
+    row.querySelector(".pin-dismiss")?.addEventListener("click", () => {
+      overrides.pin_suggestions = (overrides.pin_suggestions || []).filter(p => p.id !== id);
+      overrides.dismissed_pin_suggestions = overrides.dismissed_pin_suggestions || [];
+      if (!overrides.dismissed_pin_suggestions.includes(id)) overrides.dismissed_pin_suggestions.push(id);
+      markDirty(); renderPinSuggestions(); toast("dismissed");
+    });
+  });
 }
 function parseList(v, sep){
   return v.split(sep).map(s => s.trim()).filter(Boolean);
