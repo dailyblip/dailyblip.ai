@@ -1,6 +1,6 @@
 {
   "issue": 214,
-  "generated_at": "2026-07-14T20:43:09.653Z",
+  "generated_at": "2026-07-14T23:38:37.945Z",
   "brief": {
     "items": [
       {
@@ -58,22 +58,56 @@
   },
   "stories": [
     {
-      "id": "s_2cc0275fcceef652",
+      "id": "s_3e68f8ee554f3c0b",
       "cat": "tools",
       "badge": "breaking",
       "spotlight": false,
       "quality": 7,
       "tier": "journalism",
-      "title": "SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage",
-      "dek": "The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
-      "ts": "2026-07-14T19:25:00.000Z",
+      "title": "GPT-5.6 Sol deleting user files without consent, widespread reports",
+      "dek": "Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
+      "ts": "2026-07-14T21:50:11.000Z",
       "read": "3 min",
       "also": [],
       "top": true,
-      "heat": 108,
-      "move": 56
+      "heat": 107,
+      "move": 59
+    },
+    {
+      "id": "s_7218bca86f1b347e",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "OpenAI developing screenless AI speaker with physical movement",
+      "dek": "OpenAI's first hardware product is reportedly a mobile smart speaker with mechanical elements designed to function as a ChatGPT-powered home companion.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/",
+      "ts": "2026-07-14T22:22:24.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 49
+    },
+    {
+      "id": "s_2175a7f109e222f7",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "OpenAI denies merit in Apple trade secret lawsuit",
+      "dek": "OpenAI responded to Apple's allegations that it poached employees to steal confidential information, stating the complaint lacks evidence.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/",
+      "ts": "2026-07-14T22:07:42.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 80,
+      "move": 44
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -89,8 +123,25 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 48
+      "heat": 88,
+      "move": -2
+    },
+    {
+      "id": "s_2cc0275fcceef652",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage",
+      "dek": "The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
+      "ts": "2026-07-14T19:25:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 105,
+      "move": -1
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -106,8 +157,8 @@
       "ts": "2026-07-14T18:33:31.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 100,
-      "move": 56
+      "heat": 97,
+      "move": -1
     },
     {
       "id": "s_986155e62b49ff74",
@@ -123,8 +174,8 @@
       "ts": "2026-07-14T17:45:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": 46
+      "heat": 78,
+      "move": -3
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -140,8 +191,8 @@
       "ts": "2026-07-14T17:18:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 99,
-      "move": 57
+      "heat": 96,
+      "move": -1
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -157,8 +208,8 @@
       "ts": "2026-07-14T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -5
+      "heat": 77,
+      "move": -7
     },
     {
       "id": "s_23767f964a637e72",
@@ -174,8 +225,8 @@
       "ts": "2026-07-14T16:28:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -5
+      "heat": 77,
+      "move": -7
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -191,8 +242,8 @@
       "ts": "2026-07-14T16:22:15.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
-      "move": -4
+      "heat": 85,
+      "move": -3
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -208,8 +259,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -5
+      "heat": 84,
+      "move": -3
     },
     {
       "id": "s_ec43065966072242",
@@ -225,8 +276,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 79,
-      "move": -5
+      "heat": 76,
+      "move": -7
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -242,8 +293,8 @@
       "ts": "2026-07-14T15:47:36.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 69,
-      "move": -8
+      "heat": 66,
+      "move": -6
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -259,8 +310,8 @@
       "ts": "2026-07-14T15:17:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 97,
-      "move": -3
+      "heat": 94,
+      "move": -2
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -276,8 +327,8 @@
       "ts": "2026-07-14T15:06:28.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 96,
-      "move": -3
+      "heat": 93,
+      "move": -2
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -293,8 +344,8 @@
       "ts": "2026-07-14T14:37:48.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 58,
-      "move": -14
+      "heat": 55,
+      "move": -5
     },
     {
       "id": "s_2cae585118ae58a3",
@@ -310,8 +361,8 @@
       "ts": "2026-07-14T14:26:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -5
+      "heat": 75,
+      "move": -7
     },
     {
       "id": "s_07270bd7745b992c",
@@ -327,8 +378,8 @@
       "ts": "2026-07-14T14:24:53.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 96,
-      "move": -3
+      "heat": 93,
+      "move": -2
     },
     {
       "id": "s_d03c89151d098f57",
@@ -344,8 +395,8 @@
       "ts": "2026-07-14T14:06:47.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 77,
-      "move": -9
+      "heat": 74,
+      "move": -3
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -361,8 +412,8 @@
       "ts": "2026-07-14T14:01:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -9
+      "heat": 72,
+      "move": -3
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -378,8 +429,8 @@
       "ts": "2026-07-14T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -9
+      "heat": 74,
+      "move": -3
     },
     {
       "id": "s_27568dc6ad1def84",
@@ -395,8 +446,8 @@
       "ts": "2026-07-14T13:29:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 67,
-      "move": -11
+      "heat": 64,
+      "move": -4
     },
     {
       "id": "s_a5c0710938e469b9",
@@ -412,8 +463,8 @@
       "ts": "2026-07-14T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": -9
+      "heat": 71,
+      "move": -3
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -429,8 +480,8 @@
       "ts": "2026-07-14T09:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -5
+      "heat": 77,
+      "move": -7
     },
     {
       "id": "s_c479b3a9a06e96ab",
@@ -446,8 +497,8 @@
       "ts": "2026-07-14T08:29:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 72,
-      "move": -5
+      "heat": 69,
+      "move": -6
     },
     {
       "id": "s_70aeec97bcd8cd58",
@@ -463,8 +514,8 @@
       "ts": "2026-07-14T06:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 70,
-      "move": -5
+      "heat": 67,
+      "move": -9
     },
     {
       "id": "s_b4553fdd41168ce5",
@@ -481,7 +532,7 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -498,7 +549,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -1
     },
     {
       "id": "s_6358ddebecad3055",
@@ -515,7 +566,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -1
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -532,7 +583,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": -3
+      "move": 2
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -549,7 +600,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_0b9a256573f21194",
@@ -566,7 +617,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -583,7 +634,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -600,7 +651,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -617,7 +668,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -1
     },
     {
       "id": "s_efecb35d7b427474",
@@ -634,7 +685,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_b2beb695d675ec33",
@@ -651,7 +702,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_1f8d572b50f537be",
@@ -668,7 +719,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -684,7 +735,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_cca9d9854a8b2b2e",
@@ -701,7 +752,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_7fcf1c64331ce573",
@@ -718,7 +769,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_5e8fda4219f983fc",
@@ -735,7 +786,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_6e1e0d51aedb6c51",
@@ -752,7 +803,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -769,7 +820,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -786,7 +837,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_1c07dda2c1408621",
@@ -802,7 +853,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_98d85122ab641d19",
@@ -818,7 +869,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -834,7 +885,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -849,7 +900,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -866,7 +917,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -882,7 +933,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -897,7 +948,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -913,7 +964,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -3
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -929,7 +980,7 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -944,7 +995,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -960,7 +1011,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -975,7 +1026,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -990,7 +1041,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -3
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -1005,52 +1056,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -5
-    },
-    {
-      "id": "s_5244feb84148957b",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Creator tests Ideogram 4 locally for realistic smartphone photography",
-      "dek": "Artist shares workflow results using open-weight Ideogram 4 in ComfyUI, focusing on natural lighting and photorealism without cinematic polish.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usn6wl/ideogram_4_results_surprisingly_realistic_image/",
-      "ts": "2026-07-10T13:07:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -5
-    },
-    {
-      "id": "s_038c1ce14623ecc3",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "title": "ComfyUI workflow documenter extracts custom nodes and settings from PNGs",
-      "dek": "Free, browser-based tool automatically documents ComfyUI workflows—extracting custom node packs, models, and settings from saved files. Fully offline, no server required.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usmz52/drop_any_comfyui_workflow_or_png_get_instant_docs/",
-      "ts": "2026-07-10T12:58:38.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -5
-    },
-    {
-      "id": "s_15ebc3c3102e441c",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Creator explores art style mixing in Krea 2 with weighted LoRAs",
-      "dek": "Artist discovers Krea 2 enables precise control over blended art styles via weighted LoRAs, comparing the workflow to Stable Diffusion 1.5/SDXL era flexibility.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usme1e/krea2_klein_iii/",
-      "ts": "2026-07-10T12:33:39.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -5
+      "move": -2
     }
   ],
   "models": [
@@ -1167,10 +1173,10 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stats": {
-    "scanned_last_run": 16,
-    "published_today": 24,
+    "scanned_last_run": 5,
+    "published_today": 27,
     "sources_live": 14,
-    "slopped_last_run": 10
+    "slopped_last_run": 2
   },
   "tool_status": [
     {

@@ -5,14 +5,30 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 20:43:09 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 23:38:37 GMT</lastBuildDate>
     <item>
-      <title>SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload</link>
-      <guid isPermaLink="false">s_2cc0275fcceef652</guid>
-      <description>The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.</description>
+      <title>GPT-5.6 Sol deleting user files without consent, widespread reports</title>
+      <link>https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/</link>
+      <guid isPermaLink="false">s_3e68f8ee554f3c0b</guid>
+      <description>Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.</description>
       <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 19:25:00 GMT</pubDate>
+      <pubDate>Tue, 14 Jul 2026 21:50:11 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI developing screenless AI speaker with physical movement</title>
+      <link>https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/</link>
+      <guid isPermaLink="false">s_7218bca86f1b347e</guid>
+      <description>OpenAI's first hardware product is reportedly a mobile smart speaker with mechanical elements designed to function as a ChatGPT-powered home companion.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 22:22:24 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI denies merit in Apple trade secret lawsuit</title>
+      <link>https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/</link>
+      <guid isPermaLink="false">s_2175a7f109e222f7</guid>
+      <description>OpenAI responded to Apple's allegations that it poached employees to steal confidential information, stating the complaint lacks evidence.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 22:07:42 GMT</pubDate>
     </item>
     <item>
       <title>Apple releases iOS 27 public beta with revamped AI-powered Siri</title>
@@ -21,6 +37,14 @@
       <description>Apple's redesigned Siri assistant is now available in public beta ahead of fall launch, marking the first broad test of its AI overhaul against competitors like ChatGPT and Gemini.</description>
       <category>tools</category>
       <pubDate>Tue, 14 Jul 2026 19:42:27 GMT</pubDate>
+    </item>
+    <item>
+      <title>SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload</link>
+      <guid isPermaLink="false">s_2cc0275fcceef652</guid>
+      <description>The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 19:25:00 GMT</pubDate>
     </item>
     <item>
       <title>Major publishers sue Google for training Gemini on copyrighted works without permission</title>
@@ -141,30 +165,6 @@
       <description>Premium subscribers can now chat with Spotify to find music, podcasts, and audiobooks using a blend of proprietary and third-party AI models.</description>
       <category>tools</category>
       <pubDate>Tue, 14 Jul 2026 14:06:47 GMT</pubDate>
-    </item>
-    <item>
-      <title>Apple sues OpenAI for alleged trade secret theft by former employees</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/965294/openai-apple-trade-secrets-lawsuit-sam-altman-ipo</link>
-      <guid isPermaLink="false">s_8ad960bf1ba388e8</guid>
-      <description>High-profile litigation filed in Northern California federal court accuses former Apple staff of stealing confidential information for OpenAI's hardware division.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 14:01:07 GMT</pubDate>
-    </item>
-    <item>
-      <title>Superhuman's new auto-draft email feature generates replies requiring minimal editing</title>
-      <link>https://techcrunch.com/2026/07/14/superhumans-new-auto-draft-feature-almost-makes-me-like-ai-replies/</link>
-      <guid isPermaLink="false">s_a0f97bb99d39b8a3</guid>
-      <description>Updated auto-draft learns sender tone and identifies priority emails, producing natural-sounding responses that tested with little revision needed.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 14:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Material Maker 1.7 arrives on Steam with UI overhaul and new material nodes</title>
-      <link>https://80.lv/articles/create-procedural-materials-with-material-maker-now-on-steam/</link>
-      <guid isPermaLink="false">s_27568dc6ad1def84</guid>
-      <description>Procedural material authoring tool adds dynamic sky materials, 32-bit node options, and keyboard shortcuts; upgraded to Godot 4.7.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 13:29:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
