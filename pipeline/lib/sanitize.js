@@ -20,9 +20,20 @@ export function validateBrief(brief, validStoryIds) {
       story: it.story,
       html: sanitizeInlineB(it.html),
       secs: Math.min(15, Math.max(5, Number(it.secs) || 10)),
+      // Impact score drives both the deterministic sort order and the
+      // visual size hierarchy on the site — clamped to a sane 1–10 range,
+      // defaulting to 5 (mid) if the model omits it rather than crashing.
+      impact: Math.min(10, Math.max(1, Number(it.impact) || 5)),
+      // Hardware/infra stories get an explicit flag so the site can show
+      // a distinct badge — readers shouldn't expect a tool launch and
+      // find a GPU story with no warning.
+      hardware: !!it.hardware,
     }));
   if (items.length < 4) throw new Error(`brief gate: only ${items.length} valid items`);
   if (new Set(items.map((i) => i.story)).size !== items.length) throw new Error("brief gate: duplicate stories");
   if (!brief.title || brief.title.length > 120) throw new Error("brief gate: bad title");
-  return { ...brief, title: String(brief.title), items: items.slice(0, 6) };
+  // Deterministic ranking: sort by the model's own impact score rather than
+  // trusting whatever order it happened to return. Ties keep original order.
+  const sorted = items.slice(0, 6).sort((a, b) => b.impact - a.impact);
+  return { ...brief, title: String(brief.title), items: sorted };
 }
