@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 06:30:46 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 11:59:26 GMT</lastBuildDate>
     <item>
       <title>Apple sues OpenAI over alleged trade secret theft by former employee</title>
       <link>https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/</link>
@@ -13,6 +13,30 @@
       <description>Apple claims a security bug allowed a departed engineer to maintain confidential server access after joining OpenAI, alleging conspiracy to steal proprietary information.</description>
       <category>rights</category>
       <pubDate>Mon, 13 Jul 2026 19:17:51 GMT</pubDate>
+    </item>
+    <item>
+      <title>Maxon Autograph offers free After Effects alternative for motion graphics</title>
+      <link>https://www.creativebloq.com/3d/3d-software/i-tried-maxons-free-after-effects-alternative-and-i-dont-want-to-go-back</link>
+      <guid isPermaLink="false">s_a5c0710938e469b9</guid>
+      <description>Free professional motion design software from Maxon; legitimate tool alternative worth testing.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 11:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>New York enacts first statewide data center moratorium</title>
+      <link>https://www.theverge.com/policy/965110/new-york-ai-data-center-moratorium</link>
+      <guid isPermaLink="false">s_e74d29ba97202e0c</guid>
+      <description>Governor Hochul signed a one-year pause on new hyperscale data center permits over 50 megawatts, citing infrastructure concerns.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 09:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>3D character artist details Angel of Death sculpting and Unreal pipeline</title>
+      <link>https://80.lv/articles/sculpting-character-armor-with-human-face-motifs/</link>
+      <guid isPermaLink="false">s_c479b3a9a06e96ab</guid>
+      <description>Workflow breakdown for character creation using MetaHuman, ZBrush, and UE5; solid technical reference.</description>
+      <category>video</category>
+      <pubDate>Tue, 14 Jul 2026 08:29:00 GMT</pubDate>
     </item>
     <item>
       <title>Free mocap animation pack: soccer moves for 3D/VFX projects</title>
@@ -141,30 +165,6 @@
       <description>Argument that contemporary image-making lacks deliberate vision. Conceptual primer for photographers building intentional practice.</description>
       <category>image</category>
       <pubDate>Sat, 11 Jul 2026 11:30:36 GMT</pubDate>
-    </item>
-    <item>
-      <title>Marvel Cosmic Invasion logo designed with custom font and organic elements</title>
-      <link>https://www.creativebloq.com/design/logos-icons/how-a-designer-created-the-dirty-organic-insectoid-logo-for-marvel-cosmic-invasion</link>
-      <guid isPermaLink="false">s_6e1e0d51aedb6c51</guid>
-      <description>Designer breakdown of gooey, insectoid branding using custom typography. Practical design methodology for branded campaigns.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 11:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Speed painting workflow teaches gesture control and spontaneity</title>
-      <link>https://www.creativebloq.com/art/digital-art/spontaneous-speed-painting-could-help-you-to-trust-your-art</link>
-      <guid isPermaLink="false">s_29c38c6158cba3ce</guid>
-      <description>Artist Duy An Lam demonstrates loose pose work and energy flow before refinement. Applicable technique for digital painters building confidence.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 10:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Insta360 and Bambu Lab collaborate on 3D printing integration</title>
-      <link>https://www.creativebloq.com/3d/3d-printing/as-a-photographer-the-new-insta360-x-bambu-lab-collab-makes-me-incredibly-happy</link>
-      <guid isPermaLink="false">s_fa50b26f80fe5e5b</guid>
-      <description>360-camera and 3D printer partnership. Relevant hardware development for creators exploring mixed modalities.</description>
-      <category>tools</category>
-      <pubDate>Sat, 11 Jul 2026 07:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

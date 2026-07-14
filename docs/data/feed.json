@@ -1,6 +1,6 @@
 {
   "issue": 213,
-  "generated_at": "2026-07-14T06:30:46.764Z",
+  "generated_at": "2026-07-14T11:59:26.551Z",
   "brief": {
     "items": [
       {
@@ -55,9 +55,60 @@
       "ts": "2026-07-13T19:17:51.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 98,
+      "heat": 92,
       "move": 0,
       "top": true
+    },
+    {
+      "id": "s_a5c0710938e469b9",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Maxon Autograph offers free After Effects alternative for motion graphics",
+      "dek": "Free professional motion design software from Maxon; legitimate tool alternative worth testing.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/3d/3d-software/i-tried-maxons-free-after-effects-alternative-and-i-dont-want-to-go-back",
+      "ts": "2026-07-14T11:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 83,
+      "move": 49
+    },
+    {
+      "id": "s_e74d29ba97202e0c",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "New York enacts first statewide data center moratorium",
+      "dek": "Governor Hochul signed a one-year pause on new hyperscale data center permits over 50 megawatts, citing infrastructure concerns.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/policy/965110/new-york-ai-data-center-moratorium",
+      "ts": "2026-07-14T09:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 89,
+      "move": 52
+    },
+    {
+      "id": "s_c479b3a9a06e96ab",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "3D character artist details Angel of Death sculpting and Unreal pipeline",
+      "dek": "Workflow breakdown for character creation using MetaHuman, ZBrush, and UE5; solid technical reference.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/sculpting-character-armor-with-human-face-motifs/",
+      "ts": "2026-07-14T08:29:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 80,
+      "move": 49
     },
     {
       "id": "s_70aeec97bcd8cd58",
@@ -73,8 +124,8 @@
       "ts": "2026-07-14T06:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 84,
-      "move": 48
+      "heat": 78,
+      "move": -3
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -90,8 +141,8 @@
       "ts": "2026-07-13T18:22:10.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 80,
-      "move": -1
+      "heat": 74,
+      "move": -6
     },
     {
       "id": "s_6358ddebecad3055",
@@ -107,8 +158,8 @@
       "ts": "2026-07-13T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -1
+      "heat": 73,
+      "move": -6
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -124,7 +175,7 @@
       "ts": "2026-07-13T16:25:37.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 105,
+      "heat": 99,
       "move": 0
     },
     {
@@ -141,8 +192,8 @@
       "ts": "2026-07-13T15:34:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -1
+      "heat": 82,
+      "move": -2
     },
     {
       "id": "s_0b9a256573f21194",
@@ -158,8 +209,8 @@
       "ts": "2026-07-13T15:06:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -4
+      "heat": 63,
+      "move": -6
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -175,8 +226,8 @@
       "ts": "2026-07-13T12:01:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 66,
-      "move": -2
+      "heat": 60,
+      "move": -5
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -192,8 +243,8 @@
       "ts": "2026-07-13T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 61,
-      "move": -1
+      "heat": 60,
+      "move": -3
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -210,7 +261,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -2
     },
     {
       "id": "s_efecb35d7b427474",
@@ -227,7 +278,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_b2beb695d675ec33",
@@ -244,7 +295,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_1f8d572b50f537be",
@@ -261,7 +312,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -277,7 +328,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_cca9d9854a8b2b2e",
@@ -294,7 +345,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_7fcf1c64331ce573",
@@ -311,7 +362,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_5e8fda4219f983fc",
@@ -328,7 +379,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_6e1e0d51aedb6c51",
@@ -345,7 +396,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -362,7 +413,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -379,7 +430,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_1c07dda2c1408621",
@@ -395,7 +446,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_98d85122ab641d19",
@@ -427,7 +478,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -475,7 +526,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -490,7 +541,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -506,7 +557,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -537,7 +588,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -553,7 +604,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -568,7 +619,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -583,7 +634,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -598,7 +649,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_5244feb84148957b",
@@ -613,7 +664,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -628,7 +679,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -643,7 +694,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -658,7 +709,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_959d825718f0d41f",
@@ -673,7 +724,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_3a6e9021ecabca6b",
@@ -688,7 +739,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_d227c01975ac31ba",
@@ -703,7 +754,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_81903600b8406df1",
@@ -718,7 +769,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_5012f89709d598db",
@@ -733,7 +784,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_ca1c525e3ab05a6a",
@@ -748,7 +799,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_8b07a3a2688e9c39",
@@ -763,7 +814,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_7450e04d7677bb91",
@@ -778,7 +829,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_f2379eceafd20cc0",
@@ -793,7 +844,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_2922cfdde0d796dd",
@@ -808,7 +859,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -823,7 +874,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_880ee3c2d5501c1e",
@@ -853,7 +904,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_9491981398fceeeb",
@@ -868,7 +919,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -883,7 +934,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -3
     }
   ],
   "models": [
@@ -1000,10 +1051,10 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stats": {
-    "scanned_last_run": 3,
-    "published_today": 9,
+    "scanned_last_run": 15,
+    "published_today": 11,
     "sources_live": 14,
-    "slopped_last_run": 2
+    "slopped_last_run": 12
   },
   "tool_status": [
     {
