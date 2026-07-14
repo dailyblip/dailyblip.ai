@@ -62,3 +62,26 @@ export const saveHealth = (health) => {
 
 export const loadSources = () => readJSON(PATHS.sources, { feeds: [], tool_feeds: [] });
 export const saveSources = (s) => writeJSON(PATHS.sources, s);
+
+// overrides.json: admin-editable standing rules, ALSO written by the
+// pipeline itself now (pin_suggestions/pinned_brief bookkeeping). Shared
+// here so ingest.js and brief.js don't each maintain their own copy of
+// the default shape, which would drift.
+export const PATHS_OVERRIDES = path.join(ROOT, "data", "overrides.json");
+const OVERRIDES_DEFAULT = {
+  blocked_ids: [], blocked_terms: [], pinned_spotlight: [],
+  // pinned_brief: [{ id, editions_remaining }] — manually pinned (via
+  // admin, direct or confirmed-from-suggestion), forced into the brief
+  // for a set number of editions regardless of the normal age window.
+  pinned_brief: [],
+  // pin_suggestions: [{ id, source_count, sources, detected_at }] —
+  // auto-detected by ingest.js when a story crosses the 3-source
+  // corroboration threshold. Admin confirms or dismisses; never
+  // auto-applied.
+  pin_suggestions: [],
+  // dismissed_pin_suggestions: [id, ...] — so a dismissed suggestion
+  // doesn't just reappear on the next ingest run.
+  dismissed_pin_suggestions: [],
+};
+export const loadOverrides = () => ({ ...OVERRIDES_DEFAULT, ...readJSON(PATHS_OVERRIDES, {}) });
+export const saveOverrides = (o) => writeJSON(PATHS_OVERRIDES, o);
