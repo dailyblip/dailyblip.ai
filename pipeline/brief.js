@@ -6,7 +6,7 @@
 // `node pipeline/brief.js pm`. Defaults to "am" if omitted (keeps this
 // runnable exactly as before for anyone testing locally).
 import { askJSON } from "./lib/claude.js";
-import { loadFeed, saveFeed } from "./lib/store.js";
+import { loadFeed, saveFeed, loadOverrides, saveOverrides } from "./lib/store.js";
 import { validateBrief } from "./lib/sanitize.js";
 
 const edition = (process.argv[2] || "am").toLowerCase() === "pm" ? "pm" : "am";
@@ -19,6 +19,7 @@ Selection rules:
 - Spread across mediums when impact is comparable — don't run six video stories.
 - You are given the previous edition's brief (this runs twice daily now, AM and PM). Do NOT repeat a story from it unless it materially developed since (new deadline, new number, reversal) — and if it did, the item must lead with what changed.
 - At most ONE spotlight (maker) story, and only if it's genuinely remarkable.
+- PINNED STORIES: any candidate marked "pinned":true in the input MUST be included in your six, no exceptions — it was manually pinned by the editor as a story worth tracking across multiple editions. Write its sentence fresh, reflecting whatever is newest/most developed about it right now; do not treat it as a forbidden repeat even if it resembles a previous edition's item.
 - HARDWARE/INFRASTRUCTURE EXCEPTION: a story about chips, datacenters, or compute infrastructure (e.g. a new AI chip entering production) is normally out of scope for a creator brief — but it's allowed, MAJOR ONES ONLY (a household-name company, a genuinely large deal/capacity number), if and only if you can write a concrete, specific bridge to what it means for someone generating images/video/music/text. "This could eventually mean cheaper inference" is too vague to qualify — you need something closer to "if this lowers Meta's own inference costs, expect it to show up as cheaper or faster limits on Meta AI's image tools within the next year or two." If you can't write a genuine, specific bridge sentence, don't include the story at all. Mark these items hardware:true.
 
 For each pick write:
@@ -40,12 +41,16 @@ function isJournalism(s) {
 
 async function main() {
   const feed = loadFeed();
+  const overrides = loadOverrides();
   // Twice-daily editions are roughly 12h apart; a 14h window (vs the old
   // 26h for once-daily) keeps each edition focused on what's actually new
   // since the last one, with a couple hours of buffer either way.
   const windowMs = 14 * 3600 * 1000;
   const eligible = feed.stories.filter(isJournalism);
   const excludedCount = feed.stories.length - eligible.length;
+
+  const activePins = (overrides.pinned_brief || []).filter((p) => p.editions_remaining > 0);
+  const activePinIds = new Set(activePins.map((p) => p.id));
 
   let candidates = eligible
     .filter((s) => Date.now() - new Date(s.ts) < windowMs)
@@ -59,7 +64,26 @@ async function main() {
     console.warn(`brief: too few journalism-tier stories to write a ${edition.toUpperCase()} brief; keeping the previous edition's.`);
     return;
   }
-  console.log(`brief [${edition}]: ${candidates.length} eligible candidates (excluded ${excludedCount} community-sourced stories from consideration).`);
+
+  // Pinned stories are force-included as candidates regardless of the
+  // time window or journalism-tier filter above — a human explicitly
+  // chose to track this one, so it bypasses the normal eligibility gate
+  // entirely. Add any that aren't already in the candidate list.
+  const candidateIds = new Set(candidates.map((c) => c.id));
+  let pinnedAdded = 0;
+  for (const id of activePinIds) {
+    if (candidateIds.has(id)) continue;
+    const s = feed.stories.find((x) => x.id === id);
+    if (s) {
+      candidates.push({ id: s.id, cat: s.cat, badge: s.badge, spotlight: s.spotlight, title: s.title, dek: s.dek, ts: s.ts });
+      pinnedAdded++;
+    }
+  }
+  // Flag pinned candidates in the payload so the model knows which ones
+  // are mandatory (see the PINNED STORIES rule in BRIEF_SYSTEM).
+  candidates = candidates.map((c) => (activePinIds.has(c.id) ? { ...c, pinned: true } : c));
+
+  console.log(`brief [${edition}]: ${candidates.length} eligible candidates (excluded ${excludedCount} community-sourced stories; ${pinnedAdded} pinned stories force-added; ${activePinIds.size} active pins total).`);
 
   const today = new Date().toLocaleDateString("en-US", {
     weekday: "long", month: "long", day: "numeric", timeZone: "America/New_York",
@@ -86,10 +110,24 @@ async function main() {
   // Publish gate: validates structure, sanitizes HTML to <b> only, dedupes.
   const gated = validateBrief(result, new Set(feed.stories.map((s) => s.id)));
 
+  // tracking:true is set here in code — never trusted from the model —
+  // since pin status is a deterministic fact we already know, not a
+  // judgment call. Any pinned story that actually made it into the
+  // published six gets the label and its edition counter decremented;
+  // pins that reach 0 remaining editions drop out entirely.
+  const publishedIds = new Set(gated.items.map((i) => i.story));
+  for (const item of gated.items) {
+    if (activePinIds.has(item.story)) item.tracking = true;
+  }
+  overrides.pinned_brief = (overrides.pinned_brief || [])
+    .map((p) => (publishedIds.has(p.id) ? { ...p, editions_remaining: p.editions_remaining - 1 } : p))
+    .filter((p) => p.editions_remaining > 0);
+  saveOverrides(overrides);
+
   feed.issue = (feed.issue || 0) + 1;
   feed.brief = { ...gated, date: new Date().toISOString(), edition };
   saveFeed(feed);
-  console.log(`brief [${edition}]: issue ${feed.issue} written with ${gated.items.length} items.`);
+  console.log(`brief [${edition}]: issue ${feed.issue} written with ${gated.items.length} items (${gated.items.filter(i=>i.tracking).length} tracking, ${gated.items.filter(i=>i.hardware).length} hardware).`);
 }
 
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
