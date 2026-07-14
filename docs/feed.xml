@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 04:04:47 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 06:30:46 GMT</lastBuildDate>
     <item>
       <title>Apple sues OpenAI over alleged trade secret theft by former employee</title>
       <link>https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/</link>
@@ -15,12 +15,12 @@
       <pubDate>Mon, 13 Jul 2026 19:17:51 GMT</pubDate>
     </item>
     <item>
-      <title>Director Antonio Milo breaks down CGI parasite character campaign in Unreal Engine</title>
-      <link>https://80.lv/articles/building-captain-itch-designing-a-character-led-cgi-campaign-with-unreal-engine/</link>
-      <guid isPermaLink="false">s_b3ca6a4a0a3df0f9</guid>
-      <description>SuperBlimp's Captain Itch campaign demonstrates hand-keyed character animation, Houdini grooming, and Unreal rendering pipeline for stylized creature design with deliberate artistic control.</description>
+      <title>Free mocap animation pack: soccer moves for 3D/VFX projects</title>
+      <link>https://80.lv/articles/get-this-free-soccer-mocap-animation-pack-with-dribbles-juggling-more/</link>
+      <guid isPermaLink="false">s_70aeec97bcd8cd58</guid>
+      <description>Anderson Rohr's monthly free motion-capture library adds dribbling, juggling, and other soccer-specific animations for games and cinematics.</description>
       <category>video</category>
-      <pubDate>Mon, 13 Jul 2026 18:25:00 GMT</pubDate>
+      <pubDate>Tue, 14 Jul 2026 06:21:00 GMT</pubDate>
     </item>
     <item>
       <title>Apple sues OpenAI for alleged trade secret theft and employee poaching</title>
@@ -55,28 +55,12 @@
       <pubDate>Mon, 13 Jul 2026 15:34:59 GMT</pubDate>
     </item>
     <item>
-      <title>Clément Doranlo showcases motion-captured aerial dance with custom armor in Maya</title>
-      <link>https://80.lv/articles/beautiful-aerial-dance-3d-animation-full-of-calm-grace/</link>
-      <guid isPermaLink="false">s_bf08d7596331b820</guid>
-      <description>Riverskin project demonstrates advanced rigging, animation, and character design with deliberate aesthetic choices. Work exhibits technical control and artistic vision across modeling and post-production.</description>
-      <category>video</category>
-      <pubDate>Mon, 13 Jul 2026 15:31:00 GMT</pubDate>
-    </item>
-    <item>
       <title>Defenders adopt prompt injection tactics to disable malicious AI agents</title>
       <link>https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/</link>
       <guid isPermaLink="false">s_0b9a256573f21194</guid>
       <description>&quot;Context bombing&quot; uses attacker techniques defensively, flooding AI systems with contradictory instructions to prevent harmful behavior before it executes.</description>
       <category>industry</category>
       <pubDate>Mon, 13 Jul 2026 15:06:34 GMT</pubDate>
-    </item>
-    <item>
-      <title>Director flattens 3D character head to match wide-angle lens distortion in Blender</title>
-      <link>https://80.lv/articles/this-3d-character-is-actually-flat-it-s-crazy/</link>
-      <guid isPermaLink="false">s_b6491befe496676a</guid>
-      <description>Dust of the Simulacrum director Eit Mitsufuchi reveals sophisticated technique: intentional 3D-to-2D morphing using Blender's Lattice modifier for stylized wide-angle effects. Masterful execution of intentional distortion.</description>
-      <category>video</category>
-      <pubDate>Mon, 13 Jul 2026 14:32:00 GMT</pubDate>
     </item>
     <item>
       <title>Blender 5.2 release candidate adds new sculpting brush tools</title>
@@ -87,28 +71,12 @@
       <pubDate>Mon, 13 Jul 2026 12:01:00 GMT</pubDate>
     </item>
     <item>
-      <title>3D artist creates Wolverine in comic book toon shader style</title>
-      <link>https://80.lv/articles/3d-take-on-wolverine-with-a-toon-shader-inspired-by-a-comic-book-aesthetic/</link>
-      <guid isPermaLink="false">s_e49b9851718e08d2</guid>
-      <description>Tian Jin and Vincent Ménier demonstrate deliberate shader control to achieve stylized comic aesthetic in Blender. Strong technical execution and distinctive visual point of view.</description>
-      <category>image</category>
-      <pubDate>Mon, 13 Jul 2026 08:21:00 GMT</pubDate>
-    </item>
-    <item>
       <title>Game artist Jenny Mati details multi-tool workflow for scene composition</title>
       <link>https://www.creativebloq.com/art/digital-art/how-to-combine-software-to-create-art-for-game-scenery</link>
       <guid isPermaLink="false">s_b1c0426dab3224e8</guid>
       <description>Creator walks through practical pipeline: Maya base, sketch, V-Ray rendering, and post-work for depth and atmosphere. Concrete technique.</description>
       <category>tools</category>
       <pubDate>Mon, 13 Jul 2026 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Indie team films live-action reference for cinematic platformer Deer &amp; Boy</title>
-      <link>https://80.lv/articles/indie-developers-film-themselves-as-animation-reference-for-their-cinematic-platformer/</link>
-      <guid isPermaLink="false">s_1224235fee688e2d</guid>
-      <description>Developers of Deer &amp; Boy use practical motion reference to animate character movement. Shows deliberate craft and technical discipline in animation workflow.</description>
-      <category>video</category>
-      <pubDate>Mon, 13 Jul 2026 07:44:00 GMT</pubDate>
     </item>
     <item>
       <title>Apple's scrapped self-driving car seeded Neural Engine AI chip architecture</title>
@@ -127,30 +95,6 @@
       <pubDate>Sun, 12 Jul 2026 13:00:37 GMT</pubDate>
     </item>
     <item>
-      <title>Hasselblad XPan editorial shoot demonstrates panoramic film storytelling</title>
-      <link>https://petapixel.com/2026/07/12/running-on-film-with-the-hasselblad-xpan/</link>
-      <guid isPermaLink="false">s_db4ca1dcfacb9a2b</guid>
-      <description>Sports photographer Maud shot on XPan to tell a running narrative in few frames. Deliberate constraint-based technique with clear conceptual intent.</description>
-      <category>image</category>
-      <pubDate>Sun, 12 Jul 2026 12:30:27 GMT</pubDate>
-    </item>
-    <item>
-      <title>Photographer prioritizes intention over reaction in mountain and personal work</title>
-      <link>https://petapixel.com/2026/07/12/how-intention-changes-your-photography/</link>
-      <guid isPermaLink="false">s_e662af7aa0e3d019</guid>
-      <description>Decades-long practice rethinking deliberate vision versus documentation reflex. Philosophical framework applicable across mediums.</description>
-      <category>image</category>
-      <pubDate>Sun, 12 Jul 2026 12:01:47 GMT</pubDate>
-    </item>
-    <item>
-      <title>Fantasy artist shares digital painting workflow: Photoshop and Blender fundamentals</title>
-      <link>https://www.creativebloq.com/art/digital-art/how-to-build-a-digital-painting-from-the-ground-up-using-photoshop-and-blender</link>
-      <guid isPermaLink="false">s_e519e02d1415570b</guid>
-      <description>Pierre Ignaszewski walks through composition, value, and layering techniques for character work. Practical breakdown of separating figures and managing detail hierarchy.</description>
-      <category>tools</category>
-      <pubDate>Sun, 12 Jul 2026 12:00:00 GMT</pubDate>
-    </item>
-    <item>
       <title>ASUS ProArt PZ14 Windows tablet for digital artists reviewed</title>
       <link>https://www.creativebloq.com/tech/laptops/asus-proart-pz14-review-a-better-windows-tablet-but-not-a-perfect-one</link>
       <guid isPermaLink="false">s_b2beb695d675ec33</guid>
@@ -165,6 +109,62 @@
       <description>Megapixel and dynamic range shootout for high-end gear. Technical reference for photographers weighing sensor choices.</description>
       <category>image</category>
       <pubDate>Sat, 11 Jul 2026 14:01:34 GMT</pubDate>
+    </item>
+    <item>
+      <title>Godot Road Generator adds procedural intersection lanes</title>
+      <link>https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/</link>
+      <guid isPermaLink="false">s_dabdfae8cca17885</guid>
+      <description>TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.</description>
+      <category>tools</category>
+      <pubDate>Sat, 11 Jul 2026 14:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Summer 2026 astrophotography guide: eclipses, meteor showers, planetary alignments</title>
+      <link>https://petapixel.com/2026/07/11/capture-the-night-promasters-summer-2026-astrophotography-guide/</link>
+      <guid isPermaLink="false">s_cca9d9854a8b2b2e</guid>
+      <description>Seasonal event calendar with equipment recommendations. Planning resource for photographers targeting night-sky work.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 13:30:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>Indie game Kidbash: Super Legend uses Blender + SNES-style rendering</title>
+      <link>https://www.creativebloq.com/3d/video-game-design/kidbash-super-legend-is-built-in-blender-but-rendered-like-a-classic-snes-game</link>
+      <guid isPermaLink="false">s_7fcf1c64331ce573</guid>
+      <description>Blender-to-retro-graphics pipeline revives Donkey Kong Country's technique. Technical approach worth noting for game devs.</description>
+      <category>video</category>
+      <pubDate>Sat, 11 Jul 2026 13:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Street photography remains vital despite ubiquitous cameras</title>
+      <link>https://petapixel.com/2026/07/11/we-need-street-photography-now-more-than-ever/</link>
+      <guid isPermaLink="false">s_5e8fda4219f983fc</guid>
+      <description>Argument that contemporary image-making lacks deliberate vision. Conceptual primer for photographers building intentional practice.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 11:30:36 GMT</pubDate>
+    </item>
+    <item>
+      <title>Marvel Cosmic Invasion logo designed with custom font and organic elements</title>
+      <link>https://www.creativebloq.com/design/logos-icons/how-a-designer-created-the-dirty-organic-insectoid-logo-for-marvel-cosmic-invasion</link>
+      <guid isPermaLink="false">s_6e1e0d51aedb6c51</guid>
+      <description>Designer breakdown of gooey, insectoid branding using custom typography. Practical design methodology for branded campaigns.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 11:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Speed painting workflow teaches gesture control and spontaneity</title>
+      <link>https://www.creativebloq.com/art/digital-art/spontaneous-speed-painting-could-help-you-to-trust-your-art</link>
+      <guid isPermaLink="false">s_29c38c6158cba3ce</guid>
+      <description>Artist Duy An Lam demonstrates loose pose work and energy flow before refinement. Applicable technique for digital painters building confidence.</description>
+      <category>image</category>
+      <pubDate>Sat, 11 Jul 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Insta360 and Bambu Lab collaborate on 3D printing integration</title>
+      <link>https://www.creativebloq.com/3d/3d-printing/as-a-photographer-the-new-insta360-x-bambu-lab-collab-makes-me-incredibly-happy</link>
+      <guid isPermaLink="false">s_fa50b26f80fe5e5b</guid>
+      <description>360-camera and 3D printer partnership. Relevant hardware development for creators exploring mixed modalities.</description>
+      <category>tools</category>
+      <pubDate>Sat, 11 Jul 2026 07:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
