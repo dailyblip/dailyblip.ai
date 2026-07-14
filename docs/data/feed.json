@@ -1,6 +1,6 @@
 {
   "issue": 210,
-  "generated_at": "2026-07-13T22:14:42.565Z",
+  "generated_at": "2026-07-14T03:49:02.535Z",
   "brief": {
     "items": [
       {
@@ -53,9 +53,9 @@
       "ts": "2026-07-13T19:17:51.000Z",
       "read": "4 min",
       "also": [],
-      "top": true,
-      "heat": 106,
-      "move": 58
+      "heat": 100,
+      "move": -1,
+      "top": true
     },
     {
       "id": "s_b3ca6a4a0a3df0f9",
@@ -71,8 +71,8 @@
       "ts": "2026-07-13T18:25:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 100,
-      "move": -1
+      "heat": 95,
+      "move": 0
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -88,7 +88,7 @@
       "ts": "2026-07-13T18:22:10.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 88,
+      "heat": 83,
       "move": -1
     },
     {
@@ -105,8 +105,8 @@
       "ts": "2026-07-13T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -2
+      "heat": 81,
+      "move": 0
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -122,7 +122,7 @@
       "ts": "2026-07-13T16:25:37.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 113,
+      "heat": 108,
       "move": 0
     },
     {
@@ -139,8 +139,8 @@
       "ts": "2026-07-13T15:34:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 95,
-      "move": -1
+      "heat": 90,
+      "move": 0
     },
     {
       "id": "s_bf08d7596331b820",
@@ -156,8 +156,8 @@
       "ts": "2026-07-13T15:31:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 97,
-      "move": -1
+      "heat": 92,
+      "move": 0
     },
     {
       "id": "s_0b9a256573f21194",
@@ -173,8 +173,8 @@
       "ts": "2026-07-13T15:06:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -6
+      "heat": 71,
+      "move": 0
     },
     {
       "id": "s_b6491befe496676a",
@@ -190,8 +190,8 @@
       "ts": "2026-07-13T14:32:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 106,
-      "move": -1
+      "heat": 101,
+      "move": 1
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -207,8 +207,8 @@
       "ts": "2026-07-13T12:01:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 74,
-      "move": -1
+      "heat": 68,
+      "move": -3
     },
     {
       "id": "s_e49b9851718e08d2",
@@ -224,8 +224,8 @@
       "ts": "2026-07-13T08:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 80,
-      "move": -1
+      "heat": 75,
+      "move": -5
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -241,8 +241,8 @@
       "ts": "2026-07-13T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 64,
+      "move": -6
     },
     {
       "id": "s_1224235fee688e2d",
@@ -258,7 +258,7 @@
       "ts": "2026-07-13T07:44:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 79,
+      "heat": 74,
       "move": -3
     },
     {
@@ -276,7 +276,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": 1
     },
     {
       "id": "s_efecb35d7b427474",
@@ -293,7 +293,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_db4ca1dcfacb9a2b",
@@ -344,7 +344,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_b2beb695d675ec33",
@@ -361,7 +361,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_1f8d572b50f537be",
@@ -378,7 +378,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -394,7 +394,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_cca9d9854a8b2b2e",
@@ -411,7 +411,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_7fcf1c64331ce573",
@@ -428,7 +428,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_5e8fda4219f983fc",
@@ -445,7 +445,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_6e1e0d51aedb6c51",
@@ -462,7 +462,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -479,7 +479,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -496,7 +496,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_1c07dda2c1408621",
@@ -512,7 +512,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_98d85122ab641d19",
@@ -528,7 +528,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 2
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -544,7 +544,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -559,7 +559,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -1
+      "move": 1
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -576,7 +576,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 2
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -592,7 +592,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -607,7 +607,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -623,7 +623,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -639,7 +639,7 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 2
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -654,7 +654,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -670,7 +670,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -685,7 +685,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -700,7 +700,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -715,7 +715,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_5244feb84148957b",
@@ -730,7 +730,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -745,7 +745,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -760,7 +760,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -775,7 +775,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_959d825718f0d41f",
@@ -790,7 +790,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_3a6e9021ecabca6b",
@@ -805,7 +805,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_d227c01975ac31ba",
@@ -820,7 +820,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_81903600b8406df1",
@@ -835,7 +835,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_5012f89709d598db",
@@ -850,7 +850,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_ca1c525e3ab05a6a",
@@ -865,7 +865,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_8b07a3a2688e9c39",
@@ -880,7 +880,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_7450e04d7677bb91",
@@ -895,7 +895,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_f2379eceafd20cc0",
@@ -910,7 +910,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_2922cfdde0d796dd",
@@ -925,7 +925,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_3e171b9d1ff3d14d",
@@ -940,7 +940,7 @@
       "read": "2 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_880ee3c2d5501c1e",
@@ -955,7 +955,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -1
+      "move": 1
     },
     {
       "id": "s_769060e02311f3cb",
@@ -970,7 +970,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_9491981398fceeeb",
@@ -985,7 +985,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_14a2cc90aef5b07a",
@@ -1000,7 +1000,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": 0
     }
   ],
   "models": [
@@ -1117,10 +1117,10 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stats": {
-    "scanned_last_run": 8,
+    "scanned_last_run": 4,
     "published_today": 13,
     "sources_live": 14,
-    "slopped_last_run": 7
+    "slopped_last_run": 4
   },
   "tool_status": [
     {
