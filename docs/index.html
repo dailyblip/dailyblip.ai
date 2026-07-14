@@ -218,6 +218,22 @@ nav.cats{
 .brief-item.read p b{color:var(--faint)}
 .brief-item .secs{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:4px}
 
+/* impact hierarchy — items arrive pre-sorted by impact score (highest
+   first); position in the list drives the visual weight, so the reader
+   SEES "this is the big one" rather than just inferring it from order. */
+.brief-item.impact-hero{background:linear-gradient(90deg,rgba(255,180,84,.08),transparent 60%)}
+.brief-item.impact-hero p{font-size:16.5px;font-weight:600;line-height:1.45}
+.brief-item.impact-hero .marker{width:26px;height:26px;border-width:2px}
+.brief-item.impact-high p{font-size:15.5px}
+
+.hw-flag{
+  display:inline-flex;align-items:center;gap:4px;margin-right:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--dim);border:1px solid var(--line-strong);border-radius:4px;padding:1px 6px;
+  vertical-align:middle;
+}
+.hw-flag::before{content:"⚙"}
+
 .brief-progress{margin-top:16px;display:flex;align-items:center;gap:14px}
 .pbar{flex:1;height:4px;border-radius:99px;background:rgba(158,216,210,.12);overflow:hidden}
 .pbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--amber-deep),var(--amber));border-radius:99px;transition:width .35s ease}
@@ -780,12 +796,19 @@ function renderBrief(){
   }
   $("#briefEyebrow").textContent = `The Daily Blip · Issue ${String(FEED.issue||1).padStart(4,"0")}${updatedLabel ? " · " + updatedLabel : ""}`;
   $("#blipCount").textContent = `${items.length} blips`;
-  $("#briefItems").innerHTML = items.map((b,i)=>`
-    <li class="brief-item${readSet.has(i)?" read":""}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
+  $("#briefItems").innerHTML = items.map((b,i)=>{
+    // Items arrive pre-sorted by impact score (validateBrief sorts them
+    // server-side), so position 0 is genuinely the day's biggest story,
+    // not just whatever order the model happened to output.
+    const tier = i===0 ? " impact-hero" : (i===1||i===2) ? " impact-high" : "";
+    const hwFlag = b.hardware ? `<span class="hw-flag" title="Hardware/infrastructure story, not a creator tool">hardware</span>` : "";
+    return `
+    <li class="brief-item${readSet.has(i)?" read":""}${tier}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
       <span class="marker"><span class="num">${i+1}</span></span>
-      <p>${sanB(b.html)}</p>
+      <p>${hwFlag}${sanB(b.html)}</p>
       <span class="secs">${b.secs}s</span>
-    </li>`).join("");
+    </li>`;
+  }).join("");
   const pct = items.length ? readSet.size/items.length*100 : 0;
   $("#pbarFill").style.width = pct+"%";
   const st = $("#pstat");
