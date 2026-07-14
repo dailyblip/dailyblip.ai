@@ -484,7 +484,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 
   <!-- CREATOR SPOTLIGHT -->
   <section class="spotlight" id="spotlightWrap" style="display:none" aria-label="Creator spotlight">
-    <div class="spot-head">creator spotlight — people making cool things</div>
+    <div class="spot-head">People creating cool things with AI</div>
     <div class="spot-grid" id="spotGrid"></div>
   </section>
 
@@ -768,8 +768,17 @@ function renderCats(){
 function renderBrief(){
   const items = FEED.brief?.items || [];
   $("#briefTitle").textContent = FEED.brief?.title || "";
-  const editionLabel = FEED.brief?.edition === "pm" ? "EVENING EDITION" : "MORNING EDITION";
-  $("#briefEyebrow").textContent = `The Daily Blip · Issue ${String(FEED.issue||1).padStart(4,"0")} · ${editionLabel}`;
+  // Recency label replaces AM/PM framing entirely — "updated 3h ago" is
+  // always true regardless of viewer timezone, unlike a fixed AM/PM tag
+  // which can mismatch what a reader in a different timezone actually sees.
+  let updatedLabel = "";
+  if (FEED.brief?.date) {
+    const ageMs = Date.now() - new Date(FEED.brief.date).getTime();
+    updatedLabel = ageMs < 3600000
+      ? `updated ${Math.max(1, Math.round(ageMs / 60000))}m ago`
+      : `updated ${Math.round(ageMs / 3600000)}h ago`;
+  }
+  $("#briefEyebrow").textContent = `The Daily Blip · Issue ${String(FEED.issue||1).padStart(4,"0")}${updatedLabel ? " · " + updatedLabel : ""}`;
   $("#blipCount").textContent = `${items.length} blips`;
   $("#briefItems").innerHTML = items.map((b,i)=>`
     <li class="brief-item${readSet.has(i)?" read":""}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
@@ -792,10 +801,16 @@ function renderBrief(){
 function renderBlips(){
   const items = FEED.brief?.items || [];
   const angles=[35,95,160,215,275,330];
+  // Distance cap matches the ~12h gap between AM/PM editions (was 14h,
+  // a leftover from the once-daily brief era). Without this, nearly every
+  // blip drifted to the outer rim well before the next edition refreshed,
+  // since storyHrs() is computed live against the current moment, not
+  // frozen at brief-generation time.
+  const MAX_BLIP_HOURS = 12;
   $("#blips").innerHTML = items.map((b,i)=>{
     const s = FEED.stories.find(x=>x.id===b.story);
     const h = s ? storyHrs(s) : 6;
-    const r = 18 + Math.min(h,14)/14*66;
+    const r = 18 + Math.min(h,MAX_BLIP_HOURS)/MAX_BLIP_HOURS*66;
     const a = angles[i%angles.length]*Math.PI/180;
     const x = 90 + r*Math.cos(a), y = 90 + r*Math.sin(a);
     return `<span class="blip${readSet.has(i)?" read":""}" data-i="${i}" style="left:${x/1.8}%;top:${y/1.8}%"></span>`;
