@@ -1,6 +1,6 @@
 {
   "issue": 212,
-  "generated_at": "2026-07-14T03:55:26.326Z",
+  "generated_at": "2026-07-14T04:04:47.375Z",
   "brief": {
     "items": [
       {
@@ -72,7 +72,7 @@
       "read": "4 min",
       "also": [],
       "heat": 100,
-      "move": -1,
+      "move": 1,
       "top": true
     },
     {
@@ -89,7 +89,7 @@
       "ts": "2026-07-13T18:25:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 95,
+      "heat": 94,
       "move": 0
     },
     {
@@ -106,8 +106,8 @@
       "ts": "2026-07-13T18:22:10.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 83,
-      "move": -1
+      "heat": 82,
+      "move": 0
     },
     {
       "id": "s_6358ddebecad3055",
@@ -140,7 +140,7 @@
       "ts": "2026-07-13T16:25:37.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 108,
+      "heat": 107,
       "move": 0
     },
     {
@@ -174,7 +174,7 @@
       "ts": "2026-07-13T15:31:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
+      "heat": 91,
       "move": 0
     },
     {
@@ -208,8 +208,8 @@
       "ts": "2026-07-13T14:32:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 101,
-      "move": 1
+      "heat": 100,
+      "move": -1
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -226,7 +226,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_e49b9851718e08d2",
@@ -242,8 +242,8 @@
       "ts": "2026-07-13T08:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 75,
-      "move": -5
+      "heat": 74,
+      "move": 0
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -260,7 +260,7 @@
       "read": "3 min",
       "also": [],
       "heat": 64,
-      "move": -6
+      "move": 0
     },
     {
       "id": "s_1224235fee688e2d",
@@ -277,7 +277,7 @@
       "read": "2 min",
       "also": [],
       "heat": 74,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -294,7 +294,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_efecb35d7b427474",
@@ -328,7 +328,7 @@
       "read": "4 min",
       "also": [],
       "heat": 80,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_e662af7aa0e3d019",
@@ -345,7 +345,7 @@
       "read": "4 min",
       "also": [],
       "heat": 80,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_e519e02d1415570b",
@@ -497,7 +497,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -530,7 +530,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_98d85122ab641d19",
@@ -546,7 +546,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -562,7 +562,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -577,7 +577,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -594,7 +594,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -657,7 +657,7 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -688,7 +688,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": 0
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -973,7 +973,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_769060e02311f3cb",
@@ -1135,7 +1135,7 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stats": {
-    "scanned_last_run": 4,
+    "scanned_last_run": 0,
     "published_today": 13,
     "sources_live": 14,
     "slopped_last_run": 4
