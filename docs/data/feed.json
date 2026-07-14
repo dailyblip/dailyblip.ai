@@ -1,6 +1,6 @@
 {
   "issue": 213,
-  "generated_at": "2026-07-14T04:13:24.803Z",
+  "generated_at": "2026-07-14T04:15:07.197Z",
   "brief": {
     "items": [
       {
@@ -12,26 +12,10 @@
         "tracking": false
       },
       {
-        "story": "s_b6491befe496676a",
-        "html": "A director used <b>Blender's Lattice modifier to flatten a 3D character head</b> and fake convincing wide-angle lens distortion — a compositing trick worth stealing.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
         "story": "s_0b9a256573f21194",
         "html": "<b>\"Context bombing\"</b> floods AI agents with contradictory instructions to neutralize malicious behavior before it executes — worth knowing if you run automated creative pipelines.",
         "secs": 10,
         "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_bf08d7596331b820",
-        "html": "Clément Doranlo's <b>Riverskin motion-capture aerial dance</b> shows advanced Maya rigging and custom armor design fused into a single cohesive character pipeline worth studying.",
-        "secs": 9,
-        "impact": 6,
         "hardware": false,
         "tracking": false
       },
