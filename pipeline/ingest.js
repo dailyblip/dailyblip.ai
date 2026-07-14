@@ -9,7 +9,7 @@ import {
   loadSources, loadHealth, saveHealth, readJSON, PATHS,
 } from "./lib/store.js";
 import { hash, canonicalUrl, dedupeCluster } from "./lib/text.js";
-import { fetchRedditWithScores, passesRedditGate } from "./lib/reddit.js";
+import { fetchRedditWithScores, passesRedditGate, fetchTopComments } from "./lib/reddit.js";
 import path from "node:path";
 import fsMod from "node:fs";
 
@@ -22,6 +22,14 @@ const MAX_NEW_PER_RUN = 25;
 const MAX_SPOTLIGHT = 3;
 
 const CATEGORIES = ["image", "video", "music", "writing", "tools", "rights", "industry"];
+
+/** Fallback subreddit-name extractor if a post's own `subreddit` field is
+ *  ever missing (Reddit almost always includes it, but this keeps the
+ *  comment-fetch step from crashing on unexpected API shapes). */
+function subredditFromUrl(url) {
+  const m = String(url).match(/reddit\.com\/r\/([^/]+)/i);
+  return m ? m[1] : "";
+}
 
 // Signal heat: how alive a story is right now. Recomputed every run so the
 // ranking shifts through the day — the reason to reload the page.
@@ -59,7 +67,14 @@ For each item return:
 - dek: 1–2 sentences (max 45 words) IN YOUR OWN WORDS. Ground every claim ONLY in the title/snippet/excerpt provided — if the excerpt doesn't support a detail, leave it out. Concrete over hype. Never copy source wording.
 - read_min: source read time estimate, 2–6.
 
-For Reddit sources, you are told community score and comment count. Treat those as validation but not as a pass — a 5,000-upvote post can still be slop and gets rejected on its merits.
+EXTRA-STRICT GATE for these specific sources: PetaPixel, 80 Level, Hyperallergic, This Is Colossal, Creative Boom. These are general-audience art/photography/culture publications, not AI-native outlets — most of what they publish has nothing to do with AI at all. For stories from these five sources ONLY, apply this additional rule before anything else: REJECT (keep=false) unless the piece is substantively ABOUT AI-made or AI-assisted work, a tool, or a technique — the AI has to be the point of the piece, not incidental. A profile of a CGI artist who happens to mention using an AI upscaler once, a general gallery show, a camera-gear review, a game-dev pipeline article with no AI component — all REJECT, no matter how well-written, popular, or otherwise high-quality. When genuinely unsure whether AI is central or incidental to one of these five sources' pieces, reject. This gate does not apply to any other source.
+
+For Reddit sources, you are given community score, comment count, AND a sample of the actual top comments on the post. Use all three together, but the comment sample is the most important signal:
+  - High score + comments that show genuine, specific enthusiasm from people who clearly work in the medium ("the temporal consistency here is wild", "what's your workflow for the hands") → strong spotlight candidate.
+  - High score + comments that are generic reactions with no substance ("lol", "based", unrelated jokes) → the post went viral for reasons unrelated to craft; do not spotlight on vote count alone.
+  - High score + comments pointing out flaws, calling it slop, noting AI artifacts, or comparing it unfavorably → REJECT regardless of score. The crowd upvoted it (maybe for novelty or humor) but the actual discussion says it's not good work.
+  - No comment sample provided, or sample is empty → judge on title/snippet alone, same as any other source; don't penalize for a missing sample.
+A 5,000-upvote post can still be slop, and gets rejected on its merits if the comments say so.
 
 Return a JSON array in the same order as input: {"keep":bool,"spotlight":bool,"quality":n,"category":"...","badge":"...","headline":"...","dek":"...","read_min":n}. JSON only.`;
 
@@ -107,8 +122,21 @@ async function fetchAllFeeds(feeds) {
         const posts = await fetchRedditWithScores(f.url);
         const raw = posts.length;
         const gated = posts.filter((p) => passesRedditGate(p, f.reddit_tier));
-        perFeed[f.name] = { ok: true, count: gated.length, raw, filtered: raw - gated.length };
-        return gated.map((p) => ({
+        // Second, qualitative gate: pull the actual top comments for each
+        // post that already cleared the numeric bar. High upvotes alone
+        // can't distinguish "genuinely impressive" from "popular because
+        // it's funny/nostalgic while top comments point out it's mediocre
+        // AI slop" — only reading real comment sentiment can. Only fetched
+        // for posts that already passed the numeric gate, so this stays
+        // cheap (typically 0-3 extra requests per subreddit per run).
+        const withComments = await Promise.all(
+          gated.map(async (p) => ({
+            ...p,
+            top_comments: await fetchTopComments(p.subreddit || subredditFromUrl(f.url), p.id),
+          }))
+        );
+        perFeed[f.name] = { ok: true, count: withComments.length, raw, filtered: raw - withComments.length };
+        return withComments.map((p) => ({
           title: p.title,
           url: p.external_url || p.url,
           snippet: p.snippet,
@@ -118,6 +146,7 @@ async function fetchAllFeeds(feeds) {
           tier: f.tier || "community",
           community_score: p.score,
           community_comments: p.num_comments,
+          community_comment_sample: p.top_comments,
         }));
       }
 
@@ -219,7 +248,45 @@ async function main() {
     console.log(`freshness: ${name} — ${s.freshCount}/${s.total} within ${LOOKBACK_HOURS}h, newest item: ${s.newest}`);
   }
 
-  let items = fresh.filter((it) => {
+  // Repost guard: two different Reddit posts (different IDs, different
+  // titles, different usernames) can point at the exact same underlying
+  // media — someone reposting another creator's video/image, sometimes
+  // with a new caption. Title-based dedupeCluster below wouldn't catch
+  // this (it only merges near-identical TITLES; a repost with a reworded
+  // title sails right past it). The reliable signal is the media URL
+  // itself. This catches duplicates WITHIN a single run — cross-run
+  // reposts of an already-seen exact URL are separately caught by the
+  // persistent seen[] check further down, since reddit items' `url`
+  // field is already the external media link when Reddit reports one.
+  //
+  // Honest limitation: if a repost is re-uploaded to a NEW host (e.g. a
+  // fresh v.redd.it copy instead of the same link), the URL differs and
+  // this can't catch it — that would need perceptual/audio fingerprinting,
+  // out of scope here. This handles the common, cheap case: identical
+  // link reposted with a new title/user.
+  const byMediaUrl = new Map();
+  const deduped = [];
+  for (const it of fresh) {
+    const mediaKey = canonicalUrl(it.url);
+    const existing = byMediaUrl.get(mediaKey);
+    if (!existing) {
+      byMediaUrl.set(mediaKey, it);
+      deduped.push(it);
+    } else {
+      // Keep whichever copy has more community validation (for Reddit
+      // items) or arrived first (for everything else); log the discard
+      // so reposts are auditable, not silently vanishing.
+      const keepNew = (it.community_score || 0) > (existing.community_score || 0);
+      console.log(`repost detected: "${(keepNew ? existing : it).title.slice(0,60)}" — kept ${keepNew ? it.source : existing.source}, discarded duplicate from ${keepNew ? existing.source : it.source} (same media URL)`);
+      if (keepNew) {
+        const idx = deduped.indexOf(existing);
+        if (idx !== -1) deduped[idx] = it;
+        byMediaUrl.set(mediaKey, it);
+      }
+    }
+  }
+
+  let items = deduped.filter((it) => {
     const id = "s_" + hash(canonicalUrl(it.url));
     if (blockedIds.has(id)) return false;
     const titleLower = it.title.toLowerCase();
@@ -268,6 +335,7 @@ async function main() {
     ...(it.community_score !== undefined && {
       community_score: it.community_score,
       community_comments: it.community_comments,
+      ...(it.community_comment_sample?.length && { top_comment_sample: it.community_comment_sample }),
     }),
   }));
   const verdicts = await askJSON({
