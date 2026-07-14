@@ -1,6 +1,6 @@
 {
   "issue": 214,
-  "generated_at": "2026-07-14T15:12:11.460Z",
+  "generated_at": "2026-07-14T16:45:49.641Z",
   "brief": {
     "items": [
       {
@@ -71,9 +71,264 @@
       "ts": "2026-07-13T19:17:51.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 92,
-      "move": 0,
+      "heat": 88,
+      "move": -5,
       "top": true
+    },
+    {
+      "id": "s_527857b3b9d8ad5a",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "TurboSquid artists report sudden sales plunges and payment delays",
+      "dek": "3D marketplace faces exodus threat as creators document steep revenue drops and infrequent payouts, with some suspecting foul play.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/artists-threaten-to-leave-turbosquid-because-of-plummeting-sales-missing-payments/",
+      "ts": "2026-07-14T17:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 84,
+      "move": 37
+    },
+    {
+      "id": "s_23767f964a637e72",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Google revamps image search with personalization and AI image generation",
+      "dek": "Updated search uses unique interests to build dynamic image galleries; AI Overview now generates images in addition to displaying search results.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/google/2026/07/google-revamps-image-search-for-its-25th-anniversary-with-more-images-and-more-ai/",
+      "ts": "2026-07-14T16:28:14.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 84,
+      "move": 37
+    },
+    {
+      "id": "s_5ddf162e15a96c46",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Meta forecasts AI token budgets could be capped per engineer within years",
+      "dek": "Instagram head Adam Mosseri predicts companies will soon need to limit employee AI tool spending like payroll, as token costs could match engineer salaries.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/",
+      "ts": "2026-07-14T16:22:15.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 43
+    },
+    {
+      "id": "s_e3be2bdde12627e6",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Google Images redesigned with AI-generated content and discovery-focused browsing",
+      "dek": "Google adds a personalized 'For You' gallery and in-search image generation to compete with Pinterest, marking a shift from search-only to discovery.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/",
+      "ts": "2026-07-14T16:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 43
+    },
+    {
+      "id": "s_ec43065966072242",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Google Images homepage to recommend photos before you search",
+      "dek": "Redesigned Google Images celebrates 25 years by shifting from search-only to a dynamic, personalized gallery showing images tied to your interests.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
+      "ts": "2026-07-14T16:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 83,
+      "move": 38
+    },
+    {
+      "id": "s_274fe08b7f274f10",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Spotify adds 'Talk to Spotify' conversational AI feature for subscribers",
+      "dek": "AI chatbot lets Premium users explore and play music, audiobooks, and podcasts through dialogue on mobile app's home and now-playing screens.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/entertainment/965358/spotify-ai-chatbot-interface-music-audiobooks-podcasts",
+      "ts": "2026-07-14T15:47:36.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 73,
+      "move": 27
+    },
+    {
+      "id": "s_a4b29ff806d7c08f",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "New York becomes first state to halt large data center approvals",
+      "dek": "Governor Hochul signed an executive order temporarily blocking permits for 50+ megawatt data centers, citing electricity, water, and public control concerns amid AI infrastructure boom.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/",
+      "ts": "2026-07-14T15:17:59.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 101,
+      "move": 51
+    },
+    {
+      "id": "s_1ce55dc5e2a4e771",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "New York data center moratorium may set template for anti-AI movement",
+      "dek": "One-year ban on large data center construction could signal broader regulatory backlash against AI infrastructure's resource demands.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/tech-policy/2026/07/new-york-is-the-first-state-to-impose-a-data-center-moratorium/",
+      "ts": "2026-07-14T15:06:28.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 100,
+      "move": 51
+    },
+    {
+      "id": "s_97c9eefb08315a4b",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 4,
+      "tier": "journalism",
+      "title": "Reflection AI secures $1B compute access deal with Nebius",
+      "dek": "Open-source AI startup Reflection inked a compute partnership with European infrastructure firm Nebius to access Nvidia chips, mirroring broader industry consolidation.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
+      "ts": "2026-07-14T14:37:48.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 62,
+      "move": 21
+    },
+    {
+      "id": "s_2cae585118ae58a3",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Damage Control Blender tool suite for destruction, scatter, and grunge effects launches",
+      "dek": "Jesse Miettinen's procedural toolkit brings smudge masks, scatter tools, and generative shaders for lifelike scene degradation and material aging.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/jesse-miettinen-s-the-last-of-us-like-generator-finally-launches/",
+      "ts": "2026-07-14T14:26:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 82,
+      "move": 42
+    },
+    {
+      "id": "s_07270bd7745b992c",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Open-weight models now dominate production AI, shifting the competitive frontier",
+      "dek": "Chinese open models account for 41% of Hugging Face downloads; Vercel data shows open-weight models handle most infrastructure volume while closed models serve premium tier.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/",
+      "ts": "2026-07-14T14:24:53.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 100,
+      "move": 53
+    },
+    {
+      "id": "s_d03c89151d098f57",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Spotify launches ChatGPT-like conversational music discovery assistant",
+      "dek": "Premium subscribers can now chat with Spotify to find music, podcasts, and audiobooks using a blend of proprietary and third-party AI models.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/spotify-expands-its-ai-push-with-a-chatgpt-like-music-assistant/",
+      "ts": "2026-07-14T14:06:47.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 81,
+      "move": 43
+    },
+    {
+      "id": "s_8ad960bf1ba388e8",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Apple sues OpenAI for alleged trade secret theft by former employees",
+      "dek": "High-profile litigation filed in Northern California federal court accuses former Apple staff of stealing confidential information for OpenAI's hardware division.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965294/openai-apple-trade-secrets-lawsuit-sam-altman-ipo",
+      "ts": "2026-07-14T14:01:07.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 79,
+      "move": 42
+    },
+    {
+      "id": "s_a0f97bb99d39b8a3",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Superhuman's new auto-draft email feature generates replies requiring minimal editing",
+      "dek": "Updated auto-draft learns sender tone and identifies priority emails, producing natural-sounding responses that tested with little revision needed.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/superhumans-new-auto-draft-feature-almost-makes-me-like-ai-replies/",
+      "ts": "2026-07-14T14:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 81,
+      "move": 44
+    },
+    {
+      "id": "s_27568dc6ad1def84",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Material Maker 1.7 arrives on Steam with UI overhaul and new material nodes",
+      "dek": "Procedural material authoring tool adds dynamic sky materials, 32-bit node options, and keyboard shortcuts; upgraded to Godot 4.7.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/create-procedural-materials-with-material-maker-now-on-steam/",
+      "ts": "2026-07-14T13:29:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 71,
+      "move": 35
     },
     {
       "id": "s_a5c0710938e469b9",
@@ -89,8 +344,8 @@
       "ts": "2026-07-14T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": 49
+      "heat": 78,
+      "move": -12
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -106,8 +361,8 @@
       "ts": "2026-07-14T09:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": 52
+      "heat": 84,
+      "move": -8
     },
     {
       "id": "s_c479b3a9a06e96ab",
@@ -123,8 +378,8 @@
       "ts": "2026-07-14T08:29:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 80,
-      "move": 49
+      "heat": 76,
+      "move": -15
     },
     {
       "id": "s_70aeec97bcd8cd58",
@@ -140,8 +395,8 @@
       "ts": "2026-07-14T06:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 78,
-      "move": -3
+      "heat": 74,
+      "move": -15
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -157,8 +412,8 @@
       "ts": "2026-07-13T18:22:10.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 74,
-      "move": -6
+      "heat": 70,
+      "move": -14
     },
     {
       "id": "s_6358ddebecad3055",
@@ -174,8 +429,8 @@
       "ts": "2026-07-13T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -6
+      "heat": 68,
+      "move": -17
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -191,8 +446,8 @@
       "ts": "2026-07-13T16:25:37.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 99,
-      "move": 0
+      "heat": 95,
+      "move": -3
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -208,8 +463,8 @@
       "ts": "2026-07-13T15:34:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -2
+      "heat": 78,
+      "move": -12
     },
     {
       "id": "s_0b9a256573f21194",
@@ -225,8 +480,8 @@
       "ts": "2026-07-13T15:06:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 63,
-      "move": -6
+      "heat": 60,
+      "move": -15
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -243,7 +498,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -15
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -260,7 +515,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -277,7 +532,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -14
     },
     {
       "id": "s_efecb35d7b427474",
@@ -294,7 +549,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_b2beb695d675ec33",
@@ -311,7 +566,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_1f8d572b50f537be",
@@ -328,7 +583,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -344,7 +599,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_cca9d9854a8b2b2e",
@@ -361,7 +616,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_7fcf1c64331ce573",
@@ -378,7 +633,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_5e8fda4219f983fc",
@@ -395,7 +650,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_6e1e0d51aedb6c51",
@@ -412,7 +667,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -429,7 +684,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -13
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -446,7 +701,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_1c07dda2c1408621",
@@ -462,7 +717,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_98d85122ab641d19",
@@ -478,7 +733,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -10
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -494,7 +749,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -13
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -509,7 +764,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -1
+      "move": -14
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -526,7 +781,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -10
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -542,7 +797,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -557,7 +812,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -573,7 +828,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -589,7 +844,7 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -10
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -604,7 +859,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_9199a23f1066af9c",
@@ -620,7 +875,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -13
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -635,7 +890,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_10db03d8139e44b4",
@@ -650,7 +905,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_3fd5be624e9b45ce",
@@ -665,7 +920,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_5244feb84148957b",
@@ -680,7 +935,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_038c1ce14623ecc3",
@@ -695,7 +950,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_15ebc3c3102e441c",
@@ -710,7 +965,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_0ed139a48d96fd76",
@@ -725,7 +980,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_959d825718f0d41f",
@@ -740,7 +995,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_3a6e9021ecabca6b",
@@ -755,7 +1010,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_d227c01975ac31ba",
@@ -770,7 +1025,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -15
     },
     {
       "id": "s_81903600b8406df1",
@@ -785,172 +1040,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
-    },
-    {
-      "id": "s_5012f89709d598db",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "ComfyUI adds native SeedVR2 upscaling for images and video",
-      "dek": "ComfyUI now natively supports SeedVR2 upscaling, demonstrated in workflow using INT4 Krea 2 model.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usgr43/lora_captionbasic_and_practice/",
-      "ts": "2026-07-10T07:36:14.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -3
-    },
-    {
-      "id": "s_ca1c525e3ab05a6a",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Artist explores nightmare creature CGI with local diffusion in ComfyUI",
-      "dek": "Creator shares horror creature render results using open-weight model and ComfyUI, exploring disturbing VFX aesthetics.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1uscxt6/int4_w4a4_is_insane/",
-      "ts": "2026-07-10T04:09:44.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -3
-    },
-    {
-      "id": "s_8b07a3a2688e9c39",
-      "cat": "music",
-      "badge": "new",
-      "spotlight": false,
-      "title": "AELORIA: A Celtic Elven Fantasy AI Music Video",
-      "dek": "AI-generated music video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1us9y9m/aeloria_a_celtic_elven_fantasy_ai_music_video/",
-      "ts": "2026-07-10T01:48:06.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -3
-    },
-    {
-      "id": "s_7450e04d7677bb91",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Dropping Bodies for the Export",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1us9omz/dropping_bodies_for_the_export/",
-      "ts": "2026-07-10T01:35:43.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -3
-    },
-    {
-      "id": "s_f2379eceafd20cc0",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "World War II Lost Footage: Aliens Attack (Short Film)",
-      "dek": "AI-generated short film by community creator.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1us99qs/world_war_ii_lost_footage_aliens_attack_short_film/",
-      "ts": "2026-07-10T01:16:37.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -3
-    },
-    {
-      "id": "s_2922cfdde0d796dd",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "OpenAI names GPT-5.6 as preferred model for Microsoft 365 Copilot",
-      "dek": "OpenAI announced GPT-5.6 will power Microsoft's productivity suite, signaling continued partnership despite reports Microsoft is building competing in-house models.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/09/openai-says-gpt-5-6-is-the-preferred-model-for-microsoft-copilot-amid-breakup-chatter/",
-      "ts": "2026-07-10T00:16:54.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 58,
-      "move": -3
-    },
-    {
-      "id": "s_3e171b9d1ff3d14d",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "Microsoft's carbon emissions rise 25% due to AI datacenters",
-      "dek": "Microsoft's 2026 sustainability report shows 25% increase in emissions from 2025, driven primarily by datacenter expansion for AI infrastructure.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/963728/microsoft-sustainability-report-2026",
-      "ts": "2026-07-10T00:04:13.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 58,
-      "move": -3
-    },
-    {
-      "id": "s_880ee3c2d5501c1e",
-      "cat": "industry",
-      "badge": "breaking",
-      "spotlight": false,
-      "title": "OpenAI's #2 executive Fidji Simo steps down from full-time role",
-      "dek": "Simo, who led OpenAI's applications division, is transitioning to part-time advisory after extended medical leave. Her departure creates a leadership gap as OpenAI pursues an IPO.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/09/fidji-simo-steps-down-from-openais-no-2-role/",
-      "ts": "2026-07-09T23:38:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 65,
-      "move": -1
-    },
-    {
-      "id": "s_769060e02311f3cb",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Princess Starcrystal: Episode 2",
-      "dek": "AI-generated video series by community creator.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1us5au4/princess_starcrystal_episode_2/",
-      "ts": "2026-07-09T22:31:01.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -3
-    },
-    {
-      "id": "s_9491981398fceeeb",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "OpenAI launches GPT-5.6 family with three model tiers",
-      "dek": "GPT-5.6 comes in three variants (Sol, Terra, Luna) with improvements in coding, enterprise work, and science. Sol is 54% more token-efficient for coding tasks.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/09/openai-launches-its-new-family-of-models-with-gpt-5-6/",
-      "ts": "2026-07-09T22:24:24.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 58,
-      "move": -3
-    },
-    {
-      "id": "s_14a2cc90aef5b07a",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "OpenAI shuts down Atlas browser, moves features to ChatGPT desktop and Chrome",
-      "dek": "Atlas, OpenAI's AI browser launched in October, is sunsetting after less than a year. Agentic browsing features will shift to ChatGPT's desktop app and a Chrome extension.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/",
-      "ts": "2026-07-09T22:03:54.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 58,
-      "move": -3
+      "move": -15
     }
   ],
   "models": [
@@ -1067,10 +1157,10 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stats": {
-    "scanned_last_run": 15,
-    "published_today": 11,
+    "scanned_last_run": 25,
+    "published_today": 22,
     "sources_live": 14,
-    "slopped_last_run": 12
+    "slopped_last_run": 10
   },
   "tool_status": [
     {

@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 11:59:26 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 16:45:49 GMT</lastBuildDate>
     <item>
       <title>Apple sues OpenAI over alleged trade secret theft by former employee</title>
       <link>https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/</link>
@@ -13,6 +13,126 @@
       <description>Apple claims a security bug allowed a departed engineer to maintain confidential server access after joining OpenAI, alleging conspiracy to steal proprietary information.</description>
       <category>rights</category>
       <pubDate>Mon, 13 Jul 2026 19:17:51 GMT</pubDate>
+    </item>
+    <item>
+      <title>TurboSquid artists report sudden sales plunges and payment delays</title>
+      <link>https://80.lv/articles/artists-threaten-to-leave-turbosquid-because-of-plummeting-sales-missing-payments/</link>
+      <guid isPermaLink="false">s_527857b3b9d8ad5a</guid>
+      <description>3D marketplace faces exodus threat as creators document steep revenue drops and infrequent payouts, with some suspecting foul play.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 17:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google revamps image search with personalization and AI image generation</title>
+      <link>https://arstechnica.com/google/2026/07/google-revamps-image-search-for-its-25th-anniversary-with-more-images-and-more-ai/</link>
+      <guid isPermaLink="false">s_23767f964a637e72</guid>
+      <description>Updated search uses unique interests to build dynamic image galleries; AI Overview now generates images in addition to displaying search results.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 16:28:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>Meta forecasts AI token budgets could be capped per engineer within years</title>
+      <link>https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/</link>
+      <guid isPermaLink="false">s_5ddf162e15a96c46</guid>
+      <description>Instagram head Adam Mosseri predicts companies will soon need to limit employee AI tool spending like payroll, as token costs could match engineer salaries.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 16:22:15 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Images redesigned with AI-generated content and discovery-focused browsing</title>
+      <link>https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/</link>
+      <guid isPermaLink="false">s_e3be2bdde12627e6</guid>
+      <description>Google adds a personalized 'For You' gallery and in-search image generation to compete with Pinterest, marking a shift from search-only to discovery.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Images homepage to recommend photos before you search</title>
+      <link>https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana</link>
+      <guid isPermaLink="false">s_ec43065966072242</guid>
+      <description>Redesigned Google Images celebrates 25 years by shifting from search-only to a dynamic, personalized gallery showing images tied to your interests.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Spotify adds 'Talk to Spotify' conversational AI feature for subscribers</title>
+      <link>https://www.theverge.com/entertainment/965358/spotify-ai-chatbot-interface-music-audiobooks-podcasts</link>
+      <guid isPermaLink="false">s_274fe08b7f274f10</guid>
+      <description>AI chatbot lets Premium users explore and play music, audiobooks, and podcasts through dialogue on mobile app's home and now-playing screens.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 15:47:36 GMT</pubDate>
+    </item>
+    <item>
+      <title>New York becomes first state to halt large data center approvals</title>
+      <link>https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/</link>
+      <guid isPermaLink="false">s_a4b29ff806d7c08f</guid>
+      <description>Governor Hochul signed an executive order temporarily blocking permits for 50+ megawatt data centers, citing electricity, water, and public control concerns amid AI infrastructure boom.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 15:17:59 GMT</pubDate>
+    </item>
+    <item>
+      <title>New York data center moratorium may set template for anti-AI movement</title>
+      <link>https://arstechnica.com/tech-policy/2026/07/new-york-is-the-first-state-to-impose-a-data-center-moratorium/</link>
+      <guid isPermaLink="false">s_1ce55dc5e2a4e771</guid>
+      <description>One-year ban on large data center construction could signal broader regulatory backlash against AI infrastructure's resource demands.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 15:06:28 GMT</pubDate>
+    </item>
+    <item>
+      <title>Reflection AI secures $1B compute access deal with Nebius</title>
+      <link>https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/</link>
+      <guid isPermaLink="false">s_97c9eefb08315a4b</guid>
+      <description>Open-source AI startup Reflection inked a compute partnership with European infrastructure firm Nebius to access Nvidia chips, mirroring broader industry consolidation.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 14:37:48 GMT</pubDate>
+    </item>
+    <item>
+      <title>Damage Control Blender tool suite for destruction, scatter, and grunge effects launches</title>
+      <link>https://80.lv/articles/jesse-miettinen-s-the-last-of-us-like-generator-finally-launches/</link>
+      <guid isPermaLink="false">s_2cae585118ae58a3</guid>
+      <description>Jesse Miettinen's procedural toolkit brings smudge masks, scatter tools, and generative shaders for lifelike scene degradation and material aging.</description>
+      <category>video</category>
+      <pubDate>Tue, 14 Jul 2026 14:26:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Open-weight models now dominate production AI, shifting the competitive frontier</title>
+      <link>https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/</link>
+      <guid isPermaLink="false">s_07270bd7745b992c</guid>
+      <description>Chinese open models account for 41% of Hugging Face downloads; Vercel data shows open-weight models handle most infrastructure volume while closed models serve premium tier.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 14:24:53 GMT</pubDate>
+    </item>
+    <item>
+      <title>Spotify launches ChatGPT-like conversational music discovery assistant</title>
+      <link>https://techcrunch.com/2026/07/14/spotify-expands-its-ai-push-with-a-chatgpt-like-music-assistant/</link>
+      <guid isPermaLink="false">s_d03c89151d098f57</guid>
+      <description>Premium subscribers can now chat with Spotify to find music, podcasts, and audiobooks using a blend of proprietary and third-party AI models.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 14:06:47 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple sues OpenAI for alleged trade secret theft by former employees</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/965294/openai-apple-trade-secrets-lawsuit-sam-altman-ipo</link>
+      <guid isPermaLink="false">s_8ad960bf1ba388e8</guid>
+      <description>High-profile litigation filed in Northern California federal court accuses former Apple staff of stealing confidential information for OpenAI's hardware division.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 14:01:07 GMT</pubDate>
+    </item>
+    <item>
+      <title>Superhuman's new auto-draft email feature generates replies requiring minimal editing</title>
+      <link>https://techcrunch.com/2026/07/14/superhumans-new-auto-draft-feature-almost-makes-me-like-ai-replies/</link>
+      <guid isPermaLink="false">s_a0f97bb99d39b8a3</guid>
+      <description>Updated auto-draft learns sender tone and identifies priority emails, producing natural-sounding responses that tested with little revision needed.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 14:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Material Maker 1.7 arrives on Steam with UI overhaul and new material nodes</title>
+      <link>https://80.lv/articles/create-procedural-materials-with-material-maker-now-on-steam/</link>
+      <guid isPermaLink="false">s_27568dc6ad1def84</guid>
+      <description>Procedural material authoring tool adds dynamic sky materials, 32-bit node options, and keyboard shortcuts; upgraded to Godot 4.7.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 13:29:00 GMT</pubDate>
     </item>
     <item>
       <title>Maxon Autograph offers free After Effects alternative for motion graphics</title>
@@ -45,126 +165,6 @@
       <description>Anderson Rohr's monthly free motion-capture library adds dribbling, juggling, and other soccer-specific animations for games and cinematics.</description>
       <category>video</category>
       <pubDate>Tue, 14 Jul 2026 06:21:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Apple sues OpenAI for alleged trade secret theft and employee poaching</title>
-      <link>https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/</link>
-      <guid isPermaLink="false">s_ecbc76a36f0e024f</guid>
-      <description>Apple's 41-page complaint alleges OpenAI systematically extracted confidential information through current and former employees, including requests for unreleased hardware at interviews.</description>
-      <category>industry</category>
-      <pubDate>Mon, 13 Jul 2026 18:22:10 GMT</pubDate>
-    </item>
-    <item>
-      <title>Apple alleges OpenAI systematically stole trade secrets and hardware details</title>
-      <link>https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims</link>
-      <guid isPermaLink="false">s_6358ddebecad3055</guid>
-      <description>Lawsuit details claims of unauthorized network access, employee recruitment with requests for proprietary hardware, and coordinated information extraction.</description>
-      <category>industry</category>
-      <pubDate>Mon, 13 Jul 2026 17:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Patreon blocks AI crawlers from scraping creator content for model training</title>
-      <link>https://petapixel.com/2026/07/13/patreon-blocks-ai-crawlers-from-copying-content-creators-deserve-compenstion/</link>
-      <guid isPermaLink="false">s_d4b36e47cd240b18</guid>
-      <description>Patreon partnered with Cloudflare to prevent AI training crawlers from using published work. CEO Jack Conte framed move as compensation protection for creators.</description>
-      <category>rights</category>
-      <pubDate>Mon, 13 Jul 2026 16:25:37 GMT</pubDate>
-    </item>
-    <item>
-      <title>Anthropic localizes Claude pricing to Indian rupees, second-largest market</title>
-      <link>https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/</link>
-      <guid isPermaLink="false">s_d8c4f12b71f9e00d</guid>
-      <description>Claude subscribers in India can now pay in rupees on web and apps, though UPI support still pending. India accounts for 5.8% of global Claude usage.</description>
-      <category>tools</category>
-      <pubDate>Mon, 13 Jul 2026 15:34:59 GMT</pubDate>
-    </item>
-    <item>
-      <title>Defenders adopt prompt injection tactics to disable malicious AI agents</title>
-      <link>https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/</link>
-      <guid isPermaLink="false">s_0b9a256573f21194</guid>
-      <description>&quot;Context bombing&quot; uses attacker techniques defensively, flooding AI systems with contradictory instructions to prevent harmful behavior before it executes.</description>
-      <category>industry</category>
-      <pubDate>Mon, 13 Jul 2026 15:06:34 GMT</pubDate>
-    </item>
-    <item>
-      <title>Blender 5.2 release candidate adds new sculpting brush tools</title>
-      <link>https://80.lv/articles/3d-artist-shares-a-tutorial-on-new-sculpting-features-in-blender-5-2/</link>
-      <guid isPermaLink="false">s_da64ea9b487e106b</guid>
-      <description>Blender 5.2 RC introduces scene project brush and sculpting refinements. Solid tooling update for 3D artists.</description>
-      <category>tools</category>
-      <pubDate>Mon, 13 Jul 2026 12:01:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Game artist Jenny Mati details multi-tool workflow for scene composition</title>
-      <link>https://www.creativebloq.com/art/digital-art/how-to-combine-software-to-create-art-for-game-scenery</link>
-      <guid isPermaLink="false">s_b1c0426dab3224e8</guid>
-      <description>Creator walks through practical pipeline: Maya base, sketch, V-Ray rendering, and post-work for depth and atmosphere. Concrete technique.</description>
-      <category>tools</category>
-      <pubDate>Mon, 13 Jul 2026 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Apple's scrapped self-driving car seeded Neural Engine AI chip architecture</title>
-      <link>https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra</link>
-      <guid isPermaLink="false">s_5bbc3a5ef63f4579</guid>
-      <description>Failed autonomous vehicle project led to development of on-device AI processing capabilities that became core to Apple Silicon's performance.</description>
-      <category>industry</category>
-      <pubDate>Sun, 12 Jul 2026 16:27:06 GMT</pubDate>
-    </item>
-    <item>
-      <title>25 best James Webb Space Telescope photos in four-year retrospective</title>
-      <link>https://petapixel.com/2026/07/12/the-25-best-james-webb-space-telescope-photos/</link>
-      <guid isPermaLink="false">s_efecb35d7b427474</guid>
-      <description>Curated collection of high-resolution astronomical imagery. Reference resource for photographers seeking inspirational compositions and lighting.</description>
-      <category>image</category>
-      <pubDate>Sun, 12 Jul 2026 13:00:37 GMT</pubDate>
-    </item>
-    <item>
-      <title>ASUS ProArt PZ14 Windows tablet for digital artists reviewed</title>
-      <link>https://www.creativebloq.com/tech/laptops/asus-proart-pz14-review-a-better-windows-tablet-but-not-a-perfect-one</link>
-      <guid isPermaLink="false">s_b2beb695d675ec33</guid>
-      <description>Two-in-one drawing device with tradeoffs. Hardware review relevant to creators evaluating tablets; mixed verdict noted.</description>
-      <category>tools</category>
-      <pubDate>Sun, 12 Jul 2026 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>High-resolution full-frame camera sensor comparison: Canon, Nikon, Sony flagships</title>
-      <link>https://petapixel.com/2026/07/11/which-high-resolution-full-frame-camera-has-the-best-sensor/</link>
-      <guid isPermaLink="false">s_1f8d572b50f537be</guid>
-      <description>Megapixel and dynamic range shootout for high-end gear. Technical reference for photographers weighing sensor choices.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 14:01:34 GMT</pubDate>
-    </item>
-    <item>
-      <title>Godot Road Generator adds procedural intersection lanes</title>
-      <link>https://80.lv/articles/godot-road-generator-now-features-better-procedural-intersections/</link>
-      <guid isPermaLink="false">s_dabdfae8cca17885</guid>
-      <description>TheDuckCow's open-source plugin now supports traffic lanes at intersections via community contribution. Includes customizable geometry, collision meshes, and AI lane pathfinding.</description>
-      <category>tools</category>
-      <pubDate>Sat, 11 Jul 2026 14:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Summer 2026 astrophotography guide: eclipses, meteor showers, planetary alignments</title>
-      <link>https://petapixel.com/2026/07/11/capture-the-night-promasters-summer-2026-astrophotography-guide/</link>
-      <guid isPermaLink="false">s_cca9d9854a8b2b2e</guid>
-      <description>Seasonal event calendar with equipment recommendations. Planning resource for photographers targeting night-sky work.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 13:30:14 GMT</pubDate>
-    </item>
-    <item>
-      <title>Indie game Kidbash: Super Legend uses Blender + SNES-style rendering</title>
-      <link>https://www.creativebloq.com/3d/video-game-design/kidbash-super-legend-is-built-in-blender-but-rendered-like-a-classic-snes-game</link>
-      <guid isPermaLink="false">s_7fcf1c64331ce573</guid>
-      <description>Blender-to-retro-graphics pipeline revives Donkey Kong Country's technique. Technical approach worth noting for game devs.</description>
-      <category>video</category>
-      <pubDate>Sat, 11 Jul 2026 13:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Street photography remains vital despite ubiquitous cameras</title>
-      <link>https://petapixel.com/2026/07/11/we-need-street-photography-now-more-than-ever/</link>
-      <guid isPermaLink="false">s_5e8fda4219f983fc</guid>
-      <description>Argument that contemporary image-making lacks deliberate vision. Conceptual primer for photographers building intentional practice.</description>
-      <category>image</category>
-      <pubDate>Sat, 11 Jul 2026 11:30:36 GMT</pubDate>
     </item>
   </channel>
 </rss>
