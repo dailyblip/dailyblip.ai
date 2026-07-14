@@ -6,15 +6,12 @@ import Parser from "rss-parser";
 import { askJSON } from "./lib/claude.js";
 import {
   loadFeed, saveFeed, loadSeen, saveSeen,
-  loadSources, loadHealth, saveHealth, readJSON, PATHS,
+  loadSources, loadHealth, saveHealth, loadOverrides, saveOverrides, readJSON, PATHS,
 } from "./lib/store.js";
 import { hash, canonicalUrl, dedupeCluster } from "./lib/text.js";
 import { fetchRedditWithScores, passesRedditGate, fetchTopComments } from "./lib/reddit.js";
 import path from "node:path";
 import fsMod from "node:fs";
-
-const OVERRIDES_PATH = path.join(path.dirname(PATHS.seen), "overrides.json");
-const loadOverrides = () => readJSON(OVERRIDES_PATH, { blocked_ids: [], blocked_terms: [], pinned_spotlight: [] });
 
 const LOOKBACK_HOURS = 48;
 const MAX_STORIES = 60;
@@ -319,6 +316,16 @@ async function main() {
       if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
       return new Date(b.ts) - new Date(a.ts);
     });
+    // Restamp pin state even on a quiet run — an admin may have just
+    // confirmed/expired a pin between runs, and this keeps the story
+    // objects in feed.json accurate without waiting for new content.
+    const activePinIdsQuiet = new Set(
+      (overrides.pinned_brief || []).filter((p) => p.editions_remaining > 0).map((p) => p.id)
+    );
+    for (const s of feed.stories) {
+      if (activePinIdsQuiet.has(s.id)) s.pinned_brief = true;
+      else delete s.pinned_brief;
+    }
     feed.stats = { ...feed.stats, scanned_last_run: 0, sources_live: feeds.filter((f) => !f.disabled).length };
     saveFeed(feed); saveSeen(seen);
     writeRss(feed);
@@ -439,6 +446,50 @@ async function main() {
     if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
     return new Date(b.ts) - new Date(a.ts);
   });
+
+  // --- Brief-pin bookkeeping -------------------------------------------
+  // Two independent things happen here:
+  //  1. Auto-SUGGEST (never auto-apply): any story now covered by 3+
+  //     sources (1 representative + 2 or more in also_covered_by) gets
+  //     queued as a pin_suggestion for the admin to confirm or dismiss.
+  //  2. Stamp pinned_brief:true directly onto any story the admin has
+  //     already confirmed-pinned, so the frontend (stale-trim exemption)
+  //     has a single source of truth on the story object itself rather
+  //     than needing to cross-reference overrides.json separately.
+  const activePinIds = new Set(
+    (overrides.pinned_brief || []).filter((p) => p.editions_remaining > 0).map((p) => p.id)
+  );
+  const dismissed = new Set(overrides.dismissed_pin_suggestions || []);
+  const alreadySuggested = new Set((overrides.pin_suggestions || []).map((p) => p.id));
+  const liveIds = new Set(feed.stories.map((s) => s.id));
+
+  let newSuggestions = 0;
+  for (const s of feed.stories) {
+    if (activePinIds.has(s.id)) s.pinned_brief = true;
+    else delete s.pinned_brief;
+
+    const corroboration = 1 + (s.also?.length || 0);
+    if (
+      corroboration >= 3 &&
+      !activePinIds.has(s.id) &&
+      !dismissed.has(s.id) &&
+      !alreadySuggested.has(s.id)
+    ) {
+      overrides.pin_suggestions = overrides.pin_suggestions || [];
+      overrides.pin_suggestions.push({
+        id: s.id,
+        source_count: corroboration,
+        sources: [s.src, ...(s.also || [])],
+        detected_at: new Date().toISOString(),
+      });
+      newSuggestions++;
+    }
+  }
+  // Prune suggestions/pins whose story has aged out of the feed entirely.
+  overrides.pin_suggestions = (overrides.pin_suggestions || []).filter((p) => liveIds.has(p.id));
+  overrides.pinned_brief = (overrides.pinned_brief || []).filter((p) => liveIds.has(p.id));
+  saveOverrides(overrides);
+  if (newSuggestions) console.log(`pin: ${newSuggestions} new suggestion(s) detected (3+ source corroboration), ${activePinIds.size} currently pinned.`);
 
   feed.stats = {
     ...feed.stats,
