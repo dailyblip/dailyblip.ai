@@ -84,6 +84,8 @@ export async function fetchRedditWithScores(urlOrSubreddit) {
   const data = await res.json();
   const posts = data?.data?.children || [];
   return posts.map(({ data: p }) => ({
+    id: p.id,
+    subreddit: p.subreddit,
     title: (p.title || "").trim(),
     url: `https://reddit.com${p.permalink}`,
     external_url: p.url_overridden_by_dest || `https://reddit.com${p.permalink}`,
@@ -97,11 +99,51 @@ export async function fetchRedditWithScores(urlOrSubreddit) {
   }));
 }
 
+/** Fetch the top ~10 real, substantive comments on a post — used for the
+ *  sentiment gate below. Filters out [deleted]/[removed], mod stickies,
+ *  bot boilerplate, and very short throwaway reactions ("lol", "nice",
+ *  "first!") since those add no real signal either way. */
+export async function fetchTopComments(subreddit, postId, max = 10) {
+  const token = await getAccessToken();
+  if (!token) return [];
+  try {
+    const res = await fetch(
+      `https://oauth.reddit.com/r/${subreddit}/comments/${postId}?sort=top&limit=25&raw_json=1`,
+      {
+        headers: { Authorization: `Bearer ${token}`, "User-Agent": "dailyblip/1.0 (by /u/dailyblip)" },
+        signal: AbortSignal.timeout(10000),
+      }
+    );
+    if (!res.ok) return [];
+    const data = await res.json();
+    const listing = data?.[1]?.data?.children || [];
+    const junk = /^(lol+|nice|first!?|this|wow|omg|based|ratio'?d?|cool|👍|🔥+)$/i;
+    return listing
+      .map((c) => c?.data?.body)
+      .filter((body) => typeof body === "string")
+      .map((b) => b.trim())
+      .filter((b) => b && b !== "[deleted]" && b !== "[removed]" && b.length >= 15 && !junk.test(b))
+      .slice(0, max);
+  } catch {
+    return []; // comment-fetch failure should never break ingest — treat as "no signal"
+  }
+}
+
 // Community-validation gates. Unchanged from before — these are intentionally
 // strict, the whole point of the anti-slop layer is that user-generated
 // content must earn its way in with actual community proof.
+//
+// showcase_small exists because a flat 1,000-upvote bar isn't "the same
+// high standard" applied to a community 12-20x smaller than r/midjourney
+// or r/StableDiffusion — it's a bar calibrated for a much bigger audience
+// than actually exists. r/SunoAI (~80K members, vs. r/midjourney's ~1.8M)
+// added 2026-07-13 specifically because the flat showcase bar would have
+// made real music-creator work nearly impossible to ever clear it. Comment
+// count and ratio stay close to the full bar — only the raw vote
+// threshold is scaled down for community size.
 export const REDDIT_TIERS = {
   showcase: { minScore: 1000, minComments: 30, minAgeHours: 24, minRatio: 0.88 },
+  showcase_small: { minScore: 300, minComments: 20, minAgeHours: 24, minRatio: 0.85 },
   discussion: { minScore: 200, minComments: 15, minAgeHours: 12, minRatio: 0.80 },
   news: { minScore: 100, minComments: 5, minAgeHours: 6, minRatio: 0.75 },
 };
