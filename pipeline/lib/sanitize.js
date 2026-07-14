@@ -28,6 +28,11 @@ export function validateBrief(brief, validStoryIds) {
       // a distinct badge — readers shouldn't expect a tool launch and
       // find a GPU story with no warning.
       hardware: !!it.hardware,
+      // tracking is set by brief.js AFTER this function runs (it's a
+      // deterministic fact from overrides.json, not something the model
+      // reports) — preserved here so it survives the reconstruction if
+      // it's already present, but brief.js is the actual source of truth.
+      tracking: !!it.tracking,
     }));
   if (items.length < 4) throw new Error(`brief gate: only ${items.length} valid items`);
   if (new Set(items.map((i) => i.story)).size !== items.length) throw new Error("brief gate: duplicate stories");
