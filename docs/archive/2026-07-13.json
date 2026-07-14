@@ -1,59 +1,59 @@
 {
   "date": "2026-07-13",
-  "issue": 212,
+  "issue": 213,
   "brief": {
     "items": [
       {
         "story": "s_d4b36e47cd240b18",
-        "html": "Patreon has <b>blocked AI training crawlers via Cloudflare</b> — published creator work is now protected by default without any opt-out action required.",
-        "secs": 9,
+        "html": "Patreon has <b>blocked AI training crawlers via Cloudflare</b>, protecting published creator work by default with no opt-out action required.",
+        "secs": 8,
         "impact": 8,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_b3ca6a4a0a3df0f9",
-        "html": "SuperBlimp's <b>Captain Itch campaign</b> breaks down hand-keyed animation, Houdini grooming, and Unreal rendering for stylized creature design in a full pipeline walkthrough.",
+        "story": "s_b6491befe496676a",
+        "html": "A director used <b>Blender's Lattice modifier to flatten a 3D character head</b> and fake convincing wide-angle lens distortion — a compositing trick worth stealing.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_0b9a256573f21194",
+        "html": "<b>\"Context bombing\"</b> floods AI agents with contradictory instructions to neutralize malicious behavior before it executes — worth knowing if you run automated creative pipelines.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_b4553fdd41168ce5",
-        "html": "Apple's lawsuit now alleges <b>a security bug let a departing engineer retain server access after joining OpenAI</b> — a specific new claim beyond the original trade-secret filing.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_0b9a256573f21194",
-        "html": "\"<b>Context bombing</b>\" uses attacker-style prompt injection defensively to neutralize malicious AI agents before they execute — worth knowing if you run automated pipelines.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_b6491befe496676a",
-        "html": "A director used <b>Blender's Lattice modifier to flatten a 3D character's head</b> and convincingly fake wide-angle lens distortion — a compositing trick worth stealing.",
+        "story": "s_bf08d7596331b820",
+        "html": "Clément Doranlo's <b>Riverskin motion-capture aerial dance</b> shows advanced Maya rigging and custom armor design fused into a single cohesive character pipeline worth studying.",
         "secs": 9,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_ecbc76a36f0e024f",
+        "html": "Apple's 41-page complaint alleges OpenAI <b>systematically extracted confidential hardware details</b> through employee recruitment — the most detailed trade-secret filing yet against an AI lab.",
+        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false
       },
       {
         "story": "s_d8c4f12b71f9e00d",
-        "html": "Claude subscribers in India can now <b>pay in rupees directly</b> — India is already the platform's second-largest market at 5.8% of global usage.",
+        "html": "Claude subscribers in India can now <b>pay in rupees directly</b>, though UPI support is still pending — India is already 5.8% of global Claude usage.",
         "secs": 9,
         "impact": 5,
         "hardware": false,
         "tracking": false
       }
     ],
-    "title": "Monday, July 13 — six things that changed today",
-    "date": "2026-07-14T03:55:26.276Z",
+    "title": "Tuesday, July 14 — six things that changed today",
+    "date": "2026-07-14T04:08:55.439Z",
     "edition": "pm"
   },
   "tooldrop": {
@@ -79,7 +79,7 @@
       "read": "4 min",
       "also": [],
       "heat": 100,
-      "move": -1,
+      "move": 1,
       "top": true
     },
     {
@@ -96,7 +96,7 @@
       "ts": "2026-07-13T18:25:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 95,
+      "heat": 94,
       "move": 0
     },
     {
@@ -113,8 +113,8 @@
       "ts": "2026-07-13T18:22:10.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 83,
-      "move": -1
+      "heat": 82,
+      "move": 0
     },
     {
       "id": "s_6358ddebecad3055",
@@ -147,7 +147,7 @@
       "ts": "2026-07-13T16:25:37.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 108,
+      "heat": 107,
       "move": 0
     },
     {
@@ -181,7 +181,7 @@
       "ts": "2026-07-13T15:31:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
+      "heat": 91,
       "move": 0
     },
     {
@@ -215,8 +215,8 @@
       "ts": "2026-07-13T14:32:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 101,
-      "move": 1
+      "heat": 100,
+      "move": -1
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -233,7 +233,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_e49b9851718e08d2",
@@ -249,8 +249,8 @@
       "ts": "2026-07-13T08:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 75,
-      "move": -5
+      "heat": 74,
+      "move": 0
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -267,7 +267,7 @@
       "read": "3 min",
       "also": [],
       "heat": 64,
-      "move": -6
+      "move": 0
     },
     {
       "id": "s_1224235fee688e2d",
@@ -284,11 +284,11 @@
       "read": "2 min",
       "also": [],
       "heat": 74,
-      "move": -3
+      "move": 0
     }
   ],
   "stats": {
-    "scanned_last_run": 4,
+    "scanned_last_run": 0,
     "published_today": 13,
     "sources_live": 14,
     "slopped_last_run": 4
