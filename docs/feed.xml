@@ -5,14 +5,46 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jul 2026 16:45:49 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Jul 2026 20:43:09 GMT</lastBuildDate>
     <item>
-      <title>Apple sues OpenAI over alleged trade secret theft by former employee</title>
-      <link>https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/</link>
-      <guid isPermaLink="false">s_b4553fdd41168ce5</guid>
-      <description>Apple claims a security bug allowed a departed engineer to maintain confidential server access after joining OpenAI, alleging conspiracy to steal proprietary information.</description>
+      <title>SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload</link>
+      <guid isPermaLink="false">s_2cc0275fcceef652</guid>
+      <description>The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 19:25:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple releases iOS 27 public beta with revamped AI-powered Siri</title>
+      <link>https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta/</link>
+      <guid isPermaLink="false">s_f6d4f1f66693b6a8</guid>
+      <description>Apple's redesigned Siri assistant is now available in public beta ahead of fall launch, marking the first broad test of its AI overhaul against competitors like ChatGPT and Gemini.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 19:42:27 GMT</pubDate>
+    </item>
+    <item>
+      <title>Major publishers sue Google for training Gemini on copyrighted works without permission</title>
+      <link>https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/</link>
+      <guid isPermaLink="false">s_b98c65f859f0dcbd</guid>
+      <description>Hachette, Cengage, Elsevier, and others allege Google stripped copyright info and used their works to train AI models without consent.</description>
       <category>rights</category>
-      <pubDate>Mon, 13 Jul 2026 19:17:51 GMT</pubDate>
+      <pubDate>Tue, 14 Jul 2026 18:33:31 GMT</pubDate>
+    </item>
+    <item>
+      <title>DeepMind CEO proposes independent standards body to regulate frontier AI models</title>
+      <link>https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/</link>
+      <guid isPermaLink="false">s_986155e62b49ff74</guid>
+      <description>Hassabis calls for a FINRA-like regulatory authority to test and approve AI models before release, with voluntary initial participation.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 17:45:55 GMT</pubDate>
+    </item>
+    <item>
+      <title>Former Meta employees sue over AI-driven layoffs targeting workers on protected leave</title>
+      <link>https://www.theverge.com/tech/965486/meta-lawsuit-former-employees-ai-layoffs</link>
+      <guid isPermaLink="false">s_a9b65061bfa7a7eb</guid>
+      <description>26 workers allege Meta used internal AI tools to select employees for termination while excluding those on disability, parental, or medical leave.</description>
+      <category>industry</category>
+      <pubDate>Tue, 14 Jul 2026 17:18:11 GMT</pubDate>
     </item>
     <item>
       <title>TurboSquid artists report sudden sales plunges and payment delays</title>
@@ -133,38 +165,6 @@
       <description>Procedural material authoring tool adds dynamic sky materials, 32-bit node options, and keyboard shortcuts; upgraded to Godot 4.7.</description>
       <category>tools</category>
       <pubDate>Tue, 14 Jul 2026 13:29:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Maxon Autograph offers free After Effects alternative for motion graphics</title>
-      <link>https://www.creativebloq.com/3d/3d-software/i-tried-maxons-free-after-effects-alternative-and-i-dont-want-to-go-back</link>
-      <guid isPermaLink="false">s_a5c0710938e469b9</guid>
-      <description>Free professional motion design software from Maxon; legitimate tool alternative worth testing.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 11:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>New York enacts first statewide data center moratorium</title>
-      <link>https://www.theverge.com/policy/965110/new-york-ai-data-center-moratorium</link>
-      <guid isPermaLink="false">s_e74d29ba97202e0c</guid>
-      <description>Governor Hochul signed a one-year pause on new hyperscale data center permits over 50 megawatts, citing infrastructure concerns.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 09:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>3D character artist details Angel of Death sculpting and Unreal pipeline</title>
-      <link>https://80.lv/articles/sculpting-character-armor-with-human-face-motifs/</link>
-      <guid isPermaLink="false">s_c479b3a9a06e96ab</guid>
-      <description>Workflow breakdown for character creation using MetaHuman, ZBrush, and UE5; solid technical reference.</description>
-      <category>video</category>
-      <pubDate>Tue, 14 Jul 2026 08:29:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Free mocap animation pack: soccer moves for 3D/VFX projects</title>
-      <link>https://80.lv/articles/get-this-free-soccer-mocap-animation-pack-with-dribbles-juggling-more/</link>
-      <guid isPermaLink="false">s_70aeec97bcd8cd58</guid>
-      <description>Anderson Rohr's monthly free motion-capture library adds dribbling, juggling, and other soccer-specific animations for games and cinematics.</description>
-      <category>video</category>
-      <pubDate>Tue, 14 Jul 2026 06:21:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
