@@ -1,41 +1,59 @@
 {
-  "issue": 210,
-  "generated_at": "2026-07-14T03:49:02.535Z",
+  "issue": 211,
+  "generated_at": "2026-07-14T03:53:05.375Z",
   "brief": {
     "items": [
       {
-        "story": "s_da64ea9b487e106b",
-        "html": "Blender 5.2 RC drops today with a <b>new scene project brush and sculpting refinements</b> — download and test before the stable release locks in your pipeline.",
-        "secs": 10
+        "story": "s_d4b36e47cd240b18",
+        "html": "Patreon has <b>blocked AI training crawlers from scraping creator content</b> via Cloudflare — published work is now opt-out-by-default for model training.",
+        "secs": 10,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is suing OpenAI, alleging senior leaders including hardware chief Tang Tan <b>directed a pattern of trade secret theft</b> involving confidential project codes and unreleased hardware details.",
-        "secs": 11
+        "story": "s_ecbc76a36f0e024f",
+        "html": "Apple's 41-page lawsuit alleges OpenAI <b>systematically extracted confidential hardware and software secrets</b> through coordinated employee recruitment — the case has expanded significantly since first filed.",
+        "secs": 11,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed a week-old Instagram AI tool</b> that let anyone generate deepfakes of public accounts by tagging them — the feature had no consent or owner notification.",
-        "secs": 10
+        "story": "s_b6491befe496676a",
+        "html": "A director <b>flattened a 3D character's head using Blender's Lattice modifier</b> to convincingly fake wide-angle lens distortion — a clever compositing trick worth stealing.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "New INT4 W4A4 quantization hits <b>near-INT8 image quality at lower VRAM and smaller file size</b> in ComfyUI — worth swapping into your local generation stack now.",
-        "secs": 10
+        "story": "s_d8c4f12b71f9e00d",
+        "html": "Claude subscribers in India can now <b>pay in rupees directly</b> — India is already Claude's second-largest market at 5.8% of global usage, with UPI still pending.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face CEO says enterprises are <b>switching from paid AI APIs to open-source models</b> at scale — review your toolchain costs before your clients ask why you haven't.",
-        "secs": 10
+        "story": "s_0b9a256573f21194",
+        "html": "Defenders are now using <b>\"context bombing\" prompt injection</b> to neutralize malicious AI agents before they execute — a new tactic worth knowing if you run automated pipelines.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_9199a23f1066af9c",
-        "html": "A free open-source <b>browser-based procedural ivy and fig tree generator</b> launched, letting 3D environment artists paint organic foliage paths onto meshes in real time.",
-        "secs": 10
+        "story": "s_bf08d7596331b820",
+        "html": "Riverskin's motion-captured aerial dance short showcases <b>advanced Maya rigging and character design</b> built with deliberate artistic control — a strong reference for creature and armor pipelines.",
+        "secs": 9,
+        "impact": 4,
+        "hardware": false,
+        "tracking": false
       }
     ],
     "title": "Monday, July 13 — six things creators need to know",
-    "date": "2026-07-13T17:32:46.333Z",
+    "date": "2026-07-14T03:53:02.422Z",
     "edition": "am"
   },
   "stories": [

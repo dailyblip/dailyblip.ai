@@ -1,41 +1,59 @@
 {
   "date": "2026-07-13",
-  "issue": 210,
+  "issue": 211,
   "brief": {
     "items": [
       {
-        "story": "s_da64ea9b487e106b",
-        "html": "Blender 5.2 RC drops today with a <b>new scene project brush and sculpting refinements</b> — download and test before the stable release locks in your pipeline.",
-        "secs": 10
+        "story": "s_d4b36e47cd240b18",
+        "html": "Patreon has <b>blocked AI training crawlers from scraping creator content</b> via Cloudflare — published work is now opt-out-by-default for model training.",
+        "secs": 10,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_a4ad473125ca0f67",
-        "html": "Apple is suing OpenAI, alleging senior leaders including hardware chief Tang Tan <b>directed a pattern of trade secret theft</b> involving confidential project codes and unreleased hardware details.",
-        "secs": 11
+        "story": "s_ecbc76a36f0e024f",
+        "html": "Apple's 41-page lawsuit alleges OpenAI <b>systematically extracted confidential hardware and software secrets</b> through coordinated employee recruitment — the case has expanded significantly since first filed.",
+        "secs": 11,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_98d85122ab641d19",
-        "html": "Meta <b>killed a week-old Instagram AI tool</b> that let anyone generate deepfakes of public accounts by tagging them — the feature had no consent or owner notification.",
-        "secs": 10
+        "story": "s_b6491befe496676a",
+        "html": "A director <b>flattened a 3D character's head using Blender's Lattice modifier</b> to convincingly fake wide-angle lens distortion — a clever compositing trick worth stealing.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_10db03d8139e44b4",
-        "html": "New INT4 W4A4 quantization hits <b>near-INT8 image quality at lower VRAM and smaller file size</b> in ComfyUI — worth swapping into your local generation stack now.",
-        "secs": 10
+        "story": "s_d8c4f12b71f9e00d",
+        "html": "Claude subscribers in India can now <b>pay in rupees directly</b> — India is already Claude's second-largest market at 5.8% of global usage, with UPI still pending.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_1d85656f77c8e03e",
-        "html": "Hugging Face CEO says enterprises are <b>switching from paid AI APIs to open-source models</b> at scale — review your toolchain costs before your clients ask why you haven't.",
-        "secs": 10
+        "story": "s_0b9a256573f21194",
+        "html": "Defenders are now using <b>\"context bombing\" prompt injection</b> to neutralize malicious AI agents before they execute — a new tactic worth knowing if you run automated pipelines.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false
       },
       {
-        "story": "s_9199a23f1066af9c",
-        "html": "A free open-source <b>browser-based procedural ivy and fig tree generator</b> launched, letting 3D environment artists paint organic foliage paths onto meshes in real time.",
-        "secs": 10
+        "story": "s_bf08d7596331b820",
+        "html": "Riverskin's motion-captured aerial dance short showcases <b>advanced Maya rigging and character design</b> built with deliberate artistic control — a strong reference for creature and armor pipelines.",
+        "secs": 9,
+        "impact": 4,
+        "hardware": false,
+        "tracking": false
       }
     ],
     "title": "Monday, July 13 — six things creators need to know",
-    "date": "2026-07-13T17:32:46.333Z",
+    "date": "2026-07-14T03:53:02.422Z",
     "edition": "am"
   },
   "tooldrop": {
@@ -46,6 +64,160 @@
     "date": "2026-07-12T16:35:01.947Z"
   },
   "stories": [
+    {
+      "id": "s_b4553fdd41168ce5",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Apple sues OpenAI over alleged trade secret theft by former employee",
+      "dek": "Apple claims a security bug allowed a departed engineer to maintain confidential server access after joining OpenAI, alleging conspiracy to steal proprietary information.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/tech-policy/2026/07/apple-sues-openai-after-ex-engineer-allegedly-used-bug-to-steal-trade-secrets/",
+      "ts": "2026-07-13T19:17:51.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 100,
+      "move": -1,
+      "top": true
+    },
+    {
+      "id": "s_b3ca6a4a0a3df0f9",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Director Antonio Milo breaks down CGI parasite character campaign in Unreal Engine",
+      "dek": "SuperBlimp's Captain Itch campaign demonstrates hand-keyed character animation, Houdini grooming, and Unreal rendering pipeline for stylized creature design with deliberate artistic control.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/building-captain-itch-designing-a-character-led-cgi-campaign-with-unreal-engine/",
+      "ts": "2026-07-13T18:25:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 95,
+      "move": 0
+    },
+    {
+      "id": "s_ecbc76a36f0e024f",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple sues OpenAI for alleged trade secret theft and employee poaching",
+      "dek": "Apple's 41-page complaint alleges OpenAI systematically extracted confidential information through current and former employees, including requests for unreleased hardware at interviews.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/13/the-wildest-allegations-in-apples-trade-secrets-lawsuit-against-openai/",
+      "ts": "2026-07-13T18:22:10.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 83,
+      "move": -1
+    },
+    {
+      "id": "s_6358ddebecad3055",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple alleges OpenAI systematically stole trade secrets and hardware details",
+      "dek": "Lawsuit details claims of unauthorized network access, employee recruitment with requests for proprietary hardware, and coordinated information extraction.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/964843/apple-openai-lawsuit-wildest-claims",
+      "ts": "2026-07-13T17:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 81,
+      "move": 0
+    },
+    {
+      "id": "s_d4b36e47cd240b18",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Patreon blocks AI crawlers from scraping creator content for model training",
+      "dek": "Patreon partnered with Cloudflare to prevent AI training crawlers from using published work. CEO Jack Conte framed move as compensation protection for creators.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/13/patreon-blocks-ai-crawlers-from-copying-content-creators-deserve-compenstion/",
+      "ts": "2026-07-13T16:25:37.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 108,
+      "move": 0
+    },
+    {
+      "id": "s_d8c4f12b71f9e00d",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Anthropic localizes Claude pricing to Indian rupees, second-largest market",
+      "dek": "Claude subscribers in India can now pay in rupees on web and apps, though UPI support still pending. India accounts for 5.8% of global Claude usage.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/",
+      "ts": "2026-07-13T15:34:59.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 90,
+      "move": 0
+    },
+    {
+      "id": "s_bf08d7596331b820",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Clément Doranlo showcases motion-captured aerial dance with custom armor in Maya",
+      "dek": "Riverskin project demonstrates advanced rigging, animation, and character design with deliberate aesthetic choices. Work exhibits technical control and artistic vision across modeling and post-production.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/beautiful-aerial-dance-3d-animation-full-of-calm-grace/",
+      "ts": "2026-07-13T15:31:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 0
+    },
+    {
+      "id": "s_0b9a256573f21194",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Defenders adopt prompt injection tactics to disable malicious AI agents",
+      "dek": "\"Context bombing\" uses attacker techniques defensively, flooding AI systems with contradictory instructions to prevent harmful behavior before it executes.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/security/2026/07/now-defenders-are-embracing-the-prompt-injection-too/",
+      "ts": "2026-07-13T15:06:34.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 71,
+      "move": 0
+    },
+    {
+      "id": "s_b6491befe496676a",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 9,
+      "tier": "journalism",
+      "title": "Director flattens 3D character head to match wide-angle lens distortion in Blender",
+      "dek": "Dust of the Simulacrum director Eit Mitsufuchi reveals sophisticated technique: intentional 3D-to-2D morphing using Blender's Lattice modifier for stylized wide-angle effects. Masterful execution of intentional distortion.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/this-3d-character-is-actually-flat-it-s-crazy/",
+      "ts": "2026-07-13T14:32:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 101,
+      "move": 1
+    },
     {
       "id": "s_da64ea9b487e106b",
       "cat": "tools",
@@ -60,14 +232,14 @@
       "ts": "2026-07-13T12:01:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 83,
-      "move": 53
+      "heat": 68,
+      "move": -3
     },
     {
       "id": "s_e49b9851718e08d2",
       "cat": "image",
       "badge": "new",
-      "spotlight": true,
+      "spotlight": false,
       "quality": 7,
       "tier": "journalism",
       "title": "3D artist creates Wolverine in comic book toon shader style",
@@ -77,8 +249,8 @@
       "ts": "2026-07-13T08:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 89,
-      "move": 57
+      "heat": 75,
+      "move": -5
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -94,14 +266,14 @@
       "ts": "2026-07-13T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": 52
+      "heat": 64,
+      "move": -6
     },
     {
       "id": "s_1224235fee688e2d",
       "cat": "video",
       "badge": "new",
-      "spotlight": true,
+      "spotlight": false,
       "quality": 7,
       "tier": "journalism",
       "title": "Indie team films live-action reference for cinematic platformer Deer & Boy",
@@ -111,31 +283,14 @@
       "ts": "2026-07-13T07:44:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 88,
-      "move": 58
-    },
-    {
-      "id": "s_5bbc3a5ef63f4579",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Apple's scrapped self-driving car seeded Neural Engine AI chip architecture",
-      "dek": "Failed autonomous vehicle project led to development of on-device AI processing capabilities that became core to Apple Silicon's performance.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/964519/apple-silicon-self-driving-car-ai-m7-ultra",
-      "ts": "2026-07-12T16:27:06.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 71,
-      "move": -7
+      "heat": 74,
+      "move": -3
     }
   ],
   "stats": {
-    "scanned_last_run": 15,
-    "published_today": 5,
+    "scanned_last_run": 4,
+    "published_today": 13,
     "sources_live": 14,
-    "slopped_last_run": 11
+    "slopped_last_run": 4
   }
 }
