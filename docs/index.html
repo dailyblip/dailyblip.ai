@@ -234,6 +234,14 @@ nav.cats{
 }
 .hw-flag::before{content:"⚙"}
 
+.tracking-flag{
+  display:inline-flex;align-items:center;gap:4px;margin-right:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--amber);border:1px solid rgba(255,180,84,.5);border-radius:4px;padding:1px 6px;
+  vertical-align:middle;
+}
+.tracking-flag::before{content:"📌"}
+
 .brief-progress{margin-top:16px;display:flex;align-items:center;gap:14px}
 .pbar{flex:1;height:4px;border-radius:99px;background:rgba(158,216,210,.12);overflow:hidden}
 .pbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--amber-deep),var(--amber));border-radius:99px;transition:width .35s ease}
@@ -802,10 +810,11 @@ function renderBrief(){
     // not just whatever order the model happened to output.
     const tier = i===0 ? " impact-hero" : (i===1||i===2) ? " impact-high" : "";
     const hwFlag = b.hardware ? `<span class="hw-flag" title="Hardware/infrastructure story, not a creator tool">hardware</span>` : "";
+    const trackingFlag = b.tracking ? `<span class="tracking-flag" title="Pinned by the editor — carried across editions">Tracking</span>` : "";
     return `
     <li class="brief-item${readSet.has(i)?" read":""}${tier}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
       <span class="marker"><span class="num">${i+1}</span></span>
-      <p>${hwFlag}${sanB(b.html)}</p>
+      <p>${trackingFlag}${hwFlag}${sanB(b.html)}</p>
       <span class="secs">${b.secs}s</span>
     </li>`;
   }).join("");
@@ -860,10 +869,11 @@ function renderFeed(){
     return new Date(b.ts) - new Date(a.ts);
   });
 
-  // Split: Top Signal is always "fresh" regardless of age (it's pinned for
-  // a reason). Everything else past STALE_HOURS moves to the older bucket.
-  const fresh = list.filter(s => s.top || storyHrs(s) < STALE_HOURS);
-  const stale = list.filter(s => !s.top && storyHrs(s) >= STALE_HOURS);
+  // Split: Top Signal AND any actively-pinned "tracking" story are always
+  // "fresh" regardless of age. Everything else past STALE_HOURS moves to
+  // the older bucket.
+  const fresh = list.filter(s => s.top || s.pinned_brief || storyHrs(s) < STALE_HOURS);
+  const stale = list.filter(s => !s.top && !s.pinned_brief && storyHrs(s) >= STALE_HOURS);
 
   const shown = fresh.slice(0, visible);
   $("#feedList").innerHTML = shown.map(s => storyCardHtml(s)).join("");
