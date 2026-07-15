@@ -20,6 +20,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: daily-pipeline
@@ -50,6 +51,33 @@ jobs:
             echo "value=${{ github.event.inputs.edition || 'am' }}" >> "$GITHUB_OUTPUT"
           fi
 
+      # Commentary runs Mon/Wed/Fri, AM only — fixed schedule regardless of
+      # news volume, per an explicit decision. Uses ISO day-of-week (%u:
+      # Monday=1 ... Sunday=7) so this is correct regardless of what locale
+      # the runner defaults to. Runs BEFORE "Write the brief" so a same-day
+      # piece is actually eligible as a candidate for that day's six.
+      - name: Determine commentary day
+        id: commentary_day
+        run: |
+          DOW=$(date -u +%u)
+          if [ "${{ steps.edition.outputs.value }}" = "am" ] && { [ "$DOW" = "1" ] || [ "$DOW" = "3" ] || [ "$DOW" = "5" ]; }; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      # Publishes automatically, no review gate — an explicit decision.
+      # Grounded in real web-searched examples/data, never fabricated (see
+      # RESEARCH_SYSTEM in commentary.js). Adds itself as an eligible brief
+      # candidate (tier: "commentary"), capped at 1 per edition in brief.js.
+      - name: Generate commentary
+        if: steps.commentary_day.outputs.run == 'true'
+        run: node pipeline/commentary.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          SITE_URL: https://dailyblip.ai
+
       - name: Write the brief (${{ steps.edition.outputs.value }})
         run: node pipeline/brief.js ${{ steps.edition.outputs.value }}
         env:
@@ -68,6 +96,18 @@ jobs:
         env:
           SITE_URL: https://dailyblip.ai
 
+      # Instagram card + caption — AM only, same once-daily cadence as Tool
+      # Drop and the newsletter. Runs BEFORE Commit so the generated image
+      # lands in the same push as everything else. Skips cleanly if
+      # OPENAI_API_KEY isn't set (optional feature, same pattern as
+      # BUTTONDOWN_API_KEY).
+      - name: Generate social post
+        if: steps.edition.outputs.value == 'am'
+        run: node pipeline/social.js
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
       - name: Commit
         run: |
           git config user.name "dailyblip-bot"
@@ -78,6 +118,16 @@ jobs:
           git pull --rebase --autostash
           git push
 
+      # Runs AFTER commit+push on purpose — by now the image's live URL has
+      # actually had a chance to resolve, so the GitHub Issue it creates
+      # doesn't reference something that doesn't exist yet.
+      - name: "Notify: today's social post"
+        if: steps.edition.outputs.value == 'am'
+        run: node pipeline/social-notify.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SITE_URL: https://dailyblip.ai
+
       # Newsletter stays once-a-day (AM only) — subscribers were promised
       # "one email daily," and the PM edition is a web-only refresh.
       - name: Send newsletter
@@ -86,5 +136,3 @@ jobs:
         env:
           BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           SITE_URL: https://dailyblip.ai
-
-          
