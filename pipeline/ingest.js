@@ -131,7 +131,7 @@ For Reddit sources, you are given community score, comment count, AND a sample o
   - No comment sample provided, or sample is empty → judge on title/snippet alone, same as any other source; don't penalize for a missing sample.
 A 5,000-upvote post can still be slop, and gets rejected on its merits if the comments say so.
 
-Return a JSON array in the same order as input: {"keep":bool,"spotlight":bool,"quality":n,"category":"...","badge":"...","headline":"...","dek":"...","read_min":n}. JSON only.`;
+Return a JSON array in the same order as input. Each verdict MUST include "i" — the exact same index number given to you for that item in the input — so results can be matched by identity, not just position: {"i":n,"keep":bool,"spotlight":bool,"quality":n,"category":"...","badge":"...","headline":"...","dek":"...","read_min":n}. JSON only.`;
 
 async function fetchAllFeeds(feeds) {
   // A realistic browser User-Agent avoids basic Cloudflare/WAF bot filters
@@ -418,9 +418,29 @@ async function main() {
   const SPOTLIGHT_MIN_QUALITY = 7;
   const kept = [];
   let sloppedOut = 0;
-  verdicts.forEach((v, i) => {
-    const src = items[i];
-    if (!v || !src) { console.log(`classify: [NO VERDICT] ${src?.source || "?"} — "${(src?.title || "").slice(0,70)}"`); return; }
+
+  // CRITICAL: match verdicts to items by the explicit "i" the model echoes
+  // back, never by raw array position. A batched classify response isn't
+  // guaranteed to preserve exact order at scale — if it ever drifts even
+  // slightly, positional matching silently welds one story's title/dek
+  // onto a completely different story's URL. This is what caused reports
+  // of headlines linking to the wrong article. Building a lookup by the
+  // model's own echoed index makes this structurally impossible: a
+  // verdict can only ever attach to the exact item it was actually judging.
+  const verdictByIndex = new Map();
+  for (const v of verdicts) {
+    if (v && Number.isInteger(v.i) && v.i >= 0 && v.i < items.length) {
+      verdictByIndex.set(v.i, v);
+    }
+  }
+  const missingVerdicts = items.length - verdictByIndex.size;
+  if (missingVerdicts > 0) {
+    console.warn(`classify: ${missingVerdicts} item(s) had no valid matching verdict (missing/invalid "i") — treated as not-kept, not silently mismatched.`);
+  }
+
+  items.forEach((src, i) => {
+    const v = verdictByIndex.get(i);
+    if (!v) { console.log(`classify: [NO VERDICT] ${src.source} — "${src.title.slice(0,70)}"`); return; }
     const quality = Math.min(10, Math.max(1, Number(v.quality) || 5));
     if (!v.keep || quality < MIN_QUALITY) {
       sloppedOut++;
