@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 17:23:30 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 17:47:41 GMT</lastBuildDate>
     <item>
       <title>Apple Intelligence launches in China via Alibaba Qwen partnership</title>
       <link>https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/</link>
@@ -13,6 +13,30 @@
       <description>China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.</description>
       <category>industry</category>
       <pubDate>Wed, 15 Jul 2026 15:29:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Hands Problem Is Basically Solved. So What's Left to Distrust?</title>
+      <link>https://dailyblip.ai/commentary/the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15.html</link>
+      <guid isPermaLink="false">s_d173222f3e599859</guid>
+      <description>For two years, 'count the fingers' was the internet's favorite AI detector. That test is now mostly useless, and the real tells are stranger and more unsettling than an extra thumb.</description>
+      <category>writing</category>
+      <pubDate>Wed, 15 Jul 2026 17:45:15 GMT</pubDate>
+    </item>
+    <item>
+      <title>Shippy: building a high-stakes maritime AI agent</title>
+      <link>https://huggingface.co/blog/allenai/shippy-tech-blog</link>
+      <guid isPermaLink="false">s_53e3149d2cc17d3e</guid>
+      <description>Ai2 details the architecture behind Shippy, an AI agent for maritime protection decisions. Covers agent anatomy, deterministic tools, sandboxed hosting, and evaluation.</description>
+      <category>tools</category>
+      <pubDate>Wed, 15 Jul 2026 17:29:41 GMT</pubDate>
+    </item>
+    <item>
+      <title>Model routing in agents: cost, complexity, and latency tradeoffs</title>
+      <link>https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt</link>
+      <guid isPermaLink="false">s_5c8332d4091eee10</guid>
+      <description>IBM Research breaks down the real challenges of routing requests between different AI models in agent systems, beyond simple cost optimization.</description>
+      <category>tools</category>
+      <pubDate>Wed, 15 Jul 2026 17:27:01 GMT</pubDate>
     </item>
     <item>
       <title>Hack reveals Suno scraped YouTube, Deezer, and podcasts for AI training</title>
@@ -141,30 +165,6 @@
       <description>OpenAI responded to Apple's allegations that it poached employees to steal confidential information, stating the complaint lacks evidence.</description>
       <category>industry</category>
       <pubDate>Tue, 14 Jul 2026 22:07:42 GMT</pubDate>
-    </item>
-    <item>
-      <title>GPT-5.6 Sol deleting user files without consent, widespread reports</title>
-      <link>https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/</link>
-      <guid isPermaLink="false">s_3e68f8ee554f3c0b</guid>
-      <description>Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 21:50:11 GMT</pubDate>
-    </item>
-    <item>
-      <title>Apple releases iOS 27 public beta with revamped AI-powered Siri</title>
-      <link>https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta/</link>
-      <guid isPermaLink="false">s_f6d4f1f66693b6a8</guid>
-      <description>Apple's redesigned Siri assistant is now available in public beta ahead of fall launch, marking the first broad test of its AI overhaul against competitors like ChatGPT and Gemini.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 19:42:27 GMT</pubDate>
-    </item>
-    <item>
-      <title>SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload</link>
-      <guid isPermaLink="false">s_2cc0275fcceef652</guid>
-      <description>The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 19:25:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 {
   "issue": 223,
-  "generated_at": "2026-07-15T17:45:31.644Z",
+  "generated_at": "2026-07-15T17:47:41.448Z",
   "brief": {
     "items": [
       {
@@ -64,22 +64,6 @@
   },
   "stories": [
     {
-      "id": "s_d173222f3e599859",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
-      "dek": "For two years, 'count the fingers' was the internet's favorite AI detector. That test is now mostly useless, and the real tells are stranger and more unsettling than an extra thumb.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15.html",
-      "ts": "2026-07-15T17:45:15.948Z",
-      "read": "3 min",
-      "also": []
-    },
-    {
       "id": "s_fe6ab2efc212fece",
       "cat": "industry",
       "badge": "breaking",
@@ -94,8 +78,60 @@
       "read": "3 min",
       "also": [],
       "heat": 107,
-      "move": -1,
+      "move": 0,
       "top": true
+    },
+    {
+      "id": "s_d173222f3e599859",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
+      "dek": "For two years, 'count the fingers' was the internet's favorite AI detector. That test is now mostly useless, and the real tells are stranger and more unsettling than an extra thumb.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15.html",
+      "ts": "2026-07-15T17:45:15.948Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 94,
+      "move": 47
+    },
+    {
+      "id": "s_53e3149d2cc17d3e",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Shippy: building a high-stakes maritime AI agent",
+      "dek": "Ai2 details the architecture behind Shippy, an AI agent for maritime protection decisions. Covers agent anatomy, deterministic tools, sandboxed hosting, and evaluation.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/allenai/shippy-tech-blog",
+      "ts": "2026-07-15T17:29:41.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 84,
+      "move": 40
+    },
+    {
+      "id": "s_5c8332d4091eee10",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Model routing in agents: cost, complexity, and latency tradeoffs",
+      "dek": "IBM Research breaks down the real challenges of routing requests between different AI models in agent systems, beyond simple cost optimization.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
+      "ts": "2026-07-15T17:27:01.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 84,
+      "move": 40
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -111,8 +147,8 @@
       "ts": "2026-07-15T17:00:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 112,
-      "move": 48
+      "heat": 111,
+      "move": 0
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -129,7 +165,7 @@
       "read": "3 min",
       "also": [],
       "heat": 91,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_18de27eea197aabe",
@@ -145,8 +181,8 @@
       "ts": "2026-07-15T16:00:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -2
+      "heat": 72,
+      "move": -4
     },
     {
       "id": "s_84777b05d9b25937",
@@ -162,8 +198,8 @@
       "ts": "2026-07-15T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 73,
-      "move": -2
+      "heat": 72,
+      "move": -4
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -179,8 +215,8 @@
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 92,
-      "move": -1
+      "heat": 91,
+      "move": -2
     },
     {
       "id": "s_9db836b16b6b8943",
@@ -196,8 +232,8 @@
       "ts": "2026-07-15T14:10:40.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 71,
-      "move": -2
+      "heat": 70,
+      "move": -3
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -213,8 +249,8 @@
       "ts": "2026-07-15T13:10:47.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 69,
+      "move": -5
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -230,8 +266,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 80,
-      "move": -1
+      "heat": 79,
+      "move": -3
     },
     {
       "id": "s_110aa69c02571475",
@@ -247,8 +283,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 69,
+      "move": -5
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -264,8 +300,8 @@
       "ts": "2026-07-15T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -1
+      "heat": 86,
+      "move": -2
     },
     {
       "id": "s_569d5689452ac2df",
@@ -281,7 +317,7 @@
       "ts": "2026-07-15T11:09:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
+      "heat": 85,
       "move": -1
     },
     {
@@ -298,8 +334,8 @@
       "ts": "2026-07-15T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
-      "move": -2
+      "heat": 67,
+      "move": -9
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -315,8 +351,8 @@
       "ts": "2026-07-15T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": 29
+      "heat": 76,
+      "move": -3
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -332,8 +368,8 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -1
+      "heat": 81,
+      "move": -3
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -350,7 +386,7 @@
       "read": "3 min",
       "also": [],
       "heat": 73,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -366,8 +402,8 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 63,
-      "move": -2
+      "heat": 62,
+      "move": -3
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -401,7 +437,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": -1
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -418,7 +454,7 @@
       "read": "3 min",
       "also": [],
       "heat": 87,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -435,7 +471,7 @@
       "read": "3 min",
       "also": [],
       "heat": 79,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_986155e62b49ff74",
@@ -452,7 +488,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -469,7 +505,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -486,7 +522,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_23767f964a637e72",
@@ -503,7 +539,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -554,7 +590,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -571,7 +607,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -588,7 +624,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -605,7 +641,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -622,7 +658,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_07270bd7745b992c",
@@ -639,7 +675,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_d03c89151d098f57",
@@ -656,7 +692,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -673,7 +709,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -690,7 +726,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -775,7 +811,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -792,7 +828,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_0b9a256573f21194",
@@ -809,7 +845,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -843,7 +879,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_98d85122ab641d19",
@@ -859,7 +895,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -874,7 +910,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -891,7 +927,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -906,7 +942,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -921,7 +957,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     }
   ],
   "models": [
@@ -1008,15 +1044,15 @@
       "c": 3
     },
     {
+      "n": "Hugging Face Blog",
+      "c": 2
+    },
+    {
+      "n": "dailyblip",
+      "c": 1
+    },
+    {
       "n": "OpenAI News",
-      "c": 1
-    },
-    {
-      "n": "80 Level",
-      "c": 1
-    },
-    {
-      "n": "MarkTechPost",
       "c": 1
     }
   ],
@@ -1038,9 +1074,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 6,
-    "published_today": 22,
+    "scanned_last_run": 3,
+    "published_today": 24,
     "sources_live": 14,
-    "slopped_last_run": 4
+    "slopped_last_run": 1
   }
 }
