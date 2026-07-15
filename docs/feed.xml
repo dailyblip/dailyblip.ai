@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 17:47:41 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 17:57:08 GMT</lastBuildDate>
     <item>
       <title>Apple Intelligence launches in China via Alibaba Qwen partnership</title>
       <link>https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/</link>
@@ -13,6 +13,14 @@
       <description>China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.</description>
       <category>industry</category>
       <pubDate>Wed, 15 Jul 2026 15:29:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>Suno trained on millions of scraped songs from YouTube, Deezer, Genius</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack</link>
+      <guid isPermaLink="false">s_f8bec47bee6c00a0</guid>
+      <description>Leaked data reveals the AI music generator sourced training material from major platforms without disclosed consent, raising fair use questions for creators and platforms.</description>
+      <category>rights</category>
+      <pubDate>Wed, 15 Jul 2026 17:48:01 GMT</pubDate>
     </item>
     <item>
       <title>The Hands Problem Is Basically Solved. So What's Left to Distrust?</title>
@@ -157,14 +165,6 @@
       <description>OpenAI's first hardware product is reportedly a mobile smart speaker with mechanical elements designed to function as a ChatGPT-powered home companion.</description>
       <category>tools</category>
       <pubDate>Tue, 14 Jul 2026 22:22:24 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI denies merit in Apple trade secret lawsuit</title>
-      <link>https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/</link>
-      <guid isPermaLink="false">s_2175a7f109e222f7</guid>
-      <description>OpenAI responded to Apple's allegations that it poached employees to steal confidential information, stating the complaint lacks evidence.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 22:07:42 GMT</pubDate>
     </item>
   </channel>
 </rss>

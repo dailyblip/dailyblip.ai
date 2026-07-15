@@ -1,6 +1,6 @@
 {
   "issue": 223,
-  "generated_at": "2026-07-15T17:47:41.448Z",
+  "generated_at": "2026-07-15T17:57:08.891Z",
   "brief": {
     "items": [
       {
@@ -78,8 +78,25 @@
       "read": "3 min",
       "also": [],
       "heat": 107,
-      "move": 0,
+      "move": -1,
       "top": true
+    },
+    {
+      "id": "s_f8bec47bee6c00a0",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Suno trained on millions of scraped songs from YouTube, Deezer, Genius",
+      "dek": "Leaked data reveals the AI music generator sourced training material from major platforms without disclosed consent, raising fair use questions for creators and platforms.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack",
+      "ts": "2026-07-15T17:48:01.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 112,
+      "move": 53
     },
     {
       "id": "s_d173222f3e599859",
@@ -97,7 +114,7 @@
       "read": "3 min",
       "also": [],
       "heat": 94,
-      "move": 47
+      "move": -1
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -114,7 +131,7 @@
       "read": "4 min",
       "also": [],
       "heat": 84,
-      "move": 40
+      "move": -1
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -130,8 +147,8 @@
       "ts": "2026-07-15T17:27:01.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 84,
-      "move": 40
+      "heat": 83,
+      "move": -1
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -148,7 +165,7 @@
       "read": "3 min",
       "also": [],
       "heat": 111,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -164,8 +181,8 @@
       "ts": "2026-07-15T16:20:18.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 0
+      "heat": 90,
+      "move": -2
     },
     {
       "id": "s_18de27eea197aabe",
@@ -182,7 +199,7 @@
       "read": "3 min",
       "also": [],
       "heat": 72,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_84777b05d9b25937",
@@ -199,7 +216,7 @@
       "read": "2 min",
       "also": [],
       "heat": 72,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -216,7 +233,7 @@
       "read": "4 min",
       "also": [],
       "heat": 91,
-      "move": -2
+      "move": 0
     },
     {
       "id": "s_9db836b16b6b8943",
@@ -233,7 +250,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -250,7 +267,7 @@
       "read": "4 min",
       "also": [],
       "heat": 69,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -267,7 +284,7 @@
       "read": "2 min",
       "also": [],
       "heat": 79,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_110aa69c02571475",
@@ -284,7 +301,7 @@
       "read": "3 min",
       "also": [],
       "heat": 69,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -301,7 +318,7 @@
       "read": "3 min",
       "also": [],
       "heat": 86,
-      "move": -2
+      "move": 0
     },
     {
       "id": "s_569d5689452ac2df",
@@ -335,7 +352,7 @@
       "read": "3 min",
       "also": [],
       "heat": 67,
-      "move": -9
+      "move": -1
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -352,7 +369,7 @@
       "read": "3 min",
       "also": [],
       "heat": 76,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -369,7 +386,7 @@
       "read": "3 min",
       "also": [],
       "heat": 81,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -385,8 +402,8 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -1
+      "heat": 72,
+      "move": -3
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -403,7 +420,7 @@
       "read": "3 min",
       "also": [],
       "heat": 62,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -453,8 +470,8 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": 0
+      "heat": 86,
+      "move": -2
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -471,7 +488,7 @@
       "read": "3 min",
       "also": [],
       "heat": 79,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_986155e62b49ff74",
@@ -488,7 +505,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -505,7 +522,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -522,7 +539,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_23767f964a637e72",
@@ -539,7 +556,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -556,7 +573,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -573,7 +590,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_ec43065966072242",
@@ -590,7 +607,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -607,7 +624,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -624,7 +641,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -641,7 +658,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -658,7 +675,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_07270bd7745b992c",
@@ -675,7 +692,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_d03c89151d098f57",
@@ -692,7 +709,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -709,7 +726,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -726,7 +743,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -743,7 +760,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_b4553fdd41168ce5",
@@ -777,7 +794,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_6358ddebecad3055",
@@ -794,7 +811,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -811,7 +828,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -828,7 +845,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_0b9a256573f21194",
@@ -845,7 +862,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -862,7 +879,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -895,7 +912,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -910,7 +927,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -927,7 +944,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -942,7 +959,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -957,7 +974,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -1
     }
   ],
   "models": [
@@ -1029,7 +1046,7 @@
     },
     {
       "n": "The Verge AI",
-      "c": 9
+      "c": 10
     },
     {
       "n": "Ars Technica AI",
@@ -1063,8 +1080,8 @@
     "#images",
     "#meta",
     "#york",
-    "#hugging",
-    "#face"
+    "#suno",
+    "#youtube"
   ],
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -1074,9 +1091,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 3,
-    "published_today": 24,
+    "scanned_last_run": 1,
+    "published_today": 25,
     "sources_live": 14,
-    "slopped_last_run": 1
+    "slopped_last_run": 0
   }
 }
