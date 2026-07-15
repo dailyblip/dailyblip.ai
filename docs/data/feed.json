@@ -1,6 +1,6 @@
 {
   "issue": 225,
-  "generated_at": "2026-07-15T19:15:40.034Z",
+  "generated_at": "2026-07-15T20:40:24.381Z",
   "brief": {
     "items": [
       {
@@ -64,6 +64,75 @@
   },
   "stories": [
     {
+      "id": "s_976a1a3eff5f1d7b",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
+      "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/",
+      "ts": "2026-07-15T18:04:06.000Z",
+      "read": "4 min",
+      "also": [],
+      "top": true,
+      "heat": 116,
+      "move": 56
+    },
+    {
+      "id": "s_4367c4f1a18b0bbe",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Houdini 22 adds native Gaussian Splatting support and redesigned UI",
+      "dek": "SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/",
+      "ts": "2026-07-15T20:16:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 84,
+      "move": 39
+    },
+    {
+      "id": "s_aa32e1edecf76be3",
+      "cat": "video",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "AI startups release direct-to-video generated films as cash-grab strategy",
+      "dek": "An AI startup is capitalizing on blockbuster hype by rushing out AI-generated films directly to digital release, mirroring decades-old direct-to-video B-movie economics.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/entertainment/965616/ash-koosha-odysseus-the-fall-foundtain-zero-tilly-norwood",
+      "ts": "2026-07-15T20:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 48
+    },
+    {
+      "id": "s_99a19263a8c15f19",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "OpenAI releases $230 Codex keyboard with AI agent status lights",
+      "dek": "OpenAI entered hardware with a specialty keyboard co-designed with Work Louder, featuring customizable keys and a reasoning-level dial for managing AI coding agents.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/",
+      "ts": "2026-07-15T19:41:38.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 101,
+      "move": 51
+    },
+    {
       "id": "s_ac1e314b2ff426dc",
       "cat": "writing",
       "badge": "new",
@@ -77,25 +146,9 @@
       "url": "https://dailyblip.ai/commentary/style-transfer-isn-t-theft-except-when-it-obviously-is-2026-07-15.html",
       "ts": "2026-07-15T18:01:46.915Z",
       "read": "3 min",
-      "also": []
-    },
-    {
-      "id": "s_fe6ab2efc212fece",
-      "cat": "industry",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
-      "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
-      "ts": "2026-07-15T15:29:33.000Z",
-      "read": "3 min",
       "also": [],
-      "heat": 107,
-      "move": -1,
-      "top": true
+      "heat": 91,
+      "move": 50
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -111,8 +164,8 @@
       "ts": "2026-07-15T17:48:01.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 112,
-      "move": 53
+      "heat": 109,
+      "move": -1
     },
     {
       "id": "s_d173222f3e599859",
@@ -129,8 +182,8 @@
       "ts": "2026-07-15T17:45:15.948Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
-      "move": -1
+      "heat": 91,
+      "move": -4
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -146,8 +199,8 @@
       "ts": "2026-07-15T17:29:41.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 84,
-      "move": -1
+      "heat": 81,
+      "move": -5
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -163,8 +216,8 @@
       "ts": "2026-07-15T17:27:01.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 83,
-      "move": -1
+      "heat": 81,
+      "move": -5
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -180,7 +233,7 @@
       "ts": "2026-07-15T17:00:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 111,
+      "heat": 108,
       "move": -1
     },
     {
@@ -197,8 +250,8 @@
       "ts": "2026-07-15T16:20:18.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": -2
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_18de27eea197aabe",
@@ -214,8 +267,8 @@
       "ts": "2026-07-15T16:00:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": 0
+      "heat": 69,
+      "move": -8
     },
     {
       "id": "s_84777b05d9b25937",
@@ -231,8 +284,25 @@
       "ts": "2026-07-15T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
-      "move": 0
+      "heat": 69,
+      "move": -8
+    },
+    {
+      "id": "s_fe6ab2efc212fece",
+      "cat": "industry",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
+      "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+      "ts": "2026-07-15T15:29:33.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 104,
+      "move": -1
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -248,8 +318,25 @@
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 91,
-      "move": 0
+      "heat": 88,
+      "move": -5
+    },
+    {
+      "id": "s_a9eaf0c587df10e3",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Ode with Anthropic embeds forward-deployed AI engineers into enterprise",
+      "dek": "Ode, a joint venture backed by Anthropic and major financial firms, acquired Fractional AI to place specialized engineers inside enterprise organizations, betting AI services will replace traditional consulting.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/video/inside-ode-with-anthropic-the-startup-betting-ai-services-are-the-future-of-enterprise/",
+      "ts": "2026-07-15T15:00:00.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 68,
+      "move": 23
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -265,8 +352,8 @@
       "ts": "2026-07-15T13:10:47.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 69,
-      "move": -1
+      "heat": 67,
+      "move": -13
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -282,8 +369,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 79,
-      "move": -1
+      "heat": 76,
+      "move": -13
     },
     {
       "id": "s_110aa69c02571475",
@@ -299,8 +386,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -1
+      "heat": 66,
+      "move": -13
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -316,8 +403,8 @@
       "ts": "2026-07-15T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": 0
+      "heat": 83,
+      "move": -7
     },
     {
       "id": "s_569d5689452ac2df",
@@ -333,8 +420,8 @@
       "ts": "2026-07-15T11:09:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": -1
+      "heat": 82,
+      "move": -6
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -350,8 +437,8 @@
       "ts": "2026-07-15T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 67,
-      "move": -1
+      "heat": 64,
+      "move": -8
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -367,8 +454,8 @@
       "ts": "2026-07-15T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -1
+      "heat": 73,
+      "move": -5
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -384,8 +471,25 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": -1
+      "heat": 78,
+      "move": -5
+    },
+    {
+      "id": "s_210f6726bf4a719a",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Inkling by Thinking Machines now available on Hugging Face",
+      "dek": "Inkling, the 1T-parameter multimodal open model, is now deployed with inference support via Transformers, vLLM, and llama.cpp for agentic coding and multi-token prediction tasks.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+      "ts": "2026-07-15T00:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 73,
+      "move": 29
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -401,8 +505,8 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": -3
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -418,8 +522,8 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 62,
-      "move": -1
+      "heat": 59,
+      "move": -14
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -435,8 +539,8 @@
       "ts": "2026-07-14T21:50:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": -1
+      "heat": 86,
+      "move": -4
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -452,8 +556,8 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 68,
+      "move": -8
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -469,8 +573,8 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": -2
+      "heat": 85,
+      "move": -3
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -486,8 +590,8 @@
       "ts": "2026-07-14T18:33:31.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": -1
+      "heat": 78,
+      "move": -4
     },
     {
       "id": "s_986155e62b49ff74",
@@ -504,7 +608,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -521,7 +625,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -538,7 +642,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_23767f964a637e72",
@@ -555,7 +659,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -572,7 +676,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -589,7 +693,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_ec43065966072242",
@@ -606,7 +710,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -623,7 +727,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -7
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -640,7 +744,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -657,7 +761,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -674,7 +778,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -1
+      "move": -7
     },
     {
       "id": "s_07270bd7745b992c",
@@ -691,7 +795,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_d03c89151d098f57",
@@ -708,7 +812,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -725,7 +829,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -7
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -742,7 +846,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -759,7 +863,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_b4553fdd41168ce5",
@@ -776,7 +880,7 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -1
+      "move": -2
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -793,7 +897,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_6358ddebecad3055",
@@ -810,7 +914,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -827,7 +931,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": -1
+      "move": -2
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -844,7 +948,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_0b9a256573f21194",
@@ -861,7 +965,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -878,7 +982,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -895,7 +999,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_98d85122ab641d19",
@@ -911,7 +1015,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -926,7 +1030,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": -1
+      "move": -6
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -943,7 +1047,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -958,7 +1062,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -1
+      "move": -7
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -973,7 +1077,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -7
     }
   ],
   "models": [
@@ -1041,46 +1145,46 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 25
+      "c": 28
     },
     {
       "n": "The Verge AI",
-      "c": 10
-    },
-    {
-      "n": "Ars Technica AI",
-      "c": 5
+      "c": 11
     },
     {
       "n": "Creative Bloq AI",
       "c": 4
     },
     {
-      "n": "PetaPixel",
-      "c": 3
+      "n": "Ars Technica AI",
+      "c": 4
     },
     {
       "n": "Hugging Face Blog",
+      "c": 3
+    },
+    {
+      "n": "80 Level",
       "c": 2
     },
     {
       "n": "dailyblip",
-      "c": 1
+      "c": 2
     },
     {
-      "n": "OpenAI News",
-      "c": 1
+      "n": "PetaPixel",
+      "c": 2
     }
   ],
   "topics": [
     "#openai",
     "#apple",
     "#google",
-    "#images",
+    "#hugging",
+    "#face",
+    "#anthropic",
     "#meta",
-    "#york",
-    "#suno",
-    "#youtube"
+    "#york"
   ],
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -1090,9 +1194,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 1,
-    "published_today": 25,
+    "scanned_last_run": 11,
+    "published_today": 28,
     "sources_live": 14,
-    "slopped_last_run": 0
+    "slopped_last_run": 5
   }
 }

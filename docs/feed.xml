@@ -5,14 +5,46 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 17:57:08 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 20:40:24 GMT</lastBuildDate>
     <item>
-      <title>Apple Intelligence launches in China via Alibaba Qwen partnership</title>
-      <link>https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/</link>
-      <guid isPermaLink="false">s_fe6ab2efc212fece</guid>
-      <description>China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 15:29:33 GMT</pubDate>
+      <title>Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model</title>
+      <link>https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/</link>
+      <guid isPermaLink="false">s_976a1a3eff5f1d7b</guid>
+      <description>Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.</description>
+      <category>tools</category>
+      <pubDate>Wed, 15 Jul 2026 18:04:06 GMT</pubDate>
+    </item>
+    <item>
+      <title>Houdini 22 adds native Gaussian Splatting support and redesigned UI</title>
+      <link>https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/</link>
+      <guid isPermaLink="false">s_4367c4f1a18b0bbe</guid>
+      <description>SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.</description>
+      <category>video</category>
+      <pubDate>Wed, 15 Jul 2026 20:16:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI startups release direct-to-video generated films as cash-grab strategy</title>
+      <link>https://www.theverge.com/entertainment/965616/ash-koosha-odysseus-the-fall-foundtain-zero-tilly-norwood</link>
+      <guid isPermaLink="false">s_aa32e1edecf76be3</guid>
+      <description>An AI startup is capitalizing on blockbuster hype by rushing out AI-generated films directly to digital release, mirroring decades-old direct-to-video B-movie economics.</description>
+      <category>video</category>
+      <pubDate>Wed, 15 Jul 2026 20:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI releases $230 Codex keyboard with AI agent status lights</title>
+      <link>https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/</link>
+      <guid isPermaLink="false">s_99a19263a8c15f19</guid>
+      <description>OpenAI entered hardware with a specialty keyboard co-designed with Work Louder, featuring customizable keys and a reasoning-level dial for managing AI coding agents.</description>
+      <category>tools</category>
+      <pubDate>Wed, 15 Jul 2026 19:41:38 GMT</pubDate>
+    </item>
+    <item>
+      <title>Style Transfer Isn't Theft, Except When It Obviously Is</title>
+      <link>https://dailyblip.ai/commentary/style-transfer-isn-t-theft-except-when-it-obviously-is-2026-07-15.html</link>
+      <guid isPermaLink="false">s_ac1e314b2ff426dc</guid>
+      <description>Artists complaining that AI was trained on their work fall into two very different camps: those with a genuinely serious legal grievance, and those who are mostly upset that the market got harder. Lumping them together helps nobody.</description>
+      <category>writing</category>
+      <pubDate>Wed, 15 Jul 2026 18:01:46 GMT</pubDate>
     </item>
     <item>
       <title>Suno trained on millions of scraped songs from YouTube, Deezer, Genius</title>
@@ -64,7 +96,7 @@
     </item>
     <item>
       <title>Hugging Face releases Real World VoiceEQ benchmark for voice AI quality</title>
-      <link>https://arstechnica.com/ai/2026/07/openais-first-branded-hardware-is-a-light-up-keyboard/</link>
+      <link>https://daily.dev/posts/introducing-real-world-voiceeq-measuring-the-human-quality-of-voice-ai-ceqodha2j</link>
       <guid isPermaLink="false">s_18de27eea197aabe</guid>
       <description>New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.</description>
       <category>tools</category>
@@ -79,20 +111,28 @@
       <pubDate>Wed, 15 Jul 2026 16:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>Apple Intelligence launches in China via Alibaba Qwen partnership</title>
+      <link>https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/</link>
+      <guid isPermaLink="false">s_fe6ab2efc212fece</guid>
+      <description>China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 15:29:33 GMT</pubDate>
+    </item>
+    <item>
       <title>Concept artist Daniel Porto accelerates 20 years of vision with AI</title>
-      <link>https://www.creativebloq.com/entertainment/gaming/denshattack-review-an-eccentric-off-the-rails-ride-through-90s-arcade-chaos</link>
+      <link>https://www.creativebloq.com/3d/ai-has-amplified-my-20-years-of-experience-believes-concept-artist-daniel-porto</link>
       <guid isPermaLink="false">s_c0ac8f261d4797a3</guid>
       <description>Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.</description>
       <category>image</category>
       <pubDate>Wed, 15 Jul 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Google Images homepage redesign features AI-generated and curated content</title>
-      <link>https://petapixel.com/2026/07/15/godoxs-new-inflatable-4x4-full-color-light-sets-up-in-a-minute/</link>
-      <guid isPermaLink="false">s_9db836b16b6b8943</guid>
-      <description>Google Images overhauls its 25-year-old interface with a Pinterest-style gallery, integrating AI imagery alongside real photos for personalized discovery.</description>
-      <category>image</category>
-      <pubDate>Wed, 15 Jul 2026 14:10:40 GMT</pubDate>
+      <title>Ode with Anthropic embeds forward-deployed AI engineers into enterprise</title>
+      <link>https://techcrunch.com/video/inside-ode-with-anthropic-the-startup-betting-ai-services-are-the-future-of-enterprise/</link>
+      <guid isPermaLink="false">s_a9eaf0c587df10e3</guid>
+      <description>Ode, a joint venture backed by Anthropic and major financial firms, acquired Fractional AI to place specialized engineers inside enterprise organizations, betting AI services will replace traditional consulting.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 15:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Anthropic launches $1.5B AI implementation venture with Blackstone</title>
@@ -125,46 +165,6 @@
       <description>The TCP/IP architect is advising Innovation Labs on creating an open architecture for AI agents to identify themselves using domain-name infrastructure.</description>
       <category>industry</category>
       <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>George Lucas: 'There's nothing you can do about AI' in filmmaking</title>
-      <link>https://petapixel.com/2026/07/15/george-lucas-says-theres-nothing-you-can-do-about-ai/</link>
-      <guid isPermaLink="false">s_569d5689452ac2df</guid>
-      <description>Influential filmmaker compares AI's impact on cinema to the historical shift from horse transport to automobiles.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 11:09:40 GMT</pubDate>
-    </item>
-    <item>
-      <title>AI image generation called 'pop culture's greatest tribute band'</title>
-      <link>https://www.creativebloq.com/ai/i-laughed-at-this-image-of-england-players-as-queen-but-it-reveals-ais-biggest-problem</link>
-      <guid isPermaLink="false">s_d71a059cc728fd04</guid>
-      <description>Analysis of generative AI's tendency toward derivative cultural pastiche, examining why novelty in AI-made content feels exhausted.</description>
-      <category>image</category>
-      <pubDate>Wed, 15 Jul 2026 11:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI releases GPT-Red, automated red-teaming system for AI safety</title>
-      <link>https://openai.com/index/unlocking-self-improvement-gpt-red</link>
-      <guid isPermaLink="false">s_ee230258f27f8a0d</guid>
-      <description>Self-play framework designed to stress-test AI robustness and resistance to prompt injection. Advances in safety methodology relevant to all generative systems.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 10:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Ghost Font—an optical illusion font designed to confuse AI image readers</title>
-      <link>https://www.creativebloq.com/design/fonts-typography/this-optical-illusion-font-was-created-to-baffle-ai-and-it-actually-works-for-now</link>
-      <guid isPermaLink="false">s_b7c7277aa894fd0b</guid>
-      <description>A typeface engineered with visual tricks intended to defeat AI OCR and vision models. Tests user effectiveness against AI text recognition.</description>
-      <category>tools</category>
-      <pubDate>Wed, 15 Jul 2026 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI developing screenless AI speaker with physical movement</title>
-      <link>https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/</link>
-      <guid isPermaLink="false">s_7218bca86f1b347e</guid>
-      <description>OpenAI's first hardware product is reportedly a mobile smart speaker with mechanical elements designed to function as a ChatGPT-powered home companion.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 22:22:24 GMT</pubDate>
     </item>
   </channel>
 </rss>
