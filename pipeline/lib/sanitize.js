@@ -33,6 +33,9 @@ export function validateBrief(brief, validStoryIds) {
       // reports) — preserved here so it survives the reconstruction if
       // it's already present, but brief.js is the actual source of truth.
       tracking: !!it.tracking,
+      // Same deal for commentary — set programmatically by brief.js from
+      // known candidate data, never trusted from the model's own output.
+      commentary: !!it.commentary,
     }));
   if (items.length < 4) throw new Error(`brief gate: only ${items.length} valid items`);
   if (new Set(items.map((i) => i.story)).size !== items.length) throw new Error("brief gate: duplicate stories");
