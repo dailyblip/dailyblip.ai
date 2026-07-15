@@ -1,6 +1,6 @@
 {
   "issue": 220,
-  "generated_at": "2026-07-15T07:27:07.479Z",
+  "generated_at": "2026-07-15T12:23:43.265Z",
   "brief": {
     "items": [
       {
@@ -71,9 +71,60 @@
       "ts": "2026-07-14T21:50:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 99,
-      "move": 0,
+      "heat": 94,
+      "move": -1,
       "top": true
+    },
+    {
+      "id": "s_a7a2286fcda29082",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Vint Cerf working on standards to identify AI agents on the open internet",
+      "dek": "The TCP/IP architect is advising Innovation Labs on creating an open architecture for AI agents to identify themselves using domain-name infrastructure.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/",
+      "ts": "2026-07-15T12:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 55
+    },
+    {
+      "id": "s_569d5689452ac2df",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "George Lucas: 'There's nothing you can do about AI' in filmmaking",
+      "dek": "Influential filmmaker compares AI's impact on cinema to the historical shift from horse transport to automobiles.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/15/george-lucas-says-theres-nothing-you-can-do-about-ai/",
+      "ts": "2026-07-15T11:09:40.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 54
+    },
+    {
+      "id": "s_d71a059cc728fd04",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "AI image generation called 'pop culture's greatest tribute band'",
+      "dek": "Analysis of generative AI's tendency toward derivative cultural pastiche, examining why novelty in AI-made content feels exhausted.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/ai/i-laughed-at-this-image-of-england-players-as-queen-but-it-reveals-ais-biggest-problem",
+      "ts": "2026-07-15T11:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 73,
+      "move": 40
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -89,8 +140,8 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": 56
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -106,7 +157,7 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
+      "heat": 78,
       "move": -2
     },
     {
@@ -123,8 +174,8 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -1
+      "heat": 68,
+      "move": -5
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -140,8 +191,8 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -1
+      "heat": 75,
+      "move": -6
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -157,8 +208,8 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 97,
-      "move": 0
+      "heat": 92,
+      "move": -2
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -174,8 +225,8 @@
       "ts": "2026-07-14T18:33:31.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": -1
+      "heat": 84,
+      "move": -4
     },
     {
       "id": "s_986155e62b49ff74",
@@ -191,8 +242,8 @@
       "ts": "2026-07-14T17:45:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 65,
+      "move": -9
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -208,8 +259,8 @@
       "ts": "2026-07-14T17:18:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
-      "move": -1
+      "heat": 83,
+      "move": -4
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -225,8 +276,8 @@
       "ts": "2026-07-14T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 65,
+      "move": -9
     },
     {
       "id": "s_23767f964a637e72",
@@ -242,8 +293,8 @@
       "ts": "2026-07-14T16:28:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -4
+      "heat": 64,
+      "move": -7
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -259,8 +310,8 @@
       "ts": "2026-07-14T16:22:15.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -5
+      "heat": 72,
+      "move": -3
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -276,8 +327,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -5
+      "heat": 72,
+      "move": -3
     },
     {
       "id": "s_ec43065966072242",
@@ -293,8 +344,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 69,
-      "move": -4
+      "heat": 64,
+      "move": -7
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -310,8 +361,8 @@
       "ts": "2026-07-14T15:47:36.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 58,
-      "move": -10
+      "heat": 53,
+      "move": -4
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -327,8 +378,8 @@
       "ts": "2026-07-14T15:17:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": -2
+      "heat": 81,
+      "move": -3
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -344,8 +395,8 @@
       "ts": "2026-07-14T15:06:28.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": -2
+      "heat": 81,
+      "move": -3
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -361,8 +412,8 @@
       "ts": "2026-07-14T14:37:48.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 47,
-      "move": -9
+      "heat": 42,
+      "move": -3
     },
     {
       "id": "s_2cae585118ae58a3",
@@ -378,8 +429,8 @@
       "ts": "2026-07-14T14:26:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 67,
-      "move": -7
+      "heat": 62,
+      "move": -4
     },
     {
       "id": "s_07270bd7745b992c",
@@ -395,8 +446,8 @@
       "ts": "2026-07-14T14:24:53.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": -2
+      "heat": 80,
+      "move": -3
     },
     {
       "id": "s_d03c89151d098f57",
@@ -412,8 +463,8 @@
       "ts": "2026-07-14T14:06:47.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 67,
-      "move": -7
+      "heat": 62,
+      "move": -4
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -429,7 +480,7 @@
       "ts": "2026-07-14T14:01:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 65,
+      "heat": 60,
       "move": -4
     },
     {
@@ -446,8 +497,8 @@
       "ts": "2026-07-14T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 67,
-      "move": -7
+      "heat": 62,
+      "move": -4
     },
     {
       "id": "s_27568dc6ad1def84",
@@ -463,8 +514,8 @@
       "ts": "2026-07-14T13:29:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 56,
-      "move": -11
+      "heat": 51,
+      "move": -3
     },
     {
       "id": "s_a5c0710938e469b9",
@@ -480,8 +531,8 @@
       "ts": "2026-07-14T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 64,
-      "move": -5
+      "heat": 60,
+      "move": -3
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -497,8 +548,8 @@
       "ts": "2026-07-14T09:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 68,
+      "move": -3
     },
     {
       "id": "s_c479b3a9a06e96ab",
@@ -514,8 +565,8 @@
       "ts": "2026-07-14T08:29:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 61,
-      "move": -2
+      "heat": 60,
+      "move": -3
     },
     {
       "id": "s_70aeec97bcd8cd58",
@@ -532,7 +583,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_b4553fdd41168ce5",
@@ -549,7 +600,7 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -566,7 +617,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 4
+      "move": 1
     },
     {
       "id": "s_6358ddebecad3055",
@@ -583,7 +634,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 4
+      "move": 1
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -600,7 +651,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": 2
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -617,7 +668,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_0b9a256573f21194",
@@ -634,7 +685,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -651,7 +702,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -668,7 +719,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -685,7 +736,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 4
+      "move": 1
     },
     {
       "id": "s_efecb35d7b427474",
@@ -702,7 +753,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_b2beb695d675ec33",
@@ -719,7 +770,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_1f8d572b50f537be",
@@ -736,7 +787,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_dabdfae8cca17885",
@@ -752,7 +803,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_cca9d9854a8b2b2e",
@@ -769,7 +820,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_7fcf1c64331ce573",
@@ -786,7 +837,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_5e8fda4219f983fc",
@@ -803,7 +854,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_6e1e0d51aedb6c51",
@@ -820,7 +871,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -837,7 +888,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 4
+      "move": 1
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -854,7 +905,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_1c07dda2c1408621",
@@ -870,7 +921,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 2
+      "move": 1
     },
     {
       "id": "s_98d85122ab641d19",
@@ -886,7 +937,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_5cec1af73b884a0e",
@@ -902,7 +953,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 4
+      "move": 1
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -917,7 +968,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 1
+      "move": 3
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -934,7 +985,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_5ebc8099c0f86311",
@@ -950,7 +1001,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -3
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -965,7 +1016,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": 0
+      "move": -2
     },
     {
       "id": "s_aa7a527942ee048d",
@@ -981,7 +1032,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -997,7 +1048,7 @@
       "read": "5 min",
       "also": [],
       "heat": 78,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -1012,53 +1063,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
-    },
-    {
-      "id": "s_9199a23f1066af9c",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "title": "Browser-based procedural ivy and fig tree generator launches open-source",
-      "dek": "Chiro Visuals' Three.js tool generates organic foliage in real-time—paint paths on meshes to grow procedural vines. Practical for 3D environment artists seeking fast iteration.",
-      "src": "80 Level",
-      "url": "https://80.lv/articles/this-fully-procedural-ivy-and-fig-tree-generator-runs-in-your-browser/",
-      "ts": "2026-07-10T16:50:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 70,
-      "move": 4
-    },
-    {
-      "id": "s_b86afc4b2d83da6d",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Blursed Predator",
-      "dek": "AI-generated video creation by community member.",
-      "src": "r/aivideo",
-      "url": "https://www.reddit.com/r/aivideo/comments/1usr9i4/blursed_predator/",
-      "ts": "2026-07-10T15:41:14.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": 0
-    },
-    {
-      "id": "s_10db03d8139e44b4",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "title": "INT4 W4A4 quantization reaches image model quality near INT8",
-      "dek": "Creator tests newly merged INT4 W4A4 models in ComfyUI, finding visual output nearly indistinguishable from INT8 at smaller file size and lower VRAM.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1usqymj/art_style_mixing/",
-      "ts": "2026-07-10T15:30:06.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": 0
+      "move": -3
     }
   ],
   "models": [
@@ -1126,15 +1131,15 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 18
+      "c": 19
     },
     {
       "n": "80 Level",
-      "c": 13
+      "c": 12
     },
     {
       "n": "Creative Bloq AI",
-      "c": 8
+      "c": 9
     },
     {
       "n": "The Verge AI",
@@ -1142,18 +1147,18 @@
     },
     {
       "n": "PetaPixel",
-      "c": 5
+      "c": 6
     },
     {
       "n": "Ars Technica AI",
       "c": 4
     },
     {
-      "n": "r/StableDiffusion",
-      "c": 2
+      "n": "MarkTechPost",
+      "c": 1
     },
     {
-      "n": "MarkTechPost",
+      "n": "r/StableDiffusion",
       "c": 1
     }
   ],
@@ -1175,9 +1180,9 @@
     "date": "2026-07-15T03:53:34.798Z"
   },
   "stats": {
-    "scanned_last_run": 6,
+    "scanned_last_run": 17,
     "published_today": 27,
     "sources_live": 14,
-    "slopped_last_run": 5
+    "slopped_last_run": 14
   }
 }

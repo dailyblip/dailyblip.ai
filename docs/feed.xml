@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 07:27:07 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 12:23:43 GMT</lastBuildDate>
     <item>
       <title>GPT-5.6 Sol deleting user files without consent, widespread reports</title>
       <link>https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/</link>
@@ -13,6 +13,30 @@
       <description>Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.</description>
       <category>tools</category>
       <pubDate>Tue, 14 Jul 2026 21:50:11 GMT</pubDate>
+    </item>
+    <item>
+      <title>Vint Cerf working on standards to identify AI agents on the open internet</title>
+      <link>https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/</link>
+      <guid isPermaLink="false">s_a7a2286fcda29082</guid>
+      <description>The TCP/IP architect is advising Innovation Labs on creating an open architecture for AI agents to identify themselves using domain-name infrastructure.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>George Lucas: 'There's nothing you can do about AI' in filmmaking</title>
+      <link>https://petapixel.com/2026/07/15/george-lucas-says-theres-nothing-you-can-do-about-ai/</link>
+      <guid isPermaLink="false">s_569d5689452ac2df</guid>
+      <description>Influential filmmaker compares AI's impact on cinema to the historical shift from horse transport to automobiles.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 11:09:40 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI image generation called 'pop culture's greatest tribute band'</title>
+      <link>https://www.creativebloq.com/ai/i-laughed-at-this-image-of-england-players-as-queen-but-it-reveals-ais-biggest-problem</link>
+      <guid isPermaLink="false">s_d71a059cc728fd04</guid>
+      <description>Analysis of generative AI's tendency toward derivative cultural pastiche, examining why novelty in AI-made content feels exhausted.</description>
+      <category>image</category>
+      <pubDate>Wed, 15 Jul 2026 11:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Ghost Font—an optical illusion font designed to confuse AI image readers</title>
@@ -141,30 +165,6 @@
       <description>One-year ban on large data center construction could signal broader regulatory backlash against AI infrastructure's resource demands.</description>
       <category>industry</category>
       <pubDate>Tue, 14 Jul 2026 15:06:28 GMT</pubDate>
-    </item>
-    <item>
-      <title>Reflection AI secures $1B compute access deal with Nebius</title>
-      <link>https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/</link>
-      <guid isPermaLink="false">s_97c9eefb08315a4b</guid>
-      <description>Open-source AI startup Reflection inked a compute partnership with European infrastructure firm Nebius to access Nvidia chips, mirroring broader industry consolidation.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 14:37:48 GMT</pubDate>
-    </item>
-    <item>
-      <title>Damage Control Blender tool suite for destruction, scatter, and grunge effects launches</title>
-      <link>https://80.lv/articles/jesse-miettinen-s-the-last-of-us-like-generator-finally-launches/</link>
-      <guid isPermaLink="false">s_2cae585118ae58a3</guid>
-      <description>Jesse Miettinen's procedural toolkit brings smudge masks, scatter tools, and generative shaders for lifelike scene degradation and material aging.</description>
-      <category>video</category>
-      <pubDate>Tue, 14 Jul 2026 14:26:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Open-weight models now dominate production AI, shifting the competitive frontier</title>
-      <link>https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/</link>
-      <guid isPermaLink="false">s_07270bd7745b992c</guid>
-      <description>Chinese open models account for 41% of Hugging Face downloads; Vercel data shows open-weight models handle most infrastructure volume while closed models serve premium tier.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 14:24:53 GMT</pubDate>
     </item>
   </channel>
 </rss>
