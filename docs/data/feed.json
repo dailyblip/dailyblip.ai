@@ -1,6 +1,6 @@
 {
   "issue": 224,
-  "generated_at": "2026-07-15T18:02:01.301Z",
+  "generated_at": "2026-07-15T18:45:55.486Z",
   "brief": {
     "items": [
       {
@@ -209,8 +209,8 @@
       "tier": "journalism",
       "title": "Hugging Face releases Real World VoiceEQ benchmark for voice AI quality",
       "dek": "New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/ai/2026/07/openais-first-branded-hardware-is-a-light-up-keyboard/",
+      "src": "Daily.dev",
+      "url": "https://daily.dev/posts/introducing-real-world-voiceeq-measuring-the-human-quality-of-voice-ai-ceqodha2j",
       "ts": "2026-07-15T16:00:33.000Z",
       "read": "3 min",
       "also": [],
@@ -244,7 +244,7 @@
       "title": "Concept artist Daniel Porto accelerates 20 years of vision with AI",
       "dek": "Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.",
       "src": "Creative Bloq AI",
-      "url": "https://www.creativebloq.com/entertainment/gaming/denshattack-review-an-eccentric-off-the-rails-ride-through-90s-arcade-chaos",
+      "url": "https://www.creativebloq.com/3d/ai-has-amplified-my-20-years-of-experience-believes-concept-artist-daniel-porto",
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "4 min",
       "also": [],
@@ -261,7 +261,7 @@
       "title": "Google Images homepage redesign features AI-generated and curated content",
       "dek": "Google Images overhauls its 25-year-old interface with a Pinterest-style gallery, integrating AI imagery alongside real photos for personalized discovery.",
       "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/15/godoxs-new-inflatable-4x4-full-color-light-sets-up-in-a-minute/",
+      "url": "https://petapixel.com/2026/07/15/google-images-is-getting-a-makeover-for-its-25th-birthday/",
       "ts": "2026-07-15T14:10:40.000Z",
       "read": "2 min",
       "also": [],
