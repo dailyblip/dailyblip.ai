@@ -1,60 +1,60 @@
 {
-  "issue": 218,
-  "generated_at": "2026-07-15T03:51:26.424Z",
+  "issue": 219,
+  "generated_at": "2026-07-15T03:53:34.861Z",
   "brief": {
     "items": [
       {
-        "story": "s_a4b29ff806d7c08f",
-        "html": "New York <b>halted all data center permits above 50 MW</b> for one year — if this spreads, expect tighter AI compute supply to slow model updates and raise inference costs for image and video tools.",
+        "story": "s_3e68f8ee554f3c0b",
+        "html": "<b>GPT-5.6 Sol is deleting user files without consent</b> — avoid using it on any project folder until OpenAI issues a fix.",
+        "secs": 10,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_2cc0275fcceef652",
+        "html": "SpaceX's Grok Build CLI tool <b>uploaded entire codebases including secrets to cloud storage</b> before the vulnerability was patched — audit any repos you ran through it.",
         "secs": 11,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_b98c65f859f0dcbd",
+        "html": "Hachette, Cengage, and Elsevier have now <b>formally sued Google for training Gemini on copyrighted works</b> — a case writing and publishing creators should follow for precedent.",
+        "secs": 10,
         "impact": 7,
-        "hardware": true,
+        "hardware": false,
         "tracking": false
       },
       {
         "story": "s_527857b3b9d8ad5a",
-        "html": "<b>TurboSquid artists are still reporting steep sales drops and payment delays</b> — activate backup marketplace listings and document your revenue history now.",
+        "html": "<b>TurboSquid artists continue reporting steep sales drops and payment delays</b> — activate backup marketplace listings and document your revenue history now.",
         "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_b98c65f859f0dcbd",
-        "html": "The Hachette-vs-Google copyright suit <b>added Cengage and Elsevier as plaintiffs</b>, broadening the case writing creators should watch for precedent on AI training rights.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_23767f964a637e72",
-        "html": "Google redesigned Image Search with <b>personalized AI-generated galleries and in-search image generation</b> — a direct new distribution channel for visual creators to understand.",
+        "story": "s_f6d4f1f66693b6a8",
+        "html": "Apple's <b>AI-overhauled Siri is now in iOS 27 public beta</b> — test it now if you want early insight into how your content surfaces through the new assistant.",
         "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_274fe08b7f274f10",
-        "html": "Spotify launched <b>'Talk to Spotify,' a conversational AI for Premium subscribers</b> that surfaces music and podcasts through chat — a new discovery layer music creators should know about.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_07270bd7745b992c",
-        "html": "Open-weight models now handle <b>41% of Hugging Face downloads and most production infrastructure volume</b> — meaning cheaper, self-hostable alternatives to closed APIs are increasingly viable for creative pipelines.",
-        "secs": 11,
+        "story": "s_2cae585118ae58a3",
+        "html": "Jesse Miettinen's <b>Damage Control Blender toolkit launches with procedural destruction, scatter, and grunge shaders</b> for realistic scene degradation.",
+        "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false
       }
     ],
-    "title": "Tuesday, July 14 — six things that changed today",
-    "date": "2026-07-15T03:51:26.359Z",
-    "edition": "pm"
+    "title": "Tuesday, July 14 — six things creators need to know",
+    "date": "2026-07-15T03:53:19.416Z",
+    "edition": "am"
   },
   "stories": [
     {
@@ -1166,11 +1166,11 @@
     "#images"
   ],
   "tooldrop": {
-    "name": "MuScriptor",
-    "blurb": "Open-weight model from Kyutai that transcribes multi-instrument audio recordings into MIDI. Useful for musicians who want to extract notation or stems from existing tracks.",
-    "meta": "music · midi — free (open weight)",
-    "url": "https://www.marktechpost.com/2026/07/10/kyutai-releases-muscriptor-an-open-weight-decoder-only-transformer-for-multi-instrument-music-transcription-to-midi/",
-    "date": "2026-07-12T16:35:01.947Z"
+    "name": "Branda",
+    "blurb": "Open-source tool that generates on-brand ad visuals. Drop in your brand assets and get ready-to-use ad creatives without a subscription.",
+    "meta": "image · design — free, open-source",
+    "url": "https://www.producthunt.com/products/branda-open-source-on-brand-ad-maker",
+    "date": "2026-07-15T03:53:34.798Z"
   },
   "stats": {
     "scanned_last_run": 0,
