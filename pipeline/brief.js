@@ -42,10 +42,10 @@ function isJournalism(s) {
 async function main() {
   const feed = loadFeed();
   const overrides = loadOverrides();
-  // Twice-daily editions are roughly 12h apart; a 14h window (vs the old
-  // 26h for once-daily) keeps each edition focused on what's actually new
-  // since the last one, with a couple hours of buffer either way.
-  const windowMs = 14 * 3600 * 1000;
+  // Twice-daily editions are ~11-13h apart (asymmetric: 5am-4pm is 11h,
+  // 4pm-5am is 13h) — a 15h window keeps each edition focused on what's
+  // new since the last one, with buffer on the longer overnight gap.
+  const windowMs = 15 * 3600 * 1000;
   const eligible = feed.stories.filter(isJournalism);
   const excludedCount = feed.stories.length - eligible.length;
 
@@ -86,7 +86,7 @@ async function main() {
   console.log(`brief [${edition}]: ${candidates.length} eligible candidates (excluded ${excludedCount} community-sourced stories; ${pinnedAdded} pinned stories force-added; ${activePinIds.size} active pins total).`);
 
   const today = new Date().toLocaleDateString("en-US", {
-    weekday: "long", month: "long", day: "numeric", timeZone: "America/New_York",
+    weekday: "long", month: "long", day: "numeric", timeZone: "America/Los_Angeles",
   });
 
   const result = await askJSON({
