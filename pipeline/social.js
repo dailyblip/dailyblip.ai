@@ -28,6 +28,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const OPENAI_KEY = process.env.OPENAI_API_KEY;
+const SITE_URL = process.env.SITE_URL || "https://dailyblip.ai";
 
 // Brand palette — matches the rest of the site exactly.
 const TEXT = "#E9F4F1";
@@ -43,27 +44,52 @@ function pickTopStory(feed) {
   return story ? { story, briefItem: top } : null;
 }
 
-// Abstract, moody backgrounds — deliberately NOT asking the model to render
-// any text. Image models are unreliable at legible embedded text; real text
-// gets drawn afterward with real fonts via the SVG overlay instead.
-const MOOD_BY_CATEGORY = {
-  image: "flowing abstract light trails suggesting digital image generation, soft painterly gradients",
-  video: "abstract motion-blur light streaks suggesting film and video editing, cinematic depth",
-  music: "abstract soundwave and particle visualization, rhythmic flowing shapes",
-  writing: "abstract flowing typographic ribbons and soft paper-like textures, literary mood",
-  tools: "abstract geometric interface fragments, soft glowing panels suggesting software tools",
-  rights: "abstract scales-of-justice inspired geometric shapes, formal and serious mood",
-  industry: "abstract circuitry and network node patterns suggesting technology infrastructure",
-};
+// Your art-direction brief, filled in per-story. Asks the model to attempt
+// the company's logo itself, best-effort, with explicit permission to
+// simply omit it if unsure — image models are inconsistent at exact
+// trademarked graphics, so this trades perfect accuracy for simplicity.
+// Still forbids other readable text in the generated image, for the same
+// reason headlines are drawn separately with real fonts afterward.
+function buildImagePrompt(story) {
+  return `Generate a striking editorial image for an Instagram news post based on the article and summary below.
+ARTICLE: ${story.url}
+POST TEXT: ${story.title}
+
+Create a visually bold, high-energy image that communicates the article's central idea immediately, even without accompanying text.
+
+ART DIRECTION:
+- Format: vertical 4:5 Instagram image, 1080 x 1350 composition
+- Style: premium technology editorial, contemporary digital collage, dramatic advertising photography, and energetic social-media design
+- Make the composition vivid, unexpected, and highly scroll-stopping
+- Use strong depth, oversized visual elements, dramatic lighting, crisp detail, controlled motion, layered interfaces, and a clear focal point
+- Favor one memorable visual metaphor over a collection of generic technology symbols
+- The image should feel culturally current and creator-focused, not corporate, sterile, or like generic AI stock art
+- Use saturated accent colors, luminous highlights, deep contrast, and dynamic movement while maintaining a polished professional finish
+- Include human or creator-centered imagery when it improves the story
+- Show recognizable products, devices, interfaces, creative tools, or company-related visual elements that are directly relevant to the article
+- Incorporate the featured company's official logo naturally into the scene if you can render it accurately. Do not invent, approximate, misspell, or redesign a company logo — if you're not confident you can render it accurately, simply omit the logo entirely rather than guessing at it.
+- Do not include the article publisher's logo
+- Do not place headlines, captions, labels, random letters, watermarks, or other readable text inside the image
+- Leave purposeful negative space in the upper third and lower portion so headline text and publication branding can be added afterward
+- Keep important faces, logos, devices, and focal elements away from the extreme edges
+- Avoid robots, glowing brains, circuit-board faces, floating AI letters, generic holograms, handshake imagery, and other overused AI cliches unless they are specifically essential to the article
+
+Before generating, identify:
+1. The article's main subject
+2. The company or product involved
+3. The most visually compelling action or transformation
+4. Two or three concrete visual details from the article
+5. A bold visual metaphor that communicates the story in under one second
+
+Then create the image using those details. The final result should resemble an original cover image for a sharp, design-forward technology and creator-culture publication.`;
+}
 
 async function generateBackgroundImage(story) {
-  const mood = MOOD_BY_CATEGORY[story.cat] || MOOD_BY_CATEGORY.industry;
-  const prompt = `A moody, abstract digital background, dark teal-navy (#071A1F) base tone with warm amber (#FFB454) and soft aqua (#63D8C6) glowing light accents. ${mood}. Cinematic, atmospheric, high-end tech-editorial style. NO text, NO letters, NO words, NO logos, NO readable typography anywhere in the image. NO human faces. Abstract and atmospheric only, safe for a professional news brand.`;
-
+  const prompt = buildImagePrompt(story);
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
     headers: { Authorization: `Bearer ${OPENAI_KEY}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ model: "gpt-image-1", prompt, size: "1024x1024", quality: "medium" }),
+    body: JSON.stringify({ model: "gpt-image-1", prompt, size: "1024x1536", quality: "medium" }),
   });
   if (!res.ok) throw new Error(`OpenAI image API ${res.status}: ${(await res.text()).slice(0, 500)}`);
   const data = await res.json();
@@ -72,7 +98,7 @@ async function generateBackgroundImage(story) {
   return Buffer.from(b64, "base64");
 }
 
-function wrapText(text, maxCharsPerLine) {
+function wrapText(text, maxCharsPerLine, maxLines = 4) {
   const words = text.split(" ");
   const lines = [];
   let cur = "";
@@ -82,55 +108,78 @@ function wrapText(text, maxCharsPerLine) {
     else { if (cur) lines.push(cur); cur = w; }
   }
   if (cur) lines.push(cur);
-  return lines.slice(0, 4); // never let a headline overflow the card
+  return lines.slice(0, maxLines);
 }
 
 function esc(t) {
   return String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 }
 
-// Overlays the same "split-screen amber block" template already tested and
-// approved for the site's card design — badge-aware accent color (red for
-// breaking, amber otherwise), same as that template.
-async function overlayBrand(bgBuffer, story) {
-  const size = 1024;
-  const splitY = Math.round(size * 0.70);
-  const accent = story.badge === "breaking" ? RED : AMBER;
-  const pad = 70;
+// 1080x1350 (4:5), matching the negative-space zones the image prompt
+// itself asks for: wordmark/tag live in the reserved upper-third strip,
+// headline + source live in the reserved lower strip — so the overlay
+// actually complements the generated image's composition instead of
+// fighting it.
+const CANVAS_W = 1080, CANVAS_H = 1350;
 
-  const headlineLines = wrapText(story.title, 26);
-  const lineHeight = 58;
-  const textBlockHeight = headlineLines.length * lineHeight;
-  const textStartY = Math.round((splitY - pad * 1.9 - textBlockHeight) / 2 + pad * 1.7);
+async function overlayBrand(bgBuffer, story) {
+  const accent = story.badge === "breaking" ? RED : AMBER;
+  const pad = 64;
+  const bottomZoneH = 340; // reserved lower strip, matches the image prompt's negative-space request
+
+  const headlineLines = wrapText(story.title, 24, 4);
+  const lineHeight = 46;
+  const headlineY = CANVAS_H - bottomZoneH + 60;
+
   const headlineTspans = headlineLines
-    .map((line, i) => `<tspan x="${pad}" y="${textStartY + i * lineHeight}">${esc(line)}</tspan>`)
+    .map((line, i) => `<tspan x="${pad}" y="${headlineY + i * lineHeight}">${esc(line)}</tspan>`)
     .join("");
 
   const categoryLabel = story.badge === "breaking" ? "BREAKING" : story.badge === "hot" ? "TRENDING" : story.cat.toUpperCase();
+  const sourceY = headlineY + headlineLines.length * lineHeight + 36;
 
   const svg = `
-  <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
+  <svg width="${CANVAS_W}" height="${CANVAS_H}" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <style>
-        .wm { font: 700 32px sans-serif; fill: ${TEXT}; }
-        .wmAI { font: 700 32px sans-serif; fill: ${accent}; }
-        .tag { font: 700 20px sans-serif; }
-        .headline { font: 700 44px sans-serif; fill: ${TEXT}; }
-        .src { font: 700 30px sans-serif; fill: ${DARKTXT}; }
-        .sub { font: 700 20px sans-serif; fill: rgba(32,22,10,.75); }
+        .wm { font: 700 34px sans-serif; fill: ${TEXT}; }
+        .wmAI { font: 700 34px sans-serif; fill: ${accent}; }
+        .tag { font: 700 18px sans-serif; }
+        .headline { font: 700 40px sans-serif; fill: ${TEXT}; }
+        .src { font: 700 24px sans-serif; fill: ${TEXT}; }
       </style>
     </defs>
-    <rect x="0" y="${splitY}" width="${size}" height="${size - splitY}" fill="${accent}"/>
-    <text x="${pad}" y="${pad + 30}"><tspan class="wm">d</tspan><tspan class="wmAI">ai</tspan><tspan class="wm">lyblip</tspan></text>
-    <circle cx="${pad + 210}" cy="${pad + 20}" r="7" fill="${accent}"/>
-    <rect x="${size - pad - 180}" y="${pad - 6}" width="180" height="42" rx="18" fill="${accent}"/>
-    <text x="${size - pad - 160}" y="${pad + 22}" class="tag" fill="${DARKTXT}">${esc(categoryLabel)}</text>
+    <!-- gradient scrim behind the reserved lower strip, so light headline
+         text stays legible over whatever the generated image put there -->
+    <defs>
+      <linearGradient id="scrim" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#071A1F" stop-opacity="0"/>
+        <stop offset="35%" stop-color="#071A1F" stop-opacity=".88"/>
+        <stop offset="100%" stop-color="#071A1F" stop-opacity=".96"/>
+      </linearGradient>
+    </defs>
+    <rect x="0" y="${CANVAS_H - bottomZoneH - 80}" width="${CANVAS_W}" height="${bottomZoneH + 80}" fill="url(#scrim)"/>
+
+    <!-- wordmark, upper-third reserved zone -->
+    <text x="${pad}" y="${pad + 32}"><tspan class="wm">d</tspan><tspan class="wmAI">ai</tspan><tspan class="wm">lyblip</tspan></text>
+    <circle cx="${pad + 218}" cy="${pad + 22}" r="7" fill="${accent}"/>
+
+    <!-- category/badge pill, upper-third reserved zone -->
+    <rect x="${CANVAS_W - pad - 170}" y="${pad - 4}" width="170" height="40" rx="18" fill="${accent}"/>
+    <text x="${CANVAS_W - pad - 148}" y="${pad + 22}" class="tag" fill="${DARKTXT}">${esc(categoryLabel)}</text>
+
+    <!-- headline + source, lower reserved zone -->
     <text class="headline">${headlineTspans}</text>
-    <text x="${pad}" y="${splitY + (size - splitY) * 0.45}" class="src">via ${esc(story.src)}</text>
-    <text x="${pad}" y="${splitY + (size - splitY) * 0.45 + 34}" class="sub">dailyblip.ai \u2192 today's signal</text>
+    <text x="${pad}" y="${sourceY}" class="src">via ${esc(story.src)}</text>
   </svg>`;
 
-  return sharp(bgBuffer).resize(size, size).composite([{ input: Buffer.from(svg), top: 0, left: 0 }]).png().toBuffer();
+  const layers = [{ input: Buffer.from(svg), top: 0, left: 0 }];
+
+  // fit:"cover" crops-to-fill rather than stretching — matters here since
+  // OpenAI's API only offers fixed sizes (1024x1536, a 2:3 ratio) and our
+  // actual canvas is 1080x1350 (4:5) — a plain resize would visibly
+  // distort the image; cover-crop keeps it looking correct.
+  return sharp(bgBuffer).resize(CANVAS_W, CANVAS_H, { fit: "cover" }).composite(layers).png().toBuffer();
 }
 
 const CAPTION_SYSTEM = `You write Instagram captions for dailyblip, a ruthlessly-curated, zero-slop AI-creator news brand. Voice: punchy and energetic — hype in ENERGY and PACING, never in exaggeration or clickbait. No "THIS CHANGES EVERYTHING" breathlessness, no fake urgency, no emoji spam (0-2 tasteful emoji max). Confident, sharp, a little fun — still credible, this is a serious publication with personality, not a hype account.
