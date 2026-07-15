@@ -1,38 +1,20 @@
 {
-  "issue": 224,
-  "generated_at": "2026-07-15T18:47:39.899Z",
+  "issue": 225,
+  "generated_at": "2026-07-15T19:15:40.034Z",
   "brief": {
     "items": [
       {
-        "story": "s_f8bec47bee6c00a0",
-        "html": "The Suno scraping story has <b>new detail this PM edition: Genius lyrics and podcast audio are also in the training set</b>, broadening the RIAA lawsuit's potential scope.",
+        "story": "s_b4c19111324a67ee",
+        "html": "<b>Reelful's new iOS app</b> turns your camera roll photos and clips into polished TikToks and Reels automatically — worth a download if you find editing tools overwhelming.",
         "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_fe6ab2efc212fece",
-        "html": "<b>Apple Intelligence launches in China via Alibaba's Qwen model</b>, meaning iOS creators in China now have native AI writing and image tools inside Apple apps.",
-        "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_84777b05d9b25937",
-        "html": "OpenAI and Work Louder's <b>Codex Micro is a programmable light-up keyboard block for monitoring multiple AI coding threads</b> simultaneously — a niche but concrete tool for dev-focused creators.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_c0ac8f261d4797a3",
-        "html": "Concept artist Daniel Porto shows how <b>20 years of creative judgment — not prompting skill — is the real edge</b> when using AI to accelerate production work.",
+        "story": "s_18de27eea197aabe",
+        "html": "Hugging Face's <b>Real World VoiceEQ benchmark</b> gives voice AI creators a human-perception-based quality metric to evaluate output beyond existing specialized scores.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
@@ -40,8 +22,26 @@
         "commentary": false
       },
       {
-        "story": "s_569d5689452ac2df",
-        "html": "George Lucas says <b>'there's nothing you can do about AI' in filmmaking</b>, comparing the shift to the end of horse transport — notable signal for video creators on where the industry is heading.",
+        "story": "s_b7c7277aa894fd0b",
+        "html": "<b>Ghost Font</b> is a new typeface engineered with optical illusions specifically to defeat AI OCR and vision models reading your text.",
+        "secs": 9,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_ee230258f27f8a0d",
+        "html": "OpenAI's <b>GPT-Red self-play red-teaming system</b> stress-tests AI robustness against prompt injection — a safety methodology advance relevant across all generative tools.",
+        "secs": 9,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_83d5a15310e3a6b6",
+        "html": "Anthropic and Blackstone launched a <b>$1.5B AI deployment venture called Ode</b>, betting hands-on enterprise implementation — not just models — is the next big opportunity.",
         "secs": 10,
         "impact": 5,
         "hardware": false,
@@ -49,18 +49,18 @@
         "commentary": false
       },
       {
-        "story": "s_ac1e314b2ff426dc",
-        "html": "A sharp editorial argues <b>AI training grievances split into genuine legal harm and market anxiety</b> — worth reading before you pick a side in the copyright debate.",
+        "story": "s_d71a059cc728fd04",
+        "html": "A pointed analysis dubs AI image generation <b>'pop culture's greatest tribute band'</b> — examining why derivative pastiche dominates and genuine novelty feels scarce.",
         "secs": 9,
-        "impact": 5,
+        "impact": 4,
         "hardware": false,
         "tracking": false,
-        "commentary": true
+        "commentary": false
       }
     ],
-    "title": "Wednesday, July 15 — six things creators need to know",
-    "date": "2026-07-15T18:01:58.795Z",
-    "edition": "am"
+    "title": "Wednesday, July 15 — six things that changed today",
+    "date": "2026-07-15T19:15:39.976Z",
+    "edition": "pm"
   },
   "stories": [
     {
