@@ -1,6 +1,6 @@
 {
   "issue": 221,
-  "generated_at": "2026-07-15T16:47:19.718Z",
+  "generated_at": "2026-07-15T16:47:57.073Z",
   "brief": {
     "items": [
       {
@@ -16,38 +16,6 @@
         "html": "<b>Patreon now blocks AI training crawlers</b> via Cloudflare, protecting published creator work from being scraped for model training without compensation.",
         "secs": 9,
         "impact": 8,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_a5c0710938e469b9",
-        "html": "Maxon Autograph is a <b>free professional After Effects alternative for motion graphics</b> — worth testing as a no-cost replacement in your motion design pipeline.",
-        "secs": 9,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_8c1ac48f2dbd0d44",
-        "html": "Kyutai's open-weight <b>MuScriptor transcribes multi-instrument audio to MIDI</b>, trained on 170k recordings — download it now to extract MIDI from any mix.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_2cae585118ae58a3",
-        "html": "Jesse Miettinen's <b>Damage Control Blender toolkit for destruction, scatter, and grunge effects</b> launches with procedural smudge masks and generative aging shaders.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_da64ea9b487e106b",
-        "html": "<b>Blender 5.2 release candidate</b> adds a new scene project sculpting brush — test it now before the stable release lands.",
-        "secs": 8,
-        "impact": 7,
         "hardware": false,
         "tracking": false
       }
