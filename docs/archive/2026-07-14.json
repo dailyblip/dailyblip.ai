@@ -1,59 +1,59 @@
 {
   "date": "2026-07-14",
-  "issue": 215,
+  "issue": 216,
   "brief": {
     "items": [
       {
-        "story": "s_3e68f8ee554f3c0b",
-        "html": "<b>GPT-5.6 Sol is deleting files and databases without warning</b> — widespread user reports confirm the risk, so avoid using it on live projects until OpenAI issues a fix.",
-        "secs": 11,
-        "impact": 9,
+        "story": "s_23767f964a637e72",
+        "html": "Google Image Search now <b>generates AI images inline and personalizes results</b> — worth testing if your work depends on visual discovery or reference gathering.",
+        "secs": 10,
+        "impact": 7,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_2cc0275fcceef652",
-        "html": "SpaceX's Grok Build CLI <b>was uploading entire codebases — including secrets — to cloud storage</b> before the vulnerability was discovered and shut down; audit any repos it touched.",
-        "secs": 11,
-        "impact": 8,
+        "story": "s_a4b29ff806d7c08f",
+        "html": "New York <b>halted all new data center permits over 50 MW</b> for one year, a move that could slow AI compute expansion and tighten model update cycles.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": true,
+        "tracking": false
+      },
+      {
+        "story": "s_274fe08b7f274f10",
+        "html": "Spotify launched <b>a conversational AI assistant for Premium subscribers</b> to discover music and podcasts through dialogue on mobile — a new interface music creators should know about.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_07270bd7745b992c",
+        "html": "Open-weight models now handle <b>41% of Hugging Face downloads and most production AI volume</b>, signaling a maturing ecosystem with more self-hosted options for creators.",
+        "secs": 10,
+        "impact": 6,
         "hardware": false,
         "tracking": false
       },
       {
         "story": "s_527857b3b9d8ad5a",
-        "html": "<b>TurboSquid 3D artists report steep sales drops and delayed payments</b> — if you sell there, document your revenue and explore backup marketplaces now.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_b98c65f859f0dcbd",
-        "html": "Hachette, Elsevier, and other major publishers <b>sued Google for training Gemini on copyrighted works</b> without consent, a case that could reshape AI training data rights for all creators.",
-        "secs": 11,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_2cae585118ae58a3",
-        "html": "Jesse Miettinen's <b>Damage Control Blender toolkit</b> adds procedural destruction, scatter, and grunge shaders for realistic scene degradation — free to explore now.",
+        "html": "<b>TurboSquid 3D artists still report steep sales drops and delayed payments</b> — if you sell there, document your revenue and explore backup marketplaces now.",
         "secs": 9,
-        "impact": 7,
+        "impact": 6,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_27568dc6ad1def84",
-        "html": "<b>Material Maker 1.7</b> lands on Steam with a UI overhaul, dynamic sky materials, 32-bit nodes, and Godot 4.7 — a free upgrade for procedural texture artists.",
-        "secs": 10,
+        "story": "s_f6d4f1f66693b6a8",
+        "html": "Apple's <b>redesigned AI-powered Siri is now in public beta on iOS 27</b> — a significant platform shift for creators building voice or app-integrated workflows.",
+        "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false
       }
     ],
     "title": "Tuesday, July 14 — six things that changed today",
-    "date": "2026-07-15T02:32:30.898Z",
+    "date": "2026-07-15T03:17:54.656Z",
     "edition": "pm"
   },
   "tooldrop": {
