@@ -248,6 +248,14 @@ nav.cats{
 }
 .tracking-flag::before{content:"📌"}
 
+.commentary-flag{
+  display:inline-flex;align-items:center;gap:4px;margin-right:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--aqua);border:1px solid rgba(99,216,198,.4);border-radius:4px;padding:1px 6px;
+  vertical-align:middle;
+}
+.commentary-flag::before{content:"◆"}
+
 .brief-progress{margin-top:16px;display:flex;align-items:center;gap:14px}
 .pbar{flex:1;height:4px;border-radius:99px;background:rgba(158,216,210,.12);overflow:hidden}
 .pbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--amber-deep),var(--amber));border-radius:99px;transition:width .35s ease}
@@ -585,7 +593,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   <div class="foot-in">
     <div>dailyblip // the AI brief for people who make things // rescanned every 20 min</div>
     <div class="foot-links">
-      <a href="showcase.html">showcase</a><a href="standards.html">standards</a><a href="archive/">archive</a><a href="feed.xml">rss</a>
+      <a href="showcase.html">showcase</a><a href="standards.html">standards</a><a href="features/">commentary</a><a href="archive/">archive</a><a href="feed.xml">rss</a>
     </div>
   </div>
 </footer>
@@ -817,10 +825,11 @@ function renderBrief(){
     const tier = i===0 ? " impact-hero" : (i===1||i===2) ? " impact-high" : "";
     const hwFlag = b.hardware ? `<span class="hw-flag" title="Hardware/infrastructure story, not a creator tool">hardware</span>` : "";
     const trackingFlag = b.tracking ? `<span class="tracking-flag" title="Pinned by the editor — carried across editions">Tracking</span>` : "";
+    const commentaryFlag = b.commentary ? `<span class="commentary-flag" title="Opinion piece from the dailyblip editors, not news">Commentary</span>` : "";
     return `
     <li class="brief-item${readSet.has(i)?" read":""}${tier}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
       <span class="marker"><span class="num">${i+1}</span></span>
-      <p>${trackingFlag}${hwFlag}${sanB(b.html)}</p>
+      <p>${trackingFlag}${hwFlag}${commentaryFlag}${sanB(b.html)}</p>
       <span class="secs">${b.secs}s</span>
     </li>`;
   }).join("");
@@ -912,6 +921,7 @@ function storyCardHtml(s){
   const also = s.also?.length ? ` · also via ${esc(s.also.join(", "))}` : "";
   const hits = stackHits(s);
   const stackFlag = hits.size ? `<span class="stack-flag" title="Affects your stack: ${esc(stackToolLabel(hits))}">affects your stack</span>` : "";
+  const commentaryFlag = s.commentary ? `<span class="commentary-flag" title="Opinion piece from the dailyblip editors, not a news item">Commentary</span>` : "";
   return `
   <article class="story${s.top?" top-story":""}" id="${s.id}" tabindex="0">
     ${s.top?'<div class="top-label">top signal</div>':""}
@@ -920,6 +930,7 @@ function storyCardHtml(s){
       <span class="badge ${s.badge}">${s.badge}</span>
       ${moveArrow(s)}
       ${s.spotlight?'<span class="spot-flag">✦ spotlight</span>':""}
+      ${commentaryFlag}
       ${stackFlag}
       <span>${ago(storyHrs(s))}</span>
     </div>
