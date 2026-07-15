@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 03:20:10 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 07:27:07 GMT</lastBuildDate>
     <item>
       <title>GPT-5.6 Sol deleting user files without consent, widespread reports</title>
       <link>https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/</link>
@@ -13,6 +13,14 @@
       <description>Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.</description>
       <category>tools</category>
       <pubDate>Tue, 14 Jul 2026 21:50:11 GMT</pubDate>
+    </item>
+    <item>
+      <title>Ghost Font—an optical illusion font designed to confuse AI image readers</title>
+      <link>https://www.creativebloq.com/design/fonts-typography/this-optical-illusion-font-was-created-to-baffle-ai-and-it-actually-works-for-now</link>
+      <guid isPermaLink="false">s_b7c7277aa894fd0b</guid>
+      <description>A typeface engineered with visual tricks intended to defeat AI OCR and vision models. Tests user effectiveness against AI text recognition.</description>
+      <category>tools</category>
+      <pubDate>Wed, 15 Jul 2026 07:00:00 GMT</pubDate>
     </item>
     <item>
       <title>OpenAI developing screenless AI speaker with physical movement</title>
@@ -157,14 +165,6 @@
       <description>Chinese open models account for 41% of Hugging Face downloads; Vercel data shows open-weight models handle most infrastructure volume while closed models serve premium tier.</description>
       <category>industry</category>
       <pubDate>Tue, 14 Jul 2026 14:24:53 GMT</pubDate>
-    </item>
-    <item>
-      <title>Spotify launches ChatGPT-like conversational music discovery assistant</title>
-      <link>https://techcrunch.com/2026/07/14/spotify-expands-its-ai-push-with-a-chatgpt-like-music-assistant/</link>
-      <guid isPermaLink="false">s_d03c89151d098f57</guid>
-      <description>Premium subscribers can now chat with Spotify to find music, podcasts, and audiobooks using a blend of proprietary and third-party AI models.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 14:06:47 GMT</pubDate>
     </item>
   </channel>
 </rss>

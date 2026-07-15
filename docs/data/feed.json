@@ -1,6 +1,6 @@
 {
   "issue": 220,
-  "generated_at": "2026-07-15T03:55:50.515Z",
+  "generated_at": "2026-07-15T07:27:07.479Z",
   "brief": {
     "items": [
       {
@@ -71,9 +71,26 @@
       "ts": "2026-07-14T21:50:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 104,
+      "heat": 99,
       "move": 0,
       "top": true
+    },
+    {
+      "id": "s_b7c7277aa894fd0b",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Ghost Font—an optical illusion font designed to confuse AI image readers",
+      "dek": "A typeface engineered with visual tricks intended to defeat AI OCR and vision models. Tests user effectiveness against AI text recognition.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/design/fonts-typography/this-optical-illusion-font-was-created-to-baffle-ai-and-it-actually-works-for-now",
+      "ts": "2026-07-15T07:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 56
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -89,8 +106,8 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -1
+      "heat": 83,
+      "move": -2
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -106,8 +123,8 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -4
+      "heat": 73,
+      "move": -1
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -123,7 +140,7 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
+      "heat": 80,
       "move": -1
     },
     {
@@ -140,7 +157,7 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 101,
+      "heat": 97,
       "move": 0
     },
     {
@@ -157,8 +174,8 @@
       "ts": "2026-07-14T18:33:31.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 93,
-      "move": 0
+      "heat": 89,
+      "move": -1
     },
     {
       "id": "s_986155e62b49ff74",
@@ -174,8 +191,8 @@
       "ts": "2026-07-14T17:45:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": 0
+      "heat": 70,
+      "move": -1
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -191,8 +208,8 @@
       "ts": "2026-07-14T17:18:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": 0
+      "heat": 88,
+      "move": -1
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -208,8 +225,8 @@
       "ts": "2026-07-14T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": 0
+      "heat": 70,
+      "move": -1
     },
     {
       "id": "s_23767f964a637e72",
@@ -225,8 +242,8 @@
       "ts": "2026-07-14T16:28:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -1
+      "heat": 69,
+      "move": -4
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -242,8 +259,8 @@
       "ts": "2026-07-14T16:22:15.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": 0
+      "heat": 77,
+      "move": -5
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -259,8 +276,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": 0
+      "heat": 77,
+      "move": -5
     },
     {
       "id": "s_ec43065966072242",
@@ -276,8 +293,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 73,
-      "move": 0
+      "heat": 69,
+      "move": -4
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -293,8 +310,8 @@
       "ts": "2026-07-14T15:47:36.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 62,
-      "move": 0
+      "heat": 58,
+      "move": -10
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -310,8 +327,8 @@
       "ts": "2026-07-14T15:17:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 0
+      "heat": 86,
+      "move": -2
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -327,8 +344,8 @@
       "ts": "2026-07-14T15:06:28.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 0
+      "heat": 86,
+      "move": -2
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -344,8 +361,8 @@
       "ts": "2026-07-14T14:37:48.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 51,
-      "move": 0
+      "heat": 47,
+      "move": -9
     },
     {
       "id": "s_2cae585118ae58a3",
@@ -361,8 +378,8 @@
       "ts": "2026-07-14T14:26:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
-      "move": 0
+      "heat": 67,
+      "move": -7
     },
     {
       "id": "s_07270bd7745b992c",
@@ -378,8 +395,8 @@
       "ts": "2026-07-14T14:24:53.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": 0
+      "heat": 85,
+      "move": -2
     },
     {
       "id": "s_d03c89151d098f57",
@@ -395,8 +412,8 @@
       "ts": "2026-07-14T14:06:47.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 71,
-      "move": 0
+      "heat": 67,
+      "move": -7
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -412,8 +429,8 @@
       "ts": "2026-07-14T14:01:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -3
+      "heat": 65,
+      "move": -4
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -429,8 +446,8 @@
       "ts": "2026-07-14T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
-      "move": 0
+      "heat": 67,
+      "move": -7
     },
     {
       "id": "s_27568dc6ad1def84",
@@ -446,8 +463,8 @@
       "ts": "2026-07-14T13:29:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 60,
-      "move": 0
+      "heat": 56,
+      "move": -11
     },
     {
       "id": "s_a5c0710938e469b9",
@@ -463,8 +480,8 @@
       "ts": "2026-07-14T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
-      "move": 0
+      "heat": 64,
+      "move": -5
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -480,8 +497,8 @@
       "ts": "2026-07-14T09:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": 1
+      "heat": 70,
+      "move": -1
     },
     {
       "id": "s_c479b3a9a06e96ab",
@@ -497,8 +514,8 @@
       "ts": "2026-07-14T08:29:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 65,
-      "move": 0
+      "heat": 61,
+      "move": -2
     },
     {
       "id": "s_70aeec97bcd8cd58",
@@ -514,8 +531,8 @@
       "ts": "2026-07-14T06:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 63,
-      "move": 0
+      "heat": 60,
+      "move": -1
     },
     {
       "id": "s_b4553fdd41168ce5",
@@ -532,7 +549,7 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": 1
+      "move": 0
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -549,7 +566,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_6358ddebecad3055",
@@ -566,7 +583,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -617,7 +634,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_da64ea9b487e106b",
@@ -634,7 +651,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_b1c0426dab3224e8",
@@ -651,7 +668,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -668,7 +685,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_efecb35d7b427474",
@@ -685,7 +702,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_b2beb695d675ec33",
@@ -735,7 +752,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_cca9d9854a8b2b2e",
@@ -769,7 +786,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_5e8fda4219f983fc",
@@ -786,7 +803,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_6e1e0d51aedb6c51",
@@ -803,7 +820,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -820,7 +837,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": 4
     },
     {
       "id": "s_fa50b26f80fe5e5b",
@@ -853,7 +870,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": 2
     },
     {
       "id": "s_98d85122ab641d19",
@@ -885,7 +902,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": 4
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -900,7 +917,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -964,7 +981,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_419f10878bb7a91d",
@@ -1011,7 +1028,7 @@
       "read": "2 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": 4
     },
     {
       "id": "s_b86afc4b2d83da6d",
@@ -1041,21 +1058,6 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
-    },
-    {
-      "id": "s_3fd5be624e9b45ce",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "Instagram won't filter AI content, but will label it",
-      "dek": "Meta's head of Instagram says the platform will label AI-generated content rather than remove it from feeds, letting users control their own visibility preferences.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/963961/instagram-adam-mosseri-ai-feed-filters",
-      "ts": "2026-07-10T13:45:02.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 58,
       "move": 0
     }
   ],
@@ -1131,12 +1133,12 @@
       "c": 13
     },
     {
-      "n": "The Verge AI",
-      "c": 9
+      "n": "Creative Bloq AI",
+      "c": 8
     },
     {
-      "n": "Creative Bloq AI",
-      "c": 7
+      "n": "The Verge AI",
+      "c": 8
     },
     {
       "n": "PetaPixel",
@@ -1173,9 +1175,9 @@
     "date": "2026-07-15T03:53:34.798Z"
   },
   "stats": {
-    "scanned_last_run": 0,
+    "scanned_last_run": 6,
     "published_today": 27,
     "sources_live": 14,
-    "slopped_last_run": 2
+    "slopped_last_run": 5
   }
 }
