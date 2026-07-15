@@ -182,6 +182,16 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
       <button class="btn" id="expandAll">expand all</button>
       <button class="btn" id="collapseAll">collapse</button>
     </div>
+    <div class="searchbar row" id="bulkBar" style="display:none;align-items:center;gap:10px">
+      <span id="bulkCount" style="font-family:monospace;font-size:12.5px;opacity:.8"></span>
+      <button class="btn" id="bulkClear">clear selection</button>
+      <button class="btn red" id="bulkDelete">delete selected (blocklists them)</button>
+    </div>
+    <div class="searchbar row" style="padding-top:0;padding-bottom:6px">
+      <label style="margin:0;font-size:12.5px;display:flex;align-items:center;gap:6px">
+        <input type="checkbox" id="bulkSelectAll" style="width:auto">select all visible
+      </label>
+    </div>
     <div id="storyList"></div>
   </div>
 
@@ -287,6 +297,9 @@ let overrides = { blocked_ids: [], blocked_terms: [], pinned_spotlight: [], pinn
 let overridesSha = null;
 let dirty = false;
 let expanded = new Set();
+let bulkSelected = new Set(); // persists across re-renders (search/filter) so
+                               // you can search, select some, search again,
+                               // select more, then delete everything at once
 
 /* --- toast + status --- */
 function toast(msg, cls="ok", ms=2400){
@@ -484,7 +497,28 @@ function renderStories(){
       story.read = box.querySelector(".e-read").value.trim() || "3 min";
       markDirty(); renderStories(); toast("edited");
     });
+    const check = el.querySelector(".bulk-check");
+    if (check) {
+      check.checked = bulkSelected.has(id);
+      check.addEventListener("change", () => {
+        if (check.checked) bulkSelected.add(id); else bulkSelected.delete(id);
+        updateBulkBar();
+      });
+    }
   });
+  updateBulkBar();
+}
+
+function updateBulkBar(){
+  const n = bulkSelected.size;
+  $("#bulkBar").style.display = n ? "flex" : "none";
+  $("#bulkCount").textContent = `${n} selected`;
+  // "select all visible" should reflect whether every currently-rendered
+  // card is selected, not the global total (some selections may be from
+  // an earlier search that's since scrolled out of view).
+  const visibleIds = $$("[data-bulk-id]").map(el => el.dataset.bulkId);
+  const allBox = $("#bulkSelectAll");
+  if (allBox) allBox.checked = visibleIds.length > 0 && visibleIds.every(id => bulkSelected.has(id));
 }
 
 function storyCard(s, isBlocked){
@@ -500,6 +534,7 @@ function storyCard(s, isBlocked){
   return `
   <div class="${cls}" data-story="${esc(s.id)}">
     <div class="rowmeta">
+      <input type="checkbox" class="bulk-check" data-bulk-id="${esc(s.id)}" title="select for bulk actions" style="width:auto;margin-right:6px;vertical-align:middle">
       <span class="id" title="click to copy">${esc(s.id)}</span>
       <span class="tag-pill">${esc(s.cat)}</span>
       <span class="tag-pill">${esc(s.badge)}</span>
@@ -538,6 +573,28 @@ function storyCard(s, isBlocked){
 }
 $("#searchInput").addEventListener("input", renderStories);
 $("#filterSel").addEventListener("change", renderStories);
+$("#bulkSelectAll").addEventListener("change", (e) => {
+  const visibleIds = $$("[data-bulk-id]").map(el => el.dataset.bulkId);
+  if (e.target.checked) visibleIds.forEach(id => bulkSelected.add(id));
+  else visibleIds.forEach(id => bulkSelected.delete(id));
+  renderStories();
+});
+$("#bulkClear").addEventListener("click", () => { bulkSelected.clear(); renderStories(); });
+$("#bulkDelete").addEventListener("click", () => {
+  const ids = [...bulkSelected];
+  if (!ids.length) return;
+  const titles = ids.map(id => feed.stories.find(s => s.id === id)?.title || id).slice(0, 5);
+  const more = ids.length > 5 ? `\n…and ${ids.length - 5} more` : "";
+  if (!confirm(`Delete ${ids.length} stories? They'll be blocklisted so they can't come back.\n\n${titles.map(t=>"• "+t.slice(0,60)).join("\n")}${more}`)) return;
+  overrides.blocked_ids = overrides.blocked_ids || [];
+  for (const id of ids) {
+    if (!overrides.blocked_ids.includes(id)) overrides.blocked_ids.push(id);
+  }
+  feed.stories = feed.stories.filter(s => !bulkSelected.has(s.id));
+  bulkSelected.clear();
+  markDirty(); renderStories(); renderOverrides();
+  toast(`deleted ${ids.length} stories`);
+});
 $("#expandAll").addEventListener("click", () => {
   feed.stories.forEach(s => expanded.add(s.id)); renderStories();
 });
