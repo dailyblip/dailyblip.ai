@@ -181,9 +181,44 @@ function renderChartSvg({ title, unit, items }) {
   </svg>`;
 }
 
-// --- Illustrative images: OpenAI, abstract/moody, no text ----------------
-async function generateIllustrativeImage(topicTitle, seedIndex) {
-  const prompt = `A moody, abstract digital editorial illustration, dark teal-navy (#071A1F) base tone with warm amber (#FFB454) and soft aqua (#63D8C6) glowing light accents. Abstract visual metaphor related to: "${topicTitle}". Painterly, atmospheric, high-end editorial magazine illustration style, variation ${seedIndex + 1}. NO text, NO letters, NO words, NO logos, NO readable typography anywhere. NO human faces. Abstract and atmospheric only.`;
+// --- Illustrative images: OpenAI, adapted art direction ------------------
+// Same visual-energy standard as the news-story cards, but adapted since
+// there's no third-party article or single company by default here — an
+// op-ed's "subject" is its argument, not a headline. If the piece DOES
+// prominently center on one company (checked once below, against the
+// title+lede — not buried mid-body), a real logo gets composited onto the
+// first image, same reasoning as the news cards: never ask the image
+// model to draw a logo itself.
+function buildIllustrativePrompt(topicTitle, angle, seedIndex) {
+  return `Generate a striking editorial illustration for an opinion piece in a design-forward technology and creator-culture publication.
+
+PIECE TITLE: ${topicTitle}
+PIECE ANGLE: ${angle}
+
+Create a visually bold, high-energy image that captures the piece's central tension or argument immediately, even without accompanying text. This is variation ${seedIndex + 1} of a small set for the same piece — vary the composition and focal element from any earlier variation while keeping the same visual world/palette.
+
+ART DIRECTION:
+- Style: premium technology editorial, contemporary digital collage, dramatic advertising photography, energetic design
+- Make the composition vivid, unexpected, and visually memorable
+- Use strong depth, oversized visual elements, dramatic lighting, crisp detail, controlled motion, layered interfaces, and a clear focal point
+- Favor one memorable visual metaphor over a collection of generic technology symbols
+- The image should feel culturally current and creator-focused, not corporate, sterile, or like generic AI stock art
+- Use saturated accent colors (dark teal-navy #071A1F base, warm amber #FFB454 and soft aqua #63D8C6 accents), luminous highlights, deep contrast
+- If the piece prominently centers on one company or product, you may include their logo naturally within the scene if you can render it accurately. Do not invent, approximate, or guess at a logo — omit it entirely if you're not confident in an accurate rendering.
+- Do not place headlines, captions, labels, random letters, watermarks, or other readable text inside the image
+- No human faces
+- Avoid robots, glowing brains, circuit-board faces, floating AI letters, generic holograms, and other overused AI cliches unless specifically essential to the piece's argument
+
+Before generating, identify:
+1. The piece's central argument or tension
+2. The sharpest, most concrete image or detail from the piece
+3. A bold visual metaphor that communicates the argument in under one second
+
+Then create the image using those details.`;
+}
+
+async function generateIllustrativeImage(topicTitle, angle, seedIndex) {
+  const prompt = buildIllustrativePrompt(topicTitle, angle, seedIndex);
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
     headers: { Authorization: `Bearer ${OPENAI_KEY}`, "Content-Type": "application/json" },
@@ -366,7 +401,7 @@ async function main() {
   if (OPENAI_KEY) {
     for (let i = 0; i < imageCount; i++) {
       try {
-        const buf = await generateIllustrativeImage(title, i);
+        const buf = await generateIllustrativeImage(title, topic.angle, i);
         const imgPath = path.join(dir, `${slug}-img${i + 1}.jpg`);
         fs.writeFileSync(imgPath, buf);
         images.push(imgPath);
