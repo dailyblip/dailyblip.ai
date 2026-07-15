@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 16:57:17 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 17:23:30 GMT</lastBuildDate>
     <item>
       <title>Apple Intelligence launches in China via Alibaba Qwen partnership</title>
       <link>https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/</link>
@@ -13,6 +13,14 @@
       <description>China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.</description>
       <category>industry</category>
       <pubDate>Wed, 15 Jul 2026 15:29:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hack reveals Suno scraped YouTube, Deezer, and podcasts for AI training</title>
+      <link>https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/</link>
+      <guid isPermaLink="false">s_264ddc681c98a9a5</guid>
+      <description>A supply chain attack exposed source code showing the AI music generator harvested audio from multiple platforms. Record labels argue this violates the DMCA despite Suno's fair-use defense.</description>
+      <category>rights</category>
+      <pubDate>Wed, 15 Jul 2026 17:00:34 GMT</pubDate>
     </item>
     <item>
       <title>Microsoft patches record 570 vulnerabilities using AI-assisted discovery</title>
@@ -103,6 +111,14 @@
       <pubDate>Wed, 15 Jul 2026 11:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>OpenAI releases GPT-Red, automated red-teaming system for AI safety</title>
+      <link>https://openai.com/index/unlocking-self-improvement-gpt-red</link>
+      <guid isPermaLink="false">s_ee230258f27f8a0d</guid>
+      <description>Self-play framework designed to stress-test AI robustness and resistance to prompt injection. Advances in safety methodology relevant to all generative systems.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 10:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Ghost Font—an optical illusion font designed to confuse AI image readers</title>
       <link>https://www.creativebloq.com/design/fonts-typography/this-optical-illusion-font-was-created-to-baffle-ai-and-it-actually-works-for-now</link>
       <guid isPermaLink="false">s_b7c7277aa894fd0b</guid>
@@ -149,22 +165,6 @@
       <description>The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.</description>
       <category>tools</category>
       <pubDate>Tue, 14 Jul 2026 19:25:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Major publishers sue Google for training Gemini on copyrighted works without permission</title>
-      <link>https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/</link>
-      <guid isPermaLink="false">s_b98c65f859f0dcbd</guid>
-      <description>Hachette, Cengage, Elsevier, and others allege Google stripped copyright info and used their works to train AI models without consent.</description>
-      <category>rights</category>
-      <pubDate>Tue, 14 Jul 2026 18:33:31 GMT</pubDate>
-    </item>
-    <item>
-      <title>DeepMind CEO proposes independent standards body to regulate frontier AI models</title>
-      <link>https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/</link>
-      <guid isPermaLink="false">s_986155e62b49ff74</guid>
-      <description>Hassabis calls for a FINRA-like regulatory authority to test and approve AI models before release, with voluntary initial participation.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 17:45:55 GMT</pubDate>
     </item>
   </channel>
 </rss>
