@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dailyblip — the AI brief for people who make things</title>
+<meta name="description" content="One email, 6am daily. What changed in your creative stack — and nothing else. Zero slop, ruthlessly curated.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-yNME_l48PyWaSQIr8NMk5.js"></script>
+<script>window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()</script>
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13); --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79; --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  background:var(--ink);color:var(--text);font-family:var(--body);
+  min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:32px 22px;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden;
+}
+/* soft ambient glow, same treatment as the rest of the site */
+body::before{
+  content:"";position:fixed;top:-20%;right:-20%;width:70%;height:70%;
+  background:radial-gradient(circle, rgba(255,180,84,.10), transparent 70%);pointer-events:none;
+}
+body::after{
+  content:"";position:fixed;bottom:-20%;left:-20%;width:70%;height:70%;
+  background:radial-gradient(circle, rgba(99,216,198,.07), transparent 70%);pointer-events:none;
+}
+.wrap{max-width:420px;width:100%;text-align:center;position:relative;z-index:1}
+
+.wordmark{font-family:var(--display);font-weight:800;font-size:32px;letter-spacing:-.02em;margin-bottom:6px}
+.wordmark .ai{color:var(--amber)}
+.tagline{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:40px}
+
+h1{font-family:var(--display);font-weight:750;font-size:clamp(24px,7vw,30px);letter-spacing:-.02em;line-height:1.22;margin-bottom:14px}
+h1 .amber{color:var(--amber)}
+.sub{color:var(--dim);font-size:15.5px;line-height:1.5;margin-bottom:30px}
+
+/* today's signal — dynamic, fetched client-side, gives a real reason to
+   subscribe right now instead of an abstract promise, and lets a visitor
+   actually taste the real content without leaving this page */
+.today-signal{
+  border:1px solid var(--line-strong);border-radius:12px;padding:16px 18px;margin-bottom:22px;
+  text-align:left;background:rgba(158,216,210,.02);display:none;
+}
+.today-signal .label{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:10px;display:flex;align-items:center;gap:8px;
+}
+.today-signal .label::after{content:"";flex:1;height:1px;background:var(--line)}
+.today-signal .item{
+  font-size:14px;color:var(--text);line-height:1.4;padding:8px 0;
+  border-top:1px solid var(--line);
+}
+.today-signal .item:first-of-type{border-top:none;padding-top:0}
+
+form{display:flex;flex-direction:column;gap:10px;margin-bottom:14px}
+input[type=email]{
+  background:var(--ink-2);border:1px solid var(--line-strong);border-radius:10px;
+  padding:16px 16px;font-family:var(--body);font-size:16px;color:var(--text);
+  outline:none;transition:border-color .15s ease;
+}
+input[type=email]:focus{border-color:var(--amber-deep)}
+input[type=email]::placeholder{color:var(--faint)}
+button{
+  background:var(--amber);color:#20160a;border:none;border-radius:10px;
+  padding:16px;font-family:var(--body);font-weight:700;font-size:16px;cursor:pointer;
+  transition:filter .15s ease;
+}
+button:hover{filter:brightness(1.08)}
+.sub-ok{display:none;color:var(--aqua);font-size:14px;margin-top:6px}
+
+.or-divider{
+  display:flex;align-items:center;gap:12px;margin:22px 0;
+  font-family:var(--mono);font-size:11px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;
+}
+.or-divider::before,.or-divider::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.btn-secondary{
+  display:block;width:100%;background:transparent;color:var(--text);
+  border:1px solid var(--line-strong);border-radius:10px;padding:15px;
+  font-family:var(--body);font-weight:600;font-size:15px;text-decoration:none;
+  transition:all .15s ease;
+}
+.btn-secondary:hover{border-color:var(--aqua);color:var(--aqua);background:rgba(99,216,198,.04)}
+
+.fine-print{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:22px;line-height:1.6}
+.fine-print a{color:var(--faint)}
+.fine-print a:hover{color:var(--amber)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="wordmark">d<span class="ai">ai</span>lyblip</div>
+  <div class="tagline">the ai brief for people who make things</div>
+
+  <h1>One email. <span class="amber">6am daily.</span> Zero slop.</h1>
+  <p class="sub">What changed in your creative stack overnight, ruthlessly curated. No filler, no hype, no "AI is changing everything" think-pieces.</p>
+
+  <div class="today-signal" id="todaySignal">
+    <div class="label">Live from today's brief</div>
+    <div id="todayHeadlines"></div>
+  </div>
+
+  <form id="subForm" data-buttondown="">
+    <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+    <button type="submit" id="subBtn">Get tomorrow's blip</button>
+  </form>
+  <div class="sub-ok" id="subOk">✓ You're on the list. First blip lands tomorrow at 6am.</div>
+
+  <div class="or-divider">or</div>
+  <a href="/" class="btn-secondary">Explore today's full feed →</a>
+
+  <div class="fine-print">One email a day. Unsubscribe anytime.</div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+
+/* Same Buttondown integration as the main site — set data-buttondown to
+   your username above to go live. */
+$("#subForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const email = $("#subEmail").value;
+  if (!email || !email.includes("@")) {
+    $("#subEmail").focus();
+    $("#subEmail").style.borderColor = "#FF7A6B";
+    setTimeout(() => $("#subEmail").style.borderColor = "", 1200);
+    return;
+  }
+  const user = $("#subForm").dataset.buttondown;
+  if (user) {
+    try {
+      await fetch(`https://buttondown.com/api/emails/embed-subscribe/${user}`, {
+        method: "POST", mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ email }),
+      });
+    } catch {}
+  }
+  if (window.plausible) plausible("Subscribe", { props: { source: "instagram-landing" } });
+  $("#subForm").style.display = "none";
+  $("#subOk").style.display = "block";
+});
+
+/* Today's real headlines — same fetch pattern as the main site, shows
+   a genuine taste of live content (top 3) right on this page, so a
+   visitor gets real value here even before deciding whether to click
+   through to the full site or subscribe. Fails silently and hides the
+   block if feed.json isn't reachable. */
+(async function loadTodaySignal() {
+  try {
+    const res = await fetch("/data/feed.json", { cache: "no-store" });
+    if (!res.ok) return;
+    const data = await res.json();
+    const stories = (data.stories || []).slice().sort((a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0)).slice(0, 3);
+    if (stories.length) {
+      $("#todayHeadlines").innerHTML = stories.map(s => `<div class="item">${s.title.replace(/</g,"&lt;")}</div>`).join("");
+      $("#todaySignal").style.display = "block";
+    }
+  } catch {}
+})();
+
+/* Track clicks through to the full site as their own event, distinct
+   from a subscribe conversion — lets Plausible show which path people
+   actually take from this landing page. */
+document.querySelector(".btn-secondary")?.addEventListener("click", () => {
+  if (window.plausible) plausible("Explore Feed Click", { props: { source: "instagram-landing" } });
+});
+</script>
+</body>
+</html>
