@@ -1,8 +1,13 @@
 name: Daily Blip
 on:
   schedule:
-    - cron: "0 10 * * *"
-    - cron: "0 22 * * *"
+    # 12:00 UTC = 5:00 AM Pacific (PDT, summer). 23:00 UTC = 4:00 PM Pacific
+    # (PDT, summer). NOTE: GitHub cron has no timezone support — in winter
+    # (PST, UTC-8) these fire an hour earlier on the Pacific clock (4am /
+    # 3pm). Nudge to "0 13 * * *" / "0 0 * * *" each November and back each
+    # March if you want 5am/4pm exactly year-round.
+    - cron: "0 12 * * *"
+    - cron: "0 23 * * *"
   workflow_dispatch:
     inputs:
       edition:
@@ -17,7 +22,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: pipeline
+  group: daily-pipeline
   cancel-in-progress: false
 
 jobs:
@@ -31,12 +36,15 @@ jobs:
           node-version: 20
       - run: npm install
 
+      # Figure out which edition this run is. Scheduled runs are identified
+      # by which exact cron string fired them (GitHub exposes this as
+      # github.event.schedule); manual runs use the workflow_dispatch input.
       - name: Determine edition
         id: edition
         run: |
-          if [ "${{ github.event.schedule }}" = "0 22 * * *" ]; then
+          if [ "${{ github.event.schedule }}" = "0 23 * * *" ]; then
             echo "value=pm" >> "$GITHUB_OUTPUT"
-          elif [ "${{ github.event.schedule }}" = "0 10 * * *" ]; then
+          elif [ "${{ github.event.schedule }}" = "0 12 * * *" ]; then
             echo "value=am" >> "$GITHUB_OUTPUT"
           else
             echo "value=${{ github.event.inputs.edition || 'am' }}" >> "$GITHUB_OUTPUT"
@@ -47,6 +55,8 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
 
+      # Tool Drop stays once-a-day (AM only) — "tool of the day" means one
+      # pick per day, not one per edition.
       - name: Pick the tool drop
         if: steps.edition.outputs.value == 'am'
         run: node pipeline/tooldrop.js
@@ -68,6 +78,8 @@ jobs:
           git pull --rebase --autostash
           git push
 
+      # Newsletter stays once-a-day (AM only) — subscribers were promised
+      # "one email daily," and the PM edition is a web-only refresh.
       - name: Send newsletter
         if: steps.edition.outputs.value == 'am'
         run: node pipeline/newsletter.js
