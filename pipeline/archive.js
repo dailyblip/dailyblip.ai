@@ -121,4 +121,4 @@ async function main() {
   console.log(`archive: wrote ${today}, index + sitemap rebuilt${feed.yearago ? ", year-ago panel set" : ""}.`);
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
