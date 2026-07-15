@@ -5,14 +5,78 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 12:23:43 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 16:57:17 GMT</lastBuildDate>
     <item>
-      <title>GPT-5.6 Sol deleting user files without consent, widespread reports</title>
-      <link>https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/</link>
-      <guid isPermaLink="false">s_3e68f8ee554f3c0b</guid>
-      <description>Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.</description>
+      <title>Apple Intelligence launches in China via Alibaba Qwen partnership</title>
+      <link>https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/</link>
+      <guid isPermaLink="false">s_fe6ab2efc212fece</guid>
+      <description>China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 15:29:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>Microsoft patches record 570 vulnerabilities using AI-assisted discovery</title>
+      <link>https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/</link>
+      <guid isPermaLink="false">s_8ed791a2a8b1f044</guid>
+      <description>Microsoft's monthly Patch Tuesday resolved a record number of security flaws, with at least two zero-day exploits, using AI to help identify code vulnerabilities.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 16:20:18 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hugging Face releases Real World VoiceEQ benchmark for voice AI quality</title>
+      <link>https://arstechnica.com/ai/2026/07/openais-first-branded-hardware-is-a-light-up-keyboard/</link>
+      <guid isPermaLink="false">s_18de27eea197aabe</guid>
+      <description>New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.</description>
       <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 21:50:11 GMT</pubDate>
+      <pubDate>Wed, 15 Jul 2026 16:00:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI launches Codex Micro, a programmable keyboard for AI coding</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/965901/openai-hardware-codex-micro-launch</link>
+      <guid isPermaLink="false">s_84777b05d9b25937</guid>
+      <description>Collaboration with Work Louder, the Codex Micro light-up button block monitors multiple AI coding threads, separate from OpenAI's rumored smart speaker project.</description>
+      <category>tools</category>
+      <pubDate>Wed, 15 Jul 2026 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Concept artist Daniel Porto accelerates 20 years of vision with AI</title>
+      <link>https://www.creativebloq.com/entertainment/gaming/denshattack-review-an-eccentric-off-the-rails-ride-through-90s-arcade-chaos</link>
+      <guid isPermaLink="false">s_c0ac8f261d4797a3</guid>
+      <description>Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.</description>
+      <category>image</category>
+      <pubDate>Wed, 15 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Images homepage redesign features AI-generated and curated content</title>
+      <link>https://petapixel.com/2026/07/15/godoxs-new-inflatable-4x4-full-color-light-sets-up-in-a-minute/</link>
+      <guid isPermaLink="false">s_9db836b16b6b8943</guid>
+      <description>Google Images overhauls its 25-year-old interface with a Pinterest-style gallery, integrating AI imagery alongside real photos for personalized discovery.</description>
+      <category>image</category>
+      <pubDate>Wed, 15 Jul 2026 14:10:40 GMT</pubDate>
+    </item>
+    <item>
+      <title>Anthropic launches $1.5B AI implementation venture with Blackstone</title>
+      <link>https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/</link>
+      <guid isPermaLink="false">s_83d5a15310e3a6b6</guid>
+      <description>Ode pairs AI engineers with enterprise customers, betting that hands-on deployment—not just models—is the next trillion-dollar opportunity in AI adoption.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 13:10:47 GMT</pubDate>
+    </item>
+    <item>
+      <title>Reelful automates short-form video creation from camera roll photos</title>
+      <link>https://techcrunch.com/2026/07/15/reelfuls-ai-turns-your-camera-roll-into-short-form-videos-for-social-media/</link>
+      <guid isPermaLink="false">s_b4c19111324a67ee</guid>
+      <description>New iOS app uses AI to turn photos and clips into polished TikTok and Instagram Reels, targeting users who find traditional editing tools too complex.</description>
+      <category>video</category>
+      <pubDate>Wed, 15 Jul 2026 13:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Rime raises $24M Series A for enterprise voice AI customer support</title>
+      <link>https://techcrunch.com/2026/07/15/rime-picks-up-24m-series-a-to-help-enterprises-field-customer-calls/</link>
+      <guid isPermaLink="false">s_110aa69c02571475</guid>
+      <description>Voice AI startup handling over 100 million calls monthly uses proprietary conversational training data to reduce customer customization burden for enterprises.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 13:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Vint Cerf working on standards to identify AI agents on the open internet</title>
@@ -63,6 +127,14 @@
       <pubDate>Tue, 14 Jul 2026 22:07:42 GMT</pubDate>
     </item>
     <item>
+      <title>GPT-5.6 Sol deleting user files without consent, widespread reports</title>
+      <link>https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/</link>
+      <guid isPermaLink="false">s_3e68f8ee554f3c0b</guid>
+      <description>Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.</description>
+      <category>tools</category>
+      <pubDate>Tue, 14 Jul 2026 21:50:11 GMT</pubDate>
+    </item>
+    <item>
       <title>Apple releases iOS 27 public beta with revamped AI-powered Siri</title>
       <link>https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta/</link>
       <guid isPermaLink="false">s_f6d4f1f66693b6a8</guid>
@@ -93,78 +165,6 @@
       <description>Hassabis calls for a FINRA-like regulatory authority to test and approve AI models before release, with voluntary initial participation.</description>
       <category>industry</category>
       <pubDate>Tue, 14 Jul 2026 17:45:55 GMT</pubDate>
-    </item>
-    <item>
-      <title>Former Meta employees sue over AI-driven layoffs targeting workers on protected leave</title>
-      <link>https://www.theverge.com/tech/965486/meta-lawsuit-former-employees-ai-layoffs</link>
-      <guid isPermaLink="false">s_a9b65061bfa7a7eb</guid>
-      <description>26 workers allege Meta used internal AI tools to select employees for termination while excluding those on disability, parental, or medical leave.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 17:18:11 GMT</pubDate>
-    </item>
-    <item>
-      <title>TurboSquid artists report sudden sales plunges and payment delays</title>
-      <link>https://80.lv/articles/artists-threaten-to-leave-turbosquid-because-of-plummeting-sales-missing-payments/</link>
-      <guid isPermaLink="false">s_527857b3b9d8ad5a</guid>
-      <description>3D marketplace faces exodus threat as creators document steep revenue drops and infrequent payouts, with some suspecting foul play.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 17:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google revamps image search with personalization and AI image generation</title>
-      <link>https://arstechnica.com/google/2026/07/google-revamps-image-search-for-its-25th-anniversary-with-more-images-and-more-ai/</link>
-      <guid isPermaLink="false">s_23767f964a637e72</guid>
-      <description>Updated search uses unique interests to build dynamic image galleries; AI Overview now generates images in addition to displaying search results.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 16:28:14 GMT</pubDate>
-    </item>
-    <item>
-      <title>Meta forecasts AI token budgets could be capped per engineer within years</title>
-      <link>https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/</link>
-      <guid isPermaLink="false">s_5ddf162e15a96c46</guid>
-      <description>Instagram head Adam Mosseri predicts companies will soon need to limit employee AI tool spending like payroll, as token costs could match engineer salaries.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 16:22:15 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google Images redesigned with AI-generated content and discovery-focused browsing</title>
-      <link>https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/</link>
-      <guid isPermaLink="false">s_e3be2bdde12627e6</guid>
-      <description>Google adds a personalized 'For You' gallery and in-search image generation to compete with Pinterest, marking a shift from search-only to discovery.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 16:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google Images homepage to recommend photos before you search</title>
-      <link>https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana</link>
-      <guid isPermaLink="false">s_ec43065966072242</guid>
-      <description>Redesigned Google Images celebrates 25 years by shifting from search-only to a dynamic, personalized gallery showing images tied to your interests.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 16:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Spotify adds 'Talk to Spotify' conversational AI feature for subscribers</title>
-      <link>https://www.theverge.com/entertainment/965358/spotify-ai-chatbot-interface-music-audiobooks-podcasts</link>
-      <guid isPermaLink="false">s_274fe08b7f274f10</guid>
-      <description>AI chatbot lets Premium users explore and play music, audiobooks, and podcasts through dialogue on mobile app's home and now-playing screens.</description>
-      <category>tools</category>
-      <pubDate>Tue, 14 Jul 2026 15:47:36 GMT</pubDate>
-    </item>
-    <item>
-      <title>New York becomes first state to halt large data center approvals</title>
-      <link>https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/</link>
-      <guid isPermaLink="false">s_a4b29ff806d7c08f</guid>
-      <description>Governor Hochul signed an executive order temporarily blocking permits for 50+ megawatt data centers, citing electricity, water, and public control concerns amid AI infrastructure boom.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 15:17:59 GMT</pubDate>
-    </item>
-    <item>
-      <title>New York data center moratorium may set template for anti-AI movement</title>
-      <link>https://arstechnica.com/tech-policy/2026/07/new-york-is-the-first-state-to-impose-a-data-center-moratorium/</link>
-      <guid isPermaLink="false">s_1ce55dc5e2a4e771</guid>
-      <description>One-year ban on large data center construction could signal broader regulatory backlash against AI infrastructure's resource demands.</description>
-      <category>industry</category>
-      <pubDate>Tue, 14 Jul 2026 15:06:28 GMT</pubDate>
     </item>
   </channel>
 </rss>

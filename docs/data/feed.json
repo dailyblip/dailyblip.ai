@@ -1,6 +1,6 @@
 {
   "issue": 222,
-  "generated_at": "2026-07-15T16:52:39.085Z",
+  "generated_at": "2026-07-15T16:57:17.670Z",
   "brief": {
     "items": [
       {
@@ -58,22 +58,158 @@
   },
   "stories": [
     {
-      "id": "s_3e68f8ee554f3c0b",
-      "cat": "tools",
+      "id": "s_fe6ab2efc212fece",
+      "cat": "industry",
       "badge": "breaking",
       "spotlight": false,
       "quality": 7,
       "tier": "journalism",
-      "title": "GPT-5.6 Sol deleting user files without consent, widespread reports",
-      "dek": "Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.",
+      "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
+      "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
       "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
-      "ts": "2026-07-14T21:50:11.000Z",
+      "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+      "ts": "2026-07-15T15:29:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
-      "move": -1,
-      "top": true
+      "top": true,
+      "heat": 108,
+      "move": 42
+    },
+    {
+      "id": "s_8ed791a2a8b1f044",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Microsoft patches record 570 vulnerabilities using AI-assisted discovery",
+      "dek": "Microsoft's monthly Patch Tuesday resolved a record number of security flaws, with at least two zero-day exploits, using AI to help identify code vulnerabilities.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/",
+      "ts": "2026-07-15T16:20:18.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 36
+    },
+    {
+      "id": "s_18de27eea197aabe",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Hugging Face releases Real World VoiceEQ benchmark for voice AI quality",
+      "dek": "New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/openais-first-branded-hardware-is-a-light-up-keyboard/",
+      "ts": "2026-07-15T16:00:33.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 73,
+      "move": 21
+    },
+    {
+      "id": "s_84777b05d9b25937",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "OpenAI launches Codex Micro, a programmable keyboard for AI coding",
+      "dek": "Collaboration with Work Louder, the Codex Micro light-up button block monitors multiple AI coding threads, separate from OpenAI's rumored smart speaker project.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965901/openai-hardware-codex-micro-launch",
+      "ts": "2026-07-15T16:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 73,
+      "move": 21
+    },
+    {
+      "id": "s_c0ac8f261d4797a3",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Concept artist Daniel Porto accelerates 20 years of vision with AI",
+      "dek": "Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/entertainment/gaming/denshattack-review-an-eccentric-off-the-rails-ride-through-90s-arcade-chaos",
+      "ts": "2026-07-15T15:00:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 92,
+      "move": 41
+    },
+    {
+      "id": "s_9db836b16b6b8943",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Google Images homepage redesign features AI-generated and curated content",
+      "dek": "Google Images overhauls its 25-year-old interface with a Pinterest-style gallery, integrating AI imagery alongside real photos for personalized discovery.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/15/godoxs-new-inflatable-4x4-full-color-light-sets-up-in-a-minute/",
+      "ts": "2026-07-15T14:10:40.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 71,
+      "move": 22
+    },
+    {
+      "id": "s_83d5a15310e3a6b6",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Anthropic launches $1.5B AI implementation venture with Blackstone",
+      "dek": "Ode pairs AI engineers with enterprise customers, betting that hands-on deployment—not just models—is the next trillion-dollar opportunity in AI adoption.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
+      "ts": "2026-07-15T13:10:47.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 70,
+      "move": 21
+    },
+    {
+      "id": "s_b4c19111324a67ee",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Reelful automates short-form video creation from camera roll photos",
+      "dek": "New iOS app uses AI to turn photos and clips into polished TikTok and Instagram Reels, targeting users who find traditional editing tools too complex.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/reelfuls-ai-turns-your-camera-roll-into-short-form-videos-for-social-media/",
+      "ts": "2026-07-15T13:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 80,
+      "move": 36
+    },
+    {
+      "id": "s_110aa69c02571475",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Rime raises $24M Series A for enterprise voice AI customer support",
+      "dek": "Voice AI startup handling over 100 million calls monthly uses proprietary conversational training data to reduce customer customization burden for enterprises.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/rime-picks-up-24m-series-a-to-help-enterprises-field-customer-calls/",
+      "ts": "2026-07-15T13:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 70,
+      "move": 22
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -89,8 +225,8 @@
       "ts": "2026-07-15T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": 55
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_569d5689452ac2df",
@@ -106,8 +242,8 @@
       "ts": "2026-07-15T11:09:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 54
+      "heat": 86,
+      "move": -3
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -123,8 +259,8 @@
       "ts": "2026-07-15T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": 40
+      "heat": 68,
+      "move": -10
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -140,8 +276,8 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -3
+      "heat": 82,
+      "move": -4
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -157,8 +293,8 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -2
+      "heat": 73,
+      "move": -9
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -174,8 +310,25 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
-      "move": -5
+      "heat": 63,
+      "move": -14
+    },
+    {
+      "id": "s_3e68f8ee554f3c0b",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "GPT-5.6 Sol deleting user files without consent, widespread reports",
+      "dek": "Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
+      "ts": "2026-07-14T21:50:11.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 90,
+      "move": -3
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -191,8 +344,8 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -6
+      "heat": 71,
+      "move": -7
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -208,8 +361,8 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": -2
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -225,7 +378,7 @@
       "ts": "2026-07-14T18:33:31.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
+      "heat": 80,
       "move": -4
     },
     {
@@ -242,8 +395,8 @@
       "ts": "2026-07-14T17:45:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 65,
-      "move": -9
+      "heat": 61,
+      "move": -10
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -259,7 +412,7 @@
       "ts": "2026-07-14T17:18:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
+      "heat": 78,
       "move": -4
     },
     {
@@ -276,8 +429,8 @@
       "ts": "2026-07-14T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 65,
-      "move": -9
+      "heat": 60,
+      "move": -10
     },
     {
       "id": "s_23767f964a637e72",
@@ -293,8 +446,8 @@
       "ts": "2026-07-14T16:28:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 64,
-      "move": -7
+      "heat": 60,
+      "move": -9
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -310,8 +463,8 @@
       "ts": "2026-07-14T16:22:15.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": -3
+      "heat": 68,
+      "move": -10
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -327,8 +480,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": -3
+      "heat": 68,
+      "move": -10
     },
     {
       "id": "s_ec43065966072242",
@@ -344,8 +497,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -7
+      "heat": 60,
+      "move": -9
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -361,8 +514,8 @@
       "ts": "2026-07-14T15:47:36.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
-      "move": -4
+      "heat": 50,
+      "move": -9
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -378,8 +531,8 @@
       "ts": "2026-07-14T15:17:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": -3
+      "heat": 78,
+      "move": -4
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -395,8 +548,8 @@
       "ts": "2026-07-14T15:06:28.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": -3
+      "heat": 78,
+      "move": -4
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -412,8 +565,8 @@
       "ts": "2026-07-14T14:37:48.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 42,
-      "move": -3
+      "heat": 40,
+      "move": -9
     },
     {
       "id": "s_07270bd7745b992c",
@@ -429,8 +582,8 @@
       "ts": "2026-07-14T14:24:53.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -3
+      "heat": 78,
+      "move": -4
     },
     {
       "id": "s_d03c89151d098f57",
@@ -446,8 +599,8 @@
       "ts": "2026-07-14T14:06:47.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 62,
-      "move": -4
+      "heat": 60,
+      "move": -9
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -463,8 +616,8 @@
       "ts": "2026-07-14T14:01:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 60,
-      "move": -4
+      "heat": 58,
+      "move": -10
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -480,8 +633,8 @@
       "ts": "2026-07-14T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 62,
-      "move": -4
+      "heat": 60,
+      "move": -9
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -498,7 +651,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -8
     },
     {
       "id": "s_b4553fdd41168ce5",
@@ -515,7 +668,7 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": 3
+      "move": -2
     },
     {
       "id": "s_ecbc76a36f0e024f",
@@ -532,7 +685,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -8
     },
     {
       "id": "s_6358ddebecad3055",
@@ -549,7 +702,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -8
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -566,7 +719,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": 2
+      "move": -1
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -583,7 +736,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_0b9a256573f21194",
@@ -600,7 +753,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -8
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -617,7 +770,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -8
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -634,7 +787,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": -6
     },
     {
       "id": "s_98d85122ab641d19",
@@ -650,7 +803,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_a4ad473125ca0f67",
@@ -665,7 +818,7 @@
       "read": "3 min",
       "also": [],
       "heat": 65,
-      "move": 3
+      "move": -6
     },
     {
       "id": "s_8c1ac48f2dbd0d44",
@@ -682,7 +835,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_1d85656f77c8e03e",
@@ -697,7 +850,7 @@
       "read": "4 min",
       "also": [],
       "heat": 58,
-      "move": -2
+      "move": -9
     },
     {
       "id": "s_e50b15150fd00f1e",
@@ -712,7 +865,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -9
     }
   ],
   "models": [
@@ -780,27 +933,27 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 19
-    },
-    {
-      "n": "80 Level",
-      "c": 12
-    },
-    {
-      "n": "Creative Bloq AI",
-      "c": 9
+      "c": 24
     },
     {
       "n": "The Verge AI",
-      "c": 8
-    },
-    {
-      "n": "PetaPixel",
-      "c": 6
+      "c": 9
     },
     {
       "n": "Ars Technica AI",
+      "c": 5
+    },
+    {
+      "n": "Creative Bloq AI",
       "c": 4
+    },
+    {
+      "n": "PetaPixel",
+      "c": 3
+    },
+    {
+      "n": "80 Level",
+      "c": 1
     },
     {
       "n": "MarkTechPost",
@@ -812,14 +965,14 @@
     }
   ],
   "topics": [
-    "#openai",
     "#apple",
+    "#openai",
     "#google",
+    "#images",
     "#meta",
     "#york",
-    "#indie",
-    "#ceo",
-    "#images"
+    "#hugging",
+    "#face"
   ],
   "tooldrop": {
     "name": "Goose Ads Remixer",
@@ -829,9 +982,9 @@
     "date": "2026-07-15T13:46:23.957Z"
   },
   "stats": {
-    "scanned_last_run": 17,
-    "published_today": 27,
+    "scanned_last_run": 24,
+    "published_today": 22,
     "sources_live": 14,
-    "slopped_last_run": 14
+    "slopped_last_run": 12
   }
 }
