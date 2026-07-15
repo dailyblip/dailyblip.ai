@@ -85,3 +85,10 @@ const OVERRIDES_DEFAULT = {
 };
 export const loadOverrides = () => ({ ...OVERRIDES_DEFAULT, ...readJSON(PATHS_OVERRIDES, {}) });
 export const saveOverrides = (o) => writeJSON(PATHS_OVERRIDES, o);
+
+// commentary.json: tracks which op-ed topics have already been used, so
+// pipeline/commentary.js doesn't repeat one, plus a lightweight history
+// of what's been published (used by the commentary index page).
+export const PATHS_COMMENTARY = path.join(ROOT, "data", "commentary.json");
+export const loadCommentaryLog = () => readJSON(PATHS_COMMENTARY, { used_topics: [], published: [] });
+export const saveCommentaryLog = (c) => writeJSON(PATHS_COMMENTARY, c);
