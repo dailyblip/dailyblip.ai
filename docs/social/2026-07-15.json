@@ -1,11 +1,11 @@
 {
   "date": "2026-07-15",
   "image": "2026-07-15.png",
-  "caption": "Suno's training data is out in the open — and it's a long list of platforms that didn't sign off. YouTube, Deezer, Genius: millions of songs, scraped without disclosed consent. The fair use debate in AI music just got a lot more concrete. 🎵\n\n#AIMusic #Suno #CreatorRights #AITrainingData #MusicIndustry",
+  "caption": "Mira Murati's Thinking Machines just dropped Inkling — a 975B-param open-weight MoE model trained on 45 trillion tokens across text, image, audio, and video.\n\nNative multimodal reasoning. Open weights. First major release from the lab.\n\n#AI #OpenSource #MultimodalAI #ThinkingMachines #AIModels",
   "story": {
-    "title": "Suno trained on millions of scraped songs from YouTube, Deezer, Genius",
-    "dek": "Leaked data reveals the AI music generator sourced training material from major platforms without disclosed consent, raising fair use questions for creators and platforms.",
-    "src": "The Verge AI",
-    "url": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack"
+    "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
+    "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
+    "src": "TechCrunch AI",
+    "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/"
   }
 }

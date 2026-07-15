@@ -1,7 +1,8 @@
 {
   "used_topics": [
     "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
-    "Style Transfer Isn't Theft, Except When It Obviously Is"
+    "Style Transfer Isn't Theft, Except When It Obviously Is",
+    "The Best AI Artists Aren't Prompting. They're Directing."
   ],
   "published": [
     {
@@ -12,6 +13,11 @@
     {
       "slug": "style-transfer-isn-t-theft-except-when-it-obviously-is-2026-07-15",
       "title": "Style Transfer Isn't Theft, Except When It Obviously Is",
+      "date": "July 15, 2026"
+    },
+    {
+      "slug": "the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15",
+      "title": "The Best AI Artists Aren't Prompting. They're Directing.",
       "date": "July 15, 2026"
     }
   ]

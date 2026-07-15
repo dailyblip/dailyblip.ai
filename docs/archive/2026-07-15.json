@@ -1,11 +1,29 @@
 {
   "date": "2026-07-15",
-  "issue": 225,
+  "issue": 226,
   "brief": {
     "items": [
       {
-        "story": "s_b4c19111324a67ee",
-        "html": "<b>Reelful's new iOS app</b> turns your camera roll photos and clips into polished TikToks and Reels automatically — worth a download if you find editing tools overwhelming.",
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines released <b>Inkling, an open 975B-parameter multimodal model</b> trained natively across text, image, audio, and video — a serious free alternative for cross-medium creators.",
+        "secs": 12,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_264ddc681c98a9a5",
+        "html": "Leaked Suno source code confirms the music AI <b>scraped YouTube, Deezer, and podcasts without consent</b> — record labels are pressing DMCA claims that could reshape AI music tool legality.",
+        "secs": 11,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "<b>Houdini 22 adds native Gaussian Splat creation, editing, and animation</b> — no third-party plugins needed — a meaningful workflow upgrade for VFX artists and procedural creators.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -13,54 +31,36 @@
         "commentary": false
       },
       {
-        "story": "s_18de27eea197aabe",
-        "html": "Hugging Face's <b>Real World VoiceEQ benchmark</b> gives voice AI creators a human-perception-based quality metric to evaluate output beyond existing specialized scores.",
-        "secs": 9,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_b7c7277aa894fd0b",
-        "html": "<b>Ghost Font</b> is a new typeface engineered with optical illusions specifically to defeat AI OCR and vision models reading your text.",
-        "secs": 9,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_ee230258f27f8a0d",
-        "html": "OpenAI's <b>GPT-Red self-play red-teaming system</b> stress-tests AI robustness against prompt injection — a safety methodology advance relevant across all generative tools.",
-        "secs": 9,
-        "impact": 5,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_83d5a15310e3a6b6",
-        "html": "Anthropic and Blackstone launched a <b>$1.5B AI deployment venture called Ode</b>, betting hands-on enterprise implementation — not just models — is the next big opportunity.",
+        "story": "s_fe6ab2efc212fece",
+        "html": "<b>Apple Intelligence is now live in China</b> via an Alibaba Qwen integration, bringing AI writing and image tools to iOS, iPadOS, and macOS for a massive new user base.",
         "secs": 10,
-        "impact": 5,
+        "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_d71a059cc728fd04",
-        "html": "A pointed analysis dubs AI image generation <b>'pop culture's greatest tribute band'</b> — examining why derivative pastiche dominates and genuine novelty feels scarce.",
-        "secs": 9,
-        "impact": 4,
+        "story": "s_c0ac8f261d4797a3",
+        "html": "Concept artist Daniel Porto uses AI to compress decades of vision into production timelines, arguing <b>experienced creative judgment — not prompting skill — is the real competitive edge</b>.",
+        "secs": 10,
+        "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
+      },
+      {
+        "story": "s_230cdabf888d5a7c",
+        "html": "The skill gap in AI art has moved: <b>the creators pulling ahead are directing, not prompting</b> — treating generation tools like a film set, not a search bar.",
+        "secs": 9,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": true
       }
     ],
-    "title": "Wednesday, July 15 — six things that changed today",
-    "date": "2026-07-15T19:15:39.976Z",
-    "edition": "pm"
+    "title": "Wednesday, July 15 — six things creators need to know",
+    "date": "2026-07-15T21:11:46.274Z",
+    "edition": "am"
   },
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -70,6 +70,91 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stories": [
+    {
+      "id": "s_230cdabf888d5a7c",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Best AI Artists Aren't Prompting. They're Directing.",
+      "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html",
+      "ts": "2026-07-15T21:11:15.982Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_976a1a3eff5f1d7b",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
+      "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/",
+      "ts": "2026-07-15T18:04:06.000Z",
+      "read": "4 min",
+      "also": [],
+      "top": true,
+      "heat": 116,
+      "move": 56
+    },
+    {
+      "id": "s_4367c4f1a18b0bbe",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Houdini 22 adds native Gaussian Splatting support and redesigned UI",
+      "dek": "SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/",
+      "ts": "2026-07-15T20:16:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 84,
+      "move": 39
+    },
+    {
+      "id": "s_aa32e1edecf76be3",
+      "cat": "video",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "AI startups release direct-to-video generated films as cash-grab strategy",
+      "dek": "An AI startup is capitalizing on blockbuster hype by rushing out AI-generated films directly to digital release, mirroring decades-old direct-to-video B-movie economics.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/entertainment/965616/ash-koosha-odysseus-the-fall-foundtain-zero-tilly-norwood",
+      "ts": "2026-07-15T20:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 48
+    },
+    {
+      "id": "s_99a19263a8c15f19",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "OpenAI releases $230 Codex keyboard with AI agent status lights",
+      "dek": "OpenAI entered hardware with a specialty keyboard co-designed with Work Louder, featuring customizable keys and a reasoning-level dial for managing AI coding agents.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/",
+      "ts": "2026-07-15T19:41:38.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 101,
+      "move": 51
+    },
     {
       "id": "s_ac1e314b2ff426dc",
       "cat": "writing",
@@ -84,25 +169,9 @@
       "url": "https://dailyblip.ai/commentary/style-transfer-isn-t-theft-except-when-it-obviously-is-2026-07-15.html",
       "ts": "2026-07-15T18:01:46.915Z",
       "read": "3 min",
-      "also": []
-    },
-    {
-      "id": "s_fe6ab2efc212fece",
-      "cat": "industry",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
-      "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
-      "ts": "2026-07-15T15:29:33.000Z",
-      "read": "3 min",
       "also": [],
-      "heat": 107,
-      "move": -1,
-      "top": true
+      "heat": 91,
+      "move": 50
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -118,8 +187,8 @@
       "ts": "2026-07-15T17:48:01.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 112,
-      "move": 53
+      "heat": 109,
+      "move": -1
     },
     {
       "id": "s_d173222f3e599859",
@@ -136,8 +205,8 @@
       "ts": "2026-07-15T17:45:15.948Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
-      "move": -1
+      "heat": 91,
+      "move": -4
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -153,8 +222,8 @@
       "ts": "2026-07-15T17:29:41.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 84,
-      "move": -1
+      "heat": 81,
+      "move": -5
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -170,8 +239,8 @@
       "ts": "2026-07-15T17:27:01.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 83,
-      "move": -1
+      "heat": 81,
+      "move": -5
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -187,7 +256,7 @@
       "ts": "2026-07-15T17:00:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 111,
+      "heat": 108,
       "move": -1
     },
     {
@@ -204,8 +273,8 @@
       "ts": "2026-07-15T16:20:18.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": -2
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_18de27eea197aabe",
@@ -221,8 +290,8 @@
       "ts": "2026-07-15T16:00:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": 0
+      "heat": 69,
+      "move": -8
     },
     {
       "id": "s_84777b05d9b25937",
@@ -238,8 +307,25 @@
       "ts": "2026-07-15T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
-      "move": 0
+      "heat": 69,
+      "move": -8
+    },
+    {
+      "id": "s_fe6ab2efc212fece",
+      "cat": "industry",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
+      "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+      "ts": "2026-07-15T15:29:33.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 104,
+      "move": -1
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -255,8 +341,25 @@
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 91,
-      "move": 0
+      "heat": 88,
+      "move": -5
+    },
+    {
+      "id": "s_a9eaf0c587df10e3",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Ode with Anthropic embeds forward-deployed AI engineers into enterprise",
+      "dek": "Ode, a joint venture backed by Anthropic and major financial firms, acquired Fractional AI to place specialized engineers inside enterprise organizations, betting AI services will replace traditional consulting.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/video/inside-ode-with-anthropic-the-startup-betting-ai-services-are-the-future-of-enterprise/",
+      "ts": "2026-07-15T15:00:00.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 68,
+      "move": 23
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -272,8 +375,8 @@
       "ts": "2026-07-15T13:10:47.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 69,
-      "move": -1
+      "heat": 67,
+      "move": -13
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -289,8 +392,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 79,
-      "move": -1
+      "heat": 76,
+      "move": -13
     },
     {
       "id": "s_110aa69c02571475",
@@ -306,8 +409,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -1
+      "heat": 66,
+      "move": -13
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -323,8 +426,8 @@
       "ts": "2026-07-15T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": 0
+      "heat": 83,
+      "move": -7
     },
     {
       "id": "s_569d5689452ac2df",
@@ -340,8 +443,8 @@
       "ts": "2026-07-15T11:09:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": -1
+      "heat": 82,
+      "move": -6
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -357,8 +460,8 @@
       "ts": "2026-07-15T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 67,
-      "move": -1
+      "heat": 64,
+      "move": -8
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -374,8 +477,8 @@
       "ts": "2026-07-15T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -1
+      "heat": 73,
+      "move": -5
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -391,8 +494,25 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": -1
+      "heat": 78,
+      "move": -5
+    },
+    {
+      "id": "s_210f6726bf4a719a",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Inkling by Thinking Machines now available on Hugging Face",
+      "dek": "Inkling, the 1T-parameter multimodal open model, is now deployed with inference support via Transformers, vLLM, and llama.cpp for agentic coding and multi-token prediction tasks.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/thinkingmachines-inkling",
+      "ts": "2026-07-15T00:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 73,
+      "move": 29
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -408,8 +528,8 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": -3
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -425,8 +545,8 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 62,
-      "move": -1
+      "heat": 59,
+      "move": -14
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -442,8 +562,8 @@
       "ts": "2026-07-14T21:50:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": -1
+      "heat": 86,
+      "move": -4
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -459,8 +579,8 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 68,
+      "move": -8
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -476,65 +596,14 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": -2
-    },
-    {
-      "id": "s_b98c65f859f0dcbd",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Major publishers sue Google for training Gemini on copyrighted works without permission",
-      "dek": "Hachette, Cengage, Elsevier, and others allege Google stripped copyright info and used their works to train AI models without consent.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
-      "ts": "2026-07-14T18:33:31.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 79,
-      "move": -1
-    },
-    {
-      "id": "s_986155e62b49ff74",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "DeepMind CEO proposes independent standards body to regulate frontier AI models",
-      "dek": "Hassabis calls for a FINRA-like regulatory authority to test and approve AI models before release, with voluntary initial participation.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
-      "ts": "2026-07-14T17:45:55.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": -1
-    },
-    {
-      "id": "s_a9b65061bfa7a7eb",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Former Meta employees sue over AI-driven layoffs targeting workers on protected leave",
-      "dek": "26 workers allege Meta used internal AI tools to select employees for termination while excluding those on disability, parental, or medical leave.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/965486/meta-lawsuit-former-employees-ai-layoffs",
-      "ts": "2026-07-14T17:18:11.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -1
+      "heat": 85,
+      "move": -3
     }
   ],
   "stats": {
-    "scanned_last_run": 1,
-    "published_today": 25,
+    "scanned_last_run": 11,
+    "published_today": 28,
     "sources_live": 14,
-    "slopped_last_run": 0
+    "slopped_last_run": 5
   }
 }
