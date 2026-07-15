@@ -1,60 +1,60 @@
 {
-  "issue": 220,
-  "generated_at": "2026-07-15T12:23:43.265Z",
+  "issue": 221,
+  "generated_at": "2026-07-15T13:46:24.029Z",
   "brief": {
     "items": [
       {
-        "story": "s_3e68f8ee554f3c0b",
-        "html": "<b>GPT-5.6 Sol's file-deletion bug remains unpatched</b> — keep it away from any project folder containing work you haven't backed up elsewhere.",
-        "secs": 10,
+        "story": "s_2cc0275fcceef652",
+        "html": "<b>Grok Build AI coding tool was silently uploading entire codebases</b> — including secrets and .gitignore'd files — before the vulnerability was shut down; audit any recent sessions.",
+        "secs": 11,
         "impact": 9,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_527857b3b9d8ad5a",
-        "html": "TurboSquid's <b>sales plunges and payment delays are worsening</b> — activate backup marketplace listings and document your revenue history now.",
+        "story": "s_d4b36e47cd240b18",
+        "html": "<b>Patreon now blocks AI training crawlers</b> via Cloudflare, protecting published creator work from being scraped for model training without compensation.",
+        "secs": 9,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_a5c0710938e469b9",
+        "html": "Maxon Autograph is a <b>free professional After Effects alternative for motion graphics</b> — worth testing as a no-cost replacement in your motion design pipeline.",
+        "secs": 9,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_8c1ac48f2dbd0d44",
+        "html": "Kyutai's open-weight <b>MuScriptor transcribes multi-instrument audio to MIDI</b>, trained on 170k recordings — download it now to extract MIDI from any mix.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_b98c65f859f0dcbd",
-        "html": "Hachette, Cengage, and Elsevier's <b>copyright lawsuit against Google for Gemini training data</b> is advancing — writing creators should monitor this for precedent-setting outcomes.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_23767f964a637e72",
-        "html": "Google's revamped image search now <b>generates AI images directly inside search results</b>, putting platform-created visuals in direct competition with stock photographers.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_274fe08b7f274f10",
-        "html": "Spotify's new <b>'Talk to Spotify' conversational AI</b> lets Premium users discover and play music through chat, opening a new discovery channel for independent artists.",
+        "story": "s_2cae585118ae58a3",
+        "html": "Jesse Miettinen's <b>Damage Control Blender toolkit for destruction, scatter, and grunge effects</b> launches with procedural smudge masks and generative aging shaders.",
         "secs": 9,
-        "impact": 6,
+        "impact": 7,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_27568dc6ad1def84",
-        "html": "<b>Material Maker 1.7 hits Steam</b> with a UI overhaul, dynamic sky materials, 32-bit nodes, and a Godot 4.7 upgrade — worth updating your procedural texture pipeline.",
-        "secs": 10,
-        "impact": 6,
+        "story": "s_da64ea9b487e106b",
+        "html": "<b>Blender 5.2 release candidate</b> adds a new scene project sculpting brush — test it now before the stable release lands.",
+        "secs": 8,
+        "impact": 7,
         "hardware": false,
         "tracking": false
       }
     ],
-    "title": "Tuesday, July 14 — six things that changed today",
-    "date": "2026-07-15T03:55:50.463Z",
-    "edition": "pm"
+    "title": "Wednesday, July 15 — six things creators need to know",
+    "date": "2026-07-15T13:46:08.462Z",
+    "edition": "am"
   },
   "stories": [
     {
@@ -1173,11 +1173,11 @@
     "#images"
   ],
   "tooldrop": {
-    "name": "Branda",
-    "blurb": "Open-source tool that generates on-brand ad visuals. Drop in your brand assets and get ready-to-use ad creatives without a subscription.",
-    "meta": "image · design — free, open-source",
-    "url": "https://www.producthunt.com/products/branda-open-source-on-brand-ad-maker",
-    "date": "2026-07-15T03:53:34.798Z"
+    "name": "Goose Ads Remixer",
+    "blurb": "Remix existing ad creatives into fresh variations using AI — built for marketers and content creators who need fast, on-brand ad iterations without starting from scratch.",
+    "meta": "image · video — free tier",
+    "url": "https://www.producthunt.com/products/gooseworks",
+    "date": "2026-07-15T13:46:23.957Z"
   },
   "stats": {
     "scanned_last_run": 17,
