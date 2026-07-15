@@ -28,6 +28,63 @@ function subredditFromUrl(url) {
   return m ? m[1] : "";
 }
 
+// "Loudest sources" + "trending frequencies" sidebar data. Both used to be
+// permanently-frozen seed data from the original build — never actually
+// computed by the pipeline. This recomputes both fresh from whatever is
+// currently in feed.stories, called on every run (including quiet ones,
+// so a deletion via admin or a slow news day still reflects correctly).
+function recomputeSidebarData(feed) {
+  const sourceCounts = {};
+  for (const s of feed.stories) sourceCounts[s.src] = (sourceCounts[s.src] || 0) + 1;
+  feed.sources = Object.entries(sourceCounts)
+    .map(([n, c]) => ({ n, c }))
+    .sort((a, b) => b.c - a.c)
+    .slice(0, 8);
+
+  // Lightweight heuristic, not real NLP: proper-noun-ish capitalized terms
+  // (optionally with an attached version number like "Blender 5.2"),
+  // counted by how many DIFFERENT stories mention each one. Good enough to
+  // replace hardcoded fake hashtags with something real; don't expect
+  // perfect topic modeling from it.
+  const STOPWORDS = new Set([
+    "the","this","that","these","those","new","now","after","before","free",
+    "open","major","first","best","how","why","what","when","its","your",
+    "you","are","was","were","will","with","from","into","over","under",
+    "monday","tuesday","wednesday","thursday","friday","saturday","sunday",
+    "january","february","march","april","may","june","july","august",
+    "september","october","november","december","ai","update","updates",
+  ]);
+  const topicCounts = {};
+  for (const s of feed.stories) {
+    const words = (s.title || "").split(/\s+/);
+    const seenInThisStory = new Set();
+    for (let i = 0; i < words.length; i++) {
+      const w = words[i].replace(/[,;:!?"']+$/, "");
+      if (!/^[A-Z][a-zA-Z]{2,}/.test(w)) continue;
+      if (STOPWORDS.has(w.toLowerCase())) continue;
+      let term = w;
+      const next = words[i + 1]?.replace(/[,;:!?"']+$/, "");
+      if (next && /^v?\d+(\.\d+)*$/i.test(next)) term = `${w} ${next}`;
+      const key = term.toLowerCase();
+      if (seenInThisStory.has(key)) continue;
+      seenInThisStory.add(key);
+      const rec = (topicCounts[key] ||= { count: 0, display: term });
+      rec.count++;
+    }
+  }
+  feed.topics = Object.values(topicCounts)
+    .filter((t) => t.count >= 2)
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 8)
+    .map((t) => "#" + t.display.toLowerCase().replace(/\s+/g, "-").replace(/\./g, ""));
+
+  // tool_status / tool_status_at were part of the top status strip, which
+  // was removed from the site entirely — nothing reads these fields
+  // anymore. Clear them rather than leave stale orphaned data forever.
+  delete feed.tool_status;
+  delete feed.tool_status_at;
+}
+
 // Signal heat: how alive a story is right now. Recomputed every run so the
 // ranking shifts through the day — the reason to reload the page.
 function heatScore(s) {
@@ -327,6 +384,9 @@ async function main() {
       if (activePinIdsQuiet.has(s.id)) s.pinned_brief = true;
       else delete s.pinned_brief;
     }
+    // Even on a quiet run, someone may have deleted stories via admin
+    // since the last run — recompute so sources/topics stay accurate.
+    recomputeSidebarData(feed);
     feed.stats = { ...feed.stats, scanned_last_run: 0, sources_live: feeds.filter((f) => !f.disabled).length };
     saveFeed(feed); saveSeen(seen);
     writeRss(feed);
@@ -491,6 +551,11 @@ async function main() {
   overrides.pinned_brief = (overrides.pinned_brief || []).filter((p) => liveIds.has(p.id));
   saveOverrides(overrides);
   if (newSuggestions) console.log(`pin: ${newSuggestions} new suggestion(s) detected (3+ source corroboration), ${activePinIds.size} currently pinned.`);
+
+  // "Loudest sources" + "trending frequencies" sidebar: recomputed fresh
+  // from real data every run (see recomputeSidebarData for why this used
+  // to be permanently-fake seed data).
+  recomputeSidebarData(feed);
 
   feed.stats = {
     ...feed.stats,
