@@ -75,13 +75,45 @@ async function createResilient(role, params) {
 const textOf = (res) =>
   res.content.filter((b) => b.type === "text").map((b) => b.text).join("\n");
 
+/** Finds the first complete, balanced JSON value in text by tracking
+ *  brace/bracket depth (and respecting string literals, so a "}" inside a
+ *  quoted string doesn't confuse the depth count). Stops the instant the
+ *  outermost structure closes — unlike a naive "first bracket to last
+ *  bracket" slice, this is immune to trailing prose that happens to
+ *  contain its own stray brackets (very common in search-grounded
+ *  responses that cite sources, e.g. "[1] Reuters" or a markdown list),
+ *  which previously caused "Unexpected non-whitespace character after
+ *  JSON" errors whenever a response had commentary after the real JSON. */
+function extractJson(text) {
+  let start = -1;
+  for (const c of ["{", "["]) {
+    const i = text.indexOf(c);
+    if (i !== -1 && (start === -1 || i < start)) start = i;
+  }
+  if (start === -1) return null;
+  const openChar = text[start];
+  const closeChar = openChar === "{" ? "}" : "]";
+  let depth = 0, inString = false, escapeNext = false;
+  for (let i = start; i < text.length; i++) {
+    const ch = text[i];
+    if (escapeNext) { escapeNext = false; continue; }
+    if (ch === "\\") { escapeNext = true; continue; }
+    if (ch === '"') { inString = !inString; continue; }
+    if (inString) continue;
+    if (ch === openChar) depth++;
+    else if (ch === closeChar) {
+      depth--;
+      if (depth === 0) return text.slice(start, i + 1);
+    }
+  }
+  return null; // unterminated — let the caller's error handling deal with it
+}
+
 function parseLoose(text) {
   const clean = text.replace(/```json|```/g, "").trim();
-  // Tolerate prose around the JSON (search-enabled responses often add some).
-  const start = Math.min(...["{", "["].map((c) => { const i = clean.indexOf(c); return i === -1 ? Infinity : i; }));
-  if (start === Infinity) throw new Error("no JSON found");
-  const end = Math.max(clean.lastIndexOf("}"), clean.lastIndexOf("]"));
-  return JSON.parse(clean.slice(start, end + 1));
+  const extracted = extractJson(clean);
+  if (!extracted) throw new Error("no JSON found");
+  return JSON.parse(extracted);
 }
 
 /** Ask for JSON. One corrective retry on parse failure. */
