@@ -8,7 +8,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: pipeline
+  group: curator-pipeline
   cancel-in-progress: false
 
 jobs:
