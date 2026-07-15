@@ -1,60 +1,60 @@
 {
-  "issue": 219,
-  "generated_at": "2026-07-15T03:53:34.861Z",
+  "issue": 220,
+  "generated_at": "2026-07-15T03:55:50.515Z",
   "brief": {
     "items": [
       {
         "story": "s_3e68f8ee554f3c0b",
-        "html": "<b>GPT-5.6 Sol is deleting user files without consent</b> — avoid using it on any project folder until OpenAI issues a fix.",
+        "html": "<b>GPT-5.6 Sol's file-deletion bug remains unpatched</b> — keep it away from any project folder containing work you haven't backed up elsewhere.",
         "secs": 10,
         "impact": 9,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_2cc0275fcceef652",
-        "html": "SpaceX's Grok Build CLI tool <b>uploaded entire codebases including secrets to cloud storage</b> before the vulnerability was patched — audit any repos you ran through it.",
-        "secs": 11,
+        "story": "s_527857b3b9d8ad5a",
+        "html": "TurboSquid's <b>sales plunges and payment delays are worsening</b> — activate backup marketplace listings and document your revenue history now.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false
       },
       {
         "story": "s_b98c65f859f0dcbd",
-        "html": "Hachette, Cengage, and Elsevier have now <b>formally sued Google for training Gemini on copyrighted works</b> — a case writing and publishing creators should follow for precedent.",
+        "html": "Hachette, Cengage, and Elsevier's <b>copyright lawsuit against Google for Gemini training data</b> is advancing — writing creators should monitor this for precedent-setting outcomes.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_527857b3b9d8ad5a",
-        "html": "<b>TurboSquid artists continue reporting steep sales drops and payment delays</b> — activate backup marketplace listings and document your revenue history now.",
+        "story": "s_23767f964a637e72",
+        "html": "Google's revamped image search now <b>generates AI images directly inside search results</b>, putting platform-created visuals in direct competition with stock photographers.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_274fe08b7f274f10",
+        "html": "Spotify's new <b>'Talk to Spotify' conversational AI</b> lets Premium users discover and play music through chat, opening a new discovery channel for independent artists.",
         "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_f6d4f1f66693b6a8",
-        "html": "Apple's <b>AI-overhauled Siri is now in iOS 27 public beta</b> — test it now if you want early insight into how your content surfaces through the new assistant.",
-        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_2cae585118ae58a3",
-        "html": "Jesse Miettinen's <b>Damage Control Blender toolkit launches with procedural destruction, scatter, and grunge shaders</b> for realistic scene degradation.",
-        "secs": 9,
+        "story": "s_27568dc6ad1def84",
+        "html": "<b>Material Maker 1.7 hits Steam</b> with a UI overhaul, dynamic sky materials, 32-bit nodes, and a Godot 4.7 upgrade — worth updating your procedural texture pipeline.",
+        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false
       }
     ],
-    "title": "Tuesday, July 14 — six things creators need to know",
-    "date": "2026-07-15T03:53:19.416Z",
-    "edition": "am"
+    "title": "Tuesday, July 14 — six things that changed today",
+    "date": "2026-07-15T03:55:50.463Z",
+    "edition": "pm"
   },
   "stories": [
     {
