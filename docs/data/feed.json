@@ -1,29 +1,38 @@
 {
-  "issue": 223,
-  "generated_at": "2026-07-15T17:57:08.891Z",
+  "issue": 224,
+  "generated_at": "2026-07-15T18:02:01.301Z",
   "brief": {
     "items": [
       {
-        "story": "s_264ddc681c98a9a5",
-        "html": "A supply chain hack exposed code showing <b>Suno scraped YouTube, Deezer, and podcasts</b> for training data — relevant to the ongoing RIAA lawsuit over AI music rights.",
-        "secs": 11,
-        "impact": 9,
+        "story": "s_f8bec47bee6c00a0",
+        "html": "The Suno scraping story has <b>new detail this PM edition: Genius lyrics and podcast audio are also in the training set</b>, broadening the RIAA lawsuit's potential scope.",
+        "secs": 10,
+        "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_9db836b16b6b8943",
-        "html": "Google Images' <b>Pinterest-style redesign now blends AI-generated images with real photos</b> — migrate now if your discovery strategy depends on traditional image search visibility.",
-        "secs": 10,
+        "story": "s_fe6ab2efc212fece",
+        "html": "<b>Apple Intelligence launches in China via Alibaba's Qwen model</b>, meaning iOS creators in China now have native AI writing and image tools inside Apple apps.",
+        "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_b4c19111324a67ee",
-        "html": "New iOS app <b>Reelful turns your camera roll photos into TikTok and Instagram Reels</b> automatically — no editing skills required.",
+        "story": "s_84777b05d9b25937",
+        "html": "OpenAI and Work Louder's <b>Codex Micro is a programmable light-up keyboard block for monitoring multiple AI coding threads</b> simultaneously — a niche but concrete tool for dev-focused creators.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_c0ac8f261d4797a3",
+        "html": "Concept artist Daniel Porto shows how <b>20 years of creative judgment — not prompting skill — is the real edge</b> when using AI to accelerate production work.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
@@ -31,17 +40,8 @@
         "commentary": false
       },
       {
-        "story": "s_18de27eea197aabe",
-        "html": "Hugging Face's new <b>Real World VoiceEQ benchmark measures human perception of voice AI quality</b>, giving audio creators a better standard to evaluate voice tools against.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_b7c7277aa894fd0b",
-        "html": "<b>Ghost Font uses optical illusions to defeat AI OCR and vision models</b> — a practical tool for creators wanting text in images to stay unreadable by AI scrapers.",
+        "story": "s_569d5689452ac2df",
+        "html": "George Lucas says <b>'there's nothing you can do about AI' in filmmaking</b>, comparing the shift to the end of horse transport — notable signal for video creators on where the industry is heading.",
         "secs": 10,
         "impact": 5,
         "hardware": false,
@@ -49,9 +49,9 @@
         "commentary": false
       },
       {
-        "story": "s_d173222f3e599859",
-        "html": "<b>'Count the fingers' no longer reliably detects AI images</b> — the real visual tells have shifted to stranger artifacts that audiences and platforms are still learning to spot.",
-        "secs": 10,
+        "story": "s_ac1e314b2ff426dc",
+        "html": "A sharp editorial argues <b>AI training grievances split into genuine legal harm and market anxiety</b> — worth reading before you pick a side in the copyright debate.",
+        "secs": 9,
         "impact": 5,
         "hardware": false,
         "tracking": false,
@@ -59,10 +59,26 @@
       }
     ],
     "title": "Wednesday, July 15 — six things creators need to know",
-    "date": "2026-07-15T17:45:24.439Z",
+    "date": "2026-07-15T18:01:58.795Z",
     "edition": "am"
   },
   "stories": [
+    {
+      "id": "s_ac1e314b2ff426dc",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "Style Transfer Isn't Theft, Except When It Obviously Is",
+      "dek": "Artists complaining that AI was trained on their work fall into two very different camps: those with a genuinely serious legal grievance, and those who are mostly upset that the market got harder. Lumping them together helps nobody.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/style-transfer-isn-t-theft-except-when-it-obviously-is-2026-07-15.html",
+      "ts": "2026-07-15T18:01:46.915Z",
+      "read": "3 min",
+      "also": []
+    },
     {
       "id": "s_fe6ab2efc212fece",
       "cat": "industry",

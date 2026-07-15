@@ -1,11 +1,11 @@
 {
   "date": "2026-07-15",
   "image": "2026-07-15.png",
-  "caption": "Suno's training data just got exposed — not by a lawsuit, but a supply chain hack.\n\nSource code reveals the AI music generator pulled audio from YouTube, Deezer, and podcasts. Record labels already have a case in court. This leak just handed them more ammunition.\n\n#AIMusic #Suno #CopyrightLaw #AITrainingData #MusicIndustry",
+  "caption": "Suno's training data is out in the open — and it's a long list of platforms that didn't sign off. YouTube, Deezer, Genius: millions of songs, scraped without disclosed consent. The fair use debate in AI music just got a lot more concrete. 🎵\n\n#AIMusic #Suno #CreatorRights #AITrainingData #MusicIndustry",
   "story": {
-    "title": "Hack reveals Suno scraped YouTube, Deezer, and podcasts for AI training",
-    "dek": "A supply chain attack exposed source code showing the AI music generator harvested audio from multiple platforms. Record labels argue this violates the DMCA despite Suno's fair-use defense.",
-    "src": "TechCrunch AI",
-    "url": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/"
+    "title": "Suno trained on millions of scraped songs from YouTube, Deezer, Genius",
+    "dek": "Leaked data reveals the AI music generator sourced training material from major platforms without disclosed consent, raising fair use questions for creators and platforms.",
+    "src": "The Verge AI",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack"
   }
 }

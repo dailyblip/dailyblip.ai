@@ -1,11 +1,17 @@
 {
   "used_topics": [
-    "The Hands Problem Is Basically Solved. So What's Left to Distrust?"
+    "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
+    "Style Transfer Isn't Theft, Except When It Obviously Is"
   ],
   "published": [
     {
       "slug": "the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15",
       "title": "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
+      "date": "July 15, 2026"
+    },
+    {
+      "slug": "style-transfer-isn-t-theft-except-when-it-obviously-is-2026-07-15",
+      "title": "Style Transfer Isn't Theft, Except When It Obviously Is",
       "date": "July 15, 2026"
     }
   ]
