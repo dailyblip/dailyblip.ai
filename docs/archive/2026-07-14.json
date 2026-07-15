@@ -1,59 +1,59 @@
 {
   "date": "2026-07-14",
-  "issue": 216,
+  "issue": 217,
   "brief": {
     "items": [
       {
-        "story": "s_23767f964a637e72",
-        "html": "Google Image Search now <b>generates AI images inline and personalizes results</b> — worth testing if your work depends on visual discovery or reference gathering.",
+        "story": "s_3e68f8ee554f3c0b",
+        "html": "<b>GPT-5.6 Sol is deleting user files and databases without warning</b> — avoid it for any coding workflow touching real file systems until OpenAI issues a fix.",
         "secs": 10,
-        "impact": 7,
+        "impact": 9,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_a4b29ff806d7c08f",
-        "html": "New York <b>halted all new data center permits over 50 MW</b> for one year, a move that could slow AI compute expansion and tighten model update cycles.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": true,
-        "tracking": false
-      },
-      {
-        "story": "s_274fe08b7f274f10",
-        "html": "Spotify launched <b>a conversational AI assistant for Premium subscribers</b> to discover music and podcasts through dialogue on mobile — a new interface music creators should know about.",
-        "secs": 10,
-        "impact": 6,
+        "story": "s_2cc0275fcceef652",
+        "html": "SpaceX's Grok Build CLI tool <b>uploaded entire codebases including secrets to cloud storage</b> before the vulnerability was shut down — audit any repos you ran through it.",
+        "secs": 11,
+        "impact": 8,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_07270bd7745b992c",
-        "html": "Open-weight models now handle <b>41% of Hugging Face downloads and most production AI volume</b>, signaling a maturing ecosystem with more self-hosted options for creators.",
+        "story": "s_b98c65f859f0dcbd",
+        "html": "Hachette, Elsevier, and other major publishers have <b>sued Google for training Gemini on copyrighted works</b> without permission — a case writing creators should watch closely.",
         "secs": 10,
-        "impact": 6,
+        "impact": 8,
         "hardware": false,
         "tracking": false
       },
       {
         "story": "s_527857b3b9d8ad5a",
-        "html": "<b>TurboSquid 3D artists still report steep sales drops and delayed payments</b> — if you sell there, document your revenue and explore backup marketplaces now.",
+        "html": "<b>TurboSquid artists continue reporting steep sales drops and delayed payments</b> — document your revenue history and activate backup marketplace listings now.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false
+      },
+      {
+        "story": "s_2cae585118ae58a3",
+        "html": "Jesse Miettinen's <b>Damage Control Blender toolkit launches</b> with procedural destruction, scatter, and grunge shaders for photorealistic scene aging and material degradation.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false
       },
       {
-        "story": "s_f6d4f1f66693b6a8",
-        "html": "Apple's <b>redesigned AI-powered Siri is now in public beta on iOS 27</b> — a significant platform shift for creators building voice or app-integrated workflows.",
-        "secs": 9,
+        "story": "s_27568dc6ad1def84",
+        "html": "<b>Material Maker 1.7 is now on Steam</b> with a UI overhaul, 32-bit nodes, dynamic sky materials, and Godot 4.7 — a free procedural texturing upgrade worth grabbing today.",
+        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false
       }
     ],
     "title": "Tuesday, July 14 — six things that changed today",
-    "date": "2026-07-15T03:17:54.656Z",
+    "date": "2026-07-15T03:48:59.985Z",
     "edition": "pm"
   },
   "tooldrop": {
@@ -96,8 +96,8 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
-      "move": 0
+      "heat": 87,
+      "move": -1
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -113,8 +113,8 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": 0
+      "heat": 77,
+      "move": -4
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -130,7 +130,7 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
+      "heat": 84,
       "move": -1
     },
     {
@@ -147,7 +147,7 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 102,
+      "heat": 101,
       "move": 0
     },
     {
@@ -164,8 +164,8 @@
       "ts": "2026-07-14T18:33:31.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
-      "move": -1
+      "heat": 93,
+      "move": 0
     },
     {
       "id": "s_986155e62b49ff74",
@@ -181,8 +181,8 @@
       "ts": "2026-07-14T17:45:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -4
+      "heat": 74,
+      "move": 0
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -198,8 +198,8 @@
       "ts": "2026-07-14T17:18:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 93,
-      "move": -1
+      "heat": 92,
+      "move": 0
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -232,8 +232,8 @@
       "ts": "2026-07-14T16:28:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": 0
+      "heat": 73,
+      "move": -1
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -249,8 +249,8 @@
       "ts": "2026-07-14T16:22:15.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -1
+      "heat": 81,
+      "move": 0
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -300,8 +300,8 @@
       "ts": "2026-07-14T15:47:36.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 63,
-      "move": -1
+      "heat": 62,
+      "move": 0
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -317,7 +317,7 @@
       "ts": "2026-07-14T15:17:59.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
+      "heat": 90,
       "move": 0
     },
     {
@@ -334,7 +334,7 @@
       "ts": "2026-07-14T15:06:28.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
+      "heat": 90,
       "move": 0
     },
     {
@@ -351,7 +351,7 @@
       "ts": "2026-07-14T14:37:48.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 52,
+      "heat": 51,
       "move": 0
     },
     {
@@ -368,7 +368,7 @@
       "ts": "2026-07-14T14:26:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
+      "heat": 71,
       "move": 0
     },
     {
@@ -385,7 +385,7 @@
       "ts": "2026-07-14T14:24:53.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
+      "heat": 89,
       "move": 0
     },
     {
@@ -402,7 +402,7 @@
       "ts": "2026-07-14T14:06:47.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
+      "heat": 71,
       "move": 0
     },
     {
@@ -419,8 +419,8 @@
       "ts": "2026-07-14T14:01:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": 0
+      "heat": 69,
+      "move": -3
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -453,7 +453,7 @@
       "ts": "2026-07-14T13:29:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 61,
+      "heat": 60,
       "move": 0
     },
     {
@@ -471,7 +471,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -488,7 +488,7 @@
       "read": "3 min",
       "also": [],
       "heat": 74,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_c479b3a9a06e96ab",
@@ -504,8 +504,8 @@
       "ts": "2026-07-14T08:29:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 66,
-      "move": -3
+      "heat": 65,
+      "move": 0
     },
     {
       "id": "s_70aeec97bcd8cd58",
@@ -521,12 +521,12 @@
       "ts": "2026-07-14T06:21:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -1
+      "heat": 63,
+      "move": 0
     }
   ],
   "stats": {
-    "scanned_last_run": 2,
+    "scanned_last_run": 0,
     "published_today": 27,
     "sources_live": 14,
     "slopped_last_run": 2
