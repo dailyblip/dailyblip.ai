@@ -1,6 +1,6 @@
 {
   "issue": 224,
-  "generated_at": "2026-07-15T18:45:55.486Z",
+  "generated_at": "2026-07-15T18:47:14.713Z",
   "brief": {
     "items": [
       {
@@ -250,23 +250,6 @@
       "also": [],
       "heat": 91,
       "move": 0
-    },
-    {
-      "id": "s_9db836b16b6b8943",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "Google Images homepage redesign features AI-generated and curated content",
-      "dek": "Google Images overhauls its 25-year-old interface with a Pinterest-style gallery, integrating AI imagery alongside real photos for personalized discovery.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/15/google-images-is-getting-a-makeover-for-its-25th-birthday/",
-      "ts": "2026-07-15T14:10:40.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 70,
-      "move": -1
     },
     {
       "id": "s_83d5a15310e3a6b6",
