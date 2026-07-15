@@ -61,7 +61,7 @@ const RESEARCH_SYSTEM = `You are a research assistant for a short opinion piece 
 
 Return JSON: {
   "examples": [{"name": "...", "description": "one sentence, factual", "source_url": "...", "source_name": "..."}],
-  "chart_data": null OR {"title": "...", "unit": "...", "items": [{"label": "...", "value": number}], "source_url": "...", "source_name": "..."}
+  "chart_data": null OR {"title": "...", "unit": "a SHORT suffix only, max 4 characters, e.g. \"%\" or \"M\" or \"x\" -- NEVER a phrase or sentence", "items": [{"label": "a SHORT category name, 1-3 words max, NOT a sentence or description", "value": number}], "source_url": "...", "source_name": "..."}
 }
 JSON only.`;
 
@@ -104,26 +104,79 @@ function sanitizeBody(body) {
 }
 
 // --- Chart: hand-drawn SVG, real data only -------------------------------
+// Two defensive safety nets here, neither trusting the model alone:
+//   1. "unit" is meant to be a short suffix ("%", "M", "x") appended
+//      directly to a number above each bar. If the research step ever
+//      hands back something longer (a full phrase instead of a symbol),
+//      that used to overflow straight off the chart. Now hard-capped.
+//   2. Category labels get real multi-line word-wrapping instead of a
+//      single <text> element with no wrap at all, which used to overlap
+//      neighboring bars' labels whenever a label ran more than ~2 words.
+function wrapChartText(text, maxCharsPerLine, maxLines) {
+  const words = String(text ?? "").split(/\s+/).filter(Boolean);
+  const lines = [];
+  let cur = "";
+  for (const w of words) {
+    const test = (cur + " " + w).trim();
+    if (test.length <= maxCharsPerLine) cur = test;
+    else { if (cur) lines.push(cur); cur = w; }
+    if (lines.length >= maxLines) break;
+  }
+  if (cur && lines.length < maxLines) lines.push(cur);
+  // If there's still leftover text beyond maxLines, mark the last line
+  // truncated rather than silently dropping words with no indication.
+  const consumed = lines.join(" ").split(/\s+/).length;
+  if (consumed < words.length && lines.length) {
+    lines[lines.length - 1] = lines[lines.length - 1].replace(/.{0,3}$/, "") + "\u2026";
+  }
+  return lines;
+}
+
 function renderChartSvg({ title, unit, items }) {
-  const w = 640, h = 360, pad = 56;
+  const w = 640, pad = 56, barGap = 16;
+  const barW = (w - pad * 2) / items.length - barGap;
+
+  // Defensive: a real unit is a short symbol. If the model handed back a
+  // full phrase instead, don't concatenate it onto the number at all —
+  // better to show a bare number than an overflowing sentence.
+  const safeUnit = String(unit ?? "").trim();
+  const displayUnit = safeUnit.length <= 4 ? safeUnit : "";
+
+  // Word-wrap category labels to fit their column width. Rough chars-
+  // per-line estimate based on available bar width at 12px sans-serif.
+  const maxCharsPerLine = Math.max(6, Math.floor(barW / 6.2));
+  const wrappedLabels = items.map((it) => wrapChartText(it.label, maxCharsPerLine, 3));
+  const maxLabelLines = Math.max(1, ...wrappedLabels.map((l) => l.length));
+
+  // Chart height grows to fit however many label lines are actually
+  // needed this time, instead of a fixed height that assumed 1 line.
+  const labelLineHeight = 15;
+  const bottomLabelSpace = 14 + maxLabelLines * labelLineHeight;
+  const h = 200 + bottomLabelSpace + pad;
+  const plotBottom = h - pad - bottomLabelSpace + 14;
+  const plotTop = 70;
+
   const maxVal = Math.max(...items.map((i) => i.value), 1);
-  const barW = (w - pad * 2) / items.length - 16;
   const esc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
   const bars = items.map((it, i) => {
-    const barH = ((h - pad * 2) * it.value) / maxVal;
-    const x = pad + i * ((w - pad * 2) / items.length) + 8;
-    const y = h - pad - barH;
+    const barH = ((plotBottom - plotTop) * it.value) / maxVal;
+    const x = pad + i * ((w - pad * 2) / items.length) + barGap / 2;
+    const y = plotBottom - barH;
+    const valueLabel = `${esc(it.value)}${esc(displayUnit)}`;
+    const labelLines = wrappedLabels[i]
+      .map((line, li) => `<tspan x="${x + barW / 2}" dy="${li === 0 ? 0 : labelLineHeight}">${esc(line)}</tspan>`)
+      .join("");
     return `
       <rect x="${x}" y="${y}" width="${barW}" height="${barH}" rx="4" fill="#FFB454"/>
-      <text x="${x + barW / 2}" y="${y - 8}" text-anchor="middle" font-family="monospace" font-size="14" fill="#E9F4F1">${esc(it.value)}${esc(unit)}</text>
-      <text x="${x + barW / 2}" y="${h - pad + 20}" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#9AB7B2">${esc(it.label)}</text>`;
+      <text x="${x + barW / 2}" y="${y - 8}" text-anchor="middle" font-family="monospace" font-size="14" fill="#E9F4F1">${valueLabel}</text>
+      <text x="${x + barW / 2}" y="${plotBottom + 20}" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#9AB7B2">${labelLines}</text>`;
   }).join("");
 
   return `<svg width="${w}" height="${h}" xmlns="http://www.w3.org/2000/svg">
     <rect width="${w}" height="${h}" fill="#0C242B" rx="12"/>
     <text x="${pad}" y="32" font-family="sans-serif" font-weight="700" font-size="15" fill="#E9F4F1">${esc(title)}</text>
-    <line x1="${pad}" y1="${h - pad}" x2="${w - pad}" y2="${h - pad}" stroke="rgba(158,216,210,.28)" stroke-width="1"/>
+    <line x1="${pad}" y1="${plotBottom}" x2="${w - pad}" y2="${plotBottom}" stroke="rgba(158,216,210,.28)" stroke-width="1"/>
     ${bars}
   </svg>`;
 }
