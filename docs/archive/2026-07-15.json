@@ -1,29 +1,11 @@
 {
   "date": "2026-07-15",
-  "issue": 226,
+  "issue": 227,
   "brief": {
     "items": [
       {
-        "story": "s_976a1a3eff5f1d7b",
-        "html": "Mira Murati's Thinking Machines released <b>Inkling, an open 975B-parameter multimodal model</b> trained natively across text, image, audio, and video — a serious free alternative for cross-medium creators.",
-        "secs": 12,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_264ddc681c98a9a5",
-        "html": "Leaked Suno source code confirms the music AI <b>scraped YouTube, Deezer, and podcasts without consent</b> — record labels are pressing DMCA claims that could reshape AI music tool legality.",
-        "secs": 11,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_4367c4f1a18b0bbe",
-        "html": "<b>Houdini 22 adds native Gaussian Splat creation, editing, and animation</b> — no third-party plugins needed — a meaningful workflow upgrade for VFX artists and procedural creators.",
+        "story": "s_aa32e1edecf76be3",
+        "html": "AI startups are rushing <b>direct-to-video AI-generated films</b> to digital release, mirroring B-movie economics — a new distribution lane video creators should watch.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -31,36 +13,45 @@
         "commentary": false
       },
       {
-        "story": "s_fe6ab2efc212fece",
-        "html": "<b>Apple Intelligence is now live in China</b> via an Alibaba Qwen integration, bringing AI writing and image tools to iOS, iPadOS, and macOS for a massive new user base.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_c0ac8f261d4797a3",
-        "html": "Concept artist Daniel Porto uses AI to compress decades of vision into production timelines, arguing <b>experienced creative judgment — not prompting skill — is the real competitive edge</b>.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_230cdabf888d5a7c",
-        "html": "The skill gap in AI art has moved: <b>the creators pulling ahead are directing, not prompting</b> — treating generation tools like a film set, not a search bar.",
+        "story": "s_b4c19111324a67ee",
+        "html": "Reelful's new iOS app <b>auto-generates TikTok and Instagram Reels from your camera roll photos</b> with no editing skills required.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": true
+        "commentary": false
+      },
+      {
+        "story": "s_18de27eea197aabe",
+        "html": "Hugging Face's new <b>Real World VoiceEQ benchmark</b> measures human perception of voice AI output — a new quality bar for audio and voice creators to reference.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_569d5689452ac2df",
+        "html": "George Lucas says <b>'there's nothing you can do about AI' in filmmaking</b>, comparing the shift to the end of horse transport — a signal of where industry consensus is heading.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b7c7277aa894fd0b",
+        "html": "Ghost Font is a new typeface <b>engineered with optical illusions to defeat AI OCR and vision models</b> — a practical tool for creators protecting on-screen text from scraping.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
       }
     ],
-    "title": "Wednesday, July 15 — six things creators need to know",
-    "date": "2026-07-15T21:11:46.274Z",
-    "edition": "am"
+    "title": "Wednesday, July 15 — six things that changed today",
+    "date": "2026-07-15T21:39:56.105Z",
+    "edition": "pm"
   },
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -581,23 +572,6 @@
       "also": [],
       "heat": 68,
       "move": -8
-    },
-    {
-      "id": "s_2cc0275fcceef652",
-      "cat": "tools",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage",
-      "dek": "The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
-      "ts": "2026-07-14T19:25:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 85,
-      "move": -3
     }
   ],
   "stats": {
