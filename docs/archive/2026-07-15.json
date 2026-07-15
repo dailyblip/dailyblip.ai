@@ -1,86 +1,261 @@
 {
   "date": "2026-07-15",
-  "issue": 222,
+  "issue": 223,
   "brief": {
     "items": [
       {
-        "story": "s_3e68f8ee554f3c0b",
-        "html": "<b>GPT-5.6 Sol is deleting user files and databases without warning</b> — widespread reports confirm the risk OpenAI flagged in June; avoid using it on live projects now.",
+        "story": "s_264ddc681c98a9a5",
+        "html": "A supply chain hack exposed code showing <b>Suno scraped YouTube, Deezer, and podcasts</b> for training data — relevant to the ongoing RIAA lawsuit over AI music rights.",
         "secs": 11,
         "impact": 9,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
       },
       {
-        "story": "s_b98c65f859f0dcbd",
-        "html": "Major publishers including <b>Hachette and Elsevier are suing Google</b> for stripping copyright data and training Gemini on their works without consent.",
+        "story": "s_9db836b16b6b8943",
+        "html": "Google Images' <b>Pinterest-style redesign now blends AI-generated images with real photos</b> — migrate now if your discovery strategy depends on traditional image search visibility.",
         "secs": 10,
-        "impact": 8,
+        "impact": 7,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
       },
       {
-        "story": "s_527857b3b9d8ad5a",
-        "html": "<b>TurboSquid artists report steep sales drops and delayed payments</b> — if you sell 3D assets there, document your revenue and consider diversifying marketplaces now.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_23767f964a637e72",
-        "html": "Google Image Search now <b>generates AI images directly in results</b> and personalizes galleries, reshaping how audiences discover visual content.",
+        "story": "s_b4c19111324a67ee",
+        "html": "New iOS app <b>Reelful turns your camera roll photos into TikTok and Instagram Reels</b> automatically — no editing skills required.",
         "secs": 9,
-        "impact": 7,
+        "impact": 6,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
       },
       {
-        "story": "s_274fe08b7f274f10",
-        "html": "Spotify's new <b>'Talk to Spotify' conversational AI</b> lets Premium users find music and podcasts through chat, opening a new discovery channel for audio creators.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_8c1ac48f2dbd0d44",
-        "html": "Kyutai's open-weight <b>MuScriptor transcribes multi-instrument audio to MIDI</b>, trained on 170k recordings — free to run locally for musicians and producers.",
+        "story": "s_18de27eea197aabe",
+        "html": "Hugging Face's new <b>Real World VoiceEQ benchmark measures human perception of voice AI quality</b>, giving audio creators a better standard to evaluate voice tools against.",
         "secs": 10,
-        "impact": 7,
+        "impact": 6,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b7c7277aa894fd0b",
+        "html": "<b>Ghost Font uses optical illusions to defeat AI OCR and vision models</b> — a practical tool for creators wanting text in images to stay unreadable by AI scrapers.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_d173222f3e599859",
+        "html": "<b>'Count the fingers' no longer reliably detects AI images</b> — the real visual tells have shifted to stranger artifacts that audiences and platforms are still learning to spot.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": true
       }
     ],
     "title": "Wednesday, July 15 — six things creators need to know",
-    "date": "2026-07-15T16:52:36.500Z",
+    "date": "2026-07-15T17:45:24.439Z",
     "edition": "am"
   },
   "tooldrop": {
-    "name": "Goose Ads Remixer",
-    "blurb": "Remix existing ad creatives into fresh variations using AI — built for marketers and content creators who need fast, on-brand ad iterations without starting from scratch.",
-    "meta": "image · video — free tier",
-    "url": "https://www.producthunt.com/products/gooseworks",
-    "date": "2026-07-15T13:46:23.957Z"
+    "name": "Review by Eddie AI",
+    "blurb": "AI-powered video review tool that lets editors and clients leave time-stamped feedback directly on footage — cuts the back-and-forth for video creators.",
+    "meta": "video — free tier",
+    "url": "https://www.producthunt.com/products/eddie-your-ai-video-editor",
+    "date": "2026-07-15T17:45:31.573Z"
   },
   "stories": [
     {
-      "id": "s_3e68f8ee554f3c0b",
-      "cat": "tools",
+      "id": "s_d173222f3e599859",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
+      "dek": "For two years, 'count the fingers' was the internet's favorite AI detector. That test is now mostly useless, and the real tells are stranger and more unsettling than an extra thumb.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15.html",
+      "ts": "2026-07-15T17:45:15.948Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_fe6ab2efc212fece",
+      "cat": "industry",
       "badge": "breaking",
       "spotlight": false,
       "quality": 7,
       "tier": "journalism",
-      "title": "GPT-5.6 Sol deleting user files without consent, widespread reports",
-      "dek": "Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.",
+      "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
+      "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
       "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
-      "ts": "2026-07-14T21:50:11.000Z",
+      "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+      "ts": "2026-07-15T15:29:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
+      "heat": 107,
       "move": -1,
       "top": true
+    },
+    {
+      "id": "s_264ddc681c98a9a5",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Hack reveals Suno scraped YouTube, Deezer, and podcasts for AI training",
+      "dek": "A supply chain attack exposed source code showing the AI music generator harvested audio from multiple platforms. Record labels argue this violates the DMCA despite Suno's fair-use defense.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/",
+      "ts": "2026-07-15T17:00:34.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 112,
+      "move": 48
+    },
+    {
+      "id": "s_8ed791a2a8b1f044",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Microsoft patches record 570 vulnerabilities using AI-assisted discovery",
+      "dek": "Microsoft's monthly Patch Tuesday resolved a record number of security flaws, with at least two zero-day exploits, using AI to help identify code vulnerabilities.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/",
+      "ts": "2026-07-15T16:20:18.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": -1
+    },
+    {
+      "id": "s_18de27eea197aabe",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Hugging Face releases Real World VoiceEQ benchmark for voice AI quality",
+      "dek": "New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/openais-first-branded-hardware-is-a-light-up-keyboard/",
+      "ts": "2026-07-15T16:00:33.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 73,
+      "move": -2
+    },
+    {
+      "id": "s_84777b05d9b25937",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "OpenAI launches Codex Micro, a programmable keyboard for AI coding",
+      "dek": "Collaboration with Work Louder, the Codex Micro light-up button block monitors multiple AI coding threads, separate from OpenAI's rumored smart speaker project.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965901/openai-hardware-codex-micro-launch",
+      "ts": "2026-07-15T16:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 73,
+      "move": -2
+    },
+    {
+      "id": "s_c0ac8f261d4797a3",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": true,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Concept artist Daniel Porto accelerates 20 years of vision with AI",
+      "dek": "Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/entertainment/gaming/denshattack-review-an-eccentric-off-the-rails-ride-through-90s-arcade-chaos",
+      "ts": "2026-07-15T15:00:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 92,
+      "move": -1
+    },
+    {
+      "id": "s_9db836b16b6b8943",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Google Images homepage redesign features AI-generated and curated content",
+      "dek": "Google Images overhauls its 25-year-old interface with a Pinterest-style gallery, integrating AI imagery alongside real photos for personalized discovery.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/15/godoxs-new-inflatable-4x4-full-color-light-sets-up-in-a-minute/",
+      "ts": "2026-07-15T14:10:40.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 71,
+      "move": -2
+    },
+    {
+      "id": "s_83d5a15310e3a6b6",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Anthropic launches $1.5B AI implementation venture with Blackstone",
+      "dek": "Ode pairs AI engineers with enterprise customers, betting that hands-on deployment—not just models—is the next trillion-dollar opportunity in AI adoption.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
+      "ts": "2026-07-15T13:10:47.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 70,
+      "move": -1
+    },
+    {
+      "id": "s_b4c19111324a67ee",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Reelful automates short-form video creation from camera roll photos",
+      "dek": "New iOS app uses AI to turn photos and clips into polished TikTok and Instagram Reels, targeting users who find traditional editing tools too complex.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/reelfuls-ai-turns-your-camera-roll-into-short-form-videos-for-social-media/",
+      "ts": "2026-07-15T13:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 80,
+      "move": -1
+    },
+    {
+      "id": "s_110aa69c02571475",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Rime raises $24M Series A for enterprise voice AI customer support",
+      "dek": "Voice AI startup handling over 100 million calls monthly uses proprietary conversational training data to reduce customer customization burden for enterprises.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/rime-picks-up-24m-series-a-to-help-enterprises-field-customer-calls/",
+      "ts": "2026-07-15T13:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 70,
+      "move": -1
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -96,8 +271,8 @@
       "ts": "2026-07-15T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": 55
+      "heat": 87,
+      "move": -1
     },
     {
       "id": "s_569d5689452ac2df",
@@ -113,8 +288,8 @@
       "ts": "2026-07-15T11:09:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 54
+      "heat": 86,
+      "move": -1
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -130,8 +305,25 @@
       "ts": "2026-07-15T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": 40
+      "heat": 68,
+      "move": -2
+    },
+    {
+      "id": "s_ee230258f27f8a0d",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "OpenAI releases GPT-Red, automated red-teaming system for AI safety",
+      "dek": "Self-play framework designed to stress-test AI robustness and resistance to prompt injection. Advances in safety methodology relevant to all generative systems.",
+      "src": "OpenAI News",
+      "url": "https://openai.com/index/unlocking-self-improvement-gpt-red",
+      "ts": "2026-07-15T10:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 77,
+      "move": 29
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -147,8 +339,8 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -3
+      "heat": 82,
+      "move": -1
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -164,7 +356,7 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
+      "heat": 73,
       "move": -2
     },
     {
@@ -181,8 +373,25 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
-      "move": -5
+      "heat": 63,
+      "move": -2
+    },
+    {
+      "id": "s_3e68f8ee554f3c0b",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "GPT-5.6 Sol deleting user files without consent, widespread reports",
+      "dek": "Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
+      "ts": "2026-07-14T21:50:11.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 89,
+      "move": -1
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -198,8 +407,8 @@
       "ts": "2026-07-14T19:42:27.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -6
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -215,8 +424,8 @@
       "ts": "2026-07-14T19:25:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": -2
+      "heat": 87,
+      "move": -1
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -232,8 +441,8 @@
       "ts": "2026-07-14T18:33:31.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": -4
+      "heat": 79,
+      "move": -1
     },
     {
       "id": "s_986155e62b49ff74",
@@ -249,8 +458,8 @@
       "ts": "2026-07-14T17:45:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 65,
-      "move": -9
+      "heat": 60,
+      "move": -2
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -266,8 +475,8 @@
       "ts": "2026-07-14T17:18:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": -4
+      "heat": 78,
+      "move": -1
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -283,8 +492,8 @@
       "ts": "2026-07-14T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 65,
-      "move": -9
+      "heat": 60,
+      "move": -2
     },
     {
       "id": "s_23767f964a637e72",
@@ -300,8 +509,8 @@
       "ts": "2026-07-14T16:28:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 64,
-      "move": -7
+      "heat": 60,
+      "move": -2
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -317,8 +526,8 @@
       "ts": "2026-07-14T16:22:15.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": -3
+      "heat": 68,
+      "move": -2
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -334,8 +543,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": -3
+      "heat": 68,
+      "move": -2
     },
     {
       "id": "s_ec43065966072242",
@@ -351,8 +560,8 @@
       "ts": "2026-07-14T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -7
+      "heat": 60,
+      "move": -2
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -368,48 +577,14 @@
       "ts": "2026-07-14T15:47:36.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
-      "move": -4
-    },
-    {
-      "id": "s_a4b29ff806d7c08f",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "New York becomes first state to halt large data center approvals",
-      "dek": "Governor Hochul signed an executive order temporarily blocking permits for 50+ megawatt data centers, citing electricity, water, and public control concerns amid AI infrastructure boom.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/",
-      "ts": "2026-07-14T15:17:59.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 81,
-      "move": -3
-    },
-    {
-      "id": "s_1ce55dc5e2a4e771",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "New York data center moratorium may set template for anti-AI movement",
-      "dek": "One-year ban on large data center construction could signal broader regulatory backlash against AI infrastructure's resource demands.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/tech-policy/2026/07/new-york-is-the-first-state-to-impose-a-data-center-moratorium/",
-      "ts": "2026-07-14T15:06:28.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 81,
-      "move": -3
+      "heat": 50,
+      "move": -2
     }
   ],
   "stats": {
-    "scanned_last_run": 17,
-    "published_today": 27,
+    "scanned_last_run": 6,
+    "published_today": 22,
     "sources_live": 14,
-    "slopped_last_run": 14
+    "slopped_last_run": 4
   }
 }

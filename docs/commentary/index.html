@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dailyblip — commentary</title>
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13); --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79; --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:680px;margin:0 auto;padding:36px 24px 90px}
+.back{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:26px}
+.back a{color:var(--faint)} .back a:hover{color:var(--amber)}
+.commentary-tag{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--aqua);
+  border:1px solid rgba(99,216,198,.4);border-radius:20px;padding:5px 14px;margin-bottom:20px;
+}
+.commentary-tag::before{content:"◆"}
+h1{font-family:var(--display);font-weight:750;font-size:clamp(30px,5.5vw,42px);letter-spacing:-.02em;line-height:1.12;margin-bottom:18px}
+.lede{color:var(--dim);font-size:18px;line-height:1.55;margin-bottom:26px}
+.byline-row{
+  display:flex;align-items:center;padding:16px 0;margin-bottom:34px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  font-family:var(--mono);font-size:12.5px;color:var(--faint);
+}
+.byline-row b{color:var(--dim);font-weight:500;margin-right:10px}
+.byline-row span{margin-right:10px}
+article p{color:var(--dim);margin-bottom:20px;font-size:16px}
+article h2{font-family:var(--display);font-weight:650;font-size:23px;letter-spacing:-.01em;color:var(--text);margin:38px 0 14px}
+.pull-quote{border-left:3px solid var(--amber);padding:4px 0 4px 20px;margin:30px 0;font-family:var(--display);font-weight:600;font-size:20px;line-height:1.4;color:var(--text)}
+.chart-wrap{margin:28px 0}
+.chart-source{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:8px}
+.chart-source a{color:var(--faint)}
+.img-block{margin:28px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.img-block img{display:block;width:100%;height:auto}
+.sign-off{
+  display:flex;align-items:center;gap:10px;margin-top:44px;
+  font-family:var(--display);font-weight:650;font-size:15px;color:var(--dim);
+}
+.pulse-blip{width:9px;height:9px;border-radius:50%;background:var(--amber);position:relative;flex:0 0 auto}
+.pulse-blip::after{
+  content:"";position:absolute;inset:0;border-radius:50%;background:var(--amber);
+  animation:blipPulse 2s ease-out infinite;
+}
+@keyframes blipPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.8);opacity:0}}
+.foot-note{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint);line-height:1.6}
+.foot-note a{color:var(--faint)} .foot-note a:hover{color:var(--amber)}
+
+.item{padding:12px 0;border-top:1px solid var(--line)}</style></head><body>
+<div class="wrap">
+  <div class="back"><a href="../">← dailyblip</a></div>
+  <h1>Commentary</h1>
+  <p class="lede">Opinion and analysis from the dailyblip editorial team, separate from our news coverage.</p>
+  <div class="item"><a href="the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15.html">The Hands Problem Is Basically Solved. So What's Left to Distrust?</a> <span style="color:#9AB7B2">July 15, 2026</span></div>
+</div>
+</body></html>

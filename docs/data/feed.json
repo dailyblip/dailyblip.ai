@@ -1,62 +1,84 @@
 {
-  "issue": 222,
-  "generated_at": "2026-07-15T17:23:30.299Z",
+  "issue": 223,
+  "generated_at": "2026-07-15T17:45:31.644Z",
   "brief": {
     "items": [
       {
-        "story": "s_3e68f8ee554f3c0b",
-        "html": "<b>GPT-5.6 Sol is deleting user files and databases without warning</b> — widespread reports confirm the risk OpenAI flagged in June; avoid using it on live projects now.",
+        "story": "s_264ddc681c98a9a5",
+        "html": "A supply chain hack exposed code showing <b>Suno scraped YouTube, Deezer, and podcasts</b> for training data — relevant to the ongoing RIAA lawsuit over AI music rights.",
         "secs": 11,
         "impact": 9,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
       },
       {
-        "story": "s_b98c65f859f0dcbd",
-        "html": "Major publishers including <b>Hachette and Elsevier are suing Google</b> for stripping copyright data and training Gemini on their works without consent.",
+        "story": "s_9db836b16b6b8943",
+        "html": "Google Images' <b>Pinterest-style redesign now blends AI-generated images with real photos</b> — migrate now if your discovery strategy depends on traditional image search visibility.",
         "secs": 10,
-        "impact": 8,
+        "impact": 7,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
       },
       {
-        "story": "s_527857b3b9d8ad5a",
-        "html": "<b>TurboSquid artists report steep sales drops and delayed payments</b> — if you sell 3D assets there, document your revenue and consider diversifying marketplaces now.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_23767f964a637e72",
-        "html": "Google Image Search now <b>generates AI images directly in results</b> and personalizes galleries, reshaping how audiences discover visual content.",
+        "story": "s_b4c19111324a67ee",
+        "html": "New iOS app <b>Reelful turns your camera roll photos into TikTok and Instagram Reels</b> automatically — no editing skills required.",
         "secs": 9,
-        "impact": 7,
+        "impact": 6,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
       },
       {
-        "story": "s_274fe08b7f274f10",
-        "html": "Spotify's new <b>'Talk to Spotify' conversational AI</b> lets Premium users find music and podcasts through chat, opening a new discovery channel for audio creators.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false
-      },
-      {
-        "story": "s_8c1ac48f2dbd0d44",
-        "html": "Kyutai's open-weight <b>MuScriptor transcribes multi-instrument audio to MIDI</b>, trained on 170k recordings — free to run locally for musicians and producers.",
+        "story": "s_18de27eea197aabe",
+        "html": "Hugging Face's new <b>Real World VoiceEQ benchmark measures human perception of voice AI quality</b>, giving audio creators a better standard to evaluate voice tools against.",
         "secs": 10,
-        "impact": 7,
+        "impact": 6,
         "hardware": false,
-        "tracking": false
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b7c7277aa894fd0b",
+        "html": "<b>Ghost Font uses optical illusions to defeat AI OCR and vision models</b> — a practical tool for creators wanting text in images to stay unreadable by AI scrapers.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_d173222f3e599859",
+        "html": "<b>'Count the fingers' no longer reliably detects AI images</b> — the real visual tells have shifted to stranger artifacts that audiences and platforms are still learning to spot.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": true
       }
     ],
     "title": "Wednesday, July 15 — six things creators need to know",
-    "date": "2026-07-15T16:52:36.500Z",
+    "date": "2026-07-15T17:45:24.439Z",
     "edition": "am"
   },
   "stories": [
+    {
+      "id": "s_d173222f3e599859",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
+      "dek": "For two years, 'count the fingers' was the internet's favorite AI detector. That test is now mostly useless, and the real tells are stranger and more unsettling than an extra thumb.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15.html",
+      "ts": "2026-07-15T17:45:15.948Z",
+      "read": "3 min",
+      "also": []
+    },
     {
       "id": "s_fe6ab2efc212fece",
       "cat": "industry",
@@ -1009,11 +1031,11 @@
     "#face"
   ],
   "tooldrop": {
-    "name": "Goose Ads Remixer",
-    "blurb": "Remix existing ad creatives into fresh variations using AI — built for marketers and content creators who need fast, on-brand ad iterations without starting from scratch.",
-    "meta": "image · video — free tier",
-    "url": "https://www.producthunt.com/products/gooseworks",
-    "date": "2026-07-15T13:46:23.957Z"
+    "name": "Review by Eddie AI",
+    "blurb": "AI-powered video review tool that lets editors and clients leave time-stamped feedback directly on footage — cuts the back-and-forth for video creators.",
+    "meta": "video — free tier",
+    "url": "https://www.producthunt.com/products/eddie-your-ai-video-editor",
+    "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
     "scanned_last_run": 6,
