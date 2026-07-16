@@ -1,6 +1,6 @@
 {
   "issue": 227,
-  "generated_at": "2026-07-15T21:39:56.168Z",
+  "generated_at": "2026-07-16T00:09:02.258Z",
   "brief": {
     "items": [
       {
@@ -55,22 +55,6 @@
   },
   "stories": [
     {
-      "id": "s_230cdabf888d5a7c",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "The Best AI Artists Aren't Prompting. They're Directing.",
-      "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html",
-      "ts": "2026-07-15T21:11:15.982Z",
-      "read": "3 min",
-      "also": []
-    },
-    {
       "id": "s_976a1a3eff5f1d7b",
       "cat": "tools",
       "badge": "breaking",
@@ -84,9 +68,78 @@
       "ts": "2026-07-15T18:04:06.000Z",
       "read": "4 min",
       "also": [],
-      "top": true,
-      "heat": 116,
-      "move": 56
+      "heat": 113,
+      "move": 0,
+      "top": true
+    },
+    {
+      "id": "s_cce1dcce4c530f32",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Microsoft trains salespeople to position in-house AI models against OpenAI and Anthropic",
+      "dek": "Microsoft executives outlined a strategy for the sales team to highlight efficiency and cost advantages of its own AI models in competitive pitches against rivals, marking a shift in the company's go-to-market approach.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/",
+      "ts": "2026-07-15T23:59:44.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 49
+    },
+    {
+      "id": "s_89c9f7f3ade42756",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Most enterprise 'AI agents' remain chatbot wrappers despite orchestration ambitions",
+      "dek": "Survey of 101 enterprises shows agent deployments are consolidating on model-provider platforms like Claude, but in practice most deployed systems are still basic conversational interfaces lacking true multi-step control.",
+      "src": "VentureBeat AI",
+      "url": "https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents",
+      "ts": "2026-07-15T22:24:17.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 72,
+      "move": 26
+    },
+    {
+      "id": "s_36b2bbf599ed87e0",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "xAI sues user for allegedly using Grok to generate child sexual abuse material",
+      "dek": "The Elon Musk-owned xAI filed a lawsuit against a South Carolina man accused of bypassing safeguards to generate and distribute CSAM using the Grok chatbot, testing legal liability for AI platform operators.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam",
+      "ts": "2026-07-15T21:33:20.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 99,
+      "move": 54
+    },
+    {
+      "id": "s_230cdabf888d5a7c",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Best AI Artists Aren't Prompting. They're Directing.",
+      "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html",
+      "ts": "2026-07-15T21:11:15.982Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 51
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -102,8 +155,8 @@
       "ts": "2026-07-15T20:16:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": 39
+      "heat": 80,
+      "move": -3
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -119,8 +172,8 @@
       "ts": "2026-07-15T20:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 48
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -136,8 +189,8 @@
       "ts": "2026-07-15T19:41:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 101,
-      "move": 51
+      "heat": 98,
+      "move": -1
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -154,8 +207,8 @@
       "ts": "2026-07-15T18:01:46.915Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 50
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -171,8 +224,8 @@
       "ts": "2026-07-15T17:48:01.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 109,
-      "move": -1
+      "heat": 106,
+      "move": 0
     },
     {
       "id": "s_d173222f3e599859",
@@ -189,8 +242,8 @@
       "ts": "2026-07-15T17:45:15.948Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": -4
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -206,8 +259,8 @@
       "ts": "2026-07-15T17:29:41.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 81,
-      "move": -5
+      "heat": 77,
+      "move": -10
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -223,8 +276,8 @@
       "ts": "2026-07-15T17:27:01.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 81,
-      "move": -5
+      "heat": 77,
+      "move": -10
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -240,8 +293,8 @@
       "ts": "2026-07-15T17:00:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 108,
-      "move": -1
+      "heat": 105,
+      "move": 0
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -257,8 +310,8 @@
       "ts": "2026-07-15T16:20:18.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
-      "move": -3
+      "heat": 84,
+      "move": -7
     },
     {
       "id": "s_18de27eea197aabe",
@@ -274,8 +327,8 @@
       "ts": "2026-07-15T16:00:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -8
+      "heat": 66,
+      "move": -11
     },
     {
       "id": "s_84777b05d9b25937",
@@ -291,8 +344,8 @@
       "ts": "2026-07-15T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 69,
-      "move": -8
+      "heat": 66,
+      "move": -11
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -308,8 +361,8 @@
       "ts": "2026-07-15T15:29:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 104,
-      "move": -1
+      "heat": 100,
+      "move": 0
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -325,8 +378,8 @@
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 88,
-      "move": -5
+      "heat": 85,
+      "move": -2
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -342,8 +395,8 @@
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 68,
-      "move": 23
+      "heat": 65,
+      "move": -11
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -359,8 +412,8 @@
       "ts": "2026-07-15T13:10:47.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 67,
-      "move": -13
+      "heat": 63,
+      "move": -4
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -376,8 +429,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 76,
-      "move": -13
+      "heat": 73,
+      "move": -3
     },
     {
       "id": "s_110aa69c02571475",
@@ -393,8 +446,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 66,
-      "move": -13
+      "heat": 63,
+      "move": -4
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -410,8 +463,8 @@
       "ts": "2026-07-15T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": -7
+      "heat": 80,
+      "move": -3
     },
     {
       "id": "s_569d5689452ac2df",
@@ -427,8 +480,8 @@
       "ts": "2026-07-15T11:09:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -6
+      "heat": 79,
+      "move": -3
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -444,8 +497,8 @@
       "ts": "2026-07-15T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 64,
-      "move": -8
+      "heat": 61,
+      "move": -4
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -461,8 +514,8 @@
       "ts": "2026-07-15T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -5
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -478,8 +531,8 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -5
+      "heat": 75,
+      "move": -10
     },
     {
       "id": "s_210f6726bf4a719a",
@@ -495,8 +548,8 @@
       "ts": "2026-07-15T00:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": 29
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -512,8 +565,8 @@
       "ts": "2026-07-14T22:22:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -4
+      "heat": 68,
+      "move": -5
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -529,8 +582,8 @@
       "ts": "2026-07-14T22:07:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 59,
-      "move": -14
+      "heat": 58,
+      "move": -4
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -546,8 +599,8 @@
       "ts": "2026-07-14T21:50:11.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": -4
+      "heat": 85,
+      "move": -2
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -564,7 +617,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -8
+      "move": -1
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -581,7 +634,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -3
+      "move": -2
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -598,7 +651,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_986155e62b49ff74",
@@ -615,7 +668,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -632,7 +685,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -649,7 +702,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_23767f964a637e72",
@@ -666,7 +719,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_5ddf162e15a96c46",
@@ -683,7 +736,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_e3be2bdde12627e6",
@@ -700,7 +753,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_ec43065966072242",
@@ -717,7 +770,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_274fe08b7f274f10",
@@ -734,7 +787,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_a4b29ff806d7c08f",
@@ -751,7 +804,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_1ce55dc5e2a4e771",
@@ -768,7 +821,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_97c9eefb08315a4b",
@@ -785,7 +838,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_07270bd7745b992c",
@@ -802,7 +855,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_d03c89151d098f57",
@@ -819,7 +872,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_8ad960bf1ba388e8",
@@ -836,7 +889,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_a0f97bb99d39b8a3",
@@ -853,7 +906,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_e74d29ba97202e0c",
@@ -870,7 +923,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_b4553fdd41168ce5",
@@ -904,7 +957,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_6358ddebecad3055",
@@ -921,7 +974,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_d4b36e47cd240b18",
@@ -938,7 +991,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_d8c4f12b71f9e00d",
@@ -955,7 +1008,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_0b9a256573f21194",
@@ -972,7 +1025,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_5bbc3a5ef63f4579",
@@ -989,7 +1042,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_29c38c6158cba3ce",
@@ -1022,69 +1075,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
-    },
-    {
-      "id": "s_a4ad473125ca0f67",
-      "cat": "rights",
-      "badge": "breaking",
-      "spotlight": false,
-      "title": "Apple sues OpenAI for trade secret theft by former employees",
-      "dek": "Apple alleges OpenAI's senior leadership, including hardware chief Tang Tan, directed a pattern of theft involving confidential project codes, Apple hardware in interviews, and details about unreleased products.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/10/apple-sues-openai-over-alleged-trade-secret-theft/",
-      "ts": "2026-07-10T21:00:29.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 65,
-      "move": -6
-    },
-    {
-      "id": "s_8c1ac48f2dbd0d44",
-      "cat": "music",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Kyutai releases MuScriptor: open-weight music-to-MIDI transcription model",
-      "dek": "Decoder-only transformer trained on 170k recordings plus 1.45M synthetic MIDI, transcribes multi-instrument mixes. Open weight; actionable for musicians.",
-      "src": "MarkTechPost",
-      "url": "https://www.marktechpost.com/2026/07/10/kyutai-releases-muscriptor-an-open-weight-decoder-only-transformer-for-multi-instrument-music-transcription-to-midi/",
-      "ts": "2026-07-10T20:21:08.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 78,
-      "move": -4
-    },
-    {
-      "id": "s_1d85656f77c8e03e",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "title": "Hugging Face CEO: companies switching from paid APIs to open-source AI models",
-      "dek": "As costs scale, enterprises are moving away from proprietary APIs toward open-source alternatives, raising concerns about centralized control by a handful of labs.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/podcast/open-source-ai-matters-more-than-ever-according-to-hugging-faces-clem-delangue/",
-      "ts": "2026-07-10T19:00:00.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 58,
-      "move": -7
-    },
-    {
-      "id": "s_e50b15150fd00f1e",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "title": "Krea 2 integration added to Diffusion Desk local UI",
-      "dek": "Developer integrates Krea 2 into Diffusion Desk, a Forge-like local image generation interface built with C++ instead of Python.",
-      "src": "r/StableDiffusion",
-      "url": "https://www.reddit.com/r/StableDiffusion/comments/1ustokp/comfy_native_seedvr2_workflow/",
-      "ts": "2026-07-10T17:08:19.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -7
+      "move": 0
     }
   ],
   "models": [
@@ -1152,11 +1143,11 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 28
+      "c": 27
     },
     {
       "n": "The Verge AI",
-      "c": 11
+      "c": 12
     },
     {
       "n": "Creative Bloq AI",
@@ -1167,15 +1158,15 @@
       "c": 4
     },
     {
+      "n": "dailyblip",
+      "c": 3
+    },
+    {
       "n": "Hugging Face Blog",
       "c": 3
     },
     {
       "n": "80 Level",
-      "c": 2
-    },
-    {
-      "n": "dailyblip",
       "c": 2
     },
     {
@@ -1186,12 +1177,12 @@
   "topics": [
     "#openai",
     "#apple",
-    "#google",
-    "#hugging",
-    "#face",
     "#anthropic",
+    "#google",
     "#meta",
-    "#york"
+    "#york",
+    "#thinking",
+    "#machines"
   ],
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -1201,9 +1192,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 11,
+    "scanned_last_run": 6,
     "published_today": 28,
     "sources_live": 14,
-    "slopped_last_run": 5
+    "slopped_last_run": 3
   }
 }

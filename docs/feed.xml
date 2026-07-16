@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Jul 2026 20:40:24 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 00:09:02 GMT</lastBuildDate>
     <item>
       <title>Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model</title>
       <link>https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/</link>
@@ -13,6 +13,38 @@
       <description>Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.</description>
       <category>tools</category>
       <pubDate>Wed, 15 Jul 2026 18:04:06 GMT</pubDate>
+    </item>
+    <item>
+      <title>Microsoft trains salespeople to position in-house AI models against OpenAI and Anthropic</title>
+      <link>https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/</link>
+      <guid isPermaLink="false">s_cce1dcce4c530f32</guid>
+      <description>Microsoft executives outlined a strategy for the sales team to highlight efficiency and cost advantages of its own AI models in competitive pitches against rivals, marking a shift in the company's go-to-market approach.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 23:59:44 GMT</pubDate>
+    </item>
+    <item>
+      <title>Most enterprise 'AI agents' remain chatbot wrappers despite orchestration ambitions</title>
+      <link>https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents</link>
+      <guid isPermaLink="false">s_89c9f7f3ade42756</guid>
+      <description>Survey of 101 enterprises shows agent deployments are consolidating on model-provider platforms like Claude, but in practice most deployed systems are still basic conversational interfaces lacking true multi-step control.</description>
+      <category>industry</category>
+      <pubDate>Wed, 15 Jul 2026 22:24:17 GMT</pubDate>
+    </item>
+    <item>
+      <title>xAI sues user for allegedly using Grok to generate child sexual abuse material</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam</link>
+      <guid isPermaLink="false">s_36b2bbf599ed87e0</guid>
+      <description>The Elon Musk-owned xAI filed a lawsuit against a South Carolina man accused of bypassing safeguards to generate and distribute CSAM using the Grok chatbot, testing legal liability for AI platform operators.</description>
+      <category>rights</category>
+      <pubDate>Wed, 15 Jul 2026 21:33:20 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Best AI Artists Aren't Prompting. They're Directing.</title>
+      <link>https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html</link>
+      <guid isPermaLink="false">s_230cdabf888d5a7c</guid>
+      <description>Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.</description>
+      <category>writing</category>
+      <pubDate>Wed, 15 Jul 2026 21:11:15 GMT</pubDate>
     </item>
     <item>
       <title>Houdini 22 adds native Gaussian Splatting support and redesigned UI</title>
@@ -133,38 +165,6 @@
       <description>Ode, a joint venture backed by Anthropic and major financial firms, acquired Fractional AI to place specialized engineers inside enterprise organizations, betting AI services will replace traditional consulting.</description>
       <category>industry</category>
       <pubDate>Wed, 15 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Anthropic launches $1.5B AI implementation venture with Blackstone</title>
-      <link>https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/</link>
-      <guid isPermaLink="false">s_83d5a15310e3a6b6</guid>
-      <description>Ode pairs AI engineers with enterprise customers, betting that hands-on deployment—not just models—is the next trillion-dollar opportunity in AI adoption.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 13:10:47 GMT</pubDate>
-    </item>
-    <item>
-      <title>Reelful automates short-form video creation from camera roll photos</title>
-      <link>https://techcrunch.com/2026/07/15/reelfuls-ai-turns-your-camera-roll-into-short-form-videos-for-social-media/</link>
-      <guid isPermaLink="false">s_b4c19111324a67ee</guid>
-      <description>New iOS app uses AI to turn photos and clips into polished TikTok and Instagram Reels, targeting users who find traditional editing tools too complex.</description>
-      <category>video</category>
-      <pubDate>Wed, 15 Jul 2026 13:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Rime raises $24M Series A for enterprise voice AI customer support</title>
-      <link>https://techcrunch.com/2026/07/15/rime-picks-up-24m-series-a-to-help-enterprises-field-customer-calls/</link>
-      <guid isPermaLink="false">s_110aa69c02571475</guid>
-      <description>Voice AI startup handling over 100 million calls monthly uses proprietary conversational training data to reduce customer customization burden for enterprises.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 13:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Vint Cerf working on standards to identify AI agents on the open internet</title>
-      <link>https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/</link>
-      <guid isPermaLink="false">s_a7a2286fcda29082</guid>
-      <description>The TCP/IP architect is advising Innovation Labs on creating an open architecture for AI agents to identify themselves using domain-name infrastructure.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 12:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
