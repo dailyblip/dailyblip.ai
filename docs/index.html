@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -135,6 +134,46 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
 .spot-card p{color:var(--dim);font-size:13px;line-height:1.5}
 .spot-card .foot{margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--faint)}
 .story .spot-flag{color:var(--aqua);font-size:10.5px;letter-spacing:.08em}
+
+/* ---------- tool drop (premium, full-width — the sponsorship slot) ---------- */
+.tooldrop-feature{margin-top:30px}
+.td-eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:12px;
+}
+.td-eyebrow::before{content:"⚡"}
+.td-eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(255,180,84,.5),transparent)}
+.td-card{
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+  border:1px solid rgba(255,180,84,.4);border-radius:16px;
+  background:linear-gradient(120deg,rgba(255,180,84,.10),var(--ink-2) 60%);
+  padding:26px 30px;
+  box-shadow:0 0 0 1px rgba(255,180,84,.05), 0 12px 40px -12px rgba(255,180,84,.18);
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.td-card:hover{
+  border-color:rgba(255,180,84,.7);
+  box-shadow:0 0 0 1px rgba(255,180,84,.1), 0 16px 48px -10px rgba(255,180,84,.28);
+}
+.td-card::before{
+  content:"";position:absolute;top:-40%;right:-10%;width:60%;height:180%;
+  background:radial-gradient(circle, rgba(255,180,84,.12), transparent 70%);pointer-events:none;
+}
+.td-main{position:relative;z-index:1;flex:1;min-width:240px}
+.td-name{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--text);margin-bottom:8px}
+.td-blurb{font-size:14.5px;line-height:1.55;color:var(--dim);max-width:520px}
+.td-meta{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-top:10px;letter-spacing:.02em}
+.td-cta{
+  position:relative;z-index:1;flex:0 0 auto;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--amber);color:#20160a;font-weight:700;font-size:14.5px;
+  padding:14px 26px;border-radius:10px;white-space:nowrap;
+  transition:filter .15s ease, transform .15s ease;
+}
+.td-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.td-cta span{transition:transform .15s ease}
+.td-cta:hover span{transform:translateX(3px)}
 
 /* ---------- header ---------- */
 header{
@@ -526,6 +565,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
     <div class="spot-grid" id="spotGrid"></div>
   </section>
 
+  <!-- TOOL DROP — deliberately a full-width, premium-styled placement.
+       This is the site's clearest future sponsorship slot: one tool,
+       one clear call to action, maximum visual weight. -->
+  <section class="tooldrop-feature" id="tooldropFeature" style="display:none" aria-label="Tool of the day">
+    <div class="td-eyebrow">Tool of the day</div>
+    <div class="td-card">
+      <div class="td-main">
+        <div class="td-name" id="tdName"></div>
+        <div class="td-blurb" id="tdBlurb"></div>
+        <div class="td-meta" id="tdMeta"></div>
+      </div>
+      <a href="#" class="td-cta" id="tdCta" target="_blank" rel="noopener">Try it <span>→</span></a>
+    </div>
+  </section>
+
   <div class="cols">
     <!-- FEED -->
     <main>
@@ -551,12 +605,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
       <div class="panel">
         <h4>creative stack radar</h4>
         <div id="modelList"></div>
-      </div>
-      <div class="panel" id="tooldropPanel" style="display:none">
-        <h4>tool drop of the day</h4>
-        <div class="tooldrop-name" id="tdName"></div>
-        <div class="tooldrop-body" id="tdBlurb"></div>
-        <div class="tooldrop-meta" id="tdMeta"></div>
       </div>
       <div class="panel">
         <h4>today's numbers</h4>
@@ -593,7 +641,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   <div class="foot-in">
     <div>dailyblip // the AI brief for people who make things // rescanned every 20 min</div>
     <div class="foot-links">
-      <a href="showcase.html">showcase</a><a href="standards.html">standards</a><a href="features/">commentary</a><a href="archive/">archive</a><a href="feed.xml">rss</a>
+      <a href="showcase.html">showcase</a><a href="standards.html">standards</a><a href="commentary/">commentary</a><a href="archive/">archive</a><a href="feed.xml">rss</a>
     </div>
   </div>
 </footer>
@@ -995,17 +1043,25 @@ function renderForYou(){
   }).join("");
 }
 
+function renderToolDrop(){
+  const td = FEED.tooldrop;
+  if(!td){ $("#tooldropFeature").style.display = "none"; return; }
+  $("#tooldropFeature").style.display = "block";
+  $("#tdName").textContent = td.name;
+  $("#tdBlurb").textContent = td.blurb;
+  $("#tdMeta").textContent = td.meta || "";
+  const cta = $("#tdCta");
+  if(td.url && td.url !== "#"){
+    cta.href = td.url;
+    cta.style.display = "inline-flex";
+  } else {
+    cta.style.display = "none";
+  }
+}
+
 function renderSidebar(){
   $("#modelList").innerHTML = (FEED.models||[]).map(m=>`
     <div class="mrow"><span class="mname">${esc(m.n)}</span><span class="mstate ${m.s}"><i>${m.i}</i>${m.s}</span></div>`).join("");
-
-  const td = FEED.tooldrop;
-  if(td){
-    $("#tooldropPanel").style.display = "block";
-    $("#tdName").textContent = td.name;
-    $("#tdBlurb").textContent = td.blurb;
-    $("#tdMeta").innerHTML = esc(td.meta) + (td.url && td.url!=="#" ? ` · <a href="${esc(td.url)}" target="_blank" rel="noopener">try it →</a>` : "");
-  }
 
   const st = FEED.stats || {};
   $("#numGrid").innerHTML = `
@@ -1030,7 +1086,7 @@ function renderSidebar(){
 }
 
 function renderAll(){
-  renderHeader(); renderStreak(); renderTicker(); renderCats(); renderBrief(); renderForYou(); renderSpotlight(); renderFeed(); renderSidebar();
+  renderHeader(); renderStreak(); renderTicker(); renderCats(); renderBrief(); renderForYou(); renderSpotlight(); renderToolDrop(); renderFeed(); renderSidebar();
 }
 
 /* ---- events (delegated; bound once) ---- */
