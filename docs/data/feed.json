@@ -1,39 +1,12 @@
 {
-  "issue": 228,
-  "generated_at": "2026-07-16T01:51:00.934Z",
+  "issue": 229,
+  "generated_at": "2026-07-16T01:58:15.370Z",
   "brief": {
     "items": [
       {
-        "story": "s_976a1a3eff5f1d7b",
-        "html": "Mira Murati's Thinking Machines released <b>Inkling, an open 975B-parameter multimodal model</b> trained on 45 trillion tokens across text, image, audio, and video — free to run locally.",
-        "secs": 11,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_264ddc681c98a9a5",
-        "html": "A supply-chain hack exposed code showing <b>Suno scraped YouTube, Deezer, and podcasts</b> without consent — record labels say it violates the DMCA despite Suno's fair-use defense.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_4367c4f1a18b0bbe",
-        "html": "<b>Houdini 22 adds native Gaussian Splat creation and animation</b> — no third-party tools needed anymore for VFX artists and procedural creators working with 3D scene capture.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
         "story": "s_fe6ab2efc212fece",
-        "html": "<b>Apple Intelligence launched in China via Alibaba's Qwen model</b>, bringing iOS/macOS AI writing and image tools to one of the world's largest creative markets.",
-        "secs": 9,
+        "html": "<b>Apple Intelligence is now live in China via Alibaba Qwen</b>, expanding iOS and macOS AI writing and image tools to one of the world's largest creative markets.",
+        "secs": 10,
         "impact": 7,
         "hardware": false,
         "tracking": false,
@@ -41,7 +14,16 @@
       },
       {
         "story": "s_36b2bbf599ed87e0",
-        "html": "xAI sued a user for allegedly bypassing Grok's safeguards to generate CSAM — <b>the first AI-platform lawsuit of its kind</b>, setting a legal liability precedent for all generative tool operators.",
+        "html": "The xAI Grok CSAM lawsuit advanced — <b>xAI is now actively suing a South Carolina user</b>, sharpening legal liability precedent for every generative platform operator.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_99a19263a8c15f19",
+        "html": "OpenAI entered hardware with the <b>$230 Codex keyboard</b>, a Work Louder co-design featuring a reasoning-level dial to manage multiple simultaneous AI coding agents.",
         "secs": 10,
         "impact": 6,
         "hardware": false,
@@ -49,17 +31,35 @@
         "commentary": false
       },
       {
-        "story": "s_230cdabf888d5a7c",
-        "html": "The real skill gap has moved past prompting — <b>the creators pulling ahead are directing AI like a production</b>, not typing better sentences into a box.",
-        "secs": 9,
+        "story": "s_18de27eea197aabe",
+        "html": "Hugging Face released <b>Real World VoiceEQ, a new benchmark measuring human perception of voice AI quality</b> — useful for audio creators evaluating TTS and voice-clone tools.",
+        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": true
+        "commentary": false
+      },
+      {
+        "story": "s_b4c19111324a67ee",
+        "html": "New iOS app Reelful <b>turns your camera roll into polished TikToks and Reels automatically</b> — no editing skills required, aimed at creators who find traditional tools too complex.",
+        "secs": 9,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_569d5689452ac2df",
+        "html": "George Lucas said <b>there is nothing you can do about AI in filmmaking</b>, comparing its disruption to the shift from horses to automobiles — a signal of how far industry acceptance has moved.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
       }
     ],
     "title": "Wednesday, July 15 — six things that changed today",
-    "date": "2026-07-16T01:51:00.882Z",
+    "date": "2026-07-16T01:58:15.303Z",
     "edition": "pm"
   },
   "stories": [
