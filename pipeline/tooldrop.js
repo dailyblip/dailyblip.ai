@@ -22,6 +22,50 @@ Write, in the site's voice (concrete, no hype words like "revolutionary"):
 Return JSON: {"pick_index": n, "name":"...", "blurb":"...", "meta":"...", "url":"..."}. If NO candidate passes the rubric, return {"pick_index": -1}. JSON only.`;
 
 const WAITLIST_RE = /join the waitlist|request access|coming soon|be the first to know|notify me/i;
+const AGGREGATOR_RE = /(^|\.)(producthunt\.com|news\.ycombinator\.com|betalist\.com|alternativeto\.net)$/i;
+
+function isRealUrl(u) {
+  if (!u || typeof u !== "string") return false;
+  try {
+    const parsed = new URL(u);
+    return parsed.protocol === "http:" || parsed.protocol === "https:";
+  } catch {
+    return false; // catches "", "#", relative paths, garbage
+  }
+}
+
+// If a candidate URL is an aggregator listing (Product Hunt etc.), try to
+// resolve the tool's own website from the listing page so the "Try it now"
+// button sends readers to the actual product.
+async function resolveAggregator(url) {
+  try {
+    const host = new URL(url).hostname;
+    if (!AGGREGATOR_RE.test(host)) return url;
+    const res = await fetch(url, {
+      redirect: "follow",
+      signal: AbortSignal.timeout(10000),
+      headers: { "user-agent": "Mozilla/5.0 (dailyblip verification bot)" },
+    });
+    if (!res.ok) return url;
+    const html = (await res.text()).slice(0, 200000);
+    // Product Hunt marks the outbound "Visit website" link with /r/ redirect
+    // paths; generic fallback looks for a rel="nofollow" external link.
+    const m =
+      html.match(/href="(https:\/\/www\.producthunt\.com\/r\/[^"]+)"/i) ||
+      html.match(/"websiteUrl"\s*:\s*"(https?:\/\/[^"]+)"/i);
+    if (!m) return url;
+    // Follow the redirect to land on the tool's real domain.
+    const follow = await fetch(m[1].replace(/\\u002F/g, "/"), {
+      redirect: "follow",
+      signal: AbortSignal.timeout(10000),
+      headers: { "user-agent": "Mozilla/5.0 (dailyblip verification bot)" },
+    });
+    if (follow.ok && !AGGREGATOR_RE.test(new URL(follow.url).hostname)) return follow.url;
+    return url;
+  } catch {
+    return url; // resolution is best-effort; the listing link still works
+  }
+}
 
 async function gatherCandidates() {
   const { tool_feeds } = loadSources();
@@ -68,11 +112,18 @@ async function verifyUsable(url) {
 
 async function main() {
   const feed = loadFeed();
-  // Respect a manual pin from the admin UI — leave it alone.
-  if (feed.tooldrop?.pinned) return console.log("tooldrop: manual pin present; keeping it.");
+  // Respect a manual pin from the admin UI — but only if it's actually renderable.
+  // A pin without a real URL hides the CTA button on the site indefinitely, so
+  // treat it as broken: warn loudly and fall through to the automatic pick.
+  if (feed.tooldrop?.pinned) {
+    if (isRealUrl(feed.tooldrop.url)) return console.log("tooldrop: manual pin present; keeping it.");
+    console.warn(`tooldrop: pinned entry "${feed.tooldrop.name}" has no usable url — ignoring pin and picking automatically.`);
+  }
 
   const featured = loadFeatured();
-  const featuredKeys = new Set(featured.map((f) => (f.name || "").toLowerCase()));
+  const featuredKeys = new Set(
+    featured.flatMap((f) => [f.name, f.source_title].filter(Boolean).map((n) => n.toLowerCase()))
+  );
 
   let candidates = (await gatherCandidates())
     .filter((c) => c.name && c.url)
@@ -95,16 +146,26 @@ async function main() {
     const picked = candidates[result.pick_index];
     if (!picked) return console.log("tooldrop: invalid pick index; keeping current drop.");
 
-    if (await verifyUsable(picked.url)) {
+    // Swap aggregator listings (Product Hunt etc.) for the tool's own site,
+    // then verify whatever URL we'd actually publish.
+    const finalUrl = await resolveAggregator(picked.url);
+    if (isRealUrl(finalUrl) && (await verifyUsable(finalUrl))) {
       feed.tooldrop = {
         name: result.name || picked.name,
         blurb: result.blurb,
         meta: result.meta,
-        url: picked.url, // trust the verified candidate URL, not the model
+        url: finalUrl, // trust the verified URL, not the model
         date: new Date().toISOString(),
       };
       saveFeed(feed);
-      featured.push({ name: feed.tooldrop.name, url: picked.url, date: feed.tooldrop.date });
+      // Store both the display name and the raw candidate title so future
+      // dedupe (which compares against raw RSS titles) actually matches.
+      featured.push({
+        name: feed.tooldrop.name,
+        source_title: picked.name,
+        url: finalUrl,
+        date: feed.tooldrop.date,
+      });
       saveFeatured(featured);
       return console.log(`tooldrop: featured "${feed.tooldrop.name}".`);
     }
