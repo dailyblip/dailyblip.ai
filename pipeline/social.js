@@ -253,7 +253,10 @@ async function overlayBrand(bgBuffer, story) {
 
 const CAPTION_SYSTEM = `You write Instagram captions for dailyblip, a ruthlessly-curated, zero-slop AI-creator news brand. Voice: punchy and energetic — hype in ENERGY and PACING, never in exaggeration or clickbait. No "THIS CHANGES EVERYTHING" breathlessness, no fake urgency, no emoji spam (0-2 tasteful emoji max). Confident, sharp, a little fun — still credible, this is a serious publication with personality, not a hype account.
 
-Structure: 2-4 short lines of caption text, then a blank line, then 4-6 relevant hashtags (mix of broad AI/creator tags and specific ones tied to the story — no spam tags, no more than 6 total).
+Structure, in this order:
+1. 2-3 lines that actually explain the specific story — what happened, grounded in the real headline/dek given to you, not generic hype about AI in general. A reader should understand the actual news from the caption alone, even without opening the image.
+2. One explicit, direct line telling people where to go for more: something like "Full story + today's 6-item brief: link in bio" or "Get the full brief every morning: link in bio" — vary the wording naturally, but ALWAYS include a direct, unambiguous instruction to use the bio link. This is not optional and not "mention if it feels natural" — every caption ends with this.
+3. A blank line, then 4-6 relevant hashtags (mix of broad AI/creator tags and specific ones tied to the story — no spam tags, no more than 6 total).
 
 Return JSON: {"caption": "..."}. JSON only.`;
 
