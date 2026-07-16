@@ -5,14 +5,70 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 17:49:12 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jul 2026 21:46:33 GMT</lastBuildDate>
     <item>
-      <title>xAI sues user for creating CSAM deepfakes with Grok image generator</title>
-      <link>https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/</link>
-      <guid isPermaLink="false">s_674ddd59c6c0a1da</guid>
-      <description>Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.</description>
+      <title>xAI sues first Grok user accused of generating child sex abuse material</title>
+      <link>https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users/</link>
+      <guid isPermaLink="false">s_976e25fe768e3c13</guid>
+      <description>xAI filed lawsuit against a user for allegedly generating CSAM with Grok, marking the company's shift from denial to legal action on the issue.</description>
       <category>rights</category>
-      <pubDate>Thu, 16 Jul 2026 11:14:50 GMT</pubDate>
+      <pubDate>Thu, 16 Jul 2026 20:26:23 GMT</pubDate>
+    </item>
+    <item>
+      <title>EU forces Google to share search data and open AI on Android</title>
+      <link>https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/</link>
+      <guid isPermaLink="false">s_252ccc31ca52ec00</guid>
+      <description>Digital Markets Act enforcement orders Google to share search results and loosen AI restrictions on Android, raising privacy concerns.</description>
+      <category>rights</category>
+      <pubDate>Thu, 16 Jul 2026 20:41:45 GMT</pubDate>
+    </item>
+    <item>
+      <title>NYC mayor mandates landlords disclose AI-generated property images</title>
+      <link>https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/</link>
+      <guid isPermaLink="false">s_6d307adecd0de02e</guid>
+      <description>New regulation requires transparency when AI is used to alter real estate listings; part of broader crackdown on deceptive practices.</description>
+      <category>rights</category>
+      <pubDate>Thu, 16 Jul 2026 20:39:10 GMT</pubDate>
+    </item>
+    <item>
+      <title>Linus Torvalds will not ban AI coding tools from Linux kernel</title>
+      <link>https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/</link>
+      <guid isPermaLink="false">s_ba15284a70a8e23c</guid>
+      <description>Linux creator dismisses calls for AI tool restrictions, says critics should fork the project; signals openness to AI-assisted development.</description>
+      <category>industry</category>
+      <pubDate>Thu, 16 Jul 2026 19:18:23 GMT</pubDate>
+    </item>
+    <item>
+      <title>Survey: 54% of enterprises report AI agent security incidents</title>
+      <link>https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials</link>
+      <guid isPermaLink="false">s_09e86f1db1bc975b</guid>
+      <description>Study finds most companies lack proper credential isolation and scoped identities for AI agents, with majority reporting breaches or near-misses.</description>
+      <category>industry</category>
+      <pubDate>Thu, 16 Jul 2026 19:02:38 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Vids adds personalized AI avatars and Gemini Omni editing</title>
+      <link>https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/</link>
+      <guid isPermaLink="false">s_d4ca69cf5d377e30</guid>
+      <description>Google rolled out custom digital avatars based on selfies and voice, plus multi-modal video generation from text prompts and reference images, with step-by-step editing in Vids.</description>
+      <category>tools</category>
+      <pubDate>Thu, 16 Jul 2026 18:32:54 GMT</pubDate>
+    </item>
+    <item>
+      <title>DJI faces backlash for AI avatar in TikTok product ad</title>
+      <link>https://petapixel.com/2026/07/16/dji-used-an-ai-generated-person-in-an-ad-angering-the-actual-humans-who-buy-products/</link>
+      <guid isPermaLink="false">s_e5756d56cbcffa7c</guid>
+      <description>Creator-focused company used AI-generated human in Mic Mini advertisement, sparking criticism over not hiring actual talent.</description>
+      <category>rights</category>
+      <pubDate>Thu, 16 Jul 2026 18:31:31 GMT</pubDate>
+    </item>
+    <item>
+      <title>Roblox launches AI game-builder in mobile app with text prompts</title>
+      <link>https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/</link>
+      <guid isPermaLink="false">s_e3176d1ee3b1cf6b</guid>
+      <description>Roblox's new Build feature generates basic playable games from single text prompts, no coding required, powered by open-source and proprietary models.</description>
+      <category>tools</category>
+      <pubDate>Thu, 16 Jul 2026 18:22:06 GMT</pubDate>
     </item>
     <item>
       <title>NVIDIA Nemotron 3 Embed ranks #1 on RTEB benchmark for agentic retrieval</title>
@@ -87,6 +143,14 @@
       <pubDate>Thu, 16 Jul 2026 11:49:48 GMT</pubDate>
     </item>
     <item>
+      <title>xAI sues user for creating CSAM deepfakes with Grok image generator</title>
+      <link>https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/</link>
+      <guid isPermaLink="false">s_674ddd59c6c0a1da</guid>
+      <description>Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.</description>
+      <category>rights</category>
+      <pubDate>Thu, 16 Jul 2026 11:14:50 GMT</pubDate>
+    </item>
+    <item>
       <title>Report examines AI sales to police, from data gathering to decision-making systems</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/965066/ai-police-cops</link>
       <guid isPermaLink="false">s_3090d72b6869197e</guid>
@@ -101,70 +165,6 @@
       <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Cars24 scales to 1M+ monthly conversation minutes with OpenAI voice and chat agents</title>
-      <link>https://openai.com/index/cars24</link>
-      <guid isPermaLink="false">s_6f16a999c8ddd889</guid>
-      <description>Enterprise case study: OpenAI-powered agents recover 12% of lost leads and bring agentic workflows across company teams.</description>
-      <category>industry</category>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Microsoft trains salespeople to position in-house AI models against OpenAI and Anthropic</title>
-      <link>https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/</link>
-      <guid isPermaLink="false">s_cce1dcce4c530f32</guid>
-      <description>Microsoft executives outlined a strategy for the sales team to highlight efficiency and cost advantages of its own AI models in competitive pitches against rivals, marking a shift in the company's go-to-market approach.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 23:59:44 GMT</pubDate>
-    </item>
-    <item>
-      <title>Most enterprise 'AI agents' remain chatbot wrappers despite orchestration ambitions</title>
-      <link>https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents</link>
-      <guid isPermaLink="false">s_89c9f7f3ade42756</guid>
-      <description>Survey of 101 enterprises shows agent deployments are consolidating on model-provider platforms like Claude, but in practice most deployed systems are still basic conversational interfaces lacking true multi-step control.</description>
-      <category>industry</category>
-      <pubDate>Wed, 15 Jul 2026 22:24:17 GMT</pubDate>
-    </item>
-    <item>
-      <title>xAI sues user for allegedly using Grok to generate child sexual abuse material</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam</link>
-      <guid isPermaLink="false">s_36b2bbf599ed87e0</guid>
-      <description>The Elon Musk-owned xAI filed a lawsuit against a South Carolina man accused of bypassing safeguards to generate and distribute CSAM using the Grok chatbot, testing legal liability for AI platform operators.</description>
-      <category>rights</category>
-      <pubDate>Wed, 15 Jul 2026 21:33:20 GMT</pubDate>
-    </item>
-    <item>
-      <title>The Best AI Artists Aren't Prompting. They're Directing.</title>
-      <link>https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html</link>
-      <guid isPermaLink="false">s_230cdabf888d5a7c</guid>
-      <description>Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.</description>
-      <category>writing</category>
-      <pubDate>Wed, 15 Jul 2026 21:11:15 GMT</pubDate>
-    </item>
-    <item>
-      <title>Houdini 22 adds native Gaussian Splatting support and redesigned UI</title>
-      <link>https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/</link>
-      <guid isPermaLink="false">s_4367c4f1a18b0bbe</guid>
-      <description>SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.</description>
-      <category>video</category>
-      <pubDate>Wed, 15 Jul 2026 20:16:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>AI startups release direct-to-video generated films as cash-grab strategy</title>
-      <link>https://www.theverge.com/entertainment/965616/ash-koosha-odysseus-the-fall-foundtain-zero-tilly-norwood</link>
-      <guid isPermaLink="false">s_aa32e1edecf76be3</guid>
-      <description>An AI startup is capitalizing on blockbuster hype by rushing out AI-generated films directly to digital release, mirroring decades-old direct-to-video B-movie economics.</description>
-      <category>video</category>
-      <pubDate>Wed, 15 Jul 2026 20:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI releases $230 Codex keyboard with AI agent status lights</title>
-      <link>https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/</link>
-      <guid isPermaLink="false">s_99a19263a8c15f19</guid>
-      <description>OpenAI entered hardware with a specialty keyboard co-designed with Work Louder, featuring customizable keys and a reasoning-level dial for managing AI coding agents.</description>
-      <category>tools</category>
-      <pubDate>Wed, 15 Jul 2026 19:41:38 GMT</pubDate>
     </item>
   </channel>
 </rss>

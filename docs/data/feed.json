@@ -1,6 +1,6 @@
 {
   "issue": 234,
-  "generated_at": "2026-07-16T17:49:12.348Z",
+  "generated_at": "2026-07-16T21:46:33.529Z",
   "brief": {
     "items": [
       {
@@ -64,22 +64,141 @@
   },
   "stories": [
     {
-      "id": "s_674ddd59c6c0a1da",
+      "id": "s_976e25fe768e3c13",
       "cat": "rights",
       "badge": "breaking",
       "spotlight": false,
       "quality": 7,
       "tier": "journalism",
-      "title": "xAI sues user for creating CSAM deepfakes with Grok image generator",
-      "dek": "Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/",
-      "ts": "2026-07-16T11:14:50.000Z",
+      "title": "xAI sues first Grok user accused of generating child sex abuse material",
+      "dek": "xAI filed lawsuit against a user for allegedly generating CSAM with Grok, marking the company's shift from denial to legal action on the issue.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users/",
+      "ts": "2026-07-16T20:26:23.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 102,
-      "move": 0,
-      "top": true
+      "top": true,
+      "heat": 108,
+      "move": 53
+    },
+    {
+      "id": "s_252ccc31ca52ec00",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "EU forces Google to share search data and open AI on Android",
+      "dek": "Digital Markets Act enforcement orders Google to share search results and loosen AI restrictions on Android, raising privacy concerns.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/",
+      "ts": "2026-07-16T20:41:45.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 91,
+      "move": 43
+    },
+    {
+      "id": "s_6d307adecd0de02e",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "NYC mayor mandates landlords disclose AI-generated property images",
+      "dek": "New regulation requires transparency when AI is used to alter real estate listings; part of broader crackdown on deceptive practices.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/",
+      "ts": "2026-07-16T20:39:10.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 101,
+      "move": 51
+    },
+    {
+      "id": "s_ba15284a70a8e23c",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Linus Torvalds will not ban AI coding tools from Linux kernel",
+      "dek": "Linux creator dismisses calls for AI tool restrictions, says critics should fork the project; signals openness to AI-assisted development.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/",
+      "ts": "2026-07-16T19:18:23.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 90,
+      "move": 45
+    },
+    {
+      "id": "s_09e86f1db1bc975b",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Survey: 54% of enterprises report AI agent security incidents",
+      "dek": "Study finds most companies lack proper credential isolation and scoped identities for AI agents, with majority reporting breaches or near-misses.",
+      "src": "VentureBeat AI",
+      "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
+      "ts": "2026-07-16T19:02:38.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 99,
+      "move": 53
+    },
+    {
+      "id": "s_d4ca69cf5d377e30",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Google Vids adds personalized AI avatars and Gemini Omni editing",
+      "dek": "Google rolled out custom digital avatars based on selfies and voice, plus multi-modal video generation from text prompts and reference images, with step-by-step editing in Vids.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/",
+      "ts": "2026-07-16T18:32:54.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 109,
+      "move": 57
+    },
+    {
+      "id": "s_e5756d56cbcffa7c",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "DJI faces backlash for AI avatar in TikTok product ad",
+      "dek": "Creator-focused company used AI-generated human in Mic Mini advertisement, sparking criticism over not hiring actual talent.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/16/dji-used-an-ai-generated-person-in-an-ad-angering-the-actual-humans-who-buy-products/",
+      "ts": "2026-07-16T18:31:31.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 89,
+      "move": 47
+    },
+    {
+      "id": "s_e3176d1ee3b1cf6b",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Roblox launches AI game-builder in mobile app with text prompts",
+      "dek": "Roblox's new Build feature generates basic playable games from single text prompts, no coding required, powered by open-source and proprietary models.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/",
+      "ts": "2026-07-16T18:22:06.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 99,
+      "move": 55
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -95,8 +214,8 @@
       "ts": "2026-07-16T16:01:21.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 82,
-      "move": 40
+      "heat": 78,
+      "move": -8
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -112,8 +231,8 @@
       "ts": "2026-07-16T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 90,
-      "move": 49
+      "heat": 86,
+      "move": -10
     },
     {
       "id": "s_79ed56faeda92346",
@@ -129,8 +248,8 @@
       "ts": "2026-07-16T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
-      "move": 31
+      "heat": 68,
+      "move": -12
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -146,8 +265,8 @@
       "ts": "2026-07-16T15:38:55.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 100,
-      "move": 55
+      "heat": 96,
+      "move": -5
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -163,8 +282,8 @@
       "ts": "2026-07-16T14:26:29.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 89,
-      "move": 51
+      "heat": 85,
+      "move": -10
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -180,8 +299,8 @@
       "ts": "2026-07-16T13:17:59.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 87,
-      "move": 49
+      "heat": 84,
+      "move": -11
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -197,8 +316,8 @@
       "ts": "2026-07-16T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": -5
+      "heat": 75,
+      "move": -10
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -214,8 +333,8 @@
       "ts": "2026-07-16T12:06:51.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 96,
-      "move": -1
+      "heat": 92,
+      "move": -6
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -231,8 +350,25 @@
       "ts": "2026-07-16T11:49:48.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
-      "move": -8
+      "heat": 64,
+      "move": -14
+    },
+    {
+      "id": "s_674ddd59c6c0a1da",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "xAI sues user for creating CSAM deepfakes with Grok image generator",
+      "dek": "Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/",
+      "ts": "2026-07-16T11:14:50.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 98,
+      "move": -5
     },
     {
       "id": "s_3090d72b6869197e",
@@ -248,8 +384,8 @@
       "ts": "2026-07-16T11:00:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 67,
-      "move": -16
+      "heat": 63,
+      "move": -8
     },
     {
       "id": "s_d8ed319939f5c0ae",
@@ -265,8 +401,8 @@
       "ts": "2026-07-16T00:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 91,
-      "move": -1
+      "heat": 87,
+      "move": -10
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -282,8 +418,8 @@
       "ts": "2026-07-16T00:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 66,
-      "move": 19
+      "heat": 62,
+      "move": -8
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -299,8 +435,8 @@
       "ts": "2026-07-15T23:59:44.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": -10
+      "heat": 70,
+      "move": -8
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -316,7 +452,7 @@
       "ts": "2026-07-15T22:24:17.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 55,
+      "heat": 51,
       "move": -8
     },
     {
@@ -333,8 +469,8 @@
       "ts": "2026-07-15T21:33:20.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -7
+      "heat": 78,
+      "move": -8
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -351,8 +487,8 @@
       "ts": "2026-07-15T21:11:15.982Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -10
+      "heat": 70,
+      "move": -8
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -368,8 +504,8 @@
       "ts": "2026-07-15T20:16:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 62,
-      "move": -7
+      "heat": 60,
+      "move": -8
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -385,8 +521,8 @@
       "ts": "2026-07-15T20:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -6
+      "heat": 68,
+      "move": -12
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -402,8 +538,8 @@
       "ts": "2026-07-15T19:41:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -7
+      "heat": 78,
+      "move": -8
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -420,7 +556,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": -1
+      "move": -4
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -455,7 +591,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_d173222f3e599859",
@@ -490,7 +626,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -507,7 +643,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -524,7 +660,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -541,7 +677,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -6
+      "move": -7
     },
     {
       "id": "s_18de27eea197aabe",
@@ -558,7 +694,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_84777b05d9b25937",
@@ -575,7 +711,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -592,7 +728,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -609,7 +745,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": -6
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -626,7 +762,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -643,7 +779,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -660,7 +796,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_110aa69c02571475",
@@ -677,7 +813,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -694,7 +830,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -7
     },
     {
       "id": "s_569d5689452ac2df",
@@ -711,7 +847,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -7
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -728,7 +864,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -745,7 +881,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -762,7 +898,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -7
     },
     {
       "id": "s_210f6726bf4a719a",
@@ -779,7 +915,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -6
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -796,7 +932,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -7
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -813,7 +949,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -6
+      "move": -8
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -830,7 +966,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -847,7 +983,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -7
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -864,7 +1000,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -881,7 +1017,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -7
     },
     {
       "id": "s_986155e62b49ff74",
@@ -898,7 +1034,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -915,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -7
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -932,7 +1068,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -8
     },
     {
       "id": "s_23767f964a637e72",
@@ -949,143 +1085,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -7
-    },
-    {
-      "id": "s_5ddf162e15a96c46",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Meta forecasts AI token budgets could be capped per engineer within years",
-      "dek": "Instagram head Adam Mosseri predicts companies will soon need to limit employee AI tool spending like payroll, as token costs could match engineer salaries.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/metas-adam-mosseri-says-ai-token-budgets-could-soon-be-capped-per-engineer/",
-      "ts": "2026-07-14T16:22:15.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -5
-    },
-    {
-      "id": "s_e3be2bdde12627e6",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Google Images redesigned with AI-generated content and discovery-focused browsing",
-      "dek": "Google adds a personalized 'For You' gallery and in-search image generation to compete with Pinterest, marking a shift from search-only to discovery.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/google-images-gets-a-pinterest-like-redesign-focused-on-discovery/",
-      "ts": "2026-07-14T16:00:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -5
-    },
-    {
-      "id": "s_ec43065966072242",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Google Images homepage to recommend photos before you search",
-      "dek": "Redesigned Google Images celebrates 25 years by shifting from search-only to a dynamic, personalized gallery showing images tied to your interests.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/965138/google-images-homepage-ai-overviews-search-nano-banana",
-      "ts": "2026-07-14T16:00:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 60,
-      "move": -7
-    },
-    {
-      "id": "s_274fe08b7f274f10",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "Spotify adds 'Talk to Spotify' conversational AI feature for subscribers",
-      "dek": "AI chatbot lets Premium users explore and play music, audiobooks, and podcasts through dialogue on mobile app's home and now-playing screens.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/entertainment/965358/spotify-ai-chatbot-interface-music-audiobooks-podcasts",
-      "ts": "2026-07-14T15:47:36.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -7
-    },
-    {
-      "id": "s_a4b29ff806d7c08f",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "New York becomes first state to halt large data center approvals",
-      "dek": "Governor Hochul signed an executive order temporarily blocking permits for 50+ megawatt data centers, citing electricity, water, and public control concerns amid AI infrastructure boom.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/",
-      "ts": "2026-07-14T15:17:59.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -3
-    },
-    {
-      "id": "s_1ce55dc5e2a4e771",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "New York data center moratorium may set template for anti-AI movement",
-      "dek": "One-year ban on large data center construction could signal broader regulatory backlash against AI infrastructure's resource demands.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/tech-policy/2026/07/new-york-is-the-first-state-to-impose-a-data-center-moratorium/",
-      "ts": "2026-07-14T15:06:28.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -3
-    },
-    {
-      "id": "s_97c9eefb08315a4b",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 4,
-      "tier": "journalism",
-      "title": "Reflection AI secures $1B compute access deal with Nebius",
-      "dek": "Open-source AI startup Reflection inked a compute partnership with European infrastructure firm Nebius to access Nvidia chips, mirroring broader industry consolidation.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/reflection-inks-1b-compute-deal-with-nebius/",
-      "ts": "2026-07-14T14:37:48.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 40,
-      "move": -7
-    },
-    {
-      "id": "s_07270bd7745b992c",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Open-weight models now dominate production AI, shifting the competitive frontier",
-      "dek": "Chinese open models account for 41% of Hugging Face downloads; Vercel data shows open-weight models handle most infrastructure volume while closed models serve premium tier.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/",
-      "ts": "2026-07-14T14:24:53.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -3
+      "move": -8
     }
   ],
   "models": [
@@ -1153,15 +1153,23 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 26
+      "c": 23
     },
     {
       "n": "The Verge AI",
-      "c": 12
+      "c": 10
     },
     {
       "n": "Hugging Face Blog",
       "c": 6
+    },
+    {
+      "n": "Ars Technica AI",
+      "c": 4
+    },
+    {
+      "n": "PetaPixel",
+      "c": 4
     },
     {
       "n": "dailyblip",
@@ -1172,27 +1180,19 @@
       "c": 3
     },
     {
-      "n": "PetaPixel",
-      "c": 2
-    },
-    {
-      "n": "OpenAI News",
-      "c": 2
-    },
-    {
-      "n": "80 Level",
+      "n": "VentureBeat AI",
       "c": 2
     }
   ],
   "topics": [
     "#google",
     "#openai",
-    "#apple",
     "#grok",
+    "#apple",
+    "#gemini",
     "#youtube",
     "#hugging",
-    "#face",
-    "#anthropic"
+    "#face"
   ],
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -1202,9 +1202,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 24,
-    "published_today": 22,
+    "scanned_last_run": 17,
+    "published_today": 23,
     "sources_live": 14,
-    "slopped_last_run": 17
+    "slopped_last_run": 9
   }
 }
