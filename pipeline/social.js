@@ -71,6 +71,15 @@ const AMBER = "#FFB454";
 const RED = "#FF7A6B"; // breaking-story accent, same logic as the card template
 const DARKTXT = "#20160a";
 
+// Blip — dailyblip's mascot. This exact description is locked and reused
+// verbatim in every image prompt, since consistency across 6 separate
+// image-generation calls a day depends entirely on repeating the same
+// physical description every time (the model has no memory of "the
+// character" between calls). Wording matches the version that was
+// test-rendered and held up consistently across multiple poses/angles
+// before being wired into the real pipeline — don't rephrase casually.
+const BLIP_CHAR = `A small, cute, non-humanoid companion-robot mascot called "Blip," roughly the size of a house cat. Body is a smooth rounded capsule/pill shape, dark navy-teal (#0C242B) with a thin glowing aqua (#63D8C6) outline. No legs — it hovers, with a soft aqua glow beneath it suggesting it's floating just above the ground. A single circular glowing amber eye (#FFB454) is centered on its face — no other facial features, no mouth, no additional eyes. A thin aqua antenna curves up from the top of its head, ending in a small glowing aqua dot. It has two small stubby rounded arms, same dark navy-teal material as the body. Not gendered, not humanoid, no human anatomy, no clothing.`;
+
 // Returns one {story, briefItem} pair per brief item, in the brief's own
 // (already curated/ranked) order — not re-sorted by impact, since "6
 // options to post" should mirror the actual brief a reader would see.
@@ -84,48 +93,44 @@ function pickAllBriefStories(feed) {
   return picks;
 }
 
-// Your art-direction brief, filled in per-story. Asks the model to attempt
-// the company's logo itself, best-effort, with explicit permission to
-// simply omit it if unsure — image models are inconsistent at exact
-// trademarked graphics, so this trades perfect accuracy for simplicity.
-// Still forbids other readable text in the generated image, for the same
-// reason headlines are drawn separately with real fonts afterward.
-function buildImagePrompt(story) {
-  return `Generate a striking editorial image for an Instagram news post based on the article and summary below.
+// Your art-direction brief, filled in per-story. Blip (the mascot) is now
+// the consistent subject across every image — the story-specific part is
+// the ACTION, which is written per-headline by writeContent() below and
+// passed in here, not hardcoded per category. A fixed category->prop map
+// (camera for "video", headphones for "music") would repeat itself fast;
+// letting the model write a specific action tied to the actual headline
+// keeps 6-a-day genuinely varied while Blip's physical design stays locked.
+function buildImagePrompt(story, blipAction) {
+  return `Generate a striking editorial image for an Instagram news post based on the article and summary below, featuring the mascot character described below as the main subject.
+
 ARTICLE: ${story.url}
 POST TEXT: ${story.title}
 
-Create a visually bold, high-energy image that communicates the article's central idea immediately, even without accompanying text.
+MASCOT CHARACTER (must appear exactly as described, as the main subject of the image):
+${BLIP_CHAR}
+
+MASCOT'S ACTION IN THIS IMAGE (story-specific, must be depicted clearly):
+${blipAction}
 
 ART DIRECTION:
 - Format: vertical 4:5 Instagram image, 1080 x 1350 composition
 - Style: premium technology editorial, contemporary digital collage, dramatic advertising photography, and energetic social-media design
 - Make the composition vivid, unexpected, and highly scroll-stopping
-- Use strong depth, oversized visual elements, dramatic lighting, crisp detail, controlled motion, layered interfaces, and a clear focal point
-- Favor one memorable visual metaphor over a collection of generic technology symbols
+- Use strong depth, dramatic lighting, crisp detail, controlled motion, layered interfaces, and a clear focal point on Blip
 - The image should feel culturally current and creator-focused, not corporate, sterile, or like generic AI stock art
 - Use saturated accent colors, luminous highlights, deep contrast, and dynamic movement while maintaining a polished professional finish
-- Include human or creator-centered imagery when it improves the story
-- Show recognizable products, devices, interfaces, creative tools, or company-related visual elements that are directly relevant to the article
-- Incorporate the featured company's official logo naturally into the scene if you can render it accurately. Do not invent, approximate, misspell, or redesign a company logo — if you're not confident you can render it accurately, simply omit the logo entirely rather than guessing at it.
-- Do not include the article publisher's logo
+- Background/environment should reflect the article's subject (recognizable devices, interfaces, or visual metaphors relevant to the story), but Blip stays the clear focal point, not a small element in a busy scene
+- Do not depict any human figures, faces, or hands — Blip is the only character in the scene
+- Do not attempt to render any company or product logos
 - Do not place headlines, captions, labels, random letters, watermarks, or other readable text inside the image
 - Leave purposeful negative space in the upper third and lower portion so headline text and publication branding can be added afterward
-- Keep important faces, logos, devices, and focal elements away from the extreme edges
-- Avoid robots, glowing brains, circuit-board faces, floating AI letters, generic holograms, handshake imagery, and other overused AI cliches unless they are specifically essential to the article
+- Keep Blip and other focal elements away from the extreme edges
 
-Before generating, identify:
-1. The article's main subject
-2. The company or product involved
-3. The most visually compelling action or transformation
-4. Two or three concrete visual details from the article
-5. A bold visual metaphor that communicates the story in under one second
-
-Then create the image using those details. The final result should resemble an original cover image for a sharp, design-forward technology and creator-culture publication.`;
+The final result should resemble an original cover image for a sharp, design-forward technology and creator-culture publication, with Blip as its recurring mascot.`;
 }
 
-async function generateBackgroundImage(story) {
-  const prompt = buildImagePrompt(story);
+async function generateBackgroundImage(story, blipAction) {
+  const prompt = buildImagePrompt(story, blipAction);
   const res = await fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
     headers: { Authorization: `Bearer ${OPENAI_KEY}`, "Content-Type": "application/json" },
@@ -259,23 +264,34 @@ async function overlayBrand(bgBuffer, story) {
   return sharp(bgBuffer).resize(CANVAS_W, CANVAS_H, { fit: "cover" }).composite(layers).png().toBuffer();
 }
 
-const CAPTION_SYSTEM = `You write Instagram captions for dailyblip, a ruthlessly-curated, zero-slop AI-creator news brand. Voice: punchy and energetic — hype in ENERGY and PACING, never in exaggeration or clickbait. No "THIS CHANGES EVERYTHING" breathlessness, no fake urgency, no emoji spam (0-2 tasteful emoji max). Confident, sharp, a little fun — still credible, this is a serious publication with personality, not a hype account.
+const CONTENT_SYSTEM = `You write two things for dailyblip, a ruthlessly-curated, zero-slop AI-creator news brand, based on one news story: an Instagram caption, and an action description for the brand's mascot, Blip.
 
-Structure, in this order:
+BLIP: a small, non-humanoid, capsule-shaped hover-robot with one glowing amber eye and an aqua antenna. Blip appears in every social image as the recurring mascot, performing an action tied to that day's specific story — not a generic pose.
+
+Write "blip_action" as a single vivid sentence (roughly 15-30 words) describing what Blip is physically doing or holding in the image, tied to the SPECIFIC details of this headline — not a generic category prop. Ground it in a concrete detail from the headline/dek (an object, an action, a transformation) rather than an abstract concept. Blip cannot hold, wear, or gesture toward anything that would require rendering readable text, letters, or logos. No other characters, humans, or hands — only Blip.
+
+Examples of the right specificity: for a story about a new open-weight multimodal model, "Blip holds up a glowing, multi-faceted crystal that shifts between text, image, and soundwave patterns as it turns." For a story about a 3D tool adding Gaussian splat support, "Blip reaches out and gently pokes a floating cloud of glowing particles that snap into a 3D shape." Avoid generic fallbacks like "Blip stands next to a laptop" unless the story genuinely has nothing more specific to draw on.
+
+Then write "caption", an Instagram caption. Voice: punchy and energetic — hype in ENERGY and PACING, never in exaggeration or clickbait. No "THIS CHANGES EVERYTHING" breathlessness, no fake urgency, no emoji spam (0-2 tasteful emoji max). Confident, sharp, a little fun — still credible, this is a serious publication with personality, not a hype account.
+
+Caption structure, in this order:
 1. 2-3 lines that actually explain the specific story — what happened, grounded in the real headline/dek given to you, not generic hype about AI in general. A reader should understand the actual news from the caption alone, even without opening the image.
 2. One explicit, direct line telling people where to go for more: something like "Full story + today's 6-item brief: link in bio" or "Get the full brief every morning: link in bio" — vary the wording naturally, but ALWAYS include a direct, unambiguous instruction to use the bio link. This is not optional and not "mention if it feels natural" — every caption ends with this.
 3. A blank line, then 4-6 relevant hashtags (mix of broad AI/creator tags and specific ones tied to the story — no spam tags, no more than 6 total).
 
-Return JSON: {"caption": "..."}. JSON only.`;
+Return JSON: {"blip_action": "...", "caption": "..."}. JSON only.`;
 
-async function writeCaption(story) {
+async function writeContent(story) {
   const result = await askJSON({
     role: "write",
-    system: CAPTION_SYSTEM,
+    system: CONTENT_SYSTEM,
     prompt: JSON.stringify({ headline: story.title, dek: story.dek, source: story.src, category: story.cat, badge: story.badge }),
-    maxTokens: 400,
+    maxTokens: 500,
   });
-  return result.caption || "";
+  return {
+    blipAction: result.blip_action || "Blip hovers curiously, amber eye glowing, in a softly lit editorial scene.",
+    caption: result.caption || "",
+  };
 }
 
 async function main() {
@@ -306,9 +322,9 @@ async function main() {
     const n = i + 1;
     try {
       console.log(`social: [${n}/${picks.length}] "${story.title.slice(0, 60)}" (impact ${briefItem.impact})`);
-      const bg = await generateBackgroundImage(story);
+      const { blipAction, caption } = await writeContent(story);
+      const bg = await generateBackgroundImage(story, blipAction);
       const finalImage = await overlayBrand(bg, story);
-      const caption = await writeCaption(story);
 
       const imageFile = `${today}-${n}.png`;
       fs.writeFileSync(path.join(dir, imageFile), finalImage);
