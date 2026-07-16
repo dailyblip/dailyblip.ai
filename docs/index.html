@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,6 +53,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
+html,body{overflow-x:hidden;max-width:100%}
 body{
   background:var(--ink);
   color:var(--text);
@@ -500,6 +502,31 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   .brief-main{padding:20px 18px}
   .scope{flex-direction:column}
   .headmeta{display:none}
+
+  /* newsletter form: the desktop layout gives the input a hard 200px
+     floor so it never looks cramped next to the button — on a phone
+     that floor is wider than the available row, so instead of wrapping
+     cleanly it was pushing the whole row (and page) past the viewport
+     edge. Stacking input above button removes the fixed floor entirely. */
+  .brief-subscribe{flex-direction:column;align-items:stretch;padding:18px 16px}
+  .bs-form{flex-direction:column;width:100%}
+  .bs-form input{min-width:0;width:100%}
+  .bs-form button{width:100%}
+
+  /* tool drop card: the desktop background pairs a 120deg linear-gradient
+     with a radial ::before glow, both tuned for a wide/short box. On
+     mobile the card becomes tall/narrow instead (content stacks), which
+     shifts where the gradient's color stop visually lands and shows up
+     as a hard seam partway down the card. Simplifying to one gentler,
+     mostly-vertical gradient and dropping the glow avoids the seam
+     regardless of how tall the stacked content makes the card. */
+  .td-card{
+    flex-direction:column;align-items:stretch;gap:18px;
+    padding:22px 20px;
+    background:linear-gradient(175deg,rgba(255,180,84,.09),var(--ink-2) 55%);
+  }
+  .td-card::before{display:none}
+  .td-cta{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){
   .ticker-track{animation:none}
