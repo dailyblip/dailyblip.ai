@@ -4,67 +4,56 @@
     {
       "index": 1,
       "image": "2026-07-16-1.png",
-      "caption": "Mira Murati's Thinking Machines Lab just dropped Inkling — a 975B-parameter open-weight model trained on 45 trillion tokens across text, image, audio, and video. It's a mixture-of-experts architecture that reasons natively across all four modalities, not just text with bolt-on vision. Open weights. Multimodal from the ground up. This one's worth a close look.\n\nFull story + today's brief: link in bio.\n\n#AINews #OpenSource #MultimodalAI #ThinkingMachines #MiraMurati #GenerativeAI",
+      "caption": "Apple Intelligence is officially live in China — powered by Alibaba's Qwen AI model across iOS, iPadOS, macOS, and visionOS. China's regulators approved the integration, clearing the path for Apple's biggest AI market expansion yet. This is the partnership that gets Apple into one of the world's largest mobile markets.\n\nFull story + today's brief: link in bio.\n\n#AppleIntelligence #Alibaba #AINews #TechNews #GenerativeAI #China",
       "story": {
-        "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
-        "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
+        "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
+        "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
         "src": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/"
+        "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/"
       }
     },
     {
       "index": 2,
       "image": "2026-07-16-2.png",
-      "caption": "Suno's training data just got a lot more specific. Leaked documents reveal the AI music generator pulled millions of songs from YouTube, Deezer, and Genius — without disclosed consent from the platforms or the artists behind them. The fair use fight in AI music just got a paper trail.\n\nFull story + today's brief: link in bio.\n\n#AIMusic #Suno #AIRights #MusicIndustry #ArtificialIntelligence",
+      "caption": "Reelful just launched on iOS — drop in your photos and clips, and its AI spits out finished short-form videos ready for TikTok or Reels. No timeline scrubbing, no manual cuts. It's aimed squarely at people who want polished output without learning an editor.\n\nFull story + today's brief: link in bio.\n\n#AIVideo #ShortFormContent #Reelful #CreatorTools #AIApps",
       "story": {
-        "title": "Suno trained on millions of scraped songs from YouTube, Deezer, Genius",
-        "dek": "Leaked data reveals the AI music generator sourced training material from major platforms without disclosed consent, raising fair use questions for creators and platforms.",
-        "src": "The Verge AI",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack"
+        "title": "Reelful automates short-form video creation from camera roll photos",
+        "dek": "New iOS app uses AI to turn photos and clips into polished TikTok and Instagram Reels, targeting users who find traditional editing tools too complex.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/15/reelfuls-ai-turns-your-camera-roll-into-short-form-videos-for-social-media/"
       }
     },
     {
       "index": 3,
       "image": "2026-07-16-3.png",
-      "caption": "SideFX just dropped Houdini 22, and the headline feature is native Gaussian Splatting — no plugins, no workarounds. You can create, edit, and animate 3D Gaussian Splats directly inside Houdini for the first time, alongside a redesigned UI and workflow upgrades across VFX, game dev, and procedural art. Big release for anyone working at the intersection of real-world capture and CG pipelines.\n\nFull story + today's brief: link in bio.\n\n#Houdini #GaussianSplatting #VFX #3D #AITools #ProceduralArt",
+      "caption": "Hugging Face just dropped Real World VoiceEQ — a new benchmark designed to measure how humans actually perceive voice AI output. Most existing metrics optimize for technical accuracy; this one targets the thing that matters in production: does it sound good to a real listener? As voice AI capabilities accelerate, evaluation frameworks are finally catching up.\n\nFull story + today's brief: link in bio.\n\n#HuggingFace #VoiceAI #AIBenchmark #GenerativeAI #AITools",
       "story": {
-        "title": "Houdini 22 adds native Gaussian Splatting support and redesigned UI",
-        "dek": "SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.",
-        "src": "80 Level",
-        "url": "https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/"
-      }
-    },
-    {
-      "index": 4,
-      "image": "2026-07-16-4.png",
-      "caption": "Prompt literacy is table stakes now. The creators actually doing interesting work with AI image tools have shifted into a different mode entirely — less \"generate this thing\" and more \"here's the vision, let's iterate until we get there.\" The craft isn't in the words you type. It's in knowing what you're looking for and how to get there.\n\nFull story + today's brief: link in bio\n\n#AIArt #GenerativeAI #AICreators #Midjourney #CreativeAI #DigitalArt",
-      "story": {
-        "title": "The Best AI Artists Aren't Prompting. They're Directing.",
-        "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
-        "src": "dailyblip",
-        "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html"
+        "title": "Hugging Face releases Real World VoiceEQ benchmark for voice AI quality",
+        "dek": "New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.",
+        "src": "Daily.dev",
+        "url": "https://daily.dev/posts/introducing-real-world-voiceeq-measuring-the-human-quality-of-voice-ai-ceqodha2j"
       }
     },
     {
       "index": 5,
       "image": "2026-07-16-5.png",
-      "caption": "Concept artist Daniel Porto has been building a creative vision for 20 years — AI is finally letting him execute it at the speed he thinks. His take: prompting isn't the skill that matters. Experienced judgment about *what's worth making* is what separates serious creatives from the noise. Full story + today's brief: link in bio.\n\n#AIart #conceptart #AItools #generativeAI #creativeindustry",
+      "caption": "OpenAI just went hardware. Their new Codex keyboard — built with Work Louder — has customizable keys and a physical dial that tracks your AI coding agent's reasoning level in real time. $230, and it's their first real swing at a physical AI workspace product.\n\nFull story + today's brief: link in bio.\n\n#OpenAI #AItools #Codex #developertools #AIhardware",
       "story": {
-        "title": "Concept artist Daniel Porto accelerates 20 years of vision with AI",
-        "dek": "Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.",
-        "src": "Creative Bloq AI",
-        "url": "https://www.creativebloq.com/3d/ai-has-amplified-my-20-years-of-experience-believes-concept-artist-daniel-porto"
+        "title": "OpenAI releases $230 Codex keyboard with AI agent status lights",
+        "dek": "OpenAI entered hardware with a specialty keyboard co-designed with Work Louder, featuring customizable keys and a reasoning-level dial for managing AI coding agents.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/"
       }
     },
     {
       "index": 6,
       "image": "2026-07-16-6.png",
-      "caption": "The direct-to-video B-movie playbook is back — this time powered by AI. Startups are rushing out AI-generated films timed to blockbuster hype cycles, skipping theaters entirely and going straight to digital. It's a decades-old cash-grab strategy, just with a much lower production budget and a text prompt.\n\nFull story + today's brief: link in bio\n\n#AIfilm #generativevideo #AIstartups #directtovideo #AIcreators",
+      "caption": "The prompt era is over. The artists pulling ahead aren't better at describing images — they're thinking like directors: shot composition, lighting logic, iterative refinement, visual narrative. The skill gap has quietly moved from \"can you generate\" to \"can you see.\"\n\nFull story + today's brief: link in bio.\n\n#AIart #generativeAI #AIcreators #Midjourney #digitalart #creativetechnology",
       "story": {
-        "title": "AI startups release direct-to-video generated films as cash-grab strategy",
-        "dek": "An AI startup is capitalizing on blockbuster hype by rushing out AI-generated films directly to digital release, mirroring decades-old direct-to-video B-movie economics.",
-        "src": "The Verge AI",
-        "url": "https://www.theverge.com/entertainment/965616/ash-koosha-odysseus-the-fall-foundtain-zero-tilly-norwood"
+        "title": "The Best AI Artists Aren't Prompting. They're Directing.",
+        "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
+        "src": "dailyblip",
+        "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html"
       }
     }
   ]
