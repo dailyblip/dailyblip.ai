@@ -491,6 +491,50 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   outline:2px solid var(--aqua);outline-offset:2px;border-radius:4px;
 }
 
+/* ---------- Blip sprite (site mascot, bottom-right) ---------- */
+.blip-sprite{
+  position:fixed;right:18px;bottom:18px;z-index:40;
+  transition:opacity .3s ease,transform .3s ease;
+}
+.blip-sprite.hidden{opacity:0;transform:translateY(16px) scale(.85);pointer-events:none}
+.blip-sprite-btn{
+  display:block;width:72px;height:88px;padding:0;position:relative;z-index:1;
+  animation:blipFloat 4.2s ease-in-out infinite;
+  transition:transform .2s ease;
+}
+.blip-sprite-btn:hover,.blip-sprite-btn:focus-visible{
+  animation-play-state:paused;transform:translateY(-4px) scale(1.05);
+}
+.blip-sprite-btn svg{display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.4))}
+.blip-body,.blip-arm{fill:var(--ink-2);stroke:var(--aqua);stroke-width:1.5}
+.blip-antenna{fill:none;stroke:var(--aqua);stroke-width:2.5;stroke-linecap:round}
+.blip-antenna-tip{fill:var(--aqua)}
+.blip-glow{fill:var(--aqua);opacity:.18}
+.blip-eye{
+  fill:var(--amber);stroke:var(--ink-2);stroke-width:1.5;
+  transform-origin:70px 75px;animation:blipBlink 6.5s ease-in-out infinite;
+}
+.blip-eye-highlight{fill:var(--text)}
+.blip-dismiss{
+  position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;z-index:2;
+  background:var(--ink-2);border:1px solid var(--line-strong);color:var(--dim);
+  font-family:var(--mono);font-size:12px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .15s ease,border-color .15s ease,color .15s ease;
+}
+.blip-sprite:hover .blip-dismiss,.blip-dismiss:focus-visible{opacity:1}
+.blip-dismiss:hover{color:var(--text);border-color:var(--amber-deep)}
+.blip-sprite.waving .blip-sprite-btn{animation:blipWave .6s ease}
+
+@keyframes blipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes blipBlink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}97%{transform:scaleY(1)}}
+@keyframes blipWave{0%{transform:translateY(0) rotate(0)}30%{transform:translateY(-14px) rotate(-6deg)}60%{transform:translateY(-4px) rotate(4deg)}100%{transform:translateY(0) rotate(0)}}
+
+@media(max-width:560px){
+  .blip-sprite{right:12px;bottom:12px}
+  .blip-sprite-btn{width:52px;height:64px}
+}
+
 /* ---------- responsive ---------- */
 @media(max-width:980px){
   .cols{grid-template-columns:1fr}
@@ -532,6 +576,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   .ticker-track{animation:none}
   .sweep{animation:none;opacity:.25}
   .wordmark .blip-dot,.headmeta .live::before{animation:none}
+  .blip-sprite-btn,.blip-eye{animation:none}
   html{scroll-behavior:auto}
 }
 </style>
@@ -691,6 +736,27 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
     </div>
   </div>
 </footer>
+
+<!-- Blip — site mascot, bottom-right corner. Purely decorative/optional:
+     dismissible (persisted via localStorage so it stays hidden once
+     someone closes it), respects prefers-reduced-motion, and clicking it
+     just scrolls to top rather than doing anything the person didn't ask
+     for. Same character design used in the social image pipeline. -->
+<div class="blip-sprite" id="blipSprite">
+  <button class="blip-dismiss" id="blipDismiss" type="button" aria-label="Hide Blip">×</button>
+  <button class="blip-sprite-btn" id="blipMain" type="button" aria-label="Blip — back to top">
+    <svg viewBox="0 0 140 170" width="72" height="88" aria-hidden="true">
+      <ellipse class="blip-glow" cx="70" cy="150" rx="34" ry="6"/>
+      <path class="blip-antenna" d="M70 40 Q84 18 90 8"/>
+      <circle class="blip-antenna-tip" cx="90" cy="8" r="4"/>
+      <rect class="blip-body" x="35" y="40" width="70" height="90" rx="35"/>
+      <ellipse class="blip-arm" cx="24" cy="95" rx="9" ry="15"/>
+      <ellipse class="blip-arm" cx="116" cy="95" rx="9" ry="15"/>
+      <circle class="blip-eye" cx="70" cy="75" r="13"/>
+      <circle class="blip-eye-highlight" cx="66" cy="71" r="3"/>
+    </svg>
+  </button>
+</div>
 
 <script>
 /* ============ FALLBACK DATA ============
@@ -1208,6 +1274,25 @@ $("#subForm").addEventListener("submit", async e=>{
   }
   $("#subOk").style.display="block"; $("#subEmail").value="";
 });
+
+/* Blip mascot — dismiss state applied immediately (not inside boot()) so
+   there's no flash of a visible sprite before the "hidden" class lands. */
+(function initBlip(){
+  const sprite = $("#blipSprite");
+  if(localStorage.getItem("blipDismissed") === "1") sprite.classList.add("hidden");
+
+  $("#blipDismiss").addEventListener("click", e=>{
+    e.stopPropagation();
+    sprite.classList.add("hidden");
+    localStorage.setItem("blipDismissed", "1");
+  });
+
+  $("#blipMain").addEventListener("click", ()=>{
+    sprite.classList.add("waving");
+    setTimeout(()=>sprite.classList.remove("waving"), 600);
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+})();
 
 /* ---- boot: hydrate from feed.json, fall back to embedded sample ---- */
 (async function boot(){
