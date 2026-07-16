@@ -1,65 +1,65 @@
 {
-  "issue": 232,
-  "generated_at": "2026-07-16T04:20:44.368Z",
+  "issue": 233,
+  "generated_at": "2026-07-16T07:33:52.443Z",
   "brief": {
     "items": [
       {
-        "story": "s_976a1a3eff5f1d7b",
-        "html": "Mira Murati's Thinking Machines drops <b>Inkling, an open 975B-parameter multimodal model</b> trained natively on text, image, audio, and video — a massive free resource for creators building multi-modal pipelines.",
-        "secs": 11,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_f8bec47bee6c00a0",
-        "html": "Leaked data confirms <b>Suno scraped millions of songs from YouTube, Deezer, and Genius</b> without disclosed consent, intensifying DMCA risk for music creators using the platform.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_4367c4f1a18b0bbe",
-        "html": "Houdini 22 adds <b>native Gaussian Splat creation, editing, and animation</b> with no third-party tools required — a significant unlock for VFX and procedural artists.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_36b2bbf599ed87e0",
-        "html": "The xAI CSAM lawsuit has advanced: <b>xAI is now suing a specific South Carolina user</b> for bypassing Grok's safeguards, setting a direct precedent for AI platform liability.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_aa32e1edecf76be3",
-        "html": "AI startups are <b>rushing AI-generated films straight to digital release</b> as a cash-grab strategy, signaling a new direct-to-video economics era for video creators to watch.",
+        "story": "s_cce1dcce4c530f32",
+        "html": "Microsoft is training its sales team to pitch <b>in-house AI models over OpenAI and Anthropic</b> — a platform-loyalty shift creators relying on Azure-hosted tools should watch.",
         "secs": 10,
         "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_89c9f7f3ade42756",
+        "html": "A survey of 101 enterprises found <b>most deployed 'AI agents' are still basic chatbots</b>, not true multi-step autonomous systems — useful grounding before you build.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_99a19263a8c15f19",
+        "html": "OpenAI released a <b>$230 Codex keyboard</b> with a reasoning-level dial and AI agent status lights, its first consumer hardware product.",
+        "secs": 9,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_5c8332d4091eee10",
+        "html": "IBM Research breaks down <b>model routing in agent pipelines</b> — cost, latency, and complexity tradeoffs that directly affect AI writing and image workflow builders.",
+        "secs": 10,
+        "impact": 5,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
         "story": "s_230cdabf888d5a7c",
-        "html": "The real skill gap in AI image work has <b>shifted from prompting to creative direction</b> — experienced judgment, not typed inputs, now defines professional output.",
+        "html": "The real AI image skill gap has <b>shifted from prompting to creative direction</b> — experienced judgment, not typed inputs, now defines professional output.",
         "secs": 9,
-        "impact": 6,
+        "impact": 5,
         "hardware": false,
         "tracking": false,
         "commentary": true
+      },
+      {
+        "story": "s_53e3149d2cc17d3e",
+        "html": "Ai2's Shippy teardown reveals <b>a real-world agent architecture</b> — deterministic tools, sandboxed hosting, and evaluation loops worth borrowing for your own creative agents.",
+        "secs": 10,
+        "impact": 4,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
       }
     ],
-    "title": "Wednesday, July 15 — six things that changed today",
-    "date": "2026-07-16T04:20:44.306Z",
+    "title": "Thursday, July 16 — six things that changed today",
+    "date": "2026-07-16T07:33:52.389Z",
     "edition": "pm"
   },
   "stories": [
