@@ -1,66 +1,66 @@
 {
-  "issue": 229,
-  "generated_at": "2026-07-16T01:58:15.370Z",
+  "issue": 230,
+  "generated_at": "2026-07-16T03:38:34.764Z",
   "brief": {
     "items": [
       {
-        "story": "s_fe6ab2efc212fece",
-        "html": "<b>Apple Intelligence is now live in China via Alibaba Qwen</b>, expanding iOS and macOS AI writing and image tools to one of the world's largest creative markets.",
-        "secs": 10,
-        "impact": 7,
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines drops <b>Inkling, a free 975B open-weight model</b> that reasons natively across text, image, audio, and video — download and test it now.",
+        "secs": 11,
+        "impact": 9,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_36b2bbf599ed87e0",
-        "html": "The xAI Grok CSAM lawsuit advanced — <b>xAI is now actively suing a South Carolina user</b>, sharpening legal liability precedent for every generative platform operator.",
+        "story": "s_f8bec47bee6c00a0",
+        "html": "Leaked data confirms <b>Suno scraped millions of songs from YouTube, Deezer, and Genius</b> without consent — a direct hit to every musician whose catalog sits on those platforms.",
         "secs": 10,
-        "impact": 7,
+        "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_99a19263a8c15f19",
-        "html": "OpenAI entered hardware with the <b>$230 Codex keyboard</b>, a Work Louder co-design featuring a reasoning-level dial to manage multiple simultaneous AI coding agents.",
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "<b>Houdini 22 adds native Gaussian Splat creation, editing, and animation</b> — no third-party plugins needed — a significant upgrade for VFX artists and procedural creators.",
         "secs": 10,
-        "impact": 6,
+        "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_18de27eea197aabe",
-        "html": "Hugging Face released <b>Real World VoiceEQ, a new benchmark measuring human perception of voice AI quality</b> — useful for audio creators evaluating TTS and voice-clone tools.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_b4c19111324a67ee",
-        "html": "New iOS app Reelful <b>turns your camera roll into polished TikToks and Reels automatically</b> — no editing skills required, aimed at creators who find traditional tools too complex.",
+        "story": "s_230cdabf888d5a7c",
+        "html": "The real skill gap in AI image work has <b>shifted from prompting to directing</b> — and knowing the difference is what separates working artists from hobbyists right now.",
         "secs": 9,
-        "impact": 5,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": true
+      },
+      {
+        "story": "s_c0ac8f261d4797a3",
+        "html": "Concept artist Daniel Porto shows how <b>experienced creative judgment — not prompting — is the real edge</b> when using AI to accelerate professional image work.",
+        "secs": 9,
+        "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_569d5689452ac2df",
-        "html": "George Lucas said <b>there is nothing you can do about AI in filmmaking</b>, comparing its disruption to the shift from horses to automobiles — a signal of how far industry acceptance has moved.",
+        "story": "s_aa32e1edecf76be3",
+        "html": "AI startups are <b>rushing low-budget AI-generated films straight to digital release</b>, reviving direct-to-video economics — a signal of where the video generation market is already heading.",
         "secs": 10,
-        "impact": 5,
+        "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Wednesday, July 15 — six things that changed today",
-    "date": "2026-07-16T01:58:15.303Z",
-    "edition": "pm"
+    "title": "Wednesday, July 15 — six things creators need to know",
+    "date": "2026-07-16T03:38:24.542Z",
+    "edition": "am"
   },
   "stories": [
     {

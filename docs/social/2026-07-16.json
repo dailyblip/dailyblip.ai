@@ -1,11 +1,71 @@
 {
   "date": "2026-07-16",
-  "image": "2026-07-16.png",
-  "caption": "AI startups are pulling a page from the 90s B-movie playbook — rush out a low-budget knockoff while the blockbuster is still hot, pocket the algorithmic search traffic, repeat. The Verge reports that AI-generated direct-to-video films are already operating on that exact economic logic, with studios using text-to-video tools to churn out content timed to tentpole releases. It's less 'future of cinema' and more 'Sharknado with a GPU.'\n\nFull story + today's brief: link in bio.\n\n#AIVideo #GenerativeAI #AIFilm #DirectToVideo #AICreators #CreatorEconomy",
-  "story": {
-    "title": "AI startups release direct-to-video generated films as cash-grab strategy",
-    "dek": "An AI startup is capitalizing on blockbuster hype by rushing out AI-generated films directly to digital release, mirroring decades-old direct-to-video B-movie economics.",
-    "src": "The Verge AI",
-    "url": "https://www.theverge.com/entertainment/965616/ash-koosha-odysseus-the-fall-foundtain-zero-tilly-norwood"
-  }
+  "posts": [
+    {
+      "index": 1,
+      "image": "2026-07-16-1.png",
+      "caption": "Mira Murati's Thinking Machines Lab just dropped Inkling — a 975B-parameter open-weight model trained on 45 trillion tokens across text, image, audio, and video. It's a mixture-of-experts architecture that reasons natively across all four modalities, not just text with bolt-on vision. Open weights. Multimodal from the ground up. This one's worth a close look.\n\nFull story + today's brief: link in bio.\n\n#AINews #OpenSource #MultimodalAI #ThinkingMachines #MiraMurati #GenerativeAI",
+      "story": {
+        "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
+        "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/"
+      }
+    },
+    {
+      "index": 2,
+      "image": "2026-07-16-2.png",
+      "caption": "Suno's training data just got a lot more specific. Leaked documents reveal the AI music generator pulled millions of songs from YouTube, Deezer, and Genius — without disclosed consent from the platforms or the artists behind them. The fair use fight in AI music just got a paper trail.\n\nFull story + today's brief: link in bio.\n\n#AIMusic #Suno #AIRights #MusicIndustry #ArtificialIntelligence",
+      "story": {
+        "title": "Suno trained on millions of scraped songs from YouTube, Deezer, Genius",
+        "dek": "Leaked data reveals the AI music generator sourced training material from major platforms without disclosed consent, raising fair use questions for creators and platforms.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack"
+      }
+    },
+    {
+      "index": 3,
+      "image": "2026-07-16-3.png",
+      "caption": "SideFX just dropped Houdini 22, and the headline feature is native Gaussian Splatting — no plugins, no workarounds. You can create, edit, and animate 3D Gaussian Splats directly inside Houdini for the first time, alongside a redesigned UI and workflow upgrades across VFX, game dev, and procedural art. Big release for anyone working at the intersection of real-world capture and CG pipelines.\n\nFull story + today's brief: link in bio.\n\n#Houdini #GaussianSplatting #VFX #3D #AITools #ProceduralArt",
+      "story": {
+        "title": "Houdini 22 adds native Gaussian Splatting support and redesigned UI",
+        "dek": "SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.",
+        "src": "80 Level",
+        "url": "https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/"
+      }
+    },
+    {
+      "index": 4,
+      "image": "2026-07-16-4.png",
+      "caption": "Prompt literacy is table stakes now. The creators actually doing interesting work with AI image tools have shifted into a different mode entirely — less \"generate this thing\" and more \"here's the vision, let's iterate until we get there.\" The craft isn't in the words you type. It's in knowing what you're looking for and how to get there.\n\nFull story + today's brief: link in bio\n\n#AIArt #GenerativeAI #AICreators #Midjourney #CreativeAI #DigitalArt",
+      "story": {
+        "title": "The Best AI Artists Aren't Prompting. They're Directing.",
+        "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
+        "src": "dailyblip",
+        "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html"
+      }
+    },
+    {
+      "index": 5,
+      "image": "2026-07-16-5.png",
+      "caption": "Concept artist Daniel Porto has been building a creative vision for 20 years — AI is finally letting him execute it at the speed he thinks. His take: prompting isn't the skill that matters. Experienced judgment about *what's worth making* is what separates serious creatives from the noise. Full story + today's brief: link in bio.\n\n#AIart #conceptart #AItools #generativeAI #creativeindustry",
+      "story": {
+        "title": "Concept artist Daniel Porto accelerates 20 years of vision with AI",
+        "dek": "Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.",
+        "src": "Creative Bloq AI",
+        "url": "https://www.creativebloq.com/3d/ai-has-amplified-my-20-years-of-experience-believes-concept-artist-daniel-porto"
+      }
+    },
+    {
+      "index": 6,
+      "image": "2026-07-16-6.png",
+      "caption": "The direct-to-video B-movie playbook is back — this time powered by AI. Startups are rushing out AI-generated films timed to blockbuster hype cycles, skipping theaters entirely and going straight to digital. It's a decades-old cash-grab strategy, just with a much lower production budget and a text prompt.\n\nFull story + today's brief: link in bio\n\n#AIfilm #generativevideo #AIstartups #directtovideo #AIcreators",
+      "story": {
+        "title": "AI startups release direct-to-video generated films as cash-grab strategy",
+        "dek": "An AI startup is capitalizing on blockbuster hype by rushing out AI-generated films directly to digital release, mirroring decades-old direct-to-video B-movie economics.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/entertainment/965616/ash-koosha-odysseus-the-fall-foundtain-zero-tilly-norwood"
+      }
+    }
+  ]
 }
