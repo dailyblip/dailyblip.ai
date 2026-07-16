@@ -1,66 +1,66 @@
 {
   "date": "2026-07-15",
-  "issue": 231,
+  "issue": 232,
   "brief": {
     "items": [
       {
-        "story": "s_fe6ab2efc212fece",
-        "html": "<b>Apple Intelligence launches in China via Alibaba Qwen</b>, bringing AI writing, image, and summarization tools to iPhone and Mac users in one of the world's largest markets.",
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines drops <b>Inkling, an open 975B-parameter multimodal model</b> trained natively on text, image, audio, and video — a massive free resource for creators building multi-modal pipelines.",
+        "secs": 11,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_f8bec47bee6c00a0",
+        "html": "Leaked data confirms <b>Suno scraped millions of songs from YouTube, Deezer, and Genius</b> without disclosed consent, intensifying DMCA risk for music creators using the platform.",
         "secs": 10,
-        "impact": 7,
+        "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_b4c19111324a67ee",
-        "html": "New iOS app <b>Reelful turns your camera roll into polished TikToks and Reels automatically</b> — worth a look if you're producing short-form social video without a dedicated editor.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_18de27eea197aabe",
-        "html": "Hugging Face's <b>Real World VoiceEQ benchmark</b> gives voice AI creators a human-perception-based quality metric to evaluate outputs beyond existing specialized scores.",
-        "secs": 9,
-        "impact": 6,
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "Houdini 22 adds <b>native Gaussian Splat creation, editing, and animation</b> with no third-party tools required — a significant unlock for VFX and procedural artists.",
+        "secs": 10,
+        "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
         "story": "s_36b2bbf599ed87e0",
-        "html": "xAI is <b>suing a user for generating CSAM via Grok</b>, a landmark test of whether AI platforms bear legal liability for misuse of their generation tools.",
-        "secs": 9,
+        "html": "The xAI CSAM lawsuit has advanced: <b>xAI is now suing a specific South Carolina user</b> for bypassing Grok's safeguards, setting a direct precedent for AI platform liability.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_aa32e1edecf76be3",
+        "html": "AI startups are <b>rushing AI-generated films straight to digital release</b> as a cash-grab strategy, signaling a new direct-to-video economics era for video creators to watch.",
+        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_99a19263a8c15f19",
-        "html": "OpenAI's <b>$230 Codex keyboard with AI agent status lights</b> lets coding creators monitor multiple AI threads simultaneously — a niche but concrete workflow tool.",
-        "secs": 9,
-        "impact": 5,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
         "story": "s_230cdabf888d5a7c",
-        "html": "The real competitive edge in AI image work has <b>shifted from prompting to creative direction</b> — understanding that gap is what separates professional output from commodity content now.",
-        "secs": 10,
-        "impact": 5,
+        "html": "The real skill gap in AI image work has <b>shifted from prompting to creative direction</b> — experienced judgment, not typed inputs, now defines professional output.",
+        "secs": 9,
+        "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": true
       }
     ],
-    "title": "Wednesday, July 15 — six things creators need to know",
-    "date": "2026-07-16T03:47:47.425Z",
-    "edition": "am"
+    "title": "Wednesday, July 15 — six things that changed today",
+    "date": "2026-07-16T04:20:44.306Z",
+    "edition": "pm"
   },
   "tooldrop": {
     "name": "Review by Eddie AI",
