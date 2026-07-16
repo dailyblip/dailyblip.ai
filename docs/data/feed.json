@@ -1,11 +1,29 @@
 {
-  "issue": 227,
-  "generated_at": "2026-07-16T00:09:02.258Z",
+  "issue": 228,
+  "generated_at": "2026-07-16T01:51:00.934Z",
   "brief": {
     "items": [
       {
-        "story": "s_aa32e1edecf76be3",
-        "html": "AI startups are rushing <b>direct-to-video AI-generated films</b> to digital release, mirroring B-movie economics — a new distribution lane video creators should watch.",
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines released <b>Inkling, an open 975B-parameter multimodal model</b> trained on 45 trillion tokens across text, image, audio, and video — free to run locally.",
+        "secs": 11,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_264ddc681c98a9a5",
+        "html": "A supply-chain hack exposed code showing <b>Suno scraped YouTube, Deezer, and podcasts</b> without consent — record labels say it violates the DMCA despite Suno's fair-use defense.",
+        "secs": 10,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "<b>Houdini 22 adds native Gaussian Splat creation and animation</b> — no third-party tools needed anymore for VFX artists and procedural creators working with 3D scene capture.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -13,44 +31,35 @@
         "commentary": false
       },
       {
-        "story": "s_b4c19111324a67ee",
-        "html": "Reelful's new iOS app <b>auto-generates TikTok and Instagram Reels from your camera roll photos</b> with no editing skills required.",
+        "story": "s_fe6ab2efc212fece",
+        "html": "<b>Apple Intelligence launched in China via Alibaba's Qwen model</b>, bringing iOS/macOS AI writing and image tools to one of the world's largest creative markets.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_36b2bbf599ed87e0",
+        "html": "xAI sued a user for allegedly bypassing Grok's safeguards to generate CSAM — <b>the first AI-platform lawsuit of its kind</b>, setting a legal liability precedent for all generative tool operators.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_230cdabf888d5a7c",
+        "html": "The real skill gap has moved past prompting — <b>the creators pulling ahead are directing AI like a production</b>, not typing better sentences into a box.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_18de27eea197aabe",
-        "html": "Hugging Face's new <b>Real World VoiceEQ benchmark</b> measures human perception of voice AI output — a new quality bar for audio and voice creators to reference.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_569d5689452ac2df",
-        "html": "George Lucas says <b>'there's nothing you can do about AI' in filmmaking</b>, comparing the shift to the end of horse transport — a signal of where industry consensus is heading.",
-        "secs": 10,
-        "impact": 5,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_b7c7277aa894fd0b",
-        "html": "Ghost Font is a new typeface <b>engineered with optical illusions to defeat AI OCR and vision models</b> — a practical tool for creators protecting on-screen text from scraping.",
-        "secs": 10,
-        "impact": 5,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
+        "commentary": true
       }
     ],
     "title": "Wednesday, July 15 — six things that changed today",
-    "date": "2026-07-15T21:39:56.105Z",
+    "date": "2026-07-16T01:51:00.882Z",
     "edition": "pm"
   },
   "stories": [

@@ -1,11 +1,29 @@
 {
   "date": "2026-07-15",
-  "issue": 227,
+  "issue": 228,
   "brief": {
     "items": [
       {
-        "story": "s_aa32e1edecf76be3",
-        "html": "AI startups are rushing <b>direct-to-video AI-generated films</b> to digital release, mirroring B-movie economics — a new distribution lane video creators should watch.",
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines released <b>Inkling, an open 975B-parameter multimodal model</b> trained on 45 trillion tokens across text, image, audio, and video — free to run locally.",
+        "secs": 11,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_264ddc681c98a9a5",
+        "html": "A supply-chain hack exposed code showing <b>Suno scraped YouTube, Deezer, and podcasts</b> without consent — record labels say it violates the DMCA despite Suno's fair-use defense.",
+        "secs": 10,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "<b>Houdini 22 adds native Gaussian Splat creation and animation</b> — no third-party tools needed anymore for VFX artists and procedural creators working with 3D scene capture.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -13,44 +31,35 @@
         "commentary": false
       },
       {
-        "story": "s_b4c19111324a67ee",
-        "html": "Reelful's new iOS app <b>auto-generates TikTok and Instagram Reels from your camera roll photos</b> with no editing skills required.",
+        "story": "s_fe6ab2efc212fece",
+        "html": "<b>Apple Intelligence launched in China via Alibaba's Qwen model</b>, bringing iOS/macOS AI writing and image tools to one of the world's largest creative markets.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_36b2bbf599ed87e0",
+        "html": "xAI sued a user for allegedly bypassing Grok's safeguards to generate CSAM — <b>the first AI-platform lawsuit of its kind</b>, setting a legal liability precedent for all generative tool operators.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_230cdabf888d5a7c",
+        "html": "The real skill gap has moved past prompting — <b>the creators pulling ahead are directing AI like a production</b>, not typing better sentences into a box.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_18de27eea197aabe",
-        "html": "Hugging Face's new <b>Real World VoiceEQ benchmark</b> measures human perception of voice AI output — a new quality bar for audio and voice creators to reference.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_569d5689452ac2df",
-        "html": "George Lucas says <b>'there's nothing you can do about AI' in filmmaking</b>, comparing the shift to the end of horse transport — a signal of where industry consensus is heading.",
-        "secs": 10,
-        "impact": 5,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_b7c7277aa894fd0b",
-        "html": "Ghost Font is a new typeface <b>engineered with optical illusions to defeat AI OCR and vision models</b> — a practical tool for creators protecting on-screen text from scraping.",
-        "secs": 10,
-        "impact": 5,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
+        "commentary": true
       }
     ],
     "title": "Wednesday, July 15 — six things that changed today",
-    "date": "2026-07-15T21:39:56.105Z",
+    "date": "2026-07-16T01:51:00.882Z",
     "edition": "pm"
   },
   "tooldrop": {
@@ -61,22 +70,6 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stories": [
-    {
-      "id": "s_230cdabf888d5a7c",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "The Best AI Artists Aren't Prompting. They're Directing.",
-      "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html",
-      "ts": "2026-07-15T21:11:15.982Z",
-      "read": "3 min",
-      "also": []
-    },
     {
       "id": "s_976a1a3eff5f1d7b",
       "cat": "tools",
@@ -91,9 +84,78 @@
       "ts": "2026-07-15T18:04:06.000Z",
       "read": "4 min",
       "also": [],
-      "top": true,
-      "heat": 116,
-      "move": 56
+      "heat": 113,
+      "move": 0,
+      "top": true
+    },
+    {
+      "id": "s_cce1dcce4c530f32",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Microsoft trains salespeople to position in-house AI models against OpenAI and Anthropic",
+      "dek": "Microsoft executives outlined a strategy for the sales team to highlight efficiency and cost advantages of its own AI models in competitive pitches against rivals, marking a shift in the company's go-to-market approach.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/15/microsoft-is-reportedly-training-salespeople-to-talk-down-openai-and-anthropic/",
+      "ts": "2026-07-15T23:59:44.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 49
+    },
+    {
+      "id": "s_89c9f7f3ade42756",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Most enterprise 'AI agents' remain chatbot wrappers despite orchestration ambitions",
+      "dek": "Survey of 101 enterprises shows agent deployments are consolidating on model-provider platforms like Claude, but in practice most deployed systems are still basic conversational interfaces lacking true multi-step control.",
+      "src": "VentureBeat AI",
+      "url": "https://venturebeat.com/ai/agentic-orchestration-enterprise-ai-organizations-have-a-deployment-problem-not-a-platform-problem-and-most-are-calling-chatbots-agents",
+      "ts": "2026-07-15T22:24:17.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 72,
+      "move": 26
+    },
+    {
+      "id": "s_36b2bbf599ed87e0",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "xAI sues user for allegedly using Grok to generate child sexual abuse material",
+      "dek": "The Elon Musk-owned xAI filed a lawsuit against a South Carolina man accused of bypassing safeguards to generate and distribute CSAM using the Grok chatbot, testing legal liability for AI platform operators.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/966293/xai-grok-user-lawsuit-csam",
+      "ts": "2026-07-15T21:33:20.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 99,
+      "move": 54
+    },
+    {
+      "id": "s_230cdabf888d5a7c",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Best AI Artists Aren't Prompting. They're Directing.",
+      "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15.html",
+      "ts": "2026-07-15T21:11:15.982Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 51
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -109,8 +171,8 @@
       "ts": "2026-07-15T20:16:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": 39
+      "heat": 80,
+      "move": -3
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -126,8 +188,8 @@
       "ts": "2026-07-15T20:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 48
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -143,8 +205,8 @@
       "ts": "2026-07-15T19:41:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 101,
-      "move": 51
+      "heat": 98,
+      "move": -1
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -161,8 +223,8 @@
       "ts": "2026-07-15T18:01:46.915Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 50
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -178,8 +240,8 @@
       "ts": "2026-07-15T17:48:01.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 109,
-      "move": -1
+      "heat": 106,
+      "move": 0
     },
     {
       "id": "s_d173222f3e599859",
@@ -196,8 +258,8 @@
       "ts": "2026-07-15T17:45:15.948Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": -4
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -213,8 +275,8 @@
       "ts": "2026-07-15T17:29:41.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 81,
-      "move": -5
+      "heat": 77,
+      "move": -10
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -230,8 +292,8 @@
       "ts": "2026-07-15T17:27:01.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 81,
-      "move": -5
+      "heat": 77,
+      "move": -10
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -247,8 +309,8 @@
       "ts": "2026-07-15T17:00:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 108,
-      "move": -1
+      "heat": 105,
+      "move": 0
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -264,8 +326,8 @@
       "ts": "2026-07-15T16:20:18.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
-      "move": -3
+      "heat": 84,
+      "move": -7
     },
     {
       "id": "s_18de27eea197aabe",
@@ -281,8 +343,8 @@
       "ts": "2026-07-15T16:00:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -8
+      "heat": 66,
+      "move": -11
     },
     {
       "id": "s_84777b05d9b25937",
@@ -298,8 +360,8 @@
       "ts": "2026-07-15T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 69,
-      "move": -8
+      "heat": 66,
+      "move": -11
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -315,8 +377,8 @@
       "ts": "2026-07-15T15:29:33.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 104,
-      "move": -1
+      "heat": 100,
+      "move": 0
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -332,8 +394,8 @@
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 88,
-      "move": -5
+      "heat": 85,
+      "move": -2
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -349,8 +411,8 @@
       "ts": "2026-07-15T15:00:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 68,
-      "move": 23
+      "heat": 65,
+      "move": -11
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -366,8 +428,8 @@
       "ts": "2026-07-15T13:10:47.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 67,
-      "move": -13
+      "heat": 63,
+      "move": -4
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -383,8 +445,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 76,
-      "move": -13
+      "heat": 73,
+      "move": -3
     },
     {
       "id": "s_110aa69c02571475",
@@ -400,8 +462,8 @@
       "ts": "2026-07-15T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 66,
-      "move": -13
+      "heat": 63,
+      "move": -4
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -417,8 +479,8 @@
       "ts": "2026-07-15T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": -7
+      "heat": 80,
+      "move": -3
     },
     {
       "id": "s_569d5689452ac2df",
@@ -434,8 +496,8 @@
       "ts": "2026-07-15T11:09:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -6
+      "heat": 79,
+      "move": -3
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -451,8 +513,8 @@
       "ts": "2026-07-15T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 64,
-      "move": -8
+      "heat": 61,
+      "move": -4
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -468,8 +530,8 @@
       "ts": "2026-07-15T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": -5
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -485,8 +547,8 @@
       "ts": "2026-07-15T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -5
+      "heat": 75,
+      "move": -10
     },
     {
       "id": "s_210f6726bf4a719a",
@@ -502,82 +564,14 @@
       "ts": "2026-07-15T00:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": 29
-    },
-    {
-      "id": "s_7218bca86f1b347e",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "OpenAI developing screenless AI speaker with physical movement",
-      "dek": "OpenAI's first hardware product is reportedly a mobile smart speaker with mechanical elements designed to function as a ChatGPT-powered home companion.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/",
-      "ts": "2026-07-14T22:22:24.000Z",
-      "read": "3 min",
-      "also": [],
       "heat": 70,
       "move": -4
-    },
-    {
-      "id": "s_2175a7f109e222f7",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "OpenAI denies merit in Apple trade secret lawsuit",
-      "dek": "OpenAI responded to Apple's allegations that it poached employees to steal confidential information, stating the complaint lacks evidence.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/",
-      "ts": "2026-07-14T22:07:42.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 59,
-      "move": -14
-    },
-    {
-      "id": "s_3e68f8ee554f3c0b",
-      "cat": "tools",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "GPT-5.6 Sol deleting user files without consent, widespread reports",
-      "dek": "Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
-      "ts": "2026-07-14T21:50:11.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 86,
-      "move": -4
-    },
-    {
-      "id": "s_f6d4f1f66693b6a8",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Apple releases iOS 27 public beta with revamped AI-powered Siri",
-      "dek": "Apple's redesigned Siri assistant is now available in public beta ahead of fall launch, marking the first broad test of its AI overhaul against competitors like ChatGPT and Gemini.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta/",
-      "ts": "2026-07-14T19:42:27.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -8
     }
   ],
   "stats": {
-    "scanned_last_run": 11,
+    "scanned_last_run": 6,
     "published_today": 28,
     "sources_live": 14,
-    "slopped_last_run": 5
+    "slopped_last_run": 3
   }
 }
