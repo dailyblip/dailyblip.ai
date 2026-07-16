@@ -4,7 +4,7 @@
     {
       "index": 1,
       "image": "2026-07-16-1.png",
-      "caption": "Apple Intelligence is officially live in China — powered by Alibaba's Qwen AI model across iOS, iPadOS, macOS, and visionOS. China's regulators approved the integration, clearing the path for Apple's biggest AI market expansion yet. This is the partnership that gets Apple into one of the world's largest mobile markets.\n\nFull story + today's brief: link in bio.\n\n#AppleIntelligence #Alibaba #AINews #TechNews #GenerativeAI #China",
+      "caption": "Apple Intelligence is now live in China — made possible by a partnership with Alibaba's Qwen AI model, which cleared China's regulatory approval process. The feature rolls out across iOS, iPadOS, macOS, and visionOS, giving Apple a foothold in one of its most critical markets.\n\nFull story + today's brief: link in bio.\n\n#AppleIntelligence #Apple #Alibaba #AINews #TechNews #ArtificialIntelligence",
       "story": {
         "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
         "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
@@ -15,7 +15,7 @@
     {
       "index": 2,
       "image": "2026-07-16-2.png",
-      "caption": "Reelful just launched on iOS — drop in your photos and clips, and its AI spits out finished short-form videos ready for TikTok or Reels. No timeline scrubbing, no manual cuts. It's aimed squarely at people who want polished output without learning an editor.\n\nFull story + today's brief: link in bio.\n\n#AIVideo #ShortFormContent #Reelful #CreatorTools #AIApps",
+      "caption": "Reelful is a new iOS app that pulls photos and clips straight from your camera roll and uses AI to edit them into finished short-form videos — no timeline, no manual cuts. It's aimed at people who want TikTok- and Reels-ready content without learning traditional editing tools.\n\nFull story + today's brief: link in bio.\n\n#AIVideo #ShortFormVideo #ReelfulApp #VideoEditing #AITools #TikTok",
       "story": {
         "title": "Reelful automates short-form video creation from camera roll photos",
         "dek": "New iOS app uses AI to turn photos and clips into polished TikTok and Instagram Reels, targeting users who find traditional editing tools too complex.",
@@ -26,7 +26,7 @@
     {
       "index": 3,
       "image": "2026-07-16-3.png",
-      "caption": "Hugging Face just dropped Real World VoiceEQ — a new benchmark designed to measure how humans actually perceive voice AI output. Most existing metrics optimize for technical accuracy; this one targets the thing that matters in production: does it sound good to a real listener? As voice AI capabilities accelerate, evaluation frameworks are finally catching up.\n\nFull story + today's brief: link in bio.\n\n#HuggingFace #VoiceAI #AIBenchmark #GenerativeAI #AITools",
+      "caption": "Hugging Face just dropped Real World VoiceEQ, a new benchmark designed to measure how humans actually perceive voice AI output — not just what the numbers say.\n\nMost existing metrics miss the subjective feel of synthesized speech. VoiceEQ pushes evaluation closer to real listener experience, which matters a lot as voice AI quality races ahead.\n\nFull story + today's brief: link in bio.\n\n#HuggingFace #VoiceAI #AIBenchmark #SpeechAI #GenerativeAI",
       "story": {
         "title": "Hugging Face releases Real World VoiceEQ benchmark for voice AI quality",
         "dek": "New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.",
@@ -37,7 +37,7 @@
     {
       "index": 5,
       "image": "2026-07-16-5.png",
-      "caption": "OpenAI just went hardware. Their new Codex keyboard — built with Work Louder — has customizable keys and a physical dial that tracks your AI coding agent's reasoning level in real time. $230, and it's their first real swing at a physical AI workspace product.\n\nFull story + today's brief: link in bio.\n\n#OpenAI #AItools #Codex #developertools #AIhardware",
+      "caption": "OpenAI just dropped a $230 mechanical keyboard — actual hardware, not software. Built with Work Louder, it has customizable keys and a physical dial that controls your AI coding agent's reasoning level, with status lights that show what the agent is doing in real time.\n\nFull story + today's brief: link in bio.\n\n#OpenAI #AITools #Codex #MechanicalKeyboard #AIAgents #DeveloperTools",
       "story": {
         "title": "OpenAI releases $230 Codex keyboard with AI agent status lights",
         "dek": "OpenAI entered hardware with a specialty keyboard co-designed with Work Louder, featuring customizable keys and a reasoning-level dial for managing AI coding agents.",
@@ -48,7 +48,7 @@
     {
       "index": 6,
       "image": "2026-07-16-6.png",
-      "caption": "The prompt era is over. The artists pulling ahead aren't better at describing images — they're thinking like directors: shot composition, lighting logic, iterative refinement, visual narrative. The skill gap has quietly moved from \"can you generate\" to \"can you see.\"\n\nFull story + today's brief: link in bio.\n\n#AIart #generativeAI #AIcreators #Midjourney #digitalart #creativetechnology",
+      "caption": "Typing a prompt isn't the skill anymore — it hasn't been for a while. The AI artists pulling ahead aren't better at describing things, they're better at directing: making decisions about light, composition, intent, and iteration the way a filmmaker does, not a search engine user. The craft moved. Most people didn't.\n\nFull story + today's brief: link in bio.\n\n#AIart #generativeAI #AIcreators #digitalart #creativeAI",
       "story": {
         "title": "The Best AI Artists Aren't Prompting. They're Directing.",
         "dek": "Everyone with a browser can type a prompt. That stopped being impressive about five minutes after Midjourney launched. The real skill gap has moved somewhere else entirely.",
