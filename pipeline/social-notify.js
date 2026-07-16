@@ -1,9 +1,10 @@
 // pipeline/social-notify.js — runs AFTER the "Commit" step in daily.yml,
-// on purpose: it reads today's already-saved image+caption (written by
-// social.js) and creates a GitHub Issue referencing the image's live URL.
-// Running this after commit+push means that URL has actually had a chance
-// to go live by the time anyone opens the issue/email, rather than linking
-// to something that doesn't exist yet.
+// on purpose: it reads today's already-saved post options (written by
+// social.js — one image+caption per brief item, up to 6) and creates a
+// single GitHub Issue listing all of them, referencing each image's live
+// URL. Running this after commit+push means those URLs have actually had
+// a chance to go live by the time anyone opens the issue/email, rather
+// than linking to something that doesn't exist yet.
 //
 // Uses the built-in GITHUB_TOKEN and GITHUB_REPOSITORY that GitHub Actions
 // provides automatically — no new secret needed for this part, only for
@@ -15,6 +16,21 @@ import path from "node:path";
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GITHUB_REPOSITORY = process.env.GITHUB_REPOSITORY; // "owner/repo"
 const SITE_URL = process.env.SITE_URL || "https://dailyblip.ai";
+
+function renderPost(p) {
+  const imageUrl = `${SITE_URL}/social/${p.image}`;
+  return `### Option ${p.index}
+![option ${p.index}](${imageUrl})
+
+**[Open the image](${imageUrl})** — on mobile, long-press to save; on desktop, right-click → Save Image.
+
+**Caption — copy everything in the box below**
+\`\`\`
+${p.caption}
+\`\`\`
+
+Source: **${p.story.title}** via ${p.story.src} · [read the original](${p.story.url})`;
+}
 
 async function main() {
   const today = new Date().toISOString().slice(0, 10);
@@ -30,26 +46,21 @@ async function main() {
   }
 
   const data = JSON.parse(fs.readFileSync(jsonPath, "utf8"));
-  const imageUrl = `${SITE_URL}/social/${data.image}`;
+  const posts = data.posts || [];
+  if (!posts.length) {
+    console.log("social-notify: today's social.json has no post options — nothing to notify.");
+    return;
+  }
   const [owner, repo] = GITHUB_REPOSITORY.split("/");
 
-  const title = `\uD83D\uDCF8 Today's Instagram post — ${new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}`;
-  const body = `### Image
-![today's post](${imageUrl})
+  const dateLabel = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  const title = `\uD83D\uDCF8 Today's Instagram post options (${posts.length}) — ${dateLabel}`;
+  const body = `${posts.length} post option${posts.length === 1 ? "" : "s"} generated from today's brief — pick whichever fits, download the image, copy the caption, post.
 
-**[Open the image](${imageUrl})** — on mobile, long-press to save; on desktop, right-click → Save Image.
-
-### Caption — copy everything in the box below
-\`\`\`
-${data.caption}
-\`\`\`
-
-### Source story
-**${data.story.title}**
-via ${data.story.src} · [read the original](${data.story.url})
+${posts.map(renderPost).join("\n\n---\n\n")}
 
 ---
-*Generated automatically. Nothing posts without you — download the image, copy the caption, post whenever you're ready.*`;
+*Generated automatically. Nothing posts without you — download an image, copy its caption, post whenever you're ready.*`;
 
   const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/issues`, {
     method: "POST",
@@ -62,7 +73,7 @@ via ${data.story.src} · [read the original](${data.story.url})
   });
   if (!res.ok) throw new Error(`GitHub issue creation failed ${res.status}: ${(await res.text()).slice(0, 500)}`);
   const issue = await res.json();
-  console.log(`social-notify: created issue #${issue.number} — ${issue.html_url}`);
+  console.log(`social-notify: created issue #${issue.number} with ${posts.length} post option(s) — ${issue.html_url}`);
 }
 
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
