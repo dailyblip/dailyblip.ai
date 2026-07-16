@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -445,19 +446,32 @@ aside{display:flex;flex-direction:column;gap:26px}
   border:1px solid var(--line);color:var(--dim);transition:all .15s ease;
 }
 .topic:hover{border-color:var(--amber-deep);color:var(--amber)}
-.subscribe p{color:var(--dim);font-size:13px;margin-bottom:12px}
-.subscribe .row{display:flex;gap:8px}
-.subscribe input{
-  flex:1;background:var(--ink);border:1px solid var(--line);border-radius:7px;
-  padding:9px 12px;color:var(--text);font-family:var(--mono);font-size:12px;outline:none;min-width:0;
+
+/* subscribe — moved from the sidebar into the brief itself, right after
+   the six items, deliberately more prominent than the old small sidebar
+   box since this is the page's highest-engagement moment. */
+.brief-subscribe{
+  margin-top:24px;padding:22px 24px;border-radius:14px;
+  border:1px solid rgba(255,180,84,.3);
+  background:linear-gradient(120deg,rgba(255,180,84,.07),var(--ink-2) 65%);
+  display:flex;align-items:center;gap:22px;flex-wrap:wrap;
 }
-.subscribe input:focus{border-color:var(--aqua)}
-.subscribe button{
-  background:var(--amber);color:#20160a;font-weight:600;font-size:13px;
-  border-radius:7px;padding:9px 16px;transition:filter .15s;
+.bs-copy{flex:1;min-width:220px}
+.bs-head{font-family:var(--display);font-weight:700;font-size:17px;color:var(--text);margin-bottom:4px}
+.brief-subscribe p{color:var(--dim);font-size:13.5px;line-height:1.5}
+.bs-form{display:flex;gap:8px;flex:0 0 auto}
+.bs-form input{
+  background:var(--ink);border:1px solid var(--line-strong);border-radius:8px;
+  padding:11px 14px;color:var(--text);font-family:var(--mono);font-size:13px;outline:none;min-width:200px;
+  transition:border-color .15s ease;
 }
-.subscribe button:hover{filter:brightness(1.1)}
-.sub-ok{display:none;color:var(--aqua);font-family:var(--mono);font-size:12px;margin-top:10px}
+.bs-form input:focus{border-color:var(--amber-deep)}
+.bs-form button{
+  background:var(--amber);color:#20160a;font-weight:700;font-size:13.5px;
+  border-radius:8px;padding:11px 20px;white-space:nowrap;transition:filter .15s ease;
+}
+.bs-form button:hover{filter:brightness(1.1)}
+.sub-ok{display:none;color:var(--aqua);font-family:var(--mono);font-size:12.5px;margin-top:12px;width:100%}
 
 /* ---------- footer ---------- */
 footer{
@@ -531,6 +545,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
       <div class="brief-progress">
         <div class="pbar"><i id="pbarFill"></i></div>
         <div class="pstat" id="pstat"></div>
+      </div>
+
+      <!-- Subscribe — moved here from the sidebar on purpose: this is the
+           moment someone has just gotten real value from the six things,
+           the highest-engagement point on the whole page. -->
+      <div class="brief-subscribe">
+        <div class="bs-copy">
+          <div class="bs-head">Get tomorrow's blip</div>
+          <p>One email, 6 a.m. daily. What changed in your creative stack — and nothing else.</p>
+        </div>
+        <form class="bs-form" id="subForm" data-buttondown="">
+          <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+          <button type="submit" id="subBtn">Get it</button>
+        </form>
+        <div class="sub-ok" id="subOk">✓ You're on the list. First blip lands tomorrow.</div>
       </div>
     </div>
     <div class="scope" aria-hidden="true">
@@ -622,16 +651,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
         <h4>one year ago today</h4>
         <div class="tooldrop-body" id="yaBody"></div>
         <div class="tooldrop-meta"><a id="yaLink" href="#">read that day's blip →</a></div>
-      </div>
-      <div class="panel subscribe">
-        <h4>the blip, in your inbox</h4>
-        <p>One email, 6 a.m. daily. What changed in your creative stack — and nothing else.</p>
-        <!-- Set data-buttondown to your Buttondown username to go live -->
-        <form class="row" id="subForm" data-buttondown="">
-          <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
-          <button type="submit" id="subBtn">Get it</button>
-        </form>
-        <div class="sub-ok" id="subOk">✓ You're on the list. First blip lands tomorrow.</div>
       </div>
     </aside>
   </div>
