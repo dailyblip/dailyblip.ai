@@ -1,12 +1,14 @@
 // pipeline/social.js — generates today's Instagram-ready image + caption
-// from the brief's #1 impact story. Runs BEFORE the "Commit" step in
-// daily.yml (deliberately) so the generated file gets swept into the same
-// commit as everything else — the separate social-notify.js step runs
-// AFTER commit+push, so by the time it references the image's live URL,
-// that URL has actually had a chance to go live. Splitting generate/notify
-// across the commit boundary avoids shipping a GitHub Issue with a broken
-// image link, the same class of "referenced something before it existed"
-// problem we spent a while chasing with the sitemap CDN this week.
+// for EVERY item in the day's 6-point brief (not just the #1 impact
+// story), so you get 6 post options to choose from each morning. Runs
+// BEFORE the "Commit" step in daily.yml (deliberately) so the generated
+// files get swept into the same commit as everything else — the separate
+// social-notify.js step runs AFTER commit+push, so by the time it
+// references each image's live URL, that URL has actually had a chance
+// to go live. Splitting generate/notify across the commit boundary avoids
+// shipping a GitHub Issue with broken image links, the same class of
+// "referenced something before it existed" problem we spent a while
+// chasing with the sitemap CDN this week.
 //
 // SETUP REQUIRED (one-time):
 //   1. Add OPENAI_API_KEY as a GitHub repo secret.
@@ -16,7 +18,8 @@
 //      permission-looking error, that's almost certainly why, not a bug
 //      in this script.
 //   3. Costs real money per image (small — a few cents at current
-//      pricing — but non-zero, and ongoing since this runs daily).
+//      pricing — but non-zero, and now 6x per day since every brief item
+//      gets its own image, not just the top story).
 //
 // GRACEFUL DEGRADATION: if OPENAI_API_KEY isn't set, this skips cleanly
 // (same pattern as BUTTONDOWN_API_KEY being optional) rather than failing
@@ -68,12 +71,17 @@ const AMBER = "#FFB454";
 const RED = "#FF7A6B"; // breaking-story accent, same logic as the card template
 const DARKTXT = "#20160a";
 
-function pickTopStory(feed) {
+// Returns one {story, briefItem} pair per brief item, in the brief's own
+// (already curated/ranked) order — not re-sorted by impact, since "6
+// options to post" should mirror the actual brief a reader would see.
+function pickAllBriefStories(feed) {
   const items = feed.brief?.items || [];
-  if (!items.length) return null;
-  const top = [...items].sort((a, b) => (b.impact ?? 0) - (a.impact ?? 0))[0];
-  const story = feed.stories.find((s) => s.id === top.story);
-  return story ? { story, briefItem: top } : null;
+  const picks = [];
+  for (const item of items) {
+    const story = feed.stories.find((s) => s.id === item.story);
+    if (story) picks.push({ story, briefItem: item });
+  }
+  return picks;
 }
 
 // Your art-direction brief, filled in per-story. Asks the model to attempt
@@ -276,31 +284,61 @@ async function main() {
     return;
   }
   const feed = loadFeed();
-  const picked = pickTopStory(feed);
-  if (!picked) {
+  const picks = pickAllBriefStories(feed);
+  if (!picks.length) {
     console.log("social: no brief items to pick from — skipping.");
     return;
   }
-  const { story, briefItem } = picked;
-  console.log(`social: picked "${story.title.slice(0, 60)}" (impact ${briefItem.impact})`);
-
-  const bg = await generateBackgroundImage(story);
-  const finalImage = await overlayBrand(bg, story);
-  const caption = await writeCaption(story);
+  console.log(`social: generating ${picks.length} post option(s) from today's brief.`);
 
   const dir = "docs/social";
   fs.mkdirSync(dir, { recursive: true });
   const today = new Date().toISOString().slice(0, 10);
-  const imagePath = path.join(dir, `${today}.png`);
-  fs.writeFileSync(imagePath, finalImage);
+  const results = [];
+
+  // Sequential on purpose, not Promise.all — each call is a real charge
+  // against OPENAI_API_KEY, and OpenAI's image endpoint rate-limits per
+  // org, so firing 6 at once risks 429s more than 6 in a row costs in
+  // wall-clock time (a couple extra minutes on a job that runs once a
+  // day is a non-issue).
+  for (let i = 0; i < picks.length; i++) {
+    const { story, briefItem } = picks[i];
+    const n = i + 1;
+    try {
+      console.log(`social: [${n}/${picks.length}] "${story.title.slice(0, 60)}" (impact ${briefItem.impact})`);
+      const bg = await generateBackgroundImage(story);
+      const finalImage = await overlayBrand(bg, story);
+      const caption = await writeCaption(story);
+
+      const imageFile = `${today}-${n}.png`;
+      fs.writeFileSync(path.join(dir, imageFile), finalImage);
+
+      results.push({
+        index: n,
+        image: imageFile,
+        caption,
+        story: { title: story.title, dek: story.dek, src: story.src, url: story.url },
+      });
+    } catch (e) {
+      // One story failing (flaky image gen, transient API error) shouldn't
+      // cost you the other 5 options — log it and move on, same
+      // graceful-degradation spirit as the missing-API-key skip above.
+      console.warn(`social: [${n}/${picks.length}] failed, skipping this one: ${e.message}`);
+    }
+  }
+
+  if (!results.length) {
+    console.log("social: every story failed to generate — nothing written.");
+    return;
+  }
 
   // Save everything social-notify.js needs, so that step doesn't have to
   // regenerate or re-derive anything — just read this and post it.
   fs.writeFileSync(
     path.join(dir, `${today}.json`),
-    JSON.stringify({ date: today, image: `${today}.png`, caption, story: { title: story.title, dek: story.dek, src: story.src, url: story.url } }, null, 2) + "\n"
+    JSON.stringify({ date: today, posts: results }, null, 2) + "\n"
   );
-  console.log(`social: wrote ${imagePath} and ${today}.json`);
+  console.log(`social: wrote ${results.length}/${picks.length} post option(s) to ${dir}/${today}.json`);
 }
 
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
