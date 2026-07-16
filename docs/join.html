@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,6 @@ body{
   min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
   padding:32px 22px;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden;
 }
-/* soft ambient glow, same treatment as the rest of the site */
 body::before{
   content:"";position:fixed;top:-20%;right:-20%;width:70%;height:70%;
   background:radial-gradient(circle, rgba(255,180,84,.10), transparent 70%);pointer-events:none;
@@ -40,9 +40,6 @@ h1{font-family:var(--display);font-weight:750;font-size:clamp(24px,7vw,30px);let
 h1 .amber{color:var(--amber)}
 .sub{color:var(--dim);font-size:15.5px;line-height:1.5;margin-bottom:30px}
 
-/* today's signal — dynamic, fetched client-side, gives a real reason to
-   subscribe right now instead of an abstract promise, and lets a visitor
-   actually taste the real content without leaving this page */
 .today-signal{
   border:1px solid var(--line-strong);border-radius:12px;padding:16px 18px;margin-bottom:22px;
   text-align:left;background:rgba(158,216,210,.02);display:none;
@@ -121,8 +118,6 @@ button:hover{filter:brightness(1.08)}
 <script>
 const $ = s => document.querySelector(s);
 
-/* Same Buttondown integration as the main site — set data-buttondown to
-   your username above to go live. */
 $("#subForm").addEventListener("submit", async e => {
   e.preventDefault();
   const email = $("#subEmail").value;
@@ -147,27 +142,35 @@ $("#subForm").addEventListener("submit", async e => {
   $("#subOk").style.display = "block";
 });
 
-/* Today's real headlines — same fetch pattern as the main site, shows
-   a genuine taste of live content (top 3) right on this page, so a
-   visitor gets real value here even before deciding whether to click
-   through to the full site or subscribe. Fails silently and hides the
-   block if feed.json isn't reachable. */
+// Same live-fetch pattern as the main site, plus the same graceful-
+// degradation the main site already has: if the fetch fails for ANY
+// reason — feed.json briefly down, or this page being previewed
+// locally as a file:// URL, which browsers block fetch() from
+// entirely as a security restriction — show real-looking sample
+// headlines instead of just hiding the block. A vanished section reads
+// as "broken"; sample content reads as "still loading/preview mode."
+const FALLBACK_HEADLINES = [
+  "Thinking Machines releases Inkling, an open 975B-param multimodal model",
+  "Houdini 22 adds native Gaussian Splat creation and editing",
+  "Apple Intelligence launches in China via Alibaba Qwen partnership",
+];
+
 (async function loadTodaySignal() {
+  let headlines = FALLBACK_HEADLINES;
   try {
     const res = await fetch("/data/feed.json", { cache: "no-store" });
-    if (!res.ok) return;
-    const data = await res.json();
-    const stories = (data.stories || []).slice().sort((a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0)).slice(0, 3);
-    if (stories.length) {
-      $("#todayHeadlines").innerHTML = stories.map(s => `<div class="item">${s.title.replace(/</g,"&lt;")}</div>`).join("");
-      $("#todaySignal").style.display = "block";
+    if (res.ok) {
+      const data = await res.json();
+      const stories = (data.stories || []).slice().sort((a, b) => (b.top ? 1 : 0) - (a.top ? 1 : 0)).slice(0, 3);
+      if (stories.length) headlines = stories.map(s => s.title);
     }
-  } catch {}
+  } catch (e) {
+    console.warn("today's signal: live fetch failed, showing sample headlines instead —", e.message);
+  }
+  $("#todayHeadlines").innerHTML = headlines.map(t => `<div class="item">${t.replace(/&/g,"&amp;").replace(/</g,"&lt;")}</div>`).join("");
+  $("#todaySignal").style.display = "block";
 })();
 
-/* Track clicks through to the full site as their own event, distinct
-   from a subscribe conversion — lets Plausible show which path people
-   actually take from this landing page. */
 document.querySelector(".btn-secondary")?.addEventListener("click", () => {
   if (window.plausible) plausible("Explore Feed Click", { props: { source: "instagram-landing" } });
 });
