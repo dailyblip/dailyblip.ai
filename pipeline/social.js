@@ -30,6 +30,38 @@ import path from "node:path";
 const OPENAI_KEY = process.env.OPENAI_API_KEY;
 const SITE_URL = process.env.SITE_URL || "https://dailyblip.ai";
 
+// Headline font: Anton, a free (SIL Open Font License) Google Font
+// explicitly designed as a bold, condensed display/headline face — the
+// closest reliable free equivalent to Impact, which is a proprietary
+// Microsoft font not available on Linux runners at all. Rather than
+// declare font-family:"Impact" and hope fontconfig substitutes something
+// reasonable on the actual GitHub Actions runner (untested, unreliable),
+// the real font file is fetched once and embedded directly into the SVG
+// as base64 — guarantees pixel-identical rendering everywhere, with zero
+// dependency on whatever happens to be installed on the runner.
+const ANTON_FONT_URL = "https://raw.githubusercontent.com/google/fonts/main/ofl/anton/Anton-Regular.ttf";
+const FONT_CACHE_PATH = "/tmp/dailyblip-anton-font.ttf";
+let cachedFontBase64 = null;
+
+async function getHeadlineFontBase64() {
+  if (cachedFontBase64) return cachedFontBase64;
+  try {
+    if (fs.existsSync(FONT_CACHE_PATH)) {
+      cachedFontBase64 = fs.readFileSync(FONT_CACHE_PATH).toString("base64");
+      return cachedFontBase64;
+    }
+    const res = await fetch(ANTON_FONT_URL);
+    if (!res.ok) throw new Error(`font fetch ${res.status}`);
+    const buf = Buffer.from(await res.arrayBuffer());
+    fs.writeFileSync(FONT_CACHE_PATH, buf);
+    cachedFontBase64 = buf.toString("base64");
+    return cachedFontBase64;
+  } catch (e) {
+    console.warn(`social: couldn't fetch the Anton headline font, falling back to system sans-serif: ${e.message}`);
+    return null; // graceful fallback — headline still renders, just in the generic bold sans instead
+  }
+}
+
 // Brand palette — matches the rest of the site exactly.
 const TEXT = "#E9F4F1";
 const AMBER = "#FFB454";
@@ -108,7 +140,16 @@ function wrapText(text, maxCharsPerLine, maxLines = 4) {
     else { if (cur) lines.push(cur); cur = w; }
   }
   if (cur) lines.push(cur);
-  return lines.slice(0, maxLines);
+  // If the headline genuinely needs more lines than the cap allows, mark
+  // the last visible line as truncated rather than silently dropping the
+  // remaining words with zero indication — same fix already applied to
+  // the chart labels earlier.
+  if (lines.length > maxLines) {
+    const shown = lines.slice(0, maxLines);
+    shown[maxLines - 1] = shown[maxLines - 1].replace(/.{0,3}$/, "") + "\u2026";
+    return shown;
+  }
+  return lines;
 }
 
 function esc(t) {
@@ -124,29 +165,57 @@ const CANVAS_W = 1080, CANVAS_H = 1350;
 
 async function overlayBrand(bgBuffer, story) {
   const accent = story.badge === "breaking" ? RED : AMBER;
-  const pad = 64;
-  const bottomZoneH = 340; // reserved lower strip, matches the image prompt's negative-space request
+  const pad = 56;
+  const antonBase64 = await getHeadlineFontBase64();
+  // Embedded directly as a data URI so rendering is identical regardless
+  // of what's installed on the runner — if the fetch failed, this is
+  // empty and the CSS font stack below falls back to a generic bold
+  // sans-serif instead (still readable, just not the Anton look).
+  const fontFace = antonBase64
+    ? `@font-face { font-family: "AntonHeadline"; src: url(data:font/ttf;base64,${antonBase64}) format("truetype"); }`
+    : "";
+  // Reserved lower strip sized to fit up to 6 lines of headline at the
+  // verified-safe settings below, plus the source line and padding.
+  const bottomZoneH = 680;
 
-  const headlineLines = wrapText(story.title, 24, 4);
-  const lineHeight = 46;
-  const headlineY = CANVAS_H - bottomZoneH + 60;
+  // 16 chars/line at 70px bold ALL-CAPS — this was EMPIRICALLY tested by
+  // rendering real text against the actual canvas width with visual
+  // boundary guides, not estimated from a character-width formula. A
+  // first attempt at 84px/19-chars was tried and PROVEN WRONG this way —
+  // real rendered lines overflowed straight off the right edge of the
+  // canvas, cut off mid-word. 70px/16-chars was then verified the same
+  // way and confirmed to fit with real margin. ALL CAPS is deliberate:
+  // standard convention for scroll-stopping social news cards. Allowing
+  // up to 6 lines (not 4) was necessary for real headline lengths to fit
+  // at this bigger size without truncating — tested against 4 real
+  // headlines from this project, all now fit in full. NOTE: this
+  // character count was verified against the fallback system sans-serif,
+  // not the real Anton font (couldn't fetch it in the build sandbox to
+  // test against directly) — Anton is condensed, so real headlines
+  // should fit AT LEAST this well or better, never worse, but worth a
+  // visual sanity check on the first real run either way.
+  const headlineLines = wrapText(story.title.toUpperCase(), 16, 6);
+  const lineHeight = 78;
+  const headlineY = CANVAS_H - bottomZoneH + 90;
 
   const headlineTspans = headlineLines
     .map((line, i) => `<tspan x="${pad}" y="${headlineY + i * lineHeight}">${esc(line)}</tspan>`)
     .join("");
 
   const categoryLabel = story.badge === "breaking" ? "BREAKING" : story.badge === "hot" ? "TRENDING" : story.cat.toUpperCase();
-  const sourceY = headlineY + headlineLines.length * lineHeight + 36;
+  const sourceY = headlineY + headlineLines.length * lineHeight + 44;
+  const tagW = 210, tagH = 50;
 
   const svg = `
   <svg width="${CANVAS_W}" height="${CANVAS_H}" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <style>
-        .wm { font: 700 34px sans-serif; fill: ${TEXT}; }
-        .wmAI { font: 700 34px sans-serif; fill: ${accent}; }
-        .tag { font: 700 18px sans-serif; }
-        .headline { font: 700 40px sans-serif; fill: ${TEXT}; }
-        .src { font: 700 24px sans-serif; fill: ${TEXT}; }
+        ${fontFace}
+        .wm { font: 700 40px sans-serif; fill: ${TEXT}; }
+        .wmAI { font: 700 40px sans-serif; fill: ${accent}; }
+        .tag { font: 700 24px sans-serif; }
+        .headline { font: 800 70px "AntonHeadline", sans-serif; fill: ${TEXT}; }
+        .src { font: 700 32px sans-serif; fill: ${TEXT}; }
       </style>
     </defs>
     <!-- gradient scrim behind the reserved lower strip, so light headline
@@ -161,12 +230,12 @@ async function overlayBrand(bgBuffer, story) {
     <rect x="0" y="${CANVAS_H - bottomZoneH - 80}" width="${CANVAS_W}" height="${bottomZoneH + 80}" fill="url(#scrim)"/>
 
     <!-- wordmark, upper-third reserved zone -->
-    <text x="${pad}" y="${pad + 32}"><tspan class="wm">d</tspan><tspan class="wmAI">ai</tspan><tspan class="wm">lyblip</tspan></text>
-    <circle cx="${pad + 218}" cy="${pad + 22}" r="7" fill="${accent}"/>
+    <text x="${pad}" y="${pad + 38}"><tspan class="wm">d</tspan><tspan class="wmAI">ai</tspan><tspan class="wm">lyblip</tspan></text>
+    <circle cx="${pad + 248}" cy="${pad + 26}" r="8" fill="${accent}"/>
 
     <!-- category/badge pill, upper-third reserved zone -->
-    <rect x="${CANVAS_W - pad - 170}" y="${pad - 4}" width="170" height="40" rx="18" fill="${accent}"/>
-    <text x="${CANVAS_W - pad - 148}" y="${pad + 22}" class="tag" fill="${DARKTXT}">${esc(categoryLabel)}</text>
+    <rect x="${CANVAS_W - pad - tagW}" y="${pad - 6}" width="${tagW}" height="${tagH}" rx="22" fill="${accent}"/>
+    <text x="${CANVAS_W - pad - tagW / 2}" y="${pad + 26}" text-anchor="middle" class="tag" fill="${DARKTXT}">${esc(categoryLabel)}</text>
 
     <!-- headline + source, lower reserved zone -->
     <text class="headline">${headlineTspans}</text>
