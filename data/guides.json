@@ -78,8 +78,8 @@
   },
   {
     "id": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "Getting start creating AI music",
       "article_type": "Beginner explainer",
@@ -440,6 +440,8 @@
     "overridden_warnings": [
       "s2: The article says downloads were disabled due to a UMG settlement, but the Chartlex source reports the settlement is with UMG and that a re-enabled licensed service is expected; the framing implies downloads are permanently disabled rather than temporarily suspended pending a new licensed platform launch, which is misleading about the nature of the situation.",
       "s2: The article attributes the Udio download-disabled claim partly to Chartlex citing Billboard and RouteNote, but the Chartlex source states it was confirmed against Udio's own help center — misrepresenting the sourcing chain for a significant factual claim."
-    ]
+    ],
+    "published_at": "2026-07-17T18:10:36.986Z",
+    "published_url": "https://dailyblip.ai/guides/ai-music-beginners-guide-first-track.html"
   }
 ]
