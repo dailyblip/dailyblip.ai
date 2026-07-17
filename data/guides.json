@@ -621,8 +621,8 @@
   },
   {
     "id": "5f971072-9942-49e9-96e9-b1582364e33b",
-    "status": "queued",
-    "stage": "Fact-checking",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Musicians quick start guide to AI",
       "article_type": "Practical guide",
@@ -634,7 +634,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:13:47.478Z",
-    "updated_at": "2026-07-17T15:18:34.019Z",
+    "updated_at": "2026-07-17T15:21:51.454Z",
     "brief": {
       "target_reader": "Independent musicians and producers who are curious about AI tools but have little or no hands-on experience with them. Includes singer-songwriters, beatmakers, bedroom producers, and band members working without a label or large budget. Skeptical of hype, time-constrained, and primarily interested in tools that fit into real music-making workflows.",
       "reader_outcome": "The reader should be able to identify which AI music tools are relevant to their specific workflow (composition, lyrics, vocals, mixing, mastering, sound design, or distribution), set up and run at least one tool in a practical session, and evaluate tradeoffs between free and paid options before committing time or money.",
@@ -1006,6 +1006,144 @@
       "conclusion": "AI tools are practical additions to an independent music workflow in specific, limited ways. The gap between what the demos show and what you can release is real, and the legal framework around copyright, voice cloning, and training data is still being written. The musicians who get the most out of these tools right now are the ones who treat them as fast-iteration assistants, apply their own taste and judgment to every output, and read the actual terms of service before distributing anything. Start with one tool, in one part of your workflow, and evaluate honestly whether it's saving you time or just adding another thing to manage.",
       "methodology_disclosure": "This guide was synthesized from official pricing and terms-of-service pages for Suno, Udio, iZotope Ozone 12, LANDR, and ElevenLabs (all accessed July 2026), supplemented by independent reporting from Dynamoi and Music Make AI on commercial rights and distributor policies, and legal commentary from GrowthStackKit on voice cloning law. Adobe Research's official project page was used for claims about Project Music GenAI Control and Generate Soundtrack. Claims about Melodyne, Splice AI tools, and open-source model usability could not be verified within the available source set and are either omitted or flagged as requiring independent verification. The legislative status of US federal AI voice legislation was flagged as contested across sources and no specific claim about its passage is made. Pricing figures are drawn from official sources where available; readers should confirm current pricing directly with each provider before purchasing, as subscription pricing changes frequently. This guide does not reflect hands-on testing by dailyblip.",
       "last_reviewed_date": "July 17, 2026"
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Free: 50 credits/day (~10 songs), non-commercial use only.",
+          "issue": "The source (Suno pricing page, accessed July 2026) supports this claim, but the article later references a Warner Music Group settlement in November 2025 that would trigger download restrictions for free-tier users. If those download restrictions have already taken effect, the free-tier description is incomplete — free users may already be limited to stream/share only, not download. The Dynamoi source states 'free-tier users will lose download ability (stream/share only)' as a planned consequence of the settlement, but the article does not clarify whether this has already been implemented or is still forthcoming as of July 2026. The s3 tool card also omits this restriction from the free-tier description.",
+          "recommended_replacement": "Clarify whether the WMG-settlement-triggered download restriction for Suno free-tier users has already taken effect as of July 2026 or is still pending. If it has taken effect, update the free-tier description to note that free-tier songs are stream/share only with no download. The tool card limitations should also note this if applicable.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Pro: $10/month (or $8/month annually), 2,500 credits/month, commercial use rights for songs generated while subscribed.",
+          "issue": "The Dynamoi source notes that as part of the WMG settlement, paid users will have monthly download caps imposed. The article does not mention this restriction anywhere in the Suno Pro description, which could mislead producers who assume Pro gives unlimited downloads. This is a meaningful limitation for the article's core audience.",
+          "recommended_replacement": "Add a note that the WMG settlement may impose monthly download caps on paid-tier users; verify current download allowances at suno.com/pricing before subscribing if download volume is a workflow requirement.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "Post its October 2025 UMG settlement, Udio disabled all user downloads and stems, operating as a streaming-only platform. A re-enabled download feature was expected later in 2026 but had not shipped as of June 2026.",
+          "issue": "The source for this claim is the Music Make AI blog (musicmake.ai), which is an independent third-party commentary site, not Udio's official terms or an official Udio announcement. The article presents this as a verified fact, but it is sourced from a single non-primary independent report whose own last-accessed date for Udio's terms was June 15, 2026. The article's own methodology disclosure acknowledges using independent reporting for Udio commercial rights. This should be flagged as independently reported, not confirmed directly from Udio, since the Udio official pricing page listed as a source does not contain information about download restrictions.",
+          "recommended_replacement": "Qualify this claim: 'According to independent reporting as of June 2026, Udio disabled all user downloads and stems following an October 2025 UMG settlement, operating as a streaming-only platform. A re-enabled download feature was expected later in 2026 but had not shipped as of that reporting. Verify current download availability directly at udio.com before subscribing.'",
+          "supporting_source_url": "https://musicmake.ai/blog/udio-terms-of-service-commercial-use-2026"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Udio's commercial rights terms are also described by independent analysts as more complex and harder to act on.",
+          "issue": "The phrase 'independent analysts' implies multiple sources, but the sole source for this characterization is one blog post (Music Make AI). This is vague attribution that overstates the number of sources and creates a false impression of consensus.",
+          "recommended_replacement": "Change to 'according to independent reporting (Music Make AI, June 2026)' or remove the vague 'independent analysts' framing and cite the specific source.",
+          "supporting_source_url": "https://musicmake.ai/blog/udio-terms-of-service-commercial-use-2026"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "Important: Fully AI-generated music from Suno does not currently qualify for copyright protection in the US, per Suno's own documentation, because a human did not write the lyrics or music.",
+          "issue": "The article attributes this statement to 'Suno's own documentation,' but the source for this claim is the Dynamoi third-party blog, which quotes Suno's documentation. The actual Suno pricing page listed as a primary source does not contain this copyright statement. Citing Suno's own documentation based on a secondary source's quotation is an attribution error — the article should cite the Dynamoi source as relaying Suno's documentation, or find and cite the actual Suno help/legal page directly.",
+          "recommended_replacement": "Attribute to: 'per Suno's documentation, as reported by Dynamoi' or locate and cite the actual Suno help center or terms page that contains this language directly.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s5",
+          "original_text": "Free-plan music users are prohibited from distributing on major streaming platforms including Spotify, Apple Music, Amazon Music, and Pandora.",
+          "issue": "This claim is supported by the ElevenLabs terms of service source, which is a primary source — this is correctly sourced. However, the article omits that the ElevenLabs free plan also prohibits commercial use generally (not just streaming distribution), which is a broader restriction that matters for musicians using outputs in monetized videos, sync licensing, etc. The omission could lead readers to think the only restriction is streaming platform distribution.",
+          "recommended_replacement": "Add: 'Free-plan music users are also prohibited from any commercial use of outputs, not only streaming distribution. This includes monetized video, sync licensing, and any use tied to revenue generation.'",
+          "supporting_source_url": "https://elevenlabs.io/terms-of-use"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s5",
+          "original_text": "Paid plans (Starter at $5/month and above) grant commercial use rights for generated audio retained permanently for already-generated content, even after cancellation.",
+          "issue": "The ElevenLabs terms source supports the perpetual license claim for already-generated content. However, the article does not mention that ElevenLabs retains a 'perpetual, irrevocable, royalty-free license to use uploaded voice data to train and improve models' — a significant term for musicians uploading their own voice. This is listed in the tool card limitations but is absent from the body text where the license benefits are described, creating an imbalanced picture in the narrative section.",
+          "recommended_replacement": "Add alongside the perpetual license benefit: 'Note that ElevenLabs also retains a perpetual, irrevocable, royalty-free license to use any voice data you upload to train and improve its models.'",
+          "supporting_source_url": "https://elevenlabs.io/terms-of-use"
+        },
+        {
+          "severity": "low",
+          "section_id": "s5",
+          "original_text": "current exact per-tier generation limits for the Music product were not fully verifiable at publication and you should confirm at elevenlabs.io/music-terms before committing.",
+          "issue": "The URL 'elevenlabs.io/music-terms' is used twice in the article (here and in s11) but does not appear in the sources list and is not confirmed as a real URL. The methodology disclosure does not flag this URL as unverified. It may redirect to the main terms page or may not resolve. This is a potentially invented-looking link.",
+          "recommended_replacement": "Replace 'elevenlabs.io/music-terms' with the verified URL from the sources list: 'elevenlabs.io/terms-of-use' and note that specific Music Terms are linked from that page, or verify that the music-terms URL resolves correctly before publication.",
+          "supporting_source_url": "https://elevenlabs.io/terms-of-use"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s6",
+          "original_text": "iZotope Ozone 12 Advanced is priced at $499 full price, with loyalty/upgrade pricing for existing iZotope customers and subscription access reported at around $19.99/month via Native Instruments.",
+          "issue": "The $19.99/month subscription figure is sourced from the iZotope official product page, but the source entry describes this as 'reported ~$19.99/month via iZotope/NI subscription' — the word 'reported' in the source itself signals uncertainty. The article body presents it without qualification. If this is approximate or unverified, it should be flagged as approximate in the body text as well, with a recommendation to verify.",
+          "recommended_replacement": "Change to: 'subscription access is available via Native Instruments (approximately $19.99/month — verify current pricing at izotope.com before purchasing, as subscription pricing changes frequently).'",
+          "supporting_source_url": "https://www.izotope.com/products/ozone-advanced"
+        },
+        {
+          "severity": "low",
+          "section_id": "s6",
+          "original_text": "Paid tiers run approximately $12.99/month (Essentials, unlimited MP3) to $24.99/month (Pro, unlimited WAV/HD WAV)",
+          "issue": "The LANDR source confirms these pricing tiers but notes three tiers (Essentials, Standard, Pro), with the article skipping Standard in the body narrative. This is not incorrect but may be misleading for readers who see only the endpoints and assume there are only two paid options.",
+          "recommended_replacement": "Add: 'Three paid tiers exist — Essentials (~$12.99/month, unlimited MP3), Standard (unlimited WAV), and Pro (~$24.99/month, unlimited WAV/HD WAV) — though current pricing should be confirmed at landr.com/pricing/master.'",
+          "supporting_source_url": "https://www.landr.com/online-audio-mastering"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s7",
+          "original_text": "Adobe's Generate Soundtrack (announced at Adobe MAX 2025, public beta) uses the Firefly Audio Model to create instrumental tracks synced to video inside Premiere Pro.",
+          "issue": "The Adobe Research source confirms Generate Soundtrack was 'announced at Adobe MAX 2025 in public beta' and is distinct from Project Music GenAI Control. However, the article does not clarify whether Generate Soundtrack is still in public beta as of July 2026 or has reached general availability. Recommending a beta product in the s11 use-case stack without noting its beta status in s7 body text (only in s11) creates inconsistency and could mislead readers about stability.",
+          "recommended_replacement": "Add in s7 body: 'As of the Adobe MAX 2025 announcement, Generate Soundtrack was in public beta; its current availability status (beta or general release) should be verified at adobe.com before relying on it for a commercial project.'",
+          "supporting_source_url": "https://research.adobe.com/video/project-music-genai-control/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s8",
+          "original_text": "TuneCore does not accept 100% AI-generated tracks (policy tightened since July 2025). AI-assisted music with significant human creative input is accepted with disclosure.",
+          "issue": "The source for this claim is the Dynamoi blog (independent reporting), not TuneCore's official terms or policy page. TuneCore's parent company is noted as Believe (in the DDEX paragraph), but no official TuneCore policy URL is cited. This is a consequential claim for musicians using TuneCore, and it is sourced solely from a third-party commentary site.",
+          "recommended_replacement": "Flag as: 'According to independent reporting (Dynamoi, July 2026), TuneCore does not accept 100% AI-generated tracks. Verify current policy directly at tunecore.com before uploading any AI-assisted content.'",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/distributors-that-accept-ai-music"
+        },
+        {
+          "severity": "low",
+          "section_id": "s8",
+          "original_text": "CD Baby rejects fully AI-generated content. Strictest policy among major distributors.",
+          "issue": "Same sourcing concern as TuneCore — this claim comes from the Dynamoi blog only, with no CD Baby official policy URL cited. 'Strictest policy among major distributors' is an editorial characterization based on one source. Policies at this level of consequence should be verified against official distributor documentation.",
+          "recommended_replacement": "Add qualifier: 'According to independent reporting (Dynamoi, July 2026), CD Baby rejects fully AI-generated content — verify at cdbaby.com before distributing.' Remove or soften 'strictest policy among major distributors' as an unverifiable editorial ranking.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/distributors-that-accept-ai-music"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s10",
+          "original_text": "Audio fingerprinting revealed copyrighted recordings in Suno's training data. Warner Music Group settled with Suno in November 2025; Sony Music had not settled as of mid-2026.",
+          "issue": "The Dynamoi source supports these claims. However, 'audio fingerprinting revealed copyrighted recordings in Suno's training data' is a significant legal characterization presented as established fact. The source states this in the context of a 'July 2026 summary-judgment hearing' being pending — meaning no court has ruled on this as fact; it is an allegation in ongoing litigation. Presenting it as established fact (not allegation) is legally imprecise and potentially defamatory toward Suno.",
+          "recommended_replacement": "Change to: 'Major label litigation against Suno includes allegations that audio fingerprinting revealed copyrighted recordings in its training data; as of mid-2026, a summary-judgment hearing was pending and no court had ruled on the merits. Warner Music Group settled with Suno in November 2025; Sony Music had not settled as of mid-2026.'",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "low",
+          "section_id": "intro",
+          "original_text": "AI has moved from music industry conference talk into actual producer workflows.",
+          "issue": "Generic, unsubstantiated scene-setting. Not factually wrong, but a classic example of the type of repetitive/generic writing the review pass is asked to flag. No source supports this characterization and it adds no practical value for the reader.",
+          "recommended_replacement": "Either remove or replace with a specific, sourced observation — for example, noting the number of independent musicians now using Suno or the growth of AI-generated tracks on streaming platforms.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "low",
+          "section_id": "s9",
+          "original_text": "What are the training data disclosures? Neither Suno nor Udio has made a formal public disclosure of training data. Ongoing litigation suggests copyrighted recordings were used.",
+          "issue": "Same legal precision issue as s10: 'Ongoing litigation suggests copyrighted recordings were used' presents an allegation as a factual inference. This should be framed as an allegation, not a suggestion of established fact.",
+          "recommended_replacement": "Change to: 'Neither Suno nor Udio has made a formal public disclosure of training data. Ongoing litigation includes allegations that copyrighted recordings were used — no court ruling on this has been issued as of mid-2026.'",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        }
+      ],
+      "checked_at": "2026-07-17T15:19:54.949Z"
+    },
+    "error": {
+      "stage": "factcheck",
+      "message": "askJSON: unparseable JSON for prompt starting: {\"article\":{\"title\":\"AI Music Tools: A Quick-Start Guide for Independent Musicians\",\"alternative_titles\":[\"Getting Start (last response was TRUNCATED — raise maxTokens for this call)",
+      "at": "2026-07-17T15:21:51.454Z"
     }
   }
 ]
