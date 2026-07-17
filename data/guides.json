@@ -622,7 +622,7 @@
   {
     "id": "5f971072-9942-49e9-96e9-b1582364e33b",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Musicians quick start guide to AI",
       "article_type": "Practical guide",
@@ -634,7 +634,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:13:47.478Z",
-    "updated_at": "2026-07-17T15:14:26.422Z",
+    "updated_at": "2026-07-17T15:16:05.608Z",
     "brief": {
       "target_reader": "Independent musicians and producers who are curious about AI tools but have little or no hands-on experience with them. Includes singer-songwriters, beatmakers, bedroom producers, and band members working without a label or large budget. Skeptical of hype, time-constrained, and primarily interested in tools that fit into real music-making workflows.",
       "reader_outcome": "The reader should be able to identify which AI music tools are relevant to their specific workflow (composition, lyrics, vocals, mixing, mastering, sound design, or distribution), set up and run at least one tool in a practical session, and evaluate tradeoffs between free and paid options before committing time or money.",
@@ -666,6 +666,178 @@
         "Distrokid, TuneCore, or similar distributor policies on distributing AI-generated music"
       ],
       "research_plan": "Prioritize official pricing and terms-of-service pages for each tool over third-party summaries, which go stale quickly. Seek out musician forums (Reddit r/WeAreTheMusicMakers, Gearslutz/Gearspace, Facebook producer groups) for real user reports on output quality and workflow friction rather than relying on company demos. For legal claims, cite primary sources: RIAA statements, US Copyright Office rulings or guidance documents, and EU AI Act text where relevant. For open-source tools, check GitHub repo activity and documentation dates to confirm whether projects are actively maintained. Avoid tool comparison articles from sites with affiliate relationships unless the methodology is disclosed and reproducible."
-    }
+    },
+    "sources": [
+      {
+        "title": "Suno Pricing (Official)",
+        "publisher": "Suno, Inc.",
+        "url": "https://suno.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno Free plan: 50 credits/day (~10 songs), non-commercial use only, access to v4.5-all model",
+          "Suno Pro plan: $10/month or $8/month annually, 2,500 credits/month, commercial use rights for songs made while subscribed, access to v5.5",
+          "Suno Premier plan: $30/month or $24/month annually, 10,000 credits/month, Suno Studio, advanced stem separation",
+          "Credits in subscriptions do not roll over; purchased top-up credits do not expire but require an active subscription",
+          "Commercial rights attach only to songs generated while the subscription is active"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Commercial Use: Rights, Ownership, and the Copyright Caveat",
+        "publisher": "Dynamoi",
+        "url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno grants paid subscribers commercial rights to stream, distribute, use in podcasts/videos/commercial projects, and sell; Suno takes 0% of royalties",
+          "Free-tier music is strictly non-commercial; Suno retains ownership of free-plan songs",
+          "Upgrading to paid does not retroactively grant commercial rights to free-tier songs",
+          "Suno's own documentation states fully AI-generated music 'would not qualify for copyright protection because a human did not write the lyrics or the music'",
+          "Warner Music Group settled with Suno in November 2025, triggering planned download restrictions: free-tier users will lose download ability (stream/share only); paid users will have monthly download caps",
+          "Sony Music had not settled as of mid-2026; a July 2026 summary-judgment hearing was pending after audio fingerprinting revealed copyrighted recordings in Suno's training data"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing — Official Page",
+        "publisher": "Udio",
+        "url": "https://www.udio.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio offers three tiers: Free (100 credits/month, 10 credits/day cap), Standard ($10/month or $8/month annually, 2,400 credits), Pro ($30/month or $24/month annually, 6,000 credits)",
+          "Add-on credit packs available: 100 credits for $3, 1,000 credits for $25; purchased credits do not expire",
+          "Annual billing saves 20%"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio 2026 Terms of Service: Commercial Use, Ownership & Rights Checklist",
+        "publisher": "Music Make AI",
+        "url": "https://musicmake.ai/blog/udio-terms-of-service-commercial-use-2026",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "As of June 15, 2026, Udio's terms page was last revised November 12, 2025",
+          "Udio's terms include restrictive provisions: Udio and/or its licensors own generated works; users may only use them for personal/non-commercial purposes unless the current plan and process permit commercial use",
+          "Commercial rights for paid tiers are present but complex — users must verify plan, process, and scope before publishing",
+          "After Udio's October 2025 UMG settlement, Udio disabled all user downloads and stems, becoming a streaming-only 'walled garden'; a fully licensed version with re-enabled downloads was expected later in 2026 but had not shipped as of June 2026",
+          "Udio's commercial use rights are particularly murky post-settlement; Suno Pro grants clearer commercial rights and downloads at $10/month, while Udio reserves commercial use for its $30/month Pro tier — and even then downloads are disabled"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "iZotope Ozone 12 Advanced — Official Product Page",
+        "publisher": "iZotope / Native Instruments",
+        "url": "https://www.izotope.com/products/ozone-advanced",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "iZotope Ozone 12 Advanced is priced at $499 (full price); loyalty/upgrade pricing available to existing iZotope customers",
+          "Ozone 12 comes in three tiers: Elements (entry-level, AI-led), Standard (14 modules), and Advanced (20 modules, full AI workflow suite)",
+          "Ozone 12 Advanced includes AI-powered Master Assistant with Custom flow, new modules: Bass Control, Stem EQ, and Unlimiter",
+          "Subscription access also available (reported ~$19.99/month via iZotope/NI subscription)",
+          "Ozone is a DAW plugin (AAX, AU, VST3), not a standalone cloud mastering service; it requires the user to work inside a DAW"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "LANDR Mastering — Official Site",
+        "publisher": "LANDR",
+        "url": "https://www.landr.com/online-audio-mastering",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "LANDR offers three paid subscription tiers: Essentials, Standard, and Pro",
+          "All three paid tiers offer unlimited MP3 online mastering; Standard and Pro also include WAV mastering and the LANDR Mastering Plugin",
+          "LANDR's free tier in 2026 is preview-only: unlimited uploads and browser previews, but every download requires payment",
+          "Entry paid pricing approximately $12.99/month (Essentials, unlimited MP3) to $24.99/month (Pro, unlimited WAV/HD WAV)",
+          "Free-tier trial outputs are watermarked with an audible noise burst, making them unusable for distribution"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "ElevenLabs Terms of Service (non-EEA) + Music Terms",
+        "publisher": "ElevenLabs",
+        "url": "https://elevenlabs.io/terms-of-use",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "ElevenLabs free plan users may only use outputs for non-commercial purposes; commercial use requires a paid plan (Starter $5/month and above)",
+          "Paid plan users receive a commercial license for generated audio, including music/vocal outputs, retained perpetually for already-generated content even after cancellation",
+          "ElevenLabs explicitly has a Music product ('Eleven Music') with its own Music Terms; free-plan Music users are prohibited from distributing on Spotify, Apple Music, Amazon Music, and Pandora",
+          "Paid Music plans (Starter, Creator, Pro, Scale, Business) prohibit use in offline TV/radio/film, live broadcasts with large audiences, and music libraries of 100+ outputs intended for third-party licensing",
+          "ElevenLabs prohibits cloning public figures' voices without consent and has suspended accounts for violations",
+          "ElevenLabs retains a perpetual, irrevocable, royalty-free license to use uploaded voice data to train and improve models, but commits not to commercialize a user's voice on a standalone basis without permission"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI Voice Cloning Legal Status — US and EU (2026)",
+        "publisher": "GrowthStackKit / Chartlex (corroborated by multiple independent legal commentary sources)",
+        "url": "https://growthstackkit.com/what-is-ai-voice-cloning-and-is-it-legal/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "There is no single US federal law banning AI voice cloning outright as of 2026; the NO FAKES Act has been introduced but not yet passed; the TAKE IT DOWN Act targets nonconsensual intimate deepfakes, not voice cloning generally",
+          "US voice cloning is governed by a patchwork of state right-of-publicity laws; Tennessee's ELVIS Act was the first to explicitly name AI voice replicas; at least 12 states have passed similar legislation",
+          "Cloning someone else's voice without permission is actionable under US right-of-publicity law and/or applicable state statutes",
+          "In the EU, a person's voice is personal data under GDPR, requiring a lawful basis (typically consent) to clone; the EU AI Act (fully applicable August 2026) adds obligations to label AI-generated audio and treat synthetic voice generation as high-risk in mass-media/political contexts",
+          "ElevenLabs and similar platforms shift legal responsibility to the user: users must own or have explicit consent from the voice owner before cloning"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Distributors That Accept AI Music: 6 Yes, 2 No (2026)",
+        "publisher": "Dynamoi",
+        "url": "https://dynamoi.com/learn/ai-music-distribution/distributors-that-accept-ai-music",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "DistroKid accepts AI-generated music with mandatory disclosure at upload; no cap on number of AI tracks; does not apply different pipeline treatment to disclosed AI tracks; runs automated AI detection — undisclosed AI content is flagged for review or removed",
+          "TuneCore has explicitly stated a policy of not accepting '100% AI-generated tracks' (policy tightened since July 2025); accepts AI-assisted music with significant human creative input; requires attribution disclosure and data licensing assurance",
+          "CD Baby rejects fully AI-generated content outright — the strictest policy among major distributors",
+          "LANDR (as distributor) accepts AI music but caps uploads at 12 AI-generated songs per calendar month per subscriber, requires disclosure, and excludes AI content from YouTube Content ID, Meta, TikTok, Deezer, Pandora, and Tencent",
+          "Six major distributors accept AI-generated music in 2026: DistroKid, RouteNote, UnitedMasters, LANDR, Amuse, and Symphonic",
+          "The DDEX AI disclosure standard is being rolled out through distributors (DistroKid, TuneCore parent Believe, CD Baby, Amuse, RouteNote, and Soundrop all signed the Spotify AI transparency initiative as of April 2026)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Project Music GenAI Control — Adobe Research",
+        "publisher": "Adobe Research",
+        "url": "https://research.adobe.com/video/project-music-genai-control/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Project Music GenAI Control is an early-stage research tool, not a commercially available product as of mid-2026; it was previewed in February 2024 but has not been integrated into any shipping Adobe application",
+          "The tool allows text-prompt music generation with fine-grained control over the output (intensity, length, loops, genre)",
+          "Adobe has not publicly disclosed the training data used for Project Music GenAI Control; a spokesperson stated Adobe 'has always taken a proactive approach in ensuring we are innovating responsibly' but declined to share model details",
+          "A separate, commercially available Adobe generative audio feature — 'Generate Soundtrack' — was announced at Adobe MAX 2025 in public beta, using the Firefly Audio Model to create licensed instrumental tracks synced to video inside Premiere Pro; this is distinct from Project Music GenAI Control"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Pricing and feature scope of Melodyne's AI-assisted pitch editing versus manual mode — no search was conducted for Melodyne specifically due to source budget constraints; the writer should verify current pricing at Celemony's official site (celemony.com) before publishing",
+      "Current pricing and capabilities of Splice AI tools for sample generation — not searched due to source budget constraints; verify at splice.com directly",
+      "Whether Meta's MusicGen or other open-source models are practically usable without coding knowledge — not searched due to source budget constraints; the usability question is also editorial/subjective and depends on user technical level",
+      "Training data disclosure status for Suno and Udio — both companies have faced litigation partly over undisclosed training data; Suno's audio fingerprinting revealed copyrighted recordings (per Billboard, cited in independent sources), but neither company has made a formal public training data disclosure; treat any specific claim about disclosed training datasets as unverified for Suno and Udio",
+      "Training data disclosure for Adobe Project Music GenAI Control — Adobe explicitly declined to disclose training data details to press (Gizmodo, 2024); no subsequent disclosure found",
+      "Whether the NO FAKES Act has actually passed — one source (VoGen) claims it passed in late 2025, but another legal analysis source (GrowthStackKit, updated July 2026) says it 'has been introduced but not passed'; the writer should verify the current legislative status of the NO FAKES Act before publishing any claim about it being law",
+      "Exact current LANDR paid plan pricing — official LANDR pricing page returned no parseable price data in the crawl; independent sources cite $9–$39/month range depending on tier, but the writer should confirm current pricing at landr.com/pricing/master before publishing",
+      "ElevenLabs current Music product pricing tiers and generation minute limits — the archived v1 Music Terms include limits (e.g., free plan: 11 min/month; Starter: 30 min/month) but these are from an archived/deprecated terms page; current active Music Terms pricing table was not fully retrievable; verify at elevenlabs.io/music-terms before publishing"
+    ]
   }
 ]
