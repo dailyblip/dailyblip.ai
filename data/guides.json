@@ -79,7 +79,7 @@
   {
     "id": "3fe2d2e6-b607-4ab0-a1d1-02db8d6ccc44",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top AI tools for musicians",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:53:46.758Z",
-    "updated_at": "2026-07-17T14:54:24.521Z",
+    "updated_at": "2026-07-17T14:56:17.865Z",
     "brief": {
       "target_reader": "Independent musicians and music producers who are curious about AI tools but wary of overpromised results. Includes singer-songwriters, beatmakers, film/game composers, and bedroom producers at intermediate skill level who already use DAWs and want to know where AI genuinely fits into their workflow.",
       "reader_outcome": "The reader can identify which AI music tools are relevant to their specific production stage (composition, arrangement, mixing, mastering, vocal processing, licensing), evaluate tradeoffs between tools, and take immediate next steps to try at least one in their existing workflow.",
@@ -119,6 +119,186 @@
         "Landr mastering current pricing and quality reputation in 2024-2025"
       ],
       "research_plan": "Prioritize official terms of service and pricing pages for each tool over third-party summaries, since these change frequently. Check US Copyright Office official statements and any 2024-2025 rulings on AI-generated music ownership. Look for hands-on reviews from music production communities such as Reddit r/WeAreTheMusicMakers, Gearspace, and music technology press (MusicRadar, Sound On Sound, Attack Magazine) for real-world quality assessments rather than vendor claims. Verify DAW-native AI features from official release notes or developer blogs, not press speculation. For licensing and copyright, cross-reference Electronic Frontier Foundation commentary and any recent legal cases involving AI music tools."
-    }
+    },
+    "sources": [
+      {
+        "title": "Suno Pricing Page",
+        "publisher": "Suno, Inc.",
+        "url": "https://suno.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno has three tiers: Free ($0, 50 credits/day, ~10 songs/day), Pro ($10/month or $8/month annually, 2,500 credits/month), and Premier ($30/month or $24/month annually, 10,000 credits/month). Commercial use limitations exist — see terms of service.",
+          "Purchased top-up credits require an active subscription to use.",
+          "Credits included in subscriptions do not carry over between billing periods."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Commercial Use 2026: Rights and Ownership Guide",
+        "publisher": "TechJack Solutions (independent analysis citing Suno ToS and help documentation)",
+        "url": "https://techjacksolutions.com/ai-tools/suno/suno-commercial-use/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Free-tier songs are non-commercial only; Suno retains ownership of free-plan songs.",
+          "Pro and Premier plans include commercial licensing; commercial rights are identical across both paid tiers.",
+          "Suno's ToS states: 'due to the nature of machine learning, Suno makes no representation or warranty to you that any copyright will vest in any Output.'",
+          "Suno grants users a broad, worldwide, perpetual, irrevocable, sublicensable license back to submitted content for model training.",
+          "Commercial rights attach only to songs generated while a paid subscription is active; retroactive rights for free-plan songs are not granted.",
+          "In November 2025, Suno reached a $500 million settlement with Warner Music Group and announced a licensing partnership. Sony had not settled as of March 2026.",
+          "RIAA sued Suno and Udio in June 2024, seeking up to $150,000 in statutory damages per work.",
+          "Suno is building new AI models trained on licensed music; current v5.x models are expected to be deprecated in 2026."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing Page (verified via direct browser review, June 15, 2026)",
+        "publisher": "Uncharted Labs / Udio",
+        "url": "https://www.udio.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio has three tiers: Free ($0, 100 credits/month with 10/day cap), Standard ($10/month or $8/month annually, 2,400 credits), and Pro ($30/month or $24/month annually, 6,000 credits).",
+          "Add-on credit packs available: 100 credits for $3, 1,000 credits for $25; purchased credits never expire.",
+          "Commercial rights on Udio require a paid Standard or Pro plan; free tier is restricted to non-commercial use.",
+          "Following October 2025 UMG settlement and November 2025 WMG settlement, Udio moved toward a 'walled garden' model where users stream rather than freely download outputs — reshaping what a subscription buys."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AIVA Terms of Service / License Agreement",
+        "publisher": "AIVA Technologies SARL",
+        "url": "https://www.aiva.ai/legal/1",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "AIVA grants one of three license types upon download depending on the user's plan: Non-Commercial License (Free tier), Limited Commercial License (Standard tier), or Full Copyright (Pro tier).",
+          "Free plan: non-commercial use only, attribution to AIVA required, copyright owned by AIVA.",
+          "Standard plan: social media monetization allowed (YouTube, Twitch, TikTok, Instagram), attribution required.",
+          "Pro plan: full copyright ownership transferred to user, unlimited commercial use, no attribution required.",
+          "Enterprise: custom licensing available.",
+          "Free plan allows up to 3 downloads/month, MP3 and MIDI formats; Pro plan allows up to 300 downloads/month including WAV and stems.",
+          "AIVA is registered as a composer with SACEM (French/Luxembourg authors' rights society)."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "SOUNDRAW Music Licensing & Legal Use FAQ",
+        "publisher": "SOUNDRAW, Inc.",
+        "url": "https://docs.channel.io/soundraw-faq/en/categories/Music-Licensing--Legal-Use-acb280d9",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "SOUNDRAW retains neighboring rights (rights to sound recordings) for all AI-generated music. Users are granted a royalty-free license to use tracks in personal and commercial projects.",
+          "Users own any creative elements they add to the music (e.g., added vocals, changed composition), but the copyright of the full AI-generated song remains with SOUNDRAW.",
+          "Users cannot register SOUNDRAW music with YouTube Content ID or claim it as their own copyrighted material.",
+          "SOUNDRAW's AI is trained exclusively on music produced in-house by SOUNDRAW's professional music producers — no scraped or third-party copyrighted works used.",
+          "All SOUNDRAW plans (Creator or Artist) allow content monetization.",
+          "Under the Artist Plan, users who add original vocals or instruments own the resulting song fully and keep 100% of recording royalties; they cannot sell or distribute SOUNDRAW beats alone."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "iZotope Ozone 11 – Why Upgrade / Official Product Page (Ozone 12 Advanced)",
+        "publisher": "iZotope / Native Instruments",
+        "url": "https://www.izotope.com/products/ozone-advanced",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Ozone is available as a perpetual standalone purchase (Elements ~$49, Standard ~$199, Advanced ~$399 for Ozone 11; Standard loyalty pricing from $129 for Ozone 12) AND as part of subscriptions/bundles (Music Production Suite 6 at $599, Mix & Master Bundle Advanced at $499, and via Native Instruments subscription).",
+          "Ozone is NOT subscription-only; it can be purchased as a one-time standalone plugin in Elements, Standard, or Advanced tiers.",
+          "All Ozone tiers include the AI Master Assistant feature; Elements is the most AI-automated; Standard and Advanced provide increasing manual control.",
+          "Ozone 12 (current version as of 2025–2026) includes Stem EQ, Bass Control, Unlimiter, and AI Master Assistant.",
+          "Ozone 11 is also available via Splice plugin rental at $9.99/month (Standard) or $19.99/month (Advanced).",
+          "Ozone runs as a standalone app and as AAX, AU, and VST3 plugins across Logic Pro, Ableton Live, FL Studio, Pro Tools, and other major DAWs."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Moises App Official Website + App Store / Google Play listings",
+        "publisher": "Moises Systems, Inc.",
+        "url": "https://moises.ai/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Moises features include: AI stem separation (vocals, drums, bass, guitar, piano, strings), chord detection/finder, pitch & tempo change, speed changer, lyric transcription, smart metronome, and AI Studio (desktop).",
+          "Free plan covers: vocals/drums/bass stem separation, chord detector, metronome, pitch shifting, BPM detection, and setlists.",
+          "Premium plan adds: unlimited AI audio separation, advanced instrument separation (lead/rhythm guitar, acoustic/electric guitar, main/background vocals), fully unlocked practice tools.",
+          "AI Studio (desktop) adds: generate instrument stems/arrangements from chord progressions, voice conversion using licensed AI voice models (royalty-free, commercially licensed), and integrated mixing/mastering.",
+          "Moises does NOT train on user-uploaded music; it trains only on licensed materials.",
+          "Moises has 70 million users and was a 2024 iPad App of the Year winner and 2025 Microsoft Store Awards winner.",
+          "AI backing track creation is achieved via stem separation (muting stems) rather than a dedicated 'AI backing track generator' — the AI Studio adds arrangement generation from chord progressions."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "US Copyright Office, Copyright and Artificial Intelligence Part 2: Copyrightability (January 29, 2025) — as analyzed by Jones Day and Congress.gov CRS",
+        "publisher": "U.S. Copyright Office / Jones Day / Congress.gov",
+        "url": "https://www.jonesday.com/en/insights/2025/02/copyrightability-of-ai-outputs-us-copyright-office-analyzes-human-authorship-requirement",
+        "source_type": "legal",
+        "is_primary": true,
+        "claims_supported": [
+          "The US Copyright Office published Part 2 of its Copyright and AI Report on January 29, 2025, addressing the copyrightability of AI-generated outputs.",
+          "Fully AI-generated outputs produced solely in response to a prompt, without further human creative intervention, are NOT copyrightable under current US law.",
+          "Human contributions to AI-generated outputs can be sufficient to constitute authorship, but must be analyzed on a case-by-case basis by Copyright Examiners.",
+          "In March 2025, the US Court of Appeals for the D.C. Circuit affirmed (Thaler v. Perlmutter) that human authorship is a bedrock requirement of copyright; the en banc rehearing petition was denied May 12, 2025.",
+          "Works created by humans with the assistance of generative AI may qualify for copyright protection depending on the nature and degree of human creative involvement.",
+          "Copyright protection, where it exists, covers only the human-authored elements — not the AI-generated portions."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Logic Pro AI Features – MusicRadar Report + Loopcloud DAW AI Comparison 2026",
+        "publisher": "MusicRadar / Loopcloud (independent reporting)",
+        "url": "https://www.musicradar.com/music-tech/apple-expands-logic-pros-ai-features-with-a-synth-player-and-a-personal-music-theory-expert-that-can-generate-chord-progressions-from-any-audio-or-midi-recording-that-you-play-it",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Logic Pro is the DAW most committed to deep, native AI integration among major DAWs, with Apple building AI directly into core creative workflows.",
+          "Logic Pro's shipped AI features include: Session Players (AI-powered drums, bass, keys, and synths), Stem Splitter, Flashback Capture, AI-powered lyric tools, and Music Understanding (iPad — uses AI-based awareness to find sounds via natural language prompts).",
+          "Logic Pro also includes a Synth Player and chord progression generation from audio/MIDI recordings (shipped as of latest version covered in January 2026 report).",
+          "Ableton Live does not lead in native AI features as of 2026; it offers flexibility for third-party AI plugin integration rather than built-in AI tools.",
+          "FL Studio received an agentic AI chatbot feature for in-DAW control (reported by MusicRadar, 2026); FL Studio Web (browser-based) launched in late 2025 beta.",
+          "Logic Pro (and its apps) are now available as part of Apple's Creator Studio subscription at $12.99/month or $129/year, in addition to individual purchase."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Best AI Mastering Plugins 2026 — LANDR coverage",
+        "publisher": "MixingGPT / AI Musicpreneur (independent review)",
+        "url": "https://mixinggpt.com/blog/best-ai-mastering-plugins-2026",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "LANDR is a cloud-only AI mastering service (not an in-DAW plugin); pricing starts from approximately $9–$11.99/month, with higher tiers unlocking unlimited masters, distribution credits, and 24-bit WAV exports.",
+          "Free LANDR preview masters are watermarked at high-quality download tier.",
+          "LANDR's mastering quality is noted as consistent across genres but can feel generic on records needing a more opinionated finish — a recurring independent observation.",
+          "LANDR is mastering-only and assumes a finished mix; it will not correct mix problems, only master them.",
+          "LANDR also offers ReHance (vocal enhancement) and Layers (instrumental generation) as part of its broader platform."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Specific current pricing for Boomy, Splice AI (as a standalone AI music product — Splice is primarily a sample marketplace/plugin rental service; 'Splice AI' as a distinct AI music generation product could not be verified as a discrete offering), Melodyne, and ElevenLabs Music — these were not researched within the available search budget and must be independently verified before publication.",
+      "ElevenLabs Music as a named public product: ElevenLabs is primarily a voice/TTS platform; whether they have launched a dedicated 'Music' product or voice-to-instrument AI tool in public availability could not be confirmed and should be verified directly at elevenlabs.io before inclusion.",
+      "Specific current pricing for Landr beyond the approximate $9–$11.99/month starting range — exact tier names and prices for 2025/2026 require verification at landr.com/pricing.",
+      "Specific current pricing for Melodyne — Celemony's Melodyne pricing tiers (Essential, Assistant, Editor, Studio) and exact current prices were not researched in this session; verify at celemony.com.",
+      "Moises 'AI backing tracks' as a named feature: Moises enables backing-track-style use via stem muting and AI Studio arrangement generation from chord progressions, but does not market a discrete feature explicitly called 'AI backing tracks' — the brief's framing should be softened to reflect how the feature actually works.",
+      "AIVA exact monthly/annual pricing in USD — sources cited prices in EUR (€11/month starting) and noted VAT complexity; exact USD prices should be confirmed directly at aiva.ai/pricing before publication.",
+      "Udio commercial licensing clarity post-UMG settlement: multiple sources flag that commercial-use rights for Udio remain somewhat ambiguous following the October 2025 UMG settlement and resulting 'walled garden' model change. The claim that paid Udio plans clearly include commercial rights should be softened with a note to verify current ToS at udio.com.",
+      "Suno free tier model access: some sources indicate the free plan is locked to an older model (v4.5-all) while paid plans access v5.5 — the exact model available on the free tier at publication time should be verified at suno.com/pricing as this changes frequently."
+    ]
   }
 ]
