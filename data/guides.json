@@ -736,7 +736,7 @@
   {
     "id": "4770dfcc-f47d-4137-aab8-cd902678c1ad",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -748,7 +748,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:52:42.937Z",
-    "updated_at": "2026-07-17T03:53:16.867Z",
+    "updated_at": "2026-07-17T03:54:50.018Z",
     "brief": {
       "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for professional or commercial work and want to choose a tool based on actual capability differences, not marketing claims",
       "reader_outcome": "The reader should be able to identify which photorealistic image generation tool fits their specific workflow, budget, and quality requirements, and understand the concrete tradeoffs between at least four named tools before spending money or time on any of them",
@@ -775,6 +775,184 @@
         "Any content policy restrictions that specifically limit photorealistic human generation (faces, likeness) per platform"
       ],
       "research_plan": "Prioritize official pricing and licensing pages for each tool as primary sources. Use recent (within 6 months) community comparisons from r/StableDiffusion, r/midjourney, and AI art forums for qualitative realism assessments, flagging these as community judgment rather than objective fact. Check independent technical evaluations or side-by-side prompt tests published by AI-focused outlets (e.g., Ars Technica, The Verge, Practical AI newsletters). Avoid vendor blog posts as primary evidence for capability claims. For Stable Diffusion specifically, note that results vary significantly by model and fine-tune, so be specific about which checkpoint or pipeline is being discussed. Flag any claims about image quality as editorial judgment based on described characteristics, not dailyblip-conducted tests."
-    }
+    },
+    "sources": [
+      {
+        "title": "Comparing Midjourney Plans – Midjourney Official Documentation",
+        "publisher": "Midjourney (docs.midjourney.com)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney offers four subscription tiers: Basic ($10/mo), Standard ($30/mo), Pro ($60/mo), and Mega ($120/mo), with a 20% discount on annual billing",
+          "Stealth Mode (private generation) is only available on Pro and Mega plans",
+          "Standard, Pro, and Mega plans include unlimited image generation via Relax Mode; Pro and Mega also include unlimited Relax Mode for video",
+          "Commercial use is granted to any subscriber past or present ('If you have subscribed at any point, you are free to use your images/videos in just about any way you want')",
+          "Companies with gross annual revenue over $1,000,000 USD must use Pro or Mega plan for commercial use",
+          "There is no free tier — no free trial currently active on Midjourney"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Midjourney Pricing in 2026: Plans, GPU Hours, and What It Actually Costs",
+        "publisher": "eesel AI (eesel.ai)",
+        "url": "https://www.eesel.ai/blog/midjourney-pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney's free trial was suspended in April 2023 and has not been reinstated as of mid-2026; no free tier exists",
+          "Basic plan includes ~200 Fast GPU minutes/month (~200 image generations) with no Relax Mode",
+          "Additional Fast GPU hours can be purchased at $4/hour on Basic; other tiers require upgrade or use Relax mode",
+          "Companies over $1M gross revenue are required to use Pro or Mega for commercial work",
+          "All Midjourney tiers include commercial rights to generated images/videos even after subscription ends (confirmed against official docs)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "DALL-E 3 In 2026: What You Actually Get Before It Sunsets",
+        "publisher": "Offline Creator (offlinecreator.com)",
+        "url": "https://offlinecreator.com/tool/dall-e",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "DALL-E 3 is not available as a standalone product; it requires a ChatGPT Plus subscription ($20/month) or API access",
+          "DALL-E 3 has been deprecated in the API as of May 12, 2026 (OpenAI announced November 14, 2025); ChatGPT transitioned to GPT Image 1.5 in December 2025",
+          "DALL-E 3 maximum output resolution is 1024x1024, 1024x1792, or 1792x1024 — no native output above this",
+          "DALL-E 3 API pricing was approximately $0.040–$0.080 per image (standard to HD at 1024x1024); now deprecated at API level",
+          "OpenAI's content filters for DALL-E 3 are described as among the strictest in the market: blocking public figures, violence, and many categories flagged as potentially harmful",
+          "OpenAI terms grant users ownership of generated images including right to reprint, sell, and merchandise them"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly: Comprehensive & Commercially Safe AI Content Creation for Businesses",
+        "publisher": "Adobe (business.adobe.com)",
+        "url": "https://business.adobe.com/products/firefly-business/firefly-ai-approach.html",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe trained Firefly exclusively on content 'where we have permission or rights' — specifically Adobe Stock images, openly licensed content, and public domain material",
+          "Customers on qualifying plans are eligible for IP indemnification for generated content (terms apply)",
+          "IP indemnification is not automatic — it requires enterprise customers to purchase the appropriate entitlement through a new contracting event",
+          "Firefly outputs cannot be used to train or improve other AI/ML models",
+          "Firefly uses commercially-safe datasets and does not train on customer data",
+          "Content Credentials (provenance metadata) are automatically applied to fully Firefly-generated assets"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Commercial Use 2026: Honest Legal Guide",
+        "publisher": "Stack Sheriff (stacksheriff.com)",
+        "url": "https://stacksheriff.com/ai-tools/adobe-firefly-commercial-use/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe Firefly's free plan permits commercial use but does NOT include IP indemnification protection",
+          "Premium and Creative Cloud paid plans include full IP indemnification",
+          "Adobe's indemnity does not cover outputs generated from prompts referencing a third-party trademark, named artist, or uploaded reference images the user didn't have rights to",
+          "Firefly Standard plan is $9.99/month (2,000 premium credits); Pro is $19.99/month (4,000 credits); Premium is $199.99/month (50,000 credits); free tier exists with limited credits",
+          "Adobe's training data being clean does not automatically make trademark-infringing prompts safe — the indemnity has carve-outs",
+          "Firefly is the only mainstream consumer image generator with explicit commercial-use permission AND copyright indemnification on paid plans"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Ideogram Subscription Plans (Official Pricing Page)",
+        "publisher": "Ideogram (ideogram.ai/pricing)",
+        "url": "https://ideogram.ai/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Ideogram does not claim ownership of generated images and users are free to use them for any purpose including commercial use (per Terms of Service)",
+          "Ideogram offers a free tier with 10 free credits per week",
+          "No free trials for subscription plans are offered",
+          "Paid plan tiers exist with priority credits, private generation, and additional features depending on tier"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Ideogram Pricing 2026: Every Plan, Every Credit Cost, Every Gotcha",
+        "publisher": "eesel AI (eesel.ai)",
+        "url": "https://www.eesel.ai/blog/ideogram-pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Ideogram paid plans (as of mid-2026): Plus at $15/month (billed annually) with 1,000 priority credits; Pro at $42/month (billed annually) with 3,500 credits; annual billing saves 25–30%",
+          "Free tier provides 10 slow credits per week (reset Saturdays UTC), reduced from 10/day in January 2025 — a significant reduction that was made without announcement",
+          "Free tier images are public by default; private generation requires Plus or higher",
+          "Ideogram API is separate from subscriptions, billed per image: $0.025–$0.10 per image depending on model and quality tier",
+          "Unused subscription priority credits expire monthly with no rollover; purchased top-up credits roll over while an active paid subscription exists",
+          "Ideogram 4.0 (latest as of mid-2026) supports character reference for consistent characters across generations"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Stable Diffusion vs SDXL vs Flux: Which Image Generation Model Should You Use in 2026",
+        "publisher": "RunAI Home (runaihome.com)",
+        "url": "https://runaihome.com/blog/sd-vs-sdxl-vs-flux/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "SDXL (Stable Diffusion XL, released July 2023) operates natively at 1024×1024 and is the current community workhorse for photorealism; fine-tuned checkpoints like JuggernautXL and RealVisXL are the leading photorealism options on SDXL",
+          "Flux (by Black Forest Labs, launched August 2024) uses a flow-matching transformer architecture and outperforms both SD 1.5 and SDXL on prompt following, anatomy/hands, text rendering, and fine detail; requires ~12B parameters and ~16GB+ VRAM",
+          "SD 3.5 (released late 2024/early 2025) is technically competitive with Flux at similar parameter scale but has seen slower adoption partly due to commercial license terms (free for non-commercial use only on base weights)",
+          "For best photoreal photos on 12–16GB VRAM, SDXL with JuggernautXL or RealVisXL is the recommended community choice; for maximum quality with 24GB+ VRAM, Flux Dev is preferred",
+          "SDXL LoRA and ControlNet ecosystem is mature and widely available; Flux's ecosystem is growing but not yet as extensive"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Midjourney vs FLUX vs Ideogram v3: Which AI Image Generator Wins in 2026?",
+        "publisher": "AI Magicx (aimagicx.com)",
+        "url": "https://www.aimagicx.com/blog/midjourney-vs-flux-vs-ideogram-image-comparison-2026",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Independent comparative testing (200+ images) places FLUX 1.1 Pro as the clear leader for photorealism ('the most convincing photorealism'), Midjourney v7 as the leader for artistic/editorial/cinematic output, and Ideogram v3 as the leader for text-in-image rendering",
+          "Ideogram v3 closed much of the photorealism gap with FLUX but is 'not quite at the same level for skin texture and fine material detail' — it is described as a 'strong contender' for general-purpose photorealistic images, not a leader",
+          "Midjourney v7 produces editorial-style portraits that are 'art-directed rather than photographed' — technically impressive but less faithful to literal photographic prompts",
+          "FLUX 1.1 Pro is available through the Black Forest Labs API, fal.ai, Replicate, and as open-weights variants for self-hosting",
+          "Ideogram does not match Midjourney for outright artistic flair or FLUX for the most demanding photorealism briefs"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Best AI image generators with no restrictions in 2026",
+        "publisher": "Apidog (apidog.com)",
+        "url": "https://apidog.com/blog/ai-image-generators-no-restrictions/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Every cloud-based AI image generator (Midjourney, DALL-E, Adobe Firefly) enforces content policies at the model level; the only genuinely unrestricted tools are local (self-hosted) Stable Diffusion and FLUX",
+          "DALL-E (OpenAI) has the strictest filters: blocks photorealistic depictions of public figures/real individuals, violence, adult content — described as the strictest filtering of any major image generator",
+          "Midjourney blocks nudity and most explicit content but is considered less strict than DALL-E; it inconsistently allows some photorealistic human likeness descriptions",
+          "Adobe Firefly blocks explicit content, real-person deepfakes, and anything the system interprets as potentially harmful; described as so cautious that professional photographers have reported blocking of edits to fully-clothed images",
+          "Ideogram's content filter sits between DALL-E and Midjourney in strictness; it blocks real-person deepfakes and explicit content but allows broad general creative content",
+          "Stable Diffusion (self-hosted) has no enforced content policy since there is no company enforcing one — full legal responsibility lies with the user"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Specific maximum output resolution for Midjourney (e.g., a stated pixel ceiling like '2048px' or '4K native') — Midjourney's official docs do not publish a definitive maximum output resolution spec; upscaling options vary by version and the topic is not pinned in official documentation reviewed",
+      "DreamStudio (Stability AI's front-end) current pricing and credit costs — DreamStudio's status and pricing as of mid-2026 could not be confirmed; Stability AI has had significant business turbulence and pricing changes; writer should verify directly at stability.ai before publishing",
+      "Automatic1111 (AUTOMATIC1111 WebUI) pricing — Automatic1111 is open-source and free; this is stable, but any claim about associated cloud or DreamStudio pricing tiers should be verified separately",
+      "Whether Midjourney has a specific published maximum output resolution (e.g., '2048×2048') — sources only confirm native generation at various aspect ratios and upscaling features without citing a hard pixel cap from official documentation",
+      "Specific DALL-E 3 API per-image pricing as currently active — DALL-E 3 API was deprecated as of May 12, 2026; any pricing cited ($0.04–$0.12/image) reflects the now-deprecated API; current OpenAI image generation pricing applies to GPT Image 1/1.5/2, not DALL-E 3",
+      "Whether Ideogram or FLUX have reached 'parity' with Midjourney for photorealism — multiple independent benchmarks clearly place FLUX 1.1 Pro ahead of Midjourney for raw photorealism and clearly place Midjourney ahead for artistic/editorial quality; 'parity' is an imprecise claim that the evidence does not support in either direction",
+      "Specific Stable Diffusion (self-hosted/Automatic1111) output resolution ceiling — SDXL natively outputs 1024×1024 and can be upscaled, but a hard platform-wide maximum resolution is hardware-dependent and not a fixed spec to cite",
+      "Adobe Firefly maximum output resolution — official Adobe documentation reviewed does not publish a specific maximum pixel dimension for Firefly image outputs; the writer should verify at firefly.adobe.com before publishing",
+      "Whether the Meta/Midjourney partnership (reportedly August 2025) provides meaningful free Midjourney access via meta.ai — this claim appeared in one independent review source but could not be corroborated against an official announcement from either Midjourney or Meta within the sources reviewed"
+    ]
   }
 ]
