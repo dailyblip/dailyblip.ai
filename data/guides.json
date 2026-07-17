@@ -1167,5 +1167,22 @@
     ],
     "published_at": "2026-07-17T19:13:02.414Z",
     "published_url": "https://dailyblip.ai/guides/how-to-make-lofi-chill-beats-with-ai.html"
+  },
+  {
+    "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Using AI to write better songs without losing your voice",
+      "article_type": "Practical guide",
+      "target_audience": "Song writers",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "Singer song writers, lyrics, melody, editing, brainstorming song ideas",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T19:17:05.201Z",
+    "updated_at": "2026-07-17T19:17:05.201Z"
   }
 ]
