@@ -78,8 +78,8 @@
   },
   {
     "id": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Getting start creating AI music",
       "article_type": "Beginner explainer",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T17:19:20.336Z",
-    "updated_at": "2026-07-17T17:24:40.154Z",
+    "updated_at": "2026-07-17T17:24:41.571Z",
     "brief": {
       "target_reader": "Creators (musicians, hobbyists, filmmakers, content creators) with zero experience using AI music tools, who are curious but skeptical of hype and want a practical starting point rather than a sales pitch",
       "reader_outcome": "The reader should be able to choose one AI music tool appropriate for their immediate need, generate their first piece of audio, and understand the basic constraints (quality, rights, cost) before committing to anything",
