@@ -1,6 +1,6 @@
 {
   "issue": 234,
-  "generated_at": "2026-07-17T03:25:29.522Z",
+  "generated_at": "2026-07-17T06:28:50.314Z",
   "brief": {
     "items": [
       {
@@ -64,6 +64,24 @@
   },
   "stories": [
     {
+      "id": "s_674ddd59c6c0a1da",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "xAI sues user for creating CSAM deepfakes with Grok image generator",
+      "dek": "Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/",
+      "ts": "2026-07-16T11:14:50.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 90,
+      "move": -1,
+      "top": true
+    },
+    {
       "id": "s_252ccc31ca52ec00",
       "cat": "rights",
       "badge": "hot",
@@ -77,8 +95,8 @@
       "ts": "2026-07-16T20:41:45.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 91,
-      "move": 43
+      "heat": 82,
+      "move": -6
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -94,8 +112,8 @@
       "ts": "2026-07-16T20:39:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 101,
-      "move": 51
+      "heat": 92,
+      "move": -1
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -111,8 +129,8 @@
       "ts": "2026-07-16T19:18:23.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 90,
-      "move": 45
+      "heat": 81,
+      "move": -6
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -128,8 +146,8 @@
       "ts": "2026-07-16T19:02:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 99,
-      "move": 53
+      "heat": 91,
+      "move": -1
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -145,8 +163,8 @@
       "ts": "2026-07-16T18:32:54.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 109,
-      "move": 57
+      "heat": 100,
+      "move": 0
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -162,8 +180,8 @@
       "ts": "2026-07-16T18:31:31.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 89,
-      "move": 47
+      "heat": 80,
+      "move": -6
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -179,8 +197,8 @@
       "ts": "2026-07-16T18:22:06.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 99,
-      "move": 55
+      "heat": 90,
+      "move": -1
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -196,8 +214,8 @@
       "ts": "2026-07-16T16:01:21.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 78,
-      "move": -8
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -213,8 +231,8 @@
       "ts": "2026-07-16T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 86,
-      "move": -10
+      "heat": 78,
+      "move": -3
     },
     {
       "id": "s_79ed56faeda92346",
@@ -230,8 +248,8 @@
       "ts": "2026-07-16T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 68,
-      "move": -12
+      "heat": 60,
+      "move": -7
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -247,8 +265,8 @@
       "ts": "2026-07-16T15:38:55.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 96,
-      "move": -5
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -264,8 +282,8 @@
       "ts": "2026-07-16T14:26:29.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 85,
-      "move": -10
+      "heat": 76,
+      "move": -7
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -281,8 +299,8 @@
       "ts": "2026-07-16T13:17:59.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 84,
-      "move": -11
+      "heat": 75,
+      "move": -4
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -298,8 +316,8 @@
       "ts": "2026-07-16T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -10
+      "heat": 67,
+      "move": -13
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -315,7 +333,7 @@
       "ts": "2026-07-16T12:06:51.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 92,
+      "heat": 84,
       "move": -6
     },
     {
@@ -332,25 +350,8 @@
       "ts": "2026-07-16T11:49:48.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 64,
-      "move": -14
-    },
-    {
-      "id": "s_674ddd59c6c0a1da",
-      "cat": "rights",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "xAI sues user for creating CSAM deepfakes with Grok image generator",
-      "dek": "Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/",
-      "ts": "2026-07-16T11:14:50.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 98,
-      "move": -5
+      "heat": 55,
+      "move": -10
     },
     {
       "id": "s_3090d72b6869197e",
@@ -366,8 +367,8 @@
       "ts": "2026-07-16T11:00:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 63,
-      "move": -8
+      "heat": 55,
+      "move": -10
     },
     {
       "id": "s_d8ed319939f5c0ae",
@@ -383,8 +384,8 @@
       "ts": "2026-07-16T00:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 87,
-      "move": -10
+      "heat": 85,
+      "move": 4
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -400,8 +401,8 @@
       "ts": "2026-07-16T00:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 62,
-      "move": -8
+      "heat": 60,
+      "move": 2
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -417,8 +418,8 @@
       "ts": "2026-07-15T23:59:44.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": -8
+      "heat": 68,
+      "move": -4
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -434,8 +435,8 @@
       "ts": "2026-07-15T22:24:17.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 51,
-      "move": -8
+      "heat": 50,
+      "move": 0
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -452,7 +453,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -8
+      "move": 3
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -470,7 +471,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -487,7 +488,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -504,7 +505,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -12
+      "move": 2
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -521,7 +522,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -8
+      "move": 3
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -538,7 +539,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": -4
+      "move": 5
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -556,7 +557,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": 2
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -573,7 +574,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": -5
+      "move": 5
     },
     {
       "id": "s_d173222f3e599859",
@@ -591,7 +592,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": 2
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -608,7 +609,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -625,7 +626,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -642,7 +643,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -5
+      "move": 5
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -659,7 +660,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": 2
     },
     {
       "id": "s_18de27eea197aabe",
@@ -676,7 +677,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": 0
     },
     {
       "id": "s_84777b05d9b25937",
@@ -693,7 +694,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": 0
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -710,7 +711,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -7
+      "move": 6
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -727,7 +728,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": 2
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -744,7 +745,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": 0
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -761,7 +762,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": 0
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -778,7 +779,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_110aa69c02571475",
@@ -795,7 +796,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": 0
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -812,7 +813,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": 2
     },
     {
       "id": "s_569d5689452ac2df",
@@ -829,7 +830,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": 2
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -846,7 +847,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": 0
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -863,7 +864,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -880,7 +881,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": 2
     },
     {
       "id": "s_210f6726bf4a719a",
@@ -897,7 +898,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": 2
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -914,7 +915,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": 2
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -931,7 +932,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -948,7 +949,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -7
+      "move": 6
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -965,7 +966,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": 2
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -982,7 +983,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -7
+      "move": 6
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -999,7 +1000,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -7
+      "move": 3
     },
     {
       "id": "s_986155e62b49ff74",
@@ -1016,7 +1017,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_a9b65061bfa7a7eb",
@@ -1033,7 +1034,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -7
+      "move": 3
     },
     {
       "id": "s_527857b3b9d8ad5a",
@@ -1050,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     },
     {
       "id": "s_23767f964a637e72",
@@ -1067,7 +1068,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": 2
     }
   ],
   "models": [
@@ -1146,12 +1147,12 @@
       "c": 6
     },
     {
-      "n": "Ars Technica AI",
+      "n": "PetaPixel",
       "c": 4
     },
     {
-      "n": "PetaPixel",
-      "c": 4
+      "n": "Ars Technica AI",
+      "c": 3
     },
     {
       "n": "dailyblip",
@@ -1169,8 +1170,8 @@
   "topics": [
     "#google",
     "#openai",
-    "#grok",
     "#apple",
+    "#grok",
     "#gemini",
     "#youtube",
     "#hugging",
@@ -1184,9 +1185,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 17,
-    "published_today": 23,
+    "scanned_last_run": 3,
+    "published_today": 18,
     "sources_live": 14,
-    "slopped_last_run": 9
+    "slopped_last_run": 3
   }
 }

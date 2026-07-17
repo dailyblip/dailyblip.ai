@@ -5,14 +5,14 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 16 Jul 2026 21:46:33 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 06:28:50 GMT</lastBuildDate>
     <item>
-      <title>xAI sues first Grok user accused of generating child sex abuse material</title>
-      <link>https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users/</link>
-      <guid isPermaLink="false">s_976e25fe768e3c13</guid>
-      <description>xAI filed lawsuit against a user for allegedly generating CSAM with Grok, marking the company's shift from denial to legal action on the issue.</description>
+      <title>xAI sues user for creating CSAM deepfakes with Grok image generator</title>
+      <link>https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/</link>
+      <guid isPermaLink="false">s_674ddd59c6c0a1da</guid>
+      <description>Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.</description>
       <category>rights</category>
-      <pubDate>Thu, 16 Jul 2026 20:26:23 GMT</pubDate>
+      <pubDate>Thu, 16 Jul 2026 11:14:50 GMT</pubDate>
     </item>
     <item>
       <title>EU forces Google to share search data and open AI on Android</title>
@@ -143,14 +143,6 @@
       <pubDate>Thu, 16 Jul 2026 11:49:48 GMT</pubDate>
     </item>
     <item>
-      <title>xAI sues user for creating CSAM deepfakes with Grok image generator</title>
-      <link>https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/</link>
-      <guid isPermaLink="false">s_674ddd59c6c0a1da</guid>
-      <description>Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.</description>
-      <category>rights</category>
-      <pubDate>Thu, 16 Jul 2026 11:14:50 GMT</pubDate>
-    </item>
-    <item>
       <title>Report examines AI sales to police, from data gathering to decision-making systems</title>
       <link>https://www.theverge.com/ai-artificial-intelligence/965066/ai-police-cops</link>
       <guid isPermaLink="false">s_3090d72b6869197e</guid>
@@ -163,6 +155,14 @@
       <link>https://huggingface.co/blog/security-incident-july-2026</link>
       <guid isPermaLink="false">s_d8ed319939f5c0ae</guid>
       <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
+      <category>industry</category>
+      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cars24 scales to 1M+ monthly conversation minutes with OpenAI voice and chat agents</title>
+      <link>https://openai.com/index/cars24</link>
+      <guid isPermaLink="false">s_6f16a999c8ddd889</guid>
+      <description>Enterprise case study: OpenAI-powered agents recover 12% of lost leads and bring agentic workflows across company teams.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
     </item>
