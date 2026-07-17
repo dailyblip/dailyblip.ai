@@ -1,6 +1,6 @@
 {
   "issue": 235,
-  "generated_at": "2026-07-17T15:43:11.280Z",
+  "generated_at": "2026-07-17T16:37:43.322Z",
   "brief": {
     "items": [
       {
@@ -64,6 +64,109 @@
   },
   "stories": [
     {
+      "id": "s_d8ed319939f5c0ae",
+      "cat": "industry",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Hugging Face details AI-driven autonomous intrusion into production infrastructure",
+      "dek": "Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/security-incident-july-2026",
+      "ts": "2026-07-16T00:00:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 85,
+      "move": -1,
+      "top": true
+    },
+    {
+      "id": "s_4d76675668887bf8",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "San Francisco orders removal of AI nudify apps from app stores",
+      "dek": "Apple and Google received cease-and-desist letters to remove 13 nudification apps that use AI to create non-consensual explicit images from ordinary photos.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/",
+      "ts": "2026-07-17T16:10:05.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 102,
+      "move": 55
+    },
+    {
+      "id": "s_a0bbc2c6e6f2a453",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "NVIDIA NeMo Automodel enables large-scale video and image model fine-tuning",
+      "dek": "NVIDIA and Hugging Face joint effort adds fine-tuning at scale for video and image diffusion models, including support for FLUX checkpoints and LoRA examples.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel",
+      "ts": "2026-07-17T15:57:54.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 93,
+      "move": 52
+    },
+    {
+      "id": "s_7be29e0c57cbc116",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Patreon blocks AI scraping with Cloudflare enforcement",
+      "dek": "Patreon is actively blocking AI training bots via Cloudflare, shifting from passive robots.txt rules to direct access denial as scraping tactics grow more sophisticated.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/",
+      "ts": "2026-07-17T15:21:17.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 101,
+      "move": 56
+    },
+    {
+      "id": "s_04f6651476d4c4ae",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Google open-sources GNM Head, parametric 3D human head model",
+      "dek": "Google releases generative anthropomorphic 3D head model (170+ controls, expression/pose adjustable) with free Blender add-on; trained on 3D scans, not AI-generated but explicitly generative for facial variation.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/google-open-sources-gnm-head-3d-parametric-human-head-model/",
+      "ts": "2026-07-17T11:56:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 79,
+      "move": 43
+    },
+    {
+      "id": "s_3ff6c4eb3a8015a3",
+      "cat": "video",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Google Vids adds Gemini Omni conversational editing and personal avatars",
+      "dek": "Google Vids update enables natural-language editing via Gemini Omni and AI-generated personal avatars for video starring, supporting multi-modal input (audio, video, photos, text).",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/17/google-vids-gets-conversational-editing-tools-and-personal-avatars/",
+      "ts": "2026-07-17T10:42:08.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 96,
+      "move": 57
+    },
+    {
       "id": "s_252ccc31ca52ec00",
       "cat": "rights",
       "badge": "hot",
@@ -77,8 +180,8 @@
       "ts": "2026-07-16T20:41:45.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 77,
-      "move": -4
+      "heat": 72,
+      "move": -5
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -94,8 +197,8 @@
       "ts": "2026-07-16T20:39:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 87,
-      "move": -2
+      "heat": 82,
+      "move": -8
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -111,8 +214,8 @@
       "ts": "2026-07-16T19:18:23.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 75,
-      "move": -4
+      "heat": 71,
+      "move": -5
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -128,8 +231,8 @@
       "ts": "2026-07-16T19:02:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": -2
+      "heat": 80,
+      "move": -8
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -145,8 +248,8 @@
       "ts": "2026-07-16T18:32:54.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 95,
-      "move": 0
+      "heat": 90,
+      "move": -5
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -162,8 +265,8 @@
       "ts": "2026-07-16T18:31:31.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 75,
-      "move": -4
+      "heat": 70,
+      "move": -5
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -179,8 +282,8 @@
       "ts": "2026-07-16T18:22:06.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 85,
-      "move": -2
+      "heat": 80,
+      "move": -8
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -196,8 +299,8 @@
       "ts": "2026-07-16T16:01:21.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -13
+      "heat": 60,
+      "move": -5
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -213,8 +316,8 @@
       "ts": "2026-07-16T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
-      "move": -4
+      "heat": 68,
+      "move": -10
     },
     {
       "id": "s_79ed56faeda92346",
@@ -230,8 +333,8 @@
       "ts": "2026-07-16T16:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
-      "move": -10
+      "heat": 50,
+      "move": -5
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -247,8 +350,8 @@
       "ts": "2026-07-16T15:38:55.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 82,
-      "move": -4
+      "heat": 78,
+      "move": -5
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -264,8 +367,8 @@
       "ts": "2026-07-16T14:26:29.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 71,
-      "move": 0
+      "heat": 68,
+      "move": -10
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -281,7 +384,7 @@
       "ts": "2026-07-16T13:17:59.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 69,
+      "heat": 68,
       "move": -5
     },
     {
@@ -298,8 +401,8 @@
       "ts": "2026-07-16T13:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 61,
-      "move": 0
+      "heat": 60,
+      "move": -5
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -316,7 +419,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -333,7 +436,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_3090d72b6869197e",
@@ -350,24 +453,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": 0
-    },
-    {
-      "id": "s_d8ed319939f5c0ae",
-      "cat": "industry",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Hugging Face details AI-driven autonomous intrusion into production infrastructure",
-      "dek": "Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.",
-      "src": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/security-incident-july-2026",
-      "ts": "2026-07-16T00:00:00.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 85,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -384,7 +470,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -401,7 +487,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -418,7 +504,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -435,7 +521,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -5
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -453,7 +539,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": -3
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -470,7 +556,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -487,7 +573,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -504,7 +590,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -5
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -521,7 +607,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": -2
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -539,7 +625,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": -3
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -556,7 +642,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": 4
+      "move": -4
     },
     {
       "id": "s_d173222f3e599859",
@@ -574,7 +660,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": -3
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -591,7 +677,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -608,7 +694,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -625,7 +711,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 4
+      "move": -4
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -642,7 +728,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_18de27eea197aabe",
@@ -659,7 +745,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_84777b05d9b25937",
@@ -676,7 +762,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -693,7 +779,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -710,7 +796,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": -3
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -727,7 +813,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -744,7 +830,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -761,7 +847,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_110aa69c02571475",
@@ -778,7 +864,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -795,7 +881,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_569d5689452ac2df",
@@ -812,7 +898,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -829,7 +915,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": 0
+      "move": -5
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -846,7 +932,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -863,7 +949,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_210f6726bf4a719a",
@@ -880,7 +966,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": -3
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -897,7 +983,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -914,7 +1000,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -931,7 +1017,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -948,7 +1034,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 1
+      "move": -5
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -965,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 1
+      "move": -1
     },
     {
       "id": "s_b98c65f859f0dcbd",
@@ -982,7 +1068,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -5
     },
     {
       "id": "s_986155e62b49ff74",
@@ -999,58 +1085,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
-    },
-    {
-      "id": "s_a9b65061bfa7a7eb",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Former Meta employees sue over AI-driven layoffs targeting workers on protected leave",
-      "dek": "26 workers allege Meta used internal AI tools to select employees for termination while excluding those on disability, parental, or medical leave.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/965486/meta-lawsuit-former-employees-ai-layoffs",
-      "ts": "2026-07-14T17:18:11.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": 4
-    },
-    {
-      "id": "s_527857b3b9d8ad5a",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "TurboSquid artists report sudden sales plunges and payment delays",
-      "dek": "3D marketplace faces exodus threat as creators document steep revenue drops and infrequent payouts, with some suspecting foul play.",
-      "src": "80 Level",
-      "url": "https://80.lv/articles/artists-threaten-to-leave-turbosquid-because-of-plummeting-sales-missing-payments/",
-      "ts": "2026-07-14T17:00:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": 1
-    },
-    {
-      "id": "s_23767f964a637e72",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Google revamps image search with personalization and AI image generation",
-      "dek": "Updated search uses unique interests to build dynamic image galleries; AI Overview now generates images in addition to displaying search results.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/google/2026/07/google-revamps-image-search-for-its-25th-anniversary-with-more-images-and-more-ai/",
-      "ts": "2026-07-14T16:28:14.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": 1
+      "move": -5
     }
   ],
   "models": [
@@ -1118,15 +1153,15 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 23
+      "c": 24
     },
     {
       "n": "The Verge AI",
-      "c": 10
+      "c": 9
     },
     {
       "n": "Hugging Face Blog",
-      "c": 6
+      "c": 7
     },
     {
       "n": "PetaPixel",
@@ -1145,19 +1180,19 @@
       "c": 3
     },
     {
-      "n": "VentureBeat AI",
+      "n": "80 Level",
       "c": 2
     }
   ],
   "topics": [
     "#google",
     "#openai",
-    "#apple",
-    "#grok",
     "#gemini",
-    "#youtube",
+    "#apple",
     "#hugging",
-    "#face"
+    "#face",
+    "#youtube",
+    "#anthropic"
   ],
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -1167,9 +1202,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 12,
-    "published_today": 16,
+    "scanned_last_run": 22,
+    "published_today": 12,
     "sources_live": 14,
-    "slopped_last_run": 12
+    "slopped_last_run": 17
   }
 }
