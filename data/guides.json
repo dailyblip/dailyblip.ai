@@ -1881,7 +1881,7 @@
   {
     "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top AI tools for audiobook narration",
       "article_type": "Top tools list",
@@ -1893,7 +1893,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T23:42:45.722Z",
-    "updated_at": "2026-07-17T23:43:19.460Z",
+    "updated_at": "2026-07-17T23:44:39.197Z",
     "brief": {
       "target_reader": "Writers who have drafted or finished a novel (possibly with AI help) and want to turn it into an audiobook without hiring a human narrator — new to AI voice/text-to-speech tools, probably familiar with the writing side but not the audio production side",
       "reader_outcome": "Understand which 2-3 AI narration tools are worth trying for audiobook-length projects, know which one to start with for their situation, and have a clear sense of what to watch out for before submitting to Audible or similar platforms",
@@ -1913,6 +1913,172 @@
         "Whether any of the tools have ACX-compliant audio export settings (sample rate, noise floor, etc.) built in or require post-processing"
       ],
       "research_plan": "Prioritize each tool's official pricing/licensing pages and terms of service over third-party reviews, since commercial rights claims must be accurate. Check ACX (Audible's creator platform) submission requirements and any official ACX/Amazon statements on AI narration policy — this is the most legally sensitive claim in the article and needs a direct source, not inference. For tool capabilities, official feature pages plus recent (within 6 months) hands-on reviews from audio production or self-publishing outlets are the most reliable — avoid SEO roundups that rarely test at audiobook length. Flag any conflicts between sources rather than resolving them silently."
-    }
+    },
+    "sources": [
+      {
+        "title": "Now in Beta: Narrator Voice Replicas on ACX",
+        "publisher": "ACX (Audible Creation Exchange) — Official Company Blog",
+        "url": "https://www.acx.com/mp/blog/now-in-beta-narrator-voice-replicas-on-acx",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "ACX's official position on AI narration: general AI-narrated audiobook uploads from third-party tools are not approved for standard distribution; the only sanctioned AI path as of mid-2025 is ACX's own Narrator Voice Replica beta, where professional narrators opt in to having their own voice replicated by AI",
+          "Within the Voice Replica beta, narrators maintain editorial control (editing pronunciation, pacing), and Audible will not use a narrator's replica without their approval",
+          "As of July 9, 2025, narrators in the beta can receive per-finished-hour fees or blended payment structures, in addition to the royalty share model at launch",
+          "Rights holders can now skip the audition phase and make direct offers for voice replica narration",
+          "No explicit 'AI disclosure' label language is detailed in this post for the voice replica beta — the replica is treated as the narrator's own performance"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Does ACX Allow AI-Narrated Audiobooks? (Current 2026 Policy)",
+        "publisher": "Audie.ai — Independent Reporting",
+        "url": "https://www.audie.ai/does-acx-allow-ai-narrated-audiobooks-current-2026-policy",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "As of 2026, ACX does allow AI narration, but only via Amazon's own sanctioned pathways (Virtual Voice via KDP, or the Narrator Voice Replica beta) — not by uploading third-party AI audio as human narration",
+          "Amazon's Virtual Voice narration (for KDP titles) labels audiobooks as AI-narrated for listeners",
+          "Uploading third-party AI audio to ACX as human narration can result in rejection or removal — ACX quality-control reviewers listen to submissions",
+          "The policy is framed as 'did you go through the sanctioned path and disclose it' rather than a blanket ban on AI",
+          "ACX terms change frequently; writers should read live policy pages before finalizing production plans"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "EU AI Act, ACX, and the disclosure rules every TTS user should know in 2026",
+        "publisher": "Z.Tools — Independent Reporting",
+        "url": "https://z.tools/blog/tts-disclosure-rules-eu-acx-2026",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "ACX's stated policy remains that human narration is required for general audiobook distribution; a book disclosed as AI-narrated is rejected, and undisclosed AI narration is grounds for removal",
+          "The narrator-replica beta is the platform's compromise: the replica is treated as the narrator's own voice and counts as human narration for ACX distribution purposes",
+          "Findaway Voices (now Voices by INaudio) and several smaller distributors accept AI-narrated content if disclosed in metadata",
+          "EU AI Act transparency obligations for synthetic audio come into force August 2, 2026, with penalties up to €15 million or 3% of global turnover"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Can I publish the content I generate on the platform?",
+        "publisher": "ElevenLabs — Official Help Documentation",
+        "url": "https://help.elevenlabs.io/hc/en-us/articles/13313564601361-Can-I-publish-the-content-I-generate-on-the-platform",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "The free plan does not include a commercial license and cannot be used for any commercial purpose",
+          "Free plan users who publish content must attribute ElevenLabs by including 'elevenlabs.io' or '11.ai'",
+          "All paid plans include a commercial license (provided the content is not from Beta Services)",
+          "As long as the user holds the necessary intellectual property rights and complies with ElevenLabs Terms of Service and Prohibited Use Policy, generated audio may be used commercially on paid plans"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "ElevenLabs Commercial Rights & Voice Output Ownership 2026",
+        "publisher": "Terms.Law — Independent Legal Analysis",
+        "url": "https://terms.law/ai-output-rights/elevenlabs/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Paid ElevenLabs users own their AI audio outputs and can use them commercially; free plan users cannot",
+          "Commercial rights to already-generated audio persist even after subscription cancellation; new generations after downgrade revert to free-tier restrictions",
+          "Voice cloning: when a user uploads voice data, ElevenLabs retains a perpetual, irrevocable, royalty-free license to create derivatives and improve models; raw recordings deleted after 3 years of inactivity but model derivatives persist",
+          "ElevenLabs commits not to commercialize a user's voice on a standalone basis without explicit permission",
+          "At least 12 U.S. states have passed voice cloning consent laws that intersect with ElevenLabs use"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "ElevenLabs Licensing Guide: What You Can (and Can't) Do With AI Voices",
+        "publisher": "LicenseOrg — Independent Review",
+        "url": "https://www.licenseorg.com/blog/elevenlabs-licensing-guide-ai-voices",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "All paid ElevenLabs plans include a commercial license; free plan does not — this is confirmed against official ElevenLabs documentation per the article",
+          "Cloned voices (User Voice Models): user retains rights to input and commercial use of generated output on paid plans, but grants ElevenLabs a perpetual, irrevocable, non-exclusive, royalty-free, worldwide, sub-licensable license to use the model for service improvement — same commercial license framework applies, but with a broader data license attached",
+          "Instant Voice Cloning is available from Starter ($5/mo); Professional Voice Cloning requires Creator ($22/mo) or above",
+          "Free plan: no commercial rights, attribution required for any non-commercial sharing"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Introducing Audiobooks: Bring your stories to life",
+        "publisher": "ElevenLabs — Official Company Blog",
+        "url": "https://elevenlabs.io/blog/introducing-audiobooks-in-elevencreative",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "ElevenLabs has a dedicated Audiobooks product (launched February 2026 within ElevenCreative) supporting full long-form manuscript generation — not just short clips",
+          "Workflows include instant one-click generation, detailed Studio editing (scene-by-scene control), and professional production services with human editors for large catalogs",
+          "Voices are described as 'built to handle subtle dialogue, long-form narration, and emotional range with consistent pacing and clarity'",
+          "Users can choose from the Voice Library, use a Professional Voice Clone, or create a voice via Voice Design",
+          "Free tier users have access to Studio (as of January 2025, Studio/Projects is available to all free users per separate ElevenLabs blog post)"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Create studio-quality audiobooks with ElevenLabs — Audiobooks Product Page",
+        "publisher": "ElevenLabs — Official Product Page",
+        "url": "https://elevenlabs.io/audiobooks",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "ElevenLabs has a dedicated audiobook-specific product page marketing directly to authors and publishers — confirming active targeting of the audiobook use case",
+          "Supports audiobook creation in over 90 languages",
+          "Users can download finished files to distribute anywhere, or publish directly to platforms like Spotify, inaudio (formerly Findaway Voices), and ElevenReader",
+          "Users retain full distribution rights with no exclusivity requirements (per ElevenLabs' own FAQ on the page)",
+          "Voice cloning is offered: narrate using a cloned voice or choose from 10,000+ library voices",
+          "ElevenLabs Productions offers human producer services for large catalogs"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Speechify Review: Is It Worth It For Authors?",
+        "publisher": "Reedsy — Independent Review",
+        "url": "https://reedsy.com/blog/speechify-review/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Speechify has two interfaces relevant to authors: its main TTS/personal listening tool and Speechify Studio (for voiceovers, voice cloning, and rudimentary audiobook production)",
+          "Speechify was originally developed for accessibility (dyslexia, visual impairments) and has since added creator-facing Studio tools — it is not primarily positioned as a commercial audiobook production suite",
+          "Speechify does not distribute audiobooks; commercial releases must go through an aggregator",
+          "Output files from Speechify are 'not necessarily ready for the standards required in commercial audiobook publishing' — no built-in leveling, noise reduction, or post-production tools",
+          "Free plan exists with limited credits (~10 minutes of audio/month); premium plan allows up to 50 hours of audio downloads per year",
+          "Speechify Studio offers voice cloning as a feature"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI Audiobook Generator: ACX-Spec Export (comparison of ElevenLabs, Speechify, Murf)",
+        "publisher": "Inkfluence AI — Independent Review (competitor site, use with caution)",
+        "url": "https://www.inkfluenceai.com/ai-audiobook-generator",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "ACX technical specifications: 192 kbps or higher MP3, constant bit rate, 44.1 kHz sample rate — confirmed independently by Narration Box source",
+          "ElevenLabs does not natively export ACX-spec audio; raw audio requires post-processing in Audacity or Pro Tools before meeting ACX technical spec",
+          "Speechify is characterized as 'built for read-aloud playback, not book production' — corroborated by Reedsy review",
+          "No mention of Replica Studios in the context of audiobook production — focus appears to have shifted; Replica Studios not cited as a current audiobook tool by any independent audiobook-focused source found"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Whether Replica Studios is still actively targeting the audiobook/publishing use case or has formally shifted focus to gaming/film — no current (2025–2026) primary source or credible independent report was found specifically addressing Replica Studios' audiobook positioning. The tool did not appear in any of the audiobook-specific roundups or comparisons found. Writers should either drop Replica Studios from the guide or note that its current audiobook positioning could not be verified.",
+      "Whether Speechify's output is explicitly licensed for commercial audiobook distribution — Speechify's own blog discusses audiobook self-publishing generally but does not clearly state whether its TTS output carries a commercial license for audiobook resale. The Reedsy review notes output is not production-ready for commercial audiobook publishing standards, but a direct commercial license statement from Speechify's own terms was not retrieved. Writers should verify Speechify's current Terms of Service directly before making a licensing claim.",
+      "Whether ElevenLabs exports meet ACX technical specs natively (44.1 kHz / 192 kbps / loudness normalization) without post-processing — the competitor site Inkfluence claims ElevenLabs requires post-processing for ACX compliance, and the ElevenLabs docs note audio quality is determined by subscription plan but do not list explicit ACX-spec output parameters. This claim could not be confirmed from ElevenLabs' own documentation and should be softened or flagged as requiring user verification.",
+      "Exact free-tier credit quotas for any tool — these change frequently; only the yes/no existence of a free tier was verified, not specific quota figures, per the research brief's instruction."
+    ]
   }
 ]
