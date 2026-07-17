@@ -78,8 +78,8 @@
   },
   {
     "id": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "in_progress",
+    "stage": "Re-checking",
     "submitted": {
       "idea": "Getting start creating AI music",
       "article_type": "Beginner explainer",
