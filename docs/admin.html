@@ -1095,12 +1095,14 @@ function openGuide(id){
     <div class="save-row" style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px">
       <button class="btn" onclick="closeGuideReview()">\u2190 back</button>
       <button class="btn" id="gSaveEdits">Save edits</button>
+      ${highSeverity ? `<button class="btn amber" id="gRecheck">Re-run fact check</button>` : ""}
       ${highSeverity ? `<button class="btn" disabled title="${highSeverity} unresolved high-severity issue(s) block approval">Approve &amp; publish</button>`
                      : `<button class="btn primary" id="gApprovePublish">Approve &amp; publish \u2192</button>`}
     </div>`;
 
   $("#gSaveEdits")?.addEventListener("click", () => saveGuideEdits(id, false));
   $("#gApprovePublish")?.addEventListener("click", () => saveGuideEdits(id, true));
+  $("#gRecheck")?.addEventListener("click", () => rerunFactCheck(id));
 }
 
 function closeGuideReview(){
@@ -1110,9 +1112,11 @@ function closeGuideReview(){
   activeGuideId = null;
 }
 
-async function saveGuideEdits(id, thenPublish){
-  const g = guides.find(x => x.id === id);
-  if (!g) return;
+// Shared by saveGuideEdits and rerunFactCheck \u2014 both need to pull
+// whatever's currently in the form fields into the job object before
+// writing, so a re-check evaluates the person's actual edits rather
+// than stale stored text.
+function collectFormEditsInto(g){
   g.article.title = $("#gaTitle").value;
   g.article.dek = $("#gaDek").value;
   g.article.meta_description = $("#gaMeta").value;
@@ -1120,6 +1124,12 @@ async function saveGuideEdits(id, thenPublish){
     const i = Number(el.dataset.sec), field = el.dataset.field;
     if (g.article.sections[i]) g.article.sections[i][field] = el.value;
   });
+}
+
+async function saveGuideEdits(id, thenPublish){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  collectFormEditsInto(g);
   if (thenPublish) { g.status = "approved"; g.stage = "Approved"; g.approved_at = new Date().toISOString(); }
 
   const btn = thenPublish ? $("#gApprovePublish") : $("#gSaveEdits");
@@ -1141,6 +1151,39 @@ async function saveGuideEdits(id, thenPublish){
     }
     closeGuideReview();
     await renderGuides();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+    if (btn) btn.disabled = false;
+  }
+}
+
+async function rerunFactCheck(id){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  collectFormEditsInto(g);
+  // Flip to in_progress so this shows up in the normal progress view
+  // (and, importantly, so it's excluded from DELETABLE_STATUSES and the
+  // Approve button while the recheck is actually running) \u2014
+  // stageRecheck in guide.js sets this back to ready_for_review itself
+  // once it finishes.
+  g.status = "in_progress";
+  g.stage = "Re-checking";
+
+  const btn = $("#gRecheck");
+  if (btn) btn.disabled = true;
+  try {
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      const updated = [...gs];
+      if (i === -1) updated.push(g); else updated[i] = g;
+      return updated;
+    }, `admin: re-run fact check on guide ${id}`);
+    await dispatchWorkflow("guide-recheck.yml", { job_id: id });
+    toast("Re-checking\u2026");
+    activeGuideId = id;
+    startGuidePolling(id);
+    openGuide(id);
   } catch (e) {
     toast(e.message, "err", 6000);
     if (btn) btn.disabled = false;
