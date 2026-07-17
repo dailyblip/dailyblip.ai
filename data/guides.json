@@ -2208,8 +2208,8 @@
   },
   {
     "id": "09859f39-9c90-4b00-b91c-ec5a012327cf",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Top 1 music generation tool",
       "article_type": "Top tools list",
@@ -2221,7 +2221,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:30:05.655Z",
-    "updated_at": "2026-07-17T14:37:03.913Z",
+    "updated_at": "2026-07-17T14:37:05.431Z",
     "brief": {
       "target_reader": "Working musicians, producers, and composers who want to understand AI music generation tools: what they actually do, where they fit in a real workflow, and what their limitations are. Includes both technically curious beginners and experienced producers evaluating whether to integrate AI into their process.",
       "reader_outcome": "The reader should be able to identify the single most capable and practical AI music generation tool available today for their specific use case, understand what it does well and where it falls short, know the pricing and access model, and decide whether it is worth trying in their own workflow.",
