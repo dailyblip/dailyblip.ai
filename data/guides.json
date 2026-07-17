@@ -1881,7 +1881,7 @@
   {
     "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Top AI tools for audiobook narration",
       "article_type": "Top tools list",
@@ -1893,7 +1893,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T23:42:45.722Z",
-    "updated_at": "2026-07-17T23:47:01.934Z",
+    "updated_at": "2026-07-17T23:48:45.831Z",
     "brief": {
       "target_reader": "Writers who have drafted or finished a novel (possibly with AI help) and want to turn it into an audiobook without hiring a human narrator — new to AI voice/text-to-speech tools, probably familiar with the writing side but not the audio production side",
       "reader_outcome": "Understand which 2-3 AI narration tools are worth trying for audiobook-length projects, know which one to start with for their situation, and have a clear sense of what to watch out for before submitting to Audible or similar platforms",
@@ -2199,6 +2199,50 @@
     "warnings": [
       "s2: The Spotify distribution partnership is sourced only from ElevenLabs' own product page with no independent corroboration, yet the article presents it as a factual partnership rather than an unverified company claim — the caveat buried later in the same paragraph is insufficient given how the claim is initially framed.",
       "s3: This future/speculative date (August 2, 2026) is presented as a confirmed fact, but the article's review date is July 17, 2026, meaning the rules had not yet come into force at time of publication — the phrasing implies they are already in effect."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "52b99122-b6f7-430e-8a83-7e71753aa1e9-img1.jpg",
+        "prompt": "Editorial illustration, 16:9 aspect ratio, wide landscape format. Left third shows a clean typeset manuscript page in deep navy with white text lines (no readable words, just formatted line blocks suggesting prose paragraphs). The center third shows the page edge dissolving — fibers of the paper becoming a continuous audio waveform in amber-gold. The right third shows the waveform continuing but becoming increasingly uneven: some peaks are smooth and regular, others jagged and fragmented, with small red tick marks above the jagged regions indicating problem zones. Off-white background throughout. All elements sit well within a clear 10% safe margin from every frame edge — the manuscript page left edge and the waveform right tail both stop clearly before the frame border. No people, no microphones, no glowing effects, no text labels. Flat editorial vector style with subtle paper texture on the manuscript element. Clean, high-contrast, modern web-editorial aesthetic.",
+        "placement": "hero",
+        "alt_text": "Illustration showing a manuscript page dissolving into an audio waveform, with smooth sections and jagged fragmented sections marked by small red tick marks, representing where AI narration succeeds and where it struggles.",
+        "caption": "AI narration handles clean prose consistently — but complex dialogue, invented names, and dramatic moments still show the cracks.",
+        "approved": false,
+        "generated_at": "2026-07-17T23:48:11.303Z",
+        "role": "hero",
+        "concept": "A manuscript page transforming into a soundwave, showing the gap between polished written prose and the textured, imperfect reality of AI-generated voice narration",
+        "purpose": "Set the editorial tone: AI narration is capable but not magic — writers need to understand what they're actually getting before committing a manuscript to it",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "52b99122-b6f7-430e-8a83-7e71753aa1e9-img2.jpg",
+        "prompt": "Editorial comparison illustration, 16:9 landscape format. Two equal vertical panels side by side, divided by a thin white center rule on a dark charcoal background. Left panel in deep navy: white header label 'ElevenLabs Audiobooks' at top with adequate top padding. Below it, three rows each with a small minimal icon and a short label: 'Manuscript-length generation,' 'Studio scene-by-scene editing,' 'Built for commercial distribution.' At the bottom of the left panel, a small amber-gold rounded badge reading 'Best for: publish & distribute.' Right panel in slate-teal: white header label 'Speechify' at top. Three icon-and-label rows: 'Fast upload & playback,' 'Draft proofing & review,' 'Personal listening use.' Amber-gold badge at bottom: 'Best for: draft review & personal use.' All content sits with at least 12% padding from the outer left and right frame edges, and the top and bottom elements have equal clear margins. No actual brand logos — text labels only. No people, no device mockups, no screenshots. Flat, clean, high-contrast editorial vector style. Modern web-editorial design.",
+        "placement": "s2",
+        "alt_text": "Side-by-side comparison of ElevenLabs Audiobooks and Speechify, showing ElevenLabs as best for commercial distribution with manuscript-length generation and studio editing, and Speechify as best for draft review and personal listening.",
+        "caption": "ElevenLabs is built for writers going to market. Speechify is better suited to draft proofing and personal use — the right tool depends entirely on what you're publishing toward.",
+        "approved": false,
+        "generated_at": "2026-07-17T23:48:29.184Z",
+        "role": "comparison",
+        "concept": "A side-by-side comparison card contrasting ElevenLabs Audiobooks and Speechify, organized around the specific use-case split described in the article: commercial distribution vs. personal or draft listening",
+        "purpose": "Help writers instantly see which tool is for them based on their actual goal — not just list features, but visually map each tool to the right writer situation",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img3",
+        "file": "52b99122-b6f7-430e-8a83-7e71753aa1e9-img3.jpg",
+        "prompt": "Editorial flowchart illustration, 9:16 portrait format, vertical orientation. White background. At the top, with generous top margin and horizontal centering, a dark navy header label reads 'Before You Upload to ACX.' Below it, a vertical sequence of three rounded-rectangle nodes connected by downward arrows, all horizontally centered and sitting at least 10% inward from both the left and right frame edges. Node 1 (dark navy, white text): 'Is your narration AI-generated?' — from the right side of this node, a thin arrow branches right with a small label 'No → Standard ACX submission.' The main downward arrow continues to Node 2. Node 2 (amber-gold fill, dark navy text, slightly larger than the others): 'ACX standard distribution: AI narration not accepted' — this is the key warning gate, visually prominent. Downward arrow continues to Node 3. Node 3 (dark navy, white text): 'Alternatives: human narrator via ACX, or non-Audible distributors.' Below Node 3, generous bottom margin before the frame edge. Arrows are charcoal, clean, with arrowheads. No logos, no stop-sign icons, no screenshot elements, no people. Flat editorial vector style, clean and high-contrast, legible at mobile scale.",
+        "placement": "s3",
+        "alt_text": "Vertical flowchart titled 'Before You Upload to ACX' showing three decision nodes: whether narration is AI-generated, a highlighted warning that ACX standard distribution does not accept AI narration, and a final node listing alternatives including human narrators and non-Audible distributors.",
+        "caption": "ACX's rules catch many writers off guard. This is the decision path you need to walk before uploading a single file.",
+        "approved": false,
+        "generated_at": "2026-07-17T23:48:45.831Z",
+        "role": "explainer",
+        "concept": "A vertical flowchart showing the decision path a writer must navigate before publishing AI-narrated audio on ACX/Audible — including the key gate where most writers get surprised",
+        "purpose": "Make the platform rules concrete and scannable: walk the reader through the actual decision points (Is it AI-generated? Does ACX accept it? What are the alternatives?) so they understand the compliance landscape before they upload anything",
+        "aspect_ratio": "9:16"
+      }
     ]
   }
 ]
