@@ -822,7 +822,7 @@
   {
     "id": "ab77d633-7bff-4771-a971-97b8be6f6dd3",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "How can I create lofi chill beats with AI?",
       "article_type": "Practical guide",
@@ -834,6 +834,25 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T18:58:55.366Z",
-    "updated_at": "2026-07-17T18:58:55.366Z"
+    "updated_at": "2026-07-17T18:59:26.204Z",
+    "brief": {
+      "target_reader": "A musician, producer, or creative hobbyist who wants to make lofi chill beats but has little or no experience with AI music tools. They may have heard of tools like Suno or Udio but have never actually used one.",
+      "reader_outcome": "Feel confident enough to open an AI music tool today and generate their first lofi beat, with a basic sense of how to prompt it well and what to do with the result.",
+      "structure_plan": [
+        "What AI music tools can actually do for lofi beats",
+        "Which tool to start with and how to access it",
+        "How to write a prompt that gets you something lofi",
+        "What to do with your output (download, tweak, or take it further)"
+      ],
+      "claims_to_verify": [
+        "Whether Suno and Udio currently support free-tier access without a paid subscription",
+        "Whether either tool allows downloads of generated tracks on the free tier",
+        "Whether generated tracks on free tiers can be used commercially or only for personal use (check each platform's current terms directly, not third-party summaries)",
+        "Whether users can specify genre descriptors like 'lofi hip hop' or 'chill beats' directly in prompts and get recognizable results",
+        "Whether either tool supports uploading a reference track or style sample, or if prompting is text-only",
+        "Whether any other tool (e.g., Soundraw, Beatoven.ai) is more specifically designed for lofi/chill beat generation and worth a brief mention as an alternative"
+      ],
+      "research_plan": "Prioritize official documentation and current pricing/terms pages for Suno and Udio directly. For prompt guidance, look for creator community resources (Reddit, YouTube walkthroughs) that show real prompt examples for lofi results. For commercial rights, read the actual terms of service rather than third-party summaries, since beginners may use output in videos or streams. Avoid sources older than 6 months given how fast these platforms change."
+    }
   }
 ]
