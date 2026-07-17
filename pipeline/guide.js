@@ -421,9 +421,13 @@ async function stageRecheck(job) {
 // needs, not a fixed position-based template applied regardless of
 // content. See IMAGE_BRIEF_SYSTEM's variety requirements below.
 function buildImagePrompts(article, imageCount) {
-  const mix3 = ["16:9 (hero)", "4:3", "4:3"];
-  const mix2 = ["16:9 (hero)", "4:3"];
-  return (imageCount === 3 ? mix3 : mix2).map((aspect, i) => ({ id: `img${i + 1}`, aspect }));
+  // No longer pins aspect ratio to position \u2014 the model chooses per
+  // image below, since a wide multi-element flow/comparison diagram
+  // needs landscape room regardless of which slot it lands in, and
+  // forcing it into a square previously caused real clipped-content
+  // failures (text labels cut off at the frame edges on a 3-step
+  // workflow diagram squeezed into 1:1).
+  return Array.from({ length: imageCount }, (_, i) => ({ id: `img${i + 1}` }));
 }
 
 const IMAGE_BRIEF_SYSTEM = `You create image briefs for a dailyblip guide, one per required slot. ${EDITORIAL_RULES.split("\n")[0]}
@@ -434,26 +438,31 @@ For EACH image, ground it in this article's real content (its actual sections, t
 
 VARIETY, across the full set of images for this article: don't make them all the same type. At least one image should help explain a process or workflow if the article describes one. If this is a comparison or ranked-list article, at least one image should visually organize the choices (not just illustrate one of them). The first slot is the hero; treat the remaining slots as genuinely different editorial jobs from each other and from the hero, not three variations on one idea.
 
+ASPECT RATIO: choose per image, based on its actual content \u2014 don't default to square out of habit. A wide left-to-right flow (workflow steps, before/after, a row of compared items) needs landscape room; a single focused subject can suit square; a tall stacked list can suit portrait. Squeezing a genuinely horizontal composition into a square frame is exactly what causes text and elements to get clipped at the edges \u2014 pick the shape the content actually needs. Must be one of: "16:9" (landscape), "1:1" (square), or "9:16" (portrait).
+
+MARGINS: every element and every text label needs real breathing room from the frame edge \u2014 nothing should touch or extend past the border, especially the outermost elements in a left-to-right or top-to-bottom sequence. If a composition has items at both ends (like a flow diagram's first and last step), explicitly build in margin around those end labels rather than letting the layout run edge-to-edge.
+
 STYLE: editorial illustration, diagrammatic visuals, annotated product-style layouts, or conceptual composition \u2014 not stock photography, not vague "AI imagery." Clean, high-contrast, modern, web-editorial. Should look designed, not merely generated. Should be able to stand alone on social media as well as inside the article.
 
-AVOID across every image: random floating interfaces, generic futuristic aesthetics, people staring at screens unless essential to the concept, random robots, glowing AI brains, holograms, watermarks, celebrity likenesses, copyrighted characters, unapproved company logos, fabricated product screenshots, near-duplicate compositions across the set. Any text inside the image should be minimal, used only when it strengthens clarity \u2014 never the article headline. Leave negative space where HTML text may be placed afterward.
+AVOID across every image: random floating interfaces, generic futuristic aesthetics, people staring at screens unless essential to the concept, random robots, glowing AI brains, holograms, watermarks, celebrity likenesses, copyrighted characters, unapproved company logos, fabricated product screenshots, near-duplicate compositions across the set. Any text inside the image should be minimal, used only when it strengthens clarity \u2014 never the article headline. Leave negative space where HTML text may be placed afterward, and keep that negative space clear of any element that would otherwise get clipped by it.
 
 Return JSON: {"images": [{
   "id": "img1",
   "role": "hero | explainer | comparison | workflow | list-support",
+  "aspect_ratio": "16:9 | 1:1 | 9:16",
   "concept": "the core visual idea in one sentence",
   "purpose": "what this image should teach or communicate to the reader",
-  "composition": "how it's laid out \u2014 framing, focal point, arrangement",
+  "composition": "how it's laid out \u2014 framing, focal point, arrangement, with explicit margin around edge elements",
   "key_elements": "the specific objects/elements that should appear",
   "style": "visual style, restated for this specific image",
   "color_mood": "color palette and mood",
   "avoid": "anything specifically worth avoiding for THIS image, beyond the general list above",
-  "prompt": "the exact, complete image-generation prompt, incorporating all of the above into one usable prompt",
+  "prompt": "the exact, complete image-generation prompt, incorporating all of the above into one usable prompt, including an explicit instruction that all elements and text stay within a safe margin and nothing is cropped at the frame edge",
   "alt_text": "",
   "caption": "",
   "placement": "which section this illustrates, by section id, or \\"hero\\""
 }]}
-One entry per slot given, matching the requested aspect ratio for that slot. JSON only.`;
+One entry per requested image. JSON only.`;
 
 async function stageImages(job) {
   const slots = buildImagePrompts(job.article, job.submitted.image_count);
@@ -484,9 +493,10 @@ async function stageImages(job) {
   fs.mkdirSync(dir, { recursive: true });
   for (let i = 0; i < briefs.length; i++) {
     const b = briefs[i];
-    const slot = slots[i] || {};
     try {
-      const size = /16:9/.test(slot.aspect || "") ? "1536x1024" : "1024x1024";
+      // Driven by the model's own per-image aspect_ratio choice now,
+      // not slot position \u2014 gpt-image-1 only accepts these three sizes.
+      const size = b.aspect_ratio === "16:9" ? "1536x1024" : b.aspect_ratio === "9:16" ? "1024x1536" : "1024x1024";
       const res = await fetch("https://api.openai.com/v1/images/generations", {
         method: "POST",
         headers: { Authorization: `Bearer ${OPENAI_KEY}`, "Content-Type": "application/json" },
@@ -505,7 +515,7 @@ async function stageImages(job) {
         // Kept for admin review context (what this image is FOR, not
         // just what its raw prompt says) even though the published page
         // itself only needs alt_text/caption/placement.
-        role: b.role, concept: b.concept, purpose: b.purpose,
+        role: b.role, concept: b.concept, purpose: b.purpose, aspect_ratio: b.aspect_ratio,
       });
     } catch (e) {
       // One image failing shouldn't lose the others \u2014 same
