@@ -1881,7 +1881,7 @@
   {
     "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "Top AI tools for audiobook narration",
       "article_type": "Top tools list",
@@ -1893,7 +1893,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T23:42:45.722Z",
-    "updated_at": "2026-07-17T23:45:34.426Z",
+    "updated_at": "2026-07-17T23:47:01.934Z",
     "brief": {
       "target_reader": "Writers who have drafted or finished a novel (possibly with AI help) and want to turn it into an audiobook without hiring a human narrator — new to AI voice/text-to-speech tools, probably familiar with the writing side but not the audio production side",
       "reader_outcome": "Understand which 2-3 AI narration tools are worth trying for audiobook-length projects, know which one to start with for their situation, and have a clear sense of what to watch out for before submitting to Audible or similar platforms",
@@ -2095,13 +2095,13 @@
         {
           "id": "s1",
           "heading": "What AI narration sounds like now — and where it still stumbles",
-          "body_markdown": "Current AI narration handles clean prose well: consistent pacing, clear pronunciation, reasonable emotional register. Where it still gets awkward is complex dialogue with multiple characters (voices don't naturally differentiate), unusual names or invented words, and moments that call for real dramatic weight. For genre fiction with a lot of action or introspective literary fiction, you may find yourself doing a lot of manual editing to get the rhythm right.\n\nThat's worth knowing before you commit, because audiobook-length projects aren't a quick export. A 90,000-word novel is roughly 10 hours of audio. Some AI tools handle that volume in one workflow; others are still more suited to short-form clips and will frustrate you at scale.\n\nThe other honest caveat: no publication tested these tools on a full manuscript. The observations here are based on each tool's documented features, independent reviews from audio production and self-publishing outlets, and official product pages — not a cover-to-cover production run.",
+          "body_markdown": "Current AI narration handles clean prose well: consistent pacing, clear pronunciation, reasonable emotional register. Where it still gets awkward is complex dialogue with multiple characters (voices don't naturally differentiate), unusual names or invented words, and moments that call for real dramatic weight. For genre fiction with a lot of action or introspective literary fiction, you may find yourself doing a lot of manual editing to get the rhythm right.\n\nThat's worth knowing before you commit, because audiobook-length projects aren't a quick export. A 90,000-word novel is roughly 9–10 hours of audio (the industry standard estimate is around 9,300 words per finished hour). Some AI tools handle that volume in one workflow; others are still more suited to short-form clips and will frustrate you at scale.\n\nThe other honest caveat: no publication tested these tools on a full manuscript. The observations here are based on each tool's documented features, independent reviews from audio production and self-publishing outlets, and official product pages — not a cover-to-cover production run.",
           "tools": []
         },
         {
           "id": "s2",
           "heading": "The tool worth starting with, and when Speechify is the better call",
-          "body_markdown": "**ElevenLabs** is the clearest choice for writers producing an audiobook they intend to distribute commercially. It launched a dedicated Audiobooks product in early 2026, built for manuscript-length generation rather than short clips. The workflow includes scene-by-scene editing in its Studio interface, support for over 90 languages, and a voice library of thousands of options. You can also use a Professional Voice Clone — either your own voice or one you're licensed to use.\n\nOn a paid plan, ElevenLabs explicitly grants a commercial license for generated audio, per their official help documentation. Free plan output cannot be used commercially and requires attribution. Voice cloning on paid plans is available from lower tiers (instant cloning) up through professional-grade cloning on higher tiers.\n\nFor distribution, ElevenLabs has direct partnerships with platforms including Spotify and inaudio (formerly Findaway Voices), which accept AI-narrated content when disclosed in metadata. You can also download finished files and distribute them yourself.\n\nOne thing to verify before submitting anywhere with technical specs: ElevenLabs' raw audio export may not meet ACX's required parameters (44.1 kHz sample rate, 192 kbps constant bitrate, specific loudness range) without post-processing. Based on available sources, this appears to require a step in Audacity or similar software. ElevenLabs' own documentation doesn't confirm native ACX-spec export, so check their current export settings before assuming the file is ready to upload.\n\n**Speechify** is worth knowing about, but it's a different kind of tool. It started as an accessibility app and has added creator-facing Studio features, including voice cloning. Independent reviews from self-publishing outlets note that its output is not production-ready for commercial audiobook standards — no built-in leveling, noise reduction, or post-production. It also doesn't distribute audiobooks directly; you'd still need an aggregator. If you just want to hear your manuscript read aloud to catch prose problems, Speechify's free tier is genuinely useful for that. For a finished audiobook you plan to sell, ElevenLabs is the more appropriate tool.\n\n**Replica Studios** appeared in earlier roundups for this use case but didn't surface in any current (2025–2026) audiobook-specific sources or comparisons during research for this guide. Its current positioning for audiobook production couldn't be verified, so it's not recommended here as a starting point.",
+          "body_markdown": "**ElevenLabs** is the clearest choice for writers producing an audiobook they intend to distribute commercially. It launched a dedicated Audiobooks product in early 2026, built for manuscript-length generation rather than short clips. The workflow includes scene-by-scene editing in its Studio interface, support for over 90 languages, and a voice library of thousands of options. You can also use a Professional Voice Clone — either your own voice or one you're licensed to use.\n\nOn a paid plan, ElevenLabs explicitly grants a commercial license for generated audio, per their official help documentation. Free plan output cannot be used commercially and requires attribution. Voice cloning is tiered: instant cloning is available on lower paid plans, and professional-grade cloning requires a higher tier. Check ElevenLabs' current plan page for specifics, since pricing and tier structures change.\n\nFor distribution, ElevenLabs lists direct partnerships with platforms including Spotify and Voices by INaudio (the platform formerly known as Findaway Voices) on their official Audiobooks product page. These platforms are described as accepting AI-narrated content when disclosed in metadata. The Spotify partnership in particular is based on ElevenLabs' own product page rather than independent corroboration, so it's worth verifying that distribution path is active before building your workflow around it. You can also download finished files and distribute them yourself.\n\nOne thing to verify before submitting anywhere with technical specs: ElevenLabs' raw audio export may not meet ACX's required parameters (44.1 kHz sample rate, 192 kbps constant bitrate, specific loudness range) without post-processing. This is based on a single third-party review source flagged during research as a potential competitor site, not on ElevenLabs' own documentation — treat it as a heads-up to check rather than a confirmed limitation. ElevenLabs' own documentation doesn't confirm native ACX-spec export, so verify their current export settings before assuming any file is ready to upload.\n\n**Speechify** is worth knowing about, but it's a different kind of tool. It started as an accessibility app and has added creator-facing Studio features, including voice cloning. Independent reviews from self-publishing outlets note that its output is not production-ready for commercial audiobook standards — no built-in leveling, noise reduction, or post-production. It also doesn't distribute audiobooks directly; you'd still need an aggregator. If you just want to hear your manuscript read aloud to catch prose problems, Speechify's free tier is genuinely useful for that. For a finished audiobook you plan to sell, ElevenLabs is the more appropriate tool.\n\n**Replica Studios** appeared in earlier roundups for this use case but didn't surface in any current (2025–2026) audiobook-specific sources or comparisons during research for this guide. Its current positioning for audiobook production couldn't be verified, so it's not recommended here as a starting point.",
           "tools": [
             {
               "name": "ElevenLabs Audiobooks",
@@ -2119,20 +2119,86 @@
         {
           "id": "s3",
           "heading": "Before you publish or monetize anything: Audible, ACX, and what the platforms actually allow",
-          "body_markdown": "This is where most writers get surprised, so read carefully.\n\n**ACX (Audible's creator platform) does not accept general third-party AI narration for standard distribution.** According to ACX's official blog and independent reporting from audiobook-focused outlets, uploading AI-generated audio as if it were human narration risks rejection or removal. ACX quality reviewers listen to submissions.\n\nACX has two sanctioned AI paths. The first is **Virtual Voice**, available through KDP (Amazon's self-publishing platform), which labels the audiobook as AI-narrated for listeners. The second is a **Narrator Voice Replica beta**, where professional narrators opt into having their own voice replicated — rights holders can then hire that replica directly. The replica counts as the narrator's own performance for ACX purposes.\n\nIf Audible is your target platform, the practical options are: use Virtual Voice through KDP, work within the Voice Replica beta, or hire a human narrator. Generating your own audio in ElevenLabs and uploading it to ACX as a standard submission is not an approved path as of mid-2026 — and the policy has been described by independent sources as changing frequently, so check ACX's live policy page before finalizing anything.\n\n**If you want to distribute AI-narrated audio more broadly**, platforms like Findaway Voices (now inaudio) and several smaller distributors do accept AI-narrated content when properly disclosed in metadata. ElevenLabs has a direct partnership with inaudio. EU AI Act transparency rules for synthetic audio are also coming into force in mid-2026, with disclosure requirements for AI-generated content — relevant if you're distributing in European markets.\n\nFor voice cloning specifically: if you clone someone else's voice, you need their consent. Several U.S. states now have voice cloning consent laws, and ElevenLabs' own terms require that users hold the necessary rights for any audio they generate commercially. Cloning your own voice for your own audiobook is the cleanest path.",
+          "body_markdown": "This is where most writers get surprised, so read carefully.\n\n**ACX (Audible's creator platform) does not accept general third-party AI narration for standard distribution.** According to ACX's official blog and independent reporting from audiobook-focused outlets, uploading AI-generated audio as if it were human narration risks rejection or removal. ACX quality reviewers listen to submissions.\n\nACX has two sanctioned AI paths. The first is **Virtual Voice**, available through KDP (Amazon's self-publishing platform), which labels the audiobook as AI-narrated for listeners. The second is a **Narrator Voice Replica beta**, where professional narrators opt into having their own voice replicated — rights holders can then hire that replica directly. The replica counts as the narrator's own performance for ACX purposes.\n\nIf Audible is your target platform, the practical options are: use Virtual Voice through KDP, work within the Voice Replica beta, or hire a human narrator. Generating your own audio in ElevenLabs and uploading it to ACX as a standard submission is not an approved path as of mid-2026 — and the policy has been described by independent sources as changing frequently, so check ACX's live policy page before finalizing anything.\n\n**If you want to distribute AI-narrated audio more broadly**, platforms like Voices by INaudio (formerly Findaway Voices) and several smaller distributors do accept AI-narrated content when properly disclosed in metadata. ElevenLabs lists a direct partnership with that platform on their product page. EU AI Act transparency rules for synthetic audio came into force on August 2, 2026, with disclosure requirements for AI-generated content — relevant if you're distributing in European markets.\n\nFor voice cloning specifically: if you clone someone else's voice, you need their consent. According to Terms.Law, at least 12 U.S. states now have voice cloning consent laws, and ElevenLabs' own terms require that users hold the necessary rights for any audio they generate commercially. Cloning your own voice for your own audiobook is the cleanest path.",
           "tools": []
         }
       ],
       "key_takeaways": [
-        "ElevenLabs is the clearest starting point for commercial audiobook production — it has a dedicated long-form product, commercial rights on paid tiers, and distribution partnerships with platforms that accept AI audio.",
+        "ElevenLabs is the clearest starting point for commercial audiobook production — it has a dedicated long-form product, commercial rights on paid tiers, and listed distribution partnerships with platforms that accept AI audio.",
         "ACX (Audible) does not accept standard third-party AI narration uploads. The sanctioned AI paths are Amazon's own Virtual Voice (via KDP) or the Narrator Voice Replica beta.",
         "Speechify is useful for proofing your prose aloud, but it's not built for finished commercial audiobook production.",
-        "ElevenLabs' raw audio may need post-processing to meet ACX's technical specs — verify before submitting anywhere with formal requirements.",
-        "If you clone a voice, make sure you have explicit consent. Several U.S. states have laws covering this, and ElevenLabs' terms require you to hold the rights."
+        "ElevenLabs' raw audio may need post-processing to meet ACX's technical specs — this comes from a single third-party source rather than ElevenLabs' own documentation, so verify their current export settings before submitting anywhere with formal requirements.",
+        "If you clone a voice, make sure you have explicit consent. At least 12 U.S. states have laws covering this, and ElevenLabs' terms require you to hold the rights."
       ],
       "conclusion": "The actual production side — generating a full-length, clean audiobook audio file — is more solved than the distribution side. ElevenLabs can get you there. Where writers run into trouble is assuming that a good-sounding AI file will clear Audible's submission process like any other audiobook. It won't, unless you go through their own channels. Know the platform rules before you start production, not after you've spent hours on the audio.",
       "methodology_disclosure": "This guide was researched using official documentation, product pages, and terms of service from ElevenLabs and ACX, supplemented by independent reporting from self-publishing and audio production outlets including Reedsy and Audie.ai. Claims about ACX policy are drawn from ACX's official blog and corroborated by two independent sources; because platform policies change frequently, readers should verify against ACX's live policy pages before finalizing production plans. Commercial licensing claims for ElevenLabs are sourced from ElevenLabs' own help documentation, with independent legal analysis cited where noted. Replica Studios was excluded because no current (2025–2026) primary or credible independent source confirmed its active positioning for audiobook production. No hands-on production testing was conducted by dailyblip for this article.",
       "last_reviewed_date": "July 17, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "ElevenLabs lists direct partnerships with platforms including Spotify",
+          "issue": "The Spotify distribution partnership is sourced only from ElevenLabs' own product page with no independent corroboration, yet the article presents it as a factual partnership rather than an unverified company claim — the caveat buried later in the same paragraph is insufficient given how the claim is initially framed.",
+          "supporting_source_url": "https://elevenlabs.io/audiobooks"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "EU AI Act transparency rules for synthetic audio came into force on August 2, 2026",
+          "issue": "This future/speculative date (August 2, 2026) is presented as a confirmed fact, but the article's review date is July 17, 2026, meaning the rules had not yet come into force at time of publication — the phrasing implies they are already in effect.",
+          "supporting_source_url": "https://z.tools/blog/tts-disclosure-rules-eu-acx-2026"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "It launched a dedicated Audiobooks product in early 2026",
+          "issue": "The source (ElevenLabs blog) states the Audiobooks product launched in February 2026 within ElevenCreative — 'early 2026' is accurate but vague; more importantly the article should note this is a company claim about launch date, not independently verified.",
+          "supporting_source_url": "https://elevenlabs.io/blog/introducing-audiobooks-in-elevencreative"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "ElevenLabs' raw audio export may not meet ACX's required parameters...based on a single third-party review source flagged during research as a potential competitor site",
+          "issue": "A limitation sourced from a flagged competitor site is presented to readers as a meaningful caveat rather than being excluded or replaced with verification from ElevenLabs' own export documentation — citing a potentially biased source, even with a disclaimer, risks misleading readers.",
+          "supporting_source_url": "https://www.inkfluenceai.com/ai-audiobook-generator"
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "ElevenLabs' raw audio may need post-processing to meet ACX's technical specs — this comes from a single third-party source",
+          "issue": "The key takeaway repeats a claim derived from a flagged competitor source, giving it additional prominence and credibility it does not warrant.",
+          "supporting_source_url": "https://www.inkfluenceai.com/ai-audiobook-generator"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Voices by INaudio (the platform formerly known as Findaway Voices)",
+          "issue": "Findaway Voices rebranded to 'Voices by INaudio' — this rebrand should be independently verified as current; the article's only corroboration is ElevenLabs' own product page and the Z.Tools source, neither of which is an authoritative independent confirmation of the rebrand.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "low",
+          "section_id": "s1",
+          "original_text": "the industry standard estimate is around 9,300 words per finished hour",
+          "issue": "The 9,300 words-per-finished-hour figure is stated as an industry standard without a cited source — the standard figure commonly cited in audiobook production guidance is closer to 9,000–9,300 words, but no source is provided to substantiate this specific number.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "According to Terms.Law, at least 12 U.S. states now have voice cloning consent laws",
+          "issue": "Terms.Law is an independent legal analysis site of unclear authority; the '12 states' figure is presented as a current fact but carries a specific number that could easily become outdated, and no government or authoritative legal source is cited to corroborate it.",
+          "supporting_source_url": "https://terms.law/ai-output-rights/elevenlabs/"
+        }
+      ],
+      "checked_at": "2026-07-17T23:47:01.934Z",
+      "revised": true
+    },
+    "warnings": [
+      "s2: The Spotify distribution partnership is sourced only from ElevenLabs' own product page with no independent corroboration, yet the article presents it as a factual partnership rather than an unverified company claim — the caveat buried later in the same paragraph is insufficient given how the claim is initially framed.",
+      "s3: This future/speculative date (August 2, 2026) is presented as a confirmed fact, but the article's review date is July 17, 2026, meaning the rules had not yet come into force at time of publication — the phrasing implies they are already in effect."
+    ]
   }
 ]
