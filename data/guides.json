@@ -1170,8 +1170,8 @@
   },
   {
     "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Using AI to write better songs without losing your voice",
       "article_type": "Practical guide",
@@ -1183,7 +1183,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T19:17:05.201Z",
-    "updated_at": "2026-07-17T19:22:01.058Z",
+    "updated_at": "2026-07-17T19:22:02.524Z",
     "brief": {
       "target_reader": "A singer-songwriter who writes their own lyrics and melodies, is curious about AI tools but worried that using them will make their songs sound generic or less personal. Has probably never used an AI writing tool for music before.",
       "reader_outcome": "Feel confident enough to try one specific AI-assisted step in their songwriting process today, without feeling like they are handing their creative voice over to a machine.",
