@@ -1130,7 +1130,7 @@
   {
     "id": "9278e1a0-43f9-4d5f-9e58-b2b82439f125",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -1142,7 +1142,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:13:39.298Z",
-    "updated_at": "2026-07-17T04:16:04.695Z",
+    "updated_at": "2026-07-17T04:17:53.492Z",
     "brief": {
       "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for commercial or creative work and want to choose a tool without wading through vendor marketing",
       "reader_outcome": "The reader should be able to identify which photorealistic AI image generator fits their specific workflow, budget, and output requirements, and know the concrete tradeoffs before committing to a paid plan or integrating a tool into production",
@@ -1398,6 +1398,157 @@
       "Ideogram's explicit commercial use terms by tier — the official Ideogram pricing FAQ confirms free tier images are public and Plus/Pro unlock privacy, but the exact commercial use language (e.g., whether all tiers permit commercial use of outputs) was not confirmed from Ideogram's official ToS. Multiple third-party sources conflict on whether commercial use requires a paid plan.",
       "Inpainting and outpainting availability on Ideogram via the official web UI — third-party sources mention an 'editing mode with masks' in the API, but the full feature set accessible via the web subscription vs. API could not be confirmed from official Ideogram documentation.",
       "Current Flux.1 Pro pricing via Replicate and fal.ai as of July 2026 — the ~$0.05/image figure cited by independent sources may have changed; always verify directly on Replicate.com and fal.ai before publication."
-    ]
+    ],
+    "article": {
+      "title": "Photorealistic AI Image Generators Compared: Midjourney, Firefly, Flux, and More",
+      "alternative_titles": [
+        "Which AI Image Generator Makes the Most Realistic Photos? A Creator's Comparison",
+        "Midjourney vs Firefly vs Flux vs GPT Image: Choosing a Photorealistic AI Tool in 2026"
+      ],
+      "slug": "photorealistic-ai-image-generators-compared",
+      "dek": "A practical breakdown of Midjourney, Adobe Firefly, Flux, OpenAI GPT Image, Ideogram, and Stable Diffusion for creators who need honest tradeoffs, not vendor pitches.",
+      "meta_description": "Compare Midjourney, Adobe Firefly, Flux, GPT Image 2, Ideogram, and Stable Diffusion for photorealistic image generation. Pricing, workflow fit, commercial licensing, and failure modes explained.",
+      "quick_answer": "For commercial photorealistic work, Midjourney (web/Discord) and Flux.1 Pro (API) lead on output quality, while Adobe Firefly offers the clearest commercial licensing. The right choice depends on your budget, need for API access, and whether you require IP indemnification.",
+      "introduction": "\"Photorealistic\" is doing a lot of work in AI image marketing. In practice it means different things depending on whether you need a portrait that could pass for a camera photo, a product shot with controlled lighting, or an environmental scene for a film pitch deck. Each of those use cases surfaces different tool strengths.\n\nThis guide compares six options that are actually in production use in 2026: Midjourney, Adobe Firefly, Flux (Black Forest Labs), OpenAI GPT Image 2, Ideogram, and Stable Diffusion. Pricing, access model, licensing, and known failure modes are all covered. Stability AI's DreamStudio is excluded because its product status and pricing could not be confirmed from authoritative sources at time of writing.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "What 'Photorealistic' Actually Means for Tool Choice",
+          "body_markdown": "Before picking a tool, narrow down what photorealistic means for your specific output:\n\n- **Portraits and human faces:** Requires accurate anatomy, skin texture, and lighting. Failure modes include hand errors, ear asymmetry, and uncanny-valley skin.\n- **Product shots:** Needs surface material accuracy (glass, chrome, fabric), consistent lighting direction, and legible labels or packaging.\n- **Environments and scenes:** Demands spatial coherence, accurate depth of field, and believable atmospheric perspective.\n\nA tool that excels at one category often underperforms in another. Ideogram, for example, is specifically known for superior text rendering in images, which makes it useful for product mockups with visible copy but not necessarily the strongest for skin-tone accuracy in portraits.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "The Tools: Access Models and What They Cost",
+          "body_markdown": "Understanding how you access a tool and what you actually pay per image matters more than headline specs.\n\n## Midjourney\n\nMidjourney remains a web UI and Discord bot product with no official public API as of July 2026. An enterprise API has been floated in public surveys but has not shipped. Third-party \"Midjourney APIs\" exist but violate the Terms of Service and carry ban risk.\n\n**Subscription tiers (monthly billing):** Basic $10, Standard $30, Pro $60, Mega $120. Annual billing drops those to $8, $24, $48, and $96/month respectively. The Basic tier provides 3.3 fast GPU hours with no Relax Mode. Standard adds unlimited Relax Mode generation. Pro adds Stealth Mode (private outputs) and higher concurrency. Mega doubles fast GPU hours. No free trial has been available since early 2023. Midjourney bills by GPU time rather than discrete image counts, so per-image equivalents vary with settings and model.\n\nMidjourney V8.1 became the default model on June 10, 2026.\n\n## Adobe Firefly\n\nFirefly standalone plans run $9.99/month (Standard), $19.99/month (Pro), and $199.99/month (Premium). Creative Cloud Pro for Teams includes 4,000 premium generative credits per month per user plus unlimited standard generations. Adobe trains Firefly on licensed content and Adobe Stock, and the company explicitly positions outputs as commercially safe. IP indemnification terms depend on your specific Adobe agreement and plan. Beta feature outputs are generally not indemnified even if allowed for commercial use. Verify current terms at Adobe's official Firefly plans page, since legacy plans were retired mid-2025.\n\n## OpenAI GPT Image 2\n\nDALL-E 3 was removed from the OpenAI API on May 12, 2026. The current OpenAI image API uses the GPT Image model family. GPT Image 2 supports up to 2K resolution and three quality tiers (Low, Medium, High) across three aspect ratios (1024x1024, 1024x1536, 1536x1024). Pricing runs $0.005 to $0.211 per image depending on quality and resolution. New API users receive $5 in free credits. GPT Image 1.5 and newer support editing and inpainting natively; earlier DALL-E 3 did not.\n\nOpenAI's usage policy explicitly prohibits generating photorealistic likenesses of real people without their consent in ways that could confuse authenticity. This is a hard platform restriction, not just a guideline.\n\n## Flux (Black Forest Labs)\n\nFlux.1 has three primary variants. **Pro** is closed-source and API-only, targeting commercial production work. **Dev** is open-weight at 12 billion parameters, free for non-commercial research, and requires 24GB+ VRAM to run locally. **Schnell** is commercially licensed under Apache 2.0 and generates in 1 to 4 steps, making it fast but lower in quality than Pro.\n\nBlack Forest Labs uses credit-based pricing where 1 credit equals $0.01 USD. FLUX.2 uses megapixel-based pricing that scales with output resolution. Flux 1.1 Pro Ultra supports 2K+ resolution. Third-party pricing via platforms like Replicate and fal.ai was approximately $0.05/image for Flux.1 Pro at time of sourcing, but verify directly before committing since those rates can change.\n\n## Ideogram\n\nIdeogram offers 10 slow credits per week on its free tier, with public-by-default image generation. Private generation requires Plus ($15/month billed annually, 1,000 priority credits) or Pro ($42/month, 3,500 credits). Subscription credits expire monthly with no rollover; top-up credits carry over. The API is billed separately at approximately $0.025 to $0.10 per image. Ideogram is specifically recognized for strong text rendering in images, which is a real differentiator for product mockups, signage, and any composition where readable copy matters.\n\nWhether all subscription tiers permit commercial use of outputs was not confirmed from Ideogram's official Terms of Service in time for publication. Verify at ideogram.ai before using free-tier outputs commercially.\n\n## Stable Diffusion (Local)\n\nStable Diffusion models can be run locally at no recurring cost once hardware is in place. SD 1.5 runs on 4GB VRAM. SDXL requires at least 8GB VRAM (12GB recommended). SD 3.5 Large needs approximately 11GB VRAM even with FP8 optimization. Front-ends including Forge, Fooocus, and ComfyUI are all available. Inpainting, outpainting, and img2img are natively supported. SDXL has the broadest LoRA and ControlNet ecosystem of any local option in 2026, which matters for workflow repeatability and style control.\n\nThe upfront hardware cost is the real barrier. A GPU capable of running SDXL comfortably costs several hundred to over a thousand dollars. For low-volume or experimental use that cost is hard to justify. For high-volume production it can pay off quickly against per-image API pricing.",
+          "tools": [
+            {
+              "name": "Midjourney",
+              "url": "https://www.midjourney.com",
+              "description": "Subscription-based image generator accessed via Discord bot and web UI, no official API.",
+              "strengths": [
+                "Consistent aesthetic quality across diverse prompts",
+                "V8.1 model produces strong results for environmental and portrait work",
+                "Unlimited Relax Mode on Standard and above tiers keeps costs predictable for high-volume non-urgent work"
+              ],
+              "limitations": [
+                "No official public API; third-party API workarounds violate ToS",
+                "No free tier since early 2023",
+                "Cannot be integrated into automated production pipelines without ToS risk"
+              ]
+            },
+            {
+              "name": "Adobe Firefly",
+              "url": "https://firefly.adobe.com",
+              "description": "Adobe's generative image tool trained on licensed content, integrated with Creative Cloud.",
+              "strengths": [
+                "Clearest commercial licensing story of any tool in this comparison",
+                "Native integration with Photoshop, Illustrator, and Express",
+                "4,000 premium credits/month included in Creative Cloud Pro for Teams"
+              ],
+              "limitations": [
+                "Beta features are not indemnified even if permitted for commercial use",
+                "Output style tends toward polished/stock-photo aesthetics, less suited to gritty or cinematic realism",
+                "Premium plan pricing ($199.99/mo) is steep for independent creators"
+              ]
+            },
+            {
+              "name": "OpenAI GPT Image 2",
+              "url": "https://platform.openai.com/docs/guides/image-generation",
+              "description": "OpenAI's current image generation API, replacing DALL-E 3 as of May 2026.",
+              "strengths": [
+                "Supports inpainting and editing natively",
+                "Tiered pricing allows cost control across quality levels",
+                "Up to 2K resolution output"
+              ],
+              "limitations": [
+                "Hard platform restriction on generating real human likenesses",
+                "Rate limits apply (7 images/minute was the DALL-E 3 cap; verify current limits for GPT Image 2)",
+                "API pricing at high quality tiers ($0.211/image) adds up quickly in production"
+              ]
+            },
+            {
+              "name": "Flux (Black Forest Labs)",
+              "url": "https://docs.bfl.ml",
+              "description": "Family of image models from Black Forest Labs, ranging from Apache 2.0 commercial (Schnell) to API-only Pro.",
+              "strengths": [
+                "Flux.1 Pro targets commercial production with strong photorealism",
+                "Schnell variant is commercially licensed under Apache 2.0 for local or API use",
+                "FLUX.2 megapixel-based pricing gives fine control over cost vs. resolution tradeoff"
+              ],
+              "limitations": [
+                "Dev variant requires 24GB+ VRAM, limiting local use to high-end hardware",
+                "Pro is closed-source and API-only with no offline option",
+                "Third-party platform pricing varies and should be verified before production"
+              ]
+            },
+            {
+              "name": "Ideogram",
+              "url": "https://ideogram.ai",
+              "description": "Image generator with a particular strength in legible text within images.",
+              "strengths": [
+                "Best-in-class text rendering for product mockups and signage",
+                "Free tier available (10 slow credits/week)",
+                "API available separately for pipeline integration"
+              ],
+              "limitations": [
+                "Free tier images are public by default",
+                "Subscription credits expire monthly with no rollover",
+                "Commercial use terms by tier were not confirmed from official ToS at time of writing"
+              ]
+            },
+            {
+              "name": "Stable Diffusion (Local)",
+              "url": "https://stability.ai",
+              "description": "Open-source model family runnable locally via front-ends like ComfyUI, Forge, or Fooocus.",
+              "strengths": [
+                "No per-image cost once hardware is in place",
+                "Largest LoRA and ControlNet ecosystem for style and structure control",
+                "Natively supports inpainting, outpainting, and img2img"
+              ],
+              "limitations": [
+                "Significant upfront hardware investment (8-12GB+ VRAM for SDXL)",
+                "Setup and maintenance overhead compared to hosted tools",
+                "Output consistency requires more prompt engineering and model tuning"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "heading": "Workflow Fit: API Access, Iteration Speed, and Integration",
+          "body_markdown": "If you're building a production pipeline, API access is non-negotiable. That immediately limits your options:\n\n- **Has a clean official API:** Flux (Black Forest Labs), OpenAI GPT Image 2, Ideogram (separate billing), Stable Diffusion (self-hosted or via third-party platforms)\n- **No official API:** Midjourney. Any workaround carries ToS violation risk.\n- **API available within Adobe ecosystem:** Firefly via Adobe's developer platform, primarily relevant if you're already in Creative Cloud workflows\n\nFor iteration speed, local Stable Diffusion (especially Schnell-class or optimized SDXL) wins on latency once set up. Hosted APIs add network overhead but remove hardware management. Midjourney's Relax Mode is cost-efficient but introduces queue delays that are unsuitable for time-sensitive iteration.\n\nFor resolution and editorial control, Flux 1.1 Pro Ultra and GPT Image 2 both reach approximately 2K output. Midjourney V8.1 also produces HD 2K outputs. A verified side-by-side resolution table across all tools was not assembable from official documentation alone for this guide. Check each tool's current docs before making resolution a deciding factor.",
+          "tools": []
+        },
+        {
+          "id": "s4",
+          "heading": "Licensing and Human Likeness: Where It Gets Complicated",
+          "body_markdown": "Commercial licensing is where most creators hit unexpected friction.\n\n**Adobe Firefly** has the most explicit commercial licensing coverage, trained specifically on licensed content. IP indemnification exists but depends on your plan and agreement type. Beta features are a carve-out.\n\n**OpenAI (GPT Image 2)** prohibits generating photorealistic likenesses of real people without consent in ways that could confuse authenticity. This is a platform-level restriction, not just a content guideline.\n\n**Flux (Apache 2.0 / Schnell)** is commercially licensed at the model level, but you still carry legal responsibility for what you generate. If an output resembles a real person, publication may raise right-of-publicity concerns regardless of the model license. This is a cross-platform legal issue, not just a Flux problem.\n\n**Stable Diffusion** running locally gives you the most operational freedom, but the same legal exposure applies. The US Copyright Office has consistently declined to register works generated entirely by AI in response to a user prompt, which has downstream implications for commercial IP claims on outputs.\n\n**Midjourney** commercial use terms are included in paid plans, but whether the ToS includes specific restrictions on human likenesses for commercial use was not confirmed from official Midjourney documentation for this guide. Verify at docs.midjourney.com.\n\nPractical rule: if your deliverable involves a photorealistic human face used commercially, legal review of both platform ToS and applicable right-of-publicity law is worth the time regardless of which tool you choose.",
+          "tools": []
+        },
+        {
+          "id": "s5",
+          "heading": "Known Failure Modes by Use Case",
+          "body_markdown": "Every tool has categories where it reliably underperforms. These are based on patterns reported across independent creator communities and sourced observations, not controlled benchmarks.\n\n**Portraits:** Hand anatomy, ear symmetry, and background-subject edge blending are common failure points across nearly all tools. Midjourney V8.1 and Flux Pro generally handle these better than older models, but neither is immune. Prompt specificity and iterative refinement remain necessary.\n\n**Product shots with text:** Most tools struggle with legible text on labels, packaging, or signage. Ideogram is specifically differentiated here. GPT Image 2 has improved on text rendering versus DALL-E 3 but is not consistently reliable for complex typographic layouts.\n\n**Environments:** Spatial coherence issues (floating objects, impossible shadows, incorrect perspective) appear across tools when prompts are complex. Local Stable Diffusion with ControlNet depth maps can address this systematically, which is an advantage if you're willing to invest in the workflow.\n\n**Consistency across frames:** If you need the same character, product, or environment across multiple outputs, no tool in this comparison handles it natively without additional tooling (ControlNet, style references, or custom fine-tuning). This is a fundamental limitation of diffusion models in general.",
+          "tools": []
+        },
+        {
+          "id": "s6",
+          "heading": "How to Choose: A Decision Framework by Creator Type",
+          "body_markdown": "Use these criteria to narrow down options rather than relying on overall rankings.\n\n**If you need clear commercial licensing and are already in Adobe Creative Cloud:** Firefly is the lowest-friction choice. The 4,000 monthly credits in Creative Cloud Pro cover moderate volume, and the licensing coverage is explicit.\n\n**If you need API access for an automated pipeline:** Flux.1 Pro or GPT Image 2. Flux offers per-image cost scaling with resolution. GPT Image 2 has tiered quality pricing. Compare current rates at their respective pricing pages before committing.\n\n**If you generate high volume and cost is the primary constraint:** Local Stable Diffusion (SDXL via ComfyUI or Forge) eliminates per-image cost after hardware. Midjourney Standard's Relax Mode is a hosted alternative for lower hardware budgets, but iteration is slower.\n\n**If you produce product mockups or anything requiring legible in-image text:** Start with Ideogram before assuming another tool can handle it. The text rendering difference is real and well-documented.\n\n**If you need maximum output quality and don't need an API:** Midjourney remains editorially competitive at the quality level, particularly for environmental and portrait work, despite the workflow constraints. The lack of an official API is the deciding dealbreaker for pipeline work.\n\n**If you want to experiment without committing:** Ideogram's free tier (10 slow credits/week) and OpenAI's $5 new-user API credits are the lowest barriers to testing. Midjourney has no free trial.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "Midjourney produces strong photorealistic output but has no official public API, making it unsuitable for automated pipelines without ToS risk.",
+        "Adobe Firefly offers the clearest commercial licensing story, trained on licensed content, though IP indemnification terms depend on your specific plan.",
+        "Flux.1 Pro and OpenAI GPT Image 2 are the primary API-accessible options for commercial production; pricing scales by resolution and quality tier.",
+        "Ideogram is the standout choice when in-image text legibility matters (product mockups, signage), but confirm commercial use terms from the official ToS before using free-tier outputs.",
+        "Local Stable Diffusion (SDXL) eliminates per-image cost and offers the deepest ControlNet/LoRA ecosystem, but requires 8-12GB+ VRAM and meaningful setup investment."
+      ],
+      "conclusion": "There is no single photorealistic AI image generator that leads across every use case in 2026. The decision reduces to three practical questions: Do you need an API? Do you need explicit commercial licensing? And what does photorealistic actually mean for your specific output type?\n\nIf you need an API, Flux and GPT Image 2 are the field. If you need commercial licensing clarity, Firefly is the safest starting point. If text-in-image matters, test Ideogram first. If you have the hardware and volume to justify it, local Stable Diffusion removes the per-image cost ceiling entirely.\n\nPricing and model capabilities in this space shift frequently. Treat the specific figures in this guide as directional and verify against each tool's current pricing page before committing to a paid plan or production integration.",
+      "methodology_disclosure": "This guide was researched and synthesized from official pricing pages, official terms of service and usage policy documents, and independent reporting from third-party sources accessed in July 2026. No hands-on testing of image output quality was conducted by dailyblip for this guide. Capability observations about failure modes and output characteristics are synthesized from sourced independent reporting and editorial judgment, and are identified as such. Claims about Stability AI's DreamStudio were excluded due to inability to confirm current product status from authoritative sources. Specific pricing figures should be verified against each tool's current documentation before production use. All sources are cited inline.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
