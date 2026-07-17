@@ -178,6 +178,25 @@ Return JSON matching this schema exactly:
 }
 JSON only.`;
 
+// Thrown immediately if a draft/revise response is syntactically valid
+// JSON but structurally empty or wrong-shaped (missing title, no
+// sections). Without this, a malformed-but-parseable response — the
+// model returned SOME valid JSON, just not matching the expected
+// schema — silently flows through factcheck and images, spending real
+// API cost operating on garbage, and only surfaces as a confusing
+// "ready for review" with an essentially empty article once format's
+// validation finally catches it, stages later. This fails loud, at the
+// actual point of corruption, with a message that says exactly what's
+// missing instead of a downstream mystery.
+function assertArticleShape(article, stageName) {
+  const problems = [];
+  if (!article?.title) problems.push("no title");
+  if (!Array.isArray(article?.sections) || article.sections.length === 0) problems.push("no sections");
+  if (problems.length) {
+    throw new Error(`${stageName}: response parsed as valid JSON but is structurally empty (${problems.join(", ")}) \u2014 the model likely returned a wrong-shaped or near-empty object that askJSON's parser accepted without checking its shape. Check stop_reason in the logs above this error.`);
+  }
+}
+
 async function stageDraft(job) {
   const s = job.submitted;
   job.article = await askJSON({
@@ -196,6 +215,7 @@ async function stageDraft(job) {
     }),
     maxTokens: 8000,
   });
+  assertArticleShape(job.article, "draft");
   job.article.last_reviewed_date = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 }
 
@@ -222,12 +242,14 @@ async function stageFactcheck(job) {
 
   const needsRevision = job.fact_check.issues.some((i) => i.severity === "medium" || i.severity === "high");
   if (needsRevision) {
-    job.article = await askJSON({
+    const revised = await askJSON({
       role: "write",
       system: REVISE_SYSTEM,
       prompt: JSON.stringify({ article: job.article, issues: job.fact_check.issues }),
       maxTokens: 8000,
     });
+    assertArticleShape(revised, "factcheck revise");
+    job.article = revised;
     job.fact_check.revised = true;
   }
 
