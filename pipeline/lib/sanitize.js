@@ -45,3 +45,58 @@ export function validateBrief(brief, validStoryIds) {
   const sorted = items.slice(0, 6).sort((a, b) => b.impact - a.impact);
   return { ...brief, title: String(brief.title), items: sorted };
 }
+
+// --- Guide article markdown -------------------------------------------
+// Guide sections are edited as raw markdown in admin.html (a plain
+// textarea, not a WYSIWYG editor — see the guides feature notes). This
+// converts that markdown to HTML at PUBLISH time only, never earlier —
+// the draft stored in data/guides.json stays as source markdown so
+// re-editing and re-rendering never lose fidelity to what was typed.
+//
+// This is NOT a general-purpose markdown parser. It supports only the
+// narrow subset guide prompts are instructed to produce: paragraphs,
+// ## / ### headings, **bold**, *italic*, [text](url) links, and "- "
+// bullet lists. Escaping happens FIRST, on the raw input, before any
+// markdown pattern is applied — so even if a source's title or a
+// model's output contains literal HTML, it can never re-enter the
+// output as a tag. The markdown patterns below only ever wrap already-
+// escaped text in known-safe tags; they never re-introduce raw HTML.
+function escHtml(t) {
+  return String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function inlineMd(escapedText) {
+  return escapedText
+    .replace(/\*\*(.+?)\*\*/g, "<b>$1</b>")
+    .replace(/\*(.+?)\*/g, "<i>$1</i>")
+    // Link targets are re-escaped for the href attribute specifically —
+    // escHtml already ran on the whole line, so text is safe, but a URL
+    // containing a literal quote could otherwise break out of the
+    // attribute. rel=noopener since these can point to external sources.
+    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, text, url) => {
+      const safeUrl = /^https?:\/\//i.test(url) ? url.replace(/"/g, "&quot;") : "#";
+      return `<a href="${safeUrl}" rel="noopener">${text}</a>`;
+    });
+}
+
+export function renderSafeMarkdown(markdown) {
+  const lines = String(markdown ?? "").split("\n");
+  const out = [];
+  let listBuf = [];
+  const flushList = () => {
+    if (listBuf.length) { out.push(`<ul>${listBuf.join("")}</ul>`); listBuf = []; }
+  };
+  for (const rawLine of lines) {
+    const line = escHtml(rawLine.trim());
+    if (!line) { flushList(); continue; }
+    const h3 = line.match(/^###\s+(.*)/);
+    const h2 = line.match(/^##\s+(.*)/);
+    const li = line.match(/^-\s+(.*)/);
+    if (h3) { flushList(); out.push(`<h3>${inlineMd(h3[1])}</h3>`); }
+    else if (h2) { flushList(); out.push(`<h2>${inlineMd(h2[1])}</h2>`); }
+    else if (li) { listBuf.push(`<li>${inlineMd(li[1])}</li>`); }
+    else { flushList(); out.push(`<p>${inlineMd(line)}</p>`); }
+  }
+  flushList();
+  return out.join("\n");
+}
