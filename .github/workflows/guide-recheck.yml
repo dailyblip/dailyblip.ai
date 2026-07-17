@@ -1,0 +1,48 @@
+name: Recheck Guide
+# workflow_dispatch only. Runs when someone clicks "Re-run fact check" in
+# admin.html after editing a flagged section by hand \u2014 without this,
+# there was no way to clear a high-severity block once you'd actually
+# fixed the underlying problem, since the stored fact_check.issues never
+# updated on its own. Single stage, fast, no images/research involved.
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "Guide job id to re-check (admin.html sets it back to in_progress before dispatching)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guide-recheck-${{ inputs.job_id }}
+  cancel-in-progress: false
+
+jobs:
+  recheck:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+
+      - name: Re-run fact check
+        run: node pipeline/guide.js recheck "${{ inputs.job_id }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: recheck"
+          git pull --rebase --autostash
+          git push
