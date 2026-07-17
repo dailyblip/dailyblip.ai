@@ -1149,7 +1149,7 @@
   {
     "id": "e2b14fbf-805a-4845-8e96-05518fbdca8c",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Guide for less technical musicians getting into new AI - where to start",
       "article_type": "Practical guide",
@@ -1161,6 +1161,36 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:44:15.646Z",
-    "updated_at": "2026-07-17T15:44:15.646Z"
+    "updated_at": "2026-07-17T15:44:49.219Z",
+    "brief": {
+      "target_reader": "Musicians aged 40+ with intermediate-to-advanced musical skills but limited technical background, who have heard about AI music tools and are curious but unsure where to start or whether it is worth the effort",
+      "reader_outcome": "The reader can identify which category of AI music tool fits their actual workflow, set up and try at least one tool without needing coding knowledge, and make an informed decision about whether to go deeper based on honest tradeoffs",
+      "structure_plan": [
+        "What AI Actually Does in Music (and What It Does Not)",
+        "The Four Main Categories of AI Music Tools",
+        "Start Here: The Lowest-Friction Entry Points",
+        "Tools for Composition and Melody Ideas",
+        "Tools for Production, Mixing, and Mastering",
+        "Tools for Lyrics and Song Structure",
+        "Tools for Audio Cleanup and Restoration",
+        "What You Will Need: Accounts, Hardware, and Budget",
+        "A First-Week Workflow: How to Try One Tool Without Disrupting Your Process",
+        "Red Flags and Limitations to Know Before You Spend Money",
+        "How to Evaluate Whether a Tool Is Actually Helping You"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers for Suno, Udio, and similar text-to-song platforms",
+        "Whether Suno and Udio allow commercial use of generated audio on free vs paid plans",
+        "Current pricing and free tier limits for iZotope RX for audio cleanup",
+        "Whether LANDR AI mastering still offers a free tier and what its current export limits are",
+        "Pricing and DAW compatibility for Melodyne and whether it qualifies as AI-assisted",
+        "Whether Bandlab's AI tools remain free and what the current feature set is",
+        "System requirements (RAM, GPU) for any locally-run tools mentioned",
+        "Copyright status of AI-generated music under current US and UK law as of 2024-2025",
+        "Whether Splice or similar platforms have introduced AI composition features and under what terms",
+        "Current status of Stability Audio and any API or consumer product availability"
+      ],
+      "research_plan": "Prioritize official pricing and terms-of-service pages for all tools mentioned to get accurate tier information. Check music industry trade press (MusicTech, Sound On Sound, Music Radar) for practitioner-level reviews rather than vendor materials. Look for forum discussions on Gearslutz/Gearspace and Reddit communities like r/WeAreTheMusicMakers for real-user friction reports, especially from non-technical users. Review any published guidance from music rights organizations (ASCAP, PRS, PPL) on AI-generated content policies. For copyright claims, check primary legal sources or legal journalism rather than vendor FAQs. Avoid sourcing from AI vendor blogs or press releases as primary evidence."
+    }
   }
 ]
