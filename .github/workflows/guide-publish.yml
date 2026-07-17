@@ -41,6 +41,7 @@ jobs:
         run: node pipeline/guide-publish.js "${{ inputs.job_id }}"
         env:
           SITE_URL: https://dailyblip.ai
+          BRANDFETCH_CLIENT_ID: ${{ secrets.BRANDFETCH_CLIENT_ID }}
 
       - name: Commit
         if: always()
