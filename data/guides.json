@@ -84,5 +84,22 @@
       "message": "no JSON found",
       "at": "2026-07-17T03:10:18.943Z"
     }
+  },
+  {
+    "id": "b695a1ec-7cae-43e4-b70b-c45160c1dbff",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Comparing the options for photorealistic images",
+      "article_type": "Tool comparison",
+      "target_audience": "social media content creators",
+      "target_length": "Quick",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T03:13:01.705Z",
+    "updated_at": "2026-07-17T03:13:01.705Z"
   }
 ]
