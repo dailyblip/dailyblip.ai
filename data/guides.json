@@ -2719,5 +2719,22 @@
       "message": "factcheck revise: response parsed as valid JSON but is structurally empty (no title, no sections) — the model likely returned a wrong-shaped or near-empty object that askJSON's parser accepted without checking its shape. Check stop_reason in the logs above this error.",
       "at": "2026-07-17T05:06:23.346Z"
     }
+  },
+  {
+    "id": "a0c40a7c-b981-4f30-80e2-7fabf1de1840",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top two music generation AIs",
+      "article_type": "Tool comparison",
+      "target_audience": "musicians",
+      "target_length": "Standard",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T13:59:36.927Z",
+    "updated_at": "2026-07-17T13:59:36.927Z"
   }
 ]
