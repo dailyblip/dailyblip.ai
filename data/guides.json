@@ -136,7 +136,7 @@
   {
     "id": "6cc78b8b-cc64-403f-a068-0b9337a5d37e",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -148,6 +148,32 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:20:07.444Z",
-    "updated_at": "2026-07-17T03:20:07.445Z"
+    "updated_at": "2026-07-17T03:20:40.098Z",
+    "brief": {
+      "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for commercial or editorial use and want to choose a tool without wading through marketing copy",
+      "reader_outcome": "The reader can identify which photorealistic image generation tool fits their specific workflow, budget, and output quality requirements, and know the practical tradeoffs before committing time or money",
+      "structure_plan": [
+        "What We Mean by Photorealistic (and Why It Matters for Tool Choice)",
+        "The Tools: Which Ones Are Actually in the Running",
+        "Head-to-Head: Output Quality for Key Use Cases (portraits, product shots, environments)",
+        "Pricing and Access Models Compared",
+        "Prompt Control and Workflow Integration",
+        "Limitations and Failure Modes to Know Before You Commit",
+        "How to Pick: A Decision Framework by Use Case"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers and credit systems for Midjourney, Adobe Firefly, DALL-E 3 (via ChatGPT and API), Stable Diffusion (SDXL and SD3), Flux.1, and Ideogram as of the article publish date",
+        "Which tools offer commercial licensing and under what plan tiers",
+        "Whether Midjourney allows API access or is still Discord/web-only",
+        "Flux.1 model variants (Pro, Dev, Schnell) and their actual availability through third-party platforms vs. direct access",
+        "Adobe Firefly's Content Credentials and IP-safe training claims, and any independent verification of those claims",
+        "DALL-E 3 native resolution and upscaling options",
+        "Stable Diffusion 3 release status and any access restrictions",
+        "Which tools support inpainting, outpainting, and image-to-image workflows natively",
+        "Ideogram's current typography and photorealism capabilities relative to stated version (Ideogram 2.0 or later)",
+        "Any known content policy restrictions that would affect commercial creative use (e.g., likeness of real people, nudity policies)"
+      ],
+      "research_plan": "Prioritize official documentation and pricing pages for each tool for accuracy on cost and licensing. Look for independent technical evaluations and benchmark comparisons from AI art and photography communities (e.g., community posts on Reddit r/StableDiffusion, Midjourney Discord feedback threads, or creator YouTube channels that do side-by-side prompt tests). Avoid relying on the tools' own marketing pages for capability claims. For commercial licensing, go directly to terms of service pages. For real-world output quality, find creator forums or published prompt comparisons with visible outputs across identical or near-identical prompts. Note publication dates carefully since model versions update frequently."
+    }
   }
 ]
