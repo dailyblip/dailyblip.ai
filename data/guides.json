@@ -79,7 +79,7 @@
   {
     "id": "13e7d100-e80e-4198-8ee2-752c198f91c8",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Quick start guide for a traditional music incorporating AI into their music",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:08:24.554Z",
-    "updated_at": "2026-07-17T16:09:03.899Z",
+    "updated_at": "2026-07-17T16:11:06.494Z",
     "brief": {
       "target_reader": "Traditional musicians (folk, classical, jazz, world music, etc.) who have little or no prior experience with AI tools but are curious about incorporating AI into their creative workflow without losing the authenticity or cultural integrity of their practice",
       "reader_outcome": "The reader should be able to identify which AI tools are relevant to their specific workflow, set up at least one practical AI-assisted process (transcription, arrangement, practice, or composition aid), and understand the tradeoffs of each approach before committing time or money",
@@ -120,6 +120,180 @@
         "Whether any AI ear training platforms (Tonara, Soundslice, etc.) offer feedback for non-Western or modal tuning systems"
       ],
       "research_plan": "Prioritize hands-on user reviews and forum discussions from communities of traditional musicians (Celtic, Appalachian, Indian classical, jazz, etc.) on Reddit, Slashdot Music, and specialist forums over vendor marketing material. Check AudioMelody, Sound on Sound, and similar practitioner-oriented publications for tool comparisons. For transcription accuracy, look for independent benchmark comparisons of audio-to-notation tools on polyphonic and ornamented sources, not just piano. For cultural integrity concerns, look for commentary from ethnomusicologists or traditional music educators who have written about AI use. Verify all pricing and feature claims directly from vendor sites at time of research and note the date, as these change frequently."
-    }
+    },
+    "sources": [
+      {
+        "title": "AnthemScore Official Product Page (via Lunaverus/Upwork/BestAITools)",
+        "publisher": "Lunaverus / Upwork / BestAITools",
+        "url": "https://www.lunaverus.com / https://www.upwork.com/resources/best-music-transcription-software / https://www.bestaitools.com/tool/anthemscore/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "AnthemScore uses a neural network/machine learning to convert MP3 and WAV audio files into sheet music or guitar tab",
+          "AnthemScore offers a 30-day free trial (generates up to 30 seconds of sheet music in trial mode)",
+          "Pricing tiers (as of 2025–2026): Lite ~$31, Professional ~$42, Studio ~$107 — all one-time purchases, no subscription",
+          "AnthemScore excels with single-instrument or simple tracks but may need manual edits for polyphonic or niche genres",
+          "Runs fully offline on Windows, Mac, and Linux; processes pre-recorded audio only, not real-time",
+          "Exports to PDF, MusicXML, and MIDI"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "iReal Pro Official Website",
+        "publisher": "iReal Pro (Massimo Biolcati)",
+        "url": "https://www.irealpro.com/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "iReal Pro explicitly states 'No AI' on its homepage — all backing track styles are hand-crafted by real musicians from programmed MIDI loops or live-recorded drums",
+          "iReal Pro is a chord-chart and backing-track tool, not an AI tool — it is entirely rule-based/programmer-crafted",
+          "iReal Pro is a one-time purchase with no subscription; each platform (iOS, Android, Mac) is a separate purchase",
+          "Actively developed for 18 years; runs fully offline",
+          "Offers 50+ backing track styles; used at Berklee College of Music and other top music schools",
+          "App price is approximately $19.99–$21.99 depending on platform (price increased to $21.99 on Android in Dec 2025)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Moises Official Website (moises.ai)",
+        "publisher": "Moises",
+        "url": "https://moises.ai/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Moises explicitly states it will never train on user-uploaded data",
+          "Moises only trains models on licensed materials and never trains on any music without the owner's full approval",
+          "Moises offers a free tier with a limited number of uploads per month",
+          "Moises has been recognized as a 2025 Apple Design Awards Finalist, 2024 iPad App of the Year Winner, and 2025 Microsoft Store Awards Winner",
+          "Moises is trusted by 70 million musicians worldwide (company claim)"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Moises AI Pricing and Feature Breakdown (multiple independent reviews, 2025–2026)",
+        "publisher": "StemSplit / AI Music Preneur / SunoWatermark / Chartlex",
+        "url": "https://stemsplit.io/blog/moises-ai-review / https://www.aimusicpreneur.com/ai-tools/moises-ai/ / https://sunowatermark.com/blog/moises-ai-review-2026/ / https://www.chartlex.com/blog/marketing/ai-stem-separation-tools-2026",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Moises free tier: 5 track separations per month, basic stems (vocals + instrumental), ads between jobs, no credit card required",
+          "Moises Premium: $3.99/month (billed monthly) or ~$2.99/month billed annually (~$35.88/year) — unlocks 30 uploads/month, all stem types including granular splits, tempo change with pitch lock, pitch shift, key detection, lyric transcription",
+          "Moises Pro: $9.99/month or ~$89.99/year — unlimited uploads, highest-quality models, API access",
+          "Moises separates vocals, drums, bass, guitar, piano (up to 5-stem splits on Premium/Pro); free tier limited to basic 2-stem separation",
+          "Moises strength is the all-in-one practice experience (chord detection, speed control, metronome, transposition) combined with stem separation — not raw separation quality alone",
+          "LALAL.AI is credit-based (starting ~$10 for 90 minutes of processing), not subscription-based, and is considered the stronger pure separator for vocals on modern pop/electronic mixes",
+          "Moises processes audio in the cloud; a connection is required to separate or generate new audio; offline use on higher tiers available only for already-processed tracks",
+          "Pricing figures vary slightly across third-party sources and may be region-dependent — writers should verify directly at moises.ai"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Podcast Enhance Speech — Official Product Page and Independent Reviews",
+        "publisher": "Adobe / BuildFastWithAI / AIforMusic Toolbox",
+        "url": "https://podcast.adobe.com/en/enhancespeech / https://www.buildfastwithai.com/ai-tools/adobe-podcast / https://tools.aiformusic.org/knowledgebase/articles/adobe-podcast-enhance-speech-ai-driven-speech-enhancement-for-studio-quality-voice",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Podcast Enhance Speech (now v2) is explicitly marketed as an AI filter for spoken audio — its own product page describes it as an 'AI filter for cleaning up spoken audio' and as 'ideal for podcasters, content creators, and professionals'",
+          "Enhance Speech v2 is currently free with no Adobe subscription required for the basic tier",
+          "Independent reviewers explicitly flag it as 'less suitable for music audio — optimized for speech, not instrument recordings'",
+          "The tool uses AI to identify sections with human speech versus silence/noise; AGC adjusts volume levels to maintain consistent loudness — designed for voice, not acoustic instrument timbre preservation",
+          "Over-processing risk: can make voice sound slightly artificial at high strength settings; 'V2 can feel all-or-nothing on slider'",
+          "Adobe Podcast Enhance Speech v2 was updated in June 2025 and is accessible directly within Studio"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno and Udio Copyright Litigation and Settlements (Forbes / Music Business Worldwide / Brooklyn Law / 404 Media)",
+        "publisher": "Forbes / Music Business Worldwide / Brooklyn Sports & Entertainment Law Blog / 404 Media",
+        "url": "https://www.forbes.com/sites/virginieberger/2025/12/18/launch-train-settle-how-suno-and-udios-licensing-deals-made-copyright-infringement-profitable/ / https://www.musicbusinessworldwide.com/suno-argues-none-of-the-millions-of-tracks-made-on-its-platform-contain-anything-like-a-sample/ / https://sports-entertainment.brooklaw.edu/music/music-copyright-in-the-gen-ai-age-where-are-we-now/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno and Udio were sued in June 2024 by all three major record labels (UMG, WMG, Sony) for training on copyrighted recordings without authorization",
+          "Partial settlements reached: UMG settled with Udio (Oct 2025), WMG settled with both Udio (Nov 2025) and Suno (Nov 2025); Sony remains in litigation with both companies; UMG continues its lawsuit against Suno as of early 2026",
+          "Users could (and can) prompt these platforms to generate songs 'in the style of' specific artists — the labels demonstrated outputs that replicated distinctive rhythms, melodies, and stylistic signatures of famous songs",
+          "A June 2025 U.S. Copyright Office report stated that 'the fair use doctrine does not excuse unauthorized training on expressive works (e.g., music) particularly when those works are used to generate substitutional outputs'",
+          "Suno's own legal defense argues its outputs 'exclusively generate new sounds' rather than samples, but this is a contested legal claim under active litigation — not a settled fact",
+          "Independent artists (Tony Justice, 5th Wheel Records) filed additional class action lawsuits in June 2025 seeking to represent all independent artists whose work appeared on streaming services since January 2021",
+          "Stylistic distortion risk is real and documented: when prompted with specific stylistic cues (artist names, genre descriptors), both platforms have produced outputs strikingly similar to protected recordings",
+          "Traditional/folk artists uploading unpublished recordings to these platforms for prompting carry meaningful copyright and IP risk given the unresolved litigation landscape"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Copyright Filter Bypass Investigation",
+        "publisher": "TechBuzz.ai (citing The Verge investigation)",
+        "url": "https://www.techbuzz.ai/articles/suno-s-copyright-filters-are-laughably-easy-to-bypass",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno's copyright protection filters are reportedly trivial to bypass with minimal effort, as documented by The Verge's investigation",
+          "Even with copyright filters in place, Suno has produced AI-generated imitations of iconic songs (Beyoncé, Black Sabbath, Aqua) that sound alarmingly close to the originals",
+          "Suno's filter vulnerabilities undermine the platform's claims to responsible self-policing"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AnthemScore Accuracy — User Reviews (SourceForge / Slashdot / BestAITools)",
+        "publisher": "SourceForge / Slashdot / BestAITools",
+        "url": "https://sourceforge.net/software/product/AnthemScore/ / https://slashdot.org/software/p/AnthemScore/ / https://www.bestaitools.com/tool/anthemscore/",
+        "source_type": "user feedback",
+        "is_primary": false,
+        "claims_supported": [
+          "Recurring user feedback that AnthemScore accuracy on polyphonic or 'niche genre' audio is significantly weaker than on solo piano or simple instrumental tracks — users report rhythmically displaced notes, extra artifact notes, and poor handling of unconventional recordings",
+          "Official review site (BestAITools) independently confirms: 'It excels with simple tracks but may need manual edits for polyphonic or niche genres'",
+          "AnthemScore performs best with high-quality recordings that minimize noise; internally resamples all audio to 44100 Hz"
+        ],
+        "claim_type": "user feedback",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Microtonal Music Software Landscape (The Microtone Fox, Medium, 2025–2026)",
+        "publisher": "The Microtone Fox / Medium",
+        "url": "https://medium.com/@themicrotonefox/a-complete-list-of-microtonal-music-software-cec272609127",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Most mainstream DAWs and AI music tools assume 12-tone equal temperament (12-TET) by default; getting them to work with other tunings requires native support, clever routing, plugin-based solutions, or combinations thereof",
+          "The field of microtonal software in 2025 is largely composed of specialized DAW plugins and notation tools (e.g., Entonal Studio, Scala .scl format), not AI composition assistants — the major AI composition tools (Suno, Udio, etc.) are not documented as supporting microtonal or non-Western scale output",
+          "No AI composition tool (Suno, Udio, Magenta) is documented in available sources as explicitly supporting non-Western scales or microtonal tuning in its output generation"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "iReal Pro Version History (Official)",
+        "publisher": "iReal Pro",
+        "url": "https://www.irealpro.com/version-history",
+        "source_type": "official docs",
+        "is_primary": false,
+        "claims_supported": [
+          "iReal Pro's most recent updates (2025) have added features like real drum recordings for Jazz styles, double-time options, Brazilian style packs, and accessibility improvements — none introduce AI features",
+          "All iReal Pro style updates are described in terms of hand-crafted musician programming (MIDI or live drum recordings), not AI generation"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Transcribe+ (Seventh String Software — the audio-to-notation tool specifically marketed to musicians) pricing and free tier limits: Search results returned Amazon Transcribe and transcribe.com (an unrelated speech-to-text SaaS), not Seventh String's Transcribe+. Pricing for Seventh String's Transcribe+ could not be verified from available search results. Writer must check https://www.seventhstring.com/xscribe/overview.html directly.",
+      "Sibelius AudioScore current pricing and accuracy claims for polyphonic traditional instruments: No current (2025–2026) independent pricing or accuracy data was surfaced for Sibelius AudioScore specifically. Writer should check Avid's official site directly.",
+      "Notion AI (the music notation app's AI features) — current pricing and accuracy for polyphonic traditional instruments: Notion (by Presonus/Fender) AI transcription feature status and pricing could not be verified from search results. Writer should check https://www.presonus.com/en-US/software/notion.html directly.",
+      "MuseScore's AI transcription features — current status and pricing: No current (2025–2026) authoritative source confirming whether MuseScore has launched AI transcription features was returned. Writer should check https://musescore.com directly.",
+      "Google Magenta's support for non-Western scales and microtonal tuning: No direct, authoritative 2025 source on Magenta's microtonal/non-Western scale capabilities was found. Available sources confirm the general software landscape problem (12-TET assumption), but Magenta's specific current feature set could not be confirmed. Writer should check https://magenta.tensorflow.org directly.",
+      "Whether Adobe Podcast Enhance handles acoustic folk/traditional instruments 'well' — qualitative performance on folk instruments: Sources confirm Enhance Speech is speech-optimized and 'less suitable for music audio,' but no independent test specifically using traditional/folk acoustic instruments (fiddle, oud, tin whistle, etc.) was found. The speech-optimization finding is verified; the degree of degradation on specific folk timbres is not.",
+      "Tonara, Soundslice, or any AI ear training platform offering feedback for non-Western or modal tuning systems: No current source verifying or refuting this claim was returned. Writer should either drop this claim or verify directly with each platform.",
+      "Whether any major AI composition tool (Suno, Udio, etc.) can be 'safely prompted to stay within a traditional style without generating plagiarism or stylistic distortion': The litigation evidence clearly shows stylistic bleed and copyright risk when prompting with specific stylistic descriptors. However, there is no controlled study or authoritative review specifically testing prompting for non-Western or traditional folk styles. The general risk is verified; the specific performance on traditional/folk prompts is not.",
+      "LALAL.AI specific current pricing: Third-party sources cite figures ($10 starter pack for 90 minutes, $15/month subscription figures), but these conflict across sources and may be outdated. Writer should verify at https://www.lalal.ai/pricing directly.",
+      "Data privacy and ownership policies for audio uploaded to cloud-based AI tools beyond Moises: Only Moises's data policy ('will never train on your data') was directly verified via official source. Privacy/ownership policies for Suno, Udio, LALAL.AI, Adobe Podcast Enhance, AnthemScore (offline, so moot), and others were not verified from authoritative policy pages in this search session. Writer should link directly to each tool's Terms of Service and Privacy Policy."
+    ]
   }
 ]
