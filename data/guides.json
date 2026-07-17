@@ -1171,7 +1171,7 @@
   {
     "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Using AI to write better songs without losing your voice",
       "article_type": "Practical guide",
@@ -1183,6 +1183,24 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T19:17:05.201Z",
-    "updated_at": "2026-07-17T19:17:05.201Z"
+    "updated_at": "2026-07-17T19:17:33.730Z",
+    "brief": {
+      "target_reader": "A singer-songwriter who writes their own lyrics and melodies, is curious about AI tools but worried that using them will make their songs sound generic or less personal. Has probably never used an AI writing tool for music before.",
+      "reader_outcome": "Feel confident enough to try one specific AI-assisted step in their songwriting process today, without feeling like they are handing their creative voice over to a machine.",
+      "structure_plan": [
+        "Why songwriters hesitate (and why the worry is partly valid)",
+        "Where AI actually helps: brainstorming and getting unstuck",
+        "Using AI to edit and refine without erasing yourself",
+        "A simple first step to try right now"
+      ],
+      "claims_to_verify": [
+        "Which AI tools (e.g. ChatGPT, Claude, Gemini, dedicated tools like Suno, Udio, or LyricStudio) are currently available and actively working for lyric brainstorming or melody suggestion",
+        "Whether any songwriter-specific AI tools exist that focus on lyrics rather than full song generation",
+        "Whether general LLMs like ChatGPT can be prompted effectively for lyric brainstorming without requiring a paid plan to be useful",
+        "Whether any of the major tools have specific songwriter-facing features (rhyme suggestions, verse/chorus structure prompts, co-writing modes)",
+        "Whether there are documented cases or widely cited examples of professional songwriters using AI as a brainstorming tool rather than a replacement writer, to ground any editorial claims about how the workflow actually functions"
+      ],
+      "research_plan": "Prioritize official documentation and feature pages for songwriter-relevant AI tools (LyricStudio, ChatGPT, Claude, Suno if relevant). Look for credible music-press sources (Rolling Stone, Pitchfork, MusicRadar, Sound On Sound) covering how working songwriters are actually integrating AI into their process. Avoid hype-heavy marketing content. Do not rely on a single blog post for any capability claim. Steer away from exact pricing or quota details since the draft will not lean on those."
+    }
   }
 ]
