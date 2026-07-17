@@ -2209,7 +2209,7 @@
   {
     "id": "53c94efc-1438-4f48-8348-a9de5927cb65",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top 5 AI Image Generation Tools for Independent Creators (2026)",
       "article_type": "Practical guide",
@@ -2221,6 +2221,33 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:57:02.638Z",
-    "updated_at": "2026-07-17T04:57:02.638Z"
+    "updated_at": "2026-07-17T04:57:34.503Z",
+    "brief": {
+      "target_reader": "Independent creators (illustrators, graphic designers, filmmakers, musicians needing visuals, indie game developers, and self-publishing authors) who already have some familiarity with AI image tools but want a clear, honest comparison to decide which tool fits their specific workflow and budget in 2026",
+      "reader_outcome": "The reader should be able to evaluate each of the 5 tools against their own use case, understand the concrete tradeoffs in output quality, pricing, licensing, and workflow integration, and make a confident decision about which tool to start with or switch to",
+      "structure_plan": [
+        "How We Chose These 5 Tools (evaluation criteria: output quality, commercial licensing clarity, pricing for solo creators, ease of workflow integration, iteration speed)",
+        "Quick Comparison Table (tool name, pricing tier for individuals, commercial license included, best fit use case, notable limitation)",
+        "Tool 1: [Name] (what it does well, workflow fit, pricing breakdown, licensing terms, concrete limitation)",
+        "Tool 2: [Name] (what it does well, workflow fit, pricing breakdown, licensing terms, concrete limitation)",
+        "Tool 3: [Name] (what it does well, workflow fit, pricing breakdown, licensing terms, concrete limitation)",
+        "Tool 4: [Name] (what it does well, workflow fit, pricing breakdown, licensing terms, concrete limitation)",
+        "Tool 5: [Name] (what it does well, workflow fit, pricing breakdown, licensing terms, concrete limitation)",
+        "How to Match a Tool to Your Workflow (decision guide by creator type: illustrator, filmmaker, game dev, author, designer)",
+        "What to Watch Out For (content policy restrictions, output ownership edge cases, rate limits, model deprecation risk)"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers and credit systems for each tool as of 2026, including any free tier limits",
+        "Commercial licensing terms for each tool: whether outputs can be sold, used in client work, or published without additional fees",
+        "Whether each tool allows full commercial use at the base paid tier or only at higher tiers",
+        "Output resolution limits and upscaling options for each tool",
+        "API availability and third-party integration support for each tool",
+        "Content policy restrictions relevant to independent creators (e.g., nudity, likeness, trademarked characters)",
+        "Whether any tools have changed ownership, shutdown, or materially changed their model between 2025 and 2026",
+        "Model architecture or training data disclosure status for each tool (relevant to creator trust and legal exposure)",
+        "Any ongoing or resolved litigation involving training data that could affect creator liability"
+      ],
+      "research_plan": "Prioritize official pricing and terms-of-service pages for each tool (captured as close to publication date as possible), independent creator community discussions on Reddit (r/StableDiffusion, r/ArtificialIntelligence, r/gamedev), professional reviews from outlets covering creative tooling (e.g., Creative Bloq, The Verge, 80.lv), and any publicly available legal analysis of AI image output ownership. Avoid press releases and vendor blog posts as primary sources. Cross-check licensing claims against the actual terms of service, not marketing copy. For use-case fit, look for workflow writeups from working independent creators rather than tech reviewers."
+    }
   }
 ]
