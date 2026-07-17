@@ -1,6 +1,6 @@
 {
   "issue": 235,
-  "generated_at": "2026-07-17T11:49:23.729Z",
+  "generated_at": "2026-07-17T15:43:11.280Z",
   "brief": {
     "items": [
       {
@@ -63,24 +63,6 @@
     "edition": "pm"
   },
   "stories": [
-    {
-      "id": "s_674ddd59c6c0a1da",
-      "cat": "rights",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "xAI sues user for creating CSAM deepfakes with Grok image generator",
-      "dek": "Elon Musk's xAI filed lawsuit against alleged misuse of its AI image tool to generate child sexual abuse material, marking a rare instance of an AI company suing a user.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/16/xai-sues-man-for-using-grok-to-create-csam-deepfakes/",
-      "ts": "2026-07-16T11:14:50.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 85,
-      "move": -2,
-      "top": true
-    },
     {
       "id": "s_252ccc31ca52ec00",
       "cat": "rights",
