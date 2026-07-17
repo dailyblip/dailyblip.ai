@@ -117,11 +117,11 @@ function renderPage(job) {
   const imageFor = (placement) => images.find((img) => img.placement === placement);
 
   const heroImg = imageFor("hero");
-  const heroHtml = heroImg ? `<div class="img-block"><img src="${esc(heroImg.file)}" alt="${esc(heroImg.alt_text)}" loading="lazy">${heroImg.caption ? `<div class="img-caption">${esc(heroImg.caption)}</div>` : ""}</div>` : "";
+  const heroHtml = heroImg ? `<div class="img-block"><img src="/guides/${esc(heroImg.file)}" alt="${esc(heroImg.alt_text)}" loading="lazy">${heroImg.caption ? `<div class="img-caption">${esc(heroImg.caption)}</div>` : ""}</div>` : "";
 
   const sectionsHtml = (a.sections || []).map((s) => {
     const img = imageFor(s.id);
-    const imgHtml = img ? `<div class="img-block"><img src="${esc(img.file)}" alt="${esc(img.alt_text)}" loading="lazy">${img.caption ? `<div class="img-caption">${esc(img.caption)}</div>` : ""}</div>` : "";
+    const imgHtml = img ? `<div class="img-block"><img src="/guides/${esc(img.file)}" alt="${esc(img.alt_text)}" loading="lazy">${img.caption ? `<div class="img-caption">${esc(img.caption)}</div>` : ""}</div>` : "";
     const tools = (s.tools || []).map(renderToolCard).join("");
     return `<div class="section-block">
       <h2>${esc(s.heading)}</h2>
