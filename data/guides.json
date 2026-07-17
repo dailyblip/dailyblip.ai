@@ -78,8 +78,8 @@
   },
   {
     "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
-    "status": "failed",
-    "stage": "Failed",
+    "status": "in_progress",
+    "stage": "Re-checking",
     "submitted": {
       "idea": "Quick start guide for image generation",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:17:54.770Z",
-    "updated_at": "2026-07-17T16:52:26.307Z",
+    "updated_at": "2026-07-17T16:48:08.945Z",
     "brief": {
       "target_reader": "Independent creators (artists, designers, filmmakers, writers) who have heard about AI image generation but have never used a tool, have no coding background, and are skeptical of hype around it",
       "reader_outcome": "The reader can open an AI image generation tool, write a prompt that produces a useful result, iterate on that result, and understand the basic settings well enough to avoid common beginner mistakes",
@@ -408,89 +408,90 @@
         {
           "severity": "high",
           "section_id": "s2",
-          "original_text": "independent sources indicating the All Apps plan was discontinued in August 2025",
-          "issue": "This claim is sourced only from a single independent reviewer (ToolColumn) and explicitly flagged as unconfirmed against Adobe's official documentation, yet it is presented as a factual planning note in the body copy and repeated in the conclusion. A claim this consequential to reader workflow decisions — affecting Creative Cloud subscribers — should not appear without official confirmation, or should be more clearly framed as unverified rumor rather than near-fact.",
+          "original_text": "Adobe reportedly restructured its Creative Cloud plans, with independent sources indicating the All Apps plan was discontinued in August 2025",
+          "issue": "The article repeatedly presents the discontinuation of Adobe's All Apps plan as unconfirmed ('has not been confirmed against Adobe's official documentation'), yet it states this as fact in both s2 and the conclusion. If it cannot be confirmed, it should not be presented as a factual claim readers can rely on for purchasing decisions; if it can, the hedge is misleading.",
           "supporting_source_url": "https://www.toolcolumn.com/pricing/adobe-firefly-pricing"
         },
         {
           "severity": "high",
           "section_id": "s2",
-          "original_text": "independent reviewers have described free-tier outputs as watermarked and low-resolution",
-          "issue": "The watermark and low-resolution characterization of Firefly free-tier output comes solely from a single independent review site (ToolRadar), not Adobe's official documentation. The article acknowledges Adobe's own documentation does not confirm this, yet it is presented as a practical planning constraint for readers. If Adobe does not confirm these limitations, presenting them as reliable constraints risks misleading readers about what free-tier actually delivers.",
+          "original_text": "free-tier outputs as watermarked and low-resolution, though Adobe's own documentation does not clearly specify these constraints",
+          "issue": "The article attributes watermarking and low-resolution output on Firefly's free tier solely to 'independent reviewers' while noting Adobe's own docs don't confirm this — but then the article uses this unverified claim to advise workflow decisions. Presenting an unverified, consequential product constraint this way without official confirmation is potentially misleading to creators.",
           "supporting_source_url": "https://toolradar.com/tools/adobe-firefly/pricing"
         },
         {
           "severity": "high",
-          "section_id": "s2",
-          "original_text": "No public API as of mid-2026",
-          "issue": "The claim that Midjourney has no public API is sourced from a March 2026 independent review, not official Midjourney documentation. Given the article is dated July 2026, this four-month-old third-party observation could be outdated, and a tool capability claim of this specificity requires official confirmation.",
-          "supporting_source_url": "https://flowith.io/blog/midjourney-web-v7-vs-discord/"
-        },
-        {
-          "severity": "high",
-          "section_id": "s2",
-          "original_text": "DALL-E 3 (the prior model) is deprecated in the API as of mid-2026",
-          "issue": "The source cited says DALL-E 3 API deprecation was 'announced for May 2026' — not that it was completed. The article's tool card states it as a fait accompli ('deprecated...as of mid-2026'), which is an unsupported escalation of the source claim. The article body is more careful about this, but the tool card makes a definitive assertion the source does not support.",
-          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
-        },
-        {
-          "severity": "medium",
           "section_id": "s1",
           "original_text": "Midjourney has no free tier at all (its free trial was removed in March 2023)",
-          "issue": "This claim is sourced only from an independent review site (eesel.ai), not from Midjourney's official documentation. The official Midjourney source cited in the article does not address the free trial removal. For a gating fact that affects whether readers can even try the tool without paying, this should be confirmed against official documentation.",
+          "issue": "The article states this as settled fact in s1 and s2, but the sole support is an independent review (eesel.ai), not official Midjourney documentation. Midjourney has occasionally reinstated limited trials; citing only a third-party source for a definitive 'no free trial' claim without official docs verification is a reliability risk.",
           "supporting_source_url": "https://www.eesel.ai/blog/midjourney-pricing"
         },
         {
           "severity": "medium",
           "section_id": "s2",
-          "original_text": "approximately 200 fast GPU-minutes, which translates to roughly 200 images",
-          "issue": "The translation of 200 GPU-minutes to 'roughly 200 images' is an approximation that depends heavily on settings, resolution, and feature usage, which the article briefly acknowledges. However, presenting this as a usable monthly image quota could significantly mislead readers since complex generations or upscales can consume far more GPU-minutes per image. The approximation may set false expectations.",
-          "supporting_source_url": "https://www.eesel.ai/blog/midjourney-pricing"
+          "original_text": "DALL-E 3 (the prior model) is deprecated in the API as of mid-2026",
+          "issue": "The source (AI Tool Radar, an independent review) states DALL-E 3 deprecation was 'announced for May 2026,' not that it has occurred. The tool card's limitation framing 'as of mid-2026' presents an announced deprecation as a confirmed completed event without official OpenAI documentation to verify the actual deprecation occurred.",
+          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
         },
         {
           "severity": "medium",
           "section_id": "s2",
           "original_text": "Adobe states that Firefly is trained on licensed content and public domain content where copyright has expired. Adobe also separately states that it does not train on subscribers' personal content.",
-          "issue": "The article correctly distinguishes these two policies but then conflates their significance in the limitations and s8 sections by repeatedly treating them together as Adobe's 'training data policy.' The second claim (no training on subscriber content) is about data Adobe receives, not training data sourcing — repeatedly bundling them risks overstating the copyright safety implications of the combined policy.",
+          "issue": "These two policies are correctly distinguished in the body, but the tool card's strengths list collapses them into 'Trained on licensed content, not open-web scrapes' — the second half of that phrase ('not open-web scrapes') is an editorial inference not directly stated by Adobe's documentation, which only specifies licensed and public domain sources without explicitly contrasting to 'open-web scrapes.'",
           "supporting_source_url": "https://www.adobe.com/products/firefly.html"
         },
         {
           "severity": "medium",
           "section_id": "s2",
-          "original_text": "commercial use is scoped to paid plans, but confirm this against Adobe's own terms",
-          "issue": "The article cites Terms.Law (an independent legal analysis site) for the claim that Adobe Firefly free tier is not licensed for commercial use, while simultaneously instructing readers to verify against Adobe's own terms. This creates an internal contradiction: if the source is not reliable enough to state the claim definitively, it should not be presented as a planning constraint at all without a direct Adobe source backing it.",
+          "original_text": "No public API as of mid-2026",
+          "issue": "The Midjourney tool card lists 'No public API as of mid-2026' as a limitation, but the supporting source (Flowith Blog) states 'as of March 2026.' Extending this to 'mid-2026' goes beyond what the source states, and no official Midjourney documentation is cited to confirm this.",
+          "supporting_source_url": "https://flowith.io/blog/midjourney-web-v7-vs-discord/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "independent legal analysis sources (including Terms.Law) indicate that commercial use is scoped to paid plans",
+          "issue": "Terms.Law is cited as 'independent legal analysis,' but it is not a law firm or peer-reviewed source — it is a commercial website. Presenting its conclusions about Adobe's commercial use terms as authoritative legal guidance without recommending readers consult Adobe's actual terms of service (or actual legal counsel) could mislead creators making commercial use decisions.",
           "supporting_source_url": "https://terms.law/FAQ/ai-tools/ai-commercial-use-faq.html"
         },
         {
           "severity": "medium",
-          "section_id": "s7",
-          "original_text": "Free-tier outputs from Adobe Firefly are not licensed for commercial use.",
-          "issue": "This is stated as definitive fact in the beginner mistakes section, but earlier in the article the same claim is hedged with instructions to verify against Adobe's own terms because the sourcing is from a third-party legal analysis site. The inconsistency between hedged and definitive presentation of the same unconfirmed claim within the same article is an editorial integrity problem.",
+          "section_id": "s5",
+          "original_text": "Adobe Firefly's free tier in particular has been described by independent reviewers as producing low-resolution outputs",
+          "issue": "This claim is repeated from s2 and still relies only on a single independent review (ToolRadar) with no official Adobe confirmation. Repeating an unverified claim in a second section amplifies the reliability problem without adding new evidence.",
+          "supporting_source_url": "https://toolradar.com/tools/adobe-firefly/pricing"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "OpenAI grants full commercial rights to image outputs, subject to content policy",
+          "issue": "The article attributes this to Terms.Law (an independent site) rather than to OpenAI's own terms of service. OpenAI's actual usage policies govern this, and for a consequential commercial rights claim, relying on a third-party summary rather than the primary source is a verification gap.",
           "supporting_source_url": "https://terms.law/FAQ/ai-tools/ai-commercial-use-faq.html"
         },
         {
           "severity": "low",
           "section_id": "s2",
-          "original_text": "the web interface launched as an alpha in August 2024 and became the recommended experience by April 2025",
-          "issue": "These specific dates for Midjourney's web interface milestones are sourced from an independent blog post (Flowith), not Midjourney's official documentation. Precise platform launch timeline claims should be verified against official sources, especially since the article's methodology disclosure states official documentation was the primary reference.",
-          "supporting_source_url": "https://flowith.io/blog/midjourney-web-v7-vs-discord/"
+          "original_text": "approximately 200 fast GPU-minutes, which translates to roughly 200 images depending on your settings",
+          "issue": "The 200-image estimate is derived from an independent review (eesel.ai), not Midjourney's official documentation. The conversion of GPU-minutes to images is hardware- and settings-dependent; presenting '~200 images' as a reliable estimate without an official source could set inaccurate expectations.",
+          "supporting_source_url": "https://www.eesel.ai/blog/midjourney-pricing"
         },
         {
           "severity": "low",
           "section_id": "methodology_disclosure",
           "original_text": "supplemented by independent reviews from eesel.ai, ToolRadar, ToolColumn, Flowith Blog, AI Tool Radar, and Terms.Law",
-          "issue": "Several of these named sources (ToolRadar, ToolColumn, AI Tool Radar, Terms.Law) have URLs that follow patterns common to low-authority SEO-oriented review sites. The methodology does not assess source quality or authority, and readers may assume these are reputable independent outlets. At minimum, Terms.Law is being used for legal analysis claims, which warrants explicit disclosure of its limitations as a source.",
+          "issue": "The methodology disclosure lists six independent review sites as supplementary sources, several of which (ToolRadar, ToolColumn, AI Tool Radar) appear to be SEO-oriented affiliate or tool-listing sites whose accuracy and update frequency are unknown. Presenting them alongside official documentation without noting their nature slightly overstates the reliability of the sourcing.",
           "supporting_source_url": ""
         },
         {
           "severity": "low",
-          "section_id": "s5",
-          "original_text": "Adobe Firefly's free tier in particular has been described by independent reviewers as producing low-resolution outputs",
-          "issue": "This claim in the settings section again relies solely on ToolRadar without official confirmation, and the specific pixel dimensions are not cited anywhere in the article. For a section specifically about resolution as a workflow-critical consideration, advising readers to 'verify actual pixel dimensions' while simultaneously using an unverified characterization as a planning warning is inconsistent guidance.",
-          "supporting_source_url": "https://toolradar.com/tools/adobe-firefly/pricing"
+          "section_id": "s2",
+          "original_text": "As of February 12, 2025, legacy Firefly and Generative Credits add-on plans are no longer available for new purchases",
+          "issue": "This claim from Adobe's official Generative Credits FAQ is referenced in the source list but not surfaced in the article body, while the unconfirmed August 2025 All Apps discontinuation claim is. The omission of the confirmed official policy change in favor of the unconfirmed one creates an imbalance in what is presented as reliable information.",
+          "supporting_source_url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html"
         }
       ],
-      "checked_at": "2026-07-17T16:50:16.015Z"
+      "checked_at": "2026-07-17T16:48:08.945Z",
+      "revised": true
     },
     "warnings": [
       "s2: The article repeatedly presents the discontinuation of Adobe's All Apps plan as unconfirmed ('has not been confirmed against Adobe's official documentation'), yet it states this as fact in both s2 and the conclusion. If it cannot be confirmed, it should not be presented as a factual claim readers can rely on for purchasing decisions; if it can, the hedge is misleading.",
@@ -518,11 +519,6 @@
         "approved": false,
         "generated_at": "2026-07-17T16:23:05.814Z"
       }
-    ],
-    "error": {
-      "stage": "recheck",
-      "message": "askJSON: unparseable JSON for prompt starting: {\"article\":{\"title\":\"AI Image Generation: A Quick-Start Guide for Creators\",\"alternative_titles\":[\"How to Get Started wi (last response was TRUNCATED — raise maxTokens for this call)",
-      "at": "2026-07-17T16:52:26.307Z"
-    }
+    ]
   }
 ]
