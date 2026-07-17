@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2026 16:37:43 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jul 2026 20:15:04 GMT</lastBuildDate>
     <item>
       <title>Hugging Face details AI-driven autonomous intrusion into production infrastructure</title>
       <link>https://huggingface.co/blog/security-incident-july-2026</link>
@@ -13,6 +13,22 @@
       <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI chip demand reshapes smartphone market, driving prices up in India</title>
+      <link>https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/</link>
+      <guid isPermaLink="false">s_133497b699bf0fd6</guid>
+      <description>Memory manufacturers are diverting RAM and storage capacity toward AI accelerators, leaving less supply and raising costs for consumer devices. India's 10% smartphone shipment drop signals the disruption has arrived.</description>
+      <category>industry</category>
+      <pubDate>Fri, 17 Jul 2026 20:09:27 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple trade secrets lawsuit against OpenAI threatens IPO timeline</title>
+      <link>https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/</link>
+      <guid isPermaLink="false">s_ac7be8d09d06872b</guid>
+      <description>Apple alleges OpenAI hired over 400 former employees and engaged in misconduct reaching executive level. The timing complicates OpenAI's reported 2026 IPO plans and raises questions about data trust at AI companies.</description>
+      <category>industry</category>
+      <pubDate>Fri, 17 Jul 2026 17:45:46 GMT</pubDate>
     </item>
     <item>
       <title>San Francisco orders removal of AI nudify apps from app stores</title>
@@ -149,22 +165,6 @@
       <description>Chinese AI lab's upcoming open-weight model aims to close performance gap with frontier closed-source models, releasing imminently.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 14:26:29 GMT</pubDate>
-    </item>
-    <item>
-      <title>China approves Apple Intelligence with Alibaba Qwen and Baidu integration</title>
-      <link>https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/</link>
-      <guid isPermaLink="false">s_c599c61e0255f9ca</guid>
-      <description>Apple's generative AI services gain regulatory sign-off in China via partnerships with Alibaba and Baidu for iOS, macOS, and visionOS.</description>
-      <category>industry</category>
-      <pubDate>Thu, 16 Jul 2026 13:17:59 GMT</pubDate>
-    </item>
-    <item>
-      <title>1Password launches browser integration allowing Claude to access stored credentials</title>
-      <link>https://www.theverge.com/tech/966442/1password-anthropic-claude-browser-integration</link>
-      <guid isPermaLink="false">s_e9a82b74f6f50ff2</guid>
-      <description>1Password has integrated with Claude, enabling the AI assistant to complete multi-step tasks like travel booking by accessing stored login credentials with user authorization.</description>
-      <category>tools</category>
-      <pubDate>Thu, 16 Jul 2026 13:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

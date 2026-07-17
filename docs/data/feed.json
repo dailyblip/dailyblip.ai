@@ -1,6 +1,6 @@
 {
   "issue": 235,
-  "generated_at": "2026-07-17T16:37:43.322Z",
+  "generated_at": "2026-07-17T20:15:04.987Z",
   "brief": {
     "items": [
       {
@@ -78,8 +78,42 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -1,
+      "move": -2,
       "top": true
+    },
+    {
+      "id": "s_133497b699bf0fd6",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "AI chip demand reshapes smartphone market, driving prices up in India",
+      "dek": "Memory manufacturers are diverting RAM and storage capacity toward AI accelerators, leaving less supply and raising costs for consumer devices. India's 10% smartphone shipment drop signals the disruption has arrived.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/",
+      "ts": "2026-07-17T20:09:27.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 102,
+      "move": 58
+    },
+    {
+      "id": "s_ac7be8d09d06872b",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple trade secrets lawsuit against OpenAI threatens IPO timeline",
+      "dek": "Apple alleges OpenAI hired over 400 former employees and engaged in misconduct reaching executive level. The timing complicates OpenAI's reported 2026 IPO plans and raises questions about data trust at AI companies.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/",
+      "ts": "2026-07-17T17:45:46.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 90,
+      "move": 54
     },
     {
       "id": "s_4d76675668887bf8",
@@ -95,8 +129,8 @@
       "ts": "2026-07-17T16:10:05.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 102,
-      "move": 55
+      "heat": 98,
+      "move": -1
     },
     {
       "id": "s_a0bbc2c6e6f2a453",
@@ -112,8 +146,8 @@
       "ts": "2026-07-17T15:57:54.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 93,
-      "move": 52
+      "heat": 90,
+      "move": -2
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -129,8 +163,8 @@
       "ts": "2026-07-17T15:21:17.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 101,
-      "move": 56
+      "heat": 97,
+      "move": -1
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -146,8 +180,8 @@
       "ts": "2026-07-17T11:56:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 79,
-      "move": 43
+      "heat": 76,
+      "move": -6
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -163,8 +197,8 @@
       "ts": "2026-07-17T10:42:08.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 96,
-      "move": 57
+      "heat": 92,
+      "move": -2
     },
     {
       "id": "s_252ccc31ca52ec00",
@@ -180,8 +214,8 @@
       "ts": "2026-07-16T20:41:45.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 72,
-      "move": -5
+      "heat": 68,
+      "move": -7
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -197,8 +231,8 @@
       "ts": "2026-07-16T20:39:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 82,
-      "move": -8
+      "heat": 78,
+      "move": -2
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -214,8 +248,8 @@
       "ts": "2026-07-16T19:18:23.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 71,
-      "move": -5
+      "heat": 68,
+      "move": -7
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -231,8 +265,8 @@
       "ts": "2026-07-16T19:02:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -8
+      "heat": 78,
+      "move": -2
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -248,8 +282,8 @@
       "ts": "2026-07-16T18:32:54.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": -5
+      "heat": 88,
+      "move": -2
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -265,8 +299,8 @@
       "ts": "2026-07-16T18:31:31.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 70,
-      "move": -5
+      "heat": 68,
+      "move": -7
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -282,8 +316,8 @@
       "ts": "2026-07-16T18:22:06.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 80,
-      "move": -8
+      "heat": 78,
+      "move": -2
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -300,7 +334,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -317,7 +351,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -10
+      "move": -2
     },
     {
       "id": "s_79ed56faeda92346",
@@ -334,7 +368,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -351,7 +385,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -368,7 +402,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -10
+      "move": -2
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -385,7 +419,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -402,7 +436,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -419,7 +453,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -436,7 +470,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_3090d72b6869197e",
@@ -453,7 +487,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -470,7 +504,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -487,7 +521,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -504,7 +538,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -521,7 +555,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -539,7 +573,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -556,7 +590,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -573,7 +607,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -590,7 +624,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": -1
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -607,7 +641,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": -2
+      "move": 0
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -625,7 +659,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -642,7 +676,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": -4
+      "move": -2
     },
     {
       "id": "s_d173222f3e599859",
@@ -660,7 +694,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -677,7 +711,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -694,7 +728,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -711,7 +745,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -4
+      "move": -2
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -728,7 +762,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_18de27eea197aabe",
@@ -745,7 +779,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_84777b05d9b25937",
@@ -762,7 +796,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -779,7 +813,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -1
+      "move": -2
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -796,7 +830,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -813,7 +847,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -830,7 +864,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -847,7 +881,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_110aa69c02571475",
@@ -864,7 +898,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -881,7 +915,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_569d5689452ac2df",
@@ -898,7 +932,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -915,7 +949,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -932,7 +966,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -949,7 +983,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_210f6726bf4a719a",
@@ -966,7 +1000,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -983,7 +1017,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -1000,7 +1034,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_3e68f8ee554f3c0b",
@@ -1017,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -1
+      "move": -2
     },
     {
       "id": "s_f6d4f1f66693b6a8",
@@ -1034,7 +1068,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_2cc0275fcceef652",
@@ -1051,41 +1085,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -1
-    },
-    {
-      "id": "s_b98c65f859f0dcbd",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Major publishers sue Google for training Gemini on copyrighted works without permission",
-      "dek": "Hachette, Cengage, Elsevier, and others allege Google stripped copyright info and used their works to train AI models without consent.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/google-faces-another-ai-training-lawsuit-from-major-publishers/",
-      "ts": "2026-07-14T18:33:31.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -5
-    },
-    {
-      "id": "s_986155e62b49ff74",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "DeepMind CEO proposes independent standards body to regulate frontier AI models",
-      "dek": "Hassabis calls for a FINRA-like regulatory authority to test and approve AI models before release, with voluntary initial participation.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/deepmind-ceo-calls-for-an-independent-standards-body-to-regulate-frontier-ai/",
-      "ts": "2026-07-14T17:45:55.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": -5
+      "move": -2
     }
   ],
   "models": [
@@ -1185,12 +1185,12 @@
     }
   ],
   "topics": [
-    "#google",
     "#openai",
-    "#gemini",
+    "#google",
     "#apple",
     "#hugging",
     "#face",
+    "#gemini",
     "#youtube",
     "#anthropic"
   ],
@@ -1202,9 +1202,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 22,
-    "published_today": 12,
+    "scanned_last_run": 12,
+    "published_today": 9,
     "sources_live": 14,
-    "slopped_last_run": 17
+    "slopped_last_run": 10
   }
 }
