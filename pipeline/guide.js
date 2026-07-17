@@ -261,7 +261,13 @@ async function stageImages(job) {
     role: "write",
     system: IMAGE_BRIEF_SYSTEM,
     prompt: JSON.stringify({ slots, article_title: job.article.title, sections: job.article.sections }),
-    maxTokens: 2000,
+    // Same underestimation this pipeline already hit once in the
+    // research stage: a genuinely detailed, article-grounded image
+    // prompt (the kind actually worth generating, comparable to
+    // social.js's own multi-hundred-word prompts) times up to 3 images,
+    // plus alt_text/caption/placement per image, doesn't comfortably
+    // fit in 2000 tokens.
+    maxTokens: 4000,
   });
   const briefs = briefResult.images || [];
 
