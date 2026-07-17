@@ -1145,5 +1145,22 @@
       "message": "askJSON: unparseable JSON for prompt starting: {\"article\":{\"title\":\"AI Music Tools: A Quick-Start Guide for Independent Musicians\",\"alternative_titles\":[\"Getting Start (last response was TRUNCATED — raise maxTokens for this call)",
       "at": "2026-07-17T15:21:51.454Z"
     }
+  },
+  {
+    "id": "e2b14fbf-805a-4845-8e96-05518fbdca8c",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Guide for less technical musicians getting into new AI - where to start",
+      "article_type": "Practical guide",
+      "target_audience": "older musicians",
+      "target_length": "Standard",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T15:44:15.646Z",
+    "updated_at": "2026-07-17T15:44:15.646Z"
   }
 ]
