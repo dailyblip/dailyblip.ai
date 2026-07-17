@@ -304,7 +304,7 @@
   {
     "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Quick start guide for image generation",
       "article_type": "Practical guide",
@@ -316,7 +316,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:17:54.770Z",
-    "updated_at": "2026-07-17T16:22:12.733Z",
+    "updated_at": "2026-07-17T16:23:05.814Z",
     "brief": {
       "target_reader": "Independent creators (artists, designers, filmmakers, writers) who have heard about AI image generation but have never used a tool, have no coding background, and are skeptical of hype around it",
       "reader_outcome": "The reader can open an AI image generation tool, write a prompt that produces a useful result, iterate on that result, and understand the basic settings well enough to avoid common beginner mistakes",
@@ -723,6 +723,28 @@
       "s2: The AI Tool Radar source states deprecation was 'announced for May 2026,' not confirmed as completed by mid-2026. The article asserts it is deprecated as of mid-2026 as a fact, but no official OpenAI documentation in the source list confirms this completed deprecation.",
       "s2: The article correctly notes Adobe's official docs don't specify a number, but the body text still leads with 'approximately 25 credits' sourced only from ToolRadar (an independent review). The article hedges this appropriately in text, but the tool card and other references treat credit counts as near-factual, when Adobe's own documentation explicitly does not confirm this figure.",
       "s2: The ToolRadar source describes free-tier output as 'watermarked and low-resolution,' but the article omits the watermark claim entirely. If free outputs are watermarked, this is a significant practical limitation that the article fails to disclose to readers."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9-img1.jpg",
+        "prompt": "A creator's minimal workspace seen from above at a slight angle: a matte-black desk with an open laptop displaying a colorful grid of four distinct AI-generated image thumbnails on screen (no readable text, just rich color blocks suggesting portraits, landscapes, and abstract scenes), a ceramic coffee mug, a small notebook with a pen resting across it, and a single potted succulent in the corner. Warm directional side lighting casts soft shadows. The composition is clean and airy with generous negative space on the left third for text overlay. Color palette: warm neutrals with accent of deep teal on screen glow. Shot style: editorial flat-lay, slightly elevated angle, premium lifestyle photography aesthetic. No floating UI elements, no logos, no holograms.",
+        "placement": "hero",
+        "alt_text": "Overhead view of a creator's desk with a laptop showing a grid of AI-generated image thumbnails, a notebook, and coffee mug",
+        "caption": "Everything you need fits in a browser tab and a browser tab alone.",
+        "approved": false,
+        "generated_at": "2026-07-17T16:22:48.817Z"
+      },
+      {
+        "id": "img2",
+        "file": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9-img2.jpg",
+        "prompt": "A close-up of two hands typing on a laptop keyboard, the screen softly glowing and showing a simple text input field with a blinking cursor — no legible words. Beside the laptop on the desk sits a small printed contact sheet of four thumbnail-sized images in a 2x2 grid, one circled in pencil, suggesting the process of picking the best variation from a generation batch. The background is a blurred warm studio environment. Lighting is soft and directional from a window at left. Mood: focused, iterative, craft-oriented. Color palette: warm greys, cream, and a subtle amber highlight. Editorial, contemporary, no stock-photo stiffness, no floating holograms.",
+        "placement": "s6",
+        "alt_text": "Hands typing a prompt on a laptop while a printed contact sheet of four image variations sits beside it, one circled in pencil",
+        "caption": "Iteration is the workflow: generate, evaluate, refine — not start over.",
+        "approved": false,
+        "generated_at": "2026-07-17T16:23:05.814Z"
+      }
     ]
   }
 ]
