@@ -304,7 +304,7 @@
   {
     "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Quick start guide for image generation",
       "article_type": "Practical guide",
@@ -316,7 +316,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:17:54.770Z",
-    "updated_at": "2026-07-17T16:19:32.109Z",
+    "updated_at": "2026-07-17T16:21:01.993Z",
     "brief": {
       "target_reader": "Independent creators (artists, designers, filmmakers, writers) who have heard about AI image generation but have never used a tool, have no coding background, and are skeptical of hype around it",
       "reader_outcome": "The reader can open an AI image generation tool, write a prompt that produces a useful result, iterate on that result, and understand the basic settings well enough to avoid common beginner mistakes",
@@ -505,6 +505,128 @@
       "Exact DALL-E 3 API per-image pricing breakdown — third-party sources cite $0.04 (standard) to $0.12 (HD) per image, but the official OpenAI pricing page returned insufficient detail in this search to confirm current rates. These figures should be verified directly at platform.openai.com/docs/pricing before publishing, as OpenAI has been actively transitioning to GPT Image models with different pricing.",
       "Whether Adobe Firefly's free tier images carry a visible watermark — one third-party source (ToolRadar) states this, but it is not confirmed by Adobe's official documentation reviewed; writer should soften or verify directly.",
       "Exact Firefly credit allocation included with Creative Cloud All Apps / Pro plans — sources conflict (ToolRadar states 1,000/month for All Apps; gptprompts.ai states 4,000/month matching Firefly Pro). This is likely because the 'All Apps' plan was discontinued in August 2025 and replaced by CC Pro/Standard. Writer must check current Adobe CC Pro plan specs directly before citing a specific number."
-    ]
+    ],
+    "article": {
+      "title": "AI Image Generation: A Quick-Start Guide for Creators",
+      "alternative_titles": [
+        "How to Get Started with AI Image Generation (No Coding Required)",
+        "Your First AI Image: A Practical Guide for Artists and Designers"
+      ],
+      "slug": "ai-image-generation-quick-start-guide",
+      "dek": "What you actually need to start generating images with AI, including which tool to pick, how to write a prompt that works, and the mistakes that waste most beginners' time.",
+      "meta_description": "A practical quick-start guide to AI image generation for artists, designers, and independent creators. Covers tool selection, prompt writing, basic settings, iteration, and honest limitations.",
+      "quick_answer": "To generate your first AI image, pick one tool (Adobe Firefly is the most accessible free starting point for creators with copyright concerns), write a short descriptive prompt with a subject, style, and mood, then iterate by adding or changing one element at a time.",
+      "introduction": "AI image generation has gone from novelty to a tool working designers and filmmakers use in actual production pipelines. If you have not tried it yet, the gap between what you have heard and what these tools can actually do is worth closing with a few minutes of hands-on use.\n\nThis guide is for creators who have never opened an image generation tool. It skips the hype and covers what you need to get a usable result: the right tool for your situation, a prompt framework that works, the settings that matter, and a realistic picture of where these tools fall short.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "What You Actually Need to Get Started",
+          "body_markdown": "You do not need special hardware, a GPU, or any coding background. All three tools covered here run entirely in your browser.\n\nWhat you do need:\n\n- A stable internet connection\n- An account on whichever platform you choose\n- A small budget, or willingness to work within free-tier constraints\n- About 20 minutes for your first session\n\n**On cost:** None of the major tools offers a fully unlimited free plan. Free tiers exist but are constrained, and in Midjourney's case, there is no free tier at all as of mid-2026. Budget $10 to $30 per month if you plan to use any of these tools seriously. If you just want to evaluate them, Adobe Firefly's free plan and ChatGPT's free tier (which includes limited OpenAI image generation) are reasonable starting points before you commit to a paid subscription.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "Choosing Your First Tool",
+          "body_markdown": "Three tools are worth your attention as a beginner. Each has a genuinely different profile.\n\n**Midjourney** produces visually polished outputs and is widely used by professional illustrators and concept artists. It now has a standalone web interface in addition to its original Discord workflow, so Discord is no longer required. There is no free trial: the entry price is $10/month (or $8/month billed annually) for the Basic plan, which gives you roughly 200 fast GPU generations per month. Standard ($30/month, or $24 annual) and above add unlimited \"Relax Mode\" generations, which are slower but have no hard cap. Paid subscribers can use images commercially; companies with over $1 million in annual gross revenue must be on the Pro or Mega plan for commercial use.\n\n**Adobe Firefly** is the most accessible entry point for creators who already use Creative Cloud or who have copyright concerns. Adobe trains Firefly on licensed and public domain content, not scraped web data, which matters for commercial work. The free plan includes a limited monthly credit allocation. A third-party review cites approximately 25 credits per month on the free tier, though Adobe's own documentation describes it only as \"limited\" without specifying a number. Free-tier output is at standard resolution and is not licensed for commercial use; paid plans unlock commercial rights. Standard generations are unlimited on paid plans; credits are spent on premium features like high-resolution output and video. The standalone Firefly plan starts at $9.99/month.\n\n**OpenAI image generation via ChatGPT** (formerly DALL-E 3, now GPT-4o native image generation as of December 2025) is built into ChatGPT. The free tier includes some image generation with dynamic usage caps that OpenAI does not publish as a fixed number. ChatGPT Plus ($20/month) raises limits and adds priority access. OpenAI grants full commercial rights to image outputs, subject to content policy. If you already pay for ChatGPT Plus, this is a zero-additional-cost starting point. Note: the original DALL-E 3 model has been deprecated in the API as of mid-2026 and is no longer what you access through ChatGPT.\n\n**Editorial judgment:** For a first-time user with no existing subscriptions, Firefly's free plan is the lowest-friction entry with the clearest commercial use policy. For output quality and stylistic range, Midjourney is consistently cited by working illustrators as the stronger tool, but the lack of a free trial is a real barrier.",
+          "tools": [
+            {
+              "name": "Adobe Firefly",
+              "url": "https://www.adobe.com/products/firefly.html",
+              "description": "Browser-based image generation trained on licensed and public domain content. Integrated into Creative Cloud apps.",
+              "strengths": [
+                "Clearest commercial use rights of the three options",
+                "Trained on licensed content, not open-web scrapes",
+                "Free plan available (limited credits)",
+                "Familiar interface for existing Creative Cloud users"
+              ],
+              "limitations": [
+                "Free tier is limited in credits and not licensed for commercial use",
+                "Output style is more conservative compared to Midjourney",
+                "Credit system adds complexity to understanding actual costs"
+              ]
+            },
+            {
+              "name": "Midjourney",
+              "url": "https://www.midjourney.com",
+              "description": "High-quality image generation accessible via web interface or Discord. Widely used by professional illustrators and concept artists.",
+              "strengths": [
+                "Consistently strong visual output across many styles",
+                "No longer requires Discord — standalone web interface available",
+                "Unlimited Relax Mode generations on Standard plan and above",
+                "Clear commercial use rights for paid subscribers"
+              ],
+              "limitations": [
+                "No free trial",
+                "Basic plan's ~200 fast generations/month can run out quickly",
+                "Companies over $1M annual revenue must use Pro or Mega for commercial use",
+                "No public API as of mid-2026"
+              ]
+            },
+            {
+              "name": "ChatGPT Image Generation (OpenAI)",
+              "url": "https://chatgpt.com",
+              "description": "Image generation built into ChatGPT, now powered by GPT-4o native image generation rather than DALL-E 3.",
+              "strengths": [
+                "Included in ChatGPT free and Plus subscriptions",
+                "Full commercial use rights granted by OpenAI",
+                "Natural language interface is beginner-friendly",
+                "Good for iterating through conversation"
+              ],
+              "limitations": [
+                "Free-tier image quota is dynamic and not publicly documented",
+                "Less control over fine-grained style parameters compared to Midjourney",
+                "DALL-E 3 (the prior model) is deprecated in the API as of mid-2026"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "heading": "Your First Prompt: A Simple Framework That Works",
+          "body_markdown": "A prompt is just a description. But vague descriptions produce vague results. The fastest way to get useful output is to include four elements:\n\n1. **Subject.** What is in the image? Be specific. \"A woman\" produces generic results. \"A woman in her 40s looking out a rain-streaked window\" gives the model more to work with.\n2. **Style or medium.** Oil painting, product photo, flat vector illustration, pencil sketch, cinematic still. Without this, the tool picks a style for you, and it is often generic.\n3. **Mood or lighting.** \"Overcast morning light,\" \"neon-lit,\" \"warm late afternoon sun.\" Lighting descriptions have an outsized effect on the feel of the output.\n4. **Composition or framing (optional but useful).** \"Close-up portrait,\" \"wide establishing shot,\" \"bird's eye view.\"\n\n**Example prompt (weak):** `a coffee shop`\n\n**Example prompt (stronger):** `Interior of an independent coffee shop, morning light through large windows, warm tones, a few empty chairs, film photograph style, slightly grainy`\n\nThe stronger version takes 15 extra seconds to write and reliably produces more useful results. You are not writing code. Write the way you would describe an image to a collaborator.",
+          "tools": []
+        },
+        {
+          "id": "s4",
+          "heading": "Reading the Output: What Good and Bad Results Look Like",
+          "body_markdown": "When you get your first results, evaluate them on these dimensions:\n\n- **Does the composition serve your purpose?** Ignore imperfections and ask whether the core layout is usable.\n- **Are there anatomical or structural errors?** Hands, text in images, and complex backgrounds are common failure points. Fingers that merge, illegible text, and distorted symmetrical objects (glasses, windows, wheels) are the most frequent artifacts.\n- **Is the style consistent with your brief?** If you asked for \"editorial photography\" and got \"fantasy illustration,\" your prompt needs more specificity, not a completely new prompt.\n\nA useful result does not need to be perfect. For concepting, moodboarding, or reference, a 70% match is often enough to move forward. For final production use, these tools require post-processing or significant iteration.",
+          "tools": []
+        },
+        {
+          "id": "s5",
+          "heading": "Basic Controls: Aspect Ratio and Style Settings",
+          "body_markdown": "Every major tool lets you set **aspect ratio** before generating. This matters more than most beginners expect. Generating a landscape-format image with a portrait ratio will always produce an awkward crop. Set the ratio to match your intended use:\n\n- **1:1** for social media thumbnails and avatars\n- **16:9** for video thumbnails, presentations, wide headers\n- **2:3 or 4:5** for vertical social, print portrait\n- **3:2** for standard photo print proportions\n\n**Resolution:** On free tiers, output is typically at standard resolution, which is sufficient for screen use but may require upscaling for print. Specific pixel dimensions vary by tool and plan, and the platforms do not always publish these numbers clearly. Treat free-tier output as draft or screen-use quality until you verify what your specific plan produces.\n\n**Style intensity or \"stylize\" settings (Midjourney):** Midjourney includes a `--stylize` parameter that controls how strongly the model applies its own aesthetic preferences. Lower values follow your prompt more literally. Higher values produce more visually elaborate results that may drift from your description. For beginners, leaving this at the default is fine until you understand how your prompts behave.",
+          "tools": []
+        },
+        {
+          "id": "s6",
+          "heading": "Iteration Workflow: How to Refine Without Starting Over",
+          "body_markdown": "The most common beginner mistake is abandoning a generation entirely when it is 80% right. The more efficient approach:\n\n1. **Generate 4 variations** from your first prompt. Most tools generate multiple options by default.\n2. **Pick the closest result** and identify the one or two things that are wrong.\n3. **Change one element of your prompt** and regenerate. Do not rewrite the entire prompt at once. You will lose what was working.\n4. **Use the tool's variation or remix features** if they exist. Midjourney's \"vary\" feature generates alternatives close to a selected image. Firefly and ChatGPT support conversational iteration where you describe the change you want.\n\nFor text-in-image needs: add the exact text you need in quotes in your prompt (e.g., `sign reading \"Open\"`). Results are still unreliable across all three tools, but explicit instruction helps. For anything requiring precise, legible text, plan to add it in post-production.",
+          "tools": []
+        },
+        {
+          "id": "s7",
+          "heading": "Common Beginner Mistakes",
+          "body_markdown": "**Over-prompting on the first try.** Writing a 200-word prompt before you understand how a tool responds to simple prompts wastes time. Start with 20 to 40 words, see what you get, then add specificity.\n\n**Ignoring aspect ratio.** Generating the wrong ratio and then cropping is the leading cause of frustrated beginners who think the tool \"does not work.\"\n\n**Treating one bad generation as a verdict.** AI image generation is probabilistic. The same prompt produces different results each time. If something is not working, run it again or adjust one element before concluding the tool cannot do what you need.\n\n**Using the free tier for client deliverables without checking the license.** Free-tier outputs from Adobe Firefly are not licensed for commercial use. Verify the commercial terms of whatever tier you are on before delivering AI-generated work to a client.",
+          "tools": []
+        },
+        {
+          "id": "s8",
+          "heading": "What These Tools Cannot Do",
+          "body_markdown": "Honest limitations that affect practical use:\n\n- **Reliable text rendering.** All three tools struggle with legible, correctly spelled text inside images. This is a known, documented limitation, not a prompt-writing problem.\n- **Precise control over specific people or characters.** Without additional features (like Firefly Custom Models or Midjourney's reference image tools), you cannot reliably reproduce a specific face, character, or brand asset across multiple generations.\n- **Hands and complex anatomy.** Distortion in hands, fingers, and feet is the most common structural artifact. Improving with each model generation, but still a consistent weak point.\n- **Consistent output across a project.** Generating 20 images that feel like they belong to the same visual world requires significant prompt discipline and, often, paid features designed for consistency.\n- **Copyright certainty.** Adobe Firefly's training data policy (licensed and public domain content) is the clearest of the three. For Midjourney and OpenAI outputs, commercial use rights are granted by the platform, but the underlying legal landscape around AI-generated imagery is still unsettled. This is an evolving area and not something any of these tools has fully resolved.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "No hardware or coding is required. All three major tools run in a browser, but none is fully free for unlimited use.",
+        "Adobe Firefly is the most accessible starting point with the clearest commercial use policy; Midjourney produces stronger stylistic output but has no free trial.",
+        "A prompt with a subject, style, mood, and framing will outperform a vague one almost every time. Start short and add specificity based on results.",
+        "Set aspect ratio before generating. It has an immediate, obvious effect on whether outputs are usable for your intended format.",
+        "Hands, in-image text, and cross-session character consistency are documented weak points across all three tools. Plan your workflow around these constraints rather than fighting them."
+      ],
+      "conclusion": "AI image generation is a genuinely useful tool for concepting, moodboarding, reference gathering, and in some cases final production, but it requires realistic expectations about what it produces on the first try. The gap between a vague prompt and a useful one is smaller than most beginners expect. The gap between a first generation and a polished deliverable is larger.\n\nPick one tool, spend 20 minutes with it, and evaluate based on your actual use case. The tools covered here are meaningfully different in cost structure, training data policy, and output style. Those differences matter depending on whether you need commercial rights, care about training data sourcing, or prioritize a specific visual quality. None of them is the right answer for every creator.",
+      "methodology_disclosure": "This guide was synthesized from official documentation for Midjourney, Adobe Firefly, and OpenAI (accessed July 2026), supplemented by independent reviews from eesel.ai, ToolRadar, ToolColumn, Flowith Blog, AI Tool Radar, and Terms.Law. Claims about pricing, free tier limits, commercial rights, and platform capabilities were cross-referenced against official sources wherever possible. Where official documentation was ambiguous or silent (such as exact free-tier credit counts and pixel-dimension caps), the guide softens or omits specific figures rather than relying solely on third-party estimates. The guide does not reflect hands-on testing by dailyblip. Prompt framework recommendations and iteration advice are based on editorial synthesis of practitioner workflows described in sourced materials, not original testing.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
