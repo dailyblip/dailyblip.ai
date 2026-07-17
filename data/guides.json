@@ -36,7 +36,7 @@
   {
     "id": "cf91fc3b-5603-4622-9f6f-86bfd9c20de8",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Comparing the options for realistic photo generation.",
       "article_type": "Tool comparison",
@@ -48,6 +48,35 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:08:38.717Z",
-    "updated_at": "2026-07-17T03:08:38.717Z"
+    "updated_at": "2026-07-17T03:09:10.633Z",
+    "brief": {
+      "target_reader": "Social media creators (Instagram, TikTok, Pinterest, LinkedIn) who want photorealistic AI-generated images for posts, ads, or branding, and are trying to choose between competing tools without wading through marketing copy",
+      "reader_outcome": "The reader should be able to identify which AI image tool best fits their specific use case for realistic photo generation, understand the practical tradeoffs in quality, speed, cost, and workflow, and know which tools to trial first based on their platform and output needs",
+      "structure_plan": [
+        "What 'Realistic' Actually Means in AI Photo Generation (skin texture, lighting coherence, depth of field, artifact avoidance)",
+        "The Tools Being Compared (Midjourney, Adobe Firefly, DALL-E 3 via ChatGPT, Stable Diffusion with realistic checkpoints, Ideogram, Leonardo.ai)",
+        "Head-to-Head: Output Quality for Realistic Photos",
+        "Speed and Workflow Fit for Social Media Creators",
+        "Pricing and Access Models (free tiers, subscriptions, credits)",
+        "Practical Limitations: Where Each Tool Fails",
+        "Which Tool for Which Use Case (product mockups, people/portraits, lifestyle scenes, brand assets)",
+        "Quick Decision Framework"
+      ],
+      "claims_to_verify": [
+        "Current Midjourney subscription pricing tiers and whether a free tier exists",
+        "Adobe Firefly pricing and whether it is included in existing Creative Cloud plans",
+        "DALL-E 3 free access limits via ChatGPT free tier vs. ChatGPT Plus",
+        "Leonardo.ai free daily token allowance and paid plan pricing",
+        "Ideogram current pricing and free generation limits",
+        "Whether Stable Diffusion realistic checkpoints (e.g., RealVisXL, Juggernaut XL) require local hardware or can run via hosted platforms like Civitai or NightCafe",
+        "Adobe Firefly's content credentials and commercial licensing claims",
+        "Midjourney's terms regarding commercial use of generated images",
+        "Whether DALL-E 3 outputs are licensed for commercial use under OpenAI's current terms",
+        "Leonardo.ai commercial use policy for free tier vs. paid tier users",
+        "Which tools have native upscaling for high-resolution social exports (at least 1080px)",
+        "Whether Ideogram or Leonardo.ai have aspect ratio presets matching common social formats (9:16, 1:1, 4:5)"
+      ],
+      "research_plan": "Prioritize official pricing and terms pages for each tool (not third-party summaries, which go stale quickly). Look for independent prompt comparison posts or YouTube breakdowns from AI art communities (Reddit r/StableDiffusion, r/midjourney, Civitai forums) that show side-by-side outputs on consistent prompts. Seek out creator-focused reviews from social media professionals rather than tech press. Check product changelogs or release notes to confirm current feature states. Avoid relying on tool marketing pages for capability claims. For Stable Diffusion, focus on hosted/no-code access routes since the target reader is a social media creator, not a developer."
+    }
   }
 ]
