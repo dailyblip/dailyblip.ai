@@ -1171,7 +1171,7 @@
   {
     "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Using AI to write better songs without losing your voice",
       "article_type": "Practical guide",
@@ -1183,7 +1183,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T19:17:05.201Z",
-    "updated_at": "2026-07-17T19:17:33.730Z",
+    "updated_at": "2026-07-17T19:18:52.165Z",
     "brief": {
       "target_reader": "A singer-songwriter who writes their own lyrics and melodies, is curious about AI tools but worried that using them will make their songs sound generic or less personal. Has probably never used an AI writing tool for music before.",
       "reader_outcome": "Feel confident enough to try one specific AI-assisted step in their songwriting process today, without feeling like they are handing their creative voice over to a machine.",
@@ -1201,6 +1201,177 @@
         "Whether there are documented cases or widely cited examples of professional songwriters using AI as a brainstorming tool rather than a replacement writer, to ground any editorial claims about how the workflow actually functions"
       ],
       "research_plan": "Prioritize official documentation and feature pages for songwriter-relevant AI tools (LyricStudio, ChatGPT, Claude, Suno if relevant). Look for credible music-press sources (Rolling Stone, Pitchfork, MusicRadar, Sound On Sound) covering how working songwriters are actually integrating AI into their process. Avoid hype-heavy marketing content. Do not rely on a single blog post for any capability claim. Steer away from exact pricing or quota details since the draft will not lean on those."
-    }
+    },
+    "sources": [
+      {
+        "title": "LyricStudio – Official Product Page",
+        "publisher": "LyricStudio / WaveAI (lyricstudio.net)",
+        "url": "https://lyricstudio.net/generative-ai",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "LyricStudio is an AI-powered lyric generator designed specifically for songwriters, focused on lyrics rather than full song generation",
+          "It provides genre-specific suggestions, a built-in rhyme finder, and real-time co-writing tools",
+          "Users retain full rights to lyrics generated on the platform (royalty-free)",
+          "A free trial is available; premium subscription plans start from approximately $5.99/month",
+          "Features include: infinite suggestion engine, real-time collaboration for co-writers, and a built-in rhyming finder",
+          "Its 'Magic Draft' feature generates a first verse and chorus to jump-start the writing process"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno – Official Product Page and Feature Hub",
+        "publisher": "Suno (suno.com)",
+        "url": "https://suno.com/hub/create-music-with-ai",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno is a full-song AI generator (vocals, lyrics, instrumentation) from a single text prompt, currently at model v5.5",
+          "A free plan allows up to 10 songs/day (50 credits) with no credit card required",
+          "The Custom tab lets users paste in their own lyrics and separate them from the style prompt, allowing the songwriter to retain lyric authorship",
+          "A dedicated lyrics workspace (magic wand icon) lets users request full lyrics, refine lines, and specify structure, tone, or subject",
+          "Suno Studio (Premier plan) is described as the first AI-native DAW, with timeline editing, MIDI export, and stem separation",
+          "Suno markets itself as usable by 'first-time creators to top producers and songwriters'"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno (platform) – Wikipedia",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Suno_(platform)",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno launched its mobile app on July 1, 2024",
+          "Suno upgraded to model v4 on November 19, 2024",
+          "In June 2024, the RIAA filed a copyright lawsuit against Suno and Udio alleging widespread infringement of copyrighted sound recordings",
+          "In November 2025, Suno agreed to a $500 million lawsuit settlement with Warner Music Group",
+          "Recording Academy CEO Harvey Mason Jr. stated that 'every' songwriter and producer he knows has used Suno (cited via Billboard)",
+          "Timbaland publicly stated he spends 10 hours a day using Suno (cited via MusicRadar, October 2024)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "The 10 Biggest AI Music Stories of 2025",
+        "publisher": "Billboard",
+        "url": "https://www.billboard.com/lists/biggest-ai-music-stories-2025-suno-udio-charts-more/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Professional songwriters using AI as a brainstorming tool (not a replacement) is now normalized: 'It is now common to hear stories of professional writers coming into the studio and opening up Suno to generate ideas when they are stuck'",
+          "Recording Academy CEO Harvey Mason Jr. said 'every' songwriter and producer he knows has used AI tools now",
+          "Mason described the use case as ranging from texting lyrics or ideas to generating entire tracks — i.e., a brainstorming workflow rather than full replacement",
+          "Suno tested its generative audio workstation Suno Studio on professional musicians at Suno-led songwriter camps",
+          "Generative AI tools began infiltrating writing rooms around the launch of Suno and Udio in late 2023"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio vs Suno (2026): The AI Music Generation Showdown",
+        "publisher": "Neuronad",
+        "url": "https://neuronad.com/suno-vs-udio/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno currently has approximately 2 million paid subscribers and $300M ARR (as of April 2026)",
+          "Udio v1.5 (launched mid-2025) introduced 48 kHz stereo output, key guidance, and global language support",
+          "Udio's inpainting tool allows surgical editing: select a 2-second segment and regenerate only that section — no other AI music platform offers this",
+          "Udio settled parts of its RIAA copyright lawsuit with Universal Music Group in late 2025",
+          "Suno v5.5 (March 2026) introduced voice cloning, custom model training, and a 'My Taste' personalization feature",
+          "Udio's free tier is limited to 10 credits/day; Udio has no mobile app or voice cloning as of April 2026"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Best AI Music Generators in 2026",
+        "publisher": "SoundGuys",
+        "url": "https://www.soundguys.com/best-ai-music-generators-134781/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno's free plan gives ~10 songs/day; Pro is $10/month; Premier is $30/month with full commercial rights and stem export",
+          "Udio's free plan includes 10 credits/day + 100/month; Standard is $10/month; Pro is $30/month",
+          "Udio temporarily disabled all downloads (audio, video, stems) across all plan tiers during a 2025–2026 licensing transition — status should be verified before subscribing",
+          "Suno's commercial rights only apply to songs created while actively subscribed — upgrading later does not grant retroactive ownership",
+          "Suno and Udio are the 'two heavyweights for full song generation'; Suno is the easier starting point and Udio offers more control"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "8 Best AI Lyric Generators for Songwriting in 2026",
+        "publisher": "Somio AI Blog",
+        "url": "https://somio.ai/blog/best-ai-lyric-generator/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "ChatGPT's free plan provides access to basic models sufficient for lyric writing; ChatGPT Plus is $20/month for advanced models",
+          "Claude Pro is $19/month; the free plan provides access to standard models",
+          "Claude's standout capability is handling long, complex inputs (world-building notes, character backstories, multi-section drafts) without losing coherence — making it well-suited for concept albums or musicals",
+          "General AI tools like ChatGPT can assist with creative brainstorming but lack musical structure and depth compared to dedicated lyric tools",
+          "Suno's v5.5 model and 'ReMi assistant' deliver more natural vocals and fuller arrangements"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "2026's Best AI Lyric Tools, Tested – 20 ChatGPT Alternatives for Songwriters",
+        "publisher": "Complete AI Training / completeaitraining.com",
+        "url": "https://completeaitraining.com/news/2026s-best-ai-lyric-tools-tested-20-chatgpt-alternatives-2/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "ChatGPT, Claude, Gemini, Suno, Udio, and LyricStudio are all currently active and usable for lyric brainstorming",
+          "Both ChatGPT and Claude have free tiers that are functional for lyric brainstorming without requiring a paid plan",
+          "Claude is rated best for emotional nuance and structured meter control; LyricStudio is rated best overall for co-writing with a rhyme engine; Suno is best for full song demos",
+          "LyricStudio's paid plan starts at $5.99/month",
+          "AI lyric tools work best when treated as a brainstorming partner generating options for human curation, not as a replacement author"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI for Songwriters: How Ben Camp is Helping Songwriters Get Creative with Artificial Intelligence",
+        "publisher": "Berklee Online (Take Note blog)",
+        "url": "https://online.berklee.edu/takenote/ai-for-songwriters-how-ben-camp-is-helping-songwriters-get-creative-with-artificial-intelligence/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "A documented, named professional songwriter (Ben Camp) is publicly cited describing AI use specifically as a brainstorming tool — generating titles, metaphors, and lyric variations rather than replacing the songwriter",
+          "Camp's described workflow is AI-assisted ideation: prompts like 'Brainstorm 10 titles for a song about defying expectations' or 'Give me 20 metaphors about struggling to succeed'",
+          "Camp says one of their favorite aspects of AI is generating countless variations of a single lyric, which has improved their ear for quality — framing AI as craft-development aid, not a ghostwriter"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Top AI Tools to Write Song Lyrics in 2026: 20 ChatGPT Alternatives",
+        "publisher": "H2S Media (how2shout.com)",
+        "url": "https://www.how2shout.com/tools/best-ai-lyric-writing-chatgpt-alternatives.html",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Claude is editorially rated as outperforming ChatGPT for creative/emotional lyric quality across multiple independent reviewers",
+          "Dedicated songwriter-specific tools with songwriter-facing features include: LyricStudio (rhyme engine, co-writing), Staccato (VST/AU plugin for DAW integration), Verselab and AUDOIR (syllable control for rap/hip-hop)",
+          "Free options confirmed as of 2026 include: Google Gemini, These Lyrics Do Not Exist, AUDOIR",
+          "AI lyric tools can write competent, structured, emotionally surface-level lyrics — but struggle with 'specific, personal, lived-experience details'; the most effective workflow treats AI as a brainstorming partner for human curation",
+          "ChatGPT Plus is $20/month; Claude Pro is $20/month; Gemini Advanced is $19.99/month"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Any specific claim that a named major-label or chart-topping recording artist (e.g., a household-name pop songwriter) publicly credits AI as their brainstorming tool in a documented interview. The Billboard source confirms broad professional adoption (Recording Academy CEO's comment) and Timbaland's public endorsement of Suno, but no verified first-person case study of a named professional songwriter detailing a specific AI-assisted lyric brainstorming workflow could be confirmed — the Berklee source (Ben Camp) is the closest verified named example, but Camp is a music educator/songwriter rather than a mainstream chart artist.",
+      "Specific claim that Gemini has 'songwriter-facing features' (rhyme suggestions, verse/chorus structure prompts, co-writing modes) comparable to dedicated tools — sources confirm Gemini is usable for quick lyric drafts and is free, but it is consistently described as a general-purpose LLM without music-specific structuring features.",
+      "Udio's current download/export status: one source (SoundGuys, updated March 2026) flagged that Udio temporarily disabled all downloads during a licensing transition and advised verifying current status before subscribing — this should be checked directly on udio.com before publication.",
+      "The exact free trial depth of LyricStudio: official documentation says a free trial exists, but user feedback (TheresAnAIForThat) reports the trial is very limited (potentially only a handful of suggestions before a paywall). The writer should not characterize the LyricStudio free tier as generous without verification.",
+      "Any claim that ChatGPT's free tier uses GPT-4o or a comparable flagship model for lyric brainstorming — sources confirm a free tier exists and is functional, but one source notes the free tier uses a 'basic' or 'mini' model (GPT-4.1 mini as of one source), not the full advanced model, which may affect output quality claims."
+    ]
   }
 ]
