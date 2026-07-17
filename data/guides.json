@@ -78,8 +78,8 @@
   },
   {
     "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
-    "status": "in_progress",
-    "stage": "Re-checking",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Quick start guide for image generation",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:17:54.770Z",
-    "updated_at": "2026-07-17T16:33:45.395Z",
+    "updated_at": "2026-07-17T16:39:53.036Z",
     "brief": {
       "target_reader": "Independent creators (artists, designers, filmmakers, writers) who have heard about AI image generation but have never used a tool, have no coding background, and are skeptical of hype around it",
       "reader_outcome": "The reader can open an AI image generation tool, write a prompt that produces a useful result, iterate on that result, and understand the basic settings well enough to avoid common beginner mistakes",
@@ -296,13 +296,13 @@
         {
           "id": "s1",
           "heading": "What You Actually Need to Get Started",
-          "body_markdown": "You do not need special hardware, a GPU, or any coding background. All three tools covered here run entirely in your browser.\n\nWhat you do need:\n\n- A stable internet connection\n- An account on whichever platform you choose\n- A small budget, or willingness to work within free-tier constraints\n- About 20 minutes for your first session\n\n**On cost:** None of the major tools offers a fully unlimited free plan. Free tiers exist for Adobe Firefly and ChatGPT, but Midjourney has no free tier at all (its free trial was removed in 2023). Entry-level paid plans for these tools generally start in the $10 to $20 per month range, but costs scale significantly depending on usage and plan tier. Professional use cases can push monthly costs well above that. If you just want to evaluate them, Adobe Firefly's free plan is the more reliable starting point. ChatGPT also includes some image generation on the free tier, but check OpenAI's current pricing and help pages for specifics on usage limits, as these are subject to change and not always published as fixed numbers.",
+          "body_markdown": "You do not need special hardware, a GPU, or any coding background. All three tools covered here run entirely in your browser.\n\nWhat you do need:\n\n- A stable internet connection\n- An account on whichever platform you choose\n- A small budget, or willingness to work within free-tier constraints\n- About 20 minutes for your first session\n\n**On cost:** None of the major tools offers a fully unlimited free plan. Free tiers exist for Adobe Firefly and ChatGPT, but Midjourney has no free tier at all (its free trial was removed in March 2023). Entry-level paid plans for these tools generally start in the $10 to $20 per month range, but costs scale significantly depending on usage and plan tier. Professional use cases can push monthly costs well above that. If you just want to evaluate them, Adobe Firefly's free plan is the more reliable starting point. ChatGPT also includes some image generation on the free tier, but check OpenAI's current pricing and help pages for specifics on usage limits, as these are subject to change and not always published as fixed numbers.",
           "tools": []
         },
         {
           "id": "s2",
           "heading": "Choosing Your First Tool",
-          "body_markdown": "Three tools are worth your attention as a beginner. Each has a genuinely different profile.\n\n**Midjourney** produces visually polished outputs and is widely used by professional illustrators and concept artists. It now has a standalone web interface in addition to its original Discord workflow, so Discord is no longer required. There is no free trial (the free trial was removed in early 2023 and has not returned). For current plan pricing, check Midjourney's official plan comparison page directly, as specific figures change. The Basic plan includes a fast-generation cap per month measured in GPU hours; Midjourney's official plan page lists the fast-hour allocation, though the exact number of images this translates to depends on your settings and will vary. Standard and above add unlimited \"Relax Mode\" generations, which are slower but have no hard cap. The Basic plan does not include Relax Mode. Paid subscribers can use images commercially; companies with over $1 million in annual gross revenue must be on the Pro or Mega plan for commercial use.\n\n**Adobe Firefly** is the most accessible entry point for creators who already use Creative Cloud or who have copyright concerns. Adobe states that Firefly is trained on licensed content and public domain content where copyright has expired, and that Adobe does not train on subscribers' personal content. This is the most explicitly documented training data policy of the three tools covered here. That said, the broader legal status of content licensed for AI training remains contested and unsettled, so treat Adobe's policy as a meaningful differentiator rather than a guarantee of copyright safety. See the limitations section below for more on this. The free plan includes a limited monthly credit allocation; check Adobe's official Generative Credits FAQ for current specifics, as the quantity is not prominently specified in official documentation. Free-tier outputs are not licensed for commercial use. Paid plans unlock commercial rights. Standard generations are unlimited on paid plans; credits are spent on premium features like high-resolution output and video. Adobe has restructured its Creative Cloud plans in recent years, which affects how existing subscribers access Firefly. If you are already a Creative Cloud subscriber, verify what your current plan includes. For standalone Firefly plan pricing, check Adobe's official product page.\n\n**OpenAI image generation via ChatGPT** is built into ChatGPT. The free tier includes some image generation, but OpenAI's usage limits on the free tier are not always published as fixed numbers, so check OpenAI's current help and pricing documentation for the latest specifics. A paid ChatGPT subscription raises limits and adds priority access; see OpenAI's pricing page for current plan costs, as these are subject to change. OpenAI grants full commercial rights to image outputs, subject to content policy. If you already pay for a ChatGPT subscription, this is a zero-additional-cost starting point.\n\n**Editorial judgment:** For a first-time user with no existing subscriptions, Firefly's free plan is the lowest-friction entry with the clearest commercial use policy. For output quality and stylistic range, Midjourney is frequently cited as the stronger tool for illustrators and concept artists, though the lack of a free trial is a real barrier.",
+          "body_markdown": "Three tools are worth your attention as a beginner. Each has a genuinely different profile.\n\n**Midjourney** produces visually polished outputs and is widely used by professional illustrators and concept artists. It now has a standalone web interface in addition to its original Discord workflow, so Discord is no longer required. There is no free trial (the free trial was removed in March 2023 and has not returned). For current plan pricing, check Midjourney's official plan comparison page directly, as specific figures change. The Basic plan includes a fast-generation cap per month measured in GPU hours; Midjourney's official plan page lists the fast-hour allocation, and the exact number of images this translates to will vary depending on your settings and the complexity of what you generate. Standard and above add unlimited \"Relax Mode\" generations, which are slower but have no hard cap. The Basic plan does not include Relax Mode. Paid subscribers can use images commercially; companies with over $1 million in annual gross revenue must be on the Pro or Mega plan for commercial use.\n\n**Adobe Firefly** is the most accessible entry point for creators who already use Creative Cloud or who have copyright concerns. Adobe states that Firefly is trained on licensed content and public domain content where copyright has expired. Adobe also separately states that it does not train on subscribers' personal content. These are distinct policies addressing different concerns: the first describes the training data sources, and the second addresses how Adobe handles your own uploaded content. Of the three tools covered here, Adobe publishes the most detail about its training data sourcing, though the broader legal status of content licensed for AI training remains contested and unsettled, so treat Adobe's policy as a meaningful differentiator rather than a guarantee of copyright safety. See the limitations section below for more on this. The free plan includes a limited monthly credit allocation; check Adobe's official Generative Credits FAQ for current specifics, as the quantity is not prominently specified in official documentation. Adobe's official documentation and independent sources indicate that free-tier outputs are watermarked and low-resolution, and Adobe's terms scope commercial use rights to paid plans, so verify your plan's terms before using free-tier outputs for client work. Paid plans unlock commercial rights. On qualifying paid plans (including Creative Cloud Pro and Firefly standalone plans), standard generations are unlimited; credits are spent on premium features like high-resolution output and video. Adobe has restructured its Creative Cloud plans, discontinuing the All Apps plan in August 2025 in favor of Creative Cloud Pro and Standard tiers, which affects how existing subscribers access Firefly. If you are already a Creative Cloud subscriber, verify what your current plan includes. For standalone Firefly plan pricing, check Adobe's official product page.\n\n**OpenAI image generation via ChatGPT** is built into ChatGPT. The free tier includes some image generation, but OpenAI's usage limits on the free tier are not always published as fixed numbers, so check OpenAI's current help and pricing documentation for the latest specifics. A paid ChatGPT subscription raises limits and adds priority access; see OpenAI's pricing page for current plan costs, as these are subject to change. OpenAI grants full commercial rights to image outputs, subject to content policy. If you already pay for a ChatGPT subscription, this is a zero-additional-cost starting point.\n\n**Editorial judgment:** For a first-time user with no existing subscriptions, Firefly's free plan is the lowest-friction entry with the clearest commercial use policy. For output quality and stylistic range, Midjourney is frequently cited as the stronger tool for illustrators and concept artists, though the lack of a free trial is a real barrier.",
           "tools": [
             {
               "name": "Adobe Firefly",
@@ -370,13 +370,13 @@
         {
           "id": "s5",
           "heading": "Basic Controls: Aspect Ratio and Style Settings",
-          "body_markdown": "Every major tool lets you set **aspect ratio** before generating. This matters more than most beginners expect. Generating a landscape-format image with a portrait ratio will always produce an awkward crop. Set the ratio to match your intended use:\n\n- **1:1** for social media thumbnails and avatars\n- **16:9** for video thumbnails, presentations, wide headers\n- **2:3 or 4:5** for vertical social, print portrait\n- **3:2** for standard photo print proportions\n\n**Resolution:** On free tiers, output resolution is limited. The specific pixel dimensions vary by tool and plan, and the platforms do not always publish these numbers clearly. Check your specific plan's documentation before using free-tier output for print work. For standard web use at 72 to 96 DPI, free-tier outputs are typically adequate, but if you are targeting high-DPI displays or retina screens, verify the actual pixel dimensions of what your plan produces before committing to a workflow.\n\n**Style intensity or \"stylize\" settings (Midjourney):** Midjourney includes a `--stylize` parameter that controls how strongly the model applies its own aesthetic preferences. Lower values follow your prompt more literally. Higher values produce more visually elaborate results that may drift from your description. For beginners, leaving this at the default is fine until you understand how your prompts behave.",
+          "body_markdown": "Every major tool lets you set **aspect ratio** before generating. This matters more than most beginners expect. Generating a landscape-format image with a portrait ratio will always produce an awkward crop. Set the ratio to match your intended use:\n\n- **1:1** for social media thumbnails and avatars\n- **16:9** for video thumbnails, presentations, wide headers\n- **2:3 or 4:5** for vertical social, print portrait\n- **3:2** for standard photo print proportions\n\n**Resolution:** On free tiers, output resolution is limited. The specific pixel dimensions vary by tool and plan, and the platforms do not always publish these numbers clearly. Adobe Firefly's free tier in particular has been described by independent reviewers as producing low-resolution outputs, so check your specific plan's documentation before using free-tier output for print work or high-DPI display contexts. Verify the actual pixel dimensions of what your plan produces before committing to a workflow.\n\n**Style intensity or \"stylize\" settings (Midjourney):** Midjourney includes a `--stylize` parameter that controls how strongly the model applies its own aesthetic preferences. Lower values follow your prompt more literally. Higher values produce more visually elaborate results that may drift from your description. For beginners, leaving this at the default is fine until you understand how your prompts behave.",
           "tools": []
         },
         {
           "id": "s6",
           "heading": "Iteration Workflow: How to Refine Without Starting Over",
-          "body_markdown": "The most common beginner mistake is abandoning a generation entirely when it is 80% right. The more efficient approach:\n\n1. **Generate 4 variations** from your first prompt. Most tools generate multiple options by default.\n2. **Pick the closest result** and identify the one or two things that are wrong.\n3. **Change one element of your prompt** and regenerate. Do not rewrite the entire prompt at once. You will lose what was working.\n4. **Use the tool's variation or remix features** if they exist. Midjourney's \"vary\" feature generates alternatives close to a selected image. ChatGPT supports conversational iteration where you describe the change you want in a follow-up message. Firefly's standalone web interface uses a prompt-based approach rather than a conversational one, though Firefly is also integrated into several Creative Cloud apps with varying interaction models. In any case, updating your prompt and regenerating is the primary refinement method.\n\nFor text-in-image needs: add the exact text you need in quotes in your prompt (e.g., `sign reading \"Open\"`). Results are still unreliable across all three tools, but explicit instruction helps. For anything requiring precise, legible text, plan to add it in post-production.",
+          "body_markdown": "The most common beginner mistake is abandoning a generation entirely when it is 80% right. The more efficient approach:\n\n1. **Generate 4 variations** from your first prompt. Most tools generate multiple options by default.\n2. **Pick the closest result** and identify the one or two things that are wrong.\n3. **Change one element of your prompt** and regenerate. Do not rewrite the entire prompt at once. You will lose what was working.\n4. **Use the tool's variation or remix features** if they exist. Midjourney's \"vary\" feature generates alternatives close to a selected image. ChatGPT supports conversational iteration where you describe the change you want in a follow-up message. Firefly is also integrated into several Creative Cloud apps with varying interaction models; in all cases, updating your prompt and regenerating is the primary refinement method.\n\nFor text-in-image needs: add the exact text you need in quotes in your prompt (e.g., `sign reading \"Open\"`). Results are still unreliable across all three tools, but explicit instruction helps. For anything requiring precise, legible text, plan to add it in post-production.",
           "tools": []
         },
         {
@@ -399,7 +399,7 @@
         "Set aspect ratio before generating. It has an immediate, obvious effect on whether outputs are usable for your intended format.",
         "Hands, in-image text, and cross-session character consistency are documented weak points across all three tools. Plan your workflow around these constraints rather than fighting them."
       ],
-      "conclusion": "AI image generation is a genuinely useful tool for concepting, moodboarding, reference gathering, and in some cases final production, but it requires realistic expectations about what it produces on the first try. The gap between a vague prompt and a useful one is smaller than most beginners expect. The gap between a first generation and a polished deliverable is larger.\n\nPick one tool, spend 20 minutes with it, and evaluate based on your actual use case. The tools covered here are meaningfully different in cost structure, training data policy, and output style. If you are an existing Creative Cloud subscriber, note that most current Creative Cloud plans include a monthly allocation of generative credits for Firefly, but Adobe has restructured its plan tiers, so verify what your specific plan includes before assuming access to particular features. Those differences matter depending on whether you need commercial rights, care about training data sourcing, or prioritize a specific visual quality. None of them is the right answer for every creator.",
+      "conclusion": "AI image generation is a genuinely useful tool for concepting, moodboarding, reference gathering, and in some cases final production, but it requires realistic expectations about what it produces on the first try. The gap between a vague prompt and a useful one is smaller than most beginners expect. The gap between a first generation and a polished deliverable is larger.\n\nPick one tool, spend 20 minutes with it, and evaluate based on your actual use case. The tools covered here are meaningfully different in cost structure, training data policy, and output style. If you are an existing Creative Cloud subscriber, Adobe has restructured its plan tiers (the All Apps plan was discontinued in August 2025, replaced by Creative Cloud Pro and Standard), so verify what your specific current plan includes before assuming access to Firefly features or generative credits. Those differences matter depending on whether you need commercial rights, care about training data sourcing, or prioritize a specific visual quality. None of them is the right answer for every creator.",
       "methodology_disclosure": "This guide was synthesized from official documentation for Midjourney, Adobe Firefly, and OpenAI (accessed July 2026), supplemented by independent reviews from eesel.ai, ToolRadar, ToolColumn, Flowith Blog, AI Tool Radar, and Terms.Law. Claims about pricing, free tier limits, commercial rights, and platform capabilities were cross-referenced against official sources wherever possible. Where official documentation was ambiguous or silent (such as exact free-tier credit counts and pixel-dimension caps), the guide softens or omits specific figures rather than relying solely on third-party estimates. The guide does not reflect hands-on testing by dailyblip. Prompt framework recommendations and iteration advice are based on editorial synthesis of practitioner workflows described in sourced materials, not original testing.",
       "last_reviewed_date": "July 17, 2026"
     },
@@ -408,95 +408,95 @@
         {
           "severity": "high",
           "section_id": "s2",
+          "original_text": "Basic plan's ~200 fast generations/month can run out quickly",
+          "issue": "The '~200 fast generations/month' figure is inaccurate. The Basic plan includes 200 fast GPU hours per month, not 200 generations — the source material itself notes that the exact number of images this translates to varies by settings. Presenting it as '~200 fast generations/month' in the tool card is a misleading simplification that contradicts the article's own more careful language in the body text.",
+          "supporting_source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+        },
+        {
+          "severity": "high",
+          "section_id": "s2",
           "original_text": "DALL-E 3 (the prior model) is deprecated in the API as of mid-2026",
-          "issue": "The source (AI Tool Radar) states DALL-E 3 deprecation was 'announced for May 2026' in the API, not confirmed as completed. The article presents this as a settled fact ('is deprecated') when the source only cites an announced deprecation date, and this is an independent review, not official OpenAI documentation.",
+          "issue": "The source (AI Tool Radar) states DALL-E 3 deprecation from the API was announced for May 2026, not that it was confirmed deprecated 'as of mid-2026.' This is an independent review, not an official OpenAI source, and no official OpenAI documentation is cited to confirm this deprecation actually took effect. Stating it as fact risks being incorrect.",
           "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
         },
         {
           "severity": "high",
           "section_id": "s2",
-          "original_text": "No public API as of mid-2026",
-          "issue": "The Midjourney 'no public API' claim is sourced from a Flowith Blog independent review referencing March 2026 conditions. No official Midjourney documentation in the sources confirms the absence of a public API as of mid-2026; this could be outdated or inaccurate by the article's stated review date of July 2026.",
-          "supporting_source_url": "https://flowith.io/blog/midjourney-web-v7-vs-discord/"
+          "original_text": "Free-tier outputs are not licensed for commercial use",
+          "issue": "The article states Adobe Firefly free-tier outputs are not licensed for commercial use, but the cited independent source (ToolRadar) describes them as 'watermarked and low-resolution' and not suitable for commercial use. No official Adobe documentation in the source list explicitly confirms that the free tier lacks commercial licensing rights — only the Terms.Law independent source does. An explicit official Adobe citation is missing for this specific claim.",
+          "supporting_source_url": "https://terms.law/FAQ/ai-tools/ai-commercial-use-faq.html"
         },
         {
-          "severity": "high",
-          "section_id": "s2",
-          "original_text": "Basic plan's ~200 fast generations/month can run out quickly",
-          "issue": "The '~200 fast generations/month' figure for the Basic plan is derived from an independent review (eesel.ai) translating 200 fast GPU-hours into image counts. The article should not present this as a near-fact with a tilde, since the actual image count varies by settings and Midjourney's official docs do not publish it as an image number — the article's own body text acknowledges this ambiguity but the tool card contradicts that caution.",
+          "severity": "medium",
+          "section_id": "s1",
+          "original_text": "free trial was removed in 2023",
+          "issue": "The body text in s1 says the Midjourney free trial was removed 'in 2023' while s2 says 'in early 2023.' The sourced independent review (eesel.ai) specifies March 2023. The inconsistency between sections is a minor factual coherence problem but could cause confusion.",
           "supporting_source_url": "https://www.eesel.ai/blog/midjourney-pricing"
         },
         {
           "severity": "medium",
           "section_id": "s2",
-          "original_text": "Free-tier outputs are not licensed for commercial use",
-          "issue": "The article states this as a clean fact for Adobe Firefly's free tier, but the sourced independent review (ToolRadar) describes free-tier output as 'watermarked and low-resolution' — a claim about watermarking that does not appear in Adobe's official documentation sources cited, and which the article does not include or disclaim. If the watermark claim is accurate it is material; if it is not, the independent source may be wrong.",
-          "supporting_source_url": "https://toolradar.com/tools/adobe-firefly/pricing"
-        },
-        {
-          "severity": "medium",
-          "section_id": "s1",
-          "original_text": "Budget $10 to $30 per month if you plan to use any of these tools seriously",
-          "issue": "This range is presented as a confident editorial recommendation, but Midjourney's Mega plan ($120/month) and Adobe's higher-tier plans exceed this range significantly. The framing could mislead readers who end up needing more than a Basic or Standard plan into thinking $30 covers serious professional use.",
+          "original_text": "Firefly is trained on licensed content and public domain content where copyright has expired",
+          "issue": "The article presents Adobe's training data claim (licensed content + public domain) as a stated fact from Adobe's documentation, which is accurate, but then in the same section calls it 'the most explicitly documented training data policy of the three tools.' This comparative superlative is an editorial judgment not supported by any cited source that actually audits or compares all three tools' documentation depth — it may be reasonable but is an unsupported conclusion.",
           "supporting_source_url": ""
         },
         {
           "severity": "medium",
           "section_id": "s2",
-          "original_text": "currently powered by GPT-4o native image generation",
-          "issue": "This claim is sourced entirely from an independent review (AI Tool Radar), not from official OpenAI documentation. The sources list does not include any official OpenAI pricing or product page confirming the GPT-4o native image generation replacement, making this a third-party claim presented as confirmed fact.",
-          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
+          "original_text": "No public API as of mid-2026",
+          "issue": "The claim that Midjourney has no public API 'as of mid-2026' is sourced to a Flowith Blog post from an independent review accessed in July 2026, but that post references the state of affairs as of March 2026. There is no official Midjourney source confirming the continued absence of a public API through mid-2026, making the date precision unreliable.",
+          "supporting_source_url": "https://flowith.io/blog/midjourney-web-v7-vs-discord/"
         },
         {
           "severity": "medium",
           "section_id": "s2",
-          "original_text": "As of August 2025, the Adobe Creative Cloud 'All Apps Plan' was discontinued",
-          "issue": "This structural claim about Creative Cloud plan changes comes solely from an independent review (ToolColumn), not from Adobe's official documentation. The article references it indirectly in the conclusion ('Adobe has restructured its Creative Cloud plans'), but the underlying sourcing for a significant product discontinuation is only a third-party review.",
-          "supporting_source_url": "https://www.toolcolumn.com/pricing/adobe-firefly-pricing"
+          "original_text": "Standard generations are unlimited on paid plans; credits are spent on premium features",
+          "issue": "The article's body text describes 'standard generations' as unlimited on paid plans based on an independent source (ToolRadar) and the Adobe FAQ. However, the ToolRadar source specifies this applies to 'Creative Cloud Pro, Firefly, or credits plan' — the official Adobe FAQ also scopes this specifically. The article's phrasing 'unlimited on paid plans' is potentially too broad if lower-tier or legacy paid plans do not qualify, which the restructuring note elsewhere in the article suggests may be the case.",
+          "supporting_source_url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html"
         },
         {
           "severity": "medium",
           "section_id": "conclusion",
-          "original_text": "If you are an existing Creative Cloud subscriber, verify what your current plan includes before assuming Firefly access is bundled",
-          "issue": "This advice implies Firefly may not be bundled with Creative Cloud subscriptions, but Adobe's official Generative Credits FAQ confirms that Creative Cloud subscription plans include a monthly allocation of generative credits. The caution is not wrong given plan restructuring, but it could cause unnecessary confusion without clarifying that most current CC plans do include some Firefly access.",
-          "supporting_source_url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+          "original_text": "most current Creative Cloud plans include a monthly allocation of generative credits",
+          "issue": "The conclusion states 'most current Creative Cloud plans include a monthly allocation of generative credits,' but the sourced ToolColumn review indicates the 'All Apps Plan' was discontinued in August 2025, replaced by Creative Cloud Pro and Standard. It is not confirmed that 'most' current plans include credits — this may be imprecise given the restructuring, and no official Adobe source in the list definitively maps all current CC plan tiers to credit allocations.",
+          "supporting_source_url": "https://www.toolcolumn.com/pricing/adobe-firefly-pricing"
         },
         {
-          "severity": "low",
-          "section_id": "s2",
-          "original_text": "Midjourney is consistently cited by working illustrators as the stronger tool",
-          "issue": "The phrase 'consistently cited by working illustrators' implies a body of practitioner testimony, but the methodology disclosure acknowledges this is editorial synthesis from sourced materials, not original research or direct citation. The framing overstates the evidential basis.",
+          "severity": "medium",
+          "section_id": "s6",
+          "original_text": "Firefly's standalone web interface uses a prompt-based approach rather than a conversational one",
+          "issue": "The article contrasts Firefly's interface with ChatGPT's conversational iteration, but no source cited in the methodology specifically documents Firefly's interface interaction model in this way. This is an editorial characterization without a cited supporting source, and Firefly's integration into multiple CC apps with 'varying interaction models' (as the article itself acknowledges) makes the generalization potentially misleading.",
           "supporting_source_url": ""
         },
         {
           "severity": "low",
           "section_id": "s5",
-          "original_text": "for screen use, the resolution is generally sufficient, but verify for your particular case",
-          "issue": "This is a vague hedge that provides no actionable information. The guide elsewhere commits to softening or omitting figures when uncertain, but 'generally sufficient' without any qualifier (e.g., typical web screen dimensions) is too imprecise to be editorially useful and may create false confidence for users generating images for high-DPI displays.",
-          "supporting_source_url": ""
+          "original_text": "For standard web use at 72 to 96 DPI, free-tier outputs are typically adequate",
+          "issue": "The claim that free-tier outputs are 'typically adequate' for 72–96 DPI web use is an unsupported editorial assertion. The ToolRadar source describes free-tier Firefly output as 'low-resolution,' which could contradict this claim depending on the specific use case and platform. No source confirms this adequacy claim across all three tools.",
+          "supporting_source_url": "https://toolradar.com/tools/adobe-firefly/pricing"
         },
         {
           "severity": "low",
-          "section_id": "s6",
-          "original_text": "Firefly uses a prompt-based interface rather than a conversational one",
-          "issue": "This characterization of Firefly's interface as non-conversational is not directly sourced to official Adobe documentation, and Adobe has been expanding Firefly's integration into Creative Cloud apps with more interactive features. This could be inaccurate or oversimplified depending on the specific Firefly surface being used.",
+          "section_id": "s2",
+          "original_text": "Adobe does not train on subscribers' personal content",
+          "issue": "The article conflates two distinct Adobe claims: (1) Firefly is trained on licensed/public domain content, and (2) Adobe does not train on subscribers' personal content. These are separate policies addressing different concerns, but the article presents them together in a way that may imply the second claim covers what the first does not, potentially overstating the scope of copyright protection for users.",
           "supporting_source_url": "https://www.adobe.com/products/firefly.html"
         },
         {
           "severity": "low",
           "section_id": "s2",
-          "original_text": "ChatGPT Plus ($20/month) raises limits and adds priority access",
-          "issue": "The $20/month ChatGPT Plus price is not verified against official OpenAI documentation in the sources list — it appears in the AI Tool Radar independent review. OpenAI has historically adjusted ChatGPT Plus pricing and plan structures, and the sources do not include an official OpenAI pricing page.",
-          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
+          "original_text": "supplemented by independent reviews from eesel.ai, ToolRadar, ToolColumn, Flowith Blog, AI Tool Radar, and Terms.Law",
+          "issue": "The methodology disclosure names 'eesel.ai' and 'AI Tool Radar' as sources. These are relatively low-authority independent review sites whose pricing and capability claims may not be reliably maintained, and the article leans on them for specific figures (e.g., Midjourney plan prices, DALL-E deprecation timing) where official sources are either absent or ambiguous. The disclosure is honest about this but the reliance is still a quality concern.",
+          "supporting_source_url": ""
         }
       ],
-      "checked_at": "2026-07-17T16:32:58.151Z",
+      "checked_at": "2026-07-17T16:39:04.377Z",
       "revised": true
     },
     "warnings": [
-      "s2: The source (AI Tool Radar) states DALL-E 3 deprecation was 'announced for May 2026' in the API, not confirmed as completed. The article presents this as a settled fact ('is deprecated') when the source only cites an announced deprecation date, and this is an independent review, not official OpenAI documentation.",
-      "s2: The Midjourney 'no public API' claim is sourced from a Flowith Blog independent review referencing March 2026 conditions. No official Midjourney documentation in the sources confirms the absence of a public API as of mid-2026; this could be outdated or inaccurate by the article's stated review date of July 2026.",
-      "s2: The '~200 fast generations/month' figure for the Basic plan is derived from an independent review (eesel.ai) translating 200 fast GPU-hours into image counts. The article should not present this as a near-fact with a tilde, since the actual image count varies by settings and Midjourney's official docs do not publish it as an image number — the article's own body text acknowledges this ambiguity but the tool card contradicts that caution."
+      "s2: The '~200 fast generations/month' figure is inaccurate. The Basic plan includes 200 fast GPU hours per month, not 200 generations — the source material itself notes that the exact number of images this translates to varies by settings. Presenting it as '~200 fast generations/month' in the tool card is a misleading simplification that contradicts the article's own more careful language in the body text.",
+      "s2: The source (AI Tool Radar) states DALL-E 3 deprecation from the API was announced for May 2026, not that it was confirmed deprecated 'as of mid-2026.' This is an independent review, not an official OpenAI source, and no official OpenAI documentation is cited to confirm this deprecation actually took effect. Stating it as fact risks being incorrect.",
+      "s2: The article states Adobe Firefly free-tier outputs are not licensed for commercial use, but the cited independent source (ToolRadar) describes them as 'watermarked and low-resolution' and not suitable for commercial use. No official Adobe documentation in the source list explicitly confirms that the free tier lacks commercial licensing rights — only the Terms.Law independent source does. An explicit official Adobe citation is missing for this specific claim."
     ],
     "images": [
       {
