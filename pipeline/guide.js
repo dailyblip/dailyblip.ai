@@ -137,7 +137,15 @@ async function stageResearch(job) {
     role: "write",
     system: RESEARCH_SYSTEM,
     prompt: JSON.stringify({ topic: job.submitted.idea, claims_to_verify: job.brief?.claims_to_verify || [] }),
-    maxTokens: 3000,
+    // Higher than commentary.js's research call (2000 tokens / 6
+    // searches) on purpose \u2014 this asks for a full structured sources
+    // array with several fields per source, tied to potentially many
+    // claims_to_verify, not just "2-4 examples." 10 search rounds can
+    // burn real budget before the model even starts writing the answer;
+    // this needs enough headroom left over to actually finish the JSON
+    // afterward, which the original 3000-token budget didn't reliably
+    // leave (see the "no JSON found" failure this was tuned against).
+    maxTokens: 6000,
     maxSearches: 10,
   });
   job.sources = (result.sources || []).map((s) => ({ ...s, accessed_date: new Date().toISOString().slice(0, 10) }));
