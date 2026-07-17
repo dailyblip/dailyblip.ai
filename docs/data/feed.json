@@ -1,6 +1,6 @@
 {
   "issue": 235,
-  "generated_at": "2026-07-17T20:15:04.987Z",
+  "generated_at": "2026-07-17T23:12:50.102Z",
   "brief": {
     "items": [
       {
@@ -78,8 +78,42 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -2,
+      "move": -1,
       "top": true
+    },
+    {
+      "id": "s_2eed32c959cdf779",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Vertu's $6,880 AI-agent foldable: performance review for executives",
+      "dek": "Vertu's luxury Alphafold pairs high-end materials with an AI agent for workflow automation. A hands-on review tests whether the AI actually delivers on executive productivity claims.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/",
+      "ts": "2026-07-17T22:55:09.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 84,
+      "move": 44
+    },
+    {
+      "id": "s_a49f55bafe0aeb0e",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Always-on AI transcription: the backlash and workarounds",
+      "dek": "AI note-taking apps are fueling ubiquitous meeting recording, sparking pushback. The piece explores how creators and professionals are responding to widespread automated transcription.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/17/the-zoom-hack-that-says-dont-record-me/",
+      "ts": "2026-07-17T21:20:47.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 82,
+      "move": 44
     },
     {
       "id": "s_133497b699bf0fd6",
@@ -95,7 +129,24 @@
       "ts": "2026-07-17T20:09:27.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 102,
+      "heat": 99,
+      "move": 0
+    },
+    {
+      "id": "s_b51b6c107383df8e",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "TikTok testing AI likeness detection tool for creators",
+      "dek": "TikTok is piloting an opt-in tool to detect AI-generated likenesses of creators and enable reporting. The feature mirrors YouTube's similar detection capability, offering creators protection against synthetic impersonation.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool",
+      "ts": "2026-07-17T19:34:30.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 98,
       "move": 58
     },
     {
@@ -112,8 +163,8 @@
       "ts": "2026-07-17T17:45:46.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 90,
-      "move": 54
+      "heat": 87,
+      "move": -4
     },
     {
       "id": "s_4d76675668887bf8",
@@ -129,7 +180,7 @@
       "ts": "2026-07-17T16:10:05.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 98,
+      "heat": 95,
       "move": -1
     },
     {
@@ -146,8 +197,8 @@
       "ts": "2026-07-17T15:57:54.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 90,
-      "move": -2
+      "heat": 87,
+      "move": -4
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -163,8 +214,8 @@
       "ts": "2026-07-17T15:21:17.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 97,
-      "move": -1
+      "heat": 94,
+      "move": -2
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -180,8 +231,8 @@
       "ts": "2026-07-17T11:56:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 76,
-      "move": -6
+      "heat": 73,
+      "move": -3
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -197,8 +248,8 @@
       "ts": "2026-07-17T10:42:08.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 92,
-      "move": -2
+      "heat": 89,
+      "move": -1
     },
     {
       "id": "s_252ccc31ca52ec00",
@@ -215,7 +266,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -3
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -232,7 +283,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -249,7 +300,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -3
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -266,7 +317,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -283,7 +334,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -2
+      "move": 1
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -300,7 +351,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -3
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -317,7 +368,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -334,7 +385,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -351,7 +402,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_79ed56faeda92346",
@@ -368,7 +419,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -385,7 +436,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -402,7 +453,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -419,7 +470,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -436,7 +487,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -453,7 +504,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -470,7 +521,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_3090d72b6869197e",
@@ -487,7 +538,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -504,7 +555,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -521,7 +572,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -538,7 +589,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -555,7 +606,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -573,7 +624,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -590,7 +641,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -607,7 +658,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -624,7 +675,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -659,7 +710,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -676,7 +727,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": -2
+      "move": 1
     },
     {
       "id": "s_d173222f3e599859",
@@ -694,7 +745,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -711,7 +762,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -728,7 +779,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -745,7 +796,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -2
+      "move": 1
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -762,7 +813,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_18de27eea197aabe",
@@ -779,7 +830,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_84777b05d9b25937",
@@ -796,7 +847,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -813,7 +864,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -830,7 +881,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -847,7 +898,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -864,7 +915,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -881,7 +932,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_110aa69c02571475",
@@ -898,7 +949,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -915,7 +966,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_569d5689452ac2df",
@@ -932,7 +983,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -949,7 +1000,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -966,7 +1017,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_b7c7277aa894fd0b",
@@ -983,7 +1034,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_210f6726bf4a719a",
@@ -1000,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 1
+      "move": -3
     },
     {
       "id": "s_7218bca86f1b347e",
@@ -1017,7 +1068,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_2175a7f109e222f7",
@@ -1034,58 +1085,7 @@
       "read": "3 min",
       "also": [],
       "heat": 58,
-      "move": -2
-    },
-    {
-      "id": "s_3e68f8ee554f3c0b",
-      "cat": "tools",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "GPT-5.6 Sol deleting user files without consent, widespread reports",
-      "dek": "Users report OpenAI's latest coding model is unexpectedly deleting files and databases without warning—a problem OpenAI disclosed in June.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openais-new-flagship-model-deletes-files-on-its-own-people-keep-warning/",
-      "ts": "2026-07-14T21:50:11.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 85,
-      "move": -2
-    },
-    {
-      "id": "s_f6d4f1f66693b6a8",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Apple releases iOS 27 public beta with revamped AI-powered Siri",
-      "dek": "Apple's redesigned Siri assistant is now available in public beta ahead of fall launch, marking the first broad test of its AI overhaul against competitors like ChatGPT and Gemini.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/apple-opens-its-new-siri-ai-to-everyone-with-the-ios-27-public-beta/",
-      "ts": "2026-07-14T19:42:27.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -2
-    },
-    {
-      "id": "s_2cc0275fcceef652",
-      "cat": "tools",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "SpaceX's Grok Build AI coding tool was uploading users' entire codebases to cloud storage",
-      "dek": "The CLI tool uploaded complete repositories including secrets and files marked to be ignored before the vulnerability was discovered and shut down.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/965600/spacexai-grok-build-repository-upload",
-      "ts": "2026-07-14T19:25:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 85,
-      "move": -2
+      "move": -3
     }
   ],
   "models": [
@@ -1202,9 +1202,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 12,
-    "published_today": 9,
+    "scanned_last_run": 8,
+    "published_today": 10,
     "sources_live": 14,
-    "slopped_last_run": 10
+    "slopped_last_run": 5
   }
 }
