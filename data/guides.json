@@ -1130,7 +1130,7 @@
   {
     "id": "9278e1a0-43f9-4d5f-9e58-b2b82439f125",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -1142,7 +1142,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:13:39.298Z",
-    "updated_at": "2026-07-17T04:14:11.304Z",
+    "updated_at": "2026-07-17T04:16:04.695Z",
     "brief": {
       "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for commercial or creative work and want to choose a tool without wading through vendor marketing",
       "reader_outcome": "The reader should be able to identify which photorealistic AI image generator fits their specific workflow, budget, and output requirements, and know the concrete tradeoffs before committing to a paid plan or integrating a tool into production",
@@ -1169,6 +1169,235 @@
         "Current availability of inpainting, outpainting, and img2img features across each tool"
       ],
       "research_plan": "Prioritize official pricing pages and changelog/release notes for each tool to get current specs. For capability comparisons, look for structured community benchmark threads on Reddit (r/StableDiffusion, r/midjourney) and independent creator YouTube channels that show direct prompt-matched outputs. Check each tool's terms of service for commercial use and likeness policies directly. Avoid vendor blog posts as primary sources for capability claims. Look for any third-party prompt benchmark projects (e.g., published comparisons on Hugging Face or creator-focused publications like Ars Technica or The Verge) that used consistent test prompts across tools."
-    }
+    },
+    "sources": [
+      {
+        "title": "Midjourney Pricing Plans in 2026: Official Cost vs Per-Request API Pricing",
+        "publisher": "Evolink AI",
+        "url": "https://evolink.ai/blog/midjourney-api-pricing-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney offers four official subscription tiers: Basic ($10/mo), Standard ($30/mo), Pro ($60/mo), and Mega ($120/mo)",
+          "Annual billing lowers those effective monthly prices to $8, $24, $48, and $96/month respectively",
+          "Basic tier is limited to 3.3 fast GPU hours and no Relax Mode; Standard adds unlimited Relax Mode image generation",
+          "Pro plan adds Stealth Mode (private generations) and higher concurrency; Mega doubles fast GPU hours to 60/month",
+          "No free trial has been available since early 2023",
+          "Midjourney does not offer an official public API; access is via Discord bot and web UI"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Midjourney remains one of the most powerful AI image generation tools, but it still doesn't have an official API (7 Best Midjourney APIs for Image Generation in 2026)",
+        "publisher": "Apiframe",
+        "url": "https://apiframe.ai/blog/best-midjourney-apis",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "As of July 2026, Midjourney still does not have an official API",
+          "Midjourney has floated the idea of an Enterprise API through a public survey, but nothing broadly available has shipped",
+          "All 'Midjourney APIs' are unofficial solutions that carry account ban risk per Midjourney's ToS",
+          "Midjourney V8.1 became the default model on June 10, 2026"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Pricing 2026: How Much Does Adobe Firefly Cost?",
+        "publisher": "SaasCRMReview",
+        "url": "https://saascrmreview.com/adobe-firefly-pricing/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly standalone plans: Standard ($9.99/mo), Pro ($19.99/mo), and Premium ($199.99/mo)",
+          "Adobe Creative Cloud Pro includes 4,000 premium credits per month and unlimited standard generations",
+          "For non-beta features, Adobe Firefly outputs can be used in commercial projects",
+          "Adobe trains Firefly on licensed content and Adobe Stock; IP indemnification depends on specific Adobe agreement and plan",
+          "Beta feature outputs may be used commercially unless explicitly stated otherwise, but are generally not indemnified",
+          "Some pricing information online predates Adobe's mid-2025 plan restructuring when legacy plans were retired — always verify against the official Firefly plans page"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Creative Cloud: Licensing & Pricing Increases [2025-07 / 2025-09]",
+        "publisher": "Schneider IT Management",
+        "url": "https://www.schneider.im/adobe-creative-cloud-important-licensing-changes/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Effective September 1, 2025, Creative Cloud for Teams was rebranded to Creative Cloud Pro for Teams with an ~11% price increase",
+          "Creative Cloud Pro for Teams users now receive 4,000 monthly generative credits per user (up from 1,000)",
+          "Creative Cloud Pro for Teams users now benefit from unlimited standard Firefly generations",
+          "Adobe Firefly is trained on licensed content, making outputs commercially safe per Adobe's company claim"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "DALL-E API Pricing 2026: $0.04-$0.12/Image vs Flux $0.03",
+        "publisher": "TokenMix Blog",
+        "url": "https://tokenmix.ai/blog/dall-e-api-pricing",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "DALL-E 3 API pricing ranged from $0.04–$0.12 per image depending on resolution (1024x1024 Standard $0.04, 1024x1024 HD $0.08, portrait/landscape Standard $0.08, HD $0.12)",
+          "DALL-E 3 was removed from the OpenAI API on May 12, 2026; current OpenAI image API uses the GPT Image model family",
+          "DALL-E 3 was capped at 1792x1024 maximum resolution; GPT Image 2 supports up to 2K resolution",
+          "DALL-E 3 did not natively support editing/inpainting; GPT Image 1.5 and newer models do",
+          "OpenAI rate-limits image generation to 7 imgs/min for DALL-E 3"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "OpenAI GPT Image API Pricing Calculator (Jul 2026)",
+        "publisher": "CostGoat",
+        "url": "https://costgoat.com/pricing/openai-images",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "DALL-E 3 and DALL-E 2 were removed from the OpenAI API on May 12, 2026",
+          "Current OpenAI image API flagship is GPT Image 2 at $0.005–$0.211 per image depending on quality and resolution",
+          "All GPT Image models support three resolutions: 1024×1024, 1024×1536, and 1536×1024",
+          "Three quality tiers exist per model: Low, Medium, and High",
+          "New OpenAI API users receive $5 in free credits"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "FLUX API Pricing — Black Forest Labs Official Documentation",
+        "publisher": "Black Forest Labs",
+        "url": "https://docs.bfl.ml/quick_start/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Black Forest Labs uses credit-based pricing: 1 credit = $0.01 USD, with pay-per-image billing",
+          "FLUX.2 uses megapixel-based pricing — cost scales with output resolution",
+          "Pricing is the same for API and Playground access",
+          "Batch requests multiply the base cost by the number of images"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Flux AI 2026: Pro vs Dev vs Schnell — Free Models, Pricing & Prompts",
+        "publisher": "PAM Istanbul",
+        "url": "https://pamistanbul.com/en/pamlab/flux-ai-image-model-guide-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Flux.1 is available in three primary variants: Pro (closed source, ~$0.05/image via Replicate and fal.ai), Dev (12B params, open-weight, free for non-commercial research, requires 24GB+ VRAM locally), and Schnell (12B params, Apache 2.0 license for commercial use, generates in 1–4 steps)",
+          "Flux 1.1 Pro Ultra is an updated version of Pro supporting 2K+ resolution and improved composition",
+          "Flux Dev is free to download for research and non-commercial projects; runs on a local GPU with 24GB+ VRAM",
+          "Flux Schnell is commercially licensed under Apache 2.0",
+          "Flux Pro is the primary choice for commercial production and is API-only (closed source)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Ideogram Pricing 2026: Every plan, every credit cost, every gotcha",
+        "publisher": "eesel AI",
+        "url": "https://www.eesel.ai/blog/ideogram-pricing",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Ideogram offers a free tier with 10 slow credits per week",
+          "Paid plans start at approximately $15/month (Plus, billed annually) with 1,000 priority credits, up to $42/month (Pro) with 3,500 credits",
+          "Free-tier images are public by default; private generation requires Plus or higher",
+          "Ideogram's API is billed separately from web subscriptions at approximately $0.025–$0.10 per image",
+          "Subscription priority credits expire monthly with no rollover; top-up credits carry over",
+          "Ideogram is particularly known for superior text rendering in images"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Ideogram Subscription Plans (Official Pricing Page)",
+        "publisher": "Ideogram",
+        "url": "https://ideogram.ai/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Ideogram's free tier includes 10 free credits per week (official confirmation)",
+          "Ideogram does not offer discounts or free trials for subscription plans",
+          "Unused subscription priority credits expire at end of each billing cycle",
+          "Top-up credits carry over if unused",
+          "Private generation is available for Ideogram Plus and Pro subscribers only"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Stable Diffusion Local Install (2026): VRAM, Setup, Models",
+        "publisher": "Local AI Master",
+        "url": "https://localaimaster.com/blog/stable-diffusion-local-install-guide",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Stable Diffusion models can be run locally at no recurring cost once hardware is in place",
+          "SD 1.5 runs on as little as 4GB VRAM; SDXL requires at least 8GB (12GB is the comfortable floor); SD 3.5 Large requires ~11GB even with FP8 optimization",
+          "SDXL is the best all-round choice in 2026 for its large LoRA and ControlNet ecosystem",
+          "Front-ends including Forge, Fooocus, and ComfyUI are available for running models locally",
+          "Stable Diffusion natively supports inpainting, outpainting (canvas extension), and img2img"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "OpenAI Usage Policies (Official)",
+        "publisher": "OpenAI",
+        "url": "https://openai.com/policies/usage-policies/",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "OpenAI explicitly prohibits use of its services for 'use of someone's likeness, including their photorealistic image or voice, without their consent in ways that could confuse authenticity'",
+          "This restriction applies to human likeness generation across ChatGPT and API products including image generation"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Generative AI User Guidelines (Official)",
+        "publisher": "Adobe",
+        "url": "https://www.adobe.com/legal/licenses-terms/adobe-gen-ai-user-guidelines.html",
+        "source_type": "platform policy",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe's official Generative AI User Guidelines set terms of use for all Firefly outputs",
+          "Adobe prohibits use of Firefly to simulate a human-like emotional relationship with a user or to make consequential decisions affecting employment, housing, or justice"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Copyright and AI-Generated Images: What You Need to Know",
+        "publisher": "VLP Law Group LLP",
+        "url": "https://www.vlplawgroup.com/blog/2025/06/02/copyright-and-ai-generated-images-what-you-need-to-know-a-blog-post-by-michael-whitener/",
+        "source_type": "legal",
+        "is_primary": true,
+        "claims_supported": [
+          "If an AI-generated image resembles a real person (especially a celebrity), publication may violate their right of publicity — their right to control commercial uses of their likeness",
+          "Many AI image generation platforms have terms of service placing significant restrictions on how outputs can be used commercially",
+          "The US Copyright Office has consistently denied registration to works lacking 'human creative input,' including images generated entirely by AI in response to a user prompt",
+          "Human likeness restrictions are a cross-platform legal concern, not merely a platform policy issue"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Specific current pricing for Stability AI's DreamStudio or Stability AI API hosted platform as of July 2026 — Stability AI has undergone significant restructuring and the DreamStudio product status/pricing could not be confirmed from authoritative sources within this search budget. Writer should verify directly at stability.ai before publication.",
+      "Exact current Midjourney subscription GPU-hour limits stated as precise image counts — Midjourney bills by GPU time, not discrete image counts, making per-image equivalents estimates that vary by model version and settings. These should be framed as approximations.",
+      "Whether Midjourney v6+ specifically (vs v7/v8) has distinct pricing or features, since Midjourney V8.1 is now the default (June 2026) and the guide brief references v6+ — the model version landscape has shifted and version-specific claims should be softened or updated.",
+      "Exact maximum output resolutions for each tool side-by-side as a verified table — while individual figures exist (e.g., DALL-E 3 capped at 1792x1024, GPT Image 2 up to 2K, Flux 1.1 Pro Ultra at 2K+, Midjourney V8.1 at HD 2K), a comprehensive authoritative comparison table across all six tools could not be assembled from official documentation alone within this search budget.",
+      "Whether Midjourney currently restricts generating specific human likenesses for commercial use in its official ToS — Midjourney's specific ToS language on human likeness was not retrieved from the official Midjourney documentation. The writer should verify at docs.midjourney.com.",
+      "Ideogram's explicit commercial use terms by tier — the official Ideogram pricing FAQ confirms free tier images are public and Plus/Pro unlock privacy, but the exact commercial use language (e.g., whether all tiers permit commercial use of outputs) was not confirmed from Ideogram's official ToS. Multiple third-party sources conflict on whether commercial use requires a paid plan.",
+      "Inpainting and outpainting availability on Ideogram via the official web UI — third-party sources mention an 'editing mode with masks' in the API, but the full feature set accessible via the web subscription vs. API could not be confirmed from official Ideogram documentation.",
+      "Current Flux.1 Pro pricing via Replicate and fal.ai as of July 2026 — the ~$0.05/image figure cited by independent sources may have changed; always verify directly on Replicate.com and fal.ai before publication."
+    ]
   }
 ]
