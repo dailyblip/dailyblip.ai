@@ -1758,7 +1758,7 @@
   {
     "id": "13e7d100-e80e-4198-8ee2-752c198f91c8",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Quick start guide for a traditional music incorporating AI into their music",
       "article_type": "Practical guide",
@@ -1770,6 +1770,35 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:08:24.554Z",
-    "updated_at": "2026-07-17T16:08:24.554Z"
+    "updated_at": "2026-07-17T16:09:03.899Z",
+    "brief": {
+      "target_reader": "Traditional musicians (folk, classical, jazz, world music, etc.) who have little or no prior experience with AI tools but are curious about incorporating AI into their creative workflow without losing the authenticity or cultural integrity of their practice",
+      "reader_outcome": "The reader should be able to identify which AI tools are relevant to their specific workflow, set up at least one practical AI-assisted process (transcription, arrangement, practice, or composition aid), and understand the tradeoffs of each approach before committing time or money",
+      "structure_plan": [
+        "What This Guide Is (and Is Not): Scope and honest expectations",
+        "Where AI Actually Fits in a Traditional Musician's Workflow",
+        "Step 1: Transcription and Notation. Tools that convert audio recordings to sheet music or tablature",
+        "Step 2: Practice and Ear Training. AI tools for feedback, tuning analysis, and learning by ear",
+        "Step 3: Arrangement and Orchestration Assistance. Using AI to explore harmonizations or instrumentation without replacing your musical judgment",
+        "Step 4: Audio Production and Mixing. AI-assisted noise reduction, stem separation, and mastering for traditional recordings",
+        "Step 5: Finding and Organizing Reference Material. AI search and cataloging tools for traditional repertoire",
+        "Tradeoffs and Honest Limitations: Where AI falls short for traditional music specifically",
+        "Suggested Starter Workflows by Instrument or Genre",
+        "Tools at a Glance: Comparison table with use case, cost, and platform"
+      ],
+      "claims_to_verify": [
+        "Current pricing and free tier limits for Transcribe+ (or similar audio-to-notation tools)",
+        "Current pricing and accuracy claims for Sibelius AudioScore, Notion AI, or AnthemScore for polyphonic traditional instruments",
+        "Whether iReal Pro or similar tools have AI-assisted features or remain rule-based",
+        "Capabilities and current pricing of Moises, Lalal.ai, or similar stem separation tools",
+        "Whether tools like Google Magenta or similar open-source options support non-Western scales and microtonal tuning",
+        "Current status and pricing of Musecore's AI transcription features",
+        "Whether Adobe Podcast Enhance or similar tools handle acoustic folk/traditional instruments well or are optimized for speech",
+        "Whether any major AI composition tools (Suno, Udio, etc.) can be prompted to stay within a traditional style without generating plagiarism or stylistic distortion",
+        "Data privacy and ownership policies for audio uploaded to cloud-based AI tools, particularly for unpublished traditional recordings",
+        "Whether any AI ear training platforms (Tonara, Soundslice, etc.) offer feedback for non-Western or modal tuning systems"
+      ],
+      "research_plan": "Prioritize hands-on user reviews and forum discussions from communities of traditional musicians (Celtic, Appalachian, Indian classical, jazz, etc.) on Reddit, Slashdot Music, and specialist forums over vendor marketing material. Check AudioMelody, Sound on Sound, and similar practitioner-oriented publications for tool comparisons. For transcription accuracy, look for independent benchmark comparisons of audio-to-notation tools on polyphonic and ornamented sources, not just piano. For cultural integrity concerns, look for commentary from ethnomusicologists or traditional music educators who have written about AI use. Verify all pricing and feature claims directly from vendor sites at time of research and note the date, as these change frequently."
+    }
   }
 ]
