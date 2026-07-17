@@ -622,7 +622,7 @@
   {
     "id": "5f971072-9942-49e9-96e9-b1582364e33b",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Musicians quick start guide to AI",
       "article_type": "Practical guide",
@@ -634,6 +634,38 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:13:47.478Z",
-    "updated_at": "2026-07-17T15:13:47.479Z"
+    "updated_at": "2026-07-17T15:14:26.422Z",
+    "brief": {
+      "target_reader": "Independent musicians and producers who are curious about AI tools but have little or no hands-on experience with them. Includes singer-songwriters, beatmakers, bedroom producers, and band members working without a label or large budget. Skeptical of hype, time-constrained, and primarily interested in tools that fit into real music-making workflows.",
+      "reader_outcome": "The reader should be able to identify which AI music tools are relevant to their specific workflow (composition, lyrics, vocals, mixing, mastering, sound design, or distribution), set up and run at least one tool in a practical session, and evaluate tradeoffs between free and paid options before committing time or money.",
+      "structure_plan": [
+        "What AI Actually Does in Music Production (and What It Still Can't Do)",
+        "Step 1: Identify Where AI Fits Your Workflow",
+        "Step 2: AI for Composition and Melody Generation",
+        "Step 3: AI for Lyrics and Songwriting Assistance",
+        "Step 4: AI for Vocals (Synthesis, Harmony, and Cloning)",
+        "Step 5: AI for Mixing and Mastering",
+        "Step 6: AI for Sound Design and Sample Creation",
+        "Step 7: AI for Release, Promotion, and Admin",
+        "Evaluating Any AI Music Tool: A Practical Checklist",
+        "Legal and Ethical Considerations Musicians Need to Know Now",
+        "Recommended Starting Stack by Use Case"
+      ],
+      "claims_to_verify": [
+        "Current pricing and free tier limits for Suno, Udio, and similar generative music platforms",
+        "Current pricing and capabilities of iZotope Ozone for AI mastering",
+        "Whether LANDR's AI mastering free tier still exists and what its export restrictions are",
+        "Pricing and feature scope of Melodyne's AI-assisted pitch editing versus manual mode",
+        "Whether ElevenLabs and similar voice synthesis platforms allow music/vocal use under their current terms of service",
+        "Legal status of AI voice cloning of real artists under current US and EU law or platform policy",
+        "Whether Suno and Udio allow commercial use of generated tracks under their current license terms",
+        "Training data disclosure status for major AI music tools (Suno, Udio, Adobe Project Music GenAI Control)",
+        "Whether Adobe's generative audio tools are commercially available or still in beta",
+        "Current capabilities and pricing of Splice AI tools for sample generation",
+        "Whether Meta's MusicGen or other open-source models are practically usable without coding knowledge",
+        "Distrokid, TuneCore, or similar distributor policies on distributing AI-generated music"
+      ],
+      "research_plan": "Prioritize official pricing and terms-of-service pages for each tool over third-party summaries, which go stale quickly. Seek out musician forums (Reddit r/WeAreTheMusicMakers, Gearslutz/Gearspace, Facebook producer groups) for real user reports on output quality and workflow friction rather than relying on company demos. For legal claims, cite primary sources: RIAA statements, US Copyright Office rulings or guidance documents, and EU AI Act text where relevant. For open-source tools, check GitHub repo activity and documentation dates to confirm whether projects are actively maintained. Avoid tool comparison articles from sites with affiliate relationships unless the methodology is disclosed and reproducible."
+    }
   }
 ]
