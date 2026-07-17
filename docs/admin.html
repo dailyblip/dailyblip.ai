@@ -1075,7 +1075,7 @@ function openGuide(id){
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:10px">
           ${g.images.map(img => `
             <div>
-              <img src="${esc(img.file)}" style="width:100%;border-radius:6px;border:1px solid var(--line-2)" alt="${esc(img.alt_text)}">
+              <img src="/guides/${esc(img.file)}" style="width:100%;border-radius:6px;border:1px solid var(--line-2)" alt="${esc(img.alt_text)}">
               <div class="tip" style="margin-top:4px">${esc(img.placement)}</div>
             </div>`).join("")}
         </div>
