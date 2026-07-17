@@ -1643,5 +1643,22 @@
       "message": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cd6zvwitf7pxbjwi1ESHc\"}",
       "at": "2026-07-17T04:29:09.041Z"
     }
+  },
+  {
+    "id": "8e2b3d88-4d73-488d-a4da-66608be51b3d",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top 5 tools for image generation",
+      "article_type": "Practical guide",
+      "target_audience": "",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T04:35:59.370Z",
+    "updated_at": "2026-07-17T04:35:59.370Z"
   }
 ]
