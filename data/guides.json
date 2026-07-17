@@ -235,8 +235,8 @@
   },
   {
     "id": "cdbf0967-5715-4808-8736-ce48eac05dbf",
-    "status": "queued",
-    "stage": "Generating images",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Practical guide",
@@ -248,7 +248,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:32:11.448Z",
-    "updated_at": "2026-07-17T03:40:09.542Z",
+    "updated_at": "2026-07-17T03:40:14.729Z",
     "brief": {
       "target_reader": "Independent content creators (social media, YouTube, blogs, e-commerce) who need photorealistic AI-generated images for professional use and want to evaluate tools critically before spending time or money",
       "reader_outcome": "Select the right photorealistic image generator for their specific workflow, budget, and output requirements, and know how to prompt and configure it for maximum realism",
@@ -726,6 +726,11 @@
     "warnings": [
       "s2: The source notes that Black Forest Labs also operates newer models including Flux Kontext via bfl.ai. Describing Flux as having only three variants may be outdated or incomplete as of July 2026 and could mislead readers evaluating current Flux offerings.",
       "s2: This technically specific claim reproduces a minor version number (3.10.6) as a hard requirement without noting it should be verified against the current repository. Python compatibility for AUTOMATIC1111 has been a moving target and may have changed by July 2026. Presenting a specific minor version without a verification caveat could cause incorrect installation guidance."
-    ]
+    ],
+    "error": {
+      "stage": "images",
+      "message": "askJSON: unparseable JSON for prompt starting: {\"slots\":[{\"id\":\"img1\",\"slot\":\"wide hero image, 16:9\"},{\"id\":\"img2\",\"slot\":\"workflow or explanatory section image, 4:3\"}",
+      "at": "2026-07-17T03:40:14.729Z"
+    }
   }
 ]
