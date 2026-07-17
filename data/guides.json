@@ -1646,8 +1646,8 @@
   },
   {
     "id": "8e2b3d88-4d73-488d-a4da-66608be51b3d",
-    "status": "queued",
-    "stage": "Fact-checking",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Top 5 tools for image generation",
       "article_type": "Practical guide",
@@ -1659,7 +1659,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:35:59.370Z",
-    "updated_at": "2026-07-17T04:40:36.202Z",
+    "updated_at": "2026-07-17T04:48:07.160Z",
     "brief": {
       "target_reader": "Independent creators (illustrators, designers, filmmakers, musicians needing album art, writers needing visual assets) who are evaluating image generation tools for real production use, not just experimentation",
       "reader_outcome": "The reader should be able to identify which of the five tools fits their specific workflow, budget, and output requirements, and know the concrete steps to get started with their chosen tool",
@@ -2098,6 +2098,112 @@
       "conclusion": "The useful frame for choosing an image generation tool is not which one produces the most impressive demo image. It is: which one fits into your actual workflow, at your actual volume, with rights you can actually use, at a cost that makes sense per deliverable.\n\nIf you are starting from scratch and want to evaluate multiple tools before committing: Ideogram's free tier costs nothing and gives you a real sense of what it can do. Stable Diffusion's software is free if you have a compatible GPU. OpenAI gives new API users $5 in free credits. That covers meaningful testing across three of the five tools in this guide before you spend anything.\n\nPricing and policies in this space move frequently. The source links in this guide point to official documentation and independent analyses with specific access dates. Recheck anything price-sensitive before making a purchasing or workflow commitment.",
       "methodology_disclosure": "This guide was synthesized from official product documentation, terms of service, and pricing pages for each tool (accessed July 2026), supplemented by independent technical guides and pricing analyses from third-party sources including Terms.Law, eesel AI, Local AI Master, Articsledge, and ToolJunction. No hands-on testing was conducted by dailyblip. Claims about output quality characteristics (e.g., Ideogram text accuracy, Midjourney stylistic strengths) are drawn from independent third-party reviews and are identified as editorial observations or attributed to those sources, not presented as dailyblip test findings. Pricing figures that could not be verified against official sources as of the access dates listed are identified as requiring independent verification. One significant platform change discovered during research: DALL-E 3 was deprecated from the OpenAI API in May 2026 and the article has been updated accordingly; references to the ChatGPT interface model version were softened due to inability to confirm exact model surfacing as of July 2026.",
       "last_reviewed_date": "July 17, 2026"
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s6",
+          "original_text": "independent reviewers describe it as achieving 90 to 95 percent text accuracy within images, a capability no other major model matches consistently at this tier.",
+          "issue": "The 90-95% text accuracy figure comes from a single source (ToolJunction), not multiple independent reviewers as implied by the plural. It is an editorial characterization in a third-party review, not a result of a documented reproducible benchmark. Presenting it as a specific percentage without a named methodology overstates its precision.",
+          "recommended_replacement": "One independent review (ToolJunction, June 2026) describes Ideogram as achieving 90 to 95 percent text accuracy within images. No other major model in this comparison is described as matching it consistently for text rendering, though this figure reflects a single editorial review rather than a standardized benchmark.",
+          "supporting_source_url": "https://www.tooljunction.io/ai-tools/ideogram"
+        },
+        {
+          "severity": "high",
+          "section_id": "s6",
+          "original_text": "Ideogram 4.0 also supports character reference for brand mascot consistency across generations.",
+          "issue": "No listed source attributes character reference to a specific 'Ideogram 4.0' version. The eesel AI source mentions character reference as a general Ideogram feature. The version number '4.0' is unsupported by any cited source and appears to be an invented or unverified specificity.",
+          "recommended_replacement": "Ideogram also supports character reference for brand mascot consistency across generations.",
+          "supporting_source_url": "https://www.eesel.ai/blog/ideogram-pricing"
+        },
+        {
+          "severity": "high",
+          "section_id": "s7",
+          "original_text": "Limited (25 credits/month on some plans)",
+          "issue": "The comparison table places this under a 'Free Tier' column for Adobe Firefly. Adobe Firefly has no standalone free tier. The 25 monthly generative credits are part of paid Creative Cloud subscriptions. Describing this as a free tier is misleading.",
+          "recommended_replacement": "No standalone free tier. Paid CC subscriptions include monthly credits (as low as 25/month on single-app and Photography plans as of June 2025).",
+          "supporting_source_url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html"
+        },
+        {
+          "severity": "high",
+          "section_id": "s5",
+          "original_text": "DALL-E 3 was removed from the OpenAI API on May 12, 2026.",
+          "issue": "This specific date is sourced solely from CostGoat, an independent pricing tracker, not from official OpenAI documentation. No official OpenAI source is listed in the sources array to confirm this deprecation date. Stating it as confirmed fact overstates verification.",
+          "recommended_replacement": "DALL-E 3 was reported to have been removed from the OpenAI API on May 12, 2026, per independent pricing tracker CostGoat. Verify against OpenAI's official changelog or deprecation notices at platform.openai.com before building workflows that depend on this timeline.",
+          "supporting_source_url": "https://costgoat.com/pricing/openai-images"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s5",
+          "original_text": "Pricing ranges from approximately $0.005 to $0.211 per image depending on model, quality tier (Low/Medium/High), and resolution.",
+          "issue": "The CostGoat source lists GPT Image 1 pricing as up to $0.25/image, which is higher than the $0.211 upper bound stated in the article. The stated range omits the actual maximum across the current product lineup, making costs appear lower than they can be.",
+          "recommended_replacement": "Pricing ranges from approximately $0.005 to $0.25 per image depending on model, quality tier (Low/Medium/High), and resolution. Verify current pricing against openai.com/api/pricing before committing, as these figures are subject to change.",
+          "supporting_source_url": "https://costgoat.com/pricing/openai-images"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s6",
+          "original_text": "Free tier: 10 slow credits per week. All generations are public. No watermark on outputs. Wait times can reach up to 20 minutes per generation on the slow queue.",
+          "issue": "The eesel AI source describes the free tier as 10 slow credits per week, while the ToolJunction source describes it as 10 prompts per day. These are directly contradictory. The article adopts one figure without flagging the conflict. The official Ideogram docs source does not resolve this with a specific number.",
+          "recommended_replacement": "Free tier: credit allotment described as 10 slow credits per week (eesel AI) or 10 prompts per day (ToolJunction); verify the current amount directly at ideogram.ai/pricing before relying on either figure. All generations are public. No watermark on outputs. Wait times can reach up to 20 minutes per generation on the slow queue.",
+          "supporting_source_url": "https://docs.ideogram.ai/plans-and-pricing/available-plans"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s8",
+          "original_text": "Midjourney Basic ($10/month) for stylized non-text visuals. If volume is low, Midjourney Basic's 3.3 fast GPU hours may be enough.",
+          "issue": "The article previously establishes that Basic plan generations are publicly visible to the Midjourney community by default, and that Stealth Mode requires Pro or Mega. Recommending Basic to filmmakers and musicians for unreleased work without this disclosure is a material omission for creators handling confidential projects.",
+          "recommended_replacement": "Midjourney Basic ($10/month) for stylized non-text visuals. If volume is low, Midjourney Basic's 3.3 fast GPU hours may be enough. Note that Basic plan generations are publicly visible to the Midjourney community by default; if your work is confidential or unreleased, you will need Pro or Mega for Stealth Mode.",
+          "supporting_source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s8",
+          "original_text": "the per-image cost after hardware is zero",
+          "issue": "Describing per-image cost as zero after hardware omits ongoing electricity costs, which are non-trivial for GPU-intensive workloads. While small per image, the characterization as zero is technically inaccurate and could mislead creators calculating production costs.",
+          "recommended_replacement": "the marginal per-image cost after hardware is very low (electricity only, with no subscription or per-image fee)",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Under current U.S. Copyright Office guidance, purely AI-generated content cannot be copyrighted. This applies to Stable Diffusion outputs as it does to all AI image tools.",
+          "issue": "The blanket statement that this applies to all Stable Diffusion outputs is overbroad. The copyright status of AI-assisted works where humans make significant creative contributions remains an evolving legal area. The Terms.Law source cites Thaler v. Perlmutter, which specifically concerned fully autonomous AI with no human creative input. Generalizing to all Stable Diffusion outputs conflates fully automated generation with human-directed creative workflows.",
+          "recommended_replacement": "Under current U.S. Copyright Office guidance, purely AI-generated content where there is no meaningful human creative authorship cannot be copyrighted. The extent to which human creative decisions during Stable Diffusion workflows may support copyright claims in specific outputs remains an evolving area of law. Consult a qualified IP attorney if copyright ownership of particular outputs is material to your use case.",
+          "supporting_source_url": "https://terms.law/ai-output-rights/stable-diffusion/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Midjourney operates primarily through Discord (with a web interface also available).",
+          "issue": "As of 2025-2026, Midjourney has substantially developed its web interface at midjourney.com and no longer positions Discord as the primary access method. Describing Discord as primary and the web UI as secondary misrepresents current product emphasis and may deter creators who do not use Discord.",
+          "recommended_replacement": "Midjourney is accessible through both its web interface at midjourney.com and Discord. Both support full generation features; the web interface has been significantly developed and is no longer secondary to the Discord experience.",
+          "supporting_source_url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans"
+        },
+        {
+          "severity": "low",
+          "section_id": "s4",
+          "original_text": "IP indemnification exists for qualifying plans, but the specific terms, caps, and qualifying plan list are not fully detailed in public documentation and require verification against Adobe's enterprise contract terms if indemnification is material to your use case.",
+          "issue": "Adobe has published some indemnification details publicly for Firefly. Stating terms are 'not fully detailed in public documentation' may be overstated and could discourage reliance on legitimate publicly available Adobe commitments. The recommendation to verify is sound but the premise that details are unavailable publicly may not be fully accurate.",
+          "recommended_replacement": "IP indemnification is offered on qualifying Adobe plans; Adobe has published some details publicly, but the specific terms, caps, and qualifying plan list should be verified directly against Adobe's current Firefly terms and any applicable enterprise contract terms if indemnification is material to your use case.",
+          "supporting_source_url": "https://www.adobe.com/products/firefly.html"
+        },
+        {
+          "severity": "low",
+          "section_id": "conclusion",
+          "original_text": "The source links in this guide point to official documentation and independent analyses with specific access dates.",
+          "issue": "This implies the article contains inline source links throughout the body text, but the article as structured does not embed hyperlinks within section body text. Sources are listed separately in a sources array. This claim slightly misrepresents how sources are presented and could mislead readers expecting clickable inline citations.",
+          "recommended_replacement": "Sources for this guide, including official documentation and independent analyses with specific access dates, are listed in the methodology disclosure and sources section.",
+          "supporting_source_url": ""
+        }
+      ],
+      "checked_at": "2026-07-17T04:42:20.204Z"
+    },
+    "error": {
+      "stage": "factcheck",
+      "message": "askJSON: unparseable JSON for prompt starting: {\"article\":{\"title\":\"Top 5 AI Image Generation Tools for Independent Creators (2026)\",\"alternative_titles\":[\"Which AI Im (last response was TRUNCATED — raise maxTokens for this call)",
+      "at": "2026-07-17T04:48:07.160Z"
     }
   }
 ]
