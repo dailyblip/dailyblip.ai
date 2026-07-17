@@ -1624,8 +1624,8 @@
   },
   {
     "id": "131bcd49-dded-4b91-a80f-3b529b0caaa1",
-    "status": "queued",
-    "stage": "Queued",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Top AI tools for video editing",
       "article_type": "Top tools list",
@@ -1637,6 +1637,11 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:28:50.355Z",
-    "updated_at": "2026-07-17T04:28:50.355Z"
+    "updated_at": "2026-07-17T04:29:09.041Z",
+    "error": {
+      "stage": "brief",
+      "message": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cd6zvwitf7pxbjwi1ESHc\"}",
+      "at": "2026-07-17T04:29:09.041Z"
+    }
   }
 ]
