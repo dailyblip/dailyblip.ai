@@ -1881,7 +1881,7 @@
   {
     "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top AI tools for audiobook narration",
       "article_type": "Top tools list",
@@ -1893,6 +1893,26 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T23:42:45.722Z",
-    "updated_at": "2026-07-17T23:42:45.723Z"
+    "updated_at": "2026-07-17T23:43:19.460Z",
+    "brief": {
+      "target_reader": "Writers who have drafted or finished a novel (possibly with AI help) and want to turn it into an audiobook without hiring a human narrator — new to AI voice/text-to-speech tools, probably familiar with the writing side but not the audio production side",
+      "reader_outcome": "Understand which 2-3 AI narration tools are worth trying for audiobook-length projects, know which one to start with for their situation, and have a clear sense of what to watch out for before submitting to Audible or similar platforms",
+      "structure_plan": [
+        "What AI narration actually sounds like now (set honest expectations before recommending anything)",
+        "The tools worth trying for audiobook-length projects (ElevenLabs, Speechify, Replica Studios — pick one clear winner for most readers, note when another is the better call)",
+        "Before you upload to Audible: rights, platform rules, and what you need to check"
+      ],
+      "claims_to_verify": [
+        "Whether Audible/ACX explicitly permits or restricts AI-generated narration as of current policy, and what disclosures if any are required",
+        "Whether ElevenLabs licenses its voice output for commercial use on paid tiers (and whether free tier output is excluded from commercial use)",
+        "Whether ElevenLabs supports long-form audiobook-length generation (not just short clips) and if there is a dedicated audiobook/long-form feature",
+        "Whether Speechify offers a distinct TTS product aimed at content creators vs. personal listening, and whether its output is licensed for commercial audiobook distribution",
+        "Whether Replica Studios is still actively targeting the audiobook/publishing use case or has shifted focus (e.g. toward gaming/film)",
+        "Whether any of these tools offer voice cloning, and whether cloned voices carry different commercial licensing terms",
+        "Availability of free tiers for each tool (yes/no, not exact quota figures)",
+        "Whether any of the tools have ACX-compliant audio export settings (sample rate, noise floor, etc.) built in or require post-processing"
+      ],
+      "research_plan": "Prioritize each tool's official pricing/licensing pages and terms of service over third-party reviews, since commercial rights claims must be accurate. Check ACX (Audible's creator platform) submission requirements and any official ACX/Amazon statements on AI narration policy — this is the most legally sensitive claim in the article and needs a direct source, not inference. For tool capabilities, official feature pages plus recent (within 6 months) hands-on reviews from audio production or self-publishing outlets are the most reliable — avoid SEO roundups that rarely test at audiobook length. Flag any conflicts between sources rather than resolving them silently."
+    }
   }
 ]
