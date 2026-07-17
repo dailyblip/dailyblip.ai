@@ -986,24 +986,41 @@ function fmtDuration(sec){
 }
 
 function renderProgressPanel(g){
-  const curIdx = STAGE_ORDER.indexOf(g.stage);
-  const rows = STAGE_ORDER.map((label, i) => {
-    const cls = curIdx === -1 ? "" : i < curIdx ? "done" : i === curIdx ? "current" : "";
-    return `<li class="${cls}"><span class="dot"></span>${esc(label)}</li>`;
-  }).join("");
-
   const updatedSec = timeAgoSeconds(g.updated_at || g.created_at);
   const stuck = updatedSec * 1000 > STUCK_THRESHOLD_MS;
-  const actionsUrl = `https://github.com/${cfg.repo}/actions/workflows/guide.yml`;
+  // Which workflow is actually running depends on the job's state \u2014
+  // previously this always linked to guide.yml, which is wrong (and
+  // shows an empty/irrelevant page) for a recheck or an approved job
+  // that's actually mid-publish.
+  const workflowFile = g.stage === "Re-checking" ? "guide-recheck.yml" : g.status === "approved" ? "guide-publish.yml" : "guide.yml";
+  const actionsUrl = `https://github.com/${cfg.repo}/actions/workflows/${workflowFile}`;
+
+  const stuckHtml = stuck ? `<div class="panel" style="border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin:10px 0" id="gStuckWarn">
+      <div class="tip" style="color:var(--red)">\u26a0 No update in over ${Math.round(STUCK_THRESHOLD_MS/60000)} minutes \u2014 this may be stuck.</div>
+      <a href="${actionsUrl}" target="_blank" class="btn" style="margin-top:8px">Check the Actions log \u2192</a>
+    </div>` : `<div id="gStuckWarn"></div>`;
+
+  // Re-checking is a single-stage side operation, not a step in the
+  // linear brief->research->draft->...->format pipeline \u2014 showing the
+  // full 7-dot list here would be actively misleading (it'd never
+  // highlight anything, since "Re-checking" isn't one of those 7
+  // labels, which is exactly what made this look frozen).
+  const stageListHtml = g.stage === "Re-checking"
+    ? `<p class="tip" style="margin-top:10px">Re-running fact-check against your edits\u2026</p>`
+    : (() => {
+        const curIdx = STAGE_ORDER.indexOf(g.stage);
+        const rows = STAGE_ORDER.map((label, i) => {
+          const cls = curIdx === -1 ? "" : i < curIdx ? "done" : i === curIdx ? "current" : "";
+          return `<li class="${cls}"><span class="dot"></span>${esc(label)}</li>`;
+        }).join("");
+        return `<ul class="stagelist" style="margin-top:10px">${rows}</ul>`;
+      })();
 
   return `
     <h3>${esc(g.article?.title || g.submitted?.idea?.slice(0,60) || "Generating\u2026")}</h3>
     <p class="tip" style="margin:4px 0 4px">Started ${esc(fmtDuration(timeAgoSeconds(g.created_at)))} ago \u00b7 last updated <span id="gUpdatedAgo">${esc(fmtDuration(updatedSec))}</span> ago</p>
-    ${stuck ? `<div class="panel" style="border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin:10px 0" id="gStuckWarn">
-        <div class="tip" style="color:var(--red)">\u26a0 No update in over ${Math.round(STUCK_THRESHOLD_MS/60000)} minutes \u2014 this may be stuck.</div>
-        <a href="${actionsUrl}" target="_blank" class="btn" style="margin-top:8px">Check the Actions log \u2192</a>
-      </div>` : `<div id="gStuckWarn"></div>`}
-    <ul class="stagelist" style="margin-top:10px">${rows}</ul>
+    ${stuckHtml}
+    ${stageListHtml}
     <div class="save-row" style="display:flex;justify-content:space-between;margin-top:16px">
       <a href="${actionsUrl}" target="_blank" class="btn">View run in GitHub Actions \u2192</a>
       <button class="btn" onclick="closeGuideReview()">\u2190 back to list</button>
@@ -1024,7 +1041,8 @@ function startGuideTicker(id){
     const warnBox = $("#gStuckWarn");
     const isStuckNow = updatedSec * 1000 > STUCK_THRESHOLD_MS;
     if (warnBox && isStuckNow && !warnBox.innerHTML) {
-      const actionsUrl = `https://github.com/${cfg.repo}/actions/workflows/guide.yml`;
+      const workflowFile = g.stage === "Re-checking" ? "guide-recheck.yml" : g.status === "approved" ? "guide-publish.yml" : "guide.yml";
+      const actionsUrl = `https://github.com/${cfg.repo}/actions/workflows/${workflowFile}`;
       warnBox.className = "panel";
       warnBox.style.cssText = "border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin:10px 0";
       warnBox.innerHTML = `<div class="tip" style="color:var(--red)">\u26a0 No update in over ${Math.round(STUCK_THRESHOLD_MS/60000)} minutes \u2014 this may be stuck.</div>
