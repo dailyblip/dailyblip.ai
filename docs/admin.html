@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -167,6 +166,7 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
     <button class="tab" data-tab="brief">Today's brief</button>
     <button class="tab" data-tab="tooldrop">Tool drop</button>
     <button class="tab" data-tab="overrides">Overrides</button>
+    <button class="tab" data-tab="guides">Guides</button>
     <button class="tab" data-tab="new">+ Add story</button>
   </div>
 
@@ -241,6 +241,48 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
     </div>
   </div>
 
+  <div id="paneGuides" style="display:none">
+    <div id="guideList"></div>
+
+    <div class="panel" id="guideNewPanel">
+      <h3>New guide</h3>
+      <p class="tip" style="margin:0 0 12px">Generation takes several minutes — you can leave this tab, progress is saved.</p>
+      <label>Article idea</label>
+      <textarea id="gIdea" rows="3"></textarea>
+      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div><label>Article type</label>
+          <select id="gType">
+            <option>Practical guide</option><option>Top tools list</option><option>Tool comparison</option>
+            <option>Creator workflow</option><option>Monetization guide</option><option>Beginner explainer</option>
+            <option>Rights and platform guide</option>
+          </select></div>
+        <div><label>Target audience</label><input id="gAudience"></div>
+      </div>
+      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div><label>Target length</label>
+          <select id="gLength">
+            <option>Quick</option><option selected>Standard</option><option>Deep dive</option>
+          </select></div>
+        <div><label>Images</label>
+          <select id="gImages"><option value="2">2 images</option><option value="3" selected>3 images</option></select></div>
+      </div>
+      <label style="margin-top:10px">Keywords / tools to mention (optional)</label>
+      <input id="gKeywords">
+      <label style="margin-top:10px">Editorial notes (optional)</label>
+      <textarea id="gNotes" rows="2"></textarea>
+      <div class="row" style="margin-top:12px;align-items:flex-start">
+        <label style="margin:0;display:flex;gap:8px"><input type="checkbox" id="gSynth" checked style="width:auto;margin-top:3px">
+          <span style="font-size:12.5px;color:var(--dim)">Allow synthesis from authoritative sources, independent reviews, and recurring user feedback without claiming dailyblip conducted original testing.</span>
+        </label>
+      </div>
+      <div class="save-row" style="display:flex;justify-content:flex-end;margin-top:16px">
+        <button class="btn primary" id="gGenerate">Generate guide</button>
+      </div>
+    </div>
+
+    <div class="panel" id="guideReviewPanel" style="display:none"></div>
+  </div>
+
   <div id="paneNew" style="display:none">
     <div class="panel">
       <h3>Add a story manually</h3>
@@ -285,6 +327,7 @@ const $$ = s => [...document.querySelectorAll(s)];
 const CFG_KEY = "dailyblip.admin.cfg.v1";
 const OVR_PATH = "data/overrides.json";
 const FEED_PATH = "docs/data/feed.json";
+const GUIDES_PATH = "data/guides.json";
 const cfg = { repo: "", token: "" };
 function loadCfg(){
   try { Object.assign(cfg, JSON.parse(localStorage.getItem(CFG_KEY) || "{}")); } catch {}
@@ -332,6 +375,34 @@ async function gh(path, opts={}){
     },
   });
   return res;
+}
+// Generic helper for anything OUTSIDE the Contents API \u2014 specifically
+// triggering workflow_dispatch runs for guide generation/publishing.
+// Needs a token with `workflow` scope (classic) or Actions:write
+// (fine-grained), which a contents-only token from the original admin
+// setup won't have \u2014 see dispatchWorkflow()'s error handling.
+async function ghApi(urlPath, opts={}){
+  const res = await fetch(`https://api.github.com/repos/${cfg.repo}/${urlPath}`, {
+    ...opts,
+    headers: {
+      "Accept": "application/vnd.github+json",
+      "Authorization": `Bearer ${cfg.token}`,
+      "X-GitHub-Api-Version": "2022-11-28",
+      ...(opts.headers || {}),
+    },
+  });
+  return res;
+}
+async function dispatchWorkflow(workflowFile, inputs){
+  const res = await ghApi(`actions/workflows/${workflowFile}/dispatches`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ ref: "main", inputs }),
+  });
+  if (res.status === 403 || res.status === 404) {
+    throw new Error(`GitHub says ${res.status} \u2014 your token likely lacks "workflow" scope (classic) or Actions: write (fine-grained). Reconnect with an upgraded token.`);
+  }
+  if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.text()).slice(0,300)}`);
 }
 
 function b64enc(str){
@@ -667,7 +738,220 @@ $("#tdClear").addEventListener("click", () => {
   feed.tooldrop = null; markDirty(); renderTooldrop();
 });
 
-/* -------- Overrides tab -------- */
+/* -------- Guides tab -------- */
+// Guides writes commit IMMEDIATELY (not batched into the deferred
+// Publish button the rest of admin.html uses) \u2014 a job record needs to
+// exist in the repo the instant Generate is clicked, since guide.yml
+// reads it by id. This is a deliberate exception to the rest of this
+// file's "edit locally, Publish when ready" pattern.
+let guides = [];
+let guidesSha = null;
+let guidePollTimer = null;
+let activeGuideId = null;
+
+async function loadGuidesFile(){
+  const r = await readFile(GUIDES_PATH);
+  guides = r.data || [];
+  guidesSha = r.sha;
+}
+async function saveGuidesFile(message){
+  guidesSha = await writeFile(GUIDES_PATH, guides, guidesSha, message);
+}
+
+function uid(){
+  return (crypto.randomUUID ? crypto.randomUUID() : `g${Date.now()}${Math.random().toString(36).slice(2)}`);
+}
+
+const TERMINAL_STATUSES = new Set(["ready_for_review", "approved", "published", "failed", "rejected"]);
+
+function guideStatusLabel(g){
+  if (g.status === "failed") return `Failed (${g.error?.stage || "?"})`;
+  if (g.status === "published") return "Published";
+  if (g.status === "approved") return "Approved \u2014 publishing\u2026";
+  if (g.status === "ready_for_review") return "Ready for review";
+  return g.stage || "Queued";
+}
+
+async function renderGuides(){
+  try { await loadGuidesFile(); } catch (e) { toast(e.message, "err", 5000); return; }
+  const list = $("#guideList");
+  if (!guides.length){ list.innerHTML = ""; }
+  else {
+    list.innerHTML = guides.slice().reverse().map(g => `
+      <div class="panel" style="margin-bottom:10px;cursor:pointer" onclick="openGuide('${g.id}')">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:600">${esc(g.article?.title || g.submitted?.idea?.slice(0,70) || "Untitled")}</div>
+            <div class="tip" style="margin-top:2px">${esc(guideStatusLabel(g))} \u00b7 ${esc(ago(g.created_at))} ago</div>
+          </div>
+          ${g.status === "published" ? `<a href="${esc(g.published_url)}" target="_blank" onclick="event.stopPropagation()" class="btn">view live \u2192</a>` : ""}
+        </div>
+      </div>`).join("");
+  }
+  // Resume polling if something's mid-flight and this tab gets reopened.
+  const inFlight = guides.find(g => g.status === "in_progress" || g.status === "queued");
+  if (inFlight) startGuidePolling(inFlight.id);
+}
+
+$("#gGenerate").addEventListener("click", async () => {
+  const idea = $("#gIdea").value.trim();
+  if (!idea) { toast("Enter an article idea first", "err"); return; }
+  const btn = $("#gGenerate"); btn.disabled = true;
+  try {
+    await loadGuidesFile();
+    const id = uid();
+    const job = {
+      id, status: "queued", stage: "Queued",
+      submitted: {
+        idea, article_type: $("#gType").value, target_audience: $("#gAudience").value,
+        target_length: $("#gLength").value, image_count: Number($("#gImages").value),
+        keywords: $("#gKeywords").value, editorial_notes: $("#gNotes").value,
+        allow_synthesis: $("#gSynth").checked,
+      },
+      created_at: new Date().toISOString(), updated_at: new Date().toISOString(),
+    };
+    guides.push(job);
+    await saveGuidesFile(`admin: new guide job ${id}`);
+    await dispatchWorkflow("guide.yml", { job_id: id });
+    toast("Generation started \u2014 this will take several minutes.");
+    $("#gIdea").value = "";
+    await renderGuides();
+    startGuidePolling(id);
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  } finally {
+    btn.disabled = false;
+  }
+});
+
+function startGuidePolling(id){
+  activeGuideId = id;
+  clearInterval(guidePollTimer);
+  guidePollTimer = setInterval(async () => {
+    try {
+      await loadGuidesFile();
+      const g = guides.find(x => x.id === id);
+      if (!g) return;
+      await renderGuides();
+      if (TERMINAL_STATUSES.has(g.status)) {
+        clearInterval(guidePollTimer);
+        if (g.status === "ready_for_review") openGuide(id);
+      }
+    } catch { /* transient network hiccup \u2014 next poll retries, no need to surface every miss */ }
+  }, 10000);
+}
+
+/* ---- Review screen ---- */
+function openGuide(id){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  activeGuideId = id;
+  $("#guideNewPanel").style.display = "none";
+  const panel = $("#guideReviewPanel");
+  panel.style.display = "";
+
+  if (!TERMINAL_STATUSES.has(g.status) || g.status === "approved") {
+    panel.innerHTML = `<h3>${esc(g.article?.title || "Generating\u2026")}</h3>
+      <p class="tip">${esc(guideStatusLabel(g))} \u2014 you can leave this tab, it'll keep running.</p>
+      <button class="btn" onclick="closeGuideReview()">\u2190 back to list</button>`;
+    return;
+  }
+  if (g.status === "failed") {
+    panel.innerHTML = `<h3 style="color:var(--red)">Generation failed</h3>
+      <p class="tip">Stage: ${esc(g.error?.stage)} \u2014 ${esc(g.error?.message)}</p>
+      <button class="btn" onclick="closeGuideReview()">\u2190 back to list</button>`;
+    return;
+  }
+
+  const a = g.article || {};
+  const warnHtml = (g.warnings || []).length
+    ? `<div class="panel" style="border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin-bottom:14px">
+        <div class="tip" style="color:var(--red);margin-bottom:6px">\u26a0 ${g.warnings.length} warning(s)</div>
+        ${g.warnings.map(w => `<div style="font-size:12.5px;color:var(--dim);padding:4px 0">${esc(w)}</div>`).join("")}
+      </div>` : "";
+
+  const sectionsHtml = (a.sections || []).map((s, i) => `
+    <div class="panel" style="margin-bottom:10px">
+      <label>Section ${i+1} heading</label>
+      <input data-sec="${i}" data-field="heading" class="gSecField" value="${esc(s.heading)}">
+      <label style="margin-top:8px">Body (markdown)</label>
+      <textarea data-sec="${i}" data-field="body_markdown" class="gSecField" rows="6">${esc(s.body_markdown)}</textarea>
+    </div>`).join("");
+
+  const imagesHtml = (g.images || []).length
+    ? `<div class="panel"><h3>Images (${g.images.length})</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:10px">
+          ${g.images.map(img => `
+            <div>
+              <img src="${esc(img.file)}" style="width:100%;border-radius:6px;border:1px solid var(--line-2)" alt="${esc(img.alt_text)}">
+              <div class="tip" style="margin-top:4px">${esc(img.placement)}</div>
+            </div>`).join("")}
+        </div>
+      </div>` : "";
+
+  const highSeverity = (g.fact_check?.issues || []).filter(i => i.severity === "high").length;
+
+  panel.innerHTML = `
+    <h3>Review draft</h3>
+    <p class="tip" style="margin:0 0 12px">Nothing publishes until you click Publish below.</p>
+    ${warnHtml}
+    <label>Title</label><input id="gaTitle" value="${esc(a.title)}">
+    <label style="margin-top:10px">Dek</label><textarea id="gaDek" rows="2">${esc(a.dek)}</textarea>
+    <label style="margin-top:10px">Meta description</label><input id="gaMeta" value="${esc(a.meta_description)}">
+    <div style="margin-top:16px">${sectionsHtml}</div>
+    ${imagesHtml}
+    <div class="save-row" style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px">
+      <button class="btn" onclick="closeGuideReview()">\u2190 back</button>
+      <button class="btn" id="gSaveEdits">Save edits</button>
+      ${highSeverity ? `<button class="btn" disabled title="${highSeverity} unresolved high-severity issue(s) block approval">Approve &amp; publish</button>`
+                     : `<button class="btn primary" id="gApprovePublish">Approve &amp; publish \u2192</button>`}
+    </div>`;
+
+  $("#gSaveEdits")?.addEventListener("click", () => saveGuideEdits(id, false));
+  $("#gApprovePublish")?.addEventListener("click", () => saveGuideEdits(id, true));
+}
+
+function closeGuideReview(){
+  $("#guideReviewPanel").style.display = "none";
+  $("#guideNewPanel").style.display = "";
+  activeGuideId = null;
+}
+
+async function saveGuideEdits(id, thenPublish){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  g.article.title = $("#gaTitle").value;
+  g.article.dek = $("#gaDek").value;
+  g.article.meta_description = $("#gaMeta").value;
+  $$(".gSecField").forEach(el => {
+    const i = Number(el.dataset.sec), field = el.dataset.field;
+    if (g.article.sections[i]) g.article.sections[i][field] = el.value;
+  });
+
+  const btn = thenPublish ? $("#gApprovePublish") : $("#gSaveEdits");
+  if (btn) btn.disabled = true;
+  try {
+    await loadGuidesFile();
+    const idx = guides.findIndex(x => x.id === id);
+    guides[idx] = g;
+    if (thenPublish) { g.status = "approved"; g.stage = "Approved"; g.approved_at = new Date().toISOString(); }
+    await saveGuidesFile(`admin: ${thenPublish ? "approve" : "edit"} guide ${id}`);
+    if (thenPublish) {
+      await dispatchWorkflow("guide-publish.yml", { job_id: id });
+      toast("Publishing\u2026 the live URL will show up in the list shortly.");
+      startGuidePolling(id);
+    } else {
+      toast("Saved.");
+    }
+    closeGuideReview();
+    await renderGuides();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+    if (btn) btn.disabled = false;
+  }
+}
+
+
 function renderOverrides(){
   $("#ovBlocked").value = (overrides.blocked_ids || []).join("\n");
   $("#ovBlockedTerms").value = (overrides.blocked_terms || []).join(", ");
@@ -753,11 +1037,12 @@ $("#nwAdd").addEventListener("click", () => {
 /* -------- Tab switching -------- */
 function activateTab(name){
   $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === name));
-  const panes = { stories: "#paneStories", brief: "#paneBrief", tooldrop: "#paneTooldrop", overrides: "#paneOverrides", new: "#paneNew" };
+  const panes = { stories: "#paneStories", brief: "#paneBrief", tooldrop: "#paneTooldrop", overrides: "#paneOverrides", guides: "#paneGuides", new: "#paneNew" };
   Object.entries(panes).forEach(([k, sel]) => $(sel).style.display = k === name ? "" : "none");
   if (name === "brief") renderBrief();
   if (name === "tooldrop") renderTooldrop();
   if (name === "overrides") renderOverrides();
+  if (name === "guides") renderGuides();
 }
 $$(".tab").forEach(t => t.addEventListener("click", () => activateTab(t.dataset.tab)));
 
