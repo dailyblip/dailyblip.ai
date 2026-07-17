@@ -132,13 +132,35 @@ export async function askJSON({ role = "write", system, prompt, maxTokens = 4000
   throw new Error(`askJSON: unparseable JSON for prompt starting: ${String(prompt).slice(0, 120)}`);
 }
 
-/** Ask for JSON with the web search tool available (curator uses this to find feeds). */
+/** Ask for JSON with the web search tool available (curator uses this to
+ *  find feeds; commentary.js and guide.js use this for grounded research).
+ *  Same one-corrective-retry safety net as askJSON, added after guide.js
+ *  hit a real "no JSON found" failure in production \u2014 askWithSearch
+ *  previously had no retry at all, unlike askJSON, so a single malformed
+ *  response (or one that ran out of token budget after several search
+ *  rounds, before writing the closing JSON) would fail the whole job
+ *  with no second chance. This was a latent gap affecting every existing
+ *  caller of askWithSearch, not something specific to the new guide
+ *  pipeline \u2014 fixed here once rather than worked around per-caller. */
 export async function askWithSearch({ role = "write", system, prompt, maxTokens = 4000, maxSearches = 4 }) {
-  const res = await createResilient(role, {
-    max_tokens: maxTokens,
-    system,
-    messages: [{ role: "user", content: prompt }],
-    tools: [{ type: "web_search_20250305", name: "web_search", max_uses: maxSearches }],
-  });
-  return parseLoose(textOf(res));
+  const tools = [{ type: "web_search_20250305", name: "web_search", max_uses: maxSearches }];
+  const messages = [{ role: "user", content: prompt }];
+  for (let attempt = 0; attempt < 2; attempt++) {
+    const res = await createResilient(role, { max_tokens: maxTokens, system, messages, tools });
+    const text = textOf(res);
+    try { return parseLoose(text); } catch {
+      // Reconstructing the assistant turn from extracted text only (not
+      // the full content blocks array) is safe here specifically because
+      // web_search_20250305 is a SERVER-side tool: Anthropic resolves the
+      // search and returns it fully within the same turn, so there's no
+      // pending tool_use awaiting a client-supplied tool_result the way
+      // client-side tools work \u2014 nothing is left "orphaned" by dropping
+      // the resolved search blocks from the replayed history.
+      messages.push(
+        { role: "assistant", content: text || "(no text in previous response)" },
+        { role: "user", content: "That was not valid JSON (or was empty). Reply with ONLY the corrected JSON now. No prose, no fences, no further searching needed." }
+      );
+    }
+  }
+  throw new Error(`askWithSearch: unparseable JSON for prompt starting: ${String(prompt).slice(0, 120)}`);
 }
