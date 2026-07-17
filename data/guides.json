@@ -736,7 +736,7 @@
   {
     "id": "4770dfcc-f47d-4137-aab8-cd902678c1ad",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -748,7 +748,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:52:42.937Z",
-    "updated_at": "2026-07-17T03:58:46.245Z",
+    "updated_at": "2026-07-17T03:59:43.544Z",
     "brief": {
       "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for professional or commercial work and want to choose a tool based on actual capability differences, not marketing claims",
       "reader_outcome": "The reader should be able to identify which photorealistic image generation tool fits their specific workflow, budget, and quality requirements, and understand the concrete tradeoffs between at least four named tools before spending money or time on any of them",
@@ -1098,6 +1098,28 @@
       "checked_at": "2026-07-17T03:57:11.533Z",
       "revised": true
     },
-    "warnings": []
+    "warnings": [],
+    "images": [
+      {
+        "id": "img1",
+        "file": "4770dfcc-f47d-4137-aab8-cd902678c1ad-img1.jpg",
+        "prompt": "A clean, editorial flat-lay scene on a matte slate surface: an open spiral notebook with handwritten planning notes and arrow diagrams, a mechanical keyboard partially visible at the edge, a ceramic mug casting a soft shadow, and a small potted succulent. Overlaid compositionally are three distinct glowing card-like panels — one showing a simple calendar grid, one showing a minimalist to-do checklist with checkmarks, one showing a small bar chart — all rendered as subtle UI fragments, not detailed screenshots. Warm amber and cool teal accent lighting. Generous negative space in the upper third for text. Premium editorial photography aesthetic, sharp depth of field, no faces, no logos, no watermarks.",
+        "placement": "hero",
+        "alt_text": "Flat-lay of a planning notebook, keyboard, and minimal UI card fragments on a dark slate surface",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T03:59:22.177Z"
+      },
+      {
+        "id": "img2",
+        "file": "4770dfcc-f47d-4137-aab8-cd902678c1ad-img2.jpg",
+        "prompt": "An over-the-shoulder perspective of a creator's hands actively working at a wooden desk: left hand gesturing toward a large monitor displaying a clean kanban-style workflow board with color-coded columns (To Do, In Progress, Done) filled with anonymous task cards. The right hand holds a stylus near a drawing tablet. Surrounding the monitor are sticky notes on the desk edge, a half-open laptop showing a second screen, and a small ring light reflected softly in the monitor bezel. Muted earth tones with pops of teal and amber. Editorial, contemporary, no readable text on screen, no faces visible, no logos, ample negative space on the left side of frame.",
+        "placement": "workflow or creator-focused section image",
+        "alt_text": "Creator's hands working at a desk with a kanban workflow board on monitor and drawing tablet nearby",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T03:59:43.544Z"
+      }
+    ]
   }
 ]
