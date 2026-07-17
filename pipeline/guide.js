@@ -245,7 +245,7 @@ const FACTCHECK_SYSTEM = `You are the fact-checking and editorial-review pass fo
 
 Inspect: product capabilities, availability, pricing, free-plan claims, commercial-use terms, copyright statements, platform policies, monetization requirements, release dates, unsupported conclusions, misleading claims, broken/invented-looking links, any statement implying dailyblip tested something, repetitive/generic writing, undisclosed affiliate language.
 
-Return AT MOST 12 issues total, prioritizing the most severe and clearest problems \u2014 if you find more than 12 genuine issues, that's a sign the section needs a broader rewrite, not a reason to list every one individually. Keep "original_text" to a short identifying fragment (10-15 words), not the full passage \u2014 just enough for a human to locate it. Do NOT write a suggested fix here \u2014 that's a separate step's job; yours is only to identify and describe the problem.
+HARD LIMIT: never return more than 8 issues, no matter how many you find. If you identify more than 8 real problems, stop after documenting the 8 most severe and clearest ones \u2014 do not list the rest, do not summarize additional issues in a 9th entry, do not exceed 8 array entries under any circumstances. This is not a target to aim for; it is a limit you must not cross. Keep "original_text" to a short identifying fragment (10-15 words), never the full passage \u2014 just enough for a human to locate it. Keep "issue" to one short sentence. Do NOT write a suggested fix here \u2014 that's a separate step's job; yours is only to identify and describe the problem, as briefly as possible.
 
 Return JSON: {"issues": [{"severity":"low|medium|high","section_id":"matches a section id, or \\"intro\\"/\\"conclusion\\"","original_text":"short identifying fragment, 10-15 words","issue":"what's wrong, 1-2 sentences","supporting_source_url":"" }]}
 Your response must begin with { immediately \u2014 no preamble, no "Let me review this article," no explanation before or after the JSON. JSON only. Empty issues array if genuinely clean.`;
@@ -295,15 +295,15 @@ async function detectIssues(job) {
     role: "write",
     system: FACTCHECK_SYSTEM,
     prompt: JSON.stringify({ article: job.article, sources: job.sources }),
-    // Was 3000, then 6000 \u2014 still truncated in production on a real
-    // article even at 6000. Rather than keep raising this indefinitely,
-    // FACTCHECK_SYSTEM above now also bounds the actual output size
-    // directly: capped at 12 issues, short identifying fragments
-    // instead of full quotes, and no recommended_replacement field
-    // (confirmed unused downstream \u2014 the separate revise step
-    // re-derives its own fix and never reads it). This higher ceiling
-    // is headroom on top of that, not a substitute for it.
-    maxTokens: 8000,
+    // Was 8000, still truncated in production even with the earlier
+    // 12-issue cap \u2014 turns out that cap wasn't actually being respected
+    // (the response was ~5x the expected size for 12 short-fragment
+    // issues, suggesting the model was reporting far more than
+    // instructed). FACTCHECK_SYSTEM's cap is now a genuinely enforced
+    // hard limit (8 issues, explicit stop instruction) rather than a
+    // soft target \u2014 this higher ceiling is real headroom on top of
+    // that actually-working constraint, not a substitute for it.
+    maxTokens: 10000,
   });
 }
 
