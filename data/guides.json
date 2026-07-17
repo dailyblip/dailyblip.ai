@@ -1149,7 +1149,7 @@
   {
     "id": "e2b14fbf-805a-4845-8e96-05518fbdca8c",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Guide for less technical musicians getting into new AI - where to start",
       "article_type": "Practical guide",
@@ -1161,7 +1161,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:44:15.646Z",
-    "updated_at": "2026-07-17T15:44:49.219Z",
+    "updated_at": "2026-07-17T15:46:40.892Z",
     "brief": {
       "target_reader": "Musicians aged 40+ with intermediate-to-advanced musical skills but limited technical background, who have heard about AI music tools and are curious but unsure where to start or whether it is worth the effort",
       "reader_outcome": "The reader can identify which category of AI music tool fits their actual workflow, set up and try at least one tool without needing coding knowledge, and make an informed decision about whether to go deeper based on honest tradeoffs",
@@ -1191,6 +1191,229 @@
         "Current status of Stability Audio and any API or consumer product availability"
       ],
       "research_plan": "Prioritize official pricing and terms-of-service pages for all tools mentioned to get accurate tier information. Check music industry trade press (MusicTech, Sound On Sound, Music Radar) for practitioner-level reviews rather than vendor materials. Look for forum discussions on Gearslutz/Gearspace and Reddit communities like r/WeAreTheMusicMakers for real-user friction reports, especially from non-technical users. Review any published guidance from music rights organizations (ASCAP, PRS, PPL) on AI-generated content policies. For copyright claims, check primary legal sources or legal journalism rather than vendor FAQs. Avoid sourcing from AI vendor blogs or press releases as primary evidence."
-    }
+    },
+    "sources": [
+      {
+        "title": "Suno Pricing Page",
+        "publisher": "Suno (suno.com/pricing)",
+        "url": "https://suno.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno operates on three tiers: Free ($0, 50 credits/day ≈ 10 songs), Pro ($10/month or $8/month annually, 2,500 credits/month), and Premier ($30/month or $24/month annually, 10,000 credits/month).",
+          "Subscription credits do not carry over day-to-day or month-to-month.",
+          "Purchased top-up credits do not expire but require an active subscription to use.",
+          "Commercial use is limited — the ToS link is referenced directly on the pricing page for details."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Commercial Use: Rights, Ownership, and the Copyright Caveat",
+        "publisher": "Dynamoi (dynamoi.com)",
+        "url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Free-plan songs (Basic tier) are restricted to non-commercial use — they cannot be distributed, monetized, or used in commercial projects.",
+          "Pro ($10/month) and Premier ($30/month) grant commercial-use rights for new songs made while subscribed; commercial rights are identical between Pro and Premier.",
+          "Songs made while subscribed retain their commercial license even after cancellation.",
+          "Suno's own documentation acknowledges: 'Music made 100% with AI would not qualify for copyright protection because a human did not write the lyrics or the music. Writing the prompt does not constitute the creation of the song.'",
+          "In November 2025, Warner Music Group and Suno announced a partnership settling their copyright litigation.",
+          "Under the 2026 updated terms, free-tier songs are no longer downloadable (play and share only)."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing 2026: A Complete Breakdown of Plans & Credits",
+        "publisher": "eesel AI (eesel.ai)",
+        "url": "https://www.eesel.ai/blog/udio-pricing",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio has three tiers: Free ($0, 100 credits/month with a hard 10-per-day cap), Standard ($10/month or $8/month annually, 2,400 credits/month), and Pro ($30/month or $24/month annually, 6,000 credits/month).",
+          "Pay-as-you-go add-on credits are available: 100 credits for $3 or 1,000 for $25; these never expire.",
+          "Free-tier users are also limited to 3 full-length (130-second) song generations per day.",
+          "Voice Control and Style Blending features are locked to Standard and above.",
+          "Credits reset monthly with no rollover on all paid plans.",
+          "Udio completed licensing deals with Universal Music Group (October 2025) and Warner Music Group (November 2025)."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing — Commercial Rights and October 2025 UMG Settlement",
+        "publisher": "UsagePricing (usagepricing.com)",
+        "url": "https://www.usagepricing.com/blueprint/udio",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "After Udio's October 2025 UMG settlement, Udio moved toward a streaming 'walled garden' model, removing free downloads; Udio opened a 48-hour window (Nov 3–5, 2025) for users to download songs made under the prior terms.",
+          "Before the settlement, generated songs were downloadable and commercially usable; after the deal, commercial use rights and download availability became uncertain and evolving — writers should urge readers to check current Udio ToS before relying on commercial rights.",
+          "Headline tier prices ($0/$10/$30) have not changed; the material change was to rights bundled with a subscription, not price."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "LANDR Online Audio Mastering — Official Product Page",
+        "publisher": "LANDR (landr.com)",
+        "url": "https://www.landr.com/online-audio-mastering",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "LANDR offers three Studio subscription tiers: Essentials, Standard, and Pro.",
+          "All three offer unlimited MP3 online mastering.",
+          "Standard and Pro also provide access to the LANDR Mastering Plugin and WAV mastering.",
+          "LANDR has a DAW plugin that runs its mastering engine inside the user's session in real time."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Free AI Mastering: 6 Tools Tested (And the One That's Actually Free)",
+        "publisher": "Undetectr (undetectr.com)",
+        "url": "https://undetectr.com/blog/free-ai-mastering",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "LANDR's free tier in 2026 is preview-only: users can upload unlimited tracks and hear unlimited mastered previews in the browser, but every download requires payment.",
+          "LANDR entry pricing as independently observed: $12.99/month Essentials (unlimited MP3) or $24.99/month Pro (unlimited WAV and HD WAV).",
+          "The 7-day trial outputs are watermarked with an audible noise burst approximately every 30 seconds.",
+          "LANDR does NOT offer a genuinely free downloadable export tier — it is 'not free in any practical sense.'"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "BandLab AI Tools — Official Product Page",
+        "publisher": "BandLab (bandlab.com/ai)",
+        "url": "https://www.bandlab.com/ai",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "BandLab markets 10+ AI tools including SongStarter, AutoPitch, Audio-to-MIDI, AI Mastering, AutoMix, Splitter, and 15 AI voices.",
+          "BandLab is available on iOS, Android, and web as a cloud-based DAW."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "BandLab Review: Free AI Studio, Splitter, Mastering",
+        "publisher": "AI Music Preneur (aimusicpreneur.com)",
+        "url": "https://www.aimusicpreneur.com/ai-tools/bandlab/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Core BandLab AI tools (SongStarter, Splitter, AI Mastering) are free with no credit card required.",
+          "SongStarter is fully free with no credits or per-generation cap, but uses genre selection rather than free-form text prompts.",
+          "Splitter is free for stem separation (vocals, drums, bass, instruments) with a 15-minute per-song cap; the guitar stem is locked behind the paid Membership tier.",
+          "AI Mastering is free for shorter tracks; the paid plan removes the length cap and adds advanced features.",
+          "BandLab Studio (the underlying DAW) is fully free with no caps.",
+          "Outputs are cleared for royalty-free commercial use.",
+          "A paid BandLab Membership tier exists (listed as ~$1.99/month at time of review, but pricing changes frequently — writer must verify current rate on BandLab Membership page).",
+          "Some AI features (e.g. AI FX Preset Generator) are Members-only per the Google Play store listing."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "iZotope Subscriptions — Official Page",
+        "publisher": "iZotope (izotope.com/pages/subscriptions)",
+        "url": "https://www.izotope.com/pages/subscriptions",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "As of February 18, 2026, iZotope subscriptions are managed through Native Instruments' Native Access portal.",
+          "Two subscription tiers exist: iZotope Plus (includes RX 12 Elements, Ozone 12 Standard, Neutron 5, Nectar 4 Standard) and iZotope Pro (includes RX 12 Standard, Ozone 12 Advanced, Neutron 5, Nectar 4 Advanced).",
+          "A 7-day free trial is available; cancellation within that period incurs no charge.",
+          "Perpetual licenses remain available for purchase in addition to subscriptions.",
+          "RX is an AI/ML-powered audio cleanup and restoration plugin suite, not a standalone 'AI composition' tool.",
+          "DAW compatibility (from official RX 12 page): Logic Pro 12, Pro Tools 2025, Ableton Live 12, Cubase 15, Nuendo 15, Studio One 7/Fender Studio Pro 8, Reaper 7, FL Studio 25, Adobe Audition 2026, Adobe Premiere Pro 2026, DaVinci Resolve 19, Reason 13.",
+          "Supported OS: macOS Sonoma (14.7.x), Sequoia (15.7.x), Tahoe (26.x); Windows 10 (22H2), Windows 11 (24H2)."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "iZotope RX Review (2026): Pricing, Features & Verdict",
+        "publisher": "Creator Stack Club (creatorstackclub.com)",
+        "url": "https://www.creatorstackclub.com/software/izotope-rx",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "RX perpetual license pricing (independently observed, verified June 2026): Elements ~$49, Standard ~$399, Advanced ~$799. iZotope frequently runs 30–50% sales.",
+          "There is NO free download tier for iZotope RX — only a free demo/trial mode for evaluation.",
+          "All RX tiers work as plugins in major DAWs (Pro Tools, Logic Pro, Reaper, Ableton Live, Audition) in AU, VST3, AAX formats.",
+          "RX uses machine learning for audio repair and cleanup — it qualifies as AI-assisted but is NOT an AI composition or text-to-music tool."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Stable Audio 3.0 — Official Stability AI Announcement",
+        "publisher": "Stability AI (stability.ai)",
+        "url": "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "Stability AI released Stable Audio 3.0 on May 20, 2026 — a family of four open-weight models covering music composition and sound effects.",
+          "Three variants (Small SFX, Small, Medium) are available as open-weight downloads on Hugging Face; the Large model (2.7B parameters) is API-only, accessible via the Stability AI API, partner fal.ai, or enterprise licensing.",
+          "All Stable Audio 3.0 models are trained on fully licensed data.",
+          "Under the Stability AI Community License, users own their outputs and can distribute and commercialize them freely.",
+          "Organizations with more than $1M in annual revenue require an Enterprise license for commercial use.",
+          "The Small models run on CPU only (no GPU required); the Medium model runs on consumer-grade laptops.",
+          "Stable Audio 3.0 is primarily an instrumental and sound design model — it does not generate AI vocals/lyrics (unlike Suno or Udio).",
+          "There is no standalone consumer product (app/website) — access is via API or self-hosted open weights."
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Splice Launches Generative AI Tools That Compensate Sample Creators",
+        "publisher": "Music Business Worldwide (musicbusinessworldwide.com)",
+        "url": "https://www.musicbusinessworldwide.com/splice-launches-ai-tools-that-compensate-sample-creators-when-their-sounds-are-used/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Splice launched three generative AI tools in April 2026: Variations (creates new versions of any Splice sample, adjusting structure, key, BPM), Craft (transforms samples into fully playable instruments in the INSTRUMENT plugin), and Magic Fit (adapts sounds to harmonic/rhythmic context of a session — scheduled for summer 2026).",
+          "All output from the tools is licensed for commercial use.",
+          "Original sample creators are compensated each time their sound is used as a source and each time a variation is downloaded.",
+          "Splice's tools combine its catalog of 3M+ human-made, licensed samples with generative AI — it is NOT a text-to-full-song generator like Suno/Udio.",
+          "In December 2025, Splice announced a partnership with Universal Music Group on next-generation AI music creation tools.",
+          "In January 2026, Splice acquired AI voice production platform Kits AI.",
+          "Splice published Responsible AI Principles in 2025, committing to creator compensation and transparency."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI-Generated Music Copyright: Legal Limits, Human Authorship, and Best Practices in 2025",
+        "publisher": "Abounaja IP (abounaja.com)",
+        "url": "https://abounaja.com/blog/ai-generated-music-copyright-legal-limits-human-authorship-and-best-practices-in-2025",
+        "source_type": "legal",
+        "is_primary": true,
+        "claims_supported": [
+          "US: Recent court rulings and USCO AI guidelines reaffirm that AI-generated music without substantial human involvement does not qualify for copyright. The US Court of Appeals (March 21, 2025) denied copyright protection for AI-generated works, reinforcing the human authorship requirement.",
+          "US: The Supreme Court left the Thaler v. Perlmutter rule in place (March 2, 2026), affirming AI-generated audio is not copyrightable.",
+          "US: Works combining AI-generated elements with meaningful human authorship may qualify for copyright for the human-authored portions only.",
+          "UK: In early 2024, the UK Intellectual Property Office confirmed that copyright does not automatically subsist in music created solely by AI without human involvement.",
+          "UK: The UK government published a copyright and AI consultation in December 2024 (closed February 2025); policy direction remains unsettled as of mid-2026.",
+          "Practical implication for musicians: fully AI-generated music can be sold commercially (on a paid Suno/Udio plan), but it cannot be protected — anyone can legally copy it. PROs (ASCAP/BMI) have begun rejecting pure prompt-to-song output."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Specific current pricing for iZotope RX perpetual licenses (Elements, Standard, Advanced) — the official iZotope pricing page returns tier comparisons without displaying hard dollar prices in the scraped content; the $49/$399/$799 figures come from an independent review site (verified June 2026) and may not reflect current sale or upgrade pricing. Writer should verify at izotope.com/en/products/rx/pricing-options before publishing.",
+      "BandLab Membership monthly price — the $1.99/month figure appears in one independent review but is flagged as frequently changing. The official BandLab Membership page (bandlab.com/membership) was not scraped with a live price in results. Writer must confirm current price directly.",
+      "LANDR specific subscription prices ($12.99 Essentials / $24.99 Pro) — these figures come from an independent review site, not the official LANDR pricing page (landr.com/pricing/master), which returned only structural content. Writer should verify at the official page before publishing.",
+      "Whether Melodyne qualifies as 'AI-assisted' — Celemony's Melodyne uses proprietary 'Direct Note Access' (DNA) technology for pitch editing, which the company does not market as AI. No search was run on Melodyne pricing or DAW compatibility in this research pass due to source budget constraints. This entire claim (Melodyne as AI-assisted, its pricing, and DAW compatibility) is unverified and requires a dedicated search or official Celemony documentation check.",
+      "System requirements (RAM, GPU) for locally-run AI music tools — only Stable Audio 3.0 system requirements were partially verified (Small models run CPU-only; Medium runs on consumer laptops; Large is API-only). No RAM/GPU specs for other locally-run tools were confirmed. Writer should either omit system requirement claims for other tools or verify per-tool from official documentation.",
+      "Specific current Udio commercial use policy post-UMG settlement — while it is confirmed that the settlement occurred in October 2025 and download terms changed materially, exactly which paid plan tier (Standard vs. Pro) unlocks commercial use in the current 2026 ToS is flagged as evolving and unclear across sources. Writer should direct readers to check udio.com terms directly.",
+      "Whether iZotope RX has a permanent free tier (as opposed to a time-limited trial) — confirmed: there is NO permanent free tier. Only a 7-day free trial with watermarked outputs. This was not originally clear in the brief and should be corrected."
+    ]
   }
 ]
