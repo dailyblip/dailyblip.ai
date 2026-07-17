@@ -236,7 +236,7 @@
   {
     "id": "cdbf0967-5715-4808-8736-ce48eac05dbf",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Practical guide",
@@ -248,7 +248,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:32:11.448Z",
-    "updated_at": "2026-07-17T03:32:42.429Z",
+    "updated_at": "2026-07-17T03:34:35.408Z",
     "brief": {
       "target_reader": "Independent content creators (social media, YouTube, blogs, e-commerce) who need photorealistic AI-generated images for professional use and want to evaluate tools critically before spending time or money",
       "reader_outcome": "Select the right photorealistic image generator for their specific workflow, budget, and output requirements, and know how to prompt and configure it for maximum realism",
@@ -272,6 +272,196 @@
         "Ideogram's current photorealism capability tier and pricing"
       ],
       "research_plan": "Prioritize official pricing and licensing pages for each tool (Midjourney, Adobe, OpenAI, Black Forest Labs, Ideogram). Cross-reference independent prompt comparison posts from creator communities (Reddit r/StableDiffusion, r/midjourney, Civitai forums) for real-world output quality assessments. Look for third-party benchmark articles from AI-focused outlets (The Verge, Ars Technica, Wired) that compare outputs side by side. Avoid vendor marketing copy as a primary source. For licensing claims, go directly to terms of service documents."
-    }
+    },
+    "sources": [
+      {
+        "title": "Midjourney Pricing Guide (2025/2026)",
+        "publisher": "eesel.ai",
+        "url": "https://www.eesel.ai/blog/midjourney-pricing",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney offers four paid tiers: Basic ($10/mo), Standard ($30/mo), Pro ($60/mo), Mega ($120/mo); annual billing saves ~20%",
+          "Midjourney no longer offers a free trial; all access requires a paid subscription",
+          "Standard, Pro, and Mega plans include unlimited Relax Mode (slower queue-based generation); Basic does not",
+          "Stealth Mode (private generation) is exclusive to Pro and Mega plans",
+          "Companies with gross annual revenue over $1,000,000 must use Pro or Mega for commercial use",
+          "All paid Midjourney tiers include commercial rights to generated images"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Does Midjourney Have an API? (March 2026)",
+        "publisher": "10b.ai",
+        "url": "https://10b.ai/blog/does-midjourney-have-an-api",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "As of March 2026, Midjourney does not offer a broadly available official public API for standard developer use",
+          "There is no normal official setup for generating API keys, calling public endpoints, or receiving structured job responses from Midjourney",
+          "Midjourney's primary access methods remain its Discord bot and web interface",
+          "Third-party unofficial API wrappers exist but violate Midjourney ToS and carry account-ban risk",
+          "One source (aitoolsdevpro.com) claims an Enterprise API was released in late 2025, restricted to the Enterprise dashboard — this is disputed by more recent and numerous sources and should be treated as unverified"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Plans Page",
+        "publisher": "Adobe (official)",
+        "url": "https://www.adobe.com/products/firefly/plans.html",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly offers standalone paid subscription plans separate from Creative Cloud",
+          "Firefly Standard starts at $9.99/month; Firefly Pro at $19.99/month; Firefly Pro Plus at $49.99/month; Firefly Premium at $199.99/month (per Photutorial's June 2026 verification of the official plans page)",
+          "Unlimited standard generative features (text-to-image, Generative Fill, text effects) are included on all paid plans — credits apply only to premium features like video generation",
+          "Creative Cloud Pro includes 4,000 monthly premium credits and does not require an additional Firefly subscription"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Pricing 2026 – Four-Plan Stack Breakdown",
+        "publisher": "Photutorial",
+        "url": "https://photutorial.com/adobe-firefly-price/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe Firefly's plan lineup as of June 2026 is: Standard ($9.99/mo, 2,000 credits), Pro ($19.99/mo, 4,000 credits), Pro Plus ($49.99/mo), and Premium ($199.99/mo)",
+          "Some pricing information online predates Adobe's mid-2025 plan restructuring, when legacy Firefly and generative credit add-on plans were retired — writers should verify current plans against official page",
+          "Credits are consumed only by premium features (video, audio translation, partner models); standard image generation is unlimited on any paid plan"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly FAQ (Official)",
+        "publisher": "Adobe (official)",
+        "url": "https://helpx.adobe.com/firefly/web/get-started/learn-the-basics/adobe-firefly-faq.html",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly's initial commercial model was trained on Adobe Stock images, openly licensed content, and public domain content where copyright has expired",
+          "Adobe does not train Firefly on Creative Cloud subscribers' personal content",
+          "Adobe Stock contributors' content is used in Firefly's training dataset per Contributor license agreements",
+          "For features without the beta label, Firefly-generated outputs can be used in commercial projects"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Commercial Use 2026: Honest Legal Guide",
+        "publisher": "StackSheriff",
+        "url": "https://stacksheriff.com/ai-tools/adobe-firefly-commercial-use/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe's commercially-safe training data claim rests on Adobe Stock + licensed + public domain content — this is the basis for its IP indemnification offer",
+          "Adobe explicitly does not train on customer data",
+          "Beta features are NOT indemnified, even on paid plans — outputs from beta-labeled features should be treated as non-commercial",
+          "A June 2026 shareholder derivative lawsuit alleges Adobe's 'commercially safe AI' claims were materially false, alleging use of the SlimPajama dataset; Adobe has not publicly responded and the allegation is unproven",
+          "The U.S. Copyright Office (Part 2 report, January 29, 2025) concluded that prompts alone do not qualify for copyright — purely AI-generated images are effectively in the public domain in the U.S.",
+          "Adobe's indemnification protects against third-party infringement claims but does not grant the user copyright in Firefly output"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "ChatGPT + DALL-E 2026: What Changed & Free Limits",
+        "publisher": "AI Tool Radar",
+        "url": "https://aitoolradar.io/guides/dall-e",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "GPT-4o native image generation replaced DALL-E 3 in the ChatGPT interface in December 2025 — as of 2026, asking ChatGPT for an image produces GPT-4o output, not DALL-E 3",
+          "DALL-E 3 remains available only via the OpenAI API, with deprecation announced for May 2026",
+          "ChatGPT Plus costs $20/month and provides higher image generation limits with priority processing; free tier includes limited GPT-4o image generation with dynamic usage caps",
+          "OpenAI does not publish a fixed image quota for Plus; the exact number varies with server load",
+          "Images generated through ChatGPT (Plus, Pro, Team, Enterprise) and through the API belong to the user per OpenAI's terms and can be used commercially"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "DALL-E 3 Official Announcement & Content Policy",
+        "publisher": "OpenAI (official)",
+        "url": "https://openai.com/index/dall-e-3/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Images created with DALL-E 3 are the user's to use — no OpenAI permission required to reprint, sell, or merchandise them",
+          "DALL-E 3 has mitigations to decline requests that ask for a public figure by name",
+          "OpenAI took measures to reduce likelihood of generating images in the style of living artists",
+          "OpenAI's Usage Policy (updated October 2025) prohibits use of someone's likeness, including photorealistic image or voice, without consent in ways that could confuse authenticity"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Flux.1 Pro vs Dev vs Schnell: Model Variants, Licensing, and Platform Access",
+        "publisher": "flux2max.pro / Futurepedia / Fireworks AI (multiple corroborating sources)",
+        "url": "https://flux2max.pro/blog/flux-pro-vs-dev-vs-schnell",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Black Forest Labs released three Flux.1 variants: Pro (highest quality, commercial license), Dev (open-weight, non-commercial license), and Schnell (Apache 2.0, fully commercial, fastest)",
+          "Flux.1 Dev is restricted to non-commercial applications by its license; commercial use requires Flux.1 Pro",
+          "Flux.1 Schnell's Apache 2.0 license makes it fully free for commercial use",
+          "All three Flux models are accessible via API through third-party providers including Replicate, fal.ai, Together AI, Fireworks AI, and DeepInfra — there is no single first-party Flux consumer subscription product",
+          "Black Forest Labs operates a direct API (bfl.ai/pricing) with pay-as-you-go pricing for Flux.1 Pro and newer Flux.2 / Kontext models",
+          "Flux models are available as open weights on Hugging Face for Dev and Schnell variants",
+          "Flux.1 Schnell generates images in 1–4 inference steps; Flux.1 Dev in ~8–12 seconds; Flux.1 Pro in ~10–15 seconds"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Stable Diffusion Hardware Requirements: VRAM, ComfyUI, AUTOMATIC1111",
+        "publisher": "Hivenet / aitooldiscovery.com / ToolHalla (multiple corroborating sources)",
+        "url": "https://www.hivenet.com/post/stable-diffusion-requirements-hardware-vram-and-cloud-gpu-guide",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Minimum VRAM for Stable Diffusion is 4GB (SD 1.5 only, low-resolution, with optimizations like --lowvram); 6GB VRAM is the practical recommended minimum for SD 1.5 comfortably",
+          "SDXL requires at least 6–8GB VRAM for usable performance; 8GB is functional with Forge optimizations; 12–16GB is comfortable; 24GB handles newer Flux-scale models",
+          "AUTOMATIC1111 is the traditional web UI with the largest extension ecosystem; ComfyUI is a node-based interface preferred for performance and lower VRAM; Forge is an AUTOMATIC1111 fork using 30–50% less VRAM — recommended for most users in 2026",
+          "Recommended system specs for AUTOMATIC1111: NVIDIA RTX GPU with 6–12GB VRAM, 16–32GB RAM, 20–50GB SSD storage",
+          "CPU-only generation is possible but extremely slow (5–10 minutes per image vs. 2–15 seconds on GPU)",
+          "NVIDIA GPUs with CUDA are strongly preferred; AMD GPUs work via ROCm on Linux but with less community support and slower performance on Windows",
+          "AUTOMATIC1111 requires Python 3.10.6 specifically — Python 3.11+ breaks torch compatibility"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Ideogram Pricing 2026 / Ideogram Subscription Plans (Official + Independent)",
+        "publisher": "ideogram.ai (official) / eesel.ai / checkthat.ai",
+        "url": "https://ideogram.ai/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Ideogram offers a free tier with 10 slow credits per week (resetting Saturdays at 00:00 UTC); no credit card required",
+          "Ideogram paid plans: Plus ($15/mo or ~$11.25/mo annually), Pro ($42/mo or ~$29.40/mo annually), Team ($20/user/month, annual only)",
+          "Free tier images are public by default and cannot be made private; private generation requires Plus or higher",
+          "Unused subscription priority credits expire at end of each billing cycle — no rollover",
+          "Ideogram's API is billed separately from subscriptions, at $0.025–$0.10 per image depending on model and quality tier",
+          "Ideogram 3.0 (flagship as of March 2025) offers Realistic, Design, 3D, and Anime style modes with Turbo, Default, and Quality rendering tiers",
+          "Photorealism in Ideogram trails Flux 1.1 Pro and Imagen 3 on hardest portrait/product shots — independent reviewers consistently note human face inconsistency",
+          "Ideogram's primary competitive advantage is text rendering accuracy (~90% for legible in-image text), not photorealism per se",
+          "Batch generation and full API access are locked to Pro tier ($42+/month)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Maximum output resolution for Midjourney, Adobe Firefly, DALL-E 3/GPT Image, and Flux without upscaling: no consistent, officially documented native output resolution figures were found across all four tools in the search results. Midjourney's native resolution is commonly cited as approximately 1024×1024 by independent sources but not confirmed via official Midjourney docs in these results. Firefly, GPT Image 1.5, and Flux native resolution caps were not definitively confirmed from official sources — writer should soft-claim or verify directly against current official docs.",
+      "Whether Midjourney's Enterprise API (reportedly released late 2025 per one low-authority source, aitoolsdevpro.com) is real and publicly accessible: this claim is contradicted by multiple higher-authority sources dated as recently as April–July 2026 (10b.ai, apiframe.ai, cometapi.com) all stating no official public API exists. The Enterprise API claim should be omitted or strongly caveated.",
+      "Specific disclosure or attribution requirements for AI-generated images from any of these tools: none of the tools reviewed require mandatory disclosure or attribution of generated images in their ToS as a condition of commercial use. However, Adobe's Content Credentials (C2PA metadata) are attached to Firefly outputs and OpenAI attaches C2PA provenance metadata to DALL-E/GPT Image outputs — these are technical provenance markers, not legally mandatory disclosure requirements. The legal disclosure landscape (e.g., FTC guidance, EU AI Act labeling) is external to the tools and rapidly evolving; the writer should not attribute mandatory disclosure rules to any specific tool's policy without current legal sourcing.",
+      "Ideogram's exact pricing as of the current date: the official ideogram.ai/pricing page did not render full plan prices in search results. Third-party sources cite Plus at $15/mo and Pro at $42/mo (annually), but a $7/mo 'Basic' tier is cited by one older source (SaaSWorthy, last updated Sept 2025) and contradicted by more recent sources. Writer should verify the current plan lineup directly on ideogram.ai before publishing.",
+      "Adobe Firefly training data legal status: Adobe's 'commercially safe, licensed data' claim is a company claim (not independently verified fact) and is currently subject to an active shareholder derivative lawsuit (filed June 2026) alleging use of the SlimPajama dataset contrary to Adobe's public statements. This lawsuit is unresolved. The claim should be presented as 'Adobe states' rather than as confirmed fact, with the legal caveat noted."
+    ]
   }
 ]
