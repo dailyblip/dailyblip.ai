@@ -18,7 +18,12 @@ permissions:
   contents: write
 
 concurrency:
-  group: guide-publish-${{ inputs.job_id }}
+  # Shared group, same as guide.yml and guide-recheck.yml \u2014 see
+  # guide.yml's comment for why this needs to be shared rather than
+  # per-job_id (concurrent Actions runs writing to the same
+  # data/guides.json array can hit real git merge conflicts, not just
+  # in theory).
+  group: guide-pipeline-writes
   cancel-in-progress: false
 
 jobs:
