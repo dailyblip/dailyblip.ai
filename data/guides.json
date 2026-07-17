@@ -1171,7 +1171,7 @@
   {
     "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Using AI to write better songs without losing your voice",
       "article_type": "Practical guide",
@@ -1183,7 +1183,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T19:17:05.201Z",
-    "updated_at": "2026-07-17T19:20:51.017Z",
+    "updated_at": "2026-07-17T19:22:01.058Z",
     "brief": {
       "target_reader": "A singer-songwriter who writes their own lyrics and melodies, is curious about AI tools but worried that using them will make their songs sound generic or less personal. Has probably never used an AI writing tool for music before.",
       "reader_outcome": "Feel confident enough to try one specific AI-assisted step in their songwriting process today, without feeling like they are handing their creative voice over to a machine.",
@@ -1478,6 +1478,38 @@
     "warnings": [
       "introduction: The Billboard source describes songwriters using Suno for brainstorming, but the article attributes this specifically to Billboard reporting on Suno, when Billboard's framing is about AI tools broadly and professional adoption generally — conflating a general trend report with a Suno-specific claim. More critically, Suno is a full-song generator (vocals, instrumentation), not primarily a lyric brainstorming tool, so presenting it as the example tool in this context is misleading about what Suno does.",
       "s3: The Berklee Online source attributes this workflow to Camp describing it as one of their favorite aspects of AI, but the article shifts pronoun to 'their ear' suggesting first-person Camp quote, then in s3 says 'sharpens their ear' — the pronoun 'their' is ambiguous and could be read as the reader's instincts, misattributing the claim's subject. More substantively, the article states Camp 'notes that generating lots of variations of a single lyric sharpens their ear' as if Camp said this about the reader, when the source is Camp describing their own practice."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15-img1.jpg",
+        "prompt": "A songwriter sits at a worn wooden desk in a warmly lit studio space, acoustic guitar leaning against the wall behind them. On the desk: a weathered notebook open to handwritten lyrics, a pencil, and a laptop glowing softly. The composition is wide with generous negative space in the upper left. The mood is intimate and creative — personal artifacts of real songwriting process. Natural late-afternoon light rakes across the notebook pages. No text visible. Shot at low angle, slightly elevated perspective, editorial photography aesthetic with rich earthy tones and film-like grain. No robots, no glowing brains, no floating UI panels.",
+        "placement": "hero",
+        "alt_text": "Songwriter at a desk with handwritten lyrics notebook and laptop in a warm studio space",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T19:21:27.294Z"
+      },
+      {
+        "id": "img2",
+        "file": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15-img2.jpg",
+        "prompt": "Close-up editorial flat lay, slightly overhead angle: a songwriter's notebook page filled with handwritten lists — crossed-out phrases, circled words, arrows connecting ideas, margin notes. Beside it, a pen mid-rest across the page. A laptop keyboard is partially visible at the frame edge, suggesting digital tools nearby but not dominant. The handwriting is stylized and illegible as real text — expressive marks, not readable words. Warm toned paper, natural window light casting soft shadows. Compositionally balanced with open space on one side. The image conveys the brainstorming and volume-generation phase — many options being generated and filtered. Contemporary editorial aesthetic, no stock-photo genericness.",
+        "placement": "s2",
+        "alt_text": "Songwriter's notebook with brainstormed lyric lists, crossed-out phrases, and circled ideas beside a laptop",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T19:21:42.683Z"
+      },
+      {
+        "id": "img3",
+        "file": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15-img3.jpg",
+        "prompt": "A songwriter at a kitchen table or small home studio corner, looking thoughtfully at a laptop screen, pencil in hand hovering over an open notebook. The body language is active and engaged — mid-revision, comparing something on screen to something handwritten. One hand rests on the notebook, the other near the keyboard. The laptop screen emits soft light but the screen content is not readable or fabricated. The scene feels practical and real — a real person's creative workspace, not a polished corporate environment. Coffee mug nearby. Warm ambient light. 4:3 crop with negative space at top. The image conveys the editorial revision loop described in the article — personal voice being refined, not replaced.",
+        "placement": "s3",
+        "alt_text": "Songwriter comparing handwritten lyrics in a notebook with text on a laptop screen during a revision session",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T19:22:01.058Z"
+      }
     ]
   }
 ]
