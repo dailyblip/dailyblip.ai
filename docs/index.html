@@ -1,1291 +1,1326 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Privacy-friendly analytics by Plausible -->
+<script async src="https://plausible.io/js/pa-yNME_l48PyWaSQIr8NMk5.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dailyblip · admin</title>
-<meta name="robots" content="noindex, nofollow">
+<title>dailyblip — AI for creators, caught up in 60 seconds</title>
+<meta name="description" content="The Daily Blip: everything that happened in AI for people who make things — image, video, music, and words — compressed into a 60-second brief.">
+<link rel="canonical" href="https://dailyblip.ai/">
+<link rel="alternate" type="application/rss+xml" title="dailyblip RSS" href="/feed.xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="dailyblip">
+<meta property="og:title" content="dailyblip — AI creator signal, zero slop">
+<meta property="og:description" content="A ruthlessly curated AI-creator brief. Catch up in 60 seconds, daily.">
+<meta property="og:url" content="https://dailyblip.ai/">
+<meta property="og:image" content="https://dailyblip.ai/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="dailyblip — AI creator signal, zero slop">
+<meta name="twitter:description" content="A ruthlessly curated AI-creator brief. Catch up in 60 seconds, daily.">
+<meta name="twitter:image" content="https://dailyblip.ai/og-image.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"dailyblip","url":"https://dailyblip.ai/","description":"A ruthlessly curated AI-creator brief — only the signal, none of the slop.","potentialAction":{"@type":"SearchAction","target":"https://dailyblip.ai/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..700&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<script src="stack.js" defer></script>
 <style>
 :root{
-  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13); --line-2:rgba(158,216,210,.28);
-  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79;
-  --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6; --red:#FF7A6B;
+  --ink:#071A1F;
+  --ink-2:#0C242B;
+  --ink-3:#123039;
+  --line:rgba(158,216,210,.13);
+  --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1;
+  --dim:#9AB7B2;
+  --faint:#5E7D79;
+  --amber:#FFB454;
+  --amber-deep:#E58E2B;
+  --aqua:#63D8C6;
+  --red:#FF7A6B;
   --display:"Bricolage Grotesque",sans-serif;
   --body:"Spline Sans",sans-serif;
   --mono:"Spline Sans Mono",monospace;
+  --radius:10px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:14.5px;line-height:1.5;-webkit-font-smoothing:antialiased}
-a{color:var(--amber);text-decoration:none}
-a:hover{text-decoration:underline}
+html{scroll-behavior:smooth}
+html,body{overflow-x:hidden;max-width:100%}
+body{
+  background:var(--ink);
+  color:var(--text);
+  font-family:var(--body);
+  font-size:15.5px;
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(1200px 500px at 75% -10%, rgba(99,216,198,.06), transparent 60%),
+    radial-gradient(900px 600px at 8% 110%, rgba(255,180,84,.05), transparent 55%);
+}
+a{color:inherit;text-decoration:none}
 button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
-input,textarea,select{font-family:inherit;color:var(--text);background:var(--ink);
-  border:1px solid var(--line-2);border-radius:6px;padding:8px 10px;outline:none;width:100%;font-size:13.5px}
-input:focus,textarea:focus,select:focus{border-color:var(--aqua)}
-textarea{resize:vertical;min-height:60px;font-size:13px;line-height:1.5}
-label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
-  text-transform:uppercase;color:var(--faint);margin-bottom:5px}
+::selection{background:rgba(255,180,84,.35)}
 
-/* layout */
-.bar{background:var(--ink-2);border-bottom:1px solid var(--line);padding:14px 22px;
-  display:flex;align-items:center;gap:18px;flex-wrap:wrap;position:sticky;top:0;z-index:10}
-.bar .mark{font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:-.01em}
-.bar .mark span{color:var(--amber)}
-.bar .mark .adm{color:var(--faint);font-weight:400;font-size:14px;margin-left:6px}
-.bar .meta{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
-.bar .grow{flex:1}
-.status{font-family:var(--mono);font-size:11.5px;padding:5px 10px;border-radius:99px;border:1px solid var(--line-2)}
-.status.ok{color:var(--aqua);border-color:rgba(99,216,198,.4)}
-.status.dirty{color:var(--amber);border-color:rgba(255,180,84,.5)}
-.status.err{color:var(--red);border-color:rgba(255,122,107,.5)}
+/* ---------- ticker ---------- */
+.ticker{
+  position:relative;z-index:2;
+  border-bottom:1px solid var(--line);
+  background:var(--ink-2);
+  overflow:hidden;white-space:nowrap;
+  font-family:var(--mono);font-size:12px;letter-spacing:.02em;
+  display:flex;align-items:center;
+}
+.ticker-label{
+  flex:0 0 auto;padding:7px 14px;
+  color:var(--amber);border-right:1px solid var(--line);
+  background:var(--ink-2);position:relative;z-index:2;
+  display:flex;gap:8px;align-items:center;
+}
+.ticker-viewport{flex:1;overflow:hidden}
+.ticker-track{display:inline-block;padding:7px 0;animation:tick 55s linear infinite}
+.ticker-track span{color:var(--dim);margin-right:3.5em}
+.ticker-track b{color:var(--text);font-weight:500}
+.ticker-track em{color:var(--amber);font-style:normal}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker:hover .ticker-track{animation-play-state:paused}
 
-.wrap{max-width:1100px;margin:0 auto;padding:22px}
-.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:22px;flex-wrap:wrap}
-.tab{padding:9px 14px;font-family:var(--mono);font-size:12.5px;color:var(--dim);
-  border-bottom:2px solid transparent;margin-bottom:-1px}
-.tab:hover{color:var(--text)}
-.tab.active{color:var(--amber);border-bottom-color:var(--amber)}
-.tab .n{opacity:.55;margin-left:6px}
+/* ---------- heat movement arrows ---------- */
+.mv{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.02em}
+.mv.up{color:var(--aqua)}
+.mv.dn{color:var(--faint)}
+.mv.nw{color:var(--amber)}
 
-.card{border:1px solid var(--line);border-radius:10px;background:var(--ink-2);padding:16px 18px;margin-bottom:12px}
-.card.locked{border-left:3px solid var(--amber)}
-.card.spot{border-left:3px solid var(--aqua)}
-.card.blocked{opacity:.4}
-.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.rowmeta{font-family:var(--mono);font-size:11px;color:var(--faint);display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px}
-.rowmeta .id{color:var(--dim);cursor:pointer}
-.card h3{font-family:var(--display);font-weight:640;font-size:16.5px;line-height:1.3;margin:2px 0 4px}
-.card p{color:var(--dim);font-size:13.5px}
-.card .foot{margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--faint);display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-.foot .grow{flex:1}
+/* ---------- streak chip ---------- */
+.streak-chip{
+  display:none;align-items:center;gap:5px;
+  font-family:var(--mono);font-size:11px;color:var(--amber);
+  border:1px solid rgba(255,180,84,.4);border-radius:999px;padding:4px 11px;
+}
+.streak-chip.show{display:inline-flex}
 
-.actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.btn{padding:6px 12px;font-family:var(--mono);font-size:11.5px;border-radius:6px;
-  border:1px solid var(--line-2);color:var(--dim);transition:all .12s}
-.btn:hover{border-color:var(--text);color:var(--text)}
-.btn.primary{background:var(--amber);border-color:var(--amber);color:#20160a;font-weight:600}
-.btn.primary:hover{filter:brightness(1.08)}
-.btn.aqua{color:var(--aqua);border-color:rgba(99,216,198,.4)}
-.btn.aqua.on{background:var(--aqua);color:#0a2622}
-.btn.amber{color:var(--amber);border-color:rgba(255,180,84,.5)}
-.btn.amber.on{background:var(--amber);color:#20160a}
-.btn.red{color:var(--red);border-color:rgba(255,122,107,.5)}
-.btn.red:hover{background:rgba(255,122,107,.15)}
-.stagelist{list-style:none;padding:0}
-.stagelist li{display:flex;align-items:center;gap:10px;padding:9px 0;font-size:13px;color:var(--faint);border-bottom:1px solid var(--line)}
-.stagelist li:last-child{border-bottom:none}
-.stagelist .dot{width:8px;height:8px;border-radius:50%;background:var(--line-2);flex-shrink:0}
-.stagelist li.done{color:var(--dim)}
-.stagelist li.done .dot{background:var(--aqua)}
-.stagelist li.current{color:var(--amber);font-weight:600}
-.stagelist li.current .dot{background:var(--amber);box-shadow:0 0 0 4px rgba(255,180,84,.18)}
-.btn:disabled{opacity:.4;cursor:not-allowed}
+/* ---------- stale banner (dead man's switch) ---------- */
+.stale{
+  display:none;position:relative;z-index:2;
+  background:rgba(255,180,84,.1);border-bottom:1px solid rgba(255,180,84,.3);
+  padding:8px 24px;text-align:center;
+  font-family:var(--mono);font-size:12px;color:var(--amber);
+}
 
-.editor{margin-top:12px;padding-top:12px;border-top:1px solid var(--line);display:none}
-.editor.open{display:block}
-.editor label{margin-top:8px}
-.editor .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.editor .save-row{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+/* ---------- creator spotlight ---------- */
+.spotlight{margin-top:26px}
+.spot-head{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--aqua);display:flex;align-items:center;gap:10px;margin-bottom:12px;
+}
+.spot-head::before{content:"✦"}
+.spot-head::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(99,216,198,.4),transparent)}
+.spot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.spot-card{
+  border:1px solid rgba(99,216,198,.3);border-radius:var(--radius);
+  background:linear-gradient(165deg,rgba(99,216,198,.07),var(--ink-2) 55%);
+  padding:16px 18px;transition:border-color .15s ease, transform .15s ease;
+}
+.spot-card:hover{border-color:rgba(99,216,198,.6);transform:translateY(-2px)}
+.spot-card h3{font-family:var(--display);font-weight:640;font-size:16px;line-height:1.35;margin-bottom:6px}
+.spot-card h3 a:hover{color:var(--aqua)}
+.spot-card p{color:var(--dim);font-size:13px;line-height:1.5}
+.spot-card .foot{margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--faint)}
+.story .spot-flag{color:var(--aqua);font-size:10.5px;letter-spacing:.08em}
 
-.empty{border:1px dashed var(--line-2);border-radius:10px;padding:32px;text-align:center;
-  font-family:var(--mono);font-size:12.5px;color:var(--faint)}
-.searchbar{margin-bottom:16px}
-.searchbar input{max-width:360px}
+/* ---------- tool drop (premium, full-width — the sponsorship slot) ---------- */
+.tooldrop-feature{margin-top:30px}
+.td-eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:12px;
+}
+.td-eyebrow::before{content:"⚡"}
+.td-eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(255,180,84,.5),transparent)}
+.td-card{
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
+  border:1px solid rgba(255,180,84,.4);border-radius:16px;
+  background:linear-gradient(120deg,rgba(255,180,84,.10),var(--ink-2) 60%);
+  padding:26px 30px;
+  box-shadow:0 0 0 1px rgba(255,180,84,.05), 0 12px 40px -12px rgba(255,180,84,.18);
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.td-card:hover{
+  border-color:rgba(255,180,84,.7);
+  box-shadow:0 0 0 1px rgba(255,180,84,.1), 0 16px 48px -10px rgba(255,180,84,.28);
+}
+.td-card::before{
+  content:"";position:absolute;top:-40%;right:-10%;width:60%;height:180%;
+  background:radial-gradient(circle, rgba(255,180,84,.12), transparent 70%);pointer-events:none;
+}
+.td-main{position:relative;z-index:1;flex:1;min-width:240px}
+.td-name{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--text);margin-bottom:8px}
+.td-blurb{font-size:14.5px;line-height:1.55;color:var(--dim);max-width:520px}
+.td-meta{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-top:10px;letter-spacing:.02em}
+.td-cta{
+  position:relative;z-index:1;flex:0 0 auto;
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--amber);color:#20160a;font-weight:700;font-size:14.5px;
+  padding:14px 26px;border-radius:10px;white-space:nowrap;
+  transition:filter .15s ease, transform .15s ease;
+}
+.td-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.td-cta span{transition:transform .15s ease}
+.td-cta:hover span{transform:translateX(3px)}
 
-/* modal / auth */
-.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;
-  align-items:center;justify-content:center;z-index:100;padding:22px}
-.modal-bg.open{display:flex}
-.modal{background:var(--ink-2);border:1px solid var(--line-2);border-radius:12px;
-  padding:26px;max-width:480px;width:100%}
-.modal h2{font-family:var(--display);font-weight:700;font-size:22px;margin-bottom:8px}
-.modal p{color:var(--dim);font-size:13.5px;margin-bottom:14px}
-.modal code{background:var(--ink);padding:2px 6px;border-radius:4px;font-size:12px;color:var(--amber)}
-.modal .row2{display:flex;gap:8px;margin-top:14px}
-.modal ul{color:var(--dim);font-size:13px;padding-left:18px;margin:8px 0 14px}
-.modal ul li{margin:4px 0}
-.err-inline{color:var(--red);font-family:var(--mono);font-size:12px;margin-top:8px;display:none}
+/* ---------- header ---------- */
+header{
+  position:relative;z-index:2;
+  max-width:1180px;margin:0 auto;padding:30px 24px 0;
+}
+.masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.wordmark{font-family:var(--display);font-weight:750;font-size:clamp(28px,4.5vw,42px);letter-spacing:-.02em;display:flex;align-items:center;gap:2px}
+.wordmark .blip-dot{
+  width:.34em;height:.34em;border-radius:50%;
+  background:var(--amber);display:inline-block;margin-left:.18em;
+  box-shadow:0 0 0 0 rgba(255,180,84,.6);
+  animation:ping 2.4s ease-out infinite;
+}
+@keyframes ping{
+  0%{box-shadow:0 0 0 0 rgba(255,180,84,.55)}
+  70%{box-shadow:0 0 0 14px rgba(255,180,84,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,180,84,0)}
+}
+.wordmark .ai-hl{color:var(--amber)}
+.headmeta{font-family:var(--mono);font-size:12px;color:var(--dim);display:flex;gap:18px;align-items:center}
+.headmeta .live{color:var(--aqua)}
+.headmeta .live::before{content:"●";margin-right:6px;animation:blink 2s steps(2) infinite}
+@keyframes blink{50%{opacity:.35}}
+.tagline{margin-top:6px;color:var(--dim);font-size:14.5px}
 
-/* toast */
-.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);
-  background:var(--ink-2);border:1px solid var(--line-2);border-radius:8px;
-  padding:10px 16px;font-family:var(--mono);font-size:12.5px;
-  z-index:200;display:none;box-shadow:0 8px 30px rgba(0,0,0,.4);max-width:calc(100vw - 44px)}
-.toast.ok{border-color:rgba(99,216,198,.5);color:var(--aqua)}
-.toast.err{border-color:rgba(255,122,107,.5);color:var(--red)}
-.toast.show{display:block}
+nav.cats{
+  display:flex;gap:6px;flex-wrap:wrap;
+  margin-top:22px;padding-bottom:14px;border-bottom:1px solid var(--line);
+}
+.cat{
+  font-family:var(--mono);font-size:12.5px;letter-spacing:.02em;
+  padding:6px 13px;border-radius:999px;border:1px solid var(--line);
+  color:var(--dim);transition:all .15s ease;
+}
+.cat:hover{border-color:var(--line-strong);color:var(--text)}
+.cat.active{background:var(--amber);border-color:var(--amber);color:#20160a;font-weight:600}
+.cat .count{opacity:.6;margin-left:5px}
 
-/* brief / tooldrop / overrides panels */
-.panel{border:1px solid var(--line);border-radius:10px;background:var(--ink-2);padding:18px 20px;margin-bottom:14px}
-.panel > h3{font-family:var(--display);font-weight:640;font-size:17px;margin-bottom:10px}
-.brief-item{display:flex;gap:12px;padding:10px;border-radius:6px;background:var(--ink);margin-bottom:8px;align-items:flex-start}
-.brief-item .num{color:var(--amber);font-family:var(--mono);font-size:12px;min-width:18px}
-.brief-item input{background:transparent;border:none;border-bottom:1px dashed var(--line);border-radius:0;padding:2px 0}
-.brief-item input:focus{border-bottom-color:var(--aqua)}
-.brief-item .secs{max-width:60px;text-align:center;font-family:var(--mono);font-size:11px}
-.brief-item select{max-width:180px;font-family:var(--mono);font-size:11px}
+/* ---------- layout ---------- */
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:26px 24px 80px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:36px;margin-top:34px}
 
-.tip{color:var(--faint);font-size:12px;font-family:var(--mono);margin-top:6px}
-.tag-pill{display:inline-block;padding:2px 8px;border-radius:4px;font-family:var(--mono);font-size:11px;
-  border:1px solid var(--line-2);color:var(--dim);margin-right:4px}
+/* ---------- THE BLIP briefing ---------- */
+.brief{
+  border:1px solid var(--line-strong);
+  border-radius:14px;
+  background:linear-gradient(160deg,var(--ink-2),rgba(18,48,57,.55));
+  overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,1fr) 250px;
+}
+.brief-main{padding:26px 28px 24px}
+.brief-eyebrow{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber);display:flex;align-items:center;gap:10px;
+}
+.brief-eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--amber-deep),transparent);opacity:.5}
+.brief h1{
+  font-family:var(--display);font-weight:700;font-size:clamp(22px,3.2vw,30px);
+  letter-spacing:-.015em;margin:10px 0 4px;
+}
+.brief-sub{color:var(--dim);font-size:14px;margin-bottom:18px}
+.brief-sub b{color:var(--text);font-weight:600}
+
+.brief-items{list-style:none;display:flex;flex-direction:column}
+.brief-item{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:11px 10px;margin:0 -10px;border-radius:8px;
+  cursor:pointer;transition:background .15s ease;
+  border-top:1px solid var(--line);
+}
+.brief-item:first-child{border-top:none}
+.brief-item:hover{background:rgba(99,216,198,.06)}
+.brief-item .marker{
+  flex:0 0 auto;width:22px;height:22px;margin-top:2px;border-radius:50%;
+  border:1.5px solid var(--amber-deep);position:relative;
+  display:grid;place-items:center;
+  font-family:var(--mono);font-size:10.5px;color:var(--amber);
+  transition:all .2s ease;
+}
+.brief-item.read .marker{background:var(--amber);border-color:var(--amber);color:#20160a;font-weight:700}
+.brief-item.read .marker::after{content:"✓"}
+.brief-item.read .num{display:none}
+.brief-item p{font-size:14.5px;line-height:1.5;color:var(--text)}
+.brief-item.read p{color:var(--faint)}
+.brief-item p b{color:var(--amber);font-weight:600}
+.brief-item.read p b{color:var(--faint)}
+.brief-item .secs{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:4px}
+
+/* impact hierarchy — items arrive pre-sorted by impact score (highest
+   first); position in the list drives the visual weight, so the reader
+   SEES "this is the big one" rather than just inferring it from order. */
+.brief-item.impact-hero{background:linear-gradient(90deg,rgba(255,180,84,.08),transparent 60%)}
+.brief-item.impact-hero p{font-size:16.5px;font-weight:600;line-height:1.45}
+.brief-item.impact-hero .marker{width:26px;height:26px;border-width:2px}
+.brief-item.impact-high p{font-size:15.5px}
+
+.hw-flag{
+  display:inline-flex;align-items:center;gap:4px;margin-right:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--dim);border:1px solid var(--line-strong);border-radius:4px;padding:1px 6px;
+  vertical-align:middle;
+}
+.hw-flag::before{content:"⚙"}
+
+.tracking-flag{
+  display:inline-flex;align-items:center;gap:4px;margin-right:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--amber);border:1px solid rgba(255,180,84,.5);border-radius:4px;padding:1px 6px;
+  vertical-align:middle;
+}
+.tracking-flag::before{content:"📌"}
+
+.commentary-flag{
+  display:inline-flex;align-items:center;gap:4px;margin-right:7px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--aqua);border:1px solid rgba(99,216,198,.4);border-radius:4px;padding:1px 6px;
+  vertical-align:middle;
+}
+.commentary-flag::before{content:"◆"}
+
+.brief-progress{margin-top:16px;display:flex;align-items:center;gap:14px}
+.pbar{flex:1;height:4px;border-radius:99px;background:rgba(158,216,210,.12);overflow:hidden}
+.pbar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--amber-deep),var(--amber));border-radius:99px;transition:width .35s ease}
+.pstat{font-family:var(--mono);font-size:11.5px;color:var(--dim);white-space:nowrap}
+.pstat.done{color:var(--aqua)}
+
+/* radar scope */
+.scope{
+  border-left:1px solid var(--line);
+  background:radial-gradient(circle at 50% 50%, rgba(99,216,198,.05), transparent 70%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:20px;gap:12px;
+}
+.scope-title{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.radar{position:relative;width:180px;height:180px}
+.radar svg{width:100%;height:100%;display:block}
+.sweep{
+  position:absolute;inset:0;border-radius:50%;
+  background:conic-gradient(from 0deg, rgba(99,216,198,.28), transparent 18%);
+  animation:sweep 5s linear infinite;
+  -webkit-mask:radial-gradient(circle, black 98%, transparent 100%);
+  mask:radial-gradient(circle, black 98%, transparent 100%);
+}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.radar .blip{
+  position:absolute;width:8px;height:8px;border-radius:50%;
+  background:var(--amber);transform:translate(-50%,-50%);
+  box-shadow:0 0 6px rgba(255,180,84,.8);
+  transition:all .2s ease;
+}
+.radar .blip.hot{width:13px;height:13px;box-shadow:0 0 14px rgba(255,180,84,1)}
+.radar .blip.read{background:var(--faint);box-shadow:none}
+.scope-caption{font-family:var(--mono);font-size:10.5px;color:var(--faint);text-align:center;line-height:1.6}
+.scope-caption b{color:var(--aqua);font-weight:500}
+
+/* ---------- feed ---------- */
+.feed-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.feed-title{font-family:var(--display);font-weight:650;font-size:20px;letter-spacing:-.01em}
+.search{
+  flex:0 1 260px;display:flex;align-items:center;gap:8px;
+  border:1px solid var(--line);border-radius:8px;padding:7px 12px;
+  background:var(--ink-2);
+}
+.search input{
+  flex:1;background:none;border:none;outline:none;color:var(--text);
+  font-family:var(--mono);font-size:12.5px;min-width:0;
+}
+.search input::placeholder{color:var(--faint)}
+.search svg{flex:0 0 auto;opacity:.5}
+
+.story{
+  display:block;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--ink-2);padding:18px 20px;margin-bottom:12px;
+  transition:border-color .15s ease, transform .15s ease;
+}
+.story:hover{border-color:var(--line-strong);transform:translateX(3px)}
+.story.top-story{border-color:rgba(255,180,84,.45);background:linear-gradient(155deg,rgba(255,180,84,.07),var(--ink-2) 45%)}
+.story-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:8px}
+.tag{
+  padding:2px 9px;border-radius:4px;font-size:11px;letter-spacing:.03em;
+  border:1px solid var(--line-strong);color:var(--dim);
+}
+.tag.c-image{color:#F1B27A;border-color:rgba(241,178,122,.4)}
+.tag.c-video{color:#9BD8C9;border-color:rgba(155,216,201,.4)}
+.tag.c-music{color:#C9B8F2;border-color:rgba(201,184,242,.4)}
+.tag.c-writing{color:#9FC1F5;border-color:rgba(159,193,245,.4)}
+.tag.c-tools{color:#E8D998;border-color:rgba(232,217,152,.4)}
+.tag.c-rights{color:#F0A9A9;border-color:rgba(240,169,169,.4)}
+.tag.c-industry{color:#A9E3B8;border-color:rgba(169,227,184,.4)}
+.badge{font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:4px}
+.badge.breaking{background:rgba(255,122,107,.16);color:var(--red)}
+.badge.hot{background:rgba(255,180,84,.16);color:var(--amber)}
+.badge.new{background:rgba(99,216,198,.14);color:var(--aqua)}
+.story h3{
+  font-family:var(--display);font-weight:640;font-size:18.5px;line-height:1.32;
+  letter-spacing:-.008em;margin-bottom:6px;
+}
+.story h3 a:hover{color:var(--amber)}
+.story.top-story h3{font-size:24px}
+.story p{color:var(--dim);font-size:14px;line-height:1.55}
+.story .foot{margin-top:10px;font-family:var(--mono);font-size:11.5px;color:var(--faint)}
+.story .foot b{color:var(--dim);font-weight:500}
+.top-label{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:8px;display:flex;align-items:center;gap:8px;
+}
+.top-label::before{content:"◉"}
+.empty{
+  border:1px dashed var(--line-strong);border-radius:var(--radius);
+  padding:36px;text-align:center;color:var(--faint);font-family:var(--mono);font-size:13px;
+  display:none;
+}
+.loadmore{
+  width:100%;padding:12px;border:1px solid var(--line);border-radius:var(--radius);
+  font-family:var(--mono);font-size:12.5px;color:var(--dim);margin-top:6px;
+  transition:all .15s ease;
+}
+.loadmore:hover{border-color:var(--amber-deep);color:var(--amber)}
+
+/* ---------- older signals (stale-trim) ---------- */
+.older-toggle{
+  width:100%;padding:13px;margin-top:10px;border:1px dashed var(--line-strong);
+  border-radius:var(--radius);font-family:var(--mono);font-size:12px;
+  color:var(--faint);letter-spacing:.03em;transition:all .15s ease;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.older-toggle::before{content:"◷"}
+.older-toggle:hover{border-color:var(--line-strong);color:var(--dim);background:rgba(158,216,210,.03)}
+.older-signals{margin-top:12px;opacity:.62;transition:opacity .15s ease}
+.older-signals:hover{opacity:.85}
+.older-signals .story{padding:14px 18px;margin-bottom:9px}
+.older-signals .story h3{font-size:16.5px}
+.older-signals .story p{font-size:13px}
+.older-signals-head{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:10px;display:flex;align-items:center;gap:8px;
+}
+.older-signals-head::after{content:"";height:1px;flex:1;background:var(--line)}
+
+/* ---------- sidebar ---------- */
+aside{display:flex;flex-direction:column;gap:26px}
+.panel{border:1px solid var(--line);border-radius:var(--radius);background:var(--ink-2);padding:18px 18px 16px}
+.panel h4{
+  font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--faint);margin-bottom:14px;display:flex;align-items:center;gap:8px;
+}
+.panel h4::after{content:"";flex:1;height:1px;background:var(--line)}
+.mrow{display:flex;align-items:center;justify-content:space-between;padding:5.5px 0;font-size:13.5px}
+.mrow .mname{color:var(--text)}
+.mrow .mstate{font-family:var(--mono);font-size:11px;display:flex;align-items:center;gap:6px}
+.mstate.live{color:var(--aqua)}.mstate.preview{color:var(--amber)}.mstate.limited{color:var(--dim)}.mstate.rumored{color:var(--faint)}.mstate.sunset{color:var(--red)}
+.mstate i{font-style:normal}
+.tooldrop-name{font-family:var(--display);font-weight:650;font-size:15.5px;color:var(--text);margin-bottom:5px}
+.tooldrop-body{font-size:13.5px;line-height:1.55;color:var(--dim)}
+.tooldrop-meta{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:9px}
+.tooldrop-meta a{color:var(--amber)}
+.srow{display:flex;align-items:center;justify-content:space-between;padding:4.5px 0;font-size:13px;color:var(--dim)}
+.srow .sbar{flex:0 0 84px;height:3px;border-radius:99px;background:rgba(158,216,210,.1);margin-left:12px;overflow:hidden}
+.srow .sbar i{display:block;height:100%;background:var(--aqua);opacity:.65;border-radius:99px}
+.srow .sn{font-family:var(--mono);font-size:11px;color:var(--faint);margin-left:10px;min-width:26px;text-align:right}
+.num-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.num-cell{border:1px solid var(--line);border-radius:8px;padding:12px 12px 10px}
+.num-cell b{display:block;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--amber)}
+.num-cell span{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.04em}
+.topics{display:flex;flex-wrap:wrap;gap:7px}
+.topic{
+  font-family:var(--mono);font-size:11.5px;padding:5px 11px;border-radius:999px;
+  border:1px solid var(--line);color:var(--dim);transition:all .15s ease;
+}
+.topic:hover{border-color:var(--amber-deep);color:var(--amber)}
+
+/* subscribe — moved from the sidebar into the brief itself, right after
+   the six items, deliberately more prominent than the old small sidebar
+   box since this is the page's highest-engagement moment. */
+.brief-subscribe{
+  margin-top:24px;padding:22px 24px;border-radius:14px;
+  border:1px solid rgba(255,180,84,.3);
+  background:linear-gradient(120deg,rgba(255,180,84,.07),var(--ink-2) 65%);
+  display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+}
+.bs-copy{flex:1;min-width:220px}
+.bs-head{font-family:var(--display);font-weight:700;font-size:17px;color:var(--text);margin-bottom:4px}
+.brief-subscribe p{color:var(--dim);font-size:13.5px;line-height:1.5}
+.bs-form{display:flex;gap:8px;flex:0 0 auto}
+.bs-form input{
+  background:var(--ink);border:1px solid var(--line-strong);border-radius:8px;
+  padding:11px 14px;color:var(--text);font-family:var(--mono);font-size:13px;outline:none;min-width:200px;
+  transition:border-color .15s ease;
+}
+.bs-form input:focus{border-color:var(--amber-deep)}
+.bs-form button{
+  background:var(--amber);color:#20160a;font-weight:700;font-size:13.5px;
+  border-radius:8px;padding:11px 20px;white-space:nowrap;transition:filter .15s ease;
+}
+.bs-form button:hover{filter:brightness(1.1)}
+.sub-ok{display:none;color:var(--aqua);font-family:var(--mono);font-size:12.5px;margin-top:12px;width:100%}
+
+/* ---------- footer ---------- */
+footer{
+  position:relative;z-index:1;
+  border-top:1px solid var(--line);margin-top:20px;
+  padding:26px 24px 40px;
+}
+.foot-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:12px;color:var(--faint)}
+.foot-in a:hover{color:var(--amber)}
+.foot-links{display:flex;gap:18px}
+
+/* focus states */
+a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--aqua);outline-offset:2px;border-radius:4px;
+}
+
+/* ---------- Blip sprite (site mascot, bottom-right) ---------- */
+.blip-sprite{
+  position:fixed;right:18px;bottom:18px;z-index:40;
+  transition:opacity .3s ease,transform .3s ease;
+}
+.blip-sprite.hidden{opacity:0;transform:translateY(16px) scale(.85);pointer-events:none}
+.blip-sprite-btn{
+  display:block;width:72px;height:88px;padding:0;position:relative;z-index:1;
+  animation:blipFloat 4.2s ease-in-out infinite;
+  transition:transform .2s ease;
+}
+.blip-sprite-btn:hover,.blip-sprite-btn:focus-visible{
+  animation-play-state:paused;transform:translateY(-4px) scale(1.05);
+}
+.blip-sprite-btn svg{display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.4))}
+.blip-body,.blip-arm{fill:var(--ink-2);stroke:var(--aqua);stroke-width:1.5}
+.blip-antenna{fill:none;stroke:var(--aqua);stroke-width:2.5;stroke-linecap:round}
+.blip-antenna-tip{fill:var(--aqua)}
+.blip-glow{fill:var(--aqua);opacity:.18}
+.blip-eye{
+  fill:var(--amber);stroke:var(--ink-2);stroke-width:1.5;
+  transform-origin:70px 75px;animation:blipBlink 6.5s ease-in-out infinite;
+}
+.blip-eye-highlight{fill:var(--text)}
+.blip-dismiss{
+  position:absolute;top:-6px;right:-6px;width:20px;height:20px;border-radius:50%;z-index:2;
+  background:var(--ink-2);border:1px solid var(--line-strong);color:var(--dim);
+  font-family:var(--mono);font-size:12px;line-height:1;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity .15s ease,border-color .15s ease,color .15s ease;
+}
+.blip-sprite:hover .blip-dismiss,.blip-dismiss:focus-visible{opacity:1}
+.blip-dismiss:hover{color:var(--text);border-color:var(--amber-deep)}
+.blip-sprite.waving .blip-sprite-btn{animation:blipWave .6s ease}
+
+@keyframes blipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes blipBlink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}97%{transform:scaleY(1)}}
+@keyframes blipWave{0%{transform:translateY(0) rotate(0)}30%{transform:translateY(-14px) rotate(-6deg)}60%{transform:translateY(-4px) rotate(4deg)}100%{transform:translateY(0) rotate(0)}}
+
+@media(max-width:560px){
+  .blip-sprite{right:12px;bottom:12px}
+  .blip-sprite-btn{width:52px;height:64px}
+}
+
+/* ---------- responsive ---------- */
+@media(max-width:980px){
+  .cols{grid-template-columns:1fr}
+  .brief{grid-template-columns:1fr}
+  .scope{border-left:none;border-top:1px solid var(--line);flex-direction:row;justify-content:space-around}
+  .radar{width:130px;height:130px}
+}
+@media(max-width:560px){
+  .brief-main{padding:20px 18px}
+  .scope{flex-direction:column}
+  .headmeta{display:none}
+
+  /* newsletter form: the desktop layout gives the input a hard 200px
+     floor so it never looks cramped next to the button — on a phone
+     that floor is wider than the available row, so instead of wrapping
+     cleanly it was pushing the whole row (and page) past the viewport
+     edge. Stacking input above button removes the fixed floor entirely. */
+  .brief-subscribe{flex-direction:column;align-items:stretch;padding:18px 16px}
+  .bs-form{flex-direction:column;width:100%}
+  .bs-form input{min-width:0;width:100%}
+  .bs-form button{width:100%}
+
+  /* tool drop card: the desktop background pairs a 120deg linear-gradient
+     with a radial ::before glow, both tuned for a wide/short box. On
+     mobile the card becomes tall/narrow instead (content stacks), which
+     shifts where the gradient's color stop visually lands and shows up
+     as a hard seam partway down the card. Simplifying to one gentler,
+     mostly-vertical gradient and dropping the glow avoids the seam
+     regardless of how tall the stacked content makes the card. */
+  .td-card{
+    flex-direction:column;align-items:stretch;gap:18px;
+    padding:22px 20px;
+    background:linear-gradient(175deg,rgba(255,180,84,.09),var(--ink-2) 55%);
+  }
+  .td-card::before{display:none}
+  .td-cta{justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){
+  .ticker-track{animation:none}
+  .sweep{animation:none;opacity:.25}
+  .wordmark .blip-dot,.headmeta .live::before{animation:none}
+  .blip-sprite-btn,.blip-eye{animation:none}
+  html{scroll-behavior:auto}
+}
 </style>
 </head>
 <body>
 
-<!-- Auth modal -->
-<div class="modal-bg" id="authModal">
-  <div class="modal">
-    <h2>Connect to your repo</h2>
-    <p>This is a static admin. It talks directly to GitHub — no backend, no server, nothing between you and your repo.</p>
-    <label>GitHub repo</label>
-    <input id="cfgRepo" placeholder="username/dailyblip" spellcheck="false">
-    <label style="margin-top:12px">GitHub personal access token</label>
-    <input id="cfgToken" type="password" placeholder="ghp_ or github_pat_..." spellcheck="false" autocomplete="off">
-    <p style="margin-top:14px">Create a fine-scoped token here: <a href="https://github.com/settings/tokens?type=beta" target="_blank" rel="noopener">github.com/settings/tokens</a></p>
-    <ul>
-      <li><b>Resource owner:</b> your username · <b>Repositories:</b> only this repo</li>
-      <li><b>Permissions:</b> <code>Contents: Read and write</code> (nothing else)</li>
-      <li>The token stays in this browser (localStorage). Never sent anywhere but GitHub.</li>
-    </ul>
-    <div class="row2">
-      <button class="btn primary" id="cfgSave" style="flex:1">Connect</button>
-    </div>
-    <div class="err-inline" id="cfgErr"></div>
-  </div>
+<!-- ticker -->
+<div class="ticker" role="marquee" aria-label="Latest headlines">
+  <div class="ticker-label"><span aria-hidden="true">⦿</span> INCOMING</div>
+  <div class="ticker-viewport"><div class="ticker-track" id="tickerTrack"></div></div>
 </div>
 
-<!-- Top bar -->
-<div class="bar">
-  <div class="mark">d<span>ai</span>lyblip<span class="adm">/ admin</span></div>
-  <div class="meta" id="repoMeta">not connected</div>
-  <div class="grow"></div>
-  <div class="status" id="status">idle</div>
-  <button class="btn" id="reloadBtn" title="Reload from GitHub">↻ reload</button>
-  <button class="btn primary" id="publishBtn" disabled>Publish</button>
-  <button class="btn" id="disconnectBtn" title="Forget this device's credentials">disconnect</button>
-</div>
+<div class="stale" id="staleBanner">⚠ feed paused — showing last known signals from <span id="staleDate"></span></div>
+
+<header>
+  <div class="masthead">
+    <div class="wordmark">d<span class="ai-hl">ai</span>lyblip<span class="blip-dot" aria-hidden="true"></span></div>
+    <div class="headmeta" id="headMeta">
+      <span class="streak-chip" id="streakChip" title="Days in a row you've finished the brief">🔥 <span id="streakN"></span></span>
+      <span id="dateline"></span>
+      <span id="lastSync"></span>
+      <span class="live">signal strong</span>
+    </div>
+  </div>
+  <p class="tagline">A ruthlessly curated AI-creator brief — only the signal, none of the slop. Compressed into 60 seconds daily.</p>
+  <nav class="cats" id="catNav" aria-label="Filter by category"></nav>
+</header>
 
 <div class="wrap">
-  <div class="tabs">
-    <button class="tab active" data-tab="stories">Stories <span class="n" id="nStories"></span></button>
-    <button class="tab" data-tab="brief">Today's brief</button>
-    <button class="tab" data-tab="tooldrop">Tool drop</button>
-    <button class="tab" data-tab="overrides">Overrides</button>
-    <button class="tab" data-tab="guides">Guides</button>
-    <button class="tab" data-tab="new">+ Add story</button>
-  </div>
 
-  <div id="paneStories">
-    <div class="searchbar row">
-      <input id="searchInput" placeholder="search stories…">
-      <select id="filterSel" style="max-width:180px">
-        <option value="all">all</option>
-        <option value="spotlight">✦ spotlight only</option>
-        <option value="locked">locked only</option>
-        <option value="top">top signal only</option>
-      </select>
-      <button class="btn" id="expandAll">expand all</button>
-      <button class="btn" id="collapseAll">collapse</button>
-    </div>
-    <div class="searchbar row" id="bulkBar" style="display:none;align-items:center;gap:10px">
-      <span id="bulkCount" style="font-family:monospace;font-size:12.5px;opacity:.8"></span>
-      <button class="btn" id="bulkClear">clear selection</button>
-      <button class="btn red" id="bulkDelete">delete selected (blocklists them)</button>
-    </div>
-    <div class="searchbar row" style="padding-top:0;padding-bottom:6px">
-      <label style="margin:0;font-size:12.5px;display:flex;align-items:center;gap:6px">
-        <input type="checkbox" id="bulkSelectAll" style="width:auto">select all visible
-      </label>
-    </div>
-    <div id="storyList"></div>
-  </div>
-
-  <div id="paneBrief" style="display:none">
-    <div class="panel">
-      <h3 id="briefTitleView"></h3>
-      <label>Title</label>
-      <input id="briefTitleEdit">
-      <label style="margin-top:14px">Items <span class="tip">use &lt;b&gt;...&lt;/b&gt; around the key phrase — no other tags</span></label>
-      <div id="briefItems"></div>
-      <button class="btn" id="addBriefItem" style="margin-top:6px">+ add item (up to 6)</button>
-      <div class="tip">Reorder by dragging is not implemented — edit the story dropdown or delete + re-add.</div>
-    </div>
-  </div>
-
-  <div id="paneTooldrop" style="display:none">
-    <div class="panel">
-      <h3>Tool drop of the day</h3>
-      <label>Name</label><input id="tdName">
-      <label style="margin-top:10px">Blurb</label><textarea id="tdBlurb" rows="3"></textarea>
-      <label style="margin-top:10px">Meta line <span class="tip">e.g. "image · video — free tier"</span></label>
-      <input id="tdMeta">
-      <label style="margin-top:10px">URL</label><input id="tdUrl">
-      <div class="tip" style="margin-top:14px">Manual picks are pinned automatically — the tool-drop job won't overwrite them until you clear this panel.</div>
-      <button class="btn red" id="tdClear" style="margin-top:10px">Clear (let the pipeline pick tomorrow)</button>
-    </div>
-  </div>
-
-  <div id="paneOverrides" style="display:none">
-    <div class="panel">
-      <h3>Standing rules</h3>
-      <p class="tip" style="margin:0 0 12px">These persist across pipeline runs. The pipeline reads them before publishing.</p>
-
-      <label>Blocked story IDs <span class="tip">deleted stories are added here automatically — they never come back</span></label>
-      <textarea id="ovBlocked" rows="3" placeholder="s_abc123&#10;s_def456"></textarea>
-
-      <label style="margin-top:14px">Blocked terms <span class="tip">stories whose title contains any of these get dropped, case-insensitive</span></label>
-      <input id="ovBlockedTerms" placeholder="crypto, NFT, web3">
-
-      <label style="margin-top:14px">Pinned spotlight IDs <span class="tip">force these stories into the spotlight rail</span></label>
-      <input id="ovPinnedSpot" placeholder="s_abc123, s_def456">
-    </div>
-
-    <div class="panel" style="margin-top:14px">
-      <h3>Pin suggestions <span class="tip">auto-detected when a story is covered by 3+ of your sources — never applied automatically, your call each time</span></h3>
-      <div id="pinSuggestList"></div>
-    </div>
-  </div>
-
-  <div id="paneGuides" style="display:none">
-    <div class="row" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-      <h3 style="margin:0">History</h3>
-      <button class="btn" id="guideClearFinished">Clear finished</button>
-    </div>
-    <div id="guideList"></div>
-
-    <div class="panel" id="guideNewPanel">
-      <h3>New guide</h3>
-      <p class="tip" style="margin:0 0 12px">Generation takes several minutes — you can leave this tab, progress is saved.</p>
-      <label>Article idea</label>
-      <textarea id="gIdea" rows="3"></textarea>
-      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
-        <div><label>Article type</label>
-          <select id="gType">
-            <option>Practical guide</option><option>Top tools list</option><option>Tool comparison</option>
-            <option>Creator workflow</option><option>Monetization guide</option><option>Beginner explainer</option>
-            <option>Rights and platform guide</option>
-          </select></div>
-        <div><label>Target audience</label><input id="gAudience"></div>
+  <!-- THE BLIP -->
+  <section class="brief" aria-labelledby="briefTitle">
+    <div class="brief-main">
+      <div class="brief-eyebrow" id="briefEyebrow">The Daily Blip</div>
+      <h1 id="briefTitle"></h1>
+      <p class="brief-sub">Ranked by impact. Tap each to mark it read — <b>~60 seconds</b> total. Tap the text to jump to the full story.</p>
+      <ul class="brief-items" id="briefItems"></ul>
+      <div class="brief-progress">
+        <div class="pbar"><i id="pbarFill"></i></div>
+        <div class="pstat" id="pstat"></div>
       </div>
-      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
-        <div><label>Target length</label>
-          <select id="gLength">
-            <option>Quick</option><option selected>Standard</option><option>Deep dive</option>
-          </select></div>
-        <div><label>Images</label>
-          <select id="gImages"><option value="2">2 images</option><option value="3" selected>3 images</option></select></div>
-      </div>
-      <label style="margin-top:10px">Keywords / tools to mention (optional)</label>
-      <input id="gKeywords">
-      <label style="margin-top:10px">Editorial notes (optional)</label>
-      <textarea id="gNotes" rows="2"></textarea>
-      <div class="row" style="margin-top:12px;align-items:flex-start">
-        <label style="margin:0;display:flex;gap:8px"><input type="checkbox" id="gSynth" checked style="width:auto;margin-top:3px">
-          <span style="font-size:12.5px;color:var(--dim)">Allow synthesis from authoritative sources, independent reviews, and recurring user feedback without claiming dailyblip conducted original testing.</span>
-        </label>
-      </div>
-      <div class="save-row" style="display:flex;justify-content:flex-end;margin-top:16px">
-        <button class="btn primary" id="gGenerate">Generate guide</button>
+
+      <!-- Subscribe — moved here from the sidebar on purpose: this is the
+           moment someone has just gotten real value from the six things,
+           the highest-engagement point on the whole page. -->
+      <div class="brief-subscribe">
+        <div class="bs-copy">
+          <div class="bs-head">Get tomorrow's blip</div>
+          <p>One email, 6 a.m. daily. What changed in your creative stack — and nothing else.</p>
+        </div>
+        <form class="bs-form" id="subForm" data-buttondown="">
+          <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+          <button type="submit" id="subBtn">Get it</button>
+        </form>
+        <div class="sub-ok" id="subOk">✓ You're on the list. First blip lands tomorrow.</div>
       </div>
     </div>
-
-    <div class="panel" id="guideReviewPanel" style="display:none"></div>
-  </div>
-
-  <div id="paneNew" style="display:none">
-    <div class="panel">
-      <h3>Add a story manually</h3>
-      <p class="tip" style="margin:0 0 12px">For editorial adds — a maker you want to spotlight, an announcement no feed carried, etc.</p>
-      <label>Headline</label><input id="nwTitle">
-      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
-        <div><label>Category</label>
-          <select id="nwCat">
-            <option>image</option><option>video</option><option>music</option>
-            <option>writing</option><option>tools</option><option>rights</option><option>industry</option>
-          </select></div>
-        <div><label>Badge</label>
-          <select id="nwBadge"><option>new</option><option>hot</option><option>breaking</option></select></div>
+    <div class="scope" aria-hidden="true">
+      <div class="scope-title">signal scope</div>
+      <div class="radar">
+        <svg viewBox="0 0 180 180">
+          <circle cx="90" cy="90" r="88" fill="none" stroke="rgba(158,216,210,.18)" stroke-width="1"/>
+          <circle cx="90" cy="90" r="60" fill="none" stroke="rgba(158,216,210,.12)" stroke-width="1"/>
+          <circle cx="90" cy="90" r="32" fill="none" stroke="rgba(158,216,210,.12)" stroke-width="1"/>
+          <line x1="2" y1="90" x2="178" y2="90" stroke="rgba(158,216,210,.08)"/>
+          <line x1="90" y1="2" x2="90" y2="178" stroke="rgba(158,216,210,.08)"/>
+        </svg>
+        <div class="sweep"></div>
+        <div id="blips"></div>
       </div>
-      <label style="margin-top:10px">Dek (1–2 sentences)</label><textarea id="nwDek" rows="3"></textarea>
-      <div class="grid" style="display:grid;grid-template-columns:2fr 1fr;gap:10px;margin-top:10px">
-        <div><label>URL</label><input id="nwUrl" placeholder="https://..."></div>
-        <div><label>Source name</label><input id="nwSrc" placeholder="e.g. Runway Blog"></div>
-      </div>
-      <div class="row" style="margin-top:12px">
-        <label style="margin:0"><input type="checkbox" id="nwSpot" style="width:auto;margin-right:6px">✦ Creator spotlight</label>
-        <label style="margin:0 0 0 16px"><input type="checkbox" id="nwTop" style="width:auto;margin-right:6px">Top signal</label>
-      </div>
-      <div class="save-row" style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px">
-        <button class="btn primary" id="nwAdd">Add to feed</button>
-      </div>
+      <div class="scope-caption"><b id="blipCount">6 blips</b> on scope<br>distance = hours since detection</div>
     </div>
+  </section>
+
+  <!-- FOR YOUR STACK -->
+  <section class="for-you" id="forYouWrap" style="display:none" aria-label="For your stack">
+    <div class="fy-head">
+      For your stack
+      <span class="fy-tools" id="fyToolsLabel"></span>
+    </div>
+    <div id="fyGrid"></div>
+  </section>
+
+  <!-- CREATOR SPOTLIGHT -->
+  <section class="spotlight" id="spotlightWrap" style="display:none" aria-label="Creator spotlight">
+    <div class="spot-head">People creating cool things with AI</div>
+    <div class="spot-grid" id="spotGrid"></div>
+  </section>
+
+  <!-- TOOL DROP — deliberately a full-width, premium-styled placement.
+       This is the site's clearest future sponsorship slot: one tool,
+       one clear call to action, maximum visual weight. -->
+  <section class="tooldrop-feature" id="tooldropFeature" style="display:none" aria-label="Tool of the day">
+    <div class="td-eyebrow">Tool of the day</div>
+    <div class="td-card">
+      <div class="td-main">
+        <div class="td-name" id="tdName"></div>
+        <div class="td-blurb" id="tdBlurb"></div>
+        <div class="td-meta" id="tdMeta"></div>
+      </div>
+      <a href="#" class="td-cta" id="tdCta" target="_blank" rel="noopener">Try it <span>→</span></a>
+    </div>
+  </section>
+
+  <div class="cols">
+    <!-- FEED -->
+    <main>
+      <div class="feed-head">
+        <h2 class="feed-title">The feed</h2>
+        <div class="search">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/></svg>
+          <input type="search" id="searchInput" placeholder="search the signal…" aria-label="Search stories">
+        </div>
+      </div>
+      <div id="feedList"></div>
+      <div class="empty" id="emptyState">no blips on this frequency — try another filter</div>
+      <button class="loadmore" id="loadMore">pull older signals ↓</button>
+
+      <button class="older-toggle" id="olderToggle" style="display:none">
+        <span id="olderToggleLabel"></span>
+      </button>
+      <div id="olderSignalsList" class="older-signals" style="display:none"></div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="panel">
+        <h4>creative stack radar</h4>
+        <div id="modelList"></div>
+      </div>
+      <div class="panel">
+        <h4>today's numbers</h4>
+        <div class="num-grid" id="numGrid"></div>
+      </div>
+      <div class="panel">
+        <h4>loudest sources</h4>
+        <div id="sourceList"></div>
+      </div>
+      <div class="panel">
+        <h4>trending frequencies</h4>
+        <div class="topics" id="topicList"></div>
+      </div>
+      <div class="panel" id="yearagoPanel" style="display:none">
+        <h4>one year ago today</h4>
+        <div class="tooldrop-body" id="yaBody"></div>
+        <div class="tooldrop-meta"><a id="yaLink" href="#">read that day's blip →</a></div>
+      </div>
+    </aside>
   </div>
 </div>
 
-<div class="toast" id="toast"></div>
+<footer>
+  <div class="foot-in">
+    <div>dailyblip // the AI brief for people who make things // rescanned every 20 min</div>
+    <div class="foot-links">
+      <a href="showcase.html">showcase</a><a href="standards.html">standards</a><a href="commentary/">commentary</a><a href="archive/">archive</a><a href="feed.xml">rss</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Blip — site mascot, bottom-right corner. Purely decorative/optional:
+     dismissible (persisted via localStorage so it stays hidden once
+     someone closes it), respects prefers-reduced-motion, and clicking it
+     just scrolls to top rather than doing anything the person didn't ask
+     for. Same character design used in the social image pipeline. -->
+<div class="blip-sprite" id="blipSprite">
+  <button class="blip-dismiss" id="blipDismiss" type="button" aria-label="Hide Blip">×</button>
+  <button class="blip-sprite-btn" id="blipMain" type="button" aria-label="Blip — back to top">
+    <svg viewBox="0 0 140 170" width="72" height="88" aria-hidden="true">
+      <ellipse class="blip-glow" cx="70" cy="150" rx="34" ry="6"/>
+      <path class="blip-antenna" d="M70 40 Q84 18 90 8"/>
+      <circle class="blip-antenna-tip" cx="90" cy="8" r="4"/>
+      <rect class="blip-body" x="35" y="40" width="70" height="90" rx="35"/>
+      <ellipse class="blip-arm" cx="24" cy="95" rx="9" ry="15"/>
+      <ellipse class="blip-arm" cx="116" cy="95" rx="9" ry="15"/>
+      <circle class="blip-eye" cx="70" cy="75" r="13"/>
+      <circle class="blip-eye-highlight" cx="66" cy="71" r="3"/>
+    </svg>
+  </button>
+</div>
 
 <script>
-/* =============================================================
-   dailyblip admin — pure static, GitHub API only.
-   Everything is committed to your repo; Pages redeploys.
-============================================================= */
+/* ============ FALLBACK DATA ============
+   Used when data/feed.json is missing (local preview, first deploy).
+   Once the pipeline runs, feed.json overrides everything below. */
+const CATS = [
+  {id:"all", label:"all"},
+  {id:"spotlight", label:"✦ spotlight"},
+  {id:"image", label:"image"},
+  {id:"video", label:"video"},
+  {id:"music", label:"music & audio"},
+  {id:"writing", label:"writing"},
+  {id:"tools", label:"tools & workflow"},
+  {id:"rights", label:"rights & rulings"},
+  {id:"industry", label:"industry"},
+];
+
+let FEED = {
+  issue: 192,
+  generated_at: null,
+  brief: {
+    title: "Wednesday, July 8 — six things creators need to know",
+    items: [
+      {secs:10, story:"s1", html:"<b>Meta launched Muse</b> — an image model that works from your own photo library. Restoration, style transfer, product shots; aimed straight at Firefly and Imagen."},
+      {secs:10, story:"s2", html:"<b>Sora is sunsetting</b>: the app closed in April and the API dies September 24. Eleven weeks to migrate any pipeline that touches it."},
+      {secs:9, story:"s3", html:"<b>Midjourney V8.1 is now the default</b> — native 2K, 4–5x faster, and a Draft Mode for cheap ideation before final renders."},
+      {secs:11, story:"s4", html:"July video rankings: <b>Runway Gen-4.5 for control</b>, Veo 3.1 for realism, Gemini Omni Flash at $0.10/sec for fast iteration. Pick by workflow, not leaderboard."},
+      {secs:11, story:"s8", html:"<b>Copyright clarity is forming</b>: AI-assisted work is protectable in many places if you can show human direction. Start keeping your prompt and edit history."},
+      {secs:9, story:"s9", html:"<b>Fable 5 goes pay-per-use today</b>; Sonnet 5 and Opus 4.8 stay bundled — writers, check which model your stack defaults to."},
+    ],
+  },
+  stories: [
+    {id:"s1", cat:"image", badge:"breaking", top:true, hrs:2, src:"Meta", read:"3 min",
+     title:"Meta Launches Muse, an Image Model Built Around Your Own Photos",
+     dek:"Photo restoration, Renaissance-portrait style transfer, claymation, room restyling, product shots — Muse turns your personal photo library into the raw material, putting Meta AI squarely against Adobe Firefly and Google Imagen."},
+    {id:"s2", cat:"video", badge:"hot", hrs:3, src:"OpenAI", read:"4 min",
+     title:"The Sora Countdown: App Already Gone, API Sunsets September 24",
+     dek:"OpenAI closed the Sora app on April 26 and the API dies September 24. If Sora clips are anywhere in your pipeline, this is your 11-week migration window — reviewers have already moved it to the 'legacy' column."},
+    {id:"s3", cat:"image", badge:"hot", hrs:5, src:"Midjourney", read:"3 min",
+     title:"Midjourney V8.1 Becomes the Default: Native 2K, 4–5x Faster, Draft Mode",
+     dek:"The new default model ships native 2K HD output, a big speed jump, better prompt adherence, and a Draft Mode built for rapid ideation before you commit render credits to a final."},
+    {id:"s4", cat:"video", badge:"new", hrs:6, src:"BuildMVPFast", read:"6 min",
+     title:"July Video Rankings: Runway Gen-4.5 Owns Control, Veo 3.1 Owns Realism",
+     dek:"The month's big comparison crowns Runway Gen-4.5 the pro-workflow pick — camera direction, structured prompting, music videos and previs — while Veo 3.1 and Seedance 2.5 lead on raw realism. Kling 3.0 Turbo and Pika stay the daily drivers."},
+    {id:"s5", cat:"video", badge:"new", hrs:7, src:"Google", read:"3 min",
+     title:"Gemini Omni Flash Prices Fast Video Iteration at $0.10 per Second",
+     dek:"Google's conversational video model is built for quick back-and-forth edits rather than one-shot renders — a different bet on how creators actually work, and cheap enough to iterate freely."},
+    {id:"s6", spotlight:true, cat:"music", badge:"hot", hrs:8, src:"Yuyjo / NoHo Arts", read:"5 min",
+     title:"Beat-Sync Goes Mainstream: Full AI Music Videos From a Finished Track",
+     dek:"Tools like Freebeat and Neural Frames now analyze BPM and transients to cut visuals to beat drops, hold character consistency, and lip-sync avatars across 6-minute videos — indie artists are shipping label-grade visuals on no budget."},
+    {id:"s7", cat:"video", badge:"new", hrs:9, src:"Kling", read:"3 min",
+     title:"Kling O3 Brings 15-Second Multi-Shot Scenes With Voice-Persistent Characters",
+     dek:"Multi-shot generation, character voices that persist across cuts, and native audio push Kling toward short-film territory rather than clip stitching."},
+    {id:"s8", cat:"rights", badge:"hot", hrs:10, src:"Digen / legal wires", read:"5 min",
+     title:"Copyright Consensus Forming: AI-Assisted Work Is Protectable — With Receipts",
+     dek:"Many jurisdictions now extend protection to AI-assisted works when there's demonstrable human-in-the-loop direction: custom prompting, manual editing, creative decisions. Practical takeaway — keep your prompt and edit history."},
+    {id:"s9", cat:"writing", badge:"new", hrs:12, src:"Anthropic", read:"3 min",
+     title:"Fable 5 Goes Pay-Per-Use Today — Writers, Check Your Stack",
+     dek:"Claude Fable 5 now costs $10/M input and $50/M output tokens on every subscriber tier, while Sonnet 5 ($2/$10 intro) and Opus 4.8 stay bundled. For long-form drafting, the bundled models are the value play."},
+    {id:"s10", cat:"image", badge:"new", hrs:14, src:"OpenAI", read:"3 min",
+     title:"GPT Image 2: Natural-Language Edits, 2K Output, Multilingual Text",
+     dek:"OpenAI's image model has become the instruction-follower of the field — revise existing visuals and apply targeted edits by just describing them, with text rendering that finally survives non-English scripts."},
+    {id:"s11", cat:"tools", badge:"new", hrs:16, src:"Expert Consumers", read:"4 min",
+     title:"CapCut's One-Workspace Play: Seedance 2.0 Video, GPT Image 2, and Seedmusic",
+     dek:"The everything-suite pitch is landing with small content teams: video generation, image editing, and AI music in one workflow, ending the tool-switching tax between five subscriptions."},
+    {id:"s12", cat:"rights", badge:"new", hrs:18, src:"Cloudflare", read:"3 min",
+     title:"Cloudflare's September 15 Deadline Splits Search Crawlers From AI Crawlers",
+     dek:"After the cutoff, mixed-use bots get blocked by default from ad-carrying pages. If you publish content, this is the biggest default-setting change yet in who gets to train on your work."},
+    {id:"s13", spotlight:true, cat:"industry", badge:"new", hrs:20, src:"Today", read:"2 min",
+     title:"AI Actor Tilly Norwood Lands Her First Feature Film",
+     dek:"'Misaligned,' a coming-of-age story about a girl AI bot set in the Tillyverse, makes the synthetic performer's leap to features official — and reopens every argument about human performers at once."},
+    {id:"s14", cat:"video", badge:"new", hrs:22, src:"BuildMVPFast", read:"3 min",
+     title:"Wan 2.7 Is the Open Option for Local and Custom Video Pipelines",
+     dek:"If local control or custom pipelines matter more than leaderboard wins, Wan remains the meaningful open-weight choice — structure-preserving transforms and no per-second meter running."},
+    {id:"s15", cat:"tools", badge:"new", hrs:26, src:"Artlist", read:"4 min",
+     title:"The Model Buffet: Platforms Now Bundle 14+ Image Models Under One License",
+     dek:"Artlist's toolkit stacks Nano Banana, GPT Image 2, Seedream 5.0, Wan 2.7 and more behind one subscription with commercial licensing sorted — a hedge against betting your whole aesthetic on one model."},
+    {id:"s16", cat:"video", badge:"new", hrs:30, src:"xAI", read:"3 min",
+     title:"Grok Imagine Video 1.5 Adds Native Synced Audio and Faster Image-to-Video",
+     dek:"A real contender for social-first output if you already live inside X — quick-turn clips with sound baked in, tuned for the feed rather than the timeline."},
+    {id:"s17", spotlight:true, cat:"music", badge:"new", hrs:34, src:"Digen", read:"4 min",
+     title:"'Acting Prompts' Arrive: Performance Capture Synthesis Maps Vocals to Avatars",
+     dek:"The new wave of lip-sync tools reads vocal nuance and maps it onto digital performers — direct emotional transitions by timestamp ('melancholy to euphoria at 02:15') like a VFX house, from your phone."},
+    {id:"s18", cat:"writing", badge:"new", hrs:40, src:"Anthropic", read:"3 min",
+     title:"One Week In: Claude Sonnet 5 Is the New Default for Long-Form Drafting",
+     dek:"Launched July 1 at $2/$10 introductory pricing and bundled into subscriptions, Sonnet 5 has quickly become the workhorse recommendation for novelists, scriptwriters and newsletter writers."},
+    {id:"s19", cat:"industry", badge:"new", hrs:44, src:"Fortune", read:"4 min",
+     title:"Anthropic Overtakes OpenAI on Revenue for the First Time",
+     dek:"A $47B annualized run rate versus OpenAI's $25–33B. The broader signal for creators: the money is consolidating around a handful of labs whose pricing decisions now ripple straight into your tool subscriptions."},
+  ],
+  models: [
+    {n:"Midjourney V8.1", s:"live", i:"●"},
+    {n:"Runway Gen-4.5", s:"live", i:"●"},
+    {n:"Veo 3.1", s:"live", i:"●"},
+    {n:"Gemini Omni Flash", s:"live", i:"●"},
+    {n:"Kling 3.0 Turbo / O3", s:"live", i:"●"},
+    {n:"Seedance 2.5", s:"live", i:"●"},
+    {n:"GPT Image 2", s:"live", i:"●"},
+    {n:"Seedream 5.0", s:"live", i:"●"},
+    {n:"Wan 2.7 (open)", s:"live", i:"●"},
+    {n:"Grok Imagine 1.5", s:"live", i:"●"},
+    {n:"Sora 2", s:"sunset", i:"◐"},
+    {n:"Claude Sonnet 5", s:"live", i:"●"},
+  ],
+  sources: [
+    {n:"Runway Research", c:31},{n:"Midjourney Updates", c:26},{n:"r/StableDiffusion", c:22},
+    {n:"r/aivideo", c:17},{n:"Artlist Blog", c:13},{n:"Hugging Face", c:11},
+    {n:"TechCrunch AI", c:10},{n:"Suno Community", c:8},
+  ],
+  topics: ["#sora-sunset","#midjourney-v8","#beat-sync","#copyright-clarity","#character-consistency","#draft-mode","#muse","#open-video"],
+  tooldrop: {
+    name:"Kaiber Superstudio",
+    blurb:"A canvas-style playground for mixing models, styles and assets — moodboard your way to a finished video instead of prompt-roulette.",
+    meta:"image · video · animation — free tier",
+    url:"#",
+  },
+  stats: { scanned_last_run: 147, published_today: 18, sources_live: 21 },
+};
+
+/* ============ APP ============ */
 const $ = s => document.querySelector(s);
-const $$ = s => [...document.querySelectorAll(s)];
+let activeCat = "all", query = "", visible = 8;
+const readSet = new Set();
 
-/* --- persistence: token+repo live in localStorage on THIS device only --- */
-const CFG_KEY = "dailyblip.admin.cfg.v1";
-const OVR_PATH = "data/overrides.json";
-const FEED_PATH = "docs/data/feed.json";
-const GUIDES_PATH = "data/guides.json";
-const cfg = { repo: "", token: "" };
-function loadCfg(){
-  try { Object.assign(cfg, JSON.parse(localStorage.getItem(CFG_KEY) || "{}")); } catch {}
+function storyHrs(s){
+  if(s.ts){ return Math.max(1, Math.round((Date.now() - new Date(s.ts)) / 3.6e6)); }
+  return s.hrs || 1;
 }
-function saveCfg(){ localStorage.setItem(CFG_KEY, JSON.stringify(cfg)); }
+function ago(h){ return h<24 ? `${h} hr ago` : `${Math.floor(h/24)}d ${h%24}h ago`; }
+function esc(t){ const d=document.createElement("div"); d.textContent=t??""; return d.innerHTML; }
+/* Stack helpers — safe if stack.js hasn't loaded yet */
+function stackApi(){ return window.dailyblipStack; }
+function stackHits(story){
+  const api = stackApi();
+  if(!api) return new Set();
+  return api.storyMatchesStack(story, api.loadStack());
+}
+function stackToolLabel(ids){
+  const api = stackApi();
+  if(!api || !ids.size) return "";
+  const names = [...ids].slice(0,4).map(id => api.toolById(id)?.name).filter(Boolean);
+  return names.join(" · ");
+}
+/* model-generated brief HTML: only <b> survives; everything else is escaped */
+function sanB(html){ return esc(html).replace(/&lt;(\/?)b&gt;/gi,"<$1b>"); }
 
-/* --- state --- */
-let feed = null, feedSha = null;
-let overrides = { blocked_ids: [], blocked_terms: [], pinned_spotlight: [], pinned_brief: [], pin_suggestions: [], dismissed_pin_suggestions: [] };
-let overridesSha = null;
-let dirty = false;
-let expanded = new Set();
-let bulkSelected = new Set(); // persists across re-renders (search/filter) so
-                               // you can search, select some, search again,
-                               // select more, then delete everything at once
-
-/* --- toast + status --- */
-function toast(msg, cls="ok", ms=2400){
-  const t = $("#toast"); t.className = "toast show " + cls; t.textContent = msg;
-  clearTimeout(toast._t); toast._t = setTimeout(()=>t.classList.remove("show"), ms);
+/* ---- streaks: finish the daily brief, keep the fire ---- */
+const STREAK_KEY = "dailyblip.streak.v1";
+function todayKey(){ return new Date().toLocaleDateString("en-CA"); }
+function yesterdayKey(){ const d = new Date(); d.setDate(d.getDate()-1); return d.toLocaleDateString("en-CA"); }
+function loadStreak(){ try{ return JSON.parse(localStorage.getItem(STREAK_KEY)||"{}"); }catch{ return {}; } }
+function saveStreak(s){ try{ localStorage.setItem(STREAK_KEY, JSON.stringify(s)); }catch{} }
+function currentStreak(){
+  const s = loadStreak();
+  if(!s.last) return 0;
+  return (s.last === todayKey() || s.last === yesterdayKey()) ? (s.count||0) : 0;
 }
-function setStatus(text, cls="ok"){
-  const s = $("#status"); s.className = "status " + cls; s.textContent = text;
+function recordBriefComplete(){
+  const s = loadStreak();
+  if(s.last === todayKey()) return s.count;
+  const count = (s.last === yesterdayKey()) ? (s.count||0)+1 : 1;
+  saveStreak({ last: todayKey(), count });
+  renderStreak();
+  return count;
 }
-function markDirty(){
-  dirty = true;
-  setStatus("unsaved changes", "dirty");
-  $("#publishBtn").disabled = false;
-}
-function markClean(){
-  dirty = false;
-  setStatus("in sync", "ok");
-  $("#publishBtn").disabled = true;
-}
-
-/* --- GitHub API helpers --- */
-async function gh(path, opts={}){
-  const res = await fetch(`https://api.github.com/repos/${cfg.repo}/contents/${path}`, {
-    ...opts,
-    headers: {
-      "Accept": "application/vnd.github+json",
-      "Authorization": `Bearer ${cfg.token}`,
-      "X-GitHub-Api-Version": "2022-11-28",
-      ...(opts.headers || {}),
-    },
-  });
-  return res;
-}
-// Generic helper for anything OUTSIDE the Contents API \u2014 specifically
-// triggering workflow_dispatch runs for guide generation/publishing.
-// Needs a token with `workflow` scope (classic) or Actions:write
-// (fine-grained), which a contents-only token from the original admin
-// setup won't have \u2014 see dispatchWorkflow()'s error handling.
-async function ghApi(urlPath, opts={}){
-  const res = await fetch(`https://api.github.com/repos/${cfg.repo}/${urlPath}`, {
-    ...opts,
-    headers: {
-      "Accept": "application/vnd.github+json",
-      "Authorization": `Bearer ${cfg.token}`,
-      "X-GitHub-Api-Version": "2022-11-28",
-      ...(opts.headers || {}),
-    },
-  });
-  return res;
-}
-async function dispatchWorkflow(workflowFile, inputs){
-  const res = await ghApi(`actions/workflows/${workflowFile}/dispatches`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ ref: "main", inputs }),
-  });
-  if (res.status === 403 || res.status === 404) {
-    throw new Error(`GitHub says ${res.status} \u2014 your token likely lacks "workflow" scope (classic) or Actions: write (fine-grained). Reconnect with an upgraded token.`);
-  }
-  if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.text()).slice(0,300)}`);
+function renderStreak(){
+  const n = currentStreak();
+  const chip = $("#streakChip");
+  if(n > 0){ chip.classList.add("show"); $("#streakN").textContent = n; }
+  else chip.classList.remove("show");
 }
 
-function b64enc(str){
-  return btoa(unescape(encodeURIComponent(str)));
+function moveArrow(s){
+  if(s.move === "new") return `<span class="mv nw">★ new</span>`;
+  if(typeof s.move === "number" && s.move > 1) return `<span class="mv up">▲${s.move}</span>`;
+  if(typeof s.move === "number" && s.move < -1) return `<span class="mv dn">▼${Math.abs(s.move)}</span>`;
+  return "";
 }
-function b64dec(str){
-  return decodeURIComponent(escape(atob(str.replace(/\s/g, ""))));
-}
-
-async function readFile(path){
-  const res = await gh(path + `?ref=main`);
-  if (res.status === 404) return { data: null, sha: null };
-  if (!res.ok) throw new Error(`GitHub ${res.status}: ${await res.text()}`);
-  const body = await res.json();
-  return { data: JSON.parse(b64dec(body.content)), sha: body.sha };
-}
-async function writeFile(path, obj, sha, message){
-  const res = await gh(path, {
-    method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      message,
-      content: b64enc(JSON.stringify(obj, null, 2) + "\n"),
-      sha: sha || undefined,
-      branch: "main",
-    }),
-  });
-  if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.json()).message || ""}`);
-  return (await res.json()).content.sha;
+function matchCat(s){
+  if(activeCat==="all") return true;
+  if(activeCat==="spotlight") return !!s.spotlight;
+  return s.cat===activeCat;
 }
 
-/* --- auth flow --- */
-function needAuth(){ return !cfg.repo || !cfg.token; }
-function openAuth(){
-  $("#cfgRepo").value = cfg.repo || "";
-  $("#cfgToken").value = cfg.token || "";
-  $("#cfgErr").style.display = "none";
-  $("#authModal").classList.add("open");
-}
-$("#cfgSave").addEventListener("click", async () => {
-  const repo = $("#cfgRepo").value.trim();
-  const token = $("#cfgToken").value.trim();
-  if (!/^[\w.-]+\/[\w.-]+$/.test(repo)) return showAuthErr("Repo should look like username/dailyblip");
-  if (!token) return showAuthErr("Paste a personal access token");
-  // Sanity check the token by reading the repo root.
-  const test = await fetch(`https://api.github.com/repos/${repo}`, {
-    headers: { "Authorization": `Bearer ${token}`, "Accept": "application/vnd.github+json" },
-  });
-  if (!test.ok) return showAuthErr(`GitHub says: ${test.status} — check the repo and token permissions`);
-  cfg.repo = repo; cfg.token = token; saveCfg();
-  $("#authModal").classList.remove("open");
-  $("#repoMeta").textContent = repo;
-  await bootLoad();
-});
-function showAuthErr(msg){
-  const el = $("#cfgErr"); el.textContent = msg; el.style.display = "block";
-}
-$("#disconnectBtn").addEventListener("click", () => {
-  if (dirty && !confirm("You have unsaved changes. Disconnect anyway?")) return;
-  localStorage.removeItem(CFG_KEY);
-  location.reload();
-});
-
-/* --- boot: load feed.json + overrides.json --- */
-async function bootLoad(){
-  try {
-    setStatus("loading…", "dirty");
-    const [f, o] = await Promise.all([readFile(FEED_PATH), readFile(OVR_PATH)]);
-    if (!f.data) throw new Error("feed.json not found in this repo");
-    feed = f.data; feedSha = f.sha;
-    if (o.data) { overrides = { blocked_ids: [], blocked_terms: [], pinned_spotlight: [], pinned_brief: [], pin_suggestions: [], dismissed_pin_suggestions: [], ...o.data }; overridesSha = o.sha; }
-    else { overridesSha = null; }
-    renderAll();
-    markClean();
-    toast(`loaded ${feed.stories.length} stories`);
-  } catch (e) {
-    setStatus("load failed", "err");
-    toast(e.message, "err", 5000);
-  }
-}
-$("#reloadBtn").addEventListener("click", async () => {
-  if (dirty && !confirm("Reload will discard unsaved edits. Continue?")) return;
-  await bootLoad();
-});
-
-/* =============================================================
-   Rendering
-============================================================= */
-function esc(s){ const d = document.createElement("div"); d.textContent = s ?? ""; return d.innerHTML; }
-function ago(ts){
-  const h = Math.max(1, Math.round((Date.now() - new Date(ts)) / 3.6e6));
-  return h < 24 ? `${h}h` : `${Math.floor(h/24)}d ${h%24}h`;
+function renderHeader(){
+  $("#dateline").textContent = new Date().toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"});
+  if(FEED.generated_at){
+    const mins = Math.max(1, Math.round((Date.now()-new Date(FEED.generated_at))/6e4));
+    $("#lastSync").textContent = `last sync ${mins<60?mins+" min":Math.round(mins/60)+" hr"} ago`;
+  } else $("#lastSync").textContent = "sample data";
 }
 
-/* -------- Stories tab -------- */
-function renderStories(){
-  const q = $("#searchInput").value.trim().toLowerCase();
-  const filter = $("#filterSel").value;
-  const blocked = new Set(overrides.blocked_ids || []);
-  let list = feed.stories.filter(s => {
-    if (q && !(s.title + " " + s.dek).toLowerCase().includes(q)) return false;
-    if (filter === "spotlight" && !s.spotlight) return false;
-    if (filter === "locked" && !s.locked) return false;
-    if (filter === "top" && !s.top) return false;
-    return true;
-  });
-  $("#nStories").textContent = feed.stories.length;
-  if (!list.length) { $("#storyList").innerHTML = `<div class="empty">no stories match</div>`; return; }
-  $("#storyList").innerHTML = list.map(s => storyCard(s, blocked.has(s.id))).join("");
-  // wire up per-card handlers
-  $$(`[data-story]`).forEach(el => {
-    const id = el.dataset.story;
-    const story = feed.stories.find(x => x.id === id);
-    el.querySelector(".id")?.addEventListener("click", () => {
-      navigator.clipboard.writeText(id); toast(`copied ${id}`);
-    });
-    el.querySelector(".ed-toggle")?.addEventListener("click", () => {
-      const box = el.querySelector(".editor");
-      const open = box.classList.toggle("open");
-      if (open) expanded.add(id); else expanded.delete(id);
-    });
-    el.querySelector(".btn-lock")?.addEventListener("click", () => {
-      story.locked = !story.locked; markDirty(); renderStories();
-    });
-    el.querySelector(".btn-spot")?.addEventListener("click", () => {
-      story.spotlight = !story.spotlight; markDirty(); renderStories();
-    });
-    el.querySelector(".btn-top")?.addEventListener("click", () => {
-      // top is exclusive across the feed
-      feed.stories.forEach(x => { if (x !== story) delete x.top; });
-      story.top = !story.top; markDirty(); renderStories();
-    });
-    el.querySelector(".btn-pin")?.addEventListener("click", () => {
-      overrides.pinned_brief = overrides.pinned_brief || [];
-      const existing = overrides.pinned_brief.find(p => p.id === story.id);
-      if (existing) {
-        // Toggle off: unpin immediately rather than waiting for editions to run out.
-        overrides.pinned_brief = overrides.pinned_brief.filter(p => p.id !== story.id);
-        delete story.pinned_brief;
-      } else {
-        overrides.pinned_brief.push({ id: story.id, editions_remaining: 2 });
-        story.pinned_brief = true;
-        // Clean up any pending suggestion for this story now that it's
-        // directly pinned — no need to also show it as "awaiting confirm."
-        overrides.pin_suggestions = (overrides.pin_suggestions || []).filter(p => p.id !== story.id);
-      }
-      markDirty(); renderStories(); renderOverrides();
-    });
-    el.querySelector(".btn-del")?.addEventListener("click", () => {
-      if (!confirm(`Delete "${story.title.slice(0,60)}${story.title.length>60?"…":""}"?\nIt will be added to the blocklist so it can't come back.`)) return;
-      if (!overrides.blocked_ids.includes(story.id)) overrides.blocked_ids.push(story.id);
-      feed.stories = feed.stories.filter(x => x !== story);
-      markDirty(); renderStories(); renderOverrides();
-    });
-    el.querySelector(".btn-save")?.addEventListener("click", () => {
-      const box = el.querySelector(".editor");
-      story.title = box.querySelector(".e-title").value.trim();
-      story.dek = box.querySelector(".e-dek").value.trim();
-      story.cat = box.querySelector(".e-cat").value;
-      story.badge = box.querySelector(".e-badge").value;
-      story.src = box.querySelector(".e-src").value.trim();
-      story.url = box.querySelector(".e-url").value.trim();
-      story.read = box.querySelector(".e-read").value.trim() || "3 min";
-      markDirty(); renderStories(); toast("edited");
-    });
-    const check = el.querySelector(".bulk-check");
-    if (check) {
-      check.checked = bulkSelected.has(id);
-      check.addEventListener("change", () => {
-        if (check.checked) bulkSelected.add(id); else bulkSelected.delete(id);
-        updateBulkBar();
-      });
-    }
-  });
-  updateBulkBar();
+function renderTicker(){
+  const tick = FEED.stories.slice(0,8).map(s=>`<span><em>▸</em> <b>${esc(s.title)}</b> · ${storyHrs(s)}h ago</span>`).join("");
+  $("#tickerTrack").innerHTML = tick + tick;
 }
 
-function updateBulkBar(){
-  const n = bulkSelected.size;
-  $("#bulkBar").style.display = n ? "flex" : "none";
-  $("#bulkCount").textContent = `${n} selected`;
-  // "select all visible" should reflect whether every currently-rendered
-  // card is selected, not the global total (some selections may be from
-  // an earlier search that's since scrolled out of view).
-  const visibleIds = $$("[data-bulk-id]").map(el => el.dataset.bulkId);
-  const allBox = $("#bulkSelectAll");
-  if (allBox) allBox.checked = visibleIds.length > 0 && visibleIds.every(id => bulkSelected.has(id));
+function renderCats(){
+  $("#catNav").innerHTML = CATS.map(c=>{
+    const n = c.id==="all" ? FEED.stories.length
+      : c.id==="spotlight" ? FEED.stories.filter(s=>s.spotlight).length
+      : FEED.stories.filter(s=>s.cat===c.id).length;
+    return `<button class="cat${c.id===activeCat?" active":""}" data-cat="${c.id}">${c.label}<span class="count">${n}</span></button>`;
+  }).join("");
 }
 
-function storyCard(s, isBlocked){
-  const cls = [
-    "card",
-    s.locked ? "locked" : "",
-    s.spotlight ? "spot" : "",
-    isBlocked ? "blocked" : "",
-  ].filter(Boolean).join(" ");
-  const cats = ["image","video","music","writing","tools","rights","industry"];
-  const badges = ["new","hot","breaking"];
-  const open = expanded.has(s.id) ? "open" : "";
-  return `
-  <div class="${cls}" data-story="${esc(s.id)}">
-    <div class="rowmeta">
-      <input type="checkbox" class="bulk-check" data-bulk-id="${esc(s.id)}" title="select for bulk actions" style="width:auto;margin-right:6px;vertical-align:middle">
-      <span class="id" title="click to copy">${esc(s.id)}</span>
-      <span class="tag-pill">${esc(s.cat)}</span>
-      <span class="tag-pill">${esc(s.badge)}</span>
-      ${s.spotlight ? '<span class="tag-pill" style="color:#63D8C6;border-color:rgba(99,216,198,.5)">✦ spotlight</span>' : ""}
-      ${s.top ? '<span class="tag-pill" style="color:#FFB454;border-color:rgba(255,180,84,.6)">◉ top</span>' : ""}
-      ${s.pinned_brief ? '<span class="tag-pill" style="color:#FFB454;border-color:rgba(255,180,84,.6)">📌 pinned to brief</span>' : ""}
-      ${s.locked ? '<span class="tag-pill" style="color:#FFB454;border-color:rgba(255,180,84,.6)">🔒 locked</span>' : ""}
-      <span>${ago(s.ts)} ago · via ${esc(s.src)}</span>
-    </div>
-    <h3>${esc(s.title)}</h3>
-    <p>${esc(s.dek)}</p>
-    <div class="actions">
-      <button class="btn ed-toggle">edit</button>
-      <button class="btn amber ${s.locked?"on":""} btn-lock" title="Locked stories aren't touched by the ingest merge">🔒 ${s.locked?"unlock":"lock"}</button>
-      <button class="btn aqua ${s.spotlight?"on":""} btn-spot">✦ spotlight</button>
-      <button class="btn amber ${s.top?"on":""} btn-top">◉ top</button>
-      <button class="btn aqua ${s.pinned_brief?"on":""} btn-pin" title="Force this story into the brief for 2 editions">📌 ${s.pinned_brief?"pinned":"pin to brief"}</button>
-      <button class="btn red btn-del">delete</button>
-      ${s.url && s.url !== "#" ? `<a class="btn" href="${esc(s.url)}" target="_blank" rel="noopener">↗ source</a>` : ""}
-    </div>
-    <div class="editor ${open}">
-      <label>Headline</label><input class="e-title" value="${esc(s.title)}">
-      <label>Dek</label><textarea class="e-dek" rows="3">${esc(s.dek)}</textarea>
-      <div class="grid" style="margin-top:8px">
-        <div><label>Category</label><select class="e-cat">${cats.map(c=>`<option ${c===s.cat?"selected":""}>${c}</option>`).join("")}</select></div>
-        <div><label>Badge</label><select class="e-badge">${badges.map(b=>`<option ${b===s.badge?"selected":""}>${b}</option>`).join("")}</select></div>
-      </div>
-      <div class="grid" style="margin-top:8px">
-        <div><label>Source</label><input class="e-src" value="${esc(s.src)}"></div>
-        <div><label>Read time</label><input class="e-read" value="${esc(s.read || "3 min")}"></div>
-      </div>
-      <label style="margin-top:8px">URL</label><input class="e-url" value="${esc(s.url || "")}">
-      <div class="save-row"><button class="btn primary btn-save">Apply changes</button></div>
-    </div>
-  </div>`;
-}
-$("#searchInput").addEventListener("input", renderStories);
-$("#filterSel").addEventListener("change", renderStories);
-$("#bulkSelectAll").addEventListener("change", (e) => {
-  const visibleIds = $$("[data-bulk-id]").map(el => el.dataset.bulkId);
-  if (e.target.checked) visibleIds.forEach(id => bulkSelected.add(id));
-  else visibleIds.forEach(id => bulkSelected.delete(id));
-  renderStories();
-});
-$("#bulkClear").addEventListener("click", () => { bulkSelected.clear(); renderStories(); });
-$("#bulkDelete").addEventListener("click", () => {
-  const ids = [...bulkSelected];
-  if (!ids.length) return;
-  const titles = ids.map(id => feed.stories.find(s => s.id === id)?.title || id).slice(0, 5);
-  const more = ids.length > 5 ? `\n…and ${ids.length - 5} more` : "";
-  if (!confirm(`Delete ${ids.length} stories? They'll be blocklisted so they can't come back.\n\n${titles.map(t=>"• "+t.slice(0,60)).join("\n")}${more}`)) return;
-  overrides.blocked_ids = overrides.blocked_ids || [];
-  for (const id of ids) {
-    if (!overrides.blocked_ids.includes(id)) overrides.blocked_ids.push(id);
-  }
-  feed.stories = feed.stories.filter(s => !bulkSelected.has(s.id));
-  bulkSelected.clear();
-  markDirty(); renderStories(); renderOverrides();
-  toast(`deleted ${ids.length} stories`);
-});
-$("#expandAll").addEventListener("click", () => {
-  feed.stories.forEach(s => expanded.add(s.id)); renderStories();
-});
-$("#collapseAll").addEventListener("click", () => {
-  expanded.clear(); renderStories();
-});
-
-/* -------- Brief tab -------- */
 function renderBrief(){
-  const b = feed.brief || { title: "", items: [] };
-  $("#briefTitleView").textContent = b.title || "(no brief yet)";
-  $("#briefTitleEdit").value = b.title || "";
-  const container = $("#briefItems");
-  container.innerHTML = b.items.map((it, i) => briefItemRow(it, i)).join("");
-  container.querySelectorAll(".brief-item").forEach((el, i) => {
-    el.querySelector(".b-html").addEventListener("input", e => { b.items[i].html = e.target.value; markDirty(); });
-    el.querySelector(".b-secs").addEventListener("input", e => { b.items[i].secs = +e.target.value || 10; markDirty(); });
-    el.querySelector(".b-story").addEventListener("change", e => { b.items[i].story = e.target.value; markDirty(); });
-    el.querySelector(".b-del").addEventListener("click", () => { b.items.splice(i,1); markDirty(); renderBrief(); });
-  });
-}
-function briefItemRow(it, i){
-  const opts = feed.stories.map(s => `<option value="${esc(s.id)}" ${s.id===it.story?"selected":""}>${esc(s.id)} · ${esc(s.title.slice(0,50))}</option>`).join("");
-  return `<div class="brief-item">
-    <div class="num">${i+1}.</div>
-    <div style="flex:1">
-      <input class="b-html" value="${esc(it.html)}">
-      <div style="display:flex;gap:8px;margin-top:6px;align-items:center">
-        <select class="b-story">${opts}</select>
-        <input class="b-secs secs" type="number" min="5" max="15" value="${it.secs||10}"> <span class="tip" style="margin:0">sec</span>
-        <button class="btn red b-del">delete</button>
-      </div>
-    </div>
-  </div>`;
-}
-$("#briefTitleEdit").addEventListener("input", e => {
-  if (!feed.brief) feed.brief = { items: [] };
-  feed.brief.title = e.target.value; markDirty();
-});
-$("#addBriefItem").addEventListener("click", () => {
-  if (!feed.brief) feed.brief = { title:"", items:[] };
-  if (feed.brief.items.length >= 6) return toast("brief is capped at 6", "err");
-  const firstStory = feed.stories[0]?.id || "";
-  feed.brief.items.push({ story: firstStory, html: "<b>Edit me</b> — one sentence, max 28 words.", secs: 10 });
-  markDirty(); renderBrief();
-});
-
-/* -------- Tooldrop tab -------- */
-function renderTooldrop(){
-  const t = feed.tooldrop || {};
-  $("#tdName").value = t.name || "";
-  $("#tdBlurb").value = t.blurb || "";
-  $("#tdMeta").value = t.meta || "";
-  $("#tdUrl").value = t.url || "";
-}
-["tdName","tdBlurb","tdMeta","tdUrl"].forEach(id => {
-  $("#"+id).addEventListener("input", () => {
-    feed.tooldrop = feed.tooldrop || {};
-    feed.tooldrop.name = $("#tdName").value.trim();
-    feed.tooldrop.blurb = $("#tdBlurb").value.trim();
-    feed.tooldrop.meta = $("#tdMeta").value.trim();
-    feed.tooldrop.url = $("#tdUrl").value.trim();
-    feed.tooldrop.pinned = true;                     // manual pin — pipeline respects this
-    feed.tooldrop.date = new Date().toISOString();
-    markDirty();
-  });
-});
-$("#tdClear").addEventListener("click", () => {
-  if (!confirm("Clear the manual pin? The next tool-drop job will pick freely.")) return;
-  feed.tooldrop = null; markDirty(); renderTooldrop();
-});
-
-/* -------- Guides tab -------- */
-// Guides writes commit IMMEDIATELY (not batched into the deferred
-// Publish button the rest of admin.html uses) \u2014 a job record needs to
-// exist in the repo the instant Generate is clicked, since guide.yml
-// reads it by id. This is a deliberate exception to the rest of this
-// file's "edit locally, Publish when ready" pattern.
-let guides = [];
-let guidesSha = null;
-let guidePollTimer = null;
-let activeGuideId = null;
-let guideTickTimer = null; // separate from the 10s poll — ticks every 1s just to refresh "last updated Xs ago" text, so the review screen feels alive between actual polls
-
-// The real, observable stage sequence — matches guide.js's NEXT_STAGE
-// exactly. Note "Creating brief" never actually appears: job.stage
-// starts at "Queued" and the brief stage's own start isn't committed
-// (see guide.js's comment on why), so the first visible transition
-// jumps straight from Queued to Researching once brief.js finishes.
-const STAGE_ORDER = ["Queued", "Researching", "Drafting", "Fact-checking", "Generating images", "Formatting", "Ready for review"];
-// If updated_at hasn't moved in longer than this while still in
-// progress, flag it as possibly stuck rather than staying silent —
-// no single stage (even image generation) should realistically take
-// this long.
-const STUCK_THRESHOLD_MS = 6 * 60 * 1000;
-// Deliberately much longer than the "might be stuck, check the log"
-// warning above \u2014 that one's fine to show early since it's just
-// informational. Offering a DESTRUCTIVE force-delete needs much higher
-// confidence the job is actually dead, not just slow (a legitimate
-// research retry can easily take several minutes). Set safely past
-// guide.yml's own timeout-minutes: 20 ceiling \u2014 if a job hasn't
-// updated by then, the GitHub Action itself has already been killed by
-// GitHub, so deleting the record can't possibly break an active run.
-const FORCE_DELETE_THRESHOLD_MS = 25 * 60 * 1000;
-function isForceDeletable(g){
-  return (g.status === "in_progress" || g.status === "queued") &&
-    (Date.now() - new Date(g.updated_at || g.created_at).getTime()) > FORCE_DELETE_THRESHOLD_MS;
-}
-
-async function loadGuidesFile(){
-  const r = await readFile(GUIDES_PATH);
-  guides = r.data || [];
-  guidesSha = r.sha;
-}
-async function saveGuidesFile(message){
-  guidesSha = await writeFile(GUIDES_PATH, guides, guidesSha, message);
-}
-
-// GitHub rejects a write with 409 if data/guides.json changed since we
-// last read it \u2014 very possible here specifically, since a GitHub
-// Actions run commits a stage update to this exact file every time a
-// stage finishes, potentially at any moment while admin.html is also
-// trying to write to it. `mutate` must be a pure function of the
-// CURRENT guides array (not a closure over stale state) so that on
-// conflict, re-fetching fresh data and re-running the same mutation
-// against it produces the correct result \u2014 blindly retrying with the
-// original stale payload would silently overwrite whatever the
-// concurrent commit just wrote (e.g. a stage progressing).
-async function writeGuidesWithRetry(mutate, message){
-  for (let attempt = 0; attempt < 2; attempt++){
-    guides = mutate(guides);
-    try {
-      guidesSha = await writeFile(GUIDES_PATH, guides, guidesSha, message);
-      return;
-    } catch (e) {
-      const isConflict = /GitHub 409/.test(e.message);
-      if (!isConflict || attempt === 1) throw e;
-      console.warn("guides.json write conflict (likely a GitHub Action committing at the same time) \u2014 refetching latest and retrying once.");
-      await loadGuidesFile();
-    }
+  const items = FEED.brief?.items || [];
+  $("#briefTitle").textContent = FEED.brief?.title || "";
+  // Recency label replaces AM/PM framing entirely — "updated 3h ago" is
+  // always true regardless of viewer timezone, unlike a fixed AM/PM tag
+  // which can mismatch what a reader in a different timezone actually sees.
+  let updatedLabel = "";
+  if (FEED.brief?.date) {
+    const ageMs = Date.now() - new Date(FEED.brief.date).getTime();
+    updatedLabel = ageMs < 3600000
+      ? `updated ${Math.max(1, Math.round(ageMs / 60000))}m ago`
+      : `updated ${Math.round(ageMs / 3600000)}h ago`;
   }
-}
-
-function uid(){
-  return (crypto.randomUUID ? crypto.randomUUID() : `g${Date.now()}${Math.random().toString(36).slice(2)}`);
-}
-
-const TERMINAL_STATUSES = new Set(["ready_for_review", "approved", "published", "failed", "rejected"]);
-// Deliberately narrower than TERMINAL_STATUSES: "approved" means
-// guide-publish.yml is actively running against this record right now
-// (same reason "queued"/"in_progress" aren't here either) \u2014 deleting it
-// mid-publish would break that workflow the same way deleting an
-// in-progress generation job would break guide.yml.
-const DELETABLE_STATUSES = new Set(["ready_for_review", "published", "failed", "rejected"]);
-
-function guideStatusLabel(g){
-  if (g.status === "failed") return `Failed (${g.error?.stage || "?"})`;
-  if (g.status === "published") return "Published";
-  if (g.status === "approved") return "Approved \u2014 publishing\u2026";
-  if (g.status === "ready_for_review") return "Ready for review";
-  return g.stage || "Queued";
-}
-
-async function renderGuides(){
-  try { await loadGuidesFile(); } catch (e) { toast(e.message, "err", 5000); return; }
-  const list = $("#guideList");
-  // Explicit sort by created_at, newest first \u2014 don't rely on array
-  // insertion order, which isn't guaranteed to stay chronological once
-  // concurrent writes (admin.html edits interleaved with GitHub Actions
-  // commits) start reordering things.
-  const sorted = guides.slice().sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-  if (!sorted.length){ list.innerHTML = ""; }
-  else {
-    list.innerHTML = sorted.map(g => `
-      <div class="panel" style="margin-bottom:10px;cursor:pointer" onclick="openGuide('${g.id}')">
-        <div style="display:flex;justify-content:space-between;align-items:center">
-          <div>
-            <div style="font-weight:600">${esc(g.article?.title || g.submitted?.idea?.slice(0,70) || "Untitled")}</div>
-            <div class="tip" style="margin-top:2px">${esc(guideStatusLabel(g))} \u00b7 ${esc(ago(g.created_at))} ago</div>
-          </div>
-          <div style="display:flex;gap:8px;align-items:center">
-            ${g.status === "published" ? `<a href="${esc(g.published_url)}" target="_blank" onclick="event.stopPropagation()" class="btn">view live \u2192</a>` : ""}
-            ${DELETABLE_STATUSES.has(g.status) ? `<button class="btn red" onclick="event.stopPropagation();deleteGuide('${g.id}')" title="Delete this job">\u00d7</button>` : ""}
-            ${isForceDeletable(g) ? `<button class="btn red" onclick="event.stopPropagation();deleteGuide('${g.id}',true)" title="No update in over ${FORCE_DELETE_THRESHOLD_MS/60000} min, past guide.yml's own 20-min timeout \u2014 the Action is definitely dead">\u00d7 (stuck)</button>` : ""}
-          </div>
-        </div>
-      </div>`).join("");
-  }
-  // Resume polling ONLY for the job currently open in the review panel,
-  // if it's still in progress \u2014 never adopt some OTHER in-progress job
-  // found elsewhere in the list. That auto-adoption was the actual bug
-  // behind both the review panel "vanishing" (a leftover zombie job from
-  // earlier testing silently hijacked activeGuideId, then the next poll
-  // tick overwrote the visible panel with THAT job's progress instead)
-  // and, very likely, the delete/clear issue too (the resulting
-  // duplicate polling loops raced their own fetches against a delete's
-  // write-then-refresh sequence).
-  if (activeGuideId && !guidePollTimer) {
-    const openJob = guides.find(g => g.id === activeGuideId);
-    if (openJob && !TERMINAL_STATUSES.has(openJob.status)) startGuidePolling(activeGuideId);
-  }
-}
-
-async function deleteGuide(id, force){
-  const g = guides.find(x => x.id === id);
-  if (!g) return;
-  const canDelete = DELETABLE_STATUSES.has(g.status) || (force && isForceDeletable(g));
-  if (!canDelete) { toast("Can't delete a job that's still actively running.", "err"); return; }
-  const label = g.article?.title || g.submitted?.idea?.slice(0, 60) || "this job";
-  const stuckNote = (force && isForceDeletable(g))
-    ? `\n\nThis job hasn't updated in over ${FORCE_DELETE_THRESHOLD_MS/60000} minutes, well past guide.yml's own 20-minute timeout \u2014 the GitHub Action has definitely already been killed, so this is safe.`
-    : "";
-  if (!confirm(`Delete "${label}"? This only removes it from the list \u2014 if it was published, the live page stays up.${stuckNote}`)) return;
-  try {
-    await loadGuidesFile();
-    await writeGuidesWithRetry(gs => gs.filter(x => x.id !== id), `admin: ${force ? "force-" : ""}delete guide job ${id}`);
-    if (activeGuideId === id) closeGuideReview();
-    await renderGuides();
-    toast("Deleted.");
-  } catch (e) {
-    toast(e.message, "err", 5000);
-  }
-}
-
-$("#guideClearFinished").addEventListener("click", async () => {
-  try {
-    await loadGuidesFile();
-  } catch (e) { toast(e.message, "err", 5000); return; }
-  const finished = guides.filter(g => DELETABLE_STATUSES.has(g.status));
-  if (!finished.length) { toast("Nothing to clear \u2014 no finished jobs in the list."); return; }
-  const stillActive = guides.length - finished.length;
-  const activeNote = stillActive ? `\n\n${stillActive} job(s) still in progress or awaiting publish will be left alone.` : "";
-  // The confirm() dialog above can sit open for an arbitrary amount of
-  // time while a person reads it \u2014 easily long enough for a GitHub
-  // Action to commit a stage update in the background, which is exactly
-  // why this needs the retry-safe write, not a plain save.
-  if (!confirm(`Clear ${finished.length} finished job(s) (ready for review, published, failed, or rejected)?${activeNote}\n\nPublished pages themselves are not affected \u2014 this only clears the admin list.`)) return;
-  try {
-    await writeGuidesWithRetry(gs => gs.filter(g => !DELETABLE_STATUSES.has(g.status)), `admin: clear ${finished.length} finished guide job(s)`);
-    if (activeGuideId && !guides.find(g => g.id === activeGuideId)) closeGuideReview();
-    await renderGuides();
-    toast(`Cleared ${finished.length} job(s).`);
-  } catch (e) {
-    toast(e.message, "err", 5000);
-  }
-});
-
-$("#gGenerate").addEventListener("click", async () => {
-  const idea = $("#gIdea").value.trim();
-  if (!idea) { toast("Enter an article idea first", "err"); return; }
-  const btn = $("#gGenerate"); btn.disabled = true;
-  try {
-    await loadGuidesFile();
-    const id = uid();
-    const job = {
-      id, status: "queued", stage: "Queued",
-      submitted: {
-        idea, article_type: $("#gType").value, target_audience: $("#gAudience").value,
-        target_length: $("#gLength").value, image_count: Number($("#gImages").value),
-        keywords: $("#gKeywords").value, editorial_notes: $("#gNotes").value,
-        allow_synthesis: $("#gSynth").checked,
-      },
-      created_at: new Date().toISOString(), updated_at: new Date().toISOString(),
-    };
-    await writeGuidesWithRetry(g => (g.some(x => x.id === id) ? g : [...g, job]), `admin: new guide job ${id}`);
-    await dispatchWorkflow("guide.yml", { job_id: id });
-    toast("Generation started \u2014 this will take several minutes.");
-    $("#gIdea").value = "";
-    await renderGuides();
-    startGuidePolling(id);
-  } catch (e) {
-    toast(e.message, "err", 6000);
-  } finally {
-    btn.disabled = false;
-  }
-});
-
-function startGuidePolling(id){
-  clearInterval(guidePollTimer);
-  guidePollTimer = setInterval(async () => {
-    try {
-      await renderGuides();
-      const g = guides.find(x => x.id === id);
-      if (!g) { clearInterval(guidePollTimer); return; }
-      // If this job's progress panel is the one currently open, refresh
-      // its stage dots too \u2014 otherwise it visually freezes at whatever
-      // stage it was on when opened, even though new data just arrived.
-      if (activeGuideId === id && !TERMINAL_STATUSES.has(g.status)) {
-        $("#guideReviewPanel").innerHTML = renderProgressPanel(g);
-      }
-      if (TERMINAL_STATUSES.has(g.status)) {
-        clearInterval(guidePollTimer);
-        if (g.status === "ready_for_review") openGuide(id);
-      }
-    } catch { /* transient network hiccup \u2014 next poll retries, no need to surface every miss */ }
-  }, 10000);
-}
-
-function timeAgoSeconds(iso){
-  return Math.max(0, Math.floor((Date.now() - new Date(iso).getTime()) / 1000));
-}
-function fmtDuration(sec){
-  if (sec < 60) return `${sec}s`;
-  const m = Math.floor(sec / 60), s = sec % 60;
-  return `${m}m ${s}s`;
-}
-
-function renderProgressPanel(g){
-  const curIdx = STAGE_ORDER.indexOf(g.stage);
-  const rows = STAGE_ORDER.map((label, i) => {
-    const cls = curIdx === -1 ? "" : i < curIdx ? "done" : i === curIdx ? "current" : "";
-    return `<li class="${cls}"><span class="dot"></span>${esc(label)}</li>`;
-  }).join("");
-
-  const updatedSec = timeAgoSeconds(g.updated_at || g.created_at);
-  const stuck = updatedSec * 1000 > STUCK_THRESHOLD_MS;
-  const actionsUrl = `https://github.com/${cfg.repo}/actions/workflows/guide.yml`;
-
-  return `
-    <h3>${esc(g.article?.title || g.submitted?.idea?.slice(0,60) || "Generating\u2026")}</h3>
-    <p class="tip" style="margin:4px 0 4px">Started ${esc(fmtDuration(timeAgoSeconds(g.created_at)))} ago \u00b7 last updated <span id="gUpdatedAgo">${esc(fmtDuration(updatedSec))}</span> ago</p>
-    ${stuck ? `<div class="panel" style="border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin:10px 0" id="gStuckWarn">
-        <div class="tip" style="color:var(--red)">\u26a0 No update in over ${Math.round(STUCK_THRESHOLD_MS/60000)} minutes \u2014 this may be stuck.</div>
-        <a href="${actionsUrl}" target="_blank" class="btn" style="margin-top:8px">Check the Actions log \u2192</a>
-      </div>` : `<div id="gStuckWarn"></div>`}
-    <ul class="stagelist" style="margin-top:10px">${rows}</ul>
-    <div class="save-row" style="display:flex;justify-content:space-between;margin-top:16px">
-      <a href="${actionsUrl}" target="_blank" class="btn">View run in GitHub Actions \u2192</a>
-      <button class="btn" onclick="closeGuideReview()">\u2190 back to list</button>
-    </div>`;
-}
-
-function startGuideTicker(id){
-  clearInterval(guideTickTimer);
-  guideTickTimer = setInterval(() => {
-    const g = guides.find(x => x.id === id);
-    const el = $("#gUpdatedAgo");
-    if (!g || !el) { clearInterval(guideTickTimer); return; }
-    const updatedSec = timeAgoSeconds(g.updated_at || g.created_at);
-    el.textContent = fmtDuration(updatedSec);
-    // Flip the stuck warning on live, without waiting for the next 10s
-    // poll \u2014 someone staring at this screen should see it flip the
-    // instant it crosses the threshold, not up to 10s later.
-    const warnBox = $("#gStuckWarn");
-    const isStuckNow = updatedSec * 1000 > STUCK_THRESHOLD_MS;
-    if (warnBox && isStuckNow && !warnBox.innerHTML) {
-      const actionsUrl = `https://github.com/${cfg.repo}/actions/workflows/guide.yml`;
-      warnBox.className = "panel";
-      warnBox.style.cssText = "border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin:10px 0";
-      warnBox.innerHTML = `<div class="tip" style="color:var(--red)">\u26a0 No update in over ${Math.round(STUCK_THRESHOLD_MS/60000)} minutes \u2014 this may be stuck.</div>
-        <a href="${actionsUrl}" target="_blank" class="btn" style="margin-top:8px">Check the Actions log \u2192</a>`;
-    }
-  }, 1000);
-}
-
-/* ---- Review screen ---- */
-function openGuide(id){
-  const g = guides.find(x => x.id === id);
-  if (!g) return;
-  activeGuideId = id;
-  $("#guideNewPanel").style.display = "none";
-  const panel = $("#guideReviewPanel");
-  panel.style.display = "";
-
-  if (!TERMINAL_STATUSES.has(g.status) || g.status === "approved") {
-    panel.innerHTML = renderProgressPanel(g);
-    startGuideTicker(id);
-    return;
-  }
-  clearInterval(guideTickTimer);
-  if (g.status === "failed") {
-    panel.innerHTML = `<h3 style="color:var(--red)">Generation failed</h3>
-      <p class="tip">Stage: ${esc(g.error?.stage)} \u2014 ${esc(g.error?.message)}</p>
-      <button class="btn" onclick="closeGuideReview()">\u2190 back to list</button>`;
-    return;
-  }
-
-  const a = g.article || {};
-  const warnHtml = (g.warnings || []).length
-    ? `<div class="panel" style="border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin-bottom:14px">
-        <div class="tip" style="color:var(--red);margin-bottom:6px">\u26a0 ${g.warnings.length} warning(s)</div>
-        ${g.warnings.map(w => `<div style="font-size:12.5px;color:var(--dim);padding:4px 0">${esc(w)}</div>`).join("")}
-      </div>` : "";
-
-  const sectionsHtml = (a.sections || []).map((s, i) => `
-    <div class="panel" style="margin-bottom:10px">
-      <label>Section ${i+1} heading</label>
-      <input data-sec="${i}" data-field="heading" class="gSecField" value="${esc(s.heading)}">
-      <label style="margin-top:8px">Body (markdown)</label>
-      <textarea data-sec="${i}" data-field="body_markdown" class="gSecField" rows="6">${esc(s.body_markdown)}</textarea>
-    </div>`).join("");
-
-  const imagesHtml = (g.images || []).length
-    ? `<div class="panel"><h3>Images (${g.images.length})</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:10px">
-          ${g.images.map(img => `
-            <div>
-              <img src="${esc(img.file)}" style="width:100%;border-radius:6px;border:1px solid var(--line-2)" alt="${esc(img.alt_text)}">
-              <div class="tip" style="margin-top:4px">${esc(img.placement)}</div>
-            </div>`).join("")}
-        </div>
-      </div>` : "";
-
-  const highSeverity = (g.fact_check?.issues || []).filter(i => i.severity === "high").length;
-
-  panel.innerHTML = `
-    <h3>Review draft</h3>
-    <p class="tip" style="margin:0 0 12px">Nothing publishes until you click Publish below.</p>
-    ${warnHtml}
-    <label>Title</label><input id="gaTitle" value="${esc(a.title)}">
-    <label style="margin-top:10px">Dek</label><textarea id="gaDek" rows="2">${esc(a.dek)}</textarea>
-    <label style="margin-top:10px">Meta description</label><input id="gaMeta" value="${esc(a.meta_description)}">
-    <div style="margin-top:16px">${sectionsHtml}</div>
-    ${imagesHtml}
-    <div class="save-row" style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px">
-      <button class="btn" onclick="closeGuideReview()">\u2190 back</button>
-      <button class="btn" id="gSaveEdits">Save edits</button>
-      ${highSeverity ? `<button class="btn" disabled title="${highSeverity} unresolved high-severity issue(s) block approval">Approve &amp; publish</button>`
-                     : `<button class="btn primary" id="gApprovePublish">Approve &amp; publish \u2192</button>`}
-    </div>`;
-
-  $("#gSaveEdits")?.addEventListener("click", () => saveGuideEdits(id, false));
-  $("#gApprovePublish")?.addEventListener("click", () => saveGuideEdits(id, true));
-}
-
-function closeGuideReview(){
-  clearInterval(guideTickTimer);
-  $("#guideReviewPanel").style.display = "none";
-  $("#guideNewPanel").style.display = "";
-  activeGuideId = null;
-}
-
-async function saveGuideEdits(id, thenPublish){
-  const g = guides.find(x => x.id === id);
-  if (!g) return;
-  g.article.title = $("#gaTitle").value;
-  g.article.dek = $("#gaDek").value;
-  g.article.meta_description = $("#gaMeta").value;
-  $$(".gSecField").forEach(el => {
-    const i = Number(el.dataset.sec), field = el.dataset.field;
-    if (g.article.sections[i]) g.article.sections[i][field] = el.value;
-  });
-  if (thenPublish) { g.status = "approved"; g.stage = "Approved"; g.approved_at = new Date().toISOString(); }
-
-  const btn = thenPublish ? $("#gApprovePublish") : $("#gSaveEdits");
-  if (btn) btn.disabled = true;
-  try {
-    await loadGuidesFile();
-    await writeGuidesWithRetry(gs => {
-      const i = gs.findIndex(x => x.id === id);
-      const updated = [...gs];
-      if (i === -1) updated.push(g); else updated[i] = g;
-      return updated;
-    }, `admin: ${thenPublish ? "approve" : "edit"} guide ${id}`);
-    if (thenPublish) {
-      await dispatchWorkflow("guide-publish.yml", { job_id: id });
-      toast("Publishing\u2026 the live URL will show up in the list shortly.");
-      startGuidePolling(id);
-    } else {
-      toast("Saved.");
-    }
-    closeGuideReview();
-    await renderGuides();
-  } catch (e) {
-    toast(e.message, "err", 6000);
-    if (btn) btn.disabled = false;
-  }
-}
-
-
-function renderOverrides(){
-  $("#ovBlocked").value = (overrides.blocked_ids || []).join("\n");
-  $("#ovBlockedTerms").value = (overrides.blocked_terms || []).join(", ");
-  $("#ovPinnedSpot").value = (overrides.pinned_spotlight || []).join(", ");
-  renderPinSuggestions();
-}
-
-function renderPinSuggestions(){
-  const list = overrides.pin_suggestions || [];
-  const box = $("#pinSuggestList");
-  if (!list.length) { box.innerHTML = `<div class="empty" style="padding:14px 0">no pending suggestions right now</div>`; return; }
-  box.innerHTML = list.map(sug => {
-    const story = feed.stories.find(s => s.id === sug.id);
-    const title = story ? story.title : sug.id;
+  $("#briefEyebrow").textContent = `The Daily Blip · Issue ${String(FEED.issue||1).padStart(4,"0")}${updatedLabel ? " · " + updatedLabel : ""}`;
+  $("#blipCount").textContent = `${items.length} blips`;
+  $("#briefItems").innerHTML = items.map((b,i)=>{
+    // Items arrive pre-sorted by impact score (validateBrief sorts them
+    // server-side), so position 0 is genuinely the day's biggest story,
+    // not just whatever order the model happened to output.
+    const tier = i===0 ? " impact-hero" : (i===1||i===2) ? " impact-high" : "";
+    const hwFlag = b.hardware ? `<span class="hw-flag" title="Hardware/infrastructure story, not a creator tool">hardware</span>` : "";
+    const trackingFlag = b.tracking ? `<span class="tracking-flag" title="Pinned by the editor — carried across editions">Tracking</span>` : "";
+    const commentaryFlag = b.commentary ? `<span class="commentary-flag" title="Opinion piece from the dailyblip editors, not news">Commentary</span>` : "";
     return `
-    <div class="pin-suggest-row" data-pin="${esc(sug.id)}" style="display:flex;align-items:center;gap:10px;padding:9px 0;border-top:1px solid var(--line,rgba(158,216,210,.13))">
-      <div style="flex:1;min-width:0">
-        <div style="font-size:13.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(title)}</div>
-        <div class="tip">covered by ${sug.source_count} sources: ${esc((sug.sources||[]).join(", "))}</div>
-      </div>
-      <button class="btn primary pin-confirm">📌 pin (2 editions)</button>
-      <button class="btn pin-dismiss">dismiss</button>
-    </div>`;
+    <li class="brief-item${readSet.has(i)?" read":""}${tier}" data-i="${i}" data-story="${b.story}" tabindex="0" role="button" aria-pressed="${readSet.has(i)}">
+      <span class="marker"><span class="num">${i+1}</span></span>
+      <p>${trackingFlag}${hwFlag}${commentaryFlag}${sanB(b.html)}</p>
+      <span class="secs">${b.secs}s</span>
+    </li>`;
   }).join("");
-  $$(".pin-suggest-row").forEach(row => {
-    const id = row.dataset.pin;
-    row.querySelector(".pin-confirm")?.addEventListener("click", () => {
-      overrides.pinned_brief = overrides.pinned_brief || [];
-      if (!overrides.pinned_brief.find(p => p.id === id)) {
-        overrides.pinned_brief.push({ id, editions_remaining: 2 });
-      }
-      const story = feed.stories.find(s => s.id === id);
-      if (story) story.pinned_brief = true;
-      overrides.pin_suggestions = (overrides.pin_suggestions || []).filter(p => p.id !== id);
-      markDirty(); renderPinSuggestions(); renderStories(); toast("pinned for 2 editions");
-    });
-    row.querySelector(".pin-dismiss")?.addEventListener("click", () => {
-      overrides.pin_suggestions = (overrides.pin_suggestions || []).filter(p => p.id !== id);
-      overrides.dismissed_pin_suggestions = overrides.dismissed_pin_suggestions || [];
-      if (!overrides.dismissed_pin_suggestions.includes(id)) overrides.dismissed_pin_suggestions.push(id);
-      markDirty(); renderPinSuggestions(); toast("dismissed");
-    });
-  });
-}
-function parseList(v, sep){
-  return v.split(sep).map(s => s.trim()).filter(Boolean);
-}
-$("#ovBlocked").addEventListener("input", e => { overrides.blocked_ids = parseList(e.target.value, "\n"); markDirty(); });
-$("#ovBlockedTerms").addEventListener("input", e => { overrides.blocked_terms = parseList(e.target.value, ","); markDirty(); });
-$("#ovPinnedSpot").addEventListener("input", e => { overrides.pinned_spotlight = parseList(e.target.value, ","); markDirty(); });
-
-/* -------- New story -------- */
-$("#nwAdd").addEventListener("click", () => {
-  const title = $("#nwTitle").value.trim();
-  const dek = $("#nwDek").value.trim();
-  if (!title || !dek) return toast("headline and dek are required", "err");
-  // ID is stable-ish for de-dupe: sha-like from title
-  const id = "man_" + Math.abs([...title].reduce((h,c)=>((h<<5)-h)+c.charCodeAt(0),0)).toString(36) + Date.now().toString(36).slice(-4);
-  const story = {
-    id, cat: $("#nwCat").value, badge: $("#nwBadge").value,
-    title, dek,
-    src: $("#nwSrc").value.trim() || "manual",
-    url: $("#nwUrl").value.trim() || "#",
-    ts: new Date().toISOString(),
-    read: "3 min",
-    spotlight: $("#nwSpot").checked,
-    top: $("#nwTop").checked,
-    locked: true,          // manual adds are locked by default
-    manual: true,
-    also: [],
-  };
-  if (story.top) feed.stories.forEach(x => delete x.top);
-  feed.stories.unshift(story);
-  markDirty(); renderStories();
-  // clear the form
-  ["nwTitle","nwDek","nwUrl","nwSrc"].forEach(id => $("#"+id).value = "");
-  $("#nwSpot").checked = false; $("#nwTop").checked = false;
-  toast(`added ${id}`);
-  // switch to Stories tab so they can see it landed
-  activateTab("stories");
-});
-
-/* -------- Tab switching -------- */
-function activateTab(name){
-  $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === name));
-  const panes = { stories: "#paneStories", brief: "#paneBrief", tooldrop: "#paneTooldrop", overrides: "#paneOverrides", guides: "#paneGuides", new: "#paneNew" };
-  Object.entries(panes).forEach(([k, sel]) => $(sel).style.display = k === name ? "" : "none");
-  if (name === "brief") renderBrief();
-  if (name === "tooldrop") renderTooldrop();
-  if (name === "overrides") renderOverrides();
-  if (name === "guides") renderGuides();
-}
-$$(".tab").forEach(t => t.addEventListener("click", () => activateTab(t.dataset.tab)));
-
-/* =============================================================
-   Render entry + Publish
-============================================================= */
-function renderAll(){
-  renderStories(); renderBrief(); renderTooldrop(); renderOverrides();
-  $("#repoMeta").textContent = `${cfg.repo} · issue ${feed.issue ?? "?"} · ${feed.stories.length} stories`;
-}
-
-$("#publishBtn").addEventListener("click", async () => {
-  if (!dirty) return;
-  const btn = $("#publishBtn");
-  btn.disabled = true; setStatus("publishing…", "dirty");
-  try {
-    // Small changelog for the commit message
-    const changes = [];
-    if (feed.stories.some(s => s.manual)) changes.push("manual stories");
-    if ((overrides.blocked_ids||[]).length) changes.push(`blocklist=${overrides.blocked_ids.length}`);
-    const msg = `admin: ${changes.join(", ") || "edit"} @ ${new Date().toISOString().slice(0,16)}`;
-
-    // Bump generated_at so the site doesn't show a stale banner right after an admin edit
-    feed.generated_at = new Date().toISOString();
-
-    const newFeedSha = await writeFile(FEED_PATH, feed, feedSha, msg);
-    feedSha = newFeedSha;
-    const newOvrSha = await writeFile(OVR_PATH, overrides, overridesSha, "admin: overrides");
-    overridesSha = newOvrSha;
-    markClean();
-    toast("published — Pages redeploys in ~1 min");
-  } catch (e) {
-    setStatus("publish failed", "err");
-    toast(e.message, "err", 5000);
-    btn.disabled = false;
+  const pct = items.length ? readSet.size/items.length*100 : 0;
+  $("#pbarFill").style.width = pct+"%";
+  const st = $("#pstat");
+  if(items.length && readSet.size===items.length){
+    const n = recordBriefComplete();
+    st.textContent = n > 1 ? `✓ caught up — 🔥 ${n}-day streak` : "✓ you're caught up — nice.";
+    st.classList.add("done");
   }
+  else { st.textContent=`${readSet.size} / ${items.length} · ${readSet.size===0?"not caught up":"catching up…"}`; st.classList.remove("done"); }
+  renderBlips();
+}
+
+function renderBlips(){
+  const items = FEED.brief?.items || [];
+  const angles=[35,95,160,215,275,330];
+  // Distance cap matches the ~12h gap between AM/PM editions (was 14h,
+  // a leftover from the once-daily brief era). Without this, nearly every
+  // blip drifted to the outer rim well before the next edition refreshed,
+  // since storyHrs() is computed live against the current moment, not
+  // frozen at brief-generation time.
+  const MAX_BLIP_HOURS = 12;
+  $("#blips").innerHTML = items.map((b,i)=>{
+    const s = FEED.stories.find(x=>x.id===b.story);
+    const h = s ? storyHrs(s) : 6;
+    const r = 18 + Math.min(h,MAX_BLIP_HOURS)/MAX_BLIP_HOURS*66;
+    const a = angles[i%angles.length]*Math.PI/180;
+    const x = 90 + r*Math.cos(a), y = 90 + r*Math.sin(a);
+    return `<span class="blip${readSet.has(i)?" read":""}" data-i="${i}" style="left:${x/1.8}%;top:${y/1.8}%"></span>`;
+  }).join("");
+}
+
+// Anything older than this (and not the Top Signal story) gets pulled out
+// of the main flow and tucked behind a collapsed "older signals" toggle —
+// so the page never shows a 3-day-old story with the same visual weight
+// as something from an hour ago. This is the single biggest lever for the
+// site *feeling* current regardless of how much genuinely new content
+// exists on a given day.
+const STALE_HOURS = 36;
+
+function renderFeed(){
+  const list = FEED.stories.filter(s =>
+    matchCat(s) &&
+    (!query || (s.title+" "+s.dek).toLowerCase().includes(query))
+  ).sort((a,b) => {
+    // Top signal always leads. After that, strictly chronological — newest
+    // first. Heat (▲/▼ arrows) is still shown per-card but no longer used
+    // to decide order, per an explicit call to keep sorting predictable.
+    if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
+    return new Date(b.ts) - new Date(a.ts);
+  });
+
+  // Split: Top Signal AND any actively-pinned "tracking" story are always
+  // "fresh" regardless of age. Everything else past STALE_HOURS moves to
+  // the older bucket.
+  const fresh = list.filter(s => s.top || s.pinned_brief || storyHrs(s) < STALE_HOURS);
+  const stale = list.filter(s => !s.top && !s.pinned_brief && storyHrs(s) >= STALE_HOURS);
+
+  const shown = fresh.slice(0, visible);
+  $("#feedList").innerHTML = shown.map(s => storyCardHtml(s)).join("");
+  $("#emptyState").style.display = list.length ? "none" : "block";
+  $("#loadMore").style.display = fresh.length > visible ? "block" : "none";
+
+  const olderToggle = $("#olderToggle");
+  const olderList = $("#olderSignalsList");
+  if (!stale.length) {
+    olderToggle.style.display = "none";
+    olderList.style.display = "none";
+  } else {
+    olderToggle.style.display = "flex";
+    $("#olderToggleLabel").textContent = olderList.dataset.open === "1"
+      ? "hide older signals ↑"
+      : `show ${stale.length} older signal${stale.length===1?"":"s"} (36h+) ↓`;
+    olderList.innerHTML = `<div class="older-signals-head">older signals — still here, just not pretending to be new</div>`
+      + stale.map(s => storyCardHtml(s)).join("");
+  }
+}
+
+/** Extracted so both the fresh list and the older-signals bucket render
+ *  identical cards — the only difference is the de-emphasized wrapper
+ *  the older section applies via CSS (.older-signals), not the markup. */
+function storyCardHtml(s){
+  const cat = CATS.find(c=>c.id===s.cat) || {label:s.cat};
+  const h3 = s.url && s.url !== "#"
+    ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>`
+    : esc(s.title);
+  const also = s.also?.length ? ` · also via ${esc(s.also.join(", "))}` : "";
+  const hits = stackHits(s);
+  const stackFlag = hits.size ? `<span class="stack-flag" title="Affects your stack: ${esc(stackToolLabel(hits))}">affects your stack</span>` : "";
+  const commentaryFlag = s.commentary ? `<span class="commentary-flag" title="Opinion piece from the dailyblip editors, not a news item">Commentary</span>` : "";
+  return `
+  <article class="story${s.top?" top-story":""}" id="${s.id}" tabindex="0">
+    ${s.top?'<div class="top-label">top signal</div>':""}
+    <div class="story-meta">
+      <span class="tag c-${s.cat}">${cat.label}</span>
+      <span class="badge ${s.badge}">${s.badge}</span>
+      ${moveArrow(s)}
+      ${s.spotlight?'<span class="spot-flag">✦ spotlight</span>':""}
+      ${commentaryFlag}
+      ${stackFlag}
+      <span>${ago(storyHrs(s))}</span>
+    </div>
+    <h3>${h3}</h3>
+    <p>${esc(s.dek)}</p>
+    <div class="foot">via <b>${esc(s.src)}</b> · ${esc(s.read)} read${also}</div>
+  </article>`;
+}
+
+function renderSpotlight(){
+  const spots = FEED.stories.filter(s=>s.spotlight).slice(0,3);
+  $("#spotlightWrap").style.display = spots.length ? "block" : "none";
+  $("#spotGrid").innerHTML = spots.map(s=>{
+    const h3 = s.url && s.url !== "#"
+      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
+    return `<div class="spot-card"><h3>${h3}</h3><p>${esc(s.dek)}</p>
+      <div class="foot">via ${esc(s.src)} · ${ago(storyHrs(s))}</div></div>`;
+  }).join("");
+}
+
+function renderForYou(){
+  const api = stackApi();
+  const wrap = $("#forYouWrap");
+  if(!api){ wrap.style.display = "none"; return; }
+  const stack = api.loadStack();
+  if(!stack.length){ wrap.style.display = "none"; return; }
+
+  // Score every story: number of tools hit + slight recency boost.
+  const scored = FEED.stories.map(s => {
+    const hits = api.storyMatchesStack(s, stack);
+    if (!hits.size) return null;
+    const hoursOld = storyHrs(s);
+    const recency = Math.max(0, 1 - hoursOld / 48);   // 1.0 fresh → 0 at 2 days
+    return { story: s, hits, score: hits.size * 2 + recency };
+  }).filter(Boolean).sort((a,b) => b.score - a.score).slice(0, 4);
+
+  if(!scored.length){
+    wrap.style.display = "block";
+    $("#fyToolsLabel").textContent = `${stack.length} tool${stack.length===1?"":"s"} picked`;
+    $("#fyGrid").innerHTML = `<div class="fy-empty">nothing new for your stack in the last 48 hours — quiet is good</div>`;
+    return;
+  }
+
+  wrap.style.display = "block";
+  const pickedNames = stack.slice(0, 6).map(id => api.toolById(id)?.name).filter(Boolean).join(" · ");
+  $("#fyToolsLabel").textContent = pickedNames;
+
+  $("#fyGrid").innerHTML = scored.map(({story: s, hits}) => {
+    const h3 = s.url && s.url !== "#"
+      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
+    const toolLabel = stackToolLabel(hits);
+    return `<article class="story" style="border-color:rgba(255,180,84,.35);background:linear-gradient(155deg,rgba(255,180,84,.06),var(--ink-2) 55%)">
+      <div class="story-meta">
+        <span class="stack-flag">${esc(toolLabel)}</span>
+        <span class="badge ${s.badge}">${s.badge}</span>
+        <span>${ago(storyHrs(s))}</span>
+      </div>
+      <h3>${h3}</h3>
+      <p>${esc(s.dek)}</p>
+      <div class="foot">via <b>${esc(s.src)}</b> · ${esc(s.read)} read</div>
+    </article>`;
+  }).join("");
+}
+
+function renderToolDrop(){
+  const td = FEED.tooldrop;
+  if(!td){ $("#tooldropFeature").style.display = "none"; return; }
+  $("#tooldropFeature").style.display = "block";
+  $("#tdName").textContent = td.name;
+  $("#tdBlurb").textContent = td.blurb;
+  $("#tdMeta").textContent = td.meta || "";
+  const cta = $("#tdCta");
+  if(td.url && td.url !== "#"){
+    cta.href = td.url;
+    cta.style.display = "inline-flex";
+  } else {
+    cta.style.display = "none";
+  }
+}
+
+function renderSidebar(){
+  $("#modelList").innerHTML = (FEED.models||[]).map(m=>`
+    <div class="mrow"><span class="mname">${esc(m.n)}</span><span class="mstate ${m.s}"><i>${m.i}</i>${m.s}</span></div>`).join("");
+
+  const st = FEED.stats || {};
+  $("#numGrid").innerHTML = `
+    <div class="num-cell"><b>${st.scanned_last_run ?? "—"}</b><span>signals scanned</span></div>
+    <div class="num-cell"><b>${st.slopped_last_run ?? "—"}</b><span>slop rejected</span></div>
+    <div class="num-cell"><b>${st.sources_live ?? "—"}</b><span>sources live</span></div>
+    <div class="num-cell"><b>${FEED.generated_at ? Math.max(1,Math.round((Date.now()-new Date(FEED.generated_at))/6e4))+"m" : "—"}</b><span>since last sync</span></div>`;
+
+  const srcs = FEED.sources||[];
+  const maxC = Math.max(1,...srcs.map(s=>s.c));
+  $("#sourceList").innerHTML = srcs.map(s=>`
+    <div class="srow"><span>${esc(s.n)}</span><span class="sbar"><i style="width:${s.c/maxC*100}%"></i></span><span class="sn">${s.c}</span></div>`).join("");
+
+  $("#topicList").innerHTML = (FEED.topics||[]).map(t=>`<button class="topic">${esc(t)}</button>`).join("");
+
+  const ya = FEED.yearago;
+  if(ya && ya.title){
+    $("#yearagoPanel").style.display = "block";
+    $("#yaBody").textContent = `${ya.date}: ${ya.title}`;
+    $("#yaLink").href = ya.href || "archive/";
+  }
+}
+
+function renderAll(){
+  renderHeader(); renderStreak(); renderTicker(); renderCats(); renderBrief(); renderForYou(); renderSpotlight(); renderToolDrop(); renderFeed(); renderSidebar();
+}
+
+/* ---- events (delegated; bound once) ---- */
+$("#catNav").addEventListener("click", e=>{
+  const b = e.target.closest(".cat"); if(!b) return;
+  activeCat = b.dataset.cat; visible = 8;
+  renderCats(); renderFeed();
+});
+$("#searchInput").addEventListener("input", e=>{ query = e.target.value.trim().toLowerCase(); visible=8; renderFeed(); });
+$("#loadMore").addEventListener("click", ()=>{ visible += 8; renderFeed(); });
+$("#olderToggle").addEventListener("click", ()=>{
+  const el = $("#olderSignalsList");
+  const open = el.dataset.open === "1";
+  el.dataset.open = open ? "0" : "1";
+  el.style.display = open ? "none" : "block";
+  renderFeed(); // just to refresh the toggle label text
 });
 
-/* warn before leaving with unsaved changes */
-window.addEventListener("beforeunload", e => {
-  if (dirty) { e.preventDefault(); e.returnValue = ""; }
+function toggleBrief(li){
+  const i = +li.dataset.i;
+  readSet.has(i) ? readSet.delete(i) : readSet.add(i);
+  renderBrief();
+}
+function resetFilters(){
+  if(activeCat!=="all"||query){ activeCat="all"; query=""; $("#searchInput").value=""; renderCats(); }
+  visible = FEED.stories.length; renderFeed();
+}
+$("#briefItems").addEventListener("click", e=>{
+  const li = e.target.closest(".brief-item"); if(!li) return;
+  if(e.target.closest("p")){
+    resetFilters();
+    const t = document.getElementById(li.dataset.story);
+    if(t){ t.scrollIntoView({behavior:"smooth", block:"center"});
+      t.style.borderColor="var(--amber)"; setTimeout(()=>t.style.borderColor="",1400); }
+    if(!readSet.has(+li.dataset.i)){ readSet.add(+li.dataset.i); renderBrief(); }
+  } else toggleBrief(li);
+});
+$("#briefItems").addEventListener("keydown", e=>{
+  if(e.key==="Enter"||e.key===" "){ const li=e.target.closest(".brief-item"); if(li){ e.preventDefault(); toggleBrief(li);} }
+});
+$("#briefItems").addEventListener("mouseover", e=>{
+  const li = e.target.closest(".brief-item"); if(!li) return;
+  document.querySelector(`.blip[data-i="${li.dataset.i}"]`)?.classList.add("hot");
+});
+$("#briefItems").addEventListener("mouseout", e=>{
+  const li = e.target.closest(".brief-item"); if(!li) return;
+  document.querySelector(`.blip[data-i="${li.dataset.i}"]`)?.classList.remove("hot");
+});
+$("#topicList").addEventListener("click", e=>{
+  const t = e.target.closest(".topic"); if(!t) return;
+  const q = t.textContent.replace("#","").split("-")[0];
+  $("#searchInput").value = q; query = q.toLowerCase(); visible=8; renderFeed();
+  $("#feedList").scrollIntoView({behavior:"smooth"});
 });
 
-/* ---- boot ---- */
-loadCfg();
-if (needAuth()) openAuth();
-else { $("#repoMeta").textContent = cfg.repo; bootLoad(); }
+/* subscribe — posts to Buttondown when data-buttondown is set, demo mode otherwise */
+$("#subForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  const email = $("#subEmail").value;
+  if(!email || !email.includes("@")){
+    $("#subEmail").focus(); $("#subEmail").style.borderColor="var(--red)";
+    setTimeout(()=>$("#subEmail").style.borderColor="",1200); return;
+  }
+  const user = $("#subForm").dataset.buttondown;
+  if(user){
+    try{
+      await fetch(`https://buttondown.com/api/emails/embed-subscribe/${user}`,{
+        method:"POST", mode:"no-cors",
+        headers:{"Content-Type":"application/x-www-form-urlencoded"},
+        body:new URLSearchParams({email}),
+      });
+    }catch{}
+  }
+  $("#subOk").style.display="block"; $("#subEmail").value="";
+});
+
+/* Blip mascot — dismiss state applied immediately (not inside boot()) so
+   there's no flash of a visible sprite before the "hidden" class lands. */
+(function initBlip(){
+  const sprite = $("#blipSprite");
+  if(localStorage.getItem("blipDismissed") === "1") sprite.classList.add("hidden");
+
+  $("#blipDismiss").addEventListener("click", e=>{
+    e.stopPropagation();
+    sprite.classList.add("hidden");
+    localStorage.setItem("blipDismissed", "1");
+  });
+
+  $("#blipMain").addEventListener("click", ()=>{
+    sprite.classList.add("waving");
+    setTimeout(()=>sprite.classList.remove("waving"), 600);
+    window.scrollTo({top:0, behavior:"smooth"});
+  });
+})();
+
+/* ---- boot: hydrate from feed.json, fall back to embedded sample ---- */
+(async function boot(){
+  try{
+    const res = await fetch("data/feed.json", {cache:"no-store"});
+    if(res.ok){
+      const data = await res.json();
+      if(Array.isArray(data.stories) && data.stories.length) FEED = {...FEED, ...data};
+    }
+  }catch{ /* local file:// preview — fallback data is fine */ }
+  // Dead man's switch: if the pipeline has been silent for 48h, say so
+  // instead of presenting stale news as fresh.
+  if(FEED.generated_at && Date.now() - new Date(FEED.generated_at) > 48*3600*1000){
+    $("#staleDate").textContent = new Date(FEED.generated_at).toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"});
+    $("#staleBanner").style.display = "block";
+  }
+  renderAll();
+
+  // Personal Stack: inject styles, mount the gear in the header, re-render
+  // whenever the user updates their picks, and show the first-run modal.
+  const api = stackApi();
+  if(api){
+    api.injectStackStyles();
+    api.mountStackGear($("#headMeta"));
+    window.addEventListener("stackchange", () => { api.refreshStackGear(); renderAll(); });
+    api.maybeShowFirstRun();
+  }
+})();
 </script>
 </body>
 </html>
