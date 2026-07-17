@@ -1148,8 +1148,8 @@
   },
   {
     "id": "e2b14fbf-805a-4845-8e96-05518fbdca8c",
-    "status": "queued",
-    "stage": "Fact-checking",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Guide for less technical musicians getting into new AI - where to start",
       "article_type": "Practical guide",
@@ -1161,7 +1161,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:44:15.646Z",
-    "updated_at": "2026-07-17T15:49:10.016Z",
+    "updated_at": "2026-07-17T15:52:34.949Z",
     "brief": {
       "target_reader": "Musicians aged 40+ with intermediate-to-advanced musical skills but limited technical background, who have heard about AI music tools and are curious but unsure where to start or whether it is worth the effort",
       "reader_outcome": "The reader can identify which category of AI music tool fits their actual workflow, set up and try at least one tool without needing coding knowledge, and make an informed decision about whether to go deeper based on honest tradeoffs",
@@ -1623,6 +1623,136 @@
       "conclusion": "AI music tools are neither the revolution their promoters claim nor the irrelevance their critics suggest. For experienced musicians, the most realistic value is in specific, targeted tasks: cleaning up a noisy recording, getting a quick mastered preview, generating rough material to react to. The tools that deliver that value reliably already exist and many of them are free to try.\n\nThe honest advice is to start narrow. Pick the one friction point in your current work where you lose the most time or energy, find the tool category that addresses that specific problem, and spend one week with the free tier before deciding anything else. Your musical judgment is still the most valuable thing in the room. These tools work best when they are doing the tedious parts so you can focus on the parts only you can do.",
       "methodology_disclosure": "This guide was researched and synthesized from official pricing and terms-of-service pages for each tool mentioned, supplemented by independent reviews from specialist music technology and legal publications. All pricing figures and commercial rights claims were cross-referenced against primary sources where available. Claims that could not be verified against primary sources are either flagged explicitly in the text, attributed to independent observers rather than stated as fact, or omitted. Readers are directed to verify current pricing and terms directly with each platform before making purchasing decisions, as pricing and rights terms in this space change frequently. Dailyblip did not independently test any of the tools described in this guide.",
       "last_reviewed_date": "July 17, 2026"
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Suno's free plan gives you 50 credits per day, which works out to roughly 10 songs.",
+          "issue": "The source (Suno pricing page) confirms 50 credits/day ≈ 10 songs, but this assumes each song costs 5 credits. The article states this as fact without noting that credit cost per generation can vary by length or mode, which could mislead users about actual output volume.",
+          "recommended_replacement": "Suno's free plan gives you 50 credits per day, which works out to roughly 10 standard songs (at approximately 5 credits per generation; longer or higher-quality generations may use more).",
+          "supporting_source_url": "https://suno.com/pricing"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "as of updated 2026 terms, free-tier songs are no longer downloadable.",
+          "issue": "The source supporting this claim is an independent review site (dynamoi.com), not Suno's official terms of service. The article presents this as a confirmed fact rather than an independently observed claim. The methodology disclosure says unverified claims should be flagged or attributed to observers. This should be attributed.",
+          "recommended_replacement": "as of updated 2026 terms, free-tier songs are reportedly no longer downloadable — verify current terms at suno.com before relying on this.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Free tier gives 100 credits per month with a hard cap of 10 per day, and 3 full-length generations per day.",
+          "issue": "This comes from an independent review site (eesel.ai), not Udio's official pricing page. The article states it as fact. Given that Udio's commercial terms have been described as evolving, the generation limits should be attributed or flagged for verification.",
+          "recommended_replacement": "According to independent observers, the free tier gives 100 credits per month with a hard cap of 10 per day, and 3 full-length generations per day — verify current limits at udio.com.",
+          "supporting_source_url": "https://www.eesel.ai/blog/udio-pricing"
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "Commercial use terms have been evolving following licensing settlements with Universal Music Group and Warner Music Group in late 2025.",
+          "issue": "Per the sources, the UMG settlement was in October 2025 and the WMG settlement was in November 2025 — these are accurately described as 'late 2025.' However, the article does not mention that Suno also settled with WMG (November 2025 per the dynamoi.com source). Mentioning WMG settlement only under Udio and not Suno, while mentioning only UMG under Udio, creates a misleading asymmetry. Suno's WMG settlement is source-supported and relevant.",
+          "recommended_replacement": "Commercial use terms have been evolving following licensing settlements with Universal Music Group and Warner Music Group in late 2025. Note that Suno also reached a settlement with Warner Music Group in November 2025. Check each platform's current terms of service before relying on commercial rights.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "Udio (free tier, browser)\nSimilar to Suno. Free tier gives 100 credits per month with a hard cap of 10 per day, and 3 full-length generations per day.",
+          "issue": "The tool card for Udio lists '3 full-length (130-second) song generations per day' as a free-tier limit, but the prose section says only '3 full-length generations per day' without noting the 130-second duration cap. More importantly, neither the prose nor the tool card clarifies what constitutes a 'credit' relative to generation length. Given the post-settlement changes described in sources, presenting credit counts as stable facts without a verification prompt is potentially misleading on a high-stakes commercial-use question.",
+          "recommended_replacement": "Free tier gives approximately 100 credits per month with a reported hard cap of 10 generations per day, and 3 full-length (up to 130-second) song generations per day, per independent sources as of July 2026. Verify current limits and credit costs at udio.com.",
+          "supporting_source_url": "https://www.eesel.ai/blog/udio-pricing"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s4",
+          "original_text": "An independent review observed perpetual prices around $49 for Elements, $399 for Standard, and $799 for Advanced as of June 2026, though iZotope runs frequent sales of 30 to 50 percent.",
+          "issue": "This is correctly attributed to an independent review, which is good. However, the article references 'iZotope Plus and Pro subscriptions through Native Instruments' Native Access portal' earlier in the same section but does not give observed subscription pricing for those tiers, only perpetual license pricing. Readers may conflate the two. The omission of subscription pricing could lead musicians to underestimate cost of the subscription path if that is what they encounter first.",
+          "recommended_replacement": "An independent review observed perpetual prices around $49 for Elements, $399 for Standard, and $799 for Advanced as of June 2026, though iZotope runs frequent sales of 30 to 50 percent. iZotope also offers subscription access via the iZotope Plus and iZotope Pro plans through Native Instruments' Native Access portal; subscription pricing is not independently verified here — check izotope.com/pages/subscriptions for current rates.",
+          "supporting_source_url": "https://www.creatorstackclub.com/software/izotope-rx"
+        },
+        {
+          "severity": "low",
+          "section_id": "s4",
+          "original_text": "It works as a plugin inside major DAWs including Logic Pro, Pro Tools, Ableton Live, Cubase, Studio One, FL Studio, Reaper, and others, as well as Adobe Audition and Premiere Pro.",
+          "issue": "The official iZotope source lists specific versioned DAWs: Logic Pro 12, Pro Tools 2025, Ableton Live 12, Cubase 15, Studio One 7/Fender Studio Pro 8, Reaper 7, FL Studio 25, Adobe Audition 2026, Adobe Premiere Pro 2026, DaVinci Resolve 19, Reason 13. The article omits DaVinci Resolve and Reason, and omits version numbers. This is a minor accuracy issue but could matter for musicians on older DAW versions.",
+          "recommended_replacement": "It works as a plugin inside major DAWs including Logic Pro, Pro Tools, Ableton Live, Cubase, Studio One, FL Studio, Reaper, and others, as well as Adobe Audition, Premiere Pro, DaVinci Resolve, and Reason. Specific supported versions are listed at izotope.com — confirm compatibility with your DAW version before purchasing.",
+          "supporting_source_url": "https://www.izotope.com/pages/subscriptions"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s5",
+          "original_text": "Independently observed pricing is around $12.99 per month for Essentials (unlimited MP3) and $24.99 per month for Pro (unlimited WAV).",
+          "issue": "The official LANDR source only confirms that Essentials, Standard, and Pro tiers exist and that Standard and Pro add WAV mastering. The pricing figures come solely from the independent review site (undetectr.com). The article attributes pricing to 'independent review' which is correct methodology, but omits the Standard tier pricing entirely, creating a misleading gap between the $12.99 Essentials and $24.99 Pro with no mention of Standard in between.",
+          "recommended_replacement": "Independently observed pricing is around $12.99 per month for Essentials (unlimited MP3) and $24.99 per month for Pro (unlimited WAV); a Standard tier also exists between these. Verify all current pricing at landr.com/pricing/master before subscribing.",
+          "supporting_source_url": "https://undetectr.com/blog/free-ai-mastering"
+        },
+        {
+          "severity": "low",
+          "section_id": "s5",
+          "original_text": "Splice's generative tools (launched April 2026) work with its existing catalog of over 3 million human-made, licensed samples.",
+          "issue": "The Music Business Worldwide source confirms the April 2026 launch and the 3M+ catalog figure. The article also mentions Magic Fit as one of the three tools but does not note in the prose (only in the tool card) that Magic Fit was 'scheduled for summer 2026' at time of the source reporting — meaning it may not have been available at launch. If this guide was published in July 2026, Magic Fit's availability status should be clarified.",
+          "recommended_replacement": "Splice's generative tools (launched April 2026) work with its existing catalog of over 3 million human-made, licensed samples. Note that Magic Fit, one of three announced tools, was scheduled for summer 2026 availability — verify current tool availability at splice.com.",
+          "supporting_source_url": "https://www.musicbusinessworldwide.com/splice-launches-ai-tools-that-compensate-sample-creators-when-their-sounds-are-used/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s6",
+          "original_text": "Under the Stability AI Community License, users own their outputs and can distribute and commercialize them freely (organizations with annual revenue above $1 million require an Enterprise license).",
+          "issue": "The source for this is a company announcement, which the source table correctly labels 'company claim.' The article presents the Community License terms as fact without flagging that these are self-reported by Stability AI and have not been independently verified by legal review. Given the copyright complexity noted elsewhere in the article, a brief qualifier is warranted.",
+          "recommended_replacement": "Per Stability AI's own announcement, the Community License allows users to own their outputs and distribute and commercialize them freely (organizations with annual revenue above $1 million require an Enterprise license). Verify current license terms at stability.ai before relying on commercial rights.",
+          "supporting_source_url": "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s7",
+          "original_text": "The US Court of Appeals affirmed this on March 21, 2025, and the Supreme Court left that ruling in place on March 2, 2026.",
+          "issue": "The source (abounaja.com) is a legal blog/IP firm site, not an official court record or legal publisher. The specific dates (March 21, 2025 for the Court of Appeals ruling and March 2, 2026 for the Supreme Court action) could not be verified against a primary legal source in the provided materials. These are high-stakes legal claims presented as confirmed fact. They may be accurate, but citing a law firm blog as a primary source for specific appellate court dates is a verification gap.",
+          "recommended_replacement": "The US Court of Appeals affirmed this in early 2025, and the Supreme Court left that ruling in place in early 2026, according to legal observers. Consult a music attorney or primary court records for precise case citations before making legal or business decisions based on this.",
+          "supporting_source_url": "https://abounaja.com/blog/ai-generated-music-copyright-legal-limits-human-authorship-and-best-practices-in-2025"
+        },
+        {
+          "severity": "low",
+          "section_id": "s7",
+          "original_text": "PROs including ASCAP and BMI have begun rejecting pure prompt-to-song output for registration.",
+          "issue": "This claim appears in the article as a stated fact, but it is sourced only from the abounaja.com legal blog. No official ASCAP or BMI policy announcement is cited. This is a material claim for working musicians and should be attributed or flagged for independent verification.",
+          "recommended_replacement": "PROs including ASCAP and BMI have reportedly begun rejecting pure prompt-to-song output for registration — verify current registration policies directly with your PRO before submitting AI-generated works.",
+          "supporting_source_url": "https://abounaja.com/blog/ai-generated-music-copyright-legal-limits-human-authorship-and-best-practices-in-2025"
+        },
+        {
+          "severity": "low",
+          "section_id": "s8",
+          "original_text": "Around $10/month: Suno Pro or Udio Standard (commercial rights, more generations)",
+          "issue": "Udio Standard is listed as $10/month in the tool card (or $8/month annually), which matches independent sources. However, the budget overview lists only the monthly price without noting the annual option, while Suno's pricing page also lists $8/month annually. This creates a minor inconsistency with the tool card details and may slightly overstate cost for readers considering annual plans.",
+          "recommended_replacement": "Around $8–$10/month: Suno Pro or Udio Standard (commercial rights, more generations; $10/month on monthly billing, approximately $8/month if billed annually — verify current rates at each platform).",
+          "supporting_source_url": "https://suno.com/pricing"
+        },
+        {
+          "severity": "low",
+          "section_id": "s9",
+          "original_text": "Use your 50 daily credits to generate 8 to 10 songs from prompts",
+          "issue": "Minor internal inconsistency: the article previously states '50 credits per day, which works out to roughly 10 songs' but the workflow says '8 to 10 songs.' The lower bound of 8 is unexplained and slightly contradicts the earlier stated equivalence. This is small but could confuse readers.",
+          "recommended_replacement": "Use your 50 daily credits to generate up to roughly 10 songs from prompts",
+          "supporting_source_url": "https://suno.com/pricing"
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "The Splitter tool separates stems (vocals, drums, bass, instruments) free for tracks up to 15 minutes.",
+          "issue": "The 15-minute cap is sourced from an independent review site (aimusicpreneur.com), not from BandLab's official page. The official BandLab AI page is cited but does not appear to confirm this specific limit. This should be attributed or flagged for verification.",
+          "recommended_replacement": "The Splitter tool separates stems (vocals, drums, bass, instruments) free, with a reported 15-minute per-track cap — verify current limits at bandlab.com.",
+          "supporting_source_url": "https://www.aimusicpreneur.com/ai-tools/bandlab/"
+        }
+      ],
+      "checked_at": "2026-07-17T15:50:21.964Z"
+    },
+    "error": {
+      "stage": "factcheck",
+      "message": "askJSON: unparseable JSON for prompt starting: {\"article\":{\"title\":\"AI Music Tools for Musicians Who Don't Code: Where to Actually Start\",\"alternative_titles\":[\"Gettin (last response was TRUNCATED — raise maxTokens for this call)",
+      "at": "2026-07-17T15:52:34.949Z"
     }
   }
 ]
