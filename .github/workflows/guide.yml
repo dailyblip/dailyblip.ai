@@ -31,10 +31,18 @@ permissions:
   contents: write
 
 concurrency:
-  # One guide job at a time per job_id — prevents a double-click on
-  # Generate from racing two runs against the same record. Different
-  # job_ids run concurrently fine (no shared group).
-  group: guide-${{ inputs.job_id }}
+  # Shared across EVERY guide workflow, not scoped to one job_id \u2014
+  # deliberately serializes ALL git writes to data/guides.json across
+  # generate/recheck/publish, all of which are independent Actions runs
+  # that would otherwise commit to the same shared JSON array
+  # concurrently. Git's merge is line-based, not JSON-aware, so two
+  # unrelated changes to the same array can still collide as a literal
+  # text conflict (a real one hit this exact file in production). A
+  # per-job_id group didn't prevent that, since it only serialized a
+  # single job against itself, not against every OTHER job's writes.
+  # Guides taking turns during their few-seconds commit step is a small
+  # cost next to a stuck rebase that silently drops a publish.
+  group: guide-pipeline-writes
   cancel-in-progress: false
 
 jobs:
