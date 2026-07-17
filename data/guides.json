@@ -1523,7 +1523,7 @@
   {
     "id": "6dc0bfa0-a2b7-47e9-a13a-9bdbc1bbb2c1",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "AI for Acoustic Guitarists: What Actually Works and How to Try It Today",
       "article_type": "Beginner explainer",
@@ -1535,7 +1535,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T21:30:21.407Z",
-    "updated_at": "2026-07-17T21:34:50.030Z",
+    "updated_at": "2026-07-17T21:36:19.609Z",
     "brief": {
       "target_reader": "Acoustic guitarists who write, record, or want to record their own songs — complete beginners to AI music tools, comfortable with their instrument but unfamiliar with how AI fits into a songwriting or production workflow",
       "reader_outcome": "Feel confident enough to open one AI tool today and try it on something real: a lyric idea, a chord progression, or a rough home recording",
@@ -1827,6 +1827,47 @@
     "warnings": [
       "s3: Sources indicate Warner settled with Suno in November 2025, not UMG; the Terms.Law source says UMG and Sony remain active plaintiffs, but the article attributes the settlement incorrectly — attributing it to 'UMG and Sony' as ongoing plaintiffs may be accurate per Terms.Law, but the Dynamoi source says Sony had not settled as of March 2026 while Warner had, creating a conflict the article doesn't resolve and attributing the claim to Terms.Law rather than the specific sourced claim is fine, but calling it 'mid-2026' overstates the recency of sourced data (sources accessed July 2026 but underlying facts cited as of March 2026).",
       "s3: The article attributes this claim to 'Undetectr' but then says 'Udio's own pricing page' corroborates it; the Udio official pricing page source only confirms the page is live, not that it mentions licensing settlements — overstating what the official source supports."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "6dc0bfa0-a2b7-47e9-a13a-9bdbc1bbb2c1-img1.jpg",
+        "prompt": "Editorial flat illustration, top-down view of an acoustic guitar centered on a warm cream background, three minimalist labeled diagram nodes arranged in a triangle around it connected by thin teal lines. Node 1: a pencil icon with a small lyric fragment (a few abstract words). Node 2: a horizontal waveform split into 'rough' and 'clean' halves. Node 3: a small document with a copyright or publish symbol. Clean generous whitespace. Warm cream and tan palette with deep teal accents. Diagrammatic, designed, modern editorial style — looks custom-made for a guitar-specific article. No glowing effects, no robots, no DAW screenshots, no electric guitars.",
+        "placement": "hero",
+        "alt_text": "Diagram showing an acoustic guitar at center with three surrounding nodes representing AI uses: lyric help, audio cleanup, and publishing rights",
+        "caption": "Three places AI can realistically slot into an acoustic guitarist's process — none of them require studio experience or music-tech expertise.",
+        "approved": false,
+        "generated_at": "2026-07-17T21:35:52.886Z",
+        "role": "hero",
+        "concept": "An acoustic guitar at the center of a clean editorial diagram showing three distinct AI use-cases orbiting it: lyric/structure help, audio cleanup, and rights/publishing — grounding the article's real scope",
+        "purpose": "Immediately signal to an acoustic guitarist that this article is practical and specific to their workflow, not a generic 'AI in music' piece — and preview the three real topics covered"
+      },
+      {
+        "id": "img2",
+        "file": "6dc0bfa0-a2b7-47e9-a13a-9bdbc1bbb2c1-img2.jpg",
+        "prompt": "Flat diagrammatic editorial illustration, horizontal workflow in three stages left to right. Stage 1: a small microphone or phone icon above a rough irregular audio waveform, labeled 'your recording.' Stage 2: a simple rectangular processing node in deep teal labeled 'AI mastering.' Stage 3: a smoother, more balanced waveform labeled 'mastered output.' Clean directional arrows between stages. White background, warm amber waveforms, teal processing node, gray arrows. Signal-path style, looks like a how-it-works explainer graphic. No software screenshots, no brand logos, no people, no glow effects, no vertical layout.",
+        "placement": "s2",
+        "alt_text": "Three-stage workflow diagram: rough home recording passes through an AI mastering processor and emerges as a cleaner mastered output",
+        "caption": "The AI mastering process in one step: upload a rough mix, receive an improved version — no engineering knowledge required.",
+        "approved": false,
+        "generated_at": "2026-07-17T21:36:04.970Z",
+        "role": "workflow",
+        "concept": "A simple linear workflow showing a rough home recording passing through an AI mastering step (referencing LANDR) and arriving as a cleaner output — illustrated as a signal-path diagram",
+        "purpose": "Help readers visualize what 'upload your mix, get a mastered version back' actually means as a process, making the audio-cleanup section concrete and approachable for non-engineers"
+      },
+      {
+        "id": "img3",
+        "file": "6dc0bfa0-a2b7-47e9-a13a-9bdbc1bbb2c1-img3.jpg",
+        "prompt": "Flat editorial two-column split illustration. Left panel (warm cream background): a hand-written or annotated lyric draft with visible pencil edits, cross-outs, and rewrites suggesting active human shaping — small label 'you shaped it.' Right panel (cool light gray background): a clean unedited printout with a simple abstract AI node icon above it — small label 'AI generated it.' A clean vertical dividing line between the two panels. Warm amber tones on the left, cool teal accent on the right. No real text content visible in the draft. Minimal, readable, editorial illustration style — looks like a rights or ownership explainer graphic in a music industry guide. No robots, no legal documents, no copyright symbols used prominently, no facial likenesses.",
+        "placement": "s3",
+        "alt_text": "Two-panel illustration contrasting a human-edited lyric draft on the left with an untouched AI-generated printout on the right, labeled 'you shaped it' versus 'AI generated it'",
+        "caption": "The commercial rights distinction that matters: lyrics you actively shaped from AI suggestions are editorially yours — that's different from publishing something AI produced wholesale.",
+        "approved": false,
+        "generated_at": "2026-07-17T21:36:19.608Z",
+        "role": "explainer",
+        "concept": "A clear visual distinction between two different relationships a songwriter can have with AI-generated content — 'shaped by you' (chatbot lyric suggestions as raw material) versus 'generated for you' (a different scenario) — framed as a before/after or two-column split relevant to the rights section",
+        "purpose": "Make the commercial rights distinction from the publishing section visually intuitive: when you shape AI suggestions into your own song, the work is yours — this is editorially different from other AI content scenarios"
+      }
     ]
   }
 ]
