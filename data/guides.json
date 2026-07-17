@@ -79,7 +79,7 @@
   {
     "id": "3fe2d2e6-b607-4ab0-a1d1-02db8d6ccc44",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Top AI tools for musicians",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:53:46.758Z",
-    "updated_at": "2026-07-17T14:56:17.865Z",
+    "updated_at": "2026-07-17T14:58:22.792Z",
     "brief": {
       "target_reader": "Independent musicians and music producers who are curious about AI tools but wary of overpromised results. Includes singer-songwriters, beatmakers, film/game composers, and bedroom producers at intermediate skill level who already use DAWs and want to know where AI genuinely fits into their workflow.",
       "reader_outcome": "The reader can identify which AI music tools are relevant to their specific production stage (composition, arrangement, mixing, mastering, vocal processing, licensing), evaluate tradeoffs between tools, and take immediate next steps to try at least one in their existing workflow.",
@@ -299,6 +299,196 @@
       "AIVA exact monthly/annual pricing in USD — sources cited prices in EUR (€11/month starting) and noted VAT complexity; exact USD prices should be confirmed directly at aiva.ai/pricing before publication.",
       "Udio commercial licensing clarity post-UMG settlement: multiple sources flag that commercial-use rights for Udio remain somewhat ambiguous following the October 2025 UMG settlement and resulting 'walled garden' model change. The claim that paid Udio plans clearly include commercial rights should be softened with a note to verify current ToS at udio.com.",
       "Suno free tier model access: some sources indicate the free plan is locked to an older model (v4.5-all) while paid plans access v5.5 — the exact model available on the free tier at publication time should be verified at suno.com/pricing as this changes frequently."
-    ]
+    ],
+    "article": {
+      "title": "AI Tools for Musicians: A Practical Guide to What Actually Works",
+      "alternative_titles": [
+        "The Working Musician's Guide to AI Music Tools",
+        "AI in Music Production: Which Tools Fit Which Workflows"
+      ],
+      "slug": "ai-tools-for-musicians",
+      "dek": "A stage-by-stage breakdown of AI tools for composition, mixing, mastering, vocals, and more. With honest notes on licensing, copyright, and where each tool falls short.",
+      "meta_description": "Independent musicians and producers: here's where AI tools genuinely help in your workflow, which tools to evaluate at each production stage, and what the licensing and copyright fine print actually says.",
+      "quick_answer": "AI music tools are most reliable for mastering (iZotope Ozone, LANDR), stem separation (Moises), and DAW-native arrangement assistance (Logic Pro Session Players). Full-song generation tools like Suno and Udio are useful for demos and reference tracks, but commercial rights and copyright ownership involve real caveats worth reading before you publish.",
+      "introduction": "AI is shipping inside tools you may already own, and it is also arriving as standalone services with pricing tiers, terms of service, and copyright implications that vary widely. The noise-to-signal ratio in coverage of AI music tools is high, so this guide skips the hype and focuses on specific production stages: what the tools actually do, where they help intermediate producers, and where they create new problems.\n\nThis guide covers composition and generation, arrangement, mixing, mastering, vocal processing, stem separation, and licensing. Pricing and terms cited here were verified as of mid-2026 but change frequently. Always check a tool's pricing and terms of service directly before committing.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "What to Expect From AI in Music Production (and What to Ignore)",
+          "body_markdown": "AI tools in music currently do a few things well: they automate time-consuming but rule-based tasks (like loudness normalization or stem separation), they generate usable raw material quickly (chord progressions, arrangement variations, reference masters), and they lower the floor for tasks that previously required either expensive plugins or specialist knowledge.\n\nWhat they do not reliably do: replace taste, make aesthetic decisions for you, or produce finished, release-ready output without human intervention. Tools marketed as \"one click to release\" almost always produce generic results that experienced listeners notice.\n\nA useful mental model: treat AI tools as fast assistants that need direction, not replacements for your production judgment. The more specific the task and the more human editing you apply afterward, the better the output.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "AI for Composition and Full-Song Generation",
+          "body_markdown": "Full-song AI generators let you create complete tracks from text prompts or style inputs. They are genuinely useful for reference tracks, lo-fi demos, and sync music sketches. They are less useful as finished releases, partly for quality reasons and partly for copyright reasons (see the licensing section below).\n\n**Suno** offers a free tier (50 credits/day, approximately 10 songs) with non-commercial restrictions. Pro ($10/month) and Premier ($30/month) plans add commercial rights and more credits. Critically, Suno's own terms state it makes no representation that copyright will vest in any output, and free-plan songs are owned by Suno, not you. Commercial rights attach only to songs generated under an active paid subscription.\n\n**Udio** has a similar structure: Free (100 credits/month, non-commercial), Standard ($10/month), and Pro ($30/month). Following settlements with UMG and WMG in late 2025, Udio moved toward a model where users stream rather than freely download outputs. The commercial rights picture for paid Udio plans has become less clear as a result. Check the current terms at udio.com before using output commercially.\n\n**AIVA** takes a different approach, targeting composers who want melodic and harmonic frameworks rather than full song audio. Its free tier allows up to 3 downloads/month (MP3 and MIDI), non-commercial only, copyright owned by AIVA. The Standard plan allows social media monetization with attribution. The Pro plan transfers full copyright to the user with no attribution required. AIVA is registered as a composer with SACEM, which makes its licensing framework more clearly defined than many competitors.\n\nFor composers working in MIDI-based workflows, AIVA's MIDI export makes it a more integrable tool than Suno or Udio, which output audio only.",
+          "tools": [
+            {
+              "name": "Suno",
+              "url": "https://suno.com/pricing",
+              "description": "Text-to-song AI generator. Produces full audio tracks including vocals from prompts.",
+              "strengths": [
+                "Fast full-song output from text prompts",
+                "Useful for demos and reference tracks",
+                "Generous free tier for non-commercial exploration"
+              ],
+              "limitations": [
+                "No copyright guarantee in output even on paid plans",
+                "Commercial rights require active paid subscription",
+                "Audio-only output, no MIDI or stems on standard plans",
+                "Ongoing litigation (RIAA) introduces long-term rights uncertainty"
+              ]
+            },
+            {
+              "name": "Udio",
+              "url": "https://www.udio.com/pricing",
+              "description": "Text-to-song generator with style and genre controls.",
+              "strengths": [
+                "Credit packs (purchased separately) never expire",
+                "Competitive pricing at parity with Suno"
+              ],
+              "limitations": [
+                "Post-UMG/WMG settlement, download model changed to streaming-first",
+                "Commercial rights clarity on paid tiers is uncertain as of mid-2026",
+                "Free tier limited to 10 credits/day"
+              ]
+            },
+            {
+              "name": "AIVA",
+              "url": "https://www.aiva.ai/legal/1",
+              "description": "AI composition tool focused on melodic and harmonic frameworks, targeting composers and film/game scoring.",
+              "strengths": [
+                "MIDI export integrates into DAW workflows",
+                "Clear, tiered copyright transfer (full ownership on Pro plan)",
+                "More defined licensing structure than audio-only generators"
+              ],
+              "limitations": [
+                "Free tier is non-commercial, copyright owned by AIVA",
+                "Standard plan still requires attribution",
+                "Less suited to producers who work primarily in audio"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "heading": "AI for Arrangement and DAW-Native Features",
+          "body_markdown": "If you use Logic Pro, it currently offers the most integrated native AI features of any major DAW. Shipped features include Session Players (AI-driven drums, bass, keys, and synths that respond to your track), Stem Splitter, Flashback Capture, and chord progression generation from audio or MIDI recordings. A Synth Player and Music Understanding (natural language sound search on iPad) have also shipped. These tools live inside your existing workflow without a separate subscription.\n\nFL Studio received an agentic AI chatbot for in-DAW control, and FL Studio Web (browser-based) launched in late 2025 beta. Ableton Live does not lead in native AI features as of mid-2026; its strength remains third-party plugin integration rather than built-in AI tools.\n\nFor producers not on Logic Pro, **AIVA's** MIDI output or third-party chord/arrangement tools are the most DAW-agnostic options for arrangement assistance. **Moises AI Studio** (desktop) also allows generating instrument stems and arrangements from chord progressions, though it is more of a practice and arrangement sketching tool than a deep compositional environment.",
+          "tools": []
+        },
+        {
+          "id": "s4",
+          "heading": "AI Mixing and Mastering: Where It Helps and Where It Falls Short",
+          "body_markdown": "This is the production stage where AI tools deliver the most consistent, immediately useful results for independent producers. The tasks (loudness targeting, EQ matching, limiting) are rule-based enough that AI handles them well, and the feedback loop (does it sound good?) is fast.\n\n**iZotope Ozone** is available as a one-time perpetual purchase in Elements (~$49), Standard (~$199), and Advanced (~$399) tiers, or via subscription bundles and Splice plugin rental ($9.99/month Standard, $19.99/month Advanced). It is not subscription-only. All tiers include the AI Master Assistant, which analyzes your track and suggests a starting mastering chain. Elements is the most automated; Standard and Advanced add increasing manual control. Ozone 12 added Stem EQ, Bass Control, and Unlimiter. It runs as a standalone app and as AAX, AU, and VST3 across all major DAWs.\n\nThe AI Master Assistant is genuinely useful as a starting point, particularly if you are not a dedicated mastering engineer. The limitation is that it cannot diagnose mix problems before they reach the mastering stage. If your mix has phase issues, muddiness, or weak low-end translation, Ozone will master those problems in, not out.\n\n**LANDR** is a cloud-only mastering service (not an in-DAW plugin) with pricing starting around $9 to $11.99 per month. Independent reviewers note that LANDR produces consistent results across genres but can feel generic on records that need an opinionated finish. It is mastering-only and assumes a finished mix. Free preview masters are watermarked at high-quality download tier. LANDR also offers ReHance (vocal enhancement) and Layers (instrumental generation) as part of its broader platform.",
+          "tools": [
+            {
+              "name": "iZotope Ozone",
+              "url": "https://www.izotope.com/products/ozone-advanced",
+              "description": "AI-assisted mastering plugin and standalone app. Available as perpetual purchase or subscription/rental.",
+              "strengths": [
+                "AI Master Assistant included in all tiers, including the lower-cost Elements",
+                "One-time purchase option available, not subscription-only",
+                "Runs natively inside Logic, Ableton, FL Studio, Pro Tools, and more",
+                "Ozone 12 adds Stem EQ for mastering-stage tonal adjustments per stem"
+              ],
+              "limitations": [
+                "Cannot fix mix problems, only master them",
+                "Advanced tier is expensive at ~$399; free trials are time-limited",
+                "AI suggestions are a starting point, not a finished master"
+              ]
+            },
+            {
+              "name": "LANDR",
+              "url": "https://www.landr.com",
+              "description": "Cloud-only AI mastering service with distribution and vocal enhancement add-ons.",
+              "strengths": [
+                "Fast turnaround with no plugin installation",
+                "Consistent across genres for straightforward mixes",
+                "Includes distribution credits on higher tiers"
+              ],
+              "limitations": [
+                "Cloud-only, no in-DAW integration",
+                "Independent reviewers describe output as generic on records needing character",
+                "Free previews are watermarked",
+                "Exact current tier pricing should be verified at landr.com/pricing"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "heading": "AI Vocal Tools: Pitch Correction and Stem Separation",
+          "body_markdown": "For pitch correction, Melodyne remains the most widely used tool in professional contexts, particularly for polyphonic correction. Current pricing tiers (Essential, Assistant, Editor, Studio) and exact USD prices were not confirmed for this guide. Verify current pricing at celemony.com before purchasing.\n\nFor stem separation, **Moises** is the most feature-complete dedicated tool currently available. The free plan covers vocal, drum, and bass separation, chord detection, pitch shifting, and BPM detection. The Premium plan adds unlimited separation and advanced instrument isolation (lead vs. rhythm guitar, main vs. background vocals, acoustic vs. electric guitar). Moises does not train on user-uploaded audio; it trains only on licensed materials.\n\nAn important clarification: Moises does not offer a feature explicitly called \"AI backing tracks.\" What it does is allow you to mute stems from a separated track, which achieves a similar result. The desktop AI Studio adds arrangement generation from chord progressions and voice conversion using commercially licensed AI voice models.\n\nOn voice cloning tools: this is an ethically and legally contested area. Tools exist that can clone a voice from a short sample, and the music industry has seen several high-profile unauthorized cases. Before using any voice conversion or cloning tool, verify that you have explicit permission or own the voice being used. Moises's voice conversion feature uses pre-cleared, royalty-free licensed models specifically to avoid this issue.",
+          "tools": [
+            {
+              "name": "Moises",
+              "url": "https://moises.ai/",
+              "description": "AI stem separation, chord detection, pitch/tempo tools, and AI Studio for arrangement and voice conversion.",
+              "strengths": [
+                "Advanced instrument separation on Premium (lead/rhythm guitar, main/background vocals)",
+                "Does not train on user-uploaded audio",
+                "AI Studio voice conversion uses commercially licensed, royalty-free models",
+                "Cross-platform: iOS, Android, and desktop"
+              ],
+              "limitations": [
+                "No dedicated \"AI backing track\" generator; backing track use requires stem muting workflow",
+                "Free tier limits instrument separation to vocals, drums, and bass only",
+                "AI Studio arrangement generation is more useful for sketching than finished production"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "heading": "AI for Samples and Sound Design",
+          "body_markdown": "**Soundraw** generates royalty-free music that can be customized and used in video, social content, or commercial projects. Soundraw retains neighboring rights (sound recording rights) to all AI-generated output, but grants users a royalty-free license for personal and commercial use. Users cannot register Soundraw music with YouTube Content ID or claim it as their own copyrighted material.\n\nThe Artist Plan creates an important distinction: if you add your own original vocals or instrumentation, you own the resulting song fully and keep 100% of recording royalties. You cannot, however, sell or distribute Soundraw beats alone without your own creative additions. Soundraw's training data is produced in-house by its own team, not scraped from third-party sources.\n\nFor sample-based producers, Splice's sample marketplace remains a primary destination for cleared loops and one-shots. However, a distinct product called \"Splice AI\" as a standalone AI music generation tool could not be confirmed as a current discrete offering at time of research. Verify any Splice AI product claims directly at splice.com.",
+          "tools": [
+            {
+              "name": "Soundraw",
+              "url": "https://soundraw.io",
+              "description": "AI music generator with royalty-free licensing for commercial use in video and content projects.",
+              "strengths": [
+                "Trained on in-house produced music, not scraped content",
+                "Artist Plan allows full ownership if you add original contributions",
+                "Commercial use allowed on all plans"
+              ],
+              "limitations": [
+                "You cannot register Soundraw tracks with YouTube Content ID",
+                "Copyright of the AI-generated layer stays with Soundraw",
+                "Not suited for use as standalone beats without creative additions if you want full ownership"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "heading": "Licensing and Copyright: What the Law Currently Says",
+          "body_markdown": "The US Copyright Office published Part 2 of its Copyright and AI Report on January 29, 2025. The core finding: fully AI-generated outputs produced solely in response to a prompt, without further human creative intervention, are not copyrightable under current US law. In March 2025, the US Court of Appeals for the D.C. Circuit affirmed this in Thaler v. Perlmutter, and an en banc rehearing petition was denied on May 12, 2025. Human authorship remains a legal requirement for copyright protection.\n\nWhere humans make meaningful creative choices in combination with AI tools, copyright protection may apply, but only to the human-authored elements. This means: if you generate a full song by typing a prompt into Suno and publish it, you likely have no copyright in that output. If you use AI-generated MIDI as a starting point, substantially rearrange it, add original instrumentation, and record new performances on top, the human-authored elements may be protectable.\n\nPractical implications for independent musicians:\n\n- Suno's terms explicitly state it makes no warranty that copyright will vest in any output.\n- Free-tier Suno songs are owned by Suno, not the user.\n- Udio's commercial rights clarity has been complicated by its post-settlement model changes.\n- AIVA's Pro plan claims full copyright transfer to the user, but given US Copyright Office guidance, the enforceability of that transfer depends on how much human creative input is involved in the output.\n- SOUNDRAW tracks cannot be registered with YouTube Content ID regardless of plan.\n\nThe RIAA sued both Suno and Udio in June 2024 seeking up to $150,000 in statutory damages per work. Suno reached a $500 million settlement with Warner Music Group in November 2025 and announced a licensing partnership. Sony had not settled as of March 2026. These are ongoing legal developments worth monitoring if you plan to build a commercial catalog using these tools.",
+          "tools": []
+        },
+        {
+          "id": "s8",
+          "heading": "How to Evaluate Any AI Music Tool Before Committing",
+          "body_markdown": "Use these criteria before subscribing to or building a workflow around any AI music tool:\n\n**Copyright and ownership.** Read the terms of service directly, not a summary. Specifically: who owns the output? Does commercial licensing require an active subscription? Does the platform claim any training rights over your submissions?\n\n**Output format.** Does the tool export MIDI, stems, or audio only? MIDI and stem export significantly increase a tool's usefulness inside a DAW-based workflow.\n\n**Integration.** Does it run as a plugin in your DAW, as a standalone app, or cloud-only? Cloud-only tools require a live internet connection and carry availability risk.\n\n**Free tier limitations.** Understand exactly what the free tier produces. Is output watermarked? Is it limited to older model versions? Are exports restricted by format or resolution?\n\n**Reputation in production communities.** Check r/WeAreTheMusicMakers, Gearspace, and music tech press (Sound On Sound, MusicRadar, Attack Magazine) for user reports on output quality. Vendor demos are optimized; community posts are not.\n\n**Pricing stability.** Several tools in this space have changed pricing tiers and terms significantly in 2024 to 2026. Note when you last verified pricing and set a reminder to check it before renewing.",
+          "tools": []
+        },
+        {
+          "id": "s9",
+          "heading": "Suggested Workflows by Use Case",
+          "body_markdown": "**Singer-songwriter using a DAW for demos.** Use Logic Pro's Session Players to build an arrangement skeleton around your recorded performance. Export stems, use Moises for separation if you need to work with reference tracks. Master with Ozone Elements as a starting point before sending to a professional mastering engineer if releasing commercially.\n\n**Beatmaker or producer making instrumental releases.** Generate harmonic or melodic ideas with AIVA (Pro plan for copyright transfer, noting the caveats above) and import MIDI into your DAW. Use Ozone Standard or Advanced for mastering. Avoid publishing Suno or Udio audio output as a finished commercial release given current copyright uncertainty.\n\n**Film or game composer under deadline.** AIVA's MIDI output is more useful here than audio-only generators because it integrates directly into a scoring workflow. Use Logic Pro's chord progression tools or Session Players for quick arrangement sketches. SOUNDRAW is useful for client demos or placeholder temp tracks where full ownership is not required.\n\n**Content creator needing background music.** Soundraw's Creator Plan is a practical fit: royalty-free, commercial use included, no Content ID conflicts as long as you understand you cannot claim the track. If you add original contributions under the Artist Plan, you gain full ownership of the resulting recording.\n\n**Producer wanting to practice against stems.** Moises free tier covers the core use case: separate stems from reference tracks, mute what you want to play over, use chord detection to understand the harmony. Premium unlocks more precise instrument separation if you need it.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "AI mastering tools (iZotope Ozone, LANDR) are the highest-reliability entry point: clear use case, fast feedback loop, and Ozone is available as a one-time purchase.",
+        "Full-song generators (Suno, Udio) are useful for demos and reference tracks but involve real copyright uncertainty: free-tier output is non-commercial, and fully AI-generated audio is not copyrightable under current US law.",
+        "AIVA and Soundraw have more defined licensing structures than audio-only generators, but ownership caveats still apply and should be read in the terms of service directly.",
+        "Logic Pro currently offers the deepest native AI integration of any major DAW with Session Players, Stem Splitter, and chord tools shipping in the current version.",
+        "Before using any AI-generated audio commercially, read the platform's terms of service, understand the US Copyright Office's 2025 guidance on AI outputs, and note that ongoing RIAA litigation affects Suno and Udio specifically."
+      ],
+      "conclusion": "AI tools are most useful to working musicians when applied to specific, bounded tasks inside an existing workflow. Mastering assistance, stem separation, arrangement sketching, and reference track generation are all areas where the tools are good enough to save real time without requiring you to overhaul how you work.\n\nThe full-song generation space is moving fast but carries legal and creative risks that are easy to underestimate. The copyright situation is not vague by accident: it reflects genuinely unresolved questions about machine authorship that courts and regulators are still working through. Treat AI-generated audio as raw material that requires human creative intervention, both for better output and for any claim to ownership of the result.\n\nStart with one tool that addresses a specific bottleneck in your current workflow. Verify its terms directly, try the free tier, and evaluate whether the output actually saves you time or improves what you make. That is a more reliable test than any review, including this one.",
+      "methodology_disclosure": "This guide was researched and synthesized using official pricing pages, terms of service, and licensing documentation from Suno, Udio, AIVA, Soundraw, iZotope, and Moises, supplemented by independent reporting from MusicRadar, MixingGPT, and an independent commercial use analysis of Suno's ToS. Copyright claims trace to the US Copyright Office's January 2025 AI Copyrightability Report and the D.C. Circuit's March 2025 ruling in Thaler v. Perlmutter, as analyzed by Jones Day. Pricing and terms were verified as of mid-2026 but are subject to change; readers should verify directly at each platform before making purchasing decisions. Claims about tools for which verified pricing or feature data was unavailable (Boomy, Splice AI as a discrete product, Melodyne current pricing, ElevenLabs Music as a product) were omitted or explicitly flagged as unverified rather than estimated. No hands-on product testing was conducted by dailyblip for this guide. Community reputation observations are editorial judgments drawn from independent review sources and are identified as such.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
