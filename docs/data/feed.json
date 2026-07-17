@@ -1,6 +1,6 @@
 {
   "issue": 234,
-  "generated_at": "2026-07-16T21:46:33.529Z",
+  "generated_at": "2026-07-17T03:25:29.522Z",
   "brief": {
     "items": [
       {
@@ -63,24 +63,6 @@
     "edition": "am"
   },
   "stories": [
-    {
-      "id": "s_976e25fe768e3c13",
-      "cat": "rights",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "xAI sues first Grok user accused of generating child sex abuse material",
-      "dek": "xAI filed lawsuit against a user for allegedly generating CSAM with Grok, marking the company's shift from denial to legal action on the issue.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users/",
-      "ts": "2026-07-16T20:26:23.000Z",
-      "read": "3 min",
-      "also": [],
-      "top": true,
-      "heat": 108,
-      "move": 53
-    },
     {
       "id": "s_252ccc31ca52ec00",
       "cat": "rights",
