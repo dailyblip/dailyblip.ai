@@ -250,6 +250,10 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
   </div>
 
   <div id="paneGuides" style="display:none">
+    <div class="row" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+      <h3 style="margin:0">History</h3>
+      <button class="btn" id="guideClearFinished">Clear finished</button>
+    </div>
     <div id="guideList"></div>
 
     <div class="panel" id="guideNewPanel">
@@ -784,6 +788,12 @@ function uid(){
 }
 
 const TERMINAL_STATUSES = new Set(["ready_for_review", "approved", "published", "failed", "rejected"]);
+// Deliberately narrower than TERMINAL_STATUSES: "approved" means
+// guide-publish.yml is actively running against this record right now
+// (same reason "queued"/"in_progress" aren't here either) \u2014 deleting it
+// mid-publish would break that workflow the same way deleting an
+// in-progress generation job would break guide.yml.
+const DELETABLE_STATUSES = new Set(["ready_for_review", "published", "failed", "rejected"]);
 
 function guideStatusLabel(g){
   if (g.status === "failed") return `Failed (${g.error?.stage || "?"})`;
@@ -805,7 +815,10 @@ async function renderGuides(){
             <div style="font-weight:600">${esc(g.article?.title || g.submitted?.idea?.slice(0,70) || "Untitled")}</div>
             <div class="tip" style="margin-top:2px">${esc(guideStatusLabel(g))} \u00b7 ${esc(ago(g.created_at))} ago</div>
           </div>
-          ${g.status === "published" ? `<a href="${esc(g.published_url)}" target="_blank" onclick="event.stopPropagation()" class="btn">view live \u2192</a>` : ""}
+          <div style="display:flex;gap:8px;align-items:center">
+            ${g.status === "published" ? `<a href="${esc(g.published_url)}" target="_blank" onclick="event.stopPropagation()" class="btn">view live \u2192</a>` : ""}
+            ${DELETABLE_STATUSES.has(g.status) ? `<button class="btn red" onclick="event.stopPropagation();deleteGuide('${g.id}')" title="Delete this job">\u00d7</button>` : ""}
+          </div>
         </div>
       </div>`).join("");
   }
@@ -813,6 +826,44 @@ async function renderGuides(){
   const inFlight = guides.find(g => g.status === "in_progress" || g.status === "queued");
   if (inFlight) startGuidePolling(inFlight.id);
 }
+
+async function deleteGuide(id){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  if (!DELETABLE_STATUSES.has(g.status)) { toast("Can't delete a job that's still actively running.", "err"); return; }
+  const label = g.article?.title || g.submitted?.idea?.slice(0, 60) || "this job";
+  if (!confirm(`Delete "${label}"? This only removes it from the list \u2014 if it was published, the live page stays up.`)) return;
+  try {
+    await loadGuidesFile();
+    guides = guides.filter(x => x.id !== id);
+    await saveGuidesFile(`admin: delete guide job ${id}`);
+    if (activeGuideId === id) closeGuideReview();
+    await renderGuides();
+    toast("Deleted.");
+  } catch (e) {
+    toast(e.message, "err", 5000);
+  }
+}
+
+$("#guideClearFinished").addEventListener("click", async () => {
+  try {
+    await loadGuidesFile();
+  } catch (e) { toast(e.message, "err", 5000); return; }
+  const finished = guides.filter(g => DELETABLE_STATUSES.has(g.status));
+  if (!finished.length) { toast("Nothing to clear \u2014 no finished jobs in the list."); return; }
+  const stillActive = guides.length - finished.length;
+  const activeNote = stillActive ? `\n\n${stillActive} job(s) still in progress or awaiting publish will be left alone.` : "";
+  if (!confirm(`Clear ${finished.length} finished job(s) (ready for review, published, failed, or rejected)?${activeNote}\n\nPublished pages themselves are not affected \u2014 this only clears the admin list.`)) return;
+  try {
+    guides = guides.filter(g => !DELETABLE_STATUSES.has(g.status));
+    await saveGuidesFile(`admin: clear ${finished.length} finished guide job(s)`);
+    if (activeGuideId && !guides.find(g => g.id === activeGuideId)) closeGuideReview();
+    await renderGuides();
+    toast(`Cleared ${finished.length} job(s).`);
+  } catch (e) {
+    toast(e.message, "err", 5000);
+  }
+});
 
 $("#gGenerate").addEventListener("click", async () => {
   const idea = $("#gIdea").value.trim();
