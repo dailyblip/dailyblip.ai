@@ -2209,7 +2209,7 @@
   {
     "id": "09859f39-9c90-4b00-b91c-ec5a012327cf",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top 1 music generation tool",
       "article_type": "Top tools list",
@@ -2221,6 +2221,34 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:30:05.655Z",
-    "updated_at": "2026-07-17T14:30:05.655Z"
+    "updated_at": "2026-07-17T14:30:37.707Z",
+    "brief": {
+      "target_reader": "Working musicians, producers, and composers who want to understand AI music generation tools: what they actually do, where they fit in a real workflow, and what their limitations are. Includes both technically curious beginners and experienced producers evaluating whether to integrate AI into their process.",
+      "reader_outcome": "The reader should be able to identify the single most capable and practical AI music generation tool available today for their specific use case, understand what it does well and where it falls short, know the pricing and access model, and decide whether it is worth trying in their own workflow.",
+      "structure_plan": [
+        "Why 'Top 1' and How We Evaluated",
+        "The Tool: What It Is and Who Makes It",
+        "What It Can Actually Generate (Genres, Formats, Output Quality)",
+        "How to Use It: A Basic Workflow for Musicians",
+        "Pricing, Access, and Licensing",
+        "Strengths: Where It Performs Well",
+        "Limitations and Honest Tradeoffs",
+        "How It Compares to Close Alternatives (Briefly)",
+        "Should You Use It? Evaluation Criteria by Use Case"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers and what each tier includes (track limits, commercial licensing, audio quality)",
+        "Whether outputs are royalty-free or subject to platform-specific licensing restrictions",
+        "Maximum audio output length per generation",
+        "Supported output formats (MP3, WAV, STEM separation, etc.)",
+        "Whether the tool offers vocal generation, instrumental-only modes, or both",
+        "Any known training data sourcing controversies or ongoing legal disputes",
+        "Whether commercial use is explicitly permitted under the free tier",
+        "API access availability and pricing for developer/integration use cases",
+        "Current model version in production and any recently released updates",
+        "Ownership and copyright policy for generated tracks as stated in current terms of service"
+      ],
+      "research_plan": "Prioritize the tool's official documentation, terms of service, and pricing pages for factual claims. Cross-reference with credible music technology outlets (MusicTech, Sound On Sound, CDM, The Verge music coverage) for independent assessments. Check producer and musician communities (Reddit r/WeAreTheMusicMakers, Gearslutz/Gearspace, YouTube walkthroughs by working producers) for real workflow feedback and quality comparisons. Review any published legal filings or news coverage of copyright or training data disputes from credible outlets. Avoid press releases and the tool's own marketing copy as primary sources for capability claims."
+    }
   }
 ]
