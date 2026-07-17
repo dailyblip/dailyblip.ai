@@ -2723,7 +2723,7 @@
   {
     "id": "a0c40a7c-b981-4f30-80e2-7fabf1de1840",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top two music generation AIs",
       "article_type": "Tool comparison",
@@ -2735,6 +2735,41 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T13:59:36.927Z",
-    "updated_at": "2026-07-17T13:59:36.927Z"
+    "updated_at": "2026-07-17T14:00:11.173Z",
+    "brief": {
+      "target_reader": "Independent musicians, producers, and composers who are curious about AI music generation tools but want an honest, practical comparison before committing time or money. They may have heard of Suno and Udio but have not yet formed a strong opinion on either.",
+      "reader_outcome": "The reader should be able to decide which of the two leading AI music generation tools fits their specific workflow, budget, and creative goals, and know the concrete limitations of each before signing up.",
+      "structure_plan": [
+        "Why These Two Tools: How We Defined 'Top Two' and What We Left Out",
+        "Quick Comparison Table: Pricing, Output Formats, Commercial Rights, and Key Limits",
+        "Suno: What It Does Well and Where It Falls Short",
+        "Udio: What It Does Well and Where It Falls Short",
+        "Head-to-Head: Prompt Control and Steerability",
+        "Head-to-Head: Audio Quality and Genre Range",
+        "Head-to-Head: Lyrics and Vocal Output",
+        "Head-to-Head: Commercial Licensing and Ownership Rights",
+        "Head-to-Head: Free Tier and Paid Plan Value",
+        "Workflow Fit: Which Tool Suits Which Type of Creator",
+        "Honest Limitations Both Tools Share",
+        "How to Evaluate Either Tool for Your Own Use Case"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers for Suno (free, Pro, Premier) including generation credits per month and cost",
+        "Current pricing tiers for Udio (free, Standard, Pro) including generation credits per month and cost",
+        "Whether Suno's paid plans grant full commercial licensing rights and exact policy language",
+        "Whether Udio's paid plans grant full commercial licensing rights and exact policy language",
+        "Whether free-tier outputs on Suno and Udio are licensed for commercial use",
+        "Maximum audio clip length per generation for both Suno and Udio",
+        "Whether either tool allows stems or track separation export",
+        "Whether either tool allows custom vocal input or voice cloning",
+        "Current status of any pending or active lawsuits involving either tool (e.g. RIAA litigation)",
+        "Supported output audio formats (MP3, WAV, etc.) for each tool and at which tier",
+        "Whether Udio supports custom lyrics input and to what degree",
+        "Whether Suno supports custom lyrics input and to what degree",
+        "API access availability for either tool and current pricing",
+        "Any training data disclosure or opt-out policies published by either company"
+      ],
+      "research_plan": "Prioritize each company's official pricing and terms-of-service pages as primary sources for licensing, pricing, and feature claims. Cross-reference with recent coverage from music industry publications (Music Business Worldwide, Billboard, Pitchfork) and AI-focused outlets (The Verge, Ars Technica) for litigation status and policy developments. Look for hands-on creator reviews and forum discussions on Reddit (r/SunoAI, r/weddingbands, r/WeAreTheMusicMakers) and YouTube walkthroughs from working musicians to surface real workflow pain points. Avoid relying on either company's own blog or marketing copy as a source for capability claims. Check for any updates post-mid-2024 since both tools have iterated quickly on features and pricing."
+    }
   }
 ]
