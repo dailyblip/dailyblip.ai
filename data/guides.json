@@ -79,7 +79,7 @@
   {
     "id": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Getting start creating AI music",
       "article_type": "Beginner explainer",
@@ -91,6 +91,25 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T17:19:20.336Z",
-    "updated_at": "2026-07-17T17:19:20.336Z"
+    "updated_at": "2026-07-17T17:19:48.880Z",
+    "brief": {
+      "target_reader": "Creators (musicians, hobbyists, filmmakers, content creators) with zero experience using AI music tools, who are curious but skeptical of hype and want a practical starting point rather than a sales pitch",
+      "reader_outcome": "The reader should be able to choose one AI music tool appropriate for their immediate need, generate their first piece of audio, and understand the basic constraints (quality, rights, cost) before committing to anything",
+      "structure_plan": [
+        "What AI music tools actually do (and what they don't)",
+        "Three tools worth starting with, and what each one is good for",
+        "Your first generation: a simple step-by-step walkthrough",
+        "What to watch out for: rights, quality limits, and free-tier realities"
+      ],
+      "claims_to_verify": [
+        "Suno free tier: exact quota framing (credits, songs, minutes) as stated in official docs, and whether free-tier output is licensed for commercial use",
+        "Udio free tier: exact quota framing and commercial licensing status for free-tier users",
+        "Whether Suno and Udio currently allow stems or track separation for export, or only mixed audio",
+        "Current availability and pricing tier of any third tool included (e.g. Loudly, Musicfy, Beatoven.ai), sourced from official pricing pages not third-party blogs",
+        "Whether any of these tools claim full copyright transfer to the user, and under what plan tier, per their official terms of service",
+        "Any announced deprecations or major feature changes for the tools covered, as of the most recent official changelog or announcement"
+      ],
+      "research_plan": "Prioritize official documentation, pricing pages, and terms of service from each tool's own website for quota and rights claims. For capability descriptions (prompt types, genres, output formats), cross-reference official feature pages with recent first-hand user walkthroughs on YouTube or creator blogs published within the last 6 months, clearly distinguishing which claims come from official sources vs. user reports. Avoid restating credit or quota limits from third-party comparison sites without verifying against the official source, since these change frequently."
+    }
   }
 ]
