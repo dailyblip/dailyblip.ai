@@ -1129,8 +1129,8 @@
   },
   {
     "id": "9278e1a0-43f9-4d5f-9e58-b2b82439f125",
-    "status": "queued",
-    "stage": "Fact-checking",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -1142,7 +1142,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:13:39.298Z",
-    "updated_at": "2026-07-17T04:17:53.492Z",
+    "updated_at": "2026-07-17T04:17:55.300Z",
     "brief": {
       "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for commercial or creative work and want to choose a tool without wading through vendor marketing",
       "reader_outcome": "The reader should be able to identify which photorealistic AI image generator fits their specific workflow, budget, and output requirements, and know the concrete tradeoffs before committing to a paid plan or integrating a tool into production",
@@ -1549,6 +1549,11 @@
       "conclusion": "There is no single photorealistic AI image generator that leads across every use case in 2026. The decision reduces to three practical questions: Do you need an API? Do you need explicit commercial licensing? And what does photorealistic actually mean for your specific output type?\n\nIf you need an API, Flux and GPT Image 2 are the field. If you need commercial licensing clarity, Firefly is the safest starting point. If text-in-image matters, test Ideogram first. If you have the hardware and volume to justify it, local Stable Diffusion removes the per-image cost ceiling entirely.\n\nPricing and model capabilities in this space shift frequently. Treat the specific figures in this guide as directional and verify against each tool's current pricing page before committing to a paid plan or production integration.",
       "methodology_disclosure": "This guide was researched and synthesized from official pricing pages, official terms of service and usage policy documents, and independent reporting from third-party sources accessed in July 2026. No hands-on testing of image output quality was conducted by dailyblip for this guide. Capability observations about failure modes and output characteristics are synthesized from sourced independent reporting and editorial judgment, and are identified as such. Claims about Stability AI's DreamStudio were excluded due to inability to confirm current product status from authoritative sources. Specific pricing figures should be verified against each tool's current documentation before production use. All sources are cited inline.",
       "last_reviewed_date": "July 17, 2026"
+    },
+    "error": {
+      "stage": "factcheck",
+      "message": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cd6z5H7ZuXYSjKRtmzxoL\"}",
+      "at": "2026-07-17T04:17:55.300Z"
     }
   }
 ]
