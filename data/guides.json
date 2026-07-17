@@ -618,5 +618,22 @@
         "generated_at": "2026-07-17T15:01:47.017Z"
       }
     ]
+  },
+  {
+    "id": "5f971072-9942-49e9-96e9-b1582364e33b",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Musicians quick start guide to AI",
+      "article_type": "Practical guide",
+      "target_audience": "",
+      "target_length": "Standard",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T15:13:47.478Z",
+    "updated_at": "2026-07-17T15:13:47.479Z"
   }
 ]
