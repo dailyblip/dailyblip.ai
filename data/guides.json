@@ -1647,7 +1647,7 @@
   {
     "id": "8e2b3d88-4d73-488d-a4da-66608be51b3d",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top 5 tools for image generation",
       "article_type": "Practical guide",
@@ -1659,6 +1659,35 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:35:59.370Z",
-    "updated_at": "2026-07-17T04:35:59.370Z"
+    "updated_at": "2026-07-17T04:36:30.307Z",
+    "brief": {
+      "target_reader": "Independent creators (illustrators, designers, filmmakers, musicians needing album art, writers needing visual assets) who are evaluating image generation tools for real production use, not just experimentation",
+      "reader_outcome": "The reader should be able to identify which of the five tools fits their specific workflow, budget, and output requirements, and know the concrete steps to get started with their chosen tool",
+      "structure_plan": [
+        "How to Pick an Image Generation Tool: Evaluation Criteria",
+        "Tool 1: Midjourney (Strengths, Limitations, Pricing, Workflow)",
+        "Tool 2: Stable Diffusion via Automatic1111 or ComfyUI (Strengths, Limitations, Setup, Workflow)",
+        "Tool 3: Adobe Firefly (Strengths, Limitations, Pricing, Workflow)",
+        "Tool 4: DALL-E 3 via ChatGPT or API (Strengths, Limitations, Pricing, Workflow)",
+        "Tool 5: Ideogram (Strengths, Limitations, Pricing, Workflow)",
+        "Side-by-Side Comparison Table: Use Case, Cost, Control, Commercial Rights",
+        "Which Tool for Which Creator Type: Quick Decision Guide"
+      ],
+      "claims_to_verify": [
+        "Midjourney current subscription tiers and prices (Basic, Standard, Pro, Mega) and whether a free tier exists",
+        "Midjourney commercial usage rights per subscription tier",
+        "Stable Diffusion license terms (CreativeML Open RAIL-M) and what commercial use is permitted",
+        "Adobe Firefly current pricing: what is included in Creative Cloud plans vs. generative credits system",
+        "Adobe Firefly claim that outputs are trained on licensed/Adobe Stock content and its implications for commercial use",
+        "DALL-E 3 pricing via OpenAI API (per-image cost by resolution) and via ChatGPT Plus subscription",
+        "DALL-E 3 commercial rights policy for outputs",
+        "Ideogram current free tier limits and paid plan pricing",
+        "Ideogram commercial usage rights per plan tier",
+        "Ideogram's specific capability for text rendering within images compared to other tools",
+        "Whether Automatic1111 and ComfyUI are still the dominant open-source Stable Diffusion interfaces or if others have overtaken them",
+        "Current base model versions available for Stable Diffusion (e.g., SDXL, SD 3.x status)"
+      ],
+      "research_plan": "Prioritize official pricing and terms-of-service pages for each tool (Midjourney website, OpenAI pricing page, Adobe Firefly product page, Ideogram.ai, Stability AI licensing docs). Cross-reference with recent (within 6 months) independent creator community discussions on Reddit (r/StableDiffusion, r/midjourney, r/ChatGPT) for real workflow pain points. Look for creator-focused reviews on YouTube or Substack that compare output quality on consistent prompts. Avoid press releases and vendor blog posts as primary sources. Flag any pricing or policy information older than 90 days as needing re-verification."
+    }
   }
 ]
