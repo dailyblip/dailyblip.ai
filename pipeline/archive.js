@@ -107,12 +107,21 @@ async function main() {
     delete feed.yearago;
   }
 
-  // SEO: sitemap listing everything Google should index.
+  // SEO: sitemap listing everything Google should index. Guide pages are
+  // discovered here too (not written by guide-publish.js itself) so
+  // there's exactly one place that owns sitemap.xml — guide-publish.js
+  // publishing a new guide mid-day just means it shows up here on the
+  // next daily run, same as any other day's changes would.
   const site = process.env.SITE_URL || "https://dailyblip.ai";
   const days = fs.readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.html$/.test(f));
+  const guidesDir = path.join(dir, "..", "guides");
+  const guides = fs.existsSync(guidesDir)
+    ? fs.readdirSync(guidesDir).filter((f) => f.endsWith(".html") && f !== "index.html")
+    : [];
   const urls = [
-    `${site}/`, `${site}/showcase.html`, `${site}/standards.html`, `${site}/archive/`,
+    `${site}/`, `${site}/showcase.html`, `${site}/standards.html`, `${site}/archive/`, `${site}/guides/`,
     ...days.map((d) => `${site}/archive/${d}`),
+    ...guides.map((g) => `${site}/guides/${g}`),
   ].map((u) => `  <url><loc>${u}</loc></url>`).join("\n");
   fs.writeFileSync(path.join(dir, "..", "sitemap.xml"),
     `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
