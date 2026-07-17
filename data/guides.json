@@ -2209,7 +2209,7 @@
   {
     "id": "53c94efc-1438-4f48-8348-a9de5927cb65",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top 5 AI Image Generation Tools for Independent Creators (2026)",
       "article_type": "Practical guide",
@@ -2221,7 +2221,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:57:02.638Z",
-    "updated_at": "2026-07-17T04:57:34.503Z",
+    "updated_at": "2026-07-17T04:59:40.644Z",
     "brief": {
       "target_reader": "Independent creators (illustrators, graphic designers, filmmakers, musicians needing visuals, indie game developers, and self-publishing authors) who already have some familiarity with AI image tools but want a clear, honest comparison to decide which tool fits their specific workflow and budget in 2026",
       "reader_outcome": "The reader should be able to evaluate each of the 5 tools against their own use case, understand the concrete tradeoffs in output quality, pricing, licensing, and workflow integration, and make a confident decision about which tool to start with or switch to",
@@ -2248,6 +2248,213 @@
         "Any ongoing or resolved litigation involving training data that could affect creator liability"
       ],
       "research_plan": "Prioritize official pricing and terms-of-service pages for each tool (captured as close to publication date as possible), independent creator community discussions on Reddit (r/StableDiffusion, r/ArtificialIntelligence, r/gamedev), professional reviews from outlets covering creative tooling (e.g., Creative Bloq, The Verge, 80.lv), and any publicly available legal analysis of AI image output ownership. Avoid press releases and vendor blog posts as primary sources. Cross-check licensing claims against the actual terms of service, not marketing copy. For use-case fit, look for workflow writeups from working independent creators rather than tech reviewers."
-    }
+    },
+    "sources": [
+      {
+        "title": "Comparing Midjourney Plans – Midjourney Official Docs",
+        "publisher": "Midjourney (docs.midjourney.com)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney offers four subscription tiers: Basic ($10/mo), Standard ($30/mo), Pro ($60/mo), Mega ($120/mo) — structure confirmed from official docs",
+          "All plans are subscription-based and auto-renew monthly or yearly",
+          "No free tier exists; free trial was removed in March 2023",
+          "Pricing structure has remained unchanged since July 2022 (confirmed by price-tracking sources cross-referencing official docs)",
+          "Midjourney bills by GPU compute time (Fast Hours), not image count: Basic 3.3h, Standard 15h, Pro 30h, Mega 60h",
+          "Relax mode (unlimited queued generation) available on Standard and above; Basic has none",
+          "Stealth mode (private generation) available on Pro and Mega only",
+          "Annual billing saves ~20% across all tiers",
+          "Overage fast hours purchasable at $4/hour; do not expire",
+          "Unused Fast Hours expire at end of billing cycle — no rollover",
+          "Any paid subscription grants General Commercial Terms for commercial use of outputs",
+          "Companies with gross annual revenue >$1,000,000 USD must use Pro or Mega for commercial work (directly stated in Terms of Service)",
+          "Midjourney's ToS states: 'You own all Assets You create with the Services to the fullest extent possible under applicable law' — for paid subscribers",
+          "Midjourney does not offer a public API; Discord bot and web interface only; third-party API wrappers exist but are unofficial",
+          "Community Guidelines prohibit all NSFW content including nudity, sexual imagery, and fetishes (sourced from official Community Guidelines page)",
+          "ToS prohibits using the service to violate IP rights of others including copyright, patent, or trademark",
+          "Midjourney V7 is the current model as of mid-2026"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Midjourney Terms of Service",
+        "publisher": "Midjourney (docs.midjourney.com)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32083055291277-Terms-of-Service",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Paid subscribers own all Assets they create 'to the fullest extent possible under applicable law'",
+          "Companies earning >$1,000,000 USD/year must be on Pro or Mega to own their assets",
+          "Users may not use the service to violate IP rights of others including copyright, patent, or trademark",
+          "Midjourney does not indemnify users against IP claims — all legal risk for outputs rests with the creator",
+          "Upscaled images of others remain owned by the original creator"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Midjourney Community Guidelines",
+        "publisher": "Midjourney (docs.midjourney.com)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32013696484109-Community-Guidelines",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney's official Community Guidelines prohibit nudity, sexual organs, sexualized imagery, and fetishes",
+          "Content sexualizing minors is strictly prohibited",
+          "Offensive content targeting celebrities or public figures is prohibited",
+          "Guidelines apply platform-wide and enforcement includes account warnings and bans"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Pricing 2026: Plans from $9.99 to $199.99/mo",
+        "publisher": "CostBench (costbench.com) — cross-referenced with multiple independent pricing sources verified June 2026",
+        "url": "https://costbench.com/software/ai-image-generators/adobe-firefly/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe Firefly has a permanent free tier with 25 generative credits/month; outputs may be watermarked",
+          "Paid plans: Firefly Standard ($9.99/mo, 2,000 premium credits), Firefly Pro ($19.99/mo, 4,000 premium credits), Firefly Premium ($199.99/mo, 50,000 premium credits)",
+          "As of February 2026, standard image generations on paid plans are no longer credit-gated — credits only consumed by premium operations (video, partner models, high-res outputs)",
+          "Credits do not roll over; they reset monthly",
+          "Firefly API access requires an enterprise agreement (~$1,000/month minimum); consumer plans do not include API access",
+          "Adobe Firefly is trained on licensed Adobe Stock content, openly licensed content, and public domain material — making outputs commercially safe per company claim",
+          "Adobe offers IP indemnification for qualifying paid subscribers against copyright claims on Firefly-generated content (enterprise/paid plans; not available on free tier)",
+          "Indemnification does not cover beta features",
+          "Firefly is integrated into Photoshop, Illustrator, InDesign, and Express; also available as standalone web app at firefly.adobe.com",
+          "Creative Cloud All Apps ($59.99/mo) includes Firefly Pro-level credits, making a standalone Firefly plan redundant for existing CC subscribers",
+          "No fine-tuning of base models available to consumer subscribers (Custom Models available at enterprise tier only)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Commercial Use 2026: Honest Legal Guide",
+        "publisher": "StackSheriff (stacksheriff.com)",
+        "url": "https://stacksheriff.com/ai-tools/adobe-firefly-commercial-use/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe's IP indemnification is real but narrower than marketing suggests — it does not cover beta features and is subject to indemnification caps in Adobe's general terms",
+          "Indemnification is reserved for paying subscribers (Creative Cloud, Firefly Premium, paid Adobe Express); not available on the free plan",
+          "Independent reporting (Bloomberg) found Firefly was trained in part on AI-generated images, some sourced from Midjourney — creating a noted discrepancy with Adobe's 'licensed content only' claim",
+          "Firefly's training set produces a recognizable 'Adobe Stock' aesthetic, which may limit stylistic diversity vs. competitors"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Leonardo.Ai Official Pricing Page",
+        "publisher": "Leonardo.Ai (leonardo.ai/pricing)",
+        "url": "https://leonardo.ai/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Leonardo.Ai offers a free tier (150 tokens/day, no rollover, all generations public)",
+          "Paid tiers: Apprentice ($12/mo, 8,500 tokens), Artisan ($30/mo, 25,000 tokens), Maestro ($60/mo, 60,000 tokens) — annual billing saves ~20-33%",
+          "Tokens are GPU-cost units; one token does not equal one image — cost varies by model, resolution, and feature used",
+          "Paid subscribers retain full ownership and IP rights of generated images for commercial use",
+          "Free-tier users: Leonardo.Ai holds rights to use, reproduce, modify, and distribute created images; users receive only a non-exclusive, royalty-free licence for commercial use",
+          "Token Rollover feature available on paid plans — unused tokens carry to a Rollover Bank (cap by plan tier)",
+          "Top-up token packs available; never expire and are not affected by rollover limits",
+          "When tokens are exhausted, generation stops — no automatic overage charges",
+          "API is available (pay-as-you-go, starting with $5 credit; API Custom is sales-led)",
+          "Custom model training available: users can upload 10-20 images to fine-tune a unique model",
+          "Apprentice tier does NOT include access to Motion (video) models; minimum tier for video is Artisan"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Leonardo.Ai Ownership History: Canva Acquisition July 2024",
+        "publisher": "UsagePricing.com / CheckThat.ai (multiple cross-referenced sources)",
+        "url": "https://www.usagepricing.com/blueprint/leonardo-ai",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Canva acquired Leonardo.Ai in a cash-and-stock deal announced July 29, 2024, for approximately $370 million",
+          "Post-acquisition: Leonardo kept running as an independent consumer product with its own token-metered plans (not folded into Canva subscriptions)",
+          "Canva attempted a ~300% price increase on Teams plans in September 2024, then fully reversed it within six weeks after customer backlash",
+          "By 2025, plans were consolidated into Solo (Free/Essential/Premium/Ultimate), Team (Starter/Growth), and API tiers",
+          "Leonardo's models now power Canva's Magic Studio",
+          "As of June 2026, Solo plans are $0/$12/$30/$60, Team at $72/$144 per seat, with pay-as-you-go API"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "OpenAI GPT Image API Pricing Calculator (Jul 2026)",
+        "publisher": "CostGoat (costgoat.com)",
+        "url": "https://costgoat.com/pricing/openai-images",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "DALL-E 2 and DALL-E 3 were removed from the OpenAI API on May 12, 2026 — a material model/product change",
+          "OpenAI's current image API offers four GPT Image models: GPT Image 2 (current flagship), GPT Image 1.5 (previous flagship), GPT Image 1 (deprecating October 23, 2026), GPT Image 1 Mini (cheapest)",
+          "GPT Image 2 pricing: $0.005–$0.211 per image (Low to High quality, 3 resolutions)",
+          "GPT Image 1 Mini pricing: $0.005–$0.052 per image",
+          "All GPT Image models support three quality tiers (Low/Medium/High) and three resolutions (1024×1024, 1024×1536, 1536×1024)",
+          "For consumer access, DALL-E / GPT Image generation is bundled with ChatGPT Plus (~$20/mo) or ChatGPT Pro (~$200/mo); API is separate pay-per-image",
+          "OpenAI grants full commercial rights for API-generated images, subject to usage policies; no revenue-based restrictions unlike Midjourney",
+          "OpenAI does not offer IP indemnification comparable to Adobe's"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Getty Images v. Stability AI: Case Status May 2026",
+        "publisher": "AI Lawsuit Tracker (ailawsuittracker.com)",
+        "url": "https://ailawsuittracker.com/cases/getty-v-stability-ai/",
+        "source_type": "legal",
+        "is_primary": true,
+        "claims_supported": [
+          "UK High Court issued judgment November 4, 2025 ([2025] EWHC 2863 (Ch)) — rejected the 'model weights as infringing copies' theory but found limited trademark infringement where Stable Diffusion outputs reproduced recognizable Getty watermarks",
+          "Getty was granted leave to appeal in December 2025; UK appeal is ongoing",
+          "US action was refiled in the Northern District of California (3:25-cv-06891) before Judge Trina L. Thompson on August 14, 2025, after voluntary dismissal of the Delaware action; US case is still active as of mid-2026",
+          "Stable Diffusion was reportedly trained on over 12 million Getty images scraped without authorization",
+          "The UK ruling establishes that model weights are not themselves 'infringing copies' of training images — a precedent beneficial to AI developers",
+          "Disney/Universal v. Midjourney (filed June 11, 2025, C.D. Cal.) is an active ongoing lawsuit alleging Midjourney generated unauthorized images of copyrighted characters (Darth Vader, Elsa, Bart Simpson, Minions, etc.); DreamWorks later joined as plaintiff; no trial date set",
+          "Thomson Reuters v. Ross Intelligence (D. Del., February 2025) is the first final US judgment on AI training data copyright — court found AI training on Westlaw headnotes was not fair use; established market-harm as the key inquiry",
+          "The NYT v. OpenAI and Getty v. Stability AI US trials are expected to deliver definitive rulings in late 2026 or 2027",
+          "Getty entered a licensing deal with OpenAI announced June 2026, while still pursuing its lawsuit against Stability AI",
+          "Midjourney has made no known licensing agreements or settlements related to training data litigation as of mid-2026"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI Image Generation API Pricing: 12 Providers Compared",
+        "publisher": "DigitalApplied (digitalapplied.com)",
+        "url": "https://www.digitalapplied.com/blog/ai-image-generation-api-pricing-comparison-2026",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney API was still in limited/restricted release as of April 2026, with more restrictive commercial license terms than DALL-E or Imagen — not suitable for most agency client work without careful license review",
+          "Stable Diffusion 3.5 and Flux 1.2 Pro carry commercial-friendly licenses and are available via hosted APIs at $0.02–$0.10/image",
+          "Open-source/self-hosted Stable Diffusion: free to run on own hardware; no per-image or per-month fee once set up; commercial license depends on specific model variant used — always requires individual license verification",
+          "Stability AI (the company behind Stable Diffusion) has an API available via Stability AI platform; pricing ~$0.035/image for SD 3.5",
+          "FLUX from Black Forest Labs has largely displaced Stable Diffusion as the leading open model in 2026",
+          "Stable Diffusion's training data is not fully disclosed; commercial safety claims cannot be verified at the same level as Adobe Firefly's licensed-content approach",
+          "Quality leadership among premium models (DALL-E 4 / GPT Image 2, Midjourney v7, Imagen 4) rotates approximately quarterly across workloads"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Exact output resolution limits and native upscaling specifications for each tool (Midjourney, Firefly, Leonardo, OpenAI GPT Image) — sources confirm GPU-time billing and quality tiers but do not consistently specify pixel-dimension ceilings per tier; writers should check official docs per tool directly",
+      "Whether Midjourney's training data composition has been disclosed — Midjourney has not published a training data transparency report; the claim that it was 'scraped from the web' is widely reported but not officially confirmed or denied by Midjourney",
+      "Stable Diffusion's exact training data composition beyond LAION dataset references — Stability AI has not published a comprehensive, current (2026) training data disclosure; the LAION-5B dataset is widely cited but the composition of SD 3.x and 3.5 variants is not fully public",
+      "Leonardo.Ai's specific model architecture and training data disclosure — Leonardo has not published a training data transparency report; the platform uses proprietary first-party models (Lucid Origin, Phoenix) and hosts third-party models (Flux, Ideogram) but training data provenance for first-party models is not publicly documented",
+      "OpenAI GPT Image model training data disclosure — OpenAI has not published a detailed training data transparency report for its image models; Shutterstock licensing deal (2023) is a confirmed data input but full composition is not public",
+      "Adobe Firefly's 'licensed content only' training claim is company-stated and partially disputed — Bloomberg reporting (2024) found AI-generated images (including some from Midjourney) in the training data; Adobe has not publicly addressed this discrepancy in detail; writers should note the claim is a company claim with a noted independent challenge, not a fully verified fact",
+      "Midjourney content policy on trademarked characters in generated outputs — the ToS prohibits users from violating IP rights, but does not publish a list of blocked character names or proactively filter trademarked character generation at the prompt level; the Disney/Universal lawsuit (active) makes this a live legal risk area, not a resolved policy fact",
+      "Specific free tier credit allocation for Adobe Firefly — sources conflict between 25 credits/month (majority) and other figures; Adobe's own FAQ reportedly no longer publicly discloses monthly credit allocations as of January 2026 (per one source); writers should direct readers to verify at firefly.adobe.com/plans directly",
+      "Whether Midjourney has released a version 8 (V8) — some sources reference 'V8 Alpha' but this could not be confirmed as a full public release vs. internal/alpha testing as of the research date",
+      "Any specific output resolution caps for Midjourney by tier (e.g., upscale to 4x, max megapixels) — not consistently documented in verified sources reviewed; official docs did not surface pixel-level specs in accessible content"
+    ]
   }
 ]
