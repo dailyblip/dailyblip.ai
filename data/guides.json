@@ -456,7 +456,7 @@
   {
     "id": "ab866d3c-73ac-4851-96cd-a2e96624733c",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "How can an acoustic guitarist leverage AI in their music? How can it make it better? What are some ideas and steps on how to get started",
       "article_type": "Practical guide",
@@ -468,7 +468,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T18:29:08.836Z",
-    "updated_at": "2026-07-17T18:32:48.154Z",
+    "updated_at": "2026-07-17T18:33:56.258Z",
     "brief": {
       "target_reader": "An acoustic guitarist who has heard AI tools exist for musicians but has never actually tried one. They make original music or covers, probably record at home, and are curious whether AI is genuinely useful to them or just hype.",
       "reader_outcome": "The reader should feel confident enough to pick one specific AI use case relevant to their acoustic guitar practice or recordings and actually try a tool today.",
@@ -780,6 +780,38 @@
     },
     "warnings": [
       "s1: The Hooktheory source is a blog post about Chordify alternatives, not Chordify's official documentation; citing it as authoritative for a specific free-tier limit that may have changed is unreliable, and Chordify's own site should be the cited source."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "ab866d3c-73ac-4851-96cd-a2e96624733c-img1.jpg",
+        "prompt": "A acoustic guitar resting on a wooden surface beside a smartphone showing a colorful scrolling chord chart interface with chord names highlighted in sequence — no legible text, abstract colored blocks suggesting real-time chord detection. Warm ambient light, shallow depth of field, top-down editorial perspective. Rich wood grain of the guitar body fills one side, generous open space on the opposite side for headline text overlay. Muted earth tones with one accent color. Premium lifestyle photography aesthetic, no holograms, no robot imagery.",
+        "placement": "hero",
+        "alt_text": "Acoustic guitar next to a smartphone displaying a chord chart app",
+        "caption": "AI chord detection tools can identify and display chords from any audio in real time.",
+        "approved": false,
+        "generated_at": "2026-07-17T18:33:23.531Z"
+      },
+      {
+        "id": "img2",
+        "file": "ab866d3c-73ac-4851-96cd-a2e96624733c-img2.jpg",
+        "prompt": "Close overhead shot of a person's strumming hand on the body of an acoustic guitar, with a tablet propped nearby displaying abstract waveform feedback bars and colored accuracy indicators — no readable text, just visual meter-style UI shapes suggesting real-time audio analysis. Soft natural window light, minimal desk surface, a few subtle music-related props like a capo or pick. The composition has breathing room on one side. Contemporary, editorial feel — not clinical or corporate, genuinely creator-focused.",
+        "placement": "s2",
+        "alt_text": "Guitarist playing acoustic guitar while a tablet displays real-time audio feedback",
+        "caption": "AI tools like Yousician analyze your playing through your device's microphone and offer instant feedback.",
+        "approved": false,
+        "generated_at": "2026-07-17T18:33:39.256Z"
+      },
+      {
+        "id": "img3",
+        "file": "ab866d3c-73ac-4851-96cd-a2e96624733c-img3.jpg",
+        "prompt": "A compact home recording setup: a single-mic acoustic guitar session in a small, warmly lit room — guitar leaning against a simple desk, a laptop open showing abstract audio waveform tracks with color-coded stem layers (one layer subtly highlighted to suggest isolation), a coffee cup nearby, cozy imperfect domestic space with soft bokeh background. No legible software text, no fabricated logos. Honest, lived-in, creative-workspace aesthetic. Practical and relatable, not polished studio photography.",
+        "placement": "s3",
+        "alt_text": "Home recording setup with laptop showing audio stem separation tracks beside an acoustic guitar",
+        "caption": "Stem separation tools like Moises can isolate acoustic guitar tracks from home demos and full recordings.",
+        "approved": false,
+        "generated_at": "2026-07-17T18:33:56.258Z"
+      }
     ]
   }
 ]
