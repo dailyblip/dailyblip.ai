@@ -456,7 +456,7 @@
   {
     "id": "ab866d3c-73ac-4851-96cd-a2e96624733c",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "How can an acoustic guitarist leverage AI in their music? How can it make it better? What are some ideas and steps on how to get started",
       "article_type": "Practical guide",
@@ -468,7 +468,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T18:29:08.836Z",
-    "updated_at": "2026-07-17T18:31:38.752Z",
+    "updated_at": "2026-07-17T18:32:48.154Z",
     "brief": {
       "target_reader": "An acoustic guitarist who has heard AI tools exist for musicians but has never actually tried one. They make original music or covers, probably record at home, and are curious whether AI is genuinely useful to them or just hype.",
       "reader_outcome": "The reader should feel confident enough to pick one specific AI use case relevant to their acoustic guitar practice or recordings and actually try a tool today.",
@@ -656,7 +656,7 @@
         {
           "id": "s1",
           "heading": "Figure Out Chords Without Spending an Hour on YouTube",
-          "body_markdown": "Chord transcription is one of the most immediately useful things AI can do for a guitarist. You drop in a song, and within seconds you get a chord chart that scrolls in real time as the music plays.\n\n**Chord ai** (iOS and Android) uses a deep neural network to detect chords from any audio, including recordings where acoustic guitar is the main instrument. It recognizes major, minor, seventh, sus2, sus4, and more chord types on the free tier. It also shows guitar-specific voicings and positions, not just chord names, which is genuinely more useful than a generic piano-oriented chart. It works offline, which is a nice bonus. Per the Chord ai site, the app also includes stem separation, speed control, and pitch shift, so it's doing more than just chord detection.\n\n**Chordify** takes a slightly different approach. You paste in a YouTube link or upload audio, and it generates a chord sheet that highlights each chord as the song plays. It's particularly good for rhythm guitarists who want to play along and figure out the basic harmonic structure fast. One honest caveat from independent reviewers at Guitar Chalk: Chordify shows chord names and diagrams, but it doesn't teach strumming patterns or provide tabs. And independent testers have noted it can struggle with complex chord types beyond basic major and minor, sometimes defaulting to the nearest simple triad. Good for getting oriented, not always perfect on the details.\n\nBoth tools have free tiers worth trying before you commit to anything.",
+          "body_markdown": "Chord transcription is one of the most immediately useful things AI can do for a guitarist. You drop in a song, and within seconds you get a chord chart that scrolls in real time as the music plays.\n\n**Chord ai** (iOS and Android) uses a deep neural network to detect chords from any audio, including recordings where acoustic guitar is the main instrument. On the free tier, it recognizes major, minor, seventh, sus2, sus4, and more chord types. Note that extended types like half-diminished, dim7, slash chords, and inversions are locked to the Pro tier, per the Chord ai site. It also shows guitar-specific voicings and positions, not just chord names, which is genuinely more useful than a generic piano-oriented chart. It works offline, which is a nice bonus. Per the Chord ai site, the app also includes stem separation, speed control, and pitch shift, so it's doing more than just chord detection.\n\n**Chordify** takes a slightly different approach. You paste in a YouTube link or upload audio, and it generates a chord sheet that highlights each chord as the song plays. It's particularly good for rhythm guitarists who want to play along and figure out the basic harmonic structure fast. One honest caveat: Chordify shows chord names and diagrams, but it doesn't teach strumming patterns or provide tabs. Independent reviewers at SaaSSwitcher have also noted it can struggle with complex chord types beyond basic major and minor, sometimes defaulting to the nearest simple triad. Good for getting oriented, not always perfect on the details.\n\nBoth tools have free tiers worth trying before you commit to anything, though Chordify's free tier limits you to 4 song pages per day, per Hooktheory.",
           "tools": [
             {
               "name": "Chord ai",
@@ -685,13 +685,13 @@
         {
           "id": "s2",
           "heading": "Get Honest Feedback on Your Playing",
-          "body_markdown": "This is the one that surprises people. Acoustic guitar is actually easier for AI to hear and analyze than unplugged electric, because the sound is naturally louder and clearer through a device microphone.\n\n**Yousician** listens to you play in real time via your device's microphone and gives immediate feedback on whether you hit the right notes and stayed in time. Multiple independent reviewers confirm it works well with acoustic guitar specifically, and one review at Beginner Guitar HQ noted acoustic guitar is easier for the software to pick up than unplugged electric. The curriculum covers chords, lead lines, scales, and ear training, and the animated fretboard tells you immediately when you miss a note or fall behind the tempo.\n\nIt's structured like a game, which makes practice feel less like homework. There's a free trial period, and the paid plan is available monthly or annually. Worth trying the free version before deciding if the structure works for how you like to learn.",
+          "body_markdown": "This is the one that surprises people. Acoustic guitar is actually easier for AI to hear and analyze than unplugged electric, because the sound is naturally louder and clearer through a device microphone.\n\n**Yousician** listens to you play in real time via your device's microphone and gives immediate feedback on whether you hit the right notes and stayed in time. Multiple independent reviewers confirm it works well with acoustic guitar specifically, and one review at Beginner Guitar HQ noted acoustic guitar is easier for the software to pick up than unplugged electric. The curriculum covers chords, lead lines, scales, and ear training, and the animated fretboard tells you immediately when you miss a note or fall behind the tempo.\n\nIt's structured like a game, which makes practice feel less like homework. There's a free trial, and after it ends you'll need a paid plan to continue full access. Worth trying the free version before deciding if the structure works for how you like to learn. Check Yousician's site for current trial length and pricing details, as these change.",
           "tools": []
         },
         {
           "id": "s3",
           "heading": "Clean Up Your Home Recordings",
-          "body_markdown": "If you record demos at home, stem separation tools can be surprisingly useful, not just for learning songs but for your own recordings.\n\n**Moises** is the one to start with if you play acoustic guitar. According to a MusicTech roundup of stem separation tools, Moises lists acoustic guitar as an explicit, named stem type in its separator, meaning it's not just lumping your guitar in with a generic \"other\" category. On top of that, it includes chord detection, tempo control, and pitch shifting in the same app. That makes it a solid practice tool as well as a recording aid. There's a free Starter plan with a limited number of separations per month.\n\n**LALAL.AI** is worth knowing about if your priority is separation quality over practice features. An independent review at GenMediaLab notes it's one of the only browser-based tools that isolates acoustic guitar and electric guitar as separate stems, and describes it as focused on maximum separation quality. The free tier lets you process a limited amount of audio, though downloads are locked to paid plans.\n\nFor heavier audio restoration work (cutting room noise, handling problem recordings), **iZotope RX** is the professional-grade tool many recording engineers reach for. It's not primarily a stem separator, and it sits at a different price point, but it's worth knowing the name if your demos have real audio problems.",
+          "body_markdown": "If you record demos at home, stem separation tools can be surprisingly useful, not just for learning songs but for your own recordings.\n\n**Moises** is the one to start with if you play acoustic guitar. According to a MusicTech roundup of stem separation tools, Moises lists acoustic guitar as an explicit, named stem type in its separator, meaning it's not just lumping your guitar in with a generic \"other\" category. On top of that, it includes chord detection, tempo control, and pitch shifting in the same app. That makes it a solid practice tool as well as a recording aid. Per MusicTech, the free Starter plan includes 5 separations per month, which is enough to try it out but fairly restrictive for regular use.\n\n**LALAL.AI** is worth knowing about if your priority is separation quality over practice features. An independent review at GenMediaLab notes it isolates acoustic guitar and electric guitar as separate stems and describes it as focused on maximum separation quality. The free tier lets you process up to 10 minutes of audio for preview, but downloads require a paid plan, so you can evaluate the quality before committing but can't export anything for free.\n\nFor heavier audio restoration work (cutting room noise, handling problem recordings), **iZotope RX** is the professional-grade tool many recording engineers reach for. It's not primarily a stem separator, and it sits at a different price point, but it's worth knowing the name if your demos have real audio problems.",
           "tools": [
             {
               "name": "Moises",
@@ -715,14 +715,71 @@
       ],
       "key_takeaways": [
         "AI chord transcription tools like Chord ai and Chordify can save hours of ear training work, especially for learning rhythm parts and progressions.",
-        "Yousician provides real-time playing feedback via microphone and works particularly well with acoustic guitar.",
-        "Moises lists acoustic guitar as a distinct stem type and doubles as a practice tool with tempo and pitch controls.",
-        "LALAL.AI is a strong option when separation quality is the priority, though practice features are more limited.",
+        "Yousician provides real-time playing feedback via microphone and works particularly well with acoustic guitar. After the free trial, full access requires a paid plan.",
+        "Moises lists acoustic guitar as a distinct stem type and doubles as a practice tool with tempo and pitch controls. The free plan includes 5 separations per month.",
+        "LALAL.AI is a strong option when separation quality is the priority, though the free tier only provides previews and does not allow downloads.",
         "Pick one use case that matches where you are right now and try the free tier before committing to anything."
       ],
       "conclusion": "AI isn't going to write your songs or replace the hours you've put into your playing. But it can genuinely take some of the friction out of the parts that aren't about music, figuring out chord changes, catching timing problems, or getting a cleaner sound from a home demo. Any of the tools above has a free starting point. Find the one that matches something you're actually working on this week, try it once, and see how it feels.",
       "methodology_disclosure": "This guide was researched using official tool documentation and feature pages (Chord ai, Apple App Store listing for Chord ai), independent editorial reviews from Guitar Chalk, Guitar World, American Songwriter, Beginner Guitar HQ, MusicTech, and GenMediaLab, and an independent blog comparison from Hooktheory. Capability claims about specific tools (chord detection accuracy, stem type support, feedback mechanisms) are attributed to those sources rather than presented as first-party testing by dailyblip. Claims that could not be independently verified through credible sources, including specific accuracy metrics for acoustic-only recordings and the utility of generative AI songwriting tools for chord-chart output, were omitted or softened accordingly. Pricing details are intentionally kept general, as exact figures change; readers should check each tool's site for current plan details.",
       "last_reviewed_date": "July 17, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s1",
+          "original_text": "Chordify's free tier limits you to 4 song pages per day, per Hooktheory",
+          "issue": "The Hooktheory source is a blog post about Chordify alternatives, not Chordify's official documentation; citing it as authoritative for a specific free-tier limit that may have changed is unreliable, and Chordify's own site should be the cited source."
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "There's a free trial, and after it ends you'll need a paid plan",
+          "issue": "The Guitar World source states Yousician offers a 7-day free trial at $139.99/year billed annually, but the article strips out the specific trial length and pricing entirely; this makes the claim vague in a way that may underserve readers, and the methodology says pricing is kept general, but trial length is a factual duration claim, not a price."
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "free tier lets you process up to 10 minutes of audio for preview, but downloads require a paid plan",
+          "issue": "The GenMediaLab source is a 2025 review and LALAL.AI's free tier terms are known to change frequently; citing a third-party review rather than LALAL.AI's official site for a specific free-tier limit (10 minutes) is risky and could be outdated or inaccurate."
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "The free plan includes 5 separations per month",
+          "issue": "This specific Moises free-plan limit is sourced from a MusicTech roundup, not Moises's official site, and plan details change; presenting it as a current fact in key takeaways without flagging it as subject to change or directing readers to verify is potentially misleading."
+        },
+        {
+          "severity": "medium",
+          "section_id": "s1",
+          "original_text": "Independent reviewers at SaaSSwitcher have also noted it can struggle",
+          "issue": "SaaSSwitcher is listed as an 'independent editorial site' but is a product-comparison/affiliate aggregator site; describing it neutrally as 'independent reviewers' without disclosing its likely commercial nature is potentially misleading about the source's independence."
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "Per MusicTech, the free Starter plan includes 5 separations per month",
+          "issue": "The MusicTech source is a buyer's guide that may itself rely on Moises marketing copy; attributing a specific plan limit to MusicTech rather than Moises's own pricing page adds an unnecessary layer of indirection for a falsifiable claim."
+        },
+        {
+          "severity": "low",
+          "section_id": "meta_description",
+          "original_text": "tools like Chord ai, Moises, and Yousician can help with chord transcription",
+          "issue": "The meta description omits LALAL.AI while including it substantively in the article; this is a minor inconsistency but not a factual error."
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "iZotope RX is the professional-grade tool many recording engineers reach for",
+          "issue": "This claim is presented without any sourced support in the article or sources list; no citation backs up the assertion that iZotope RX is what 'many recording engineers' use, making it an unsupported generalization."
+        }
+      ],
+      "checked_at": "2026-07-17T18:32:48.154Z",
+      "revised": true
+    },
+    "warnings": [
+      "s1: The Hooktheory source is a blog post about Chordify alternatives, not Chordify's official documentation; citing it as authoritative for a specific free-tier limit that may have changed is unreliable, and Chordify's own site should be the cited source."
+    ]
   }
 ]
