@@ -179,7 +179,7 @@
   {
     "id": "164c1e40-ca84-483b-8136-d06d49cf0c61",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Practical guide",
@@ -191,6 +191,40 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:22:22.119Z",
-    "updated_at": "2026-07-17T03:22:22.119Z"
+    "updated_at": "2026-07-17T03:22:58.826Z",
+    "brief": {
+      "target_reader": "Independent creators, photographers, designers, and filmmakers who need photorealistic AI-generated images for professional or commercial work and want an honest comparison of the main tools before committing time or money",
+      "reader_outcome": "The reader can identify which photorealistic image generation tool fits their specific workflow, budget, and quality requirements, and knows the concrete steps to evaluate and use it effectively",
+      "structure_plan": [
+        "What 'Photorealistic' Actually Means in AI Image Generation (defining evaluation criteria: skin texture, lighting coherence, depth of field, artifact frequency, prompt fidelity)",
+        "The Main Contenders: Tools Worth Comparing (Midjourney, Stable Diffusion with realistic checkpoints, Adobe Firefly, DALL-E 3 via ChatGPT/API, Flux.1, Leonardo.ai)",
+        "Side-by-Side Evaluation Criteria (resolution and upscaling, consistency across generations, control over lighting and composition, inpainting and editing, commercial licensing)",
+        "Midjourney for Photorealism: Strengths, Limitations, and How to Prompt It",
+        "Stable Diffusion Realistic Checkpoints (Realistic Vision, DreamShaper, Juggernaut XL): When Local Runs Pay Off",
+        "Flux.1 and the New Open-Weight Challengers: What Changed and What Still Doesn't Work",
+        "Adobe Firefly: Commercial Safety and Workflow Integration vs. Realism Ceiling",
+        "DALL-E 3: Prompt Fidelity vs. Photorealism Tradeoffs",
+        "Leonardo.ai and Other Managed Platforms: Middle-Ground Options for Non-Technical Users",
+        "Practical Workflow: Choosing a Tool Based on Your Specific Use Case (product photography, portrait work, environmental/scene work, stock image replacement)",
+        "Prompt Strategies That Improve Photorealism Across Most Tools (lighting descriptors, lens and camera references, negative prompts, seed locking)",
+        "Licensing, Copyright, and Commercial Use: What Creators Must Check Before Publishing",
+        "How to Run Your Own Evaluation Before Committing to a Tool"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers for Midjourney (Basic, Standard, Pro) and whether commercial use is included at each tier",
+        "Current pricing and free tier limits for Leonardo.ai",
+        "Adobe Firefly commercial licensing terms and whether generated images are indemnified for commercial use",
+        "DALL-E 3 API pricing per image and resolution options as of current date",
+        "Flux.1 model variants (Flux.1 Dev, Flux.1 Schnell, Flux.1 Pro) and which are open-weight vs. closed, and current access methods",
+        "Whether Midjourney offers an API or requires Discord/web interface only",
+        "Stable Diffusion XL vs SD 1.5 checkpoint compatibility and which realistic checkpoints are available for each",
+        "Maximum native output resolution for each tool before upscaling",
+        "Which tools allow inpainting or local editing natively vs. requiring third-party tools",
+        "Runway, Ideogram, or other notable tools that may have added photorealistic image generation modes recently",
+        "Whether Leonardo.ai uses Stable Diffusion base models or proprietary models",
+        "Current status of Stability AI and any changes to Stable Diffusion licensing (open vs. commercial)"
+      ],
+      "research_plan": "Prioritize official pricing and licensing pages for each tool (Midjourney, Adobe, OpenAI, Black Forest Labs for Flux, Stability AI). For capability comparisons, look for recent independent benchmarks or community evaluations on Reddit (r/StableDiffusion, r/midjourney), Hugging Face community posts, and creator-focused publications (not vendor blogs). For Flux.1 specifically, check Black Forest Labs documentation and any third-party hosted access points (Replicate, fal.ai). For realistic checkpoint quality on Stable Diffusion, check Civitai model pages and download counts as a rough proxy for community validation. Avoid vendor-produced comparison graphics. Prioritize sources from late 2024 onward given how rapidly this space changes."
+    }
   }
 ]
