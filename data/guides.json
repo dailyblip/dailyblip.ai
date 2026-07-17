@@ -236,7 +236,7 @@
   {
     "id": "cdbf0967-5715-4808-8736-ce48eac05dbf",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Practical guide",
@@ -248,7 +248,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:32:11.448Z",
-    "updated_at": "2026-07-17T03:34:35.408Z",
+    "updated_at": "2026-07-17T03:36:30.445Z",
     "brief": {
       "target_reader": "Independent content creators (social media, YouTube, blogs, e-commerce) who need photorealistic AI-generated images for professional use and want to evaluate tools critically before spending time or money",
       "reader_outcome": "Select the right photorealistic image generator for their specific workflow, budget, and output requirements, and know how to prompt and configure it for maximum realism",
@@ -462,6 +462,170 @@
       "Specific disclosure or attribution requirements for AI-generated images from any of these tools: none of the tools reviewed require mandatory disclosure or attribution of generated images in their ToS as a condition of commercial use. However, Adobe's Content Credentials (C2PA metadata) are attached to Firefly outputs and OpenAI attaches C2PA provenance metadata to DALL-E/GPT Image outputs — these are technical provenance markers, not legally mandatory disclosure requirements. The legal disclosure landscape (e.g., FTC guidance, EU AI Act labeling) is external to the tools and rapidly evolving; the writer should not attribute mandatory disclosure rules to any specific tool's policy without current legal sourcing.",
       "Ideogram's exact pricing as of the current date: the official ideogram.ai/pricing page did not render full plan prices in search results. Third-party sources cite Plus at $15/mo and Pro at $42/mo (annually), but a $7/mo 'Basic' tier is cited by one older source (SaaSWorthy, last updated Sept 2025) and contradicted by more recent sources. Writer should verify the current plan lineup directly on ideogram.ai before publishing.",
       "Adobe Firefly training data legal status: Adobe's 'commercially safe, licensed data' claim is a company claim (not independently verified fact) and is currently subject to an active shareholder derivative lawsuit (filed June 2026) alleging use of the SlimPajama dataset contrary to Adobe's public statements. This lawsuit is unresolved. The claim should be presented as 'Adobe states' rather than as confirmed fact, with the legal caveat noted."
-    ]
+    ],
+    "article": {
+      "title": "Photorealistic AI Image Generators Compared: Midjourney, Firefly, Flux, and More",
+      "alternative_titles": [
+        "Which AI Image Generator Produces the Most Realistic Photos?",
+        "AI Photorealism Tools for Content Creators: A Practical Comparison"
+      ],
+      "slug": "photorealistic-ai-image-generators-compared",
+      "dek": "A practical breakdown of Midjourney, Adobe Firefly, GPT-4o image generation, Flux, Stable Diffusion, and Ideogram for creators who need professional-quality photorealistic output.",
+      "meta_description": "Compare the top AI image generators for photorealistic output in 2026. Covers pricing, commercial licensing, prompt strategies, and honest limitations for Midjourney, Firefly, Flux, DALL-E, Stable Diffusion, and Ideogram.",
+      "quick_answer": "For photorealistic output, Midjourney and Flux.1 Pro lead on quality for most creator workflows. Adobe Firefly is the safest choice for commercial use with cleaner IP indemnification, while Stable Diffusion gives the most control at the cost of setup complexity.",
+      "introduction": "Photorealism is one of the hardest benchmarks for AI image generators to hit consistently. Most tools can produce something that looks plausible at a glance. Far fewer hold up when you need accurate skin texture, coherent lighting, physically correct lens behavior, and hands that don't look like they were melted.\n\nThis guide is for independent creators who need to make a real choice between tools, not a theoretical ranking. It covers what photorealism actually means technically, how the main tools compare on pricing and licensing, and how to prompt and configure each one for better results.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "What 'Photorealistic' Actually Means in AI Image Generation",
+          "body_markdown": "The word gets applied to almost everything, so it helps to break down what actually separates a photorealistic image from a stylized or illustrative one.\n\n**Lighting coherence.** Real photos have a single light source (or consistent multiple sources) that cast shadows in the same direction and affect all surfaces consistently. AI images often have inconsistent shadows or ambient light that seems to come from nowhere.\n\n**Skin and surface texture.** Skin isn't flat. It has pores, subsurface scattering (the slight translucency that makes skin look alive), and micro-variation. Tools that render skin as a smooth, evenly-lit surface fail the photorealism test at close range.\n\n**Lens behavior.** Real cameras produce depth of field, chromatic aberration, and bokeh that follow optical physics. Prompting camera-specific language (f/1.8, 85mm, shallow depth of field) helps many generators approximate this, but consistency varies.\n\n**Spatial and anatomical coherence.** Objects need to occupy space in a physically plausible way. Hands, ears, and teeth are notorious failure points because they have complex geometry that diffusion models haven't fully internalized.\n\n**Noise and grain.** Paradoxically, adding slight film grain or sensor noise often makes an AI image read as more photographic. Overly clean renders look synthetic.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "The Main Contenders: Quick-Reference Comparison",
+          "body_markdown": "Here's how the major tools stack up on the dimensions that matter most for professional creator use.\n\n| Tool | Entry Price | Free Tier | Commercial Rights | Access Method | Best For |\n|---|---|---|---|---|---|\n| **Midjourney** | $10/mo (Basic) | None | Yes, all paid tiers | Discord + web only | High aesthetic quality, stylized realism |\n| **Adobe Firefly** | $9.99/mo (Standard) | Limited via Creative Cloud trial | Yes, non-beta features | Web, Photoshop, API | Commercial safety, workflow integration |\n| **GPT-4o Image** | $20/mo (ChatGPT Plus) | Yes, capped | Yes | ChatGPT interface | Prompted scenes with complex instructions |\n| **Flux.1 Pro** | Pay-per-use (via bfl.ai or third parties) | Schnell variant (Apache 2.0) | Pro: yes; Dev: no | API only (Replicate, fal.ai, bfl.ai) | Developer workflows, high fidelity |\n| **Stable Diffusion** | Free (self-hosted) | Yes (local) | Depends on model weights | Local (AUTOMATIC1111, ComfyUI, Forge) | Maximum control, custom model tuning |\n| **Ideogram** | $15/mo (Plus) | Yes, 10 slow credits/week | Yes, paid tiers | Web + API | Text-in-image accuracy, not photorealism |\n\n**Key pricing notes:**\n- Midjourney has no free trial as of 2026. All four paid tiers ($10, $30, $60, $120/month) include commercial rights. Companies with over $1M annual revenue must use Pro or Mega.\n- Adobe Firefly's standard image generation is unlimited on any paid plan. Credits only apply to premium features like video generation. Plans run $9.99 to $199.99/month.\n- GPT-4o image generation replaced DALL-E 3 in the ChatGPT interface in December 2025. DALL-E 3 is now API-only with deprecation announced. ChatGPT Plus at $20/month gives higher generation limits.\n- Flux has three variants: Flux.1 Pro (commercial, API access via bfl.ai and third parties), Flux.1 Dev (open-weight, non-commercial only), and Flux.1 Schnell (Apache 2.0, fully commercial, fastest at 1-4 inference steps). There is no single consumer Flux subscription product.\n- Ideogram's free tier gives 10 slow credits per week. Plus costs $15/month. Free tier images are public by default.",
+          "tools": [
+            {
+              "name": "Midjourney",
+              "url": "https://www.midjourney.com",
+              "description": "Subscription-based generator accessed via Discord and web interface, known for high aesthetic quality and stylized realism.",
+              "strengths": [
+                "Consistently strong aesthetic output across styles",
+                "Relax Mode on Standard, Pro, and Mega plans for unlimited slow generations",
+                "Commercial rights included on all paid tiers",
+                "Active community with extensive prompt libraries"
+              ],
+              "limitations": [
+                "No free trial; paid subscription required to test",
+                "No official public API as of mid-2026; Discord and web only",
+                "Less granular prompt control than Flux or SD for technical photorealism",
+                "Stealth Mode (private images) requires Pro or Mega tier"
+              ]
+            },
+            {
+              "name": "Adobe Firefly",
+              "url": "https://www.adobe.com/products/firefly.html",
+              "description": "Adobe's generative AI platform, trained on Adobe Stock and licensed content, integrated with Photoshop and Creative Cloud.",
+              "strengths": [
+                "Adobe states training data is from Adobe Stock, licensed, and public domain content, offering IP indemnification for non-beta features",
+                "Tight integration with Photoshop, Illustrator, and Premiere",
+                "Unlimited standard image generation on all paid plans",
+                "Strong Generative Fill for photo editing workflows"
+              ],
+              "limitations": [
+                "IP indemnification does not apply to beta-labeled features",
+                "Adobe's commercially-safe training claim is a company claim, currently subject to an unresolved shareholder lawsuit alleging use of additional datasets",
+                "Output does not grant copyright to the user (per U.S. Copyright Office guidance)",
+                "Photorealism quality trails Midjourney and Flux on complex human subjects"
+              ]
+            },
+            {
+              "name": "GPT-4o Image Generation (via ChatGPT)",
+              "url": "https://chat.openai.com",
+              "description": "OpenAI's native image generation integrated into ChatGPT, replacing DALL-E 3 as of December 2025.",
+              "strengths": [
+                "Strong at following complex, detailed natural language instructions",
+                "Commercial use permitted on Plus, Pro, Team, and Enterprise plans",
+                "Free tier available with capped usage",
+                "Conversation-based iteration is intuitive for non-technical users"
+              ],
+              "limitations": [
+                "Declines requests involving public figures by name",
+                "Usage Policy prohibits photorealistic likeness of individuals without consent in ways that could confuse authenticity",
+                "Generation quotas on Plus are not publicly fixed and vary with server load",
+                "Less control over technical camera parameters compared to Flux or SD"
+              ]
+            },
+            {
+              "name": "Flux.1 (Black Forest Labs)",
+              "url": "https://bfl.ai",
+              "description": "Family of open and API-accessible models from Black Forest Labs, offering strong photorealism especially in the Pro variant.",
+              "strengths": [
+                "Flux.1 Pro delivers high-fidelity photorealistic output competitive with Midjourney",
+                "Schnell variant is Apache 2.0 licensed, fully commercial, and extremely fast",
+                "Available via multiple third-party API providers (Replicate, fal.ai, Together AI, Fireworks AI)",
+                "Open weights for Dev and Schnell enable local deployment"
+              ],
+              "limitations": [
+                "No single consumer-facing subscription product; requires API setup or third-party platform",
+                "Flux.1 Dev is non-commercial only; using it for paid work violates the license",
+                "Pay-per-use pricing can add up at volume without careful management",
+                "Steeper onboarding than web-based tools"
+              ]
+            },
+            {
+              "name": "Stable Diffusion (AUTOMATIC1111 / ComfyUI / Forge)",
+              "url": "https://github.com/AUTOMATIC1111/stable-diffusion-webui",
+              "description": "Open-source local image generation with multiple front-ends, offering maximum customization via model checkpoints and LoRAs.",
+              "strengths": [
+                "Free to run locally; no per-image cost after hardware investment",
+                "Enormous ecosystem of community models, LoRAs, and extensions on Civitai",
+                "Full control over sampling, CFG scale, negative prompts, and model merging",
+                "Forge front-end uses 30-50% less VRAM than AUTOMATIC1111, making it practical on consumer GPUs"
+              ],
+              "limitations": [
+                "Minimum 4GB VRAM (SD 1.5 only, with optimizations); SDXL needs 6-8GB; Flux-scale models need 12-24GB",
+                "AUTOMATIC1111 requires Python 3.10.6 specifically; Python 3.11+ breaks compatibility",
+                "AMD GPU support on Windows is limited; NVIDIA with CUDA is strongly preferred",
+                "CPU-only generation is possible but extremely slow (5-10 minutes per image)",
+                "Commercial licensing depends on the specific model weights used, not SD itself"
+              ]
+            },
+            {
+              "name": "Ideogram",
+              "url": "https://ideogram.ai",
+              "description": "Web-based generator with a free tier and strong text-in-image rendering; photorealism is a secondary capability.",
+              "strengths": [
+                "Free tier with 10 slow credits per week, no credit card required",
+                "Approximately 90% legibility rate for text rendered inside images",
+                "Ideogram 3.0 offers Realistic, Design, 3D, and Anime style modes",
+                "Affordable entry at $15/month for Plus"
+              ],
+              "limitations": [
+                "Photorealism trails Flux.1 Pro and other top tools on complex portraits and product shots",
+                "Human face consistency is a noted weakness in independent reviews",
+                "Free tier images are public; private generation requires Plus or higher",
+                "Batch generation and full API access require Pro tier ($42/month)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "heading": "How to Evaluate a Generator for Your Specific Use Case",
+          "body_markdown": "Before committing to a tool, run it through these criteria against your actual workflow requirements.\n\n**Commercial licensing clarity.** If you're selling images, licensing them, or using them in paid client work, you need to understand what rights you actually hold. OpenAI and Midjourney grant commercial use on paid plans. Adobe's indemnification claim is stronger than most but applies only to non-beta features, and note that purely AI-generated images may not be copyrightable in the U.S. under current Copyright Office guidance. For Flux, the variant matters: Schnell is Apache 2.0 (fully commercial), Dev is non-commercial, Pro requires a paid license.\n\n**Prompt control depth.** Some tools respond well to technical camera language (focal length, aperture, ISO). Others are better treated as high-level art directors. Flux and Stable Diffusion give you the most granular control. Midjourney responds well to style and mood language but abstracts away technical parameters. GPT-4o image generation is strongest when you describe the scene in plain language with clear compositional intent.\n\n**Consistency across generations.** For e-commerce or YouTube thumbnails, you often need a consistent look across multiple images. Midjourney's style reference (--sref) flag helps. Stable Diffusion with a fixed seed and LoRA is the most reliable for subject consistency. Most web tools have limited character/subject consistency between sessions.\n\n**Speed and volume.** If you need 50 images for a campaign, generation speed and batch limits matter. Flux.1 Schnell generates in 1-4 inference steps. Midjourney's Relax Mode generates slowly but without GPU-hour limits on Standard and above. Ideogram's batch generation is Pro-only.\n\n**Budget at scale.** Flat subscription tools (Midjourney, Firefly) are predictable. API-based tools (Flux via bfl.ai, third-party providers) can be cheaper at low volume and more expensive at high volume. Run the math against your expected monthly image count.",
+          "tools": []
+        },
+        {
+          "id": "s4",
+          "heading": "Prompting Strategies That Improve Realism Across Most Tools",
+          "body_markdown": "These techniques work to varying degrees across Midjourney, Flux, GPT-4o image, and Stable Diffusion.\n\n**Use camera and lens language.** Phrases like \"shot on Sony A7R IV, 85mm f/1.4, shallow depth of field, natural window light\" push most generators toward photographic rendering rather than illustration. This works because these descriptors appear frequently in photography-tagged training data.\n\n**Specify lighting precisely.** \"Golden hour backlight with soft shadow fill\" is more useful than \"nice lighting.\" For studio work: \"single softbox key light, 45-degree angle, slight rim light, dark background.\"\n\n**Use negative prompts where supported.** In Stable Diffusion and some Flux implementations: `illustration, painting, drawing, cartoon, CGI, 3D render, oversaturated, airbrushed` reduces stylization drift. Midjourney handles this through `--no` flags.\n\n**Anchor to real-world reference points.** \"Award-winning editorial portrait\" or \"stock photo for healthcare brand\" places the output in a context the model has seen often. This isn't prompt hacking; it's using the model's training distribution intentionally.\n\n**Add film grain and imperfection deliberately.** Adding \"slight film grain, subtle lens vignette, natural chromatic aberration\" often makes a result read as more photographic. Perfect renders look synthetic.\n\n**Iterate on lighting before composition.** In most tools, getting the lighting right in early iterations saves time. Lighting errors compound as you refine. Lock a lighting setup you're happy with, then iterate on subject and composition.",
+          "tools": []
+        },
+        {
+          "id": "s5",
+          "heading": "Workflow: From Brief to Usable Image in Under 10 Steps",
+          "body_markdown": "This workflow applies to any web-based tool (Midjourney, Firefly, GPT-4o image, Ideogram).\n\n1. **Define the output requirement first.** What dimensions, what intended platform, what mood? A YouTube thumbnail has different needs than a product hero shot.\n2. **Write a base prompt** covering: subject, setting, lighting condition, camera/lens style, mood.\n3. **Add technical anchors** (camera language, specific lighting terms).\n4. **Add negative modifiers** if the tool supports them.\n5. **Generate 4 initial variations.** Don't invest in one output yet.\n6. **Evaluate for lighting coherence first.** If the lighting is wrong, no amount of upscaling fixes it. Reprompt before iterating on anything else.\n7. **Select the strongest candidate.** Upscale or re-generate at higher quality.\n8. **Post-process for the final 10-15%.** Even strong AI outputs benefit from minor adjustments in Lightroom, Photoshop, or Affinity. Skin texture, color grading, and sharpening make a large difference.\n9. **Check the image for red flags** (hands, background text, teeth, ear geometry) before using commercially.\n10. **Document your prompt.** Save what worked so you can reproduce the style for future images in the same series.",
+          "tools": []
+        },
+        {
+          "id": "s6",
+          "heading": "Limitations and Red Flags to Know Before You Commit",
+          "body_markdown": "**Hands.** Every tool on this list still fails on hands with some frequency. Fingers merge, bend incorrectly, or multiply. For any image where hands are prominent, plan for post-processing or regeneration passes.\n\n**In-image text.** Ideogram is the specific-use case leader here, with its text rendering accuracy being its primary competitive differentiator. Other tools remain unreliable for legible text embedded in images.\n\n**Faces at close range.** Portrait photorealism is improving but not solved. Asymmetry, eye reflections, and teeth are the most common artifacts. If faces are central to your use case, test each tool specifically on that before subscribing.\n\n**Licensing gray areas.** Using Flux.1 Dev commercially violates its license. Using Stable Diffusion with model weights trained on scraped data introduces copyright risk that sits with you, not the tool developer. Adobe Firefly's indemnification does not apply to beta features and does not grant you copyright in the output. These aren't hypothetical concerns for creators doing volume commercial work.\n\n**Platform-level content restrictions.** OpenAI's Usage Policy explicitly prohibits photorealistic likeness of individuals without consent in ways that could cause confusion about authenticity. Midjourney has similar restrictions. Both are relevant to anyone trying to generate realistic human subjects.\n\n**No public Midjourney API.** If you're building a product or automated workflow on top of Midjourney, be aware that no official public API exists as of mid-2026. Third-party wrappers violate Midjourney's ToS and carry account-ban risk.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "Midjourney and Flux.1 Pro lead on photorealism quality for most creator use cases, but serve different workflows: Midjourney is subscription-based and web-accessible, Flux.1 Pro is API-only.",
+        "Adobe Firefly is the strongest choice for commercial IP safety, but its indemnification is limited to non-beta features and its training data claims are the subject of an unresolved lawsuit.",
+        "Flux.1 Dev is non-commercial only. Using the wrong Flux variant for paid work is a licensing violation, not just a gray area.",
+        "Stable Diffusion gives the most control and lowest per-image cost but requires hardware investment (6GB+ VRAM recommended) and technical setup.",
+        "Ideogram's competitive advantage is text-in-image rendering accuracy, not photorealism. It is not the right primary tool if photorealistic output is the goal."
+      ],
+      "conclusion": "There is no single tool that wins across every photorealism use case. The honest answer is that your choice should be driven by three things: where you need commercial licensing certainty, what volume and workflow you're running, and how much setup complexity you're willing to absorb.\n\nFor most independent creators doing social media, YouTube, or e-commerce work, Midjourney or GPT-4o image generation via ChatGPT Plus are the lowest-friction starting points. If you need developer-level control or higher fidelity on portraits and product shots, Flux.1 Pro via a third-party API is worth evaluating. If you're embedded in Adobe's ecosystem, Firefly's Generative Fill integration has real workflow value, especially for editing and compositing.\n\nWhatever tool you choose, budget time for the last 10-15% of work in post. No generator produces commercial-ready photorealistic output on every attempt, and the creators getting the most out of these tools are treating them as starting points, not finished deliverables.",
+      "methodology_disclosure": "This guide was researched and synthesized from a supplied source list including official pricing and policy pages (Adobe, OpenAI, Ideogram), independent pricing analyses (eesel.ai, Photutorial, StackSheriff), and technical community documentation (Hivenet, flux2max.pro, AI Tool Radar). Claims about pricing, licensing, and access methods are traced directly to those sources and are noted as company claims, independent observations, or verified facts as appropriate. No hands-on testing of any tool was conducted by dailyblip for this guide. Photorealism quality assessments reflect editorial synthesis of independent community reviews and are identified as such. Pricing and feature availability for AI tools changes frequently; readers should verify current plans directly with each provider before subscribing.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
