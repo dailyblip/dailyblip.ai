@@ -87,8 +87,8 @@
   },
   {
     "id": "b695a1ec-7cae-43e4-b70b-c45160c1dbff",
-    "status": "queued",
-    "stage": "Researching",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -100,7 +100,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:13:01.705Z",
-    "updated_at": "2026-07-17T03:13:38.913Z",
+    "updated_at": "2026-07-17T03:14:53.859Z",
     "brief": {
       "target_reader": "Social media content creators (Instagram, TikTok, YouTube thumbnails, LinkedIn) who generate visual content regularly and are evaluating AI image generators for photorealistic output, not fine art or illustration",
       "reader_outcome": "The reader can identify which AI image generator produces the most credible photorealistic results for their specific use case (people, products, environments, or lifestyle content), understand the practical limitations of each tool, and make a shortlist decision without needing to trial every option themselves",
@@ -125,6 +125,12 @@
         "Current state of hand/anatomy rendering in each tool as of the most recent model versions"
       ],
       "research_plan": "Prioritize official pricing and licensing pages for each tool over third-party summaries, which go stale quickly. Look for recent (within 6 months) hands-on comparisons from design or creator-focused publications such as PetaPixel, The Verge, Creative Bloq, or AI-specialist outlets like Ars Technica AI coverage. For model capability claims, check model release notes and community benchmarks on Reddit (r/StableDiffusion, r/midjourney) for real output samples rather than marketing screenshots. For licensing, go directly to terms of service pages. Flag any claims that cannot be sourced to an official policy page or a clearly dated, credible publication."
+    },
+    "sources": [],
+    "error": {
+      "stage": "research",
+      "message": "no JSON found",
+      "at": "2026-07-17T03:14:53.858Z"
     }
   }
 ]
