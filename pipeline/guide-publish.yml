@@ -1,0 +1,49 @@
+name: Publish Guide
+# workflow_dispatch only. Deliberately its own tiny workflow, separate
+# from guide.yml — this is the ONLY thing that runs when admin.html's
+# Publish button is clicked, and it does no AI calls at all, just
+# deterministic rendering (see guide-publish.js), so it finishes in
+# under a minute rather than making a human wait through another
+# multi-stage AI run just to flip a status flag.
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "Guide job id to publish (must already be status: approved)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guide-publish-${{ inputs.job_id }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+
+      - name: Render and publish
+        run: node pipeline/guide-publish.js "${{ inputs.job_id }}"
+        env:
+          SITE_URL: https://dailyblip.ai
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: published"
+          git pull --rebase --autostash
+          git push
