@@ -1877,5 +1877,22 @@
     ],
     "published_at": "2026-07-17T21:43:12.676Z",
     "published_url": "https://dailyblip.ai/guides/ai-tools-for-acoustic-guitarists-beginners.html"
+  },
+  {
+    "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top AI tools for audiobook narration",
+      "article_type": "Top tools list",
+      "target_audience": "AI writers",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "You've had AI write your new novel - now have AI narrate it into an audiobook for Audible",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T23:42:45.722Z",
+    "updated_at": "2026-07-17T23:42:45.723Z"
   }
 ]
