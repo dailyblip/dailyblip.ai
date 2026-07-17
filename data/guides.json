@@ -1126,5 +1126,22 @@
         "generated_at": "2026-07-17T03:59:43.544Z"
       }
     ]
+  },
+  {
+    "id": "9278e1a0-43f9-4d5f-9e58-b2b82439f125",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Comparing the options for photorealistic images",
+      "article_type": "Tool comparison",
+      "target_audience": "content creators",
+      "target_length": "Quick",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T04:13:39.298Z",
+    "updated_at": "2026-07-17T04:13:39.298Z"
   }
 ]
