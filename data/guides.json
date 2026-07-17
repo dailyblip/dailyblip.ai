@@ -822,7 +822,7 @@
   {
     "id": "ab77d633-7bff-4771-a971-97b8be6f6dd3",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "How can I create lofi chill beats with AI?",
       "article_type": "Practical guide",
@@ -834,7 +834,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T18:58:55.366Z",
-    "updated_at": "2026-07-17T18:59:26.204Z",
+    "updated_at": "2026-07-17T19:00:27.756Z",
     "brief": {
       "target_reader": "A musician, producer, or creative hobbyist who wants to make lofi chill beats but has little or no experience with AI music tools. They may have heard of tools like Suno or Udio but have never actually used one.",
       "reader_outcome": "Feel confident enough to open an AI music tool today and generate their first lofi beat, with a basic sense of how to prompt it well and what to do with the result.",
@@ -853,6 +853,163 @@
         "Whether any other tool (e.g., Soundraw, Beatoven.ai) is more specifically designed for lofi/chill beat generation and worth a brief mention as an alternative"
       ],
       "research_plan": "Prioritize official documentation and current pricing/terms pages for Suno and Udio directly. For prompt guidance, look for creator community resources (Reddit, YouTube walkthroughs) that show real prompt examples for lofi results. For commercial rights, read the actual terms of service rather than third-party summaries, since beginners may use output in videos or streams. Avoid sources older than 6 months given how fast these platforms change."
-    }
+    },
+    "sources": [
+      {
+        "title": "Suno | AI Music Generator (Homepage)",
+        "publisher": "Suno (official)",
+        "url": "https://suno.com/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno free tier exists — 'free forever, no subscription needed' with up to 10 songs per day (50 credits/day, no credit card required)",
+          "Paid plans (Pro and Premier) include commercial use rights; free tier is personal use only",
+          "Text prompt example given directly on the page: 'chill lo-fi beat about rainy mornings' — confirms genre descriptors like 'lofi hip hop' or 'chill beats' are supported natively in text prompts",
+          "Pro plan includes audio uploads up to 8 minutes; free tier limits uploads to 1 minute",
+          "Songs created as a paid subscriber are 'yours to keep and do whatever you want with them'"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Is Suno AI Music Software Worth the Monthly Subscription?",
+        "publisher": "Suno Hub (official Suno content hub)",
+        "url": "https://suno.com/hub/ai-music-software",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Free tier: 50 credits renewing daily (~10 songs/day); users can upload up to 1 minute of audio",
+          "Free tier is restricted to personal use only; monetization is unavailable",
+          "Paid plans (Pro and Premier) include commercial rights for YouTube, Spotify, ads, branded content",
+          "Free tier lacks higher-quality downloads and deeper refinement tools"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Where To Get Royalty Free Music: Complete Guide For Creators",
+        "publisher": "Suno (official Suno Hub page)",
+        "url": "https://suno.com/hub/royalty-free-music",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Free tier users can download tracks as MP3s (confirmed by Suno's own hub page)",
+          "Pro users can also export WAV and video files; Premier users can download MIDI",
+          "Free plan = personal use licensing; Pro and Premier = full commercial ownership"
+        ],
+        "claim_type": "company claim",
+        "notes": "This page was published Feb 2026 and states free users CAN download MP3s. This conflicts with post-Warner-deal reporting (see sources 4 and 5). Writers should flag this discrepancy and verify directly at suno.com before publishing.",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Free vs Pro vs Premier: Which Plan Is Actually Worth It in 2026?",
+        "publisher": "Undetectr (independent review site)",
+        "url": "https://undetectr.com/blog/suno-free-vs-pro-vs-premier",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Following the Warner Music licensing deal in November 2025, free tier users can no longer download their generations — playback is limited to Suno's web interface only",
+          "Free tier generations are all public (no private mode); Pro and Premier allow private songs",
+          "Suno Studio (DAW features, stem separation) is locked to paid tiers",
+          "Free tier uses v4.5 model; v5/v5.5 is paid only"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Commercial Use: Free vs Pro Rights [2026]",
+        "publisher": "Dynamoi (independent)",
+        "url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Free-tier users are expected to lose download access entirely post-Warner deal — limited to streaming and sharing only (corroborates Undetectr reporting)",
+          "Paid-tier users (Pro and Premier) will receive monthly download caps; exact caps not published as of March 2026",
+          "Songs created on free tier can never be used commercially, even after upgrading to paid",
+          "Songs created during a paid subscription retain commercial status permanently after cancellation"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing — Flexible Plans for AI Music Creation",
+        "publisher": "Udio (official)",
+        "url": "https://www.udio.com/pricing",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio has a free tier (official pricing page confirms existence)"
+        ],
+        "claim_type": "verified fact",
+        "notes": "The official pricing page returned minimal crawlable content. Specific credit numbers and commercial terms must be verified by visiting udio.com/pricing directly.",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing 2026: A Complete Breakdown of Plans & Credits",
+        "publisher": "eesel AI (independent)",
+        "url": "https://www.eesel.ai/blog/udio-pricing",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio free tier: 100 credits/month with a hard 10-per-day cap, no credit card required",
+          "Udio pricing tiers: Free ($0, 100 credits/month), Standard ($10/mo, 2,400 credits), Pro ($30/mo, 6,000 credits)",
+          "Voice Control and Style Blending are locked to Standard and above — free tier is text-prompt only",
+          "Audio uploads are gated behind paid plans; free users cannot upload reference tracks",
+          "Udio completed licensing deals with Universal Music Group (Oct 2025) and Warner Music Group (Nov 2025)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno vs Udio 2026: The Honest Head-to-Head Comparison",
+        "publisher": "Chartlex (independent)",
+        "url": "https://www.chartlex.com/blog/marketing/suno-vs-udio-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Following Udio's October 2025 UMG settlement, Udio disabled all user downloads and stems — it is now a streaming-only 'walled garden'; users cannot export or distribute tracks",
+          "Udio gave users a 48-hour window to download existing songs made under the old terms",
+          "Suno grants commercial rights at $10/month (Pro); Udio reserves them for its $30/month Pro tier — and even then downloads are currently disabled",
+          "Both platforms start free without commercial rights"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "SOUNDRAW | AI Music Generator – Royalty Free Lofi Beats",
+        "publisher": "Soundraw (official)",
+        "url": "https://soundraw.io/genre/lofi-hip-hop",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Soundraw has a dedicated lofi hip-hop genre page, confirming it is purpose-built for this use case",
+          "Soundraw generates royalty-free music with downloadable stems"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Ultimate Guide — Best AI Lofi Music Generator 2026",
+        "publisher": "Wondera.ai (independent review)",
+        "url": "https://www.wondera.ai/tools/en/the-best-ai-lofi-music-generator",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Soundraw has a dedicated 'Lofi Hip Hop' genre option and interface settings for mood (e.g. 'Chill,' 'Relaxing'), vinyl crackle, tape saturation, and atmospheric textures — making it a specialist lofi tool vs. Suno/Udio's general-purpose approach",
+          "Beatoven.ai uses mood-based generation (16 mood presets, 8+ genres including hip-hop) suited for background/chill music for video/podcast creators",
+          "Soundraw and Beatoven are independent observation picks for lofi/chill beat generation as alternatives to Suno and Udio"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Whether Suno free-tier downloads are currently enabled or fully disabled: Sources conflict — Suno's own hub page (Feb 2026) says free users can download MP3s, while Undetectr (March 2026) and Dynamoi (March 2026) report downloads were removed after the November 2025 Warner deal. Writer must verify directly at suno.com/account before publishing.",
+      "Udio's exact commercial use terms for paid tiers post-UMG deal: Multiple sources flag that downloads are disabled and commercial use rights are 'unresolved' or 'evolving.' The official Udio pricing page did not return sufficient crawlable detail. Writer must check udio.com/terms and udio.com/pricing directly.",
+      "Whether Udio currently supports text prompts with specific lofi/chill genre descriptors in the same way Suno does: Sources confirm Udio is text-prompt-based but Voice Control and Style Blending (which may refine genre fidelity) are paid-only. No source directly tested 'lofi hip hop' prompt fidelity on Udio's free tier.",
+      "Whether Suno's audio upload feature (reference track/style sample) is available on the free tier or only paid: Suno's hub page says free tier supports uploads up to 1 minute, but the Undetectr review suggests advanced upload features are paywalled. This requires direct product verification.",
+      "Beatoven.ai's current free tier details and whether it supports lofi hip-hop as a named genre (vs. adjacent moods like 'chill' or 'hip-hop'): Sources describe 8 genres including hip-hop but do not confirm a dedicated 'lofi' label. Writer should verify at beatoven.ai directly.",
+      "Soundraw's current free trial terms and whether lofi outputs are downloadable without a paid subscription: Official page confirms royalty-free downloads but free trial scope not verified."
+    ]
   }
 ]
