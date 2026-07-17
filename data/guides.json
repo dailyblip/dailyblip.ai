@@ -78,8 +78,8 @@
   },
   {
     "id": "13e7d100-e80e-4198-8ee2-752c198f91c8",
-    "status": "queued",
-    "stage": "Drafting",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Quick start guide for a traditional music incorporating AI into their music",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:08:24.554Z",
-    "updated_at": "2026-07-17T16:11:06.494Z",
+    "updated_at": "2026-07-17T16:15:08.547Z",
     "brief": {
       "target_reader": "Traditional musicians (folk, classical, jazz, world music, etc.) who have little or no prior experience with AI tools but are curious about incorporating AI into their creative workflow without losing the authenticity or cultural integrity of their practice",
       "reader_outcome": "The reader should be able to identify which AI tools are relevant to their specific workflow, set up at least one practical AI-assisted process (transcription, arrangement, practice, or composition aid), and understand the tradeoffs of each approach before committing time or money",
@@ -294,6 +294,11 @@
       "Whether any major AI composition tool (Suno, Udio, etc.) can be 'safely prompted to stay within a traditional style without generating plagiarism or stylistic distortion': The litigation evidence clearly shows stylistic bleed and copyright risk when prompting with specific stylistic descriptors. However, there is no controlled study or authoritative review specifically testing prompting for non-Western or traditional folk styles. The general risk is verified; the specific performance on traditional/folk prompts is not.",
       "LALAL.AI specific current pricing: Third-party sources cite figures ($10 starter pack for 90 minutes, $15/month subscription figures), but these conflict across sources and may be outdated. Writer should verify at https://www.lalal.ai/pricing directly.",
       "Data privacy and ownership policies for audio uploaded to cloud-based AI tools beyond Moises: Only Moises's data policy ('will never train on your data') was directly verified via official source. Privacy/ownership policies for Suno, Udio, LALAL.AI, Adobe Podcast Enhance, AnthemScore (offline, so moot), and others were not verified from authoritative policy pages in this search session. Writer should link directly to each tool's Terms of Service and Privacy Policy."
-    ]
+    ],
+    "error": {
+      "stage": "draft",
+      "message": "askJSON: unparseable JSON for prompt starting: {\"idea\":\"Quick start guide for a traditional music incorporating AI into their music\",\"article_type\":\"Practical guide\",\" (last response was TRUNCATED — raise maxTokens for this call)",
+      "at": "2026-07-17T16:15:08.546Z"
+    }
   }
 ]
