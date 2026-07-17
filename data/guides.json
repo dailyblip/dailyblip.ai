@@ -1523,7 +1523,7 @@
   {
     "id": "6dc0bfa0-a2b7-47e9-a13a-9bdbc1bbb2c1",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "AI for Acoustic Guitarists: What Actually Works and How to Try It Today",
       "article_type": "Beginner explainer",
@@ -1535,7 +1535,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T21:30:21.407Z",
-    "updated_at": "2026-07-17T21:30:51.509Z",
+    "updated_at": "2026-07-17T21:32:38.124Z",
     "brief": {
       "target_reader": "Acoustic guitarists who write, record, or want to record their own songs — complete beginners to AI music tools, comfortable with their instrument but unfamiliar with how AI fits into a songwriting or production workflow",
       "reader_outcome": "Feel confident enough to open one AI tool today and try it on something real: a lyric idea, a chord progression, or a rough home recording",
@@ -1555,6 +1555,170 @@
         "Availability: confirm which of the mentioned tools are currently accessible (not deprecated or invite-only) as of recent sources"
       ],
       "research_plan": "Prioritize official documentation and terms of service pages for licensing claims — do not rely on third-party blog posts for commercial use rights. For capability claims, use a mix of official feature pages and recent credible tech/music press (2024 or later). For audio tools like LANDR and Adobe Podcast, check whether free tiers are genuinely functional or just trial previews. Avoid older sources on Suno/Udio licensing since their terms have changed; go directly to their current ToS. Flag any conflicts between sources rather than resolving them silently."
-    }
+    },
+    "sources": [
+      {
+        "title": "Suno Commercial Use: What You Can (and Can't) Do with Suno AI Music",
+        "publisher": "Undetectr",
+        "url": "https://undetectr.com/blog/suno-commercial-use",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno free tier explicitly prohibits commercial use of generated music — outputs are personal/non-commercial only",
+          "Suno Pro ($10/month) and Premier ($30/month) grant full commercial use rights to music generated while subscribed",
+          "Tracks generated on a paid Suno plan retain their commercial license even after subscription cancellation",
+          "Udio free plan is also non-commercial; Udio Standard ($10/month) grants commercial rights",
+          "Udio's terms are more explicit than Suno's about permitted commercial uses — specifically listing streaming distribution, sync licensing, physical sales, and content creation",
+          "Udio signed licensing deals with UMG and Warner in late 2025; Suno has not signed equivalent deals and faces ongoing major-label litigation as of March 2026"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Commercial Use 2026: Rights and Ownership Guide",
+        "publisher": "Dynamoi",
+        "url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno free (Basic) tier gives ~50 credits/day (~10 songs/day); commercial use not permitted",
+          "Suno Pro grants commercial rights for songs made while subscribed; Premier ($24/month billed annually) adds volume and Studio/stems access",
+          "In November 2025, Suno reached a settlement with Warner Music Group; Sony had not settled as of March 2026",
+          "Suno's own documentation states that music made 100% with AI does not qualify for copyright protection — writing the prompt does not constitute creating the song",
+          "Free-tier Suno users are expected to lose the ability to download audio files entirely under 2026 licensing changes, limited to streaming and sharing only"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Can You Sell Suno AI Music? Commercial Rights Guide 2026",
+        "publisher": "Terms.Law",
+        "url": "https://terms.law/ai-output-rights/suno/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno's paid subscriber TOS quote: 'If you are a subscriber to a paid plan, you own the Outputs you generate using the Service… You may use such Outputs for any purpose, including commercial purposes such as posting, selling, and streaming.'",
+          "Free users cannot sell, stream, or monetize music created on the free plan; Suno retains broad rights over free-tier outputs",
+          "AI-generated music faces significant copyright uncertainty: the US Copyright Office has not recognized AI-generated music as copyrightable",
+          "Warner Music Group settled with Suno on November 25, 2025 (a licensing partnership); UMG and Sony remain active plaintiffs"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Is Suno Free? Unpack the Suno Free Tier Limits 2026",
+        "publisher": "TechJack Solutions",
+        "url": "https://techjacksolutions.com/ai-tools/suno/is-suno-free/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno's Terms of Service state free users may use outputs 'solely for your lawful, internal, personal and non-commercial purposes, provided that you give attribution credit to Suno in each case'",
+          "Using free-tier Suno songs as background music on a monetized channel, in ads, or in any content you earn money from is a commercial use and falls outside what the free plan permits",
+          "Even on a paid plan, Suno makes no representation or warranty that any copyright will vest in any output — owning the right to use something is not the same as holding a copyright in it"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing 2026: A Complete Breakdown of Plans & Credits",
+        "publisher": "eesel AI",
+        "url": "https://www.eesel.ai/blog/udio-pricing",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio offers three tiers: Free ($0, 100 credits/month with a hard 10-per-day cap), Standard ($10/month or $8/month annually, 2,400 credits), and Pro ($30/month or $24/month annually, 6,000 credits)",
+          "Udio free plan allows core generation loop (extend, remix, cover art, playback-mode voice library access) but caps full-length song generations to 3 per day",
+          "Udio completed licensing deals with Universal Music Group (October 2025) and Warner Music Group (November 2025)",
+          "Udio's audio upload feature for style reference is locked to paid tiers, not available on free",
+          "Udio is currently accessible publicly — no invite-only gate mentioned"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing — Flexible Plans for AI Music Creation (official pricing page)",
+        "publisher": "Udio",
+        "url": "https://www.udio.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio is publicly accessible as of July 2026 (pricing page live and accessible)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI Mastering | Online Audio Mastering — Try Free | LANDR (official product page)",
+        "publisher": "LANDR",
+        "url": "https://www.landr.com/online-audio-mastering",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "LANDR offers AI-assisted online audio mastering, currently accessible (not deprecated)",
+          "LANDR does not require a subscription to use mastering — a single track can be mastered for $10, or via subscription",
+          "LANDR Studio has three subscription tiers (Essentials, Standard, Pro); all three offer unlimited MP3 online mastering; Standard and Pro add WAV mastering and the DAW Mastering Plugin",
+          "LANDR provides unlimited free mastering previews — the full track is only downloadable upon payment",
+          "LANDR Mastering supports both WAV and MP3 upload/export formats; outputs also available in HD WAV on higher tiers",
+          "Distribution platforms accept LANDR Masters; LANDR recommends mastering before uploading to ensure commercial loudness standards are met"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "What Is Included in a LANDR Studio Trial? (official support article)",
+        "publisher": "LANDR Support",
+        "url": "https://support.landr.com/hc/en-us/articles/20884676291607-What-is-included-in-a-LANDR-Studio-trial",
+        "source_type": "official docs",
+        "is_primary": false,
+        "claims_supported": [
+          "LANDR offers a 3-day free trial of any Studio subscription tier; trial outputs are watermarked (audible noise burst every ~30 seconds in MP3 Essentials tier)",
+          "During the trial, users can build releases but cannot submit them to distribution without a paid subscription",
+          "LANDR's free/trial tier does not allow distribution — a paid plan is required to submit music for release"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI Stem Separation Tools 2026: LALAL.AI vs Moises vs RipX vs Ultimate Vocal Remover",
+        "publisher": "Chartlex",
+        "url": "https://www.chartlex.com/blog/marketing/ai-stem-separation-tools-2026",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "LALAL.AI and Moises are both currently accessible (not deprecated or invite-only) as of April 2026",
+          "LALAL.AI exposes individually trained stem models for electric guitar, acoustic guitar, piano, synth, strings, and wind instruments — directly relevant to acoustic guitarists",
+          "Moises is described as the only stem tool of the four 'built around the practicing musician rather than the producer,' with pitch shifting, tempo shifting, chord detection, lyric transcription, and metronome alignment alongside separation",
+          "Moises pricing: $35/year Premium (50 tracks/month, basic separation) and $95/year Pro (unlimited tracks, advanced separation); free tier exists with severe usage caps useful for trial only",
+          "Moises Pro exposes a separate 'guitar' stem on supported genres in addition to the standard four-stem split",
+          "Stem separation use case for acoustic home recording: isolating a guitar stem to study arrangement, remove bleed from a vocal/guitar recording, or practice with a separated backing track — all are practical musician use cases"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "LALAL.AI Stem Splitter — Official Product Page",
+        "publisher": "LALAL.AI",
+        "url": "https://www.lalal.ai/stem-splitter/",
+        "source_type": "official docs",
+        "is_primary": false,
+        "claims_supported": [
+          "LALAL.AI is currently publicly accessible (not deprecated or invite-only)",
+          "LALAL.AI Stem Splitter officially supports Acoustic Guitar as a named, selectable stem type — confirmed on product page",
+          "Output format can be changed before full processing begins; by default output keeps the same format as the uploaded file",
+          "LALAL.AI accepts standard audio and video file uploads; no specific minimum quality requirement stated on the product page"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Whether ChatGPT, Claude, or similar LLMs 'meaningfully assist' with lyric drafting and song structure brainstorming — this is a qualitative editorial judgment; no independent benchmark or study was found within search budget confirming or denying effectiveness specifically for acoustic guitarists. The capability is plausible and widely reported anecdotally, but no authoritative source was retrieved confirming or measuring this use case.",
+      "Whether Suno or Udio can specifically 'suggest chord progressions or arrangement ideas useful to an acoustic guitarist' as distinct from generating full AI tracks — both tools are text-prompt-to-full-audio generators; no verified feature documentation was found confirming a chord-progression-only or arrangement-sketch output mode. Writers should soften this to: these tools generate full arrangements from prompts, which can serve as reference/inspiration for arrangement ideas, but they do not output isolated chord charts.",
+      "Adobe Podcast (formerly Project Shasta) — AI audio cleanup/enhancement capability: tool existence is well known, but its current feature set, free tier availability, and file format requirements were not retrieved within the search budget. Writer should verify independently at podcast.adobe.com before making claims.",
+      "iZotope free tier for AI audio cleanup: iZotope Ozone 12 was mentioned in LANDR's blog as a mastering tool, but specific free-tier availability, file format requirements, and pricing were not confirmed in search results retrieved. Writer should verify at izotope.com.",
+      "Specific minimum audio quality or file format requirements for LANDR, Moises, LALAL.AI, Suno, or Udio uploads — LALAL.AI states output format matches input format by default, and LANDR outputs MP3/WAV/HD WAV, but no explicit minimum bitrate, sample rate, or file size floor was confirmed for any tool in retrieved sources. Writer should soften any specific quality requirement claims or verify directly on each tool's help/FAQ pages.",
+      "LANDR commercial licensing status for outputs — LANDR's own mastering does not generate creative content; it masters your uploaded audio. The licensing of the mastered output belongs to the original rights holder. No 'LANDR output licensing' issue was found, but the writer should clarify that LANDR is a processing tool, not a generative content platform, so the commercial rights question applies differently than it does for Suno/Udio.",
+      "Udio's precise current commercial licensing terms post-UMG settlement — multiple sources note Udio moved toward a 'walled garden' after the October 2025 UMG deal, with downloads potentially restricted. The exact current state of commercial rights on Udio's paid tiers is flagged as actively evolving and should be verified directly at udio.com/terms before publishing."
+    ]
   }
 ]
