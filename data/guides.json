@@ -78,8 +78,8 @@
   },
   {
     "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "in_progress",
+    "stage": "Re-checking",
     "submitted": {
       "idea": "Quick start guide for image generation",
       "article_type": "Practical guide",
