@@ -278,8 +278,8 @@ function applyRevisionFixes(article, fixes) {
   }
 }
 
-async function stageFactcheck(job) {
-  const result = await askJSON({
+async function detectIssues(job) {
+  return askJSON({
     // Reverted from "classify" (Haiku) back to "write" (Sonnet) after
     // two consecutive real truncation failures immediately following
     // the switch \u2014 both cut off at only ~3000-4000 estimated tokens of
@@ -305,6 +305,10 @@ async function stageFactcheck(job) {
     // is headroom on top of that, not a substitute for it.
     maxTokens: 8000,
   });
+}
+
+async function stageFactcheck(job) {
+  const result = await detectIssues(job);
   job.fact_check = { issues: result.issues || [], checked_at: new Date().toISOString() };
 
   const needsRevision = job.fact_check.issues.some((i) => i.severity === "medium" || i.severity === "high");
@@ -320,7 +324,18 @@ async function stageFactcheck(job) {
       maxTokens: 3000,
     });
     applyRevisionFixes(job.article, fixes);
-    job.fact_check.revised = true;
+
+    // Re-check against the now-fixed content. Without this, job.warnings
+    // always reflected the PRE-revision issues list forever \u2014 the text
+    // could be genuinely corrected and the Approve button would still
+    // stay disabled indefinitely, since nothing had re-verified whether
+    // the fix actually worked. This is exactly the "edits look right but
+    // warnings still block publish" failure mode, and previously the
+    // only way to clear it was manually clicking Re-run fact check as a
+    // separate step \u2014 now it happens automatically, as part of the same
+    // real cost this stage was already going to pay for revision.
+    const recheck = await detectIssues(job);
+    job.fact_check = { issues: recheck.issues || [], checked_at: new Date().toISOString(), revised: true };
   }
 
   const unresolvedHigh = job.fact_check.issues.filter((i) => i.severity === "high");
