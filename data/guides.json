@@ -622,7 +622,7 @@
   {
     "id": "5f971072-9942-49e9-96e9-b1582364e33b",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Musicians quick start guide to AI",
       "article_type": "Practical guide",
@@ -634,7 +634,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:13:47.478Z",
-    "updated_at": "2026-07-17T15:16:05.608Z",
+    "updated_at": "2026-07-17T15:18:34.019Z",
     "brief": {
       "target_reader": "Independent musicians and producers who are curious about AI tools but have little or no hands-on experience with them. Includes singer-songwriters, beatmakers, bedroom producers, and band members working without a label or large budget. Skeptical of hype, time-constrained, and primarily interested in tools that fit into real music-making workflows.",
       "reader_outcome": "The reader should be able to identify which AI music tools are relevant to their specific workflow (composition, lyrics, vocals, mixing, mastering, sound design, or distribution), set up and run at least one tool in a practical session, and evaluate tradeoffs between free and paid options before committing time or money.",
@@ -838,6 +838,174 @@
       "Whether the NO FAKES Act has actually passed — one source (VoGen) claims it passed in late 2025, but another legal analysis source (GrowthStackKit, updated July 2026) says it 'has been introduced but not passed'; the writer should verify the current legislative status of the NO FAKES Act before publishing any claim about it being law",
       "Exact current LANDR paid plan pricing — official LANDR pricing page returned no parseable price data in the crawl; independent sources cite $9–$39/month range depending on tier, but the writer should confirm current pricing at landr.com/pricing/master before publishing",
       "ElevenLabs current Music product pricing tiers and generation minute limits — the archived v1 Music Terms include limits (e.g., free plan: 11 min/month; Starter: 30 min/month) but these are from an archived/deprecated terms page; current active Music Terms pricing table was not fully retrievable; verify at elevenlabs.io/music-terms before publishing"
-    ]
+    ],
+    "article": {
+      "title": "AI Music Tools: A Quick-Start Guide for Independent Musicians",
+      "alternative_titles": [
+        "Getting Started with AI in Music Production: A Practical Guide",
+        "AI for Musicians: How to Actually Use It in Your Workflow"
+      ],
+      "slug": "ai-music-tools-quick-start-guide-for-musicians",
+      "dek": "A no-hype, workflow-first guide to AI tools for songwriters, producers, and bedroom artists. What works, what to skip, and what to watch out for legally.",
+      "meta_description": "Independent musicians' guide to AI music tools in 2026: composition, lyrics, vocals, mixing, mastering, and distribution. Practical workflows, honest tradeoffs, pricing, and legal considerations.",
+      "quick_answer": "AI tools can meaningfully assist with music composition, lyrics, mixing, mastering, and sound design, but none replace musical judgment. Start by identifying one specific bottleneck in your workflow, then find the tool that addresses it without locking you into unclear commercial terms.",
+      "introduction": "AI has moved from music industry conference talk into actual producer workflows. Some tools are genuinely useful. Others are solutions hunting for problems, or they carry legal strings that could cost you revenue or rights down the road.\n\nThis guide is for independent musicians who want a practical starting point, not a product catalog. It covers the major workflow categories, names specific tools with honest tradeoffs, flags the legal questions you need to answer before you release anything, and gives you a checklist for evaluating any new tool you encounter. Start with the section that matches your biggest current bottleneck.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "What AI Actually Does in Music Production (and What It Still Can't Do)",
+          "body_markdown": "AI music tools fall into a few distinct categories based on what they actually compute:\n\n- **Generative models** (Suno, Udio) produce audio or MIDI from text prompts by predicting likely continuations based on training data.\n- **Signal-processing models** (iZotope Ozone's Master Assistant, LANDR) analyze audio and apply parameter adjustments based on patterns learned from professionally mastered tracks.\n- **Voice synthesis and cloning models** (ElevenLabs) reconstruct or generate vocal audio from short reference samples.\n- **Composition assistants** generate chord progressions, melodies, or variations to work from, not necessarily to publish directly.\n\n**What AI does well right now:** Filling in gaps quickly. If you can't afford a mixing engineer, an AI mastering pass is better than no pass. If you're stuck on a chord progression, a generative tool can break the block. If you need 20 variations of a loop for a game soundtrack, AI can generate them in minutes.\n\n**What AI still does poorly:** Consistent emotional arc across a full song structure. Stylistic nuance that distinguishes your voice from a genre average. Anything requiring genuine intention behind the choices. Reviewers and listeners notice the difference more than the demos suggest.\n\nThe realistic frame: AI is a capable assistant with limited taste and no stake in the outcome. Use it for speed and volume, then apply your own judgment as the final filter.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "Step 1: Identify Where AI Fits Your Workflow",
+          "body_markdown": "Before installing anything, answer these three questions:\n\n1. **Where do you actually get stuck?** Lyrics, chord ideas, mixing decisions, lack of a vocalist, slow admin work? AI tools are most useful when matched to a real friction point.\n2. **What's your release intent?** Personal projects, sync licensing, streaming distribution, and social media clips each have different rights requirements. Free-tier outputs from Suno and Udio are non-commercial only, which matters if you plan to monetize.\n3. **How much time are you willing to spend on prompting and editing?** Generative tools produce raw material, not finished tracks. Budget time for iteration.\n\nOnce you know your bottleneck, the sections below are organized to match it. If you produce beats and get stuck on arrangement, jump to composition. If you mix your own records and want a second opinion on the master, jump to mastering.",
+          "tools": []
+        },
+        {
+          "id": "s3",
+          "heading": "Step 2: AI for Composition and Melody Generation",
+          "body_markdown": "**Suno and Udio** are the two dominant text-to-music platforms as of mid-2026. Both generate full songs (vocals, instrumentation, production) from a text prompt. The output quality has improved significantly, but the gap between \"impressive demo\" and \"releasable track\" remains real, particularly for artists with a defined sound.\n\n**Suno pricing and rights:**\n- Free: 50 credits/day (~10 songs), non-commercial use only.\n- Pro: $10/month (or $8/month annually), 2,500 credits/month, commercial use rights for songs generated while subscribed.\n- Premier: $30/month (or $24/month annually), 10,000 credits/month, stem separation.\n- Credits do not roll over. Commercial rights apply only to songs made during an active subscription period. Free-tier songs are non-commercial and Suno retains ownership.\n- Important: Fully AI-generated music from Suno does not currently qualify for copyright protection in the US, per Suno's own documentation, because a human did not write the lyrics or music.\n\n**Udio pricing and rights:**\n- Free: 100 credits/month with a 10 credits/day cap.\n- Standard: $10/month (or $8/month annually), 2,400 credits.\n- Pro: $30/month (or $24/month annually), 6,000 credits.\n- Add-on packs: 100 credits for $3, 1,000 credits for $25; purchased credits do not expire but require an active subscription.\n- Post its October 2025 UMG settlement, Udio disabled all user downloads and stems, operating as a streaming-only platform. A re-enabled download feature was expected later in 2026 but had not shipped as of June 2026. This makes Udio significantly less practical for producers who need audio files to work with.\n\n**Practical comparison:** For producers who need actual audio files, Suno Pro is currently more functional than Udio Standard or Pro at the same price point, specifically because Suno still allows downloads for paid subscribers. Udio's commercial rights terms are also described by independent analysts as more complex and harder to act on.\n\n**A realistic composition workflow:**\n1. Use a generative tool to produce 5-10 variations on a prompt that captures your intended genre, tempo, and mood.\n2. Pull the reference you find most interesting into your DAW.\n3. Use it as a sketch or reference, not a final product. Rebuild the parts you want to keep with your own instruments or samples.\n\nThis workflow sidesteps the copyright gap: if you're rebuilding from a sketch, the human creative contribution increases substantially.",
+          "tools": [
+            {
+              "name": "Suno",
+              "url": "https://suno.com/pricing",
+              "description": "Text-to-music generative platform producing full songs from prompts. Widely used by independent producers for sketching and experimentation.",
+              "strengths": [
+                "Fast iteration on genre and mood ideas",
+                "Pro tier allows downloads and commercial use at $10/month",
+                "Stem separation available at Premier tier"
+              ],
+              "limitations": [
+                "Fully AI-generated output has no US copyright protection per Suno's own documentation",
+                "Free tier is non-commercial only; Suno retains ownership of free-tier songs",
+                "Commercial rights don't apply retroactively to free-tier songs after upgrading",
+                "Training data transparency is unresolved; litigation from major labels is ongoing as of mid-2026"
+              ]
+            },
+            {
+              "name": "Udio",
+              "url": "https://www.udio.com/pricing",
+              "description": "Text-to-music platform with similar capabilities to Suno, currently limited to streaming output following its UMG settlement.",
+              "strengths": [
+                "Competitive credit pricing at Standard tier",
+                "Add-on credit packs available without expiry"
+              ],
+              "limitations": [
+                "All downloads and stems disabled as of October 2025 settlement; streaming-only as of mid-2026",
+                "Commercial rights structure described as complex and hard to verify",
+                "Less practical than Suno for producers who need audio files"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "heading": "Step 3: AI for Lyrics and Songwriting Assistance",
+          "body_markdown": "General-purpose large language models (ChatGPT, Claude, Gemini) are currently the most practical AI tools for lyrics, and they're accessible immediately. They work best as a collaborator for brainstorming rather than a ghostwriter producing final copy.\n\n**Practical uses:**\n- Generate 10 different chorus concepts for a song you're stuck on, then rewrite the one that's closest.\n- Ask for alternate phrasings of a line that feels too obvious.\n- Use as a rhyme and meter checker: paste in a verse and ask what sounds forced.\n- Prompt it to write in a specific voice or emotional register, then use the output as a structural reference.\n\n**What to watch for:** LLM lyric output tends toward cliche. The more specific your prompt (including concrete details from your own life or a specific emotional scenario), the more usable the output. Prompting \"write a verse about loss\" produces worse results than \"write a verse from the perspective of someone clearing out an apartment after a breakup, avoiding metaphors about weather.\"\n\nDedicated lyric tools exist (some built into DAW ecosystems or bundled with generative platforms), but general-purpose LLMs are currently more flexible and easier to iterate with for most songwriters.",
+          "tools": []
+        },
+        {
+          "id": "s5",
+          "heading": "Step 4: AI for Vocals (Synthesis, Harmony, and Cloning)",
+          "body_markdown": "This is the highest-stakes category legally. Read this section before committing to any vocal AI tool.\n\n**What vocal AI tools can do:**\n- Synthesize a singing voice from scratch or from a reference sample.\n- Generate harmonies under or over an existing vocal track.\n- Adjust pitch and timing with less artifact than older pitch-correction tools.\n- Clone a specific voice (including your own) for drafting or performance assistance.\n\n**ElevenLabs** is the most prominent commercial voice synthesis platform with an explicit music product (Eleven Music). Free-plan music users are prohibited from distributing on major streaming platforms including Spotify, Apple Music, Amazon Music, and Pandora. Paid plans (Starter at $5/month and above) grant commercial use rights for generated audio retained permanently for already-generated content, even after cancellation. However, current exact per-tier generation limits for the Music product were not fully verifiable at publication and you should confirm at elevenlabs.io/music-terms before committing.\n\n**The cloning question and legal reality:**\n- Cloning *your own* voice is currently the most legally defensible use case.\n- Cloning another person's voice without their consent is actionable under US right-of-publicity law and potentially state statutes. Tennessee's ELVIS Act was the first state law to explicitly name AI voice replicas; at least 12 states have passed similar legislation as of mid-2026.\n- In the EU, a person's voice is personal data under GDPR, requiring a lawful basis (typically consent) to clone. The EU AI Act (fully in force August 2026) adds obligations to label AI-generated audio.\n- There is no single federal US law banning AI voice cloning outright as of mid-2026. Federal legislation has been introduced but its current legislative status should be verified before making any legal decisions.\n- ElevenLabs and similar platforms explicitly shift legal responsibility to the user. If you upload someone else's voice, you carry the liability.\n\n**Practical starting point for independent musicians:** Use AI voice tools on your own voice for drafting, pitch reference, or harmony stacking. Avoid generating synthetic versions of other artists' voices for any released material, regardless of what a platform's terms technically allow in a narrow reading.",
+          "tools": [
+            {
+              "name": "ElevenLabs",
+              "url": "https://elevenlabs.io/terms-of-use",
+              "description": "Voice synthesis platform with a dedicated music product (Eleven Music). Generates and clones voices for audio and music production.",
+              "strengths": [
+                "Paid plans grant perpetual commercial license for generated audio",
+                "Free plan available for non-commercial personal use and experimentation",
+                "Explicit music-use terms, which is more transparent than many competitors"
+              ],
+              "limitations": [
+                "Free plan prohibits distribution on major streaming platforms",
+                "Paid Music plan restrictions include offline TV/radio/film and music libraries over 100 outputs for third-party licensing",
+                "Exact per-tier generation minute limits for Music product require verification at elevenlabs.io/music-terms",
+                "ElevenLabs retains a royalty-free license to use uploaded voice data to improve models"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "heading": "Step 5: AI for Mixing and Mastering",
+          "body_markdown": "AI-assisted mastering is the area where the technology has been most practically useful for independent musicians, largely because the baseline task (level-matching, tonal balance, limiting) is well-defined and the cost of a professional alternative is high.\n\n**iZotope Ozone 12** is a DAW plugin (VST3, AU, AAX) that runs inside your existing session. Its Master Assistant analyzes your track and sets a starting point for all modules. Ozone 12 Advanced is priced at $499 full price, with loyalty/upgrade pricing for existing iZotope customers and subscription access reported at around $19.99/month via Native Instruments. Three tiers exist: Elements (AI-led, entry-level), Standard (14 modules), and Advanced (20 modules including Bass Control, Stem EQ, and Unlimiter). The key distinction from cloud mastering services: you stay in your DAW and retain full control over the result. The AI recommendation is a starting point, not a finished master.\n\n**LANDR** is a cloud-based mastering service. As of 2026, the free tier offers unlimited uploads and browser previews only. Every download requires payment. Free-tier outputs include an audible watermark (noise burst), making them unusable for distribution. Paid tiers run approximately $12.99/month (Essentials, unlimited MP3) to $24.99/month (Pro, unlimited WAV/HD WAV), though current pricing should be confirmed at landr.com/pricing/master before subscribing. LANDR also operates as a music distributor with specific AI-music policies (covered in the distribution section).\n\n**Practical recommendation by situation:**\n- Working inside a DAW with an established session: Ozone Elements or Standard is more flexible and produces a better result for tracks with specific sonic goals. The plugin approach lets you audition the master in context.\n- Need a quick reference master to share with collaborators before a mix is finalized: LANDR's paid tier is faster with no session setup required.\n- Budget is zero: Neither tool's free tier produces a distribution-ready file. A basic limiter and reference track comparison will serve you better than a watermarked cloud master.",
+          "tools": [
+            {
+              "name": "iZotope Ozone 12",
+              "url": "https://www.izotope.com/products/ozone-advanced",
+              "description": "DAW plugin suite for AI-assisted and manual mastering. Master Assistant analyzes and suggests initial settings across all processing modules.",
+              "strengths": [
+                "Stays inside your DAW workflow; full manual control after the AI suggestion",
+                "Three tiers let you start at Elements and upgrade",
+                "Advanced tier includes stem-aware processing and unlimiter"
+              ],
+              "limitations": [
+                "Advanced tier at $499 full price is a significant commitment for casual use",
+                "Requires a DAW; not a standalone or browser-based tool",
+                "AI suggestions are a starting point, not a finished master; human review is still required"
+              ]
+            },
+            {
+              "name": "LANDR",
+              "url": "https://www.landr.com/online-audio-mastering",
+              "description": "Cloud AI mastering service. Upload an audio file, receive a mastered version. Also operates as a music distributor.",
+              "strengths": [
+                "Fast turnaround with no DAW session required",
+                "Useful for quick reference masters during mixing"
+              ],
+              "limitations": [
+                "Free tier produces watermarked, non-distributable files",
+                "No fine-grained control over processing decisions",
+                "As a distributor, caps AI-generated music uploads at 12 per calendar month and excludes AI content from several major DSPs"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "heading": "Step 6: AI for Sound Design and Sample Creation",
+          "body_markdown": "This area is developing quickly but is harder to give specific tool guidance on without current verified pricing. A few honest observations:\n\n**What's available in broad terms:**\n- **Adobe's Generate Soundtrack** (announced at Adobe MAX 2025, public beta) uses the Firefly Audio Model to create instrumental tracks synced to video inside Premiere Pro. This is distinct from Adobe's research project (Project Music GenAI Control), which is not yet a shipping commercial product. Adobe has not publicly disclosed training data for either.\n- **Open-source models** such as Meta's MusicGen can generate audio from text prompts and run locally. Whether they're practically usable without coding knowledge depends on your technical level. Pre-packaged front ends exist, but maintenance and usability varies. If you're comfortable with Python and have a GPU, they're worth exploring. If not, they're currently a significant time investment.\n- **Splice** offers AI-assisted sample tools, but current pricing and feature scope require verification directly at splice.com before acting on any third-party description.\n\n**The practical floor for most producers:** Your DAW's built-in synthesis and any sampler you already own, combined with generative tools to create raw material you then edit, will outperform most dedicated AI sound design tools for day-to-day work. The AI tools in this category are most useful for generating novel textures quickly, particularly for film, game, or ambient work where variety matters more than stylistic precision.",
+          "tools": []
+        },
+        {
+          "id": "s8",
+          "heading": "Step 7: AI for Release, Promotion, and Admin",
+          "body_markdown": "**Distribution of AI-generated music** is a live policy question in 2026, and the landscape differs significantly by distributor.\n\nBased on current independent reporting:\n\n- **DistroKid** accepts AI-generated music with mandatory disclosure at upload. It runs automated AI detection; undisclosed AI content can be flagged or removed. No cap on number of AI tracks.\n- **TuneCore** does not accept 100% AI-generated tracks (policy tightened since July 2025). AI-assisted music with significant human creative input is accepted with disclosure.\n- **CD Baby** rejects fully AI-generated content. Strictest policy among major distributors.\n- **LANDR (as distributor)** accepts AI music but caps uploads at 12 AI-generated songs per calendar month. Excludes AI content from YouTube Content ID, Meta, TikTok, Deezer, Pandora, and Tencent.\n- **RouteNote, UnitedMasters, Amuse, and Symphonic** accept AI-generated music (policies vary; verify current terms before uploading).\n\nA DDEX AI disclosure standard is being rolled out across distributors. DistroKid, Believe (TuneCore's parent), CD Baby, Amuse, RouteNote, and Soundrop all signed Spotify's AI transparency initiative as of April 2026.\n\n**The practical implication:** If your music involves any AI generation in the audio output (not just lyrics assistance), use DistroKid or RouteNote if you want the least friction. Disclose accurately regardless of which distributor you use. The automated detection systems are improving and the consequences of mislabeling are getting steeper.\n\n**For promotion and admin,** general-purpose AI tools (LLMs for press releases, social copy, EPK drafts) are straightforwardly useful and carry no music-specific legal complications.",
+          "tools": []
+        },
+        {
+          "id": "s9",
+          "heading": "Evaluating Any AI Music Tool: A Practical Checklist",
+          "body_markdown": "Before you invest time or money in any AI music tool, run through these questions:\n\n- **Who owns the output?** Read the terms of service, not the marketing page. Ownership and commercial rights are often in different clauses.\n- **Is commercial use available on the plan you're considering, or only on a higher tier?** Suno and Udio both gate commercial rights to paid plans, but the specifics differ.\n- **Can you export audio files?** Udio currently cannot. This matters for any production workflow.\n- **What happens to your rights if you cancel?** ElevenLabs commits to perpetual commercial licenses for already-generated content. Others may not.\n- **What are the training data disclosures?** Neither Suno nor Udio has made a formal public disclosure of training data. Ongoing litigation suggests copyrighted recordings were used. This is a reputational and legal risk to be aware of.\n- **Is the tool actively maintained?** For open-source tools, check GitHub commit dates and issue activity.\n- **Does your distributor accept output from this tool?** Check before you generate, not after.",
+          "tools": []
+        },
+        {
+          "id": "s10",
+          "heading": "Legal and Ethical Considerations Musicians Need to Know Now",
+          "body_markdown": "**Copyright in AI-generated music:** Fully AI-generated music does not currently qualify for copyright protection in the US, per US Copyright Office guidance and confirmed by Suno's own documentation. This means anyone can use, copy, or sample your AI-generated track without your permission unless you have added substantial human creative contribution that can be documented.\n\n**Voice cloning:** Cloning someone else's voice without their consent is legally risky under state right-of-publicity laws across at least 12 US states, and under GDPR in the EU. ElevenLabs explicitly transfers this legal responsibility to users. When in doubt, only clone your own voice.\n\n**Training data and label litigation:** Both Suno and Udio have faced major label lawsuits over training data. Audio fingerprinting revealed copyrighted recordings in Suno's training data. Warner Music Group settled with Suno in November 2025; Sony Music had not settled as of mid-2026. Neither company has made a formal public training data disclosure. Using their outputs for commercial work carries a reputational and, potentially, a contractual risk if label partnerships are relevant to your career.\n\n**Disclosure obligations:** The music industry is moving toward mandatory AI disclosure at the distributor and DSP level. Getting ahead of this is straightforward: disclose accurately, document your creative process, and keep records of what was AI-generated versus human-created in each project.",
+          "tools": []
+        },
+        {
+          "id": "s11",
+          "heading": "Recommended Starting Stack by Use Case",
+          "body_markdown": "**Songwriter focused on lyrics and composition:**\nStart with a general-purpose LLM (free tier) for lyric brainstorming. Add Suno Pro ($10/month) if you want to hear melodic and production sketches quickly. Keep your DAW as the creative hub.\n\n**Bedroom producer or beatmaker:**\nIf you mix and master your own work, Ozone Elements is a cost-effective AI mastering starting point. Use Suno or a local MusicGen instance for texture and reference generation if you have the technical patience for the latter.\n\n**Singer-songwriter recording vocals:**\nUse ElevenLabs (paid tier, verified current limits at elevenlabs.io/music-terms) for harmony stacking drafts on your own voice. Do not use it to release synthetic versions of anyone else's voice.\n\n**Producer releasing on streaming platforms:**\nDistroKid is currently the most straightforward distributor for music that includes AI-generated elements, given its disclosure system and lack of a track cap. Disclose accurately at upload regardless of which distributor you use.\n\n**Film/video composer needing quick instrumental beds:**\nAdobe's Generate Soundtrack (inside Premiere Pro) is worth evaluating if you're already in the Adobe ecosystem, noting it is currently in public beta and training data is not disclosed. Verify availability and terms before relying on it for a commercial project.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "AI tools are most useful when matched to a specific bottleneck in your workflow: generative platforms for sketching, AI mastering for faster iteration, LLMs for lyric drafting.",
+        "Free tiers on Suno and Udio are non-commercial only. Suno Pro ($10/month) currently offers clearer commercial rights and download access than Udio at the same price, largely due to Udio's post-settlement download restrictions.",
+        "Fully AI-generated music has no US copyright protection. Document your human creative contributions in any project you plan to release commercially.",
+        "Cloning another person's voice without consent is legally risky under existing state right-of-publicity laws across at least 12 US states and under GDPR in the EU. Only clone your own voice for released material.",
+        "Distributor policies on AI music differ significantly: DistroKid accepts AI with disclosure, CD Baby rejects it, TuneCore requires human creative contribution. Verify your distributor's current terms before generating content for release."
+      ],
+      "conclusion": "AI tools are practical additions to an independent music workflow in specific, limited ways. The gap between what the demos show and what you can release is real, and the legal framework around copyright, voice cloning, and training data is still being written. The musicians who get the most out of these tools right now are the ones who treat them as fast-iteration assistants, apply their own taste and judgment to every output, and read the actual terms of service before distributing anything. Start with one tool, in one part of your workflow, and evaluate honestly whether it's saving you time or just adding another thing to manage.",
+      "methodology_disclosure": "This guide was synthesized from official pricing and terms-of-service pages for Suno, Udio, iZotope Ozone 12, LANDR, and ElevenLabs (all accessed July 2026), supplemented by independent reporting from Dynamoi and Music Make AI on commercial rights and distributor policies, and legal commentary from GrowthStackKit on voice cloning law. Adobe Research's official project page was used for claims about Project Music GenAI Control and Generate Soundtrack. Claims about Melodyne, Splice AI tools, and open-source model usability could not be verified within the available source set and are either omitted or flagged as requiring independent verification. The legislative status of US federal AI voice legislation was flagged as contested across sources and no specific claim about its passage is made. Pricing figures are drawn from official sources where available; readers should confirm current pricing directly with each provider before purchasing, as subscription pricing changes frequently. This guide does not reflect hands-on testing by dailyblip.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
