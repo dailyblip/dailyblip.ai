@@ -1170,8 +1170,8 @@
   },
   {
     "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "in_progress",
+    "stage": "Re-checking",
     "submitted": {
       "idea": "Using AI to write better songs without losing your voice",
       "article_type": "Practical guide",
