@@ -145,22 +145,27 @@ export async function askJSON({ role = "write", system, prompt, maxTokens = 4000
 export async function askWithSearch({ role = "write", system, prompt, maxTokens = 4000, maxSearches = 4 }) {
   const tools = [{ type: "web_search_20250305", name: "web_search", max_uses: maxSearches }];
   const messages = [{ role: "user", content: prompt }];
+  console.warn(`askWithSearch: calling Claude with up to ${maxSearches} web searches available \u2014 this can take a while and prints nothing until it returns, that's expected, not stuck.`);
+  let lastStopReason = null;
   for (let attempt = 0; attempt < 2; attempt++) {
+    if (attempt > 0) console.warn(`askWithSearch: attempt ${attempt + 1} starting (previous response wasn't valid JSON) \u2014 this can take a while with search tool calls, not necessarily stuck.`);
     const res = await createResilient(role, { max_tokens: maxTokens, system, messages, tools });
     const text = textOf(res);
+    lastStopReason = res.stop_reason;
     try { return parseLoose(text); } catch {
-      // Reconstructing the assistant turn from extracted text only (not
-      // the full content blocks array) is safe here specifically because
-      // web_search_20250305 is a SERVER-side tool: Anthropic resolves the
-      // search and returns it fully within the same turn, so there's no
-      // pending tool_use awaiting a client-supplied tool_result the way
-      // client-side tools work \u2014 nothing is left "orphaned" by dropping
-      // the resolved search blocks from the replayed history.
+      // stop_reason tells us definitively whether this was truncation
+      // (hit max_tokens mid-structure, likely fixable by raising the
+      // budget or bounding the requested output size) versus the model
+      // genuinely never producing JSON (a prompting problem instead) \u2014
+      // without this, every failure looks identical and has to be
+      // diagnosed by guesswork, which is exactly what happened here.
+      console.warn(`askWithSearch: attempt ${attempt + 1} returned unparseable/empty content (${text.length} chars, stop_reason="${lastStopReason}"). ${lastStopReason === "max_tokens" ? "Response was TRUNCATED \u2014 raise maxTokens or shrink the requested output." : ""} ${attempt === 0 ? "Retrying once." : "No attempts left."}`);
       messages.push(
         { role: "assistant", content: text || "(no text in previous response)" },
-        { role: "user", content: "That was not valid JSON (or was empty). Reply with ONLY the corrected JSON now. No prose, no fences, no further searching needed." }
+        { role: "user", content: "That was not valid JSON (or was empty/truncated). Reply with ONLY the corrected, COMPLETE JSON now \u2014 shorten it if needed to fit, prioritizing the most important entries. No prose, no fences, no further searching needed." }
       );
     }
   }
-  throw new Error(`askWithSearch: unparseable JSON for prompt starting: ${String(prompt).slice(0, 120)}`);
+  const hint = lastStopReason === "max_tokens" ? " (last response was TRUNCATED \u2014 raise maxTokens for this call, or shrink the requested output size)" : ` (last stop_reason: "${lastStopReason}")`;
+  throw new Error(`askWithSearch: unparseable JSON for prompt starting: ${String(prompt).slice(0, 120)}${hint}`);
 }
