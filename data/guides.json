@@ -1522,8 +1522,8 @@
   },
   {
     "id": "6dc0bfa0-a2b7-47e9-a13a-9bdbc1bbb2c1",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "AI for Acoustic Guitarists: What Actually Works and How to Try It Today",
       "article_type": "Beginner explainer",
@@ -1868,6 +1868,12 @@
         "concept": "A clear visual distinction between two different relationships a songwriter can have with AI-generated content — 'shaped by you' (chatbot lyric suggestions as raw material) versus 'generated for you' (a different scenario) — framed as a before/after or two-column split relevant to the rights section",
         "purpose": "Make the commercial rights distinction from the publishing section visually intuitive: when you shape AI suggestions into your own song, the work is yours — this is editorially different from other AI content scenarios"
       }
+    ],
+    "approved_at": "2026-07-17T21:42:55.789Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s3: Sources indicate Warner settled with Suno in November 2025, not UMG; the Terms.Law source says UMG and Sony remain active plaintiffs, but the article attributes the settlement incorrectly — attributing it to 'UMG and Sony' as ongoing plaintiffs may be accurate per Terms.Law, but the Dynamoi source says Sony had not settled as of March 2026 while Warner had, creating a conflict the article doesn't resolve and attributing the claim to Terms.Law rather than the specific sourced claim is fine, but calling it 'mid-2026' overstates the recency of sourced data (sources accessed July 2026 but underlying facts cited as of March 2026).",
+      "s3: The article attributes this claim to 'Undetectr' but then says 'Udio's own pricing page' corroborates it; the Udio official pricing page source only confirms the page is live, not that it mentions licensing settlements — overstating what the official source supports."
     ]
   }
 ]
