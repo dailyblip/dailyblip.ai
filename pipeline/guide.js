@@ -139,29 +139,36 @@ JSON only.`;
 
 async function stageResearch(job) {
   job.sources = [];
+  const cfg = LENGTH_CONFIG[job.submitted.target_length] || LENGTH_CONFIG.Standard;
   const result = await askWithSearch({
     role: "write",
     system: RESEARCH_SYSTEM,
     prompt: JSON.stringify({ topic: job.submitted.idea, claims_to_verify: job.brief?.claims_to_verify || [] }),
-    // Higher than commentary.js's research call (2000 tokens / 6
-    // searches) on purpose \u2014 this asks for a full structured sources
-    // array, not just "2-4 examples." A real production failure on a
-    // multi-tool comparison topic showed 6000 still wasn't enough
-    // (response got truncated mid-JSON) even with the 10-source cap
-    // added to RESEARCH_SYSTEM above \u2014 this is belt-and-suspenders
-    // with that cap, not a substitute for it.
-    maxTokens: 8000,
-    maxSearches: 10,
+    // Scaled by target_length (see LENGTH_CONFIG below) \u2014 previously
+    // flat at 8000/10 searches regardless of length, so a Quick guide
+    // was paying for Deep-dive-sized research it never needed. The
+    // 10-source cap in RESEARCH_SYSTEM above still applies at every
+    // tier as the hard ceiling on output size.
+    maxTokens: cfg.researchTokens,
+    maxSearches: cfg.researchSearches,
   });
   job.sources = (result.sources || []).map((s) => ({ ...s, accessed_date: new Date().toISOString().slice(0, 10) }));
   job.unverifiable_claims = result.unverifiable_claims || [];
 }
 
 // ---- Stage: draft -------------------------------------------------------
-const LENGTH_TARGETS = {
-  Quick: "800 to 1200 words total",
-  Standard: "1500 to 2200 words total",
-  "Deep dive": "2500 to 3500 words total",
+// Cost scales with target_length \u2014 research and draft budgets were
+// previously FLAT regardless of length, meaning every "Quick" (800-1200
+// word) guide paid for the same 8000-token draft ceiling and 10-search
+// research budget as a "Deep dive" (2500-3500 word) guide, even though
+// it needs a fraction of both. These numbers include real headroom
+// above the target word count (not a tight fit), since running out of
+// room mid-generation is a worse failure than a slightly generous
+// ceiling.
+const LENGTH_CONFIG = {
+  Quick: { words: "800 to 1200 words total", researchTokens: 4000, researchSearches: 5, draftTokens: 3500 },
+  Standard: { words: "1500 to 2200 words total", researchTokens: 6000, researchSearches: 8, draftTokens: 5500 },
+  "Deep dive": { words: "2500 to 3500 words total", researchTokens: 8000, researchSearches: 10, draftTokens: 8000 },
 };
 
 const DRAFT_SYSTEM = `You write the full draft of a dailyblip guide. ${EDITORIAL_RULES}
@@ -203,6 +210,7 @@ function assertArticleShape(article, stageName) {
 
 async function stageDraft(job) {
   const s = job.submitted;
+  const cfg = LENGTH_CONFIG[s.target_length] || LENGTH_CONFIG.Standard;
   job.article = await askJSON({
     role: "write",
     system: DRAFT_SYSTEM,
@@ -210,14 +218,14 @@ async function stageDraft(job) {
       idea: s.idea,
       article_type: s.article_type,
       target_audience: s.target_audience,
-      length_target: LENGTH_TARGETS[s.target_length] || LENGTH_TARGETS.Standard,
+      length_target: cfg.words,
       editorial_notes: s.editorial_notes,
       points_to_include: s.points_to_include,
       brief: job.brief,
       sources: job.sources,
       unverifiable_claims: job.unverifiable_claims,
     }),
-    maxTokens: 8000,
+    maxTokens: cfg.draftTokens,
   });
   assertArticleShape(job.article, "draft");
   job.article.last_reviewed_date = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
@@ -228,8 +236,10 @@ const FACTCHECK_SYSTEM = `You are the fact-checking and editorial-review pass fo
 
 Inspect: product capabilities, availability, pricing, free-plan claims, commercial-use terms, copyright statements, platform policies, monetization requirements, release dates, unsupported conclusions, misleading claims, broken/invented-looking links, any statement implying dailyblip tested something, repetitive/generic writing, undisclosed affiliate language.
 
-Return JSON: {"issues": [{"severity":"low|medium|high","section_id":"matches a section id, or \\"intro\\"/\\"conclusion\\"","original_text":"exact quote from the article","issue":"what's wrong","recommended_replacement":"corrected text","supporting_source_url":"" }]}
-JSON only. Empty issues array if genuinely clean.`;
+Return AT MOST 12 issues total, prioritizing the most severe and clearest problems \u2014 if you find more than 12 genuine issues, that's a sign the section needs a broader rewrite, not a reason to list every one individually. Keep "original_text" to a short identifying fragment (10-15 words), not the full passage \u2014 just enough for a human to locate it. Do NOT write a suggested fix here \u2014 that's a separate step's job; yours is only to identify and describe the problem.
+
+Return JSON: {"issues": [{"severity":"low|medium|high","section_id":"matches a section id, or \\"intro\\"/\\"conclusion\\"","original_text":"short identifying fragment, 10-15 words","issue":"what's wrong, 1-2 sentences","supporting_source_url":"" }]}
+Your response must begin with { immediately \u2014 no preamble, no "Let me review this article," no explanation before or after the JSON. JSON only. Empty issues array if genuinely clean.`;
 
 const REVISE_SYSTEM = `You are fixing specific flagged issues in a dailyblip guide, changing as little else as possible. ${EDITORIAL_RULES}
 
@@ -261,15 +271,30 @@ function applyRevisionFixes(article, fixes) {
 
 async function stageFactcheck(job) {
   const result = await askJSON({
+    // Reverted from "classify" (Haiku) back to "write" (Sonnet) after
+    // two consecutive real truncation failures immediately following
+    // the switch \u2014 both cut off at only ~3000-4000 estimated tokens of
+    // actual content, well under the 8000 ceiling, which suggests Haiku
+    // was spending real budget on something other than the JSON payload
+    // (most likely explanatory preamble) despite the same "JSON only"
+    // instruction Sonnet reliably followed here. The 3x cost savings
+    // isn't worth it if the stage can't reliably finish \u2014 a failed run
+    // wastes the cost of every earlier stage too, so "cheaper but
+    // unreliable" is a false economy. See the stricter no-prose
+    // instruction in FACTCHECK_SYSTEM below too, as defense-in-depth
+    // regardless of which model runs this.
     role: "write",
     system: FACTCHECK_SYSTEM,
     prompt: JSON.stringify({ article: job.article, sources: job.sources }),
-    // Was 3000 \u2014 raised after a real production truncation: an article
-    // with several flagged issues (each carrying a quoted original_text
-    // plus a full recommended_replacement) doesn't reliably fit in 3000
-    // tokens, same underestimation pattern already hit in research and
-    // images.
-    maxTokens: 6000,
+    // Was 3000, then 6000 \u2014 still truncated in production on a real
+    // article even at 6000. Rather than keep raising this indefinitely,
+    // FACTCHECK_SYSTEM above now also bounds the actual output size
+    // directly: capped at 12 issues, short identifying fragments
+    // instead of full quotes, and no recommended_replacement field
+    // (confirmed unused downstream \u2014 the separate revise step
+    // re-derives its own fix and never reads it). This higher ceiling
+    // is headroom on top of that, not a substitute for it.
+    maxTokens: 8000,
   });
   job.fact_check = { issues: result.issues || [], checked_at: new Date().toISOString() };
 
@@ -328,17 +353,19 @@ JSON only, one entry per slot given.`;
 
 async function stageImages(job) {
   const slots = buildImagePrompts(job.article, job.submitted.image_count);
+  // Image briefs need enough of each section to know what to depict,
+  // not the full verbatim text \u2014 sending complete body_markdown here
+  // was pure input-token waste with no benefit to prompt quality.
+  const sectionPreviews = (job.article.sections || []).map((s) => ({
+    id: s.id, heading: s.heading, preview: (s.body_markdown || "").slice(0, 300),
+  }));
   const briefResult = await askJSON({
     role: "write",
     system: IMAGE_BRIEF_SYSTEM,
-    prompt: JSON.stringify({ slots, article_title: job.article.title, sections: job.article.sections }),
-    // Same underestimation this pipeline already hit once in the
-    // research stage: a genuinely detailed, article-grounded image
-    // prompt (the kind actually worth generating, comparable to
-    // social.js's own multi-hundred-word prompts) times up to 3 images,
-    // plus alt_text/caption/placement per image, doesn't comfortably
-    // fit in 2000 tokens.
-    maxTokens: 4000,
+    prompt: JSON.stringify({ slots, article_title: job.article.title, sections: sectionPreviews }),
+    // Scaled by how many images were actually requested (2 or 3), not a
+    // flat budget sized for the worst case every time.
+    maxTokens: slots.length >= 3 ? 4000 : 2800,
   });
   const briefs = briefResult.images || [];
 
