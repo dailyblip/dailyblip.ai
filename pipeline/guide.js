@@ -125,6 +125,8 @@ Never invent: URLs, prices, capabilities, policies, dates, quotes, statistics, o
 
 For each source, distinguish: verified product fact, company claim, independent observation, editorial judgment, or recurring user feedback \u2014 label each clearly.
 
+Return AT MOST 10 sources total, even for topics covering several tools/products \u2014 prioritize the most important, authoritative source per claim over exhaustive coverage. A comparison across many tools should mean fewer sources per tool, not more sources overall. This is a hard cap, not a suggestion \u2014 the response must fit comfortably within budget.
+
 Return JSON: {
   "sources": [{"title":"","publisher":"","url":"","source_type":"official docs|company announcement|platform policy|legal|independent reporting|independent review|user feedback","is_primary":true,"claims_supported":["..."],"claim_type":"verified fact|company claim|independent observation|editorial judgment|user feedback"}],
   "unverifiable_claims": ["claims from the brief that could not be confirmed \u2014 the writer must soften or drop these"]
@@ -139,13 +141,12 @@ async function stageResearch(job) {
     prompt: JSON.stringify({ topic: job.submitted.idea, claims_to_verify: job.brief?.claims_to_verify || [] }),
     // Higher than commentary.js's research call (2000 tokens / 6
     // searches) on purpose \u2014 this asks for a full structured sources
-    // array with several fields per source, tied to potentially many
-    // claims_to_verify, not just "2-4 examples." 10 search rounds can
-    // burn real budget before the model even starts writing the answer;
-    // this needs enough headroom left over to actually finish the JSON
-    // afterward, which the original 3000-token budget didn't reliably
-    // leave (see the "no JSON found" failure this was tuned against).
-    maxTokens: 6000,
+    // array, not just "2-4 examples." A real production failure on a
+    // multi-tool comparison topic showed 6000 still wasn't enough
+    // (response got truncated mid-JSON) even with the 10-source cap
+    // added to RESEARCH_SYSTEM above \u2014 this is belt-and-suspenders
+    // with that cap, not a substitute for it.
+    maxTokens: 8000,
     maxSearches: 10,
   });
   job.sources = (result.sources || []).map((s) => ({ ...s, accessed_date: new Date().toISOString().slice(0, 10) }));
