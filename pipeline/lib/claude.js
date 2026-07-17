@@ -119,17 +119,28 @@ function parseLoose(text) {
 /** Ask for JSON. One corrective retry on parse failure. */
 export async function askJSON({ role = "write", system, prompt, maxTokens = 4000 }) {
   const messages = [{ role: "user", content: prompt }];
+  let lastStopReason = null;
   for (let attempt = 0; attempt < 2; attempt++) {
     const res = await createResilient(role, { max_tokens: maxTokens, system, messages });
     const text = textOf(res);
+    lastStopReason = res.stop_reason;
     try { return parseLoose(text); } catch {
+      // Same stop_reason diagnostic as askWithSearch (added after a real
+      // askJSON failure in production was undiagnosable without it \u2014
+      // "unparseable JSON" alone doesn't distinguish a truncated
+      // response, fixable by raising maxTokens, from a genuine
+      // prompting problem where the model never wrote JSON at all).
+      if (lastStopReason === "max_tokens") {
+        console.warn(`askJSON: attempt ${attempt + 1} response was TRUNCATED (stop_reason=max_tokens, ${text.length} chars) \u2014 raise maxTokens for this call.`);
+      }
       messages.push(
         { role: "assistant", content: text },
         { role: "user", content: "That was not valid JSON. Reply with ONLY the corrected JSON. No prose, no fences." }
       );
     }
   }
-  throw new Error(`askJSON: unparseable JSON for prompt starting: ${String(prompt).slice(0, 120)}`);
+  const hint = lastStopReason === "max_tokens" ? " (last response was TRUNCATED \u2014 raise maxTokens for this call)" : ` (last stop_reason: "${lastStopReason}")`;
+  throw new Error(`askJSON: unparseable JSON for prompt starting: ${String(prompt).slice(0, 120)}${hint}`);
 }
 
 /** Ask for JSON with the web search tool available (curator uses this to
