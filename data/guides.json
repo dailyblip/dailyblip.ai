@@ -2209,7 +2209,7 @@
   {
     "id": "53c94efc-1438-4f48-8348-a9de5927cb65",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Top 5 AI Image Generation Tools for Independent Creators (2026)",
       "article_type": "Practical guide",
@@ -2221,7 +2221,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:57:02.638Z",
-    "updated_at": "2026-07-17T04:59:40.644Z",
+    "updated_at": "2026-07-17T05:02:07.463Z",
     "brief": {
       "target_reader": "Independent creators (illustrators, graphic designers, filmmakers, musicians needing visuals, indie game developers, and self-publishing authors) who already have some familiarity with AI image tools but want a clear, honest comparison to decide which tool fits their specific workflow and budget in 2026",
       "reader_outcome": "The reader should be able to evaluate each of the 5 tools against their own use case, understand the concrete tradeoffs in output quality, pricing, licensing, and workflow integration, and make a confident decision about which tool to start with or switch to",
@@ -2455,6 +2455,179 @@
       "Specific free tier credit allocation for Adobe Firefly — sources conflict between 25 credits/month (majority) and other figures; Adobe's own FAQ reportedly no longer publicly discloses monthly credit allocations as of January 2026 (per one source); writers should direct readers to verify at firefly.adobe.com/plans directly",
       "Whether Midjourney has released a version 8 (V8) — some sources reference 'V8 Alpha' but this could not be confirmed as a full public release vs. internal/alpha testing as of the research date",
       "Any specific output resolution caps for Midjourney by tier (e.g., upscale to 4x, max megapixels) — not consistently documented in verified sources reviewed; official docs did not surface pixel-level specs in accessible content"
-    ]
+    ],
+    "article": {
+      "title": "Top 5 AI Image Generation Tools for Independent Creators (2026)",
+      "alternative_titles": [
+        "Which AI Image Generator Should Independent Creators Use in 2026?",
+        "AI Image Tools for Creators: Honest Comparisons, Pricing, and Licensing in 2026"
+      ],
+      "slug": "ai-image-generation-tools-independent-creators-2026",
+      "dek": "A practical, honest comparison of Midjourney, Adobe Firefly, Leonardo.Ai, OpenAI GPT Image, and Stable Diffusion/FLUX for illustrators, designers, filmmakers, game developers, and self-publishing authors.",
+      "meta_description": "Honest 2026 comparison of the top 5 AI image generators for independent creators. Covers pricing, commercial licensing, workflow fit, and real limitations for Midjourney, Adobe Firefly, Leonardo.Ai, OpenAI GPT Image, and Stable Diffusion/FLUX.",
+      "quick_answer": "There is no single best AI image generator for all creators. The right tool depends on your budget, whether you need commercial licensing clarity, how deeply you need workflow integration, and how much control you want over model behavior.",
+      "introduction": "AI image generation has matured enough in 2026 that the question is no longer whether these tools produce usable output. It is which tool fits your actual workflow, budget, and legal comfort level. The five tools here were chosen because they represent meaningfully different approaches: a premium closed model, a commercially-indemnified Adobe ecosystem tool, a flexible token-metered platform, a pay-per-image API, and a self-hostable open model stack.\n\nThis guide is aimed at creators who already have some hands-on experience with at least one of these tools and want a clear-eyed comparison before committing. Pricing, licensing terms, and model lineups shifted significantly between 2025 and mid-2026, so some things you read elsewhere may already be outdated.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "How We Chose These 5 Tools",
+          "body_markdown": "Every tool here was evaluated against five criteria relevant to independent creators working alone or in small teams:\n\n- **Output quality** for creative work (not just photorealism benchmarks)\n- **Commercial licensing clarity**: can you sell or publish outputs without reading 30 pages of fine print?\n- **Pricing for solo creators**: is there a usable free tier or a sub-$30/month entry point?\n- **Workflow integration**: does it plug into tools you already use, or require a separate context switch?\n- **Iteration speed**: how fast can you go from prompt to a usable result?\n\nTools that scored well on all five criteria got included. Tools that are technically impressive but have opaque licensing (or require enterprise contracts for basic commercial use) did not make this list as primary recommendations.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "Quick Comparison Table",
+          "body_markdown": "| Tool | Solo Pricing | Commercial License | Best Fit Use Case | Notable Limitation |\n|---|---|---|---|---|\n| **Midjourney** | $10–$120/mo (no free tier) | Included on all paid plans; revenue cap applies above $1M/yr | Illustrators, concept artists, mood board work | No API; Discord-only or web UI; no private mode below Pro ($60/mo) |\n| **Adobe Firefly** | Free (limited credits); paid from $9.99/mo | Yes, with IP indemnification on paid plans | Designers already in Creative Cloud | Adobe Stock aesthetic; training data partially disputed |\n| **Leonardo.Ai** | Free (150 tokens/day, public); paid from $12/mo | Full ownership on paid plans; limited rights on free tier | Game devs, character artists needing custom model training | Token system is opaque; free-tier outputs are public |\n| **OpenAI GPT Image** | Bundled with ChatGPT Plus (~$20/mo); API is pay-per-image | Full commercial rights via API; no revenue-based restrictions | Authors, developers needing API integration | No IP indemnification; DALL-E 2/3 removed May 2026 |\n| **Stable Diffusion / FLUX** | Free (self-hosted); hosted API from ~$0.02/image | Depends on model variant; requires per-model license check | Developers, technically capable creators wanting full control | Requires setup effort; training data transparency varies by model |\n\n*Verify current pricing directly with each provider before subscribing. Tiers and credit allocations change frequently.*",
+          "tools": []
+        },
+        {
+          "id": "s3",
+          "heading": "Tool 1: Midjourney",
+          "body_markdown": "**What it does well:** Midjourney V7 consistently produces high-aesthetic output with minimal prompt engineering. For illustrators and concept artists who care about composition and stylistic coherence, it remains a strong choice. The web interface (launched alongside Discord access) has improved iteration speed for most workflows.\n\n**Workflow fit:** Midjourney works well for standalone image creation and mood boarding. It does not integrate natively into any design or production software. There is no public API; third-party API wrappers exist but are unofficial and carry reliability and compliance risks. If your workflow requires programmatic generation or bulk output, Midjourney is the wrong tool.\n\n**Pricing breakdown:**\n- Basic: $10/mo (3.3 GPU fast hours, no relax mode, no stealth)\n- Standard: $30/mo (15 fast hours, unlimited relax queue)\n- Pro: $60/mo (30 fast hours, stealth mode for private generation)\n- Mega: $120/mo (60 fast hours, stealth mode)\n- Annual billing saves approximately 20% across all tiers\n- Overage fast hours available at $4/hour; unused fast hours do not roll over\n\n**Licensing terms:** All paid subscribers own outputs \"to the fullest extent possible under applicable law\" per Midjourney's Terms of Service. Commercial use is included. One material exception: companies with gross annual revenue above $1,000,000 USD must be on Pro or Mega to retain commercial rights. Midjourney does not indemnify users against IP claims; legal risk for outputs sits with the creator.\n\n**Concrete limitation:** No free tier (removed March 2023). No stealth mode below $60/mo, which means all Basic and Standard generations are visible to other users in the community feed. The Disney/Universal v. Midjourney lawsuit (filed June 2025, active as of mid-2026) alleges unauthorized generation of copyrighted characters. Midjourney's ToS prohibits IP infringement at the user level but does not proactively block trademarked character generation at the prompt level, making this a live legal risk area for creators who generate character-adjacent work.",
+          "tools": [
+            {
+              "name": "Midjourney",
+              "url": "https://www.midjourney.com",
+              "description": "Closed-model subscription image generator known for high-aesthetic output. Accessible via Discord bot and web UI. No public API.",
+              "strengths": [
+                "Consistently strong aesthetic output with minimal prompt tuning",
+                "Commercial license included on all paid tiers",
+                "Relax mode on Standard and above allows unlimited (slower) generation",
+                "Annual billing discount of approximately 20%"
+              ],
+              "limitations": [
+                "No free tier; no API access",
+                "Private generation requires Pro plan ($60/mo) or above",
+                "No IP indemnification; legal liability stays with the creator",
+                "Active copyright litigation (Disney/Universal) creates character-generation risk",
+                "Training data composition not publicly disclosed"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "heading": "Tool 2: Adobe Firefly",
+          "body_markdown": "**What it does well:** Firefly's main differentiator is commercial safety infrastructure. Adobe states Firefly is trained on licensed Adobe Stock content, openly licensed material, and public domain work. Paid subscribers receive IP indemnification against copyright claims on Firefly-generated outputs. For designers doing client work who need a defensible paper trail, this matters.\n\n**Workflow fit:** Firefly is embedded in Photoshop, Illustrator, InDesign, and Adobe Express, making it the lowest-friction option for existing Creative Cloud users. Generative Fill in Photoshop and Generative Expand are the most practically useful integrations. Firefly also runs as a standalone web app. If you are not already in the Adobe ecosystem, the value proposition weakens considerably.\n\n**Pricing breakdown:**\n- Free: approximately 25 generative credits/month (outputs may be watermarked; verify current allocation at firefly.adobe.com/plans as Adobe has changed how it displays this)\n- Firefly Standard: $9.99/mo, 2,000 premium credits\n- Firefly Pro: $19.99/mo, 4,000 premium credits\n- Creative Cloud All Apps: $59.99/mo includes Firefly Pro-level credits, making a standalone Firefly plan redundant for existing CC subscribers\n- Credits do not roll over; API access requires an enterprise agreement\n\n**Licensing terms:** IP indemnification applies to paid plans (not the free tier) and does not cover beta features. One important caveat: independent reporting (Bloomberg, 2024) found AI-generated images, including some apparently sourced from Midjourney, in Firefly's training data. Adobe has not publicly addressed this discrepancy in detail. The \"licensed content only\" training claim is Adobe's stated position, but it has a documented independent challenge. Factor that into your risk assessment.\n\n**Concrete limitation:** Firefly produces output with a recognizable Adobe Stock aesthetic. This is useful for commercial design work but limiting for illustrators or game developers who want distinctive stylistic range. Custom model training is not available at consumer tiers; it requires an enterprise agreement. The API is also enterprise-only, which rules out programmatic workflows for most independent creators.",
+          "tools": [
+            {
+              "name": "Adobe Firefly",
+              "url": "https://firefly.adobe.com",
+              "description": "Adobe's native AI image generation platform, integrated into Creative Cloud tools and available as a standalone web app. Targets commercial safety through licensed training data and IP indemnification.",
+              "strengths": [
+                "IP indemnification for paid subscribers (a meaningful differentiator for client work)",
+                "Native integration in Photoshop, Illustrator, InDesign, and Express",
+                "Commercially trained on licensed content (with noted caveats)",
+                "Lowest friction for existing Creative Cloud subscribers"
+              ],
+              "limitations": [
+                "Adobe Stock aesthetic limits stylistic range",
+                "Free tier outputs may be watermarked; credits are limited",
+                "No API or custom model training for consumer subscribers",
+                "Training data \"licensed only\" claim is partially disputed by independent reporting",
+                "Indemnification does not cover beta features"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "heading": "Tool 3: Leonardo.Ai",
+          "body_markdown": "**What it does well:** Leonardo.Ai is the most flexible platform on this list for creators who want to experiment with different models and train their own. You can fine-tune a custom model on 10 to 20 reference images, which is genuinely useful for game developers maintaining character consistency or illustrators building a repeatable style. The platform hosts both its own models (Phoenix, Lucid Origin) and third-party models including FLUX variants.\n\n**Workflow fit:** Leonardo works well as a central generation hub for game asset pipelines and character design iteration. The API (pay-as-you-go, starting at $5 credit) makes it usable for developers building lightweight tooling. It does not integrate natively into Adobe or other production software, but the API covers most integration needs.\n\n**Pricing breakdown:**\n- Free: 150 tokens/day, no rollover, all generations are public\n- Apprentice: $12/mo, 8,500 tokens, token rollover bank\n- Artisan: $30/mo, 25,000 tokens, motion/video model access\n- Maestro: $60/mo, 60,000 tokens\n- Annual billing saves approximately 20 to 33% depending on tier\n- Token top-ups available and never expire\n- Tokens are GPU-cost units: one token does not equal one image; cost varies by model, resolution, and feature\n\n**Licensing terms:** Paid subscribers retain full commercial ownership of generated images. Free-tier users receive only a non-exclusive, royalty-free licence; Leonardo.Ai retains the right to use, reproduce, modify, and distribute free-tier outputs. If you are generating anything you intend to sell or publish, the free tier is not appropriate for that work.\n\n**Concrete limitation:** The token system adds an estimation layer that makes cost-per-image harder to predict than flat-credit or per-image models. The Apprentice ($12/mo) tier does not include video/motion model access; that requires Artisan ($30/mo). Leonardo was acquired by Canva in July 2024 for approximately $370 million. It continues to run as an independent product, but Canva's September 2024 pricing increase attempt (later reversed after backlash) is worth noting as a signal of pricing risk for the platform going forward.",
+          "tools": [
+            {
+              "name": "Leonardo.Ai",
+              "url": "https://leonardo.ai",
+              "description": "Flexible AI image platform with custom model training, multiple hosted models (including FLUX), and a developer API. Acquired by Canva in 2024; operates independently.",
+              "strengths": [
+                "Custom model fine-tuning on 10–20 reference images (useful for character consistency)",
+                "Hosts multiple model families including FLUX variants",
+                "Token rollover on paid plans; top-up packs never expire",
+                "API available at pay-as-you-go entry point ($5 credit)"
+              ],
+              "limitations": [
+                "Token pricing is opaque; cost-per-image is hard to predict",
+                "Free-tier outputs are public; limited commercial rights on free tier",
+                "Video/motion models require Artisan tier ($30/mo) or above",
+                "Canva ownership introduces platform pricing risk",
+                "Training data provenance for first-party models is not publicly documented"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "heading": "Tool 4: OpenAI GPT Image (via ChatGPT or API)",
+          "body_markdown": "**What it does well:** GPT Image 2 (OpenAI's current flagship image model as of mid-2026) produces strong results for text-in-image tasks, instructable composition, and prompt-following fidelity. For authors needing cover mockups, developers building image-generation features, or creators who want tight conversational iteration (\"make the background darker, move the figure left\"), the ChatGPT-integrated experience is the most natural.\n\n**Workflow fit:** Two access modes. Via ChatGPT Plus (~$20/mo) or Pro (~$200/mo), image generation is bundled into the chat interface. Via the API, it is pay-per-image with no subscription required beyond API credits. DALL-E 2 and DALL-E 3 were removed from the API on May 12, 2026; the current API offers GPT Image 2, GPT Image 1.5, GPT Image 1 (deprecating October 23, 2026), and GPT Image 1 Mini.\n\n**Pricing breakdown (API):**\n- GPT Image 2: $0.005 to $0.211 per image depending on quality tier and resolution\n- GPT Image 1 Mini: $0.005 to $0.052 per image\n- Three quality tiers (Low, Medium, High) and three resolutions (1024x1024, 1024x1536, 1536x1024)\n- ChatGPT Plus: ~$20/mo with generation included; ChatGPT Pro: ~$200/mo\n\n**Licensing terms:** OpenAI grants full commercial rights for API-generated images, subject to usage policies, with no revenue-based restrictions. This is notably simpler than Midjourney's $1M revenue threshold. OpenAI does not offer IP indemnification comparable to Adobe's. Training data for image models is not fully disclosed; a Shutterstock licensing deal (2023) is a confirmed data input, but full composition is not public.\n\n**Concrete limitation:** For high-volume generation, API costs can accumulate quickly at the High quality tier. OpenAI has shown a pattern of model deprecation on short timelines (DALL-E 2 and 3 removed with relatively short notice in May 2026), which creates dependency risk for developers who build workflows around specific model versions. No fine-tuning of image models is available to API users.",
+          "tools": [
+            {
+              "name": "OpenAI GPT Image",
+              "url": "https://openai.com/api/",
+              "description": "OpenAI's current image generation API, replacing DALL-E 2 and DALL-E 3 (both removed May 2026). Accessible via ChatGPT interface or pay-per-image API.",
+              "strengths": [
+                "Full commercial rights with no revenue-based restrictions",
+                "Pay-per-image API with no subscription floor required",
+                "Strong prompt-following and text-in-image capability",
+                "Conversational iteration via ChatGPT interface"
+              ],
+              "limitations": [
+                "No IP indemnification",
+                "Model deprecation risk: DALL-E 2/3 removed May 2026 with limited migration window",
+                "No fine-tuning available for API users",
+                "Training data composition not fully disclosed",
+                "High-quality API tier pricing can accumulate quickly at volume"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "heading": "Tool 5: Stable Diffusion / FLUX (Open Models)",
+          "body_markdown": "**What it does well:** Self-hosted open models (Stable Diffusion 3.5, FLUX 1.2 Pro from Black Forest Labs) give technically capable creators full control: no per-image fees, no content policy enforcement beyond what you configure, and no platform dependency. FLUX has largely displaced Stable Diffusion as the leading open model in 2026 for output quality. Hosted API versions are available via Stability AI and third-party providers at roughly $0.02 to $0.10 per image.\n\n**Workflow fit:** Best for developers and technically capable creators who want to build custom pipelines, run fine-tuned models locally, or integrate generation into their own tools without per-seat licensing. Not a good fit for creators who want a polished UI, fast customer support, or predictable output without prompt tuning.\n\n**Pricing breakdown:**\n- Self-hosted: free to run on your own hardware; one-time setup cost (GPU required for reasonable speed)\n- Hosted API (Stability AI): approximately $0.035/image for SD 3.5\n- Third-party hosted APIs (various): $0.02 to $0.10/image depending on model and quality\n- No subscription required for API access at most providers\n\n**Licensing terms:** This is where open models require the most care. Commercial license terms vary by model variant. SD 3.5, FLUX, and their fine-tuned derivatives each have their own license; \"open source\" does not automatically mean commercially unrestricted. You must verify the specific license for each model you use. Training data for current SD and FLUX variants is not fully publicly disclosed. The Getty Images v. Stability AI litigation (UK and US, both active as of mid-2026) is the most directly relevant legal risk here. The UK High Court ruled in November 2025 that model weights are not themselves infringing copies of training images, which is a meaningful precedent, but the case remains on appeal and the US action is still active.\n\n**Concrete limitation:** Setup and maintenance overhead is real. Running FLUX at useful resolution requires meaningful GPU resources. There is no customer support; community forums are the primary resource. For creators without a technical background or without access to capable hardware, the self-hosted path is not realistic. The hosted API option removes the setup barrier but reintroduces per-image costs and platform dependency.",
+          "tools": [
+            {
+              "name": "Stable Diffusion / FLUX (Open Models)",
+              "url": "https://blackforestlabs.ai",
+              "description": "Open-weight image generation models. FLUX 1.2 Pro (Black Forest Labs) is the current quality leader among open models in 2026. Self-hostable or available via third-party hosted APIs.",
+              "strengths": [
+                "No per-image fees when self-hosted",
+                "Full control over model behavior, fine-tuning, and pipeline integration",
+                "No platform-level content policy enforcement (configurable per deployment)",
+                "Hosted API options available from $0.02/image for creators who want open models without setup"
+              ],
+              "limitations": [
+                "Requires technical setup and GPU hardware for local use",
+                "Commercial license varies by model variant; requires per-model verification",
+                "Training data not fully disclosed; Getty v. Stability AI litigation ongoing",
+                "No customer support; community-dependent troubleshooting",
+                "Output quality requires more prompt tuning than premium closed models"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s8",
+          "heading": "How to Match a Tool to Your Workflow",
+          "body_markdown": "**Illustrators and concept artists:** Midjourney V7 produces the strongest aesthetic output with the least prompt overhead, which is worth the $30/mo Standard tier if you generate regularly. If you need private generation (client work you do not want visible in community feeds), that requires the $60/mo Pro tier. If budget is the constraint, Leonardo.Ai's Artisan tier ($30/mo) offers comparable flexibility with custom model training.\n\n**Graphic designers in client work:** Adobe Firefly is the most defensible choice if your clients are concerned about IP liability. The indemnification on paid plans is a real differentiator. If you are already on Creative Cloud All Apps, you effectively get Firefly Pro credits at no additional cost. Just be aware the Adobe Stock aesthetic may limit stylistic range on some projects.\n\n**Filmmakers and video creators:** None of the tools here are primarily video generators. For still reference images, mood boards, and storyboard frames, Midjourney or Leonardo.Ai both work well. Leonardo's Artisan tier adds motion/video model access, which may be useful for short concept clips.\n\n**Indie game developers:** Leonardo.Ai is the strongest fit for character consistency work, given custom model fine-tuning on a small reference image set. The API access also makes pipeline integration practical. If your team has strong technical capability, self-hosted FLUX gives you full control for asset pipelines without ongoing per-image costs.\n\n**Self-publishing authors:** OpenAI GPT Image via ChatGPT Plus is the most accessible entry point for cover mockups and interior illustrations. Conversational iteration works well when you have a clear description but limited prompt engineering experience. Firefly is also worth considering if you want commercial safety on a tight budget ($9.99/mo).\n\n**Developers building tools:** OpenAI's GPT Image API (pay-per-image, no subscription floor) or Leonardo.Ai's API ($5 entry credit) are the most practical starting points. For maximum control and lowest long-term cost at volume, FLUX via a hosted third-party API or self-hosted is worth the setup investment.",
+          "tools": []
+        },
+        {
+          "id": "s9",
+          "heading": "What to Watch Out For",
+          "body_markdown": "**Content policy restrictions.** Every closed platform has content policies that will block some creative work. Midjourney prohibits all nudity, sexualized imagery, and content targeting public figures or celebrities. Adobe Firefly has similar restrictions. If your work includes mature content, open models (self-hosted or carefully licensed hosted versions) are the only realistic path.\n\n**Output ownership edge cases.** \"You own your outputs\" language in terms of service is not the same as IP indemnification. Midjourney, OpenAI, and Leonardo (paid tier) all grant you commercial rights to outputs, but none of them will cover you if a third party claims your output infringes their copyright. Only Adobe Firefly offers indemnification for qualifying paid subscribers, and even that has caps and exclusions. Read the actual terms of service, not the marketing summary.\n\n**Free-tier output rights.** Leonardo.Ai's free tier is a meaningful limitation: Leonardo retains broad rights to use, reproduce, and distribute your free-tier outputs. If you are generating anything for publication or sale, you need a paid plan.\n\n**Model deprecation risk.** OpenAI removed DALL-E 2 and DALL-E 3 from its API on May 12, 2026. GPT Image 1 is scheduled for deprecation October 23, 2026. If you build a workflow around a specific model version, have a migration plan. This applies to any hosted platform.\n\n**Litigation landscape.** The Getty Images v. Stability AI cases (UK and US, both active), Disney/Universal v. Midjourney (active), and the Thomson Reuters v. Ross Intelligence ruling (February 2025, finding AI training on copyrighted headnotes was not fair use) are all shaping what legal exposure looks like for creators using AI outputs commercially. None of this is resolved. Editorial judgment: the more clearly a tool documents its training data and offers indemnification, the lower your exposure. That is currently Adobe Firefly's strongest argument over competitors.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "No single tool is best across all creator types. The right choice depends on workflow integration, budget, and how much you need commercial licensing clarity.",
+        "Adobe Firefly is the strongest choice for creators doing client work who need IP indemnification, but its training data claim has a documented independent challenge and its aesthetic range is narrower than competitors.",
+        "Midjourney produces strong aesthetic output but has no free tier, no API, and no indemnification. The $1M revenue threshold for commercial rights is a real constraint for scaling businesses.",
+        "Leonardo.Ai's free tier has meaningful IP restrictions: outputs are public and commercial rights are limited. Only use paid tiers for work you intend to publish or sell.",
+        "The litigation landscape (Getty v. Stability AI, Disney/Universal v. Midjourney) is active and unresolved. Indemnification from your tool provider and training data transparency reduce but do not eliminate creator risk."
+      ],
+      "conclusion": "The AI image generation market in mid-2026 is more mature but also more legally complicated than it was two years ago. The tools here represent meaningfully different tradeoffs, not just different UI aesthetics.\n\nIf you are doing client-facing design work and need commercial safety documentation, start with Adobe Firefly. If you are an illustrator or concept artist who generates daily and values output quality above all, Midjourney Standard is a reasonable $30/mo commitment. If you need custom model training for character consistency in a game pipeline, Leonardo.Ai at the Artisan tier is worth a trial. If you are building a tool or need API integration without a subscription floor, OpenAI GPT Image's API is the most accessible entry point. If you want full control and have technical capacity, FLUX via self-hosted deployment removes all per-image and per-seat costs at the expense of setup work and ongoing maintenance.\n\nPricing and terms change. Verify current plans directly with each provider before subscribing, especially credit allocations and what qualifies for commercial use at each tier.",
+      "methodology_disclosure": "This guide was synthesized from official pricing and terms-of-service documentation accessed in July 2026 (Midjourney, Leonardo.Ai), independent pricing aggregators (CostBench, CostGoat, DigitalApplied), independent legal and commercial use analysis (StackSheriff), legal case tracking (AI Lawsuit Tracker), and ownership/acquisition reporting (UsagePricing.com). Claims about pricing, licensing, and platform terms were cross-referenced against primary sources where available and against multiple independent sources where primary documentation was ambiguous. Claims that could not be verified against primary or independent sources were either omitted or identified as editorial observation. This guide does not represent hands-on testing by dailyblip; output quality assessments reflect consensus from independent creator community reporting rather than first-party evaluation. Readers should verify current pricing, credit allocations, and licensing terms directly with each platform before making purchasing decisions, as these change frequently.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
