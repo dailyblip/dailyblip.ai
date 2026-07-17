@@ -304,7 +304,7 @@
   {
     "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Quick start guide for image generation",
       "article_type": "Practical guide",
@@ -316,7 +316,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:17:54.770Z",
-    "updated_at": "2026-07-17T16:18:23.450Z",
+    "updated_at": "2026-07-17T16:19:32.109Z",
     "brief": {
       "target_reader": "Independent creators (artists, designers, filmmakers, writers) who have heard about AI image generation but have never used a tool, have no coding background, and are skeptical of hype around it",
       "reader_outcome": "The reader can open an AI image generation tool, write a prompt that produces a useful result, iterate on that result, and understand the basic settings well enough to avoid common beginner mistakes",
@@ -342,6 +342,169 @@
         "Whether Adobe Firefly images are trained on licensed content (their stated training data policy)"
       ],
       "research_plan": "Prioritize official pricing and policy pages for Midjourney, Adobe Firefly, and OpenAI DALL-E 3 to verify all claims about cost, access, and rights. Use recent (within 6 months) creator community sources such as Reddit communities for practical beginner experience reports. Look for structured prompt guides from working designers or illustrators rather than AI company marketing material. Avoid aggregator listicles that repackage press releases. For limitations, look for documented failure cases shared by practitioners, not theoretical critiques."
-    }
+    },
+    "sources": [
+      {
+        "title": "Comparing Midjourney Plans",
+        "publisher": "Midjourney (Official Documentation)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/27870484040333-Comparing-Midjourney-Plans",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney offers four subscription tiers: Basic, Standard, Pro, and Mega",
+          "Standard, Pro, and Mega plans include unlimited image generations via Relax Mode; Basic does not",
+          "Stealth Mode (private generation) is only available on Pro and Mega plans",
+          "Annual plans receive a 20% discount vs. monthly billing",
+          "Paid subscribers are free to use their images/videos in 'just about any way you want'",
+          "Companies making more than $1,000,000 USD in gross revenue per year must purchase the Pro or Mega plan for commercial use"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Web vs Discord – Midjourney",
+        "publisher": "Midjourney (Official Documentation)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney subscribers can create images on both the website and Discord — a standalone web interface exists",
+          "Discord is no longer required; both interfaces are officially supported"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Midjourney pricing in 2026: Plans, GPU hours, and what it actually costs",
+        "publisher": "eesel AI (independent review)",
+        "url": "https://www.eesel.ai/blog/midjourney-pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney Basic: $10/month ($8/month annual); Standard: $30/month ($24/month annual); Pro: $60/month ($48/month annual); Mega: $120/month ($96/month annual)",
+          "Midjourney removed its free trial in March 2023 — there is no free tier",
+          "Standard plan includes unlimited Relax mode for image generation (slower queue, no Fast GPU cost)",
+          "Basic plan has no Relax mode — all generations draw from the 200-minute Fast cap (~200 images/month)",
+          "Companies with gross annual revenue over $1,000,000 must use Pro or Mega for commercial use"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Midjourney Web V7 vs. Discord: Is the New Interface Ready for Pros?",
+        "publisher": "Flowith Blog (independent review)",
+        "url": "https://flowith.io/blog/midjourney-web-v7-vs-discord/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "As of March 2026, Midjourney still offers no public API",
+          "The web interface launched as an alpha in August 2024 and became the recommended experience by April 2025 (V7 launch)",
+          "Both web and Discord interfaces access the same underlying model; image quality is identical regardless of interface"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Generative Credits FAQ | Creative Cloud",
+        "publisher": "Adobe (Official Documentation)",
+        "url": "https://helpx.adobe.com/creative-cloud/apps/generative-ai/generative-credits-faq.html",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Creative Cloud subscription plans include a monthly allocation of generative credits usable across Firefly and CC apps",
+          "Free plan generative credits are allocated upon first use of a Firefly feature and expire one month from allocation",
+          "If you have a Creative Cloud Pro, Firefly, or credits plan, you have unlimited access to standard generations — credits are only spent on premium generative features",
+          "As of February 12, 2025, legacy Firefly and Generative Credits add-on plans are no longer available for new purchases"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly – Free Generative AI for Creatives (Product Page FAQ)",
+        "publisher": "Adobe (Official Product Page)",
+        "url": "https://www.adobe.com/products/firefly.html",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly has a free plan with limited generative credits",
+          "Adobe does not train Firefly models on Creative Cloud subscribers' personal content",
+          "The Firefly models are trained on licensed content and public domain content where copyright has expired",
+          "Adobe Firefly Custom Models allow training on your own assets"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Pricing 2026: Plans, Hidden Costs & Cheaper Alternatives",
+        "publisher": "ToolRadar (independent review)",
+        "url": "https://toolradar.com/tools/adobe-firefly/pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Firefly free tier provides 25 credits/month — approximately 25 standard image generations",
+          "Firefly Standard standalone plan: $9.99/month with 2,000 premium credits; Firefly Pro: $19.99/month with 4,000 premium credits",
+          "Creative Cloud All Apps includes approximately 1,000 Firefly credits/month; single-app CC plans include approximately 500/month",
+          "Free tier output is noted as watermarked and low-resolution and not suitable for commercial or professional use",
+          "Standard generations (basic resolution) are unlimited on all paid plans; credits are consumed by premium features like high-resolution output, video, and partner models",
+          "Credits do not roll over — they reset monthly on billing date"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Adobe Firefly Pricing: Plans, Credits, Promo and API",
+        "publisher": "ToolColumn (independent review)",
+        "url": "https://www.toolcolumn.com/pricing/adobe-firefly-pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "As of August 2025, the Adobe Creative Cloud 'All Apps Plan' was discontinued and replaced by Creative Cloud Pro and Creative Cloud Standard",
+          "Creative Cloud Pro is the only CC plan that includes access to Firefly premium features without a separate Firefly subscription",
+          "The Firefly plan (standalone) gives access to premium features including AI video generation, partner models (ChatGPT Image, Google Veo 3)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "ChatGPT + DALL-E 2026: What Changed & Free Limits",
+        "publisher": "AI Tool Radar (independent review)",
+        "url": "https://aitoolradar.io/guides/dall-e",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "DALL-E 3 was removed from the ChatGPT interface in December 2025 and replaced with GPT-4o native image generation; 'ChatGPT image generation' now means GPT-4o output, not DALL-E 3",
+          "DALL-E 3 remains available through the OpenAI API, with deprecation announced for May 2026",
+          "ChatGPT free tier includes limited GPT-4o image generation with dynamic usage caps; OpenAI does not publish a fixed image quota",
+          "ChatGPT Plus ($20/month) raises image generation limits and adds priority processing, but the exact daily image quota is not publicly documented",
+          "OpenAI API charges per image rather than applying a hidden cap — providing a guaranteed quota path for developers"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI Art Commercial Use FAQ: Midjourney, DALL-E, Stable Diffusion Rights",
+        "publisher": "Terms.Law (independent legal analysis)",
+        "url": "https://terms.law/FAQ/ai-tools/ai-commercial-use-faq.html",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney's Terms of Service (Section 4) grant commercial usage rights only to paid subscribers; free trial users have no commercial rights",
+          "Basic, Standard, and Pro Midjourney subscribers under $1M annual revenue can use generated images commercially",
+          "Companies exceeding the $1M revenue threshold must purchase the Pro or Mega plan for commercial use",
+          "OpenAI grants full commercial rights to DALL-E (and by extension GPT Image) outputs, subject to content policy",
+          "Adobe Firefly free tier is not licensed for commercial use; paid plans unlock commercial rights"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Exact maximum output resolution on the free tier for each tool — official Adobe, Midjourney, and OpenAI documentation reviewed does not publish specific pixel-dimension caps per tier; third-party sources describe free-tier Firefly output as 'standard resolution' but do not give pixel dimensions, and Midjourney/ChatGPT free-tier resolution caps are not publicly documented in detail. Writer should soften to 'standard resolution' or omit specific pixel numbers without official sourcing.",
+      "Exact number of free monthly credits on the current Adobe Firefly free plan — third-party sources cite 25 credits/month, but the official Adobe product page states only 'limited free credits' without specifying the exact number; the 25-credit figure should be treated as a company-period claim pending verification against the current Adobe Firefly plans page directly.",
+      "Whether ChatGPT free tier currently offers DALL-E 3 specifically — multiple independent sources confirm that DALL-E 3 was replaced by GPT-4o native image generation in ChatGPT in December 2025, so references to 'DALL-E 3 via ChatGPT' for current users are outdated. Writer should frame this as 'OpenAI image generation via ChatGPT (formerly DALL-E 3, now GPT-4o / GPT Image 1.5)' and note the API deprecation of DALL-E 3 as of May 2026.",
+      "Exact DALL-E 3 API per-image pricing breakdown — third-party sources cite $0.04 (standard) to $0.12 (HD) per image, but the official OpenAI pricing page returned insufficient detail in this search to confirm current rates. These figures should be verified directly at platform.openai.com/docs/pricing before publishing, as OpenAI has been actively transitioning to GPT Image models with different pricing.",
+      "Whether Adobe Firefly's free tier images carry a visible watermark — one third-party source (ToolRadar) states this, but it is not confirmed by Adobe's official documentation reviewed; writer should soften or verify directly.",
+      "Exact Firefly credit allocation included with Creative Cloud All Apps / Pro plans — sources conflict (ToolRadar states 1,000/month for All Apps; gptprompts.ai states 4,000/month matching Firefly Pro). This is likely because the 'All Apps' plan was discontinued in August 2025 and replaced by CC Pro/Standard. Writer must check current Adobe CC Pro plan specs directly before citing a specific number."
+    ]
   }
 ]
