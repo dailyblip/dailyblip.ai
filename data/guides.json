@@ -79,7 +79,7 @@
   {
     "id": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Getting start creating AI music",
       "article_type": "Beginner explainer",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T17:19:20.336Z",
-    "updated_at": "2026-07-17T17:23:48.167Z",
+    "updated_at": "2026-07-17T17:24:40.154Z",
     "brief": {
       "target_reader": "Creators (musicians, hobbyists, filmmakers, content creators) with zero experience using AI music tools, who are curious but skeptical of hype and want a practical starting point rather than a sales pitch",
       "reader_outcome": "The reader should be able to choose one AI music tool appropriate for their immediate need, generate their first piece of audio, and understand the basic constraints (quality, rights, cost) before committing to anything",
@@ -421,6 +421,28 @@
       "s2: The quick_answer states 50 credits/day is the free tier benefit, but the Suno Help Center source clarifies this is actually the fallback replenishment for paid subscribers who exhaust monthly credits, not the standard free-tier grant. The article body acknowledges this contradiction but the quick_answer does not, potentially misleading readers at the most prominent position.",
       "s2: The article attributes Udio's download disabling specifically to a UMG settlement, but the sources only describe this as part of settlement terms reported by secondary blogs (Chartlex), not confirmed by a primary Udio or court source. The Udio help center is cited as confirming downloads are unavailable but not the specific UMG settlement framing.",
       "s2: The Udio Help Center source only confirms the 3-per-day cap; the 100 monthly credits figure comes from the secondary Chartlex blog, not from Udio's official help documentation, but the article presents both figures together as if equally authoritative."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5-img1.jpg",
+        "prompt": "A person sitting at a minimal wooden desk, seen from a relaxed three-quarter angle, wearing casual headphones and looking at a laptop screen that emits a warm amber glow. On the screen, barely readable, is a simple text input box — suggesting a prompt-based creative tool. The desk holds a small succulent, a plain ceramic mug, and a notebook with handwritten words. The room has soft late-afternoon light coming through a window with linen curtains. The overall palette is warm cream, amber, and dusty teal. The composition leaves generous open space in the upper-left quadrant for headline text placement. Mood: approachable, creative, self-directed — the beginning of something. No floating interfaces, no glowing brains, no robots.",
+        "placement": "hero",
+        "alt_text": "A person with headphones types a music prompt into a laptop at a warm, minimal desk setup",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T17:24:24.723Z"
+      },
+      {
+        "id": "img2",
+        "file": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5-img2.jpg",
+        "prompt": "A close-up editorial flat-lay on a muted sage-green surface showing a smartphone displaying a minimal audio waveform, a hand-written sticky note that reads something abstract and illegible (just loose scrawl suggesting creative notes), a set of earbuds casually uncoiled beside the phone, and a small open notebook with rough genre/mood words sketched out as a loose list — all suggesting the process of going from a text idea to a generated song. The composition is slightly asymmetrical and editorial, with negative space in the upper right for text. Lighting is clean, soft, directional from the left. Color palette: sage green, off-white, warm charcoal. Mood: practical, first-steps creative workflow, not technical or corporate.",
+        "placement": "s3",
+        "alt_text": "Flat-lay of a smartphone with audio waveform, earbuds, and handwritten creative notes suggesting a first AI music generation workflow",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T17:24:40.154Z"
+      }
     ]
   }
 ]
