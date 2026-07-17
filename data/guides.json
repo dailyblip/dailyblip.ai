@@ -1523,7 +1523,7 @@
   {
     "id": "6dc0bfa0-a2b7-47e9-a13a-9bdbc1bbb2c1",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "AI for Acoustic Guitarists: What Actually Works and How to Try It Today",
       "article_type": "Beginner explainer",
@@ -1535,7 +1535,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T21:30:21.407Z",
-    "updated_at": "2026-07-17T21:32:38.124Z",
+    "updated_at": "2026-07-17T21:33:26.465Z",
     "brief": {
       "target_reader": "Acoustic guitarists who write, record, or want to record their own songs — complete beginners to AI music tools, comfortable with their instrument but unfamiliar with how AI fits into a songwriting or production workflow",
       "reader_outcome": "Feel confident enough to open one AI tool today and try it on something real: a lyric idea, a chord progression, or a rough home recording",
@@ -1719,6 +1719,48 @@
       "Specific minimum audio quality or file format requirements for LANDR, Moises, LALAL.AI, Suno, or Udio uploads — LALAL.AI states output format matches input format by default, and LANDR outputs MP3/WAV/HD WAV, but no explicit minimum bitrate, sample rate, or file size floor was confirmed for any tool in retrieved sources. Writer should soften any specific quality requirement claims or verify directly on each tool's help/FAQ pages.",
       "LANDR commercial licensing status for outputs — LANDR's own mastering does not generate creative content; it masters your uploaded audio. The licensing of the mastered output belongs to the original rights holder. No 'LANDR output licensing' issue was found, but the writer should clarify that LANDR is a processing tool, not a generative content platform, so the commercial rights question applies differently than it does for Suno/Udio.",
       "Udio's precise current commercial licensing terms post-UMG settlement — multiple sources note Udio moved toward a 'walled garden' after the October 2025 UMG deal, with downloads potentially restricted. The exact current state of commercial rights on Udio's paid tiers is flagged as actively evolving and should be verified directly at udio.com/terms before publishing."
-    ]
+    ],
+    "article": {
+      "title": "AI for Acoustic Guitarists: What Actually Works and How to Try It Today",
+      "alternative_titles": [
+        "How Acoustic Guitarists Can Start Using AI Tools Without Losing the Plot",
+        "AI Tools Worth Trying If You Write and Record Acoustic Guitar Songs"
+      ],
+      "slug": "ai-tools-for-acoustic-guitarists-beginners",
+      "dek": "You don't need a studio, a producer, or a tech background. Here's where AI actually earns its place in an acoustic songwriter's workflow.",
+      "meta_description": "A beginner's guide to AI tools for acoustic guitarists who write or record their own songs. Covers lyric drafting, home recording cleanup, stem splitting, and what to know before you publish.",
+      "quick_answer": "The easiest place for an acoustic guitarist to start with AI is lyric and song-idea drafting using a general-purpose chatbot like ChatGPT or Claude. For home recording polish, LANDR and LALAL.AI have free trials worth trying before you spend anything.",
+      "introduction": "AI isn't going to replace what you do with six strings and a good room. What it can do is take the friction out of a stuck lyric, clean up a rough home recording, or split a reference track so you can hear what the guitar is actually doing. None of that requires a studio, a producer, or any particular technical fluency. You just need to know which tools are worth opening first.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "What AI can and can't realistically do for your songwriting",
+          "body_markdown": "The most practical AI tool you already have access to: a general-purpose chatbot like ChatGPT or Claude. Neither is built specifically for musicians, but both are genuinely useful for getting unstuck on lyrics, working through a song's structure, or brainstorming a bridge when you've written yourself into a corner. You describe what you're going for, it gives you raw material to react to. That back-and-forth is where the value is, not in using whatever the AI produces verbatim.\n\nWhat these tools won't do: write a great lyric for you without your input. The output reflects what you put in. Vague prompts get vague lyrics. If you tell it your song is about a specific feeling, a specific moment, a specific image you're circling, you'll get something much more useful to work with.\n\nFor chord progressions and arrangement ideas, tools like **Suno** and **Udio** generate full audio tracks from text prompts. They don't output chord charts. What they do output (a finished-sounding AI track based on your description) can work as a rough reference for arrangement instincts, but it's more like listening to a demo for inspiration than getting a musical roadmap. If that sounds useful to you, both have free tiers to try. If it sounds like the long way around, skip them and stay in the chatbot.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "Cleaning up a rough home recording without hiring anyone",
+          "body_markdown": "If you're recording guitar and vocals into a phone or a basic interface at home, the result is often good enough to capture the song, and not quite good enough to share. A couple of AI tools can close that gap.\n\n**LANDR** offers AI-assisted mastering. You upload your mix, it returns a mastered version that's louder, cleaner, and closer to streaming-ready. According to LANDR's official product page, you can preview the mastered result for free before paying anything. The full download costs money, but the preview alone tells you whether the tool is doing something useful for your track. They accept both WAV and MP3 uploads.\n\n**LALAL.AI** does something different: it separates a recording into individual stems. More relevant to you, it has a named acoustic guitar stem, confirmed on their product page. So if you've recorded guitar and voice together and you want to isolate one or the other, it can do that. Same if you're studying a reference track and want to hear what the guitarist is actually playing underneath the rest of the arrangement. Moises is the other well-regarded option in this space, and according to an independent review from Chartlex, it's specifically designed with practicing musicians in mind, with chord detection and tempo tools alongside the stem separation. Both have free tiers, though usage caps are tight. Good enough to test whether the tool works for your use case before subscribing.",
+          "tools": []
+        },
+        {
+          "id": "s3",
+          "heading": "Before you publish or monetize anything made with AI",
+          "body_markdown": "This is the one section worth reading carefully if you plan to release music.\n\n**If you used a chatbot to help with lyrics**, the commercial rights situation is your own, not the AI company's. You wrote the song. The lyric suggestions were raw material you shaped. This is editorially different from the generative audio tools below, though copyright law in this area is still evolving.\n\n**If you used Suno or Udio to generate audio**, the free tier on both platforms explicitly prohibits commercial use. Suno's Terms of Service, as cited in multiple independent reviews, state that free-tier outputs may only be used for personal, non-commercial purposes with attribution to Suno. Udio's free tier has the same restriction. If you want to release or monetize anything these tools generated, you need a paid plan on the platform where you generated it.\n\nEven on paid plans, the copyright situation is genuinely uncertain. Suno's own documentation states that music made entirely with AI does not qualify for copyright protection, and writing the prompt does not constitute authorship of the song. Multiple independent sources confirmed this as of mid-2026. Suno is also in active litigation with major labels (Sony remains a plaintiff as of March 2026, per multiple sources); Udio has signed licensing deals with UMG and Warner but its exact current commercial terms post-settlement are still evolving. Check udio.com/terms directly before making business decisions based on what you read anywhere, including here.\n\n**LANDR is a processing tool, not a generative one.** It masters audio you created. The commercial rights to that output belong to you as the original rights holder. The platform licensing question that applies to Suno and Udio doesn't apply to LANDR in the same way.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "A chatbot like ChatGPT or Claude is the lowest-friction starting point for lyric drafting and song-structure brainstorming — try it on a song you're already stuck on.",
+        "LANDR lets you preview AI mastering for free before paying; LALAL.AI and Moises both separate stems and have free tiers worth testing.",
+        "Suno and Udio generate full AI audio tracks, not chord charts — useful as arrangement inspiration, but not a songwriting roadmap.",
+        "Free-tier outputs from Suno and Udio are explicitly non-commercial. Paid plans grant commercial rights, but AI-generated music faces real copyright uncertainty that neither platform can fully resolve for you.",
+        "LANDR processes your audio; you keep the rights. The Suno/Udio licensing questions don't apply to mastering tools."
+      ],
+      "conclusion": "Start with the lyric idea or the stuck song you already have open. Drop it into a chatbot and see what comes back. If you have a rough recording you want to clean up, upload it to LANDR for a free preview. Both take about ten minutes and cost nothing to try. The tools that actually earn a place in your workflow will become obvious pretty quickly once you've used them on something real.",
+      "methodology_disclosure": "This guide was researched using official product pages, terms of service, and support documentation from LANDR, LALAL.AI, Udio, and Suno, supplemented by independent reporting from Chartlex, Undetectr, Dynamoi, Terms.Law, eesel AI, and TechJack Solutions, all accessed in July 2026. Capability claims for general-purpose chatbots (ChatGPT, Claude) in lyric drafting reflect widely reported anecdotal use and editorial judgment, not a controlled benchmark — no independent study confirming or measuring their effectiveness specifically for acoustic guitarists was found within research scope. Adobe Podcast and iZotope were not included because current feature details, free-tier availability, and file format requirements could not be confirmed from retrieved sources. dailyblip did not independently test any of the tools mentioned in this guide.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
