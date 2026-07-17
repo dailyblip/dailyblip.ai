@@ -304,7 +304,7 @@
   {
     "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Quick start guide for image generation",
       "article_type": "Practical guide",
@@ -316,6 +316,32 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T16:17:54.770Z",
-    "updated_at": "2026-07-17T16:17:54.770Z"
+    "updated_at": "2026-07-17T16:18:23.450Z",
+    "brief": {
+      "target_reader": "Independent creators (artists, designers, filmmakers, writers) who have heard about AI image generation but have never used a tool, have no coding background, and are skeptical of hype around it",
+      "reader_outcome": "The reader can open an AI image generation tool, write a prompt that produces a useful result, iterate on that result, and understand the basic settings well enough to avoid common beginner mistakes",
+      "structure_plan": [
+        "What You Actually Need to Get Started (accounts, cost, hardware)",
+        "Choosing Your First Tool: Midjourney, Adobe Firefly, or DALL-E 3",
+        "Your First Prompt: A Simple Framework That Works",
+        "Reading the Output: What Good and Bad Results Look Like",
+        "Basic Controls: Resolution, Aspect Ratio, and Style Settings",
+        "Iteration Workflow: How to Refine Without Starting Over",
+        "Common Beginner Mistakes and How to Avoid Them",
+        "What These Tools Cannot Do (Honest Limitations)"
+      ],
+      "claims_to_verify": [
+        "Current pricing and free tier limits for Midjourney (subscription tiers, monthly image caps)",
+        "Current pricing and free credit amounts for Adobe Firefly (including whether it is included in Creative Cloud plans)",
+        "Current pricing and free tier limits for DALL-E 3 via ChatGPT and via OpenAI API",
+        "Whether Midjourney still requires Discord to access or has a standalone web interface",
+        "Adobe Firefly's current policy on commercial use of generated images",
+        "Midjourney's current policy on commercial use for free vs. paid tiers",
+        "DALL-E 3 commercial use rights policy",
+        "Maximum output resolutions available on free tiers for each tool",
+        "Whether Adobe Firefly images are trained on licensed content (their stated training data policy)"
+      ],
+      "research_plan": "Prioritize official pricing and policy pages for Midjourney, Adobe Firefly, and OpenAI DALL-E 3 to verify all claims about cost, access, and rights. Use recent (within 6 months) creator community sources such as Reddit communities for practical beginner experience reports. Look for structured prompt guides from working designers or illustrators rather than AI company marketing material. Avoid aggregator listicles that repackage press releases. For limitations, look for documented failure cases shared by practitioners, not theoretical critiques."
+    }
   }
 ]
