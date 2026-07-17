@@ -236,7 +236,7 @@
   {
     "id": "cdbf0967-5715-4808-8736-ce48eac05dbf",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Practical guide",
@@ -248,6 +248,30 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:32:11.448Z",
-    "updated_at": "2026-07-17T03:32:11.448Z"
+    "updated_at": "2026-07-17T03:32:42.429Z",
+    "brief": {
+      "target_reader": "Independent content creators (social media, YouTube, blogs, e-commerce) who need photorealistic AI-generated images for professional use and want to evaluate tools critically before spending time or money",
+      "reader_outcome": "Select the right photorealistic image generator for their specific workflow, budget, and output requirements, and know how to prompt and configure it for maximum realism",
+      "structure_plan": [
+        "What 'Photorealistic' Actually Means in AI Image Generation (defining quality markers: lighting, skin texture, lens behavior, coherence)",
+        "The Main Contenders: A Quick-Reference Comparison Table (Midjourney, Stable Diffusion, Firefly, DALL-E 3, Ideogram, Flux)",
+        "How to Evaluate a Generator for Your Use Case (evaluation criteria: commercial licensing, resolution, speed, prompt control, consistency)",
+        "Prompting Strategies That Improve Realism Across Most Tools (camera settings language, lighting descriptors, negative prompts, reference anchors)",
+        "Workflow: From Brief to Usable Image in Under 10 Steps",
+        "Limitations and Red Flags to Know Before You Commit (hands, text, faces, licensing gray areas)"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers for Midjourney, Adobe Firefly, DALL-E 3 via ChatGPT Plus, and Flux (including any free tiers)",
+        "Commercial usage rights for each tool, including whether generated images require disclosure or attribution",
+        "Maximum output resolution for each tool without upscaling",
+        "Whether Midjourney currently offers an API or is web/Discord only",
+        "Flux model variants (Flux.1 Pro, Dev, Schnell) and which are accessible via which platforms",
+        "Adobe Firefly's training data sourcing claims (Adobe Stock, public domain) and any current legal or policy caveats",
+        "DALL-E 3 content policy restrictions relevant to photorealistic human likeness",
+        "Whether Stable Diffusion (AUTOMATIC1111, ComfyUI) requires local hardware specs and what minimums are",
+        "Ideogram's current photorealism capability tier and pricing"
+      ],
+      "research_plan": "Prioritize official pricing and licensing pages for each tool (Midjourney, Adobe, OpenAI, Black Forest Labs, Ideogram). Cross-reference independent prompt comparison posts from creator communities (Reddit r/StableDiffusion, r/midjourney, Civitai forums) for real-world output quality assessments. Look for third-party benchmark articles from AI-focused outlets (The Verge, Ars Technica, Wired) that compare outputs side by side. Avoid vendor marketing copy as a primary source. For licensing claims, go directly to terms of service documents."
+    }
   }
 ]
