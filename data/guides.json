@@ -455,8 +455,8 @@
   },
   {
     "id": "ab866d3c-73ac-4851-96cd-a2e96624733c",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "How can an acoustic guitarist leverage AI in their music? How can it make it better? What are some ideas and steps on how to get started",
       "article_type": "Practical guide",
@@ -812,6 +812,11 @@
         "approved": false,
         "generated_at": "2026-07-17T18:33:56.258Z"
       }
+    ],
+    "approved_at": "2026-07-17T18:49:59.593Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s1: The Hooktheory source is a blog post about Chordify alternatives, not Chordify's official documentation; citing it as authoritative for a specific free-tier limit that may have changed is unreliable, and Chordify's own site should be the cited source."
     ]
   }
 ]
