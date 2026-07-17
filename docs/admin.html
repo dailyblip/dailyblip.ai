@@ -1114,13 +1114,24 @@ function openGuide(id){
       <button class="btn" onclick="closeGuideReview()">\u2190 back</button>
       <button class="btn" id="gSaveEdits">Save edits</button>
       ${highSeverity ? `<button class="btn amber" id="gRecheck">Re-run fact check</button>` : ""}
-      ${highSeverity ? `<button class="btn" disabled title="${highSeverity} unresolved high-severity issue(s) block approval">Approve &amp; publish</button>`
-                     : `<button class="btn primary" id="gApprovePublish">Approve &amp; publish \u2192</button>`}
-    </div>`;
+      ${highSeverity ? "" : `<button class="btn primary" id="gApprovePublish">Approve &amp; publish \u2192</button>`}
+    </div>
+    ${highSeverity ? `
+    <div class="panel" style="margin-top:12px;border-color:rgba(255,122,107,.4)">
+      <label style="display:flex;gap:8px;align-items:flex-start;margin:0">
+        <input type="checkbox" id="gOverrideCheck" style="width:auto;margin-top:3px">
+        <span style="font-size:12.5px;color:var(--dim)">I've read the ${highSeverity} unresolved high-severity warning(s) above and want to publish anyway. This is logged with the published guide.</span>
+      </label>
+      <div style="display:flex;justify-content:flex-end;margin-top:10px">
+        <button class="btn red" id="gPublishAnyway" disabled>Publish anyway \u2192</button>
+      </div>
+    </div>` : ""}`;
 
   $("#gSaveEdits")?.addEventListener("click", () => saveGuideEdits(id, false));
   $("#gApprovePublish")?.addEventListener("click", () => saveGuideEdits(id, true));
   $("#gRecheck")?.addEventListener("click", () => rerunFactCheck(id));
+  $("#gOverrideCheck")?.addEventListener("change", (e) => { $("#gPublishAnyway").disabled = !e.target.checked; });
+  $("#gPublishAnyway")?.addEventListener("click", () => saveGuideEdits(id, true, true));
 }
 
 function closeGuideReview(){
@@ -1144,13 +1155,23 @@ function collectFormEditsInto(g){
   });
 }
 
-async function saveGuideEdits(id, thenPublish){
+async function saveGuideEdits(id, thenPublish, override){
   const g = guides.find(x => x.id === id);
   if (!g) return;
   collectFormEditsInto(g);
-  if (thenPublish) { g.status = "approved"; g.stage = "Approved"; g.approved_at = new Date().toISOString(); }
+  if (thenPublish) {
+    g.status = "approved"; g.stage = "Approved"; g.approved_at = new Date().toISOString();
+    if (override) {
+      // Kept alongside the job record permanently \u2014 this is a real
+      // acknowledgment, not a silent bypass, so the fact that specific
+      // warnings were seen and consciously overridden should survive
+      // in the data, not just vanish once the button's clicked.
+      g.published_despite_warnings = true;
+      g.overridden_warnings = (g.warnings || []).slice();
+    }
+  }
 
-  const btn = thenPublish ? $("#gApprovePublish") : $("#gSaveEdits");
+  const btn = override ? $("#gPublishAnyway") : thenPublish ? $("#gApprovePublish") : $("#gSaveEdits");
   if (btn) btn.disabled = true;
   try {
     await loadGuidesFile();
@@ -1159,7 +1180,7 @@ async function saveGuideEdits(id, thenPublish){
       const updated = [...gs];
       if (i === -1) updated.push(g); else updated[i] = g;
       return updated;
-    }, `admin: ${thenPublish ? "approve" : "edit"} guide ${id}`);
+    }, `admin: ${override ? "publish (override)" : thenPublish ? "approve" : "edit"} guide ${id}`);
     if (thenPublish) {
       await dispatchWorkflow("guide-publish.yml", { job_id: id });
       toast("Publishing\u2026 the live URL will show up in the list shortly.");
