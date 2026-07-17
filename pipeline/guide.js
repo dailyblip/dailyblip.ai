@@ -263,7 +263,7 @@ Inspect: product capabilities, availability, pricing, free-plan claims, commerci
 
 HARD LIMIT: never return more than 8 issues, no matter how many you find. If you identify more than 8 real problems, stop after documenting the 8 most severe and clearest ones \u2014 do not list the rest, do not summarize additional issues in a 9th entry, do not exceed 8 array entries under any circumstances. This is not a target to aim for; it is a limit you must not cross. Keep "original_text" to a short identifying fragment (10-15 words), never the full passage \u2014 just enough for a human to locate it. Keep "issue" to one short sentence. Do NOT write a suggested fix here \u2014 that's a separate step's job; yours is only to identify and describe the problem, as briefly as possible.
 
-Return JSON: {"issues": [{"severity":"low|medium|high","section_id":"matches a section id, or \\"intro\\"/\\"conclusion\\"","original_text":"short identifying fragment, 10-15 words","issue":"what's wrong, 1-2 sentences","supporting_source_url":"" }]}
+Return JSON: {"issues": [{"severity":"low|medium|high","section_id":"the id of the field that actually needs fixing: a section id, \\"intro\\", \\"conclusion\\", \\"quick_answer\\", \\"dek\\", \\"meta_description\\", or \\"key_takeaways\\". If the same bad claim appears in more than one place (e.g. both quick_answer and a section), report it once per place it needs fixing, labeled correctly for each \u2014 do not label a quick_answer problem as a section id just because the claim also appears in that section.","original_text":"short identifying fragment, 10-15 words","issue":"what's wrong, 1-2 sentences","supporting_source_url":"" }]}
 Your response must begin with { immediately \u2014 no preamble, no "Let me review this article," no explanation before or after the JSON. JSON only. Empty issues array if genuinely clean.`;
 
 const REVISE_SYSTEM = `You are fixing specific flagged issues in a dailyblip guide, changing as little else as possible. ${EDITORIAL_RULES}
@@ -271,11 +271,15 @@ const REVISE_SYSTEM = `You are fixing specific flagged issues in a dailyblip gui
 You'll receive the full article for context, plus a list of specific issues to fix. Return ONLY the corrected content for whatever needs to change \u2014 do NOT reproduce the entire article. This keeps your response small and focused, and avoids accidentally altering parts of the article nobody flagged.
 
 Return JSON: {
-  "introduction": "corrected text, ONLY include this field if the introduction itself was flagged",
-  "conclusion": "corrected text, ONLY include this field if the conclusion itself was flagged",
+  "dek": "corrected text, ONLY if the dek itself was flagged",
+  "meta_description": "corrected text, ONLY if flagged",
+  "quick_answer": "corrected text, ONLY if flagged",
+  "introduction": "corrected text, ONLY if the introduction itself was flagged",
+  "conclusion": "corrected text, ONLY if the conclusion itself was flagged",
+  "key_takeaways": ["corrected FULL array, ONLY include this field if at least one takeaway was flagged \u2014 return the complete corrected list, not just the changed item"],
   "section_fixes": [{"id":"the flagged section's id, matching the article you were given","body_markdown":"the corrected body_markdown for just this section"}]
 }
-Only include entries for sections/fields that actually had a flagged issue \u2014 omit everything else entirely. JSON only.`;
+Only include entries for fields that actually had a flagged issue \u2014 omit everything else entirely. JSON only.`;
 
 // Merges targeted fixes into the EXISTING article object rather than
 // replacing it \u2014 this is what makes "revise returned garbage" no
@@ -286,8 +290,16 @@ Only include entries for sections/fields that actually had a flagged issue \u201
 // is a much better outcome than failing the whole job over one bad
 // fix entry.
 function applyRevisionFixes(article, fixes) {
+  if (typeof fixes?.dek === "string" && fixes.dek.trim()) article.dek = fixes.dek;
+  if (typeof fixes?.meta_description === "string" && fixes.meta_description.trim()) article.meta_description = fixes.meta_description;
+  if (typeof fixes?.quick_answer === "string" && fixes.quick_answer.trim()) article.quick_answer = fixes.quick_answer;
   if (typeof fixes?.introduction === "string" && fixes.introduction.trim()) article.introduction = fixes.introduction;
   if (typeof fixes?.conclusion === "string" && fixes.conclusion.trim()) article.conclusion = fixes.conclusion;
+  // Full-array replacement, not a merge \u2014 the model is asked to return
+  // the complete corrected list when any takeaway needed fixing, since
+  // there's no clean way to identify "the 3rd bullet" for a partial
+  // patch the way section ids work for section_fixes.
+  if (Array.isArray(fixes?.key_takeaways) && fixes.key_takeaways.length) article.key_takeaways = fixes.key_takeaways;
   for (const fix of fixes?.section_fixes || []) {
     const sec = (article.sections || []).find((s) => s.id === fix?.id);
     if (sec && typeof fix.body_markdown === "string" && fix.body_markdown.trim()) sec.body_markdown = fix.body_markdown;
