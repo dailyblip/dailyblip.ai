@@ -822,7 +822,7 @@
   {
     "id": "ab77d633-7bff-4771-a971-97b8be6f6dd3",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "How can I create lofi chill beats with AI?",
       "article_type": "Practical guide",
@@ -834,7 +834,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T18:58:55.366Z",
-    "updated_at": "2026-07-17T19:01:13.993Z",
+    "updated_at": "2026-07-17T19:02:25.382Z",
     "brief": {
       "target_reader": "A musician, producer, or creative hobbyist who wants to make lofi chill beats but has little or no experience with AI music tools. They may have heard of tools like Suno or Udio but have never actually used one.",
       "reader_outcome": "Feel confident enough to open an AI music tool today and generate their first lofi beat, with a basic sense of how to prompt it well and what to do with the result.",
@@ -1020,7 +1020,7 @@
       "slug": "how-to-make-lofi-chill-beats-with-ai",
       "dek": "You don't need a DAW, samples, or music theory. Here's how to generate your first lofi beat using AI tools today.",
       "meta_description": "A beginner's guide to making lofi chill beats with AI music tools like Suno and Soundraw. Learn how to prompt, what to expect, and what to do with your output.",
-      "quick_answer": "Tools like Suno and Soundraw let you type a text description and generate a lofi beat in seconds. You can start free, no music production experience needed.",
+      "quick_answer": "Tools like Suno and Soundraw let you type a text description and generate a lofi beat in seconds. Both have free tiers, but check each platform's current terms before you sign up: free-tier download availability has been in flux, and some tiers may not let you export files.",
       "introduction": "Lofi hip hop is one of the most popular genres on the planet for a reason: it's warm, low-key, and endlessly listenable. And it turns out AI is surprisingly good at making it.\n\nIf you've ever wanted to produce your own chill beats but felt blocked by gear, software complexity, or just not knowing where to start, AI music tools remove almost all of that friction. You describe what you want. The AI builds it. Here's how to actually do that.",
       "sections": [
         {
@@ -1032,7 +1032,7 @@
         {
           "id": "s2",
           "heading": "Which tool to start with",
-          "body_markdown": "Two tools stand out for different reasons.\n\n**Suno** ([suno.com](https://suno.com)) is the easiest entry point for most people. You sign up free, no credit card needed, and can generate songs immediately using text prompts. According to Suno's official site, the free plan gives you enough daily credits for around 10 songs. One important heads-up: free-tier generations are public, not private, and are licensed for personal use only, not commercial use. Whether free-tier downloads are currently enabled is something you'll want to check directly at suno.com when you sign up, since this has been in flux following a major licensing deal in late 2025.\n\n**Soundraw** ([soundraw.io](https://soundraw.io/genre/lofi-hip-hop)) takes a different approach. Instead of open-ended text prompts, it gives you a dedicated Lofi Hip Hop genre option plus mood controls (think \"Chill,\" \"Relaxing\") and texture settings like vinyl crackle and tape saturation. It's more focused and less freeform, which can actually be a feature when you just want something that sounds right quickly. Check soundraw.io directly for current free trial and download terms.\n\nIf you want to explore further, **Beatoven.ai** offers mood-based generation suited to background and chill music, and **Udio** is another general-purpose generator, though as of mid-2026 Udio's download and commercial use terms are still evolving post-licensing deals, so check udio.com/pricing before counting on export features.",
+          "body_markdown": "Two tools stand out for different reasons.\n\n**Suno** ([suno.com](https://suno.com)) is a popular starting point for text-prompt music generation. You can sign up without a credit card and begin generating tracks immediately. According to Suno's official site, the free plan provides daily credits. However, independent reviews from Undetectr and Dynamoi report that following Suno's November 2025 Warner Music licensing deal, free-tier users can no longer download their generations at all, making export a paid feature. Verify the current situation directly at suno.com when you sign up. One other heads-up: free-tier generations are public, not private, and are licensed for personal use only, not commercial use.\n\n**Soundraw** ([soundraw.io](https://soundraw.io/genre/lofi-hip-hop)) takes a different approach. Instead of open-ended text prompts, it gives you a dedicated Lofi Hip Hop genre option plus mood controls (think \"Chill,\" \"Relaxing\") and texture settings like vinyl crackle and tape saturation. It's more focused and less freeform, which can actually be a feature when you just want something that sounds right quickly. Check soundraw.io directly for current free trial and download terms.\n\nIf you want to explore further, **Beatoven.ai** offers mood-based generation suited to background and chill music. **Udio** is another general-purpose generator, but according to Chartlex, Udio has disabled all user downloads and is now a streaming-only platform, so it's not a practical option if you need to export files.",
           "tools": []
         },
         {
@@ -1044,12 +1044,12 @@
         {
           "id": "s4",
           "heading": "What to do with what you get",
-          "body_markdown": "Generate a few variations first. Most tools let you regenerate or create multiple versions from the same prompt, and the difference between takes can be significant. Listen through and pick the one that has the right feel.\n\nFrom there, a few paths:\n\n- **Use it as-is for personal projects.** Background music for a video essay, a Twitch stream, a personal playlist. Just make sure you understand the licensing terms for your use case before posting anywhere publicly.\n- **Bring it into a DAW.** If you have GarageBand, Logic, Ableton, or similar, import the track as a reference and layer your own elements on top. The AI gave you the vibe; you add your personality.\n- **Upgrade if you need commercial rights.** If you want to release on Spotify, use it in a monetized YouTube video, or sell beats, you'll need a paid plan. Both Suno and Soundraw offer paid tiers with commercial licensing. Read the terms carefully before you publish anything, and verify current terms directly on each platform's site since these are changing fast.\n\nYour first generated lofi beat will probably surprise you with how listenable it is. That's the point. Start there.",
+          "body_markdown": "Generate a few variations first. Most tools let you regenerate or create multiple versions from the same prompt, and the difference between takes can be significant. Listen through and pick the one that has the right feel.\n\nFrom there, a few paths:\n\n- **Use it as-is for personal projects.** Background music for a video essay, a Twitch stream, a personal playlist. Just make sure you understand the licensing terms for your use case before posting anywhere publicly.\n- **Bring it into a DAW.** If you have GarageBand, Logic, Ableton, or similar, you can import a downloaded track and layer your own elements on top. The AI gave you the vibe; you add your personality. Note that on Suno's free tier, independent reviews report downloads are currently disabled following a November 2025 licensing deal, so you'd need a paid plan to export files for this purpose.\n- **Upgrade if you need commercial rights.** If you want to release on Spotify, use it in a monetized YouTube video, or sell beats, you'll need a paid plan. Suno offers paid tiers with commercial licensing. For Soundraw, check soundraw.io's current terms directly, as we haven't independently verified the scope of their paid commercial licensing. Read the terms carefully before you publish anything, and verify current terms on each platform's site since these are changing fast.\n\nYour first generated lofi beat will probably surprise you with how listenable it is. That's the point. Start there.",
           "tools": []
         }
       ],
       "key_takeaways": [
-        "Suno is the easiest free starting point: sign up, type a description, get a lofi beat in seconds.",
+        "Suno is an easy starting point for generating lofi beats with a text prompt, but per independent reviews, free-tier downloads were removed following a November 2025 licensing deal. Verify current export options at suno.com before relying on it.",
         "Soundraw is worth trying if you want a purpose-built lofi tool with mood and texture controls instead of open-ended prompts.",
         "Good lofi prompts include mood words, instrument names, and a scene or setting, not music theory.",
         "Free tiers are personal use only. Check each platform's current terms before using output commercially.",
@@ -1058,6 +1058,73 @@
       "conclusion": "Making lofi beats with AI is one of the most approachable entry points into AI-assisted music creation. The genre is forgiving, the tools are beginner-friendly, and the gap between \"typed a prompt\" and \"this actually sounds good\" is genuinely small. Open Suno or Soundraw today, try a few prompts, and see what comes out. You'll have something worth listening to within the hour.",
       "methodology_disclosure": "This guide was researched using official documentation from Suno and Soundraw, independent reviews from Chartlex, Undetectr, Dynamoi, eesel AI, and Wondera.ai, and Suno's own hub pages. Where sources conflicted, particularly around Suno's free-tier download availability following its November 2025 Warner Music licensing deal, both positions are noted and readers are directed to verify current status directly at each platform. No hands-on testing of these tools was conducted by dailyblip for this article. Commercial rights claims reflect the most current sourced information available as of July 2026 but should be independently verified at each platform's official terms pages before making publishing or monetization decisions.",
       "last_reviewed_date": "July 17, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "independent reviews from Undetectr and Dynamoi report that following Suno's November 2025 Warner Music licensing deal",
+          "issue": "The article attributes the loss of free-tier downloads to a November 2025 Warner Music deal, but the Chartlex source credits this change to Udio's October 2025 UMG settlement, not Suno's Warner deal. The sourced Suno-specific claim from Undetectr/Dynamoi is about a Warner deal affecting downloads, but the article conflates the two platforms' separate licensing events.",
+          "supporting_source_url": "https://www.chartlex.com/blog/marketing/suno-vs-udio-2026"
+        },
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "according to Chartlex, Udio has disabled all user downloads and is now a streaming-only platform",
+          "issue": "The Udio official pricing page (source 6) confirms a free tier exists and eesel AI (source 7) documents active credit-based plans, yet the article tells readers Udio is not a practical option without noting that paid users may still have some access pathway — the blanket characterization may be inaccurate for paid tiers.",
+          "supporting_source_url": "https://www.eesel.ai/blog/udio-pricing"
+        },
+        {
+          "severity": "high",
+          "section_id": "quick_answer",
+          "original_text": "Both have free tiers, but check each platform's current terms before you sign up",
+          "issue": "The quick answer implies Suno's free tier allows downloading (just notes it 'has been in flux'), but the sourced independent reviews state downloads are fully removed for free users — understating a confirmed limitation creates a misleading first impression.",
+          "supporting_source_url": "https://undetectr.com/blog/suno-free-vs-pro-vs-premier"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "You can sign up without a credit card and begin generating tracks immediately",
+          "issue": "The article states free-tier generations are public, not private — this significant privacy limitation is mentioned only as a brief aside after the main claim and should be more prominently flagged for a beginner audience.",
+          "supporting_source_url": "https://undetectr.com/blog/suno-free-vs-pro-vs-premier"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s4",
+          "original_text": "Suno offers paid tiers with commercial licensing",
+          "issue": "The article does not specify the price point for Suno's commercial tier ($10/month Pro), which is directly sourced and relevant to a beginner deciding whether to upgrade — omitting it makes the guidance less actionable.",
+          "supporting_source_url": "https://www.chartlex.com/blog/marketing/suno-vs-udio-2026"
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "per independent reviews, free-tier downloads were removed following a November 2025 licensing deal",
+          "issue": "The key takeaway attributes the download removal solely to the November 2025 Warner Music deal, but source notes indicate the Dynamoi report is from March 2026 and describes this as an expectation, not a confirmed change — presenting it as a confirmed fact overstates certainty.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Soundraw ([soundraw.io](https://soundraw.io/genre/lofi-hip-hop)) takes a different approach…Check soundraw.io directly for current free trial and download terms",
+          "issue": "The article never confirms whether Soundraw has a free tier at all, only a 'free trial' — for a guide aimed at beginners choosing a starting tool, failing to clarify this leaves a key practical question unanswered.",
+          "supporting_source_url": "https://soundraw.io/genre/lofi-hip-hop"
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "Suno's own homepage lists this example prompt: 'chill lo-fi beat about rainy mornings'",
+          "issue": "The source document confirms the prompt example comes from Suno's hub page, not the homepage itself — a minor but verifiable factual inaccuracy in attribution.",
+          "supporting_source_url": "https://suno.com/"
+        }
+      ],
+      "checked_at": "2026-07-17T19:02:25.382Z",
+      "revised": true
+    },
+    "warnings": [
+      "s2: The article attributes the loss of free-tier downloads to a November 2025 Warner Music deal, but the Chartlex source credits this change to Udio's October 2025 UMG settlement, not Suno's Warner deal. The sourced Suno-specific claim from Undetectr/Dynamoi is about a Warner deal affecting downloads, but the article conflates the two platforms' separate licensing events.",
+      "s2: The Udio official pricing page (source 6) confirms a free tier exists and eesel AI (source 7) documents active credit-based plans, yet the article tells readers Udio is not a practical option without noting that paid users may still have some access pathway — the blanket characterization may be inaccurate for paid tiers.",
+      "quick_answer: The quick answer implies Suno's free tier allows downloading (just notes it 'has been in flux'), but the sourced independent reviews state downloads are fully removed for free users — understating a confirmed limitation creates a misleading first impression."
+    ]
   }
 ]
