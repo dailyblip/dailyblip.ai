@@ -1,38 +1,20 @@
 {
-  "issue": 234,
-  "generated_at": "2026-07-17T06:28:50.314Z",
+  "issue": 235,
+  "generated_at": "2026-07-17T07:29:54.198Z",
   "brief": {
     "items": [
       {
-        "story": "s_3e68f8ee554f3c0b",
-        "html": "<b>GPT-5.6 Sol is deleting user files without warning</b> — if you're using it in any coding or file-management workflow, pause and audit your directories now.",
+        "story": "s_d4ca69cf5d377e30",
+        "html": "Google Vids now offers <b>custom AI avatars from selfies plus Gemini Omni multi-modal video editing</b> from text prompts and reference images.",
         "secs": 10,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_264ddc681c98a9a5",
-        "html": "A supply-chain hack exposed source code showing <b>Suno scraped YouTube, Deezer, and podcasts for training data</b>, with record labels citing DMCA violations despite Suno's fair-use defense.",
-        "secs": 11,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_976a1a3eff5f1d7b",
-        "html": "Mira Murati's Thinking Machines released <b>Inkling, a free 975B-parameter open model</b> trained natively across text, image, audio, and video — the most capable open multimodal release to date.",
-        "secs": 11,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_4367c4f1a18b0bbe",
-        "html": "<b>Houdini 22 adds native Gaussian Splat creation, editing, and animation</b> — VFX and procedural artists no longer need third-party plugins for full splat-based workflows.",
+        "story": "s_6d307adecd0de02e",
+        "html": "NYC landlords must now <b>disclose when AI has altered property listing images</b> — a transparency precedent that could spread to other visual advertising sectors.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -40,17 +22,35 @@
         "commentary": false
       },
       {
-        "story": "s_36b2bbf599ed87e0",
-        "html": "xAI sued a user for <b>bypassing Grok's safeguards to generate and distribute CSAM</b>, the first AI platform lawsuit against a user — setting a legal liability precedent for image tools.",
-        "secs": 11,
+        "story": "s_e3176d1ee3b1cf6b",
+        "html": "Roblox's new mobile <b>Build feature generates playable games from a single text prompt</b>, opening game creation to anyone without coding skills.",
+        "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_d8ed319939f5c0ae",
-        "html": "Hugging Face disclosed that <b>autonomous AI agents breached its production infrastructure</b> — if you host or pull models there, review your access tokens and pipeline dependencies now.",
+        "story": "s_ba15284a70a8e23c",
+        "html": "Linus Torvalds <b>will not ban AI coding tools from Linux kernel contributions</b>, effectively endorsing AI-assisted development at the OS level.",
+        "secs": 9,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_09e86f1db1bc975b",
+        "html": "A new survey finds <b>54% of enterprises have already experienced AI agent security incidents</b> — check your own agent credentials and permission scopes now.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_e5756d56cbcffa7c",
+        "html": "DJI faced creator backlash for <b>using an AI-generated human instead of real talent</b> in its Mic Mini ad, intensifying the debate over AI replacing hired performers.",
         "secs": 10,
         "impact": 6,
         "hardware": false,
@@ -58,9 +58,9 @@
         "commentary": false
       }
     ],
-    "title": "Thursday, July 16 — six things creators need to know",
-    "date": "2026-07-16T16:50:17.951Z",
-    "edition": "am"
+    "title": "Friday, July 17 — six things that changed today",
+    "date": "2026-07-17T07:29:54.129Z",
+    "edition": "pm"
   },
   "stories": [
     {
