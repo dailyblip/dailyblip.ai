@@ -1,0 +1,142 @@
+name: Generate Guide
+# workflow_dispatch ONLY — no schedule. Triggered from admin.html's
+# Guides tab, never automatically. The job record (submitted idea, type,
+# audience, length, etc.) is committed to data/guides.json by admin.html
+# BEFORE this dispatches, so job_id is the only input needed here — the
+# workflow just looks that record up and works through it stage by stage.
+#
+# Each stage is its own step, immediately followed by its own commit
+# step, on purpose: this is what lets admin.html poll data/guides.json
+# and show real incremental progress (queued -> researching -> drafting
+# -> ...) instead of staring at one state for the entire multi-minute
+# run. See pipeline/guide.js's top comment for why this can't be done
+# with git calls from inside a single long-running Node process instead.
+#
+# Every commit step below uses `if: always()` — if a stage fails,
+# pipeline/guide.js has already written the failure state to disk before
+# exiting non-zero (see fail() in guide.js), and that state still needs
+# to reach the repo so admin.html can show "Failed" instead of hanging
+# on the last successful stage forever. The failure itself still stops
+# later STAGE steps from running (their default `if` requires success).
+
+on:
+  workflow_dispatch:
+    inputs:
+      job_id:
+        description: "Guide job id (created by admin.html before dispatch)"
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  # One guide job at a time per job_id — prevents a double-click on
+  # Generate from racing two runs against the same record. Different
+  # job_ids run concurrently fine (no shared group).
+  group: guide-${{ inputs.job_id }}
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+
+      - name: "Stage: brief"
+        run: node pipeline/guide.js brief "${{ inputs.job_id }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: "Commit: brief"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: brief"
+          git pull --rebase --autostash
+          git push
+
+      - name: "Stage: research"
+        run: node pipeline/guide.js research "${{ inputs.job_id }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: "Commit: research"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: research"
+          git pull --rebase --autostash
+          git push
+
+      - name: "Stage: draft"
+        run: node pipeline/guide.js draft "${{ inputs.job_id }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: "Commit: draft"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: draft"
+          git pull --rebase --autostash
+          git push
+
+      - name: "Stage: factcheck"
+        run: node pipeline/guide.js factcheck "${{ inputs.job_id }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: "Commit: factcheck"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: factcheck"
+          git pull --rebase --autostash
+          git push
+
+      # Images write real files under docs/guides/, not just data/, so
+      # this commit step (only) also stages docs.
+      - name: "Stage: images"
+        run: node pipeline/guide.js images "${{ inputs.job_id }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: "Commit: images"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: images"
+          git pull --rebase --autostash
+          git push
+
+      - name: "Stage: format"
+        run: node pipeline/guide.js format "${{ inputs.job_id }}"
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      - name: "Commit: format (ready for review)"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide ${{ inputs.job_id }}: ready for review"
+          git pull --rebase --autostash
+          git push
