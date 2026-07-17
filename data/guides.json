@@ -736,7 +736,7 @@
   {
     "id": "4770dfcc-f47d-4137-aab8-cd902678c1ad",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -748,6 +748,33 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:52:42.937Z",
-    "updated_at": "2026-07-17T03:52:42.937Z"
+    "updated_at": "2026-07-17T03:53:16.867Z",
+    "brief": {
+      "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for professional or commercial work and want to choose a tool based on actual capability differences, not marketing claims",
+      "reader_outcome": "The reader should be able to identify which photorealistic image generation tool fits their specific workflow, budget, and quality requirements, and understand the concrete tradeoffs between at least four named tools before spending money or time on any of them",
+      "structure_plan": [
+        "What We Mean by Photorealistic (and Why It Matters for This Comparison)",
+        "The Tools: Which Ones Are Actually in the Running",
+        "Image Quality and Realism: Where Each Tool Wins and Loses",
+        "Prompt Handling: How Well Each Tool Interprets Detailed or Complex Requests",
+        "Speed, Output Resolution, and Practical Limits",
+        "Pricing and Access: Free Tiers, Credits, and Subscriptions",
+        "Commercial Use and Licensing: What You Can Actually Do With the Images",
+        "Workflow Fit: Which Tool Suits Which Creator Type",
+        "Quick Decision Guide"
+      ],
+      "claims_to_verify": [
+        "Current pricing tiers and credit costs for Midjourney, DALL-E 3, Stable Diffusion (via major front-ends like DreamStudio or Automatic1111), Adobe Firefly, and Ideogram as of publication date",
+        "Maximum output resolution for each tool",
+        "Whether each tool allows commercial use of generated images and under what conditions",
+        "Whether DALL-E 3 is available standalone or only through ChatGPT Plus and the API",
+        "Whether Midjourney has a free tier currently active or suspended",
+        "Adobe Firefly's commercially safe training data claims and what that actually covers",
+        "Stable Diffusion model versions currently considered state-of-the-art for photorealism (e.g., SDXL, SD 3, specific fine-tunes like RealVisXL)",
+        "Whether Ideogram or Flux models have reached parity with Midjourney for photorealism as of recent benchmarks or community evaluations",
+        "Any content policy restrictions that specifically limit photorealistic human generation (faces, likeness) per platform"
+      ],
+      "research_plan": "Prioritize official pricing and licensing pages for each tool as primary sources. Use recent (within 6 months) community comparisons from r/StableDiffusion, r/midjourney, and AI art forums for qualitative realism assessments, flagging these as community judgment rather than objective fact. Check independent technical evaluations or side-by-side prompt tests published by AI-focused outlets (e.g., Ars Technica, The Verge, Practical AI newsletters). Avoid vendor blog posts as primary evidence for capability claims. For Stable Diffusion specifically, note that results vary significantly by model and fine-tune, so be specific about which checkpoint or pipeline is being discussed. Flag any claims about image quality as editorial judgment based on described characteristics, not dailyblip-conducted tests."
+    }
   }
 ]
