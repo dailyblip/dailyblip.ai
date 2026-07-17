@@ -1149,7 +1149,7 @@
   {
     "id": "e2b14fbf-805a-4845-8e96-05518fbdca8c",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Guide for less technical musicians getting into new AI - where to start",
       "article_type": "Practical guide",
@@ -1161,7 +1161,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T15:44:15.646Z",
-    "updated_at": "2026-07-17T15:46:40.892Z",
+    "updated_at": "2026-07-17T15:49:10.016Z",
     "brief": {
       "target_reader": "Musicians aged 40+ with intermediate-to-advanced musical skills but limited technical background, who have heard about AI music tools and are curious but unsure where to start or whether it is worth the effort",
       "reader_outcome": "The reader can identify which category of AI music tool fits their actual workflow, set up and try at least one tool without needing coding knowledge, and make an informed decision about whether to go deeper based on honest tradeoffs",
@@ -1414,6 +1414,215 @@
       "System requirements (RAM, GPU) for locally-run AI music tools — only Stable Audio 3.0 system requirements were partially verified (Small models run CPU-only; Medium runs on consumer laptops; Large is API-only). No RAM/GPU specs for other locally-run tools were confirmed. Writer should either omit system requirement claims for other tools or verify per-tool from official documentation.",
       "Specific current Udio commercial use policy post-UMG settlement — while it is confirmed that the settlement occurred in October 2025 and download terms changed materially, exactly which paid plan tier (Standard vs. Pro) unlocks commercial use in the current 2026 ToS is flagged as evolving and unclear across sources. Writer should direct readers to check udio.com terms directly.",
       "Whether iZotope RX has a permanent free tier (as opposed to a time-limited trial) — confirmed: there is NO permanent free tier. Only a 7-day free trial with watermarked outputs. This was not originally clear in the brief and should be corrected."
-    ]
+    ],
+    "article": {
+      "title": "AI Music Tools for Musicians Who Don't Code: Where to Actually Start",
+      "alternative_titles": [
+        "Getting Started with AI Music Tools: A Practical Guide for Working Musicians",
+        "AI Music for Non-Technical Musicians: The Honest Beginner's Guide"
+      ],
+      "slug": "ai-music-tools-for-non-technical-musicians",
+      "dek": "You have real musical skills. Here is how to figure out which AI tools are worth your time, what they actually do, and how to try one this week without wrecking your workflow.",
+      "meta_description": "A practical guide for musicians with strong musical skills but limited technical background. Covers AI composition, mastering, cleanup, and lyrics tools with honest pricing, tradeoffs, and a first-week workflow.",
+      "quick_answer": "",
+      "introduction": "If you have been making music for decades and the AI conversation feels like it is happening in a language you were not taught, that is not a skills gap. It is a framing problem. Most AI music coverage is aimed at tech enthusiasts or producers who grew up in digital audio. Very little of it starts from the assumption that you already know what a good arrangement sounds like, you just want to know whether these tools are worth your time.\n\nThis guide cuts through that. It maps the actual categories of AI music tools, tells you honestly what each one does and does not do, and gives you a concrete way to try something this week without committing money or disrupting the way you already work.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "What AI Actually Does in Music (and What It Does Not)",
+          "body_markdown": "AI music tools fall into a few distinct jobs. None of them replace musical judgment. What they do is automate specific time-consuming tasks or generate raw material you can react to.\n\n**What AI can do right now:**\n- Generate a chord progression or rough melodic sketch from a text prompt or genre selection\n- Produce a full demo track (drums, bass, melody, arrangement) from a prompt, at varying quality\n- Clean up audio recordings: remove hiss, hum, room noise, or a cough in the background\n- Apply a mastering curve to a mix automatically\n- Separate a mixed track into stems (vocals, drums, bass, instruments)\n- Suggest lyric lines or song structures based on a theme\n\n**What AI cannot reliably do:**\n- Understand your specific musical intent\n- Replace the editing and curation judgment you bring as an experienced musician\n- Guarantee consistent quality across outputs\n- Give you copyright protection on fully generated output (more on this below)\n\nThe most useful mental model: treat AI outputs as fast rough material. The tool generates ten versions; you pick the one that is 70% right and fix the rest yourself. If that workflow appeals to you, AI is probably worth exploring. If you want finished, publication-ready results from a prompt, you will be disappointed most of the time.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "The Four Main Categories of AI Music Tools",
+          "body_markdown": "Before picking a specific tool, identify which category solves an actual problem in your workflow.\n\n**1. Text-to-song generators (Suno, Udio)**\nYou type a description and get a full produced track with vocals, instrumentation, and arrangement. Useful for demos, reference tracks, or creative starting points. Not useful if you want control over individual elements.\n\n**2. Audio cleanup and restoration (iZotope RX)**\nYou feed in a recording with problems (noise, clicks, distortion) and the tool uses machine learning to repair it. This is the category with the clearest, most reliable value for musicians who record real instruments or voice.\n\n**3. AI-assisted production and mastering (LANDR, BandLab AI Mastering)**\nAutomates the mastering stage with trained models. Lower ceiling than a skilled mastering engineer, but faster and cheaper for demos or releases where budget is the constraint.\n\n**4. Sample and loop transformation (Splice AI tools)**\nTakes existing human-made sounds and generates variations, adapts them to your session's key and tempo, or turns them into playable instruments. Closer to a production assistant than a composition tool.",
+          "tools": []
+        },
+        {
+          "id": "s3",
+          "heading": "Start Here: The Lowest-Friction Entry Points",
+          "body_markdown": "If you want to try AI music tools without spending money or installing anything, these are the most accessible starting points based on current free tiers.\n\n**BandLab (free, browser and mobile)**\nBandLab is a cloud-based DAW with a set of AI tools built in. Its SongStarter tool is fully free with no per-generation cap. You select a genre and mood rather than typing a free-form prompt, which makes it more accessible if you find text prompts frustrating. The Splitter tool separates stems (vocals, drums, bass, instruments) free for tracks up to 15 minutes. AI Mastering is free for shorter tracks. All outputs are cleared for royalty-free commercial use. The full DAW underneath is also free with no caps. This is editorial judgment, but BandLab is a reasonable first stop for musicians who want to experiment without any financial commitment.\n\n**Suno (free tier, browser)**\nSuno's free plan gives you 50 credits per day, which works out to roughly 10 songs. Free-tier songs are play-and-share only: as of updated 2026 terms, free-tier songs are no longer downloadable. Commercial use requires a paid plan. If you just want to hear what text-to-song generation sounds like before deciding whether to pay, the free tier serves that purpose.\n\n**Udio (free tier, browser)**\nSimilar to Suno. Free tier gives 100 credits per month with a hard cap of 10 per day, and 3 full-length generations per day. Voice Control and Style Blending features require a paid plan. Commercial use terms have been evolving following licensing settlements with Universal Music Group and Warner Music Group in late 2025. Check Udio's current terms of service before relying on commercial rights from any tier.",
+          "tools": [
+            {
+              "name": "BandLab",
+              "url": "https://www.bandlab.com/ai",
+              "description": "Free cloud-based DAW with built-in AI tools including stem separation, mastering, and song generation via genre selection.",
+              "strengths": [
+                "Completely free for core AI features with no credit card required",
+                "Works in a browser and on mobile, no installation needed",
+                "Outputs cleared for royalty-free commercial use",
+                "Genre-based SongStarter is more accessible than free-form text prompts for non-technical users"
+              ],
+              "limitations": [
+                "SongStarter uses genre/mood selection rather than detailed text prompts, giving less granular control",
+                "Splitter's guitar stem is locked to the paid membership tier",
+                "Some AI features (AI FX Preset Generator) are members-only",
+                "Output quality reflects a free tool: useful as a starting point, not a finished product"
+              ]
+            },
+            {
+              "name": "Suno",
+              "url": "https://suno.com/pricing",
+              "description": "Text-to-song generator that produces full produced tracks with vocals and arrangement from a text prompt.",
+              "strengths": [
+                "Free tier lets you hear results without paying",
+                "Generates full tracks including vocals quickly",
+                "Pro and Premier plans grant commercial use rights"
+              ],
+              "limitations": [
+                "Free tier songs are not downloadable under 2026 updated terms",
+                "Commercial use requires paid plan ($10/month Pro or $30/month Premier)",
+                "Fully AI-generated output cannot be copyrighted under current US and UK law",
+                "Prompt-to-output quality is unpredictable; significant curation required"
+              ]
+            },
+            {
+              "name": "Udio",
+              "url": "https://www.udio.com",
+              "description": "Text-to-song generator similar to Suno, with Standard ($10/month) and Pro ($30/month) paid tiers.",
+              "strengths": [
+                "Free tier available with 100 credits per month",
+                "Pay-as-you-go add-on credits available (100 credits for $3, never expire)",
+                "Style Blending on paid tiers offers more control over output character"
+              ],
+              "limitations": [
+                "Commercial use terms changed materially following late-2025 licensing settlements; verify current ToS before relying on commercial rights",
+                "Free-tier caps (10 generations per day, 3 full-length per day) limit meaningful exploration",
+                "Voice Control and Style Blending locked to Standard tier and above",
+                "Credits do not roll over month to month on paid plans"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s4",
+          "heading": "Tools for Audio Cleanup and Restoration",
+          "body_markdown": "This is the category with the most consistent practical value for musicians who record acoustic instruments or voice. If you have ever recorded a great take in a less-than-ideal room, or found a hum or click in a track you cannot re-record, iZotope RX addresses exactly that.\n\n**iZotope RX** uses machine learning to identify and remove specific audio problems: background noise, room tone, hum, plosives, clicks, reverb bleed. It works as a plugin inside major DAWs including Logic Pro, Pro Tools, Ableton Live, Cubase, Studio One, FL Studio, Reaper, and others, as well as Adobe Audition and Premiere Pro. It is not a composition or generation tool. It repairs existing recordings.\n\nThere is no permanent free tier. iZotope offers a 7-day trial, but trial outputs include an audible watermark. Pricing exists at three perpetual-license levels (Elements, Standard, Advanced) and via iZotope Plus and Pro subscriptions through Native Instruments' Native Access portal. An independent review observed perpetual prices around $49 for Elements, $399 for Standard, and $799 for Advanced as of June 2026, though iZotope runs frequent sales of 30 to 50 percent. Verify current pricing at izotope.com before purchasing, as prices change.\n\nFor most non-technical musicians, Elements is enough to handle common problems: dialogue noise, hum removal, de-click. Standard and Advanced add more surgical repair tools aimed at professional post-production work.\n\n**Supported operating systems:** macOS Sonoma, Sequoia, and Tahoe; Windows 10 (22H2) and Windows 11 (24H2).",
+          "tools": [
+            {
+              "name": "iZotope RX",
+              "url": "https://www.izotope.com/pages/subscriptions",
+              "description": "AI/ML-powered audio cleanup and restoration plugin suite. Repairs recordings rather than generating music.",
+              "strengths": [
+                "Reliable, targeted results for specific audio problems (noise, hum, clicks, reverb)",
+                "Works inside most major DAWs as a plugin",
+                "Elements tier covers the most common use cases at a lower price point",
+                "Does not require any generative AI workflow or text prompting"
+              ],
+              "limitations": [
+                "No permanent free tier, only a 7-day watermarked trial",
+                "Standard and Advanced perpetual licenses are expensive for casual use",
+                "Not a composition or generation tool, it only repairs existing audio",
+                "Pricing changes frequently; verify before purchasing"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s5",
+          "heading": "Tools for Production, Mixing, and Mastering",
+          "body_markdown": "AI mastering tools apply a trained model to your mix and return a louder, more spectrally balanced version. They are faster and cheaper than a human mastering engineer. They are also less nuanced. For demos, rough releases, or tracks where budget is tight, they are practical. For an album you have spent a year on, they are a starting point at best.\n\n**LANDR** is the most widely known AI mastering service. It offers unlimited MP3 mastering on its Essentials plan and adds WAV mastering on Standard and Pro tiers. It also has a DAW plugin that runs its mastering engine inside your session in real time. An independent review found that LANDR's free tier in 2026 is preview-only: you can upload a track and hear the mastered result in the browser, but every download requires payment. The trial includes an audible watermark noise burst approximately every 30 seconds. Independently observed pricing is around $12.99 per month for Essentials (unlimited MP3) and $24.99 per month for Pro (unlimited WAV). Verify current pricing at landr.com/pricing/master before subscribing.\n\n**BandLab AI Mastering** (covered above under entry points) is free for shorter tracks and is a reasonable first experiment if you want to hear what automated mastering sounds like without any financial risk.\n\n**Splice AI tools** take a different angle. Rather than generating full songs, Splice's generative tools (launched April 2026) work with its existing catalog of over 3 million human-made, licensed samples. The Variations tool creates new versions of any Splice sample, adjusting structure, key, and BPM. The Craft tool transforms samples into playable instruments inside its INSTRUMENT plugin. All output is licensed for commercial use, and original sample creators are compensated when their sounds are used as source material. This is not a text-to-full-song generator. It is closer to a sample manipulation and arrangement assistant, which makes it more useful for producers who already work with loops and samples than for songwriters starting from scratch.",
+          "tools": [
+            {
+              "name": "LANDR",
+              "url": "https://www.landr.com/online-audio-mastering",
+              "description": "AI mastering service with browser-based and DAW plugin versions. Offers unlimited MP3 mastering on paid plans.",
+              "strengths": [
+                "Quick turnaround on mastered previews, useful for evaluating a mix",
+                "DAW plugin lets you hear mastering in real time inside your session",
+                "Unlimited mastering on paid tiers is cost-effective for high volume"
+              ],
+              "limitations": [
+                "Free tier is preview-only with a watermarked trial; not free in any practical sense for finished work",
+                "WAV export requires Standard or Pro plan",
+                "Results are less nuanced than a skilled human mastering engineer",
+                "Subscription pricing should be verified at landr.com before committing"
+              ]
+            },
+            {
+              "name": "Splice AI Tools",
+              "url": "https://splice.com",
+              "description": "Generative AI tools (Variations, Craft, Magic Fit) built on Splice's licensed human-made sample catalog. Not a text-to-song generator.",
+              "strengths": [
+                "All output commercially licensed",
+                "Original creators compensated when their sounds are used as source",
+                "Works within existing sample-based production workflows rather than replacing them",
+                "Variations tool adjusts key and BPM to fit your session"
+              ],
+              "limitations": [
+                "Requires a Splice subscription to access the catalog and tools",
+                "Not useful if you do not already work with samples and loops",
+                "Generative features are newer (launched April 2026); long-term quality and reliability not yet established"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s6",
+          "heading": "Tools for Composition and Sound Design",
+          "body_markdown": "**Stable Audio 3.0** is worth knowing about even though it is the least accessible option on this list for non-technical users. Stability AI released it in May 2026 as a family of open-weight models. Three variants (Small SFX, Small, Medium) are available as free downloads on Hugging Face. The Small models run on CPU only, no GPU required, and the Medium model runs on consumer-grade laptops. The Large model (2.7B parameters) is API-only.\n\nThe catch: there is no standalone consumer app or website. Accessing it means either using the Stability AI API, going through a partner platform like fal.ai, or running open-weight models locally. That last option requires comfort with Python environments or a tool like ComfyUI. This is not a realistic starting point for non-technical musicians right now.\n\nWhat makes it notable is the licensing model. Under the Stability AI Community License, users own their outputs and can distribute and commercialize them freely (organizations with annual revenue above $1 million require an Enterprise license). It is also primarily an instrumental and sound design model. It does not generate AI vocals or lyrics, unlike Suno or Udio. If you want to generate ambient textures, sound effects, or instrumental sketches and you are comfortable with some technical setup, it is worth watching as the ecosystem of interfaces around it matures.",
+          "tools": [
+            {
+              "name": "Stable Audio 3.0",
+              "url": "https://stability.ai/news-updates/meet-stable-audio-3-the-model-family-built-for-artistic-experimentation-with-open-weight-models",
+              "description": "Open-weight AI models for instrumental music generation and sound design. No consumer app; accessed via API, partner platforms, or local installation.",
+              "strengths": [
+                "Open-weight models are free to download and use",
+                "Outputs commercially usable under the Community License",
+                "Small models run on CPU with no GPU required",
+                "Trained on fully licensed data per Stability AI's announcement"
+              ],
+              "limitations": [
+                "No consumer-facing app or website; requires API, partner platform, or local technical setup",
+                "Not a realistic starting point for non-technical musicians at this stage",
+                "Does not generate vocals or lyrics",
+                "Large model is API-only and requires enterprise licensing for revenue-generating organizations"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s7",
+          "heading": "Copyright: What You Actually Own",
+          "body_markdown": "This matters practically, not just legally. Under current US law, fully AI-generated music without substantial human involvement does not qualify for copyright protection. The US Court of Appeals affirmed this on March 21, 2025, and the Supreme Court left that ruling in place on March 2, 2026. The UK Intellectual Property Office confirmed in early 2024 that copyright does not automatically subsist in music created solely by AI without human involvement.\n\n**What this means for you:**\n- You can sell fully AI-generated music commercially (on a paid Suno or Udio plan, for example).\n- But you cannot stop anyone else from copying it. There is no copyright protection to enforce.\n- Works combining AI-generated elements with meaningful human authorship may qualify for copyright protection for the human-authored portions only.\n- PROs including ASCAP and BMI have begun rejecting pure prompt-to-song output for registration.\n\nThe practical implication: if you use AI to generate a chord progression and then write original melody and lyrics over it, the human-authored portions may be protectable. If you type a prompt and release the result unchanged, you have a product but not intellectual property in the legal sense.\n\nThis is a fast-moving area. UK policy remains unsettled as of mid-2026 following a government consultation that closed in February 2025. Keep checking guidance from your relevant PRO before making distribution decisions.",
+          "tools": []
+        },
+        {
+          "id": "s8",
+          "heading": "What You Will Need: Accounts, Hardware, and Budget",
+          "body_markdown": "**To start for free, you need:**\n- A browser (Chrome or Firefox work reliably with BandLab, Suno, and Udio)\n- A free account on whichever platform you choose\n- An audio file or recording if you are trying cleanup or mastering tools\n\n**Hardware minimums:**\n- For browser-based tools (BandLab, Suno, Udio, LANDR preview): any computer or smartphone made in the last seven years will work.\n- For iZotope RX as a plugin: a Mac running Sonoma or later, or a PC running Windows 10 (22H2) or Windows 11, plus a compatible DAW.\n- For Stable Audio 3.0 open-weight models locally: CPU-only for the Small models; a consumer laptop is sufficient for the Medium model per Stability AI's own documentation. GPU requirements for other locally-run tools were not confirmed in our research and should be checked per tool before committing.\n\n**Budget overview:**\n- Free experimentation: BandLab AI tools, Suno free tier (play and share only), Udio free tier\n- Around $10/month: Suno Pro or Udio Standard (commercial rights, more generations)\n- Around $12 to $25/month: LANDR Essentials or Pro (verify current pricing at landr.com)\n- $49 and up (one-time): iZotope RX Elements perpetual license (verify current pricing at izotope.com)\n\nOne note on subscriptions: Suno and Udio credits do not roll over month to month. If you are not generating regularly, a monthly subscription may not be cost-effective compared to Udio's pay-as-you-go add-on credits ($3 for 100 credits, never expiring).",
+          "tools": []
+        },
+        {
+          "id": "s9",
+          "heading": "A First-Week Workflow: How to Try One Tool Without Disrupting Your Process",
+          "body_markdown": "Pick one category that matches a real friction point in your current work. Do not try to overhaul your process.\n\n**If your friction point is demo quality or arrangement ideas:**\n1. Create a free BandLab account at bandlab.com.\n2. Open SongStarter, select the genre and mood closest to something you are working on.\n3. Generate three or four versions. Listen back with your musician ears, not your consumer ears.\n4. Note which elements (a rhythm pattern, a chord voicing, a tempo feel) you would have chosen differently. That gap is where your musical judgment lives.\n5. If anything is 70% useful, import the idea into your existing DAW as a reference.\n\n**If your friction point is a noisy recording you cannot re-record:**\n1. Download the iZotope RX trial (7-day, watermarked).\n2. Run the Repair Assistant on your problem file and listen to what it does.\n3. Decide before the trial ends whether the repair quality justifies the Elements purchase price.\n\n**If you want to hear what text-to-song generation sounds like:**\n1. Create a free Suno account.\n2. Use your 50 daily credits to generate 8 to 10 songs from prompts that describe a style or mood you know well.\n3. Compare the results to your mental model of what that style should sound like. The gap between what you expected and what you got tells you more about the tool's limitations than any review will.\n\n**What to do after the first week:**\nWrite down (or record a voice memo of) what the tool did that surprised you positively, and what frustrated you. That list is more useful than any feature comparison for deciding whether to pay.",
+          "tools": []
+        },
+        {
+          "id": "s10",
+          "heading": "Red Flags and Limitations to Know Before You Spend Money",
+          "body_markdown": "**Inconsistent output quality.** Text-to-song generators produce wildly variable results. One prompt can generate something usable and three nearly identical prompts can produce garbage. Budget time for curation, not just generation.\n\n**Evolving commercial rights.** Udio's terms changed materially following its late-2025 licensing settlements. Suno's free tier terms changed in 2026. Always read the current ToS before relying on commercial rights. Do not assume what was true six months ago is still true.\n\n**Trials that are not really free.** LANDR's free tier is preview-only: every download requires payment, and the trial outputs are watermarked. iZotope RX has no permanent free tier, only a 7-day trial. Factor this into your evaluation plan.\n\n**Copyright gaps on fully generated output.** As noted above: you can sell it, you cannot protect it. If intellectual property matters to your business model, use AI as a collaborator and document your human creative contributions.\n\n**No rollover on subscription credits.** Both Suno and Udio credits reset monthly with no carryover. If you subscribe and then go two weeks without generating, you lose that credit. Consider whether your actual usage pattern justifies a subscription versus pay-as-you-go credits.\n\n**Vocal quality in text-to-song tools is improving but inconsistent.** Lyrics and vocal delivery can sound uncanny or garbled, especially on proper nouns or unusual phrasing. For demo vocals, this may not matter. For anything facing an audience, plan to replace or heavily edit.",
+          "tools": []
+        },
+        {
+          "id": "s11",
+          "heading": "How to Evaluate Whether a Tool Is Actually Helping You",
+          "body_markdown": "After two to four weeks of use, ask these questions:\n\n**Did it save time on a task that was genuinely slowing you down?** If you spent 30 minutes on a noisy recording fix that used to take three hours, that is a clear yes. If you spent 45 minutes generating and curating AI ideas and ended up not using any of them, that is a clear no for that particular workflow.\n\n**Did it produce anything you would not have produced yourself?** This is the more interesting question. If the tool generated a rhythmic pattern or chord movement you find genuinely useful and surprising, that is creative value. If everything it generated felt like a generic version of music you already know, the tool is not adding much.\n\n**Is the cost proportional to what you actually use?** Run a simple check: how many generations or repairs did you actually do this month? Divide the subscription cost by that number. Does it feel reasonable per use?\n\n**Are you spending more time managing the tool than making music?** This is the most common failure mode. If learning the workflow, managing exports, and evaluating outputs is taking more creative energy than it saves, it is not the right tool for your process yet. That may change as the tools improve. It is fine to step back and check again in six months.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "Start with BandLab's free AI tools or Suno's free tier to try AI music without spending money, then evaluate whether paid tiers are worth it based on actual use.",
+        "AI music tools fall into four categories: text-to-song generation, audio cleanup, production and mastering, and sample transformation. Match the category to a real friction point in your workflow before picking a tool.",
+        "Fully AI-generated music cannot be copyrighted under current US and UK law. You can sell it commercially on paid plans, but you cannot stop others from copying it.",
+        "Udio and Suno commercial use terms have changed following licensing settlements in late 2025. Always read current terms of service before relying on commercial rights from any platform.",
+        "The most useful evaluation question is whether the tool saved time on something genuinely slowing you down, or produced something you would not have made yourself. If neither is true after a few weeks, the tool is not the right fit for your process."
+      ],
+      "conclusion": "AI music tools are neither the revolution their promoters claim nor the irrelevance their critics suggest. For experienced musicians, the most realistic value is in specific, targeted tasks: cleaning up a noisy recording, getting a quick mastered preview, generating rough material to react to. The tools that deliver that value reliably already exist and many of them are free to try.\n\nThe honest advice is to start narrow. Pick the one friction point in your current work where you lose the most time or energy, find the tool category that addresses that specific problem, and spend one week with the free tier before deciding anything else. Your musical judgment is still the most valuable thing in the room. These tools work best when they are doing the tedious parts so you can focus on the parts only you can do.",
+      "methodology_disclosure": "This guide was researched and synthesized from official pricing and terms-of-service pages for each tool mentioned, supplemented by independent reviews from specialist music technology and legal publications. All pricing figures and commercial rights claims were cross-referenced against primary sources where available. Claims that could not be verified against primary sources are either flagged explicitly in the text, attributed to independent observers rather than stated as fact, or omitted. Readers are directed to verify current pricing and terms directly with each platform before making purchasing decisions, as pricing and rights terms in this space change frequently. Dailyblip did not independently test any of the tools described in this guide.",
+      "last_reviewed_date": "July 17, 2026"
+    }
   }
 ]
