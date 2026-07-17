@@ -1621,5 +1621,22 @@
       "message": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.\"},\"request_id\":\"req_011Cd6zca68yTDBv7FQPtnzu\"}",
       "at": "2026-07-17T04:24:59.804Z"
     }
+  },
+  {
+    "id": "131bcd49-dded-4b91-a80f-3b529b0caaa1",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top AI tools for video editing",
+      "article_type": "Top tools list",
+      "target_audience": "",
+      "target_length": "Standard",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T04:28:50.355Z",
+    "updated_at": "2026-07-17T04:28:50.355Z"
   }
 ]
