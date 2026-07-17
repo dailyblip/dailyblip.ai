@@ -144,12 +144,12 @@ async function stageResearch(job) {
     role: "write",
     system: RESEARCH_SYSTEM,
     prompt: JSON.stringify({ topic: job.submitted.idea, claims_to_verify: job.brief?.claims_to_verify || [] }),
-    // Scaled by target_length (see LENGTH_CONFIG below) \u2014 previously
-    // flat at 8000/10 searches regardless of length, so a Quick guide
-    // was paying for Deep-dive-sized research it never needed. The
-    // 10-source cap in RESEARCH_SYSTEM above still applies at every
-    // tier as the hard ceiling on output size.
-    maxTokens: cfg.researchTokens,
+    // maxSearches genuinely scales with length (fewer searches = fewer
+    // $0.01 fees + less search-result context). maxTokens is a flat,
+    // generous ceiling regardless of tier \u2014 see LENGTH_CONFIG's comment
+    // for why scaling this down provided no real savings and caused
+    // real truncation failures.
+    maxTokens: 8000,
     maxSearches: cfg.researchSearches,
   });
   job.sources = (result.sources || []).map((s) => ({ ...s, accessed_date: new Date().toISOString().slice(0, 10) }));
@@ -157,18 +157,22 @@ async function stageResearch(job) {
 }
 
 // ---- Stage: draft -------------------------------------------------------
-// Cost scales with target_length \u2014 research and draft budgets were
-// previously FLAT regardless of length, meaning every "Quick" (800-1200
-// word) guide paid for the same 8000-token draft ceiling and 10-search
-// research budget as a "Deep dive" (2500-3500 word) guide, even though
-// it needs a fraction of both. These numbers include real headroom
-// above the target word count (not a tight fit), since running out of
-// room mid-generation is a worse failure than a slightly generous
-// ceiling.
+// researchSearches genuinely affects cost \u2014 fewer searches means
+// fewer $0.01 search fees AND less search-result content entering
+// context. Token CEILINGS below are deliberately uniform and generous
+// across every tier, not scaled down: max_tokens is a limit, not a
+// charge \u2014 you're billed for tokens actually generated, not however
+// high the ceiling is set, so a shorter guide naturally costs less
+// without needing a tighter ceiling. Scaling the ceiling down (an
+// earlier version of this file did) saved nothing in the success case
+// and caused real truncation failures in production once a response
+// ran even slightly longer than the tight estimate \u2014 a failed run
+// wastes 100% of every earlier stage's cost, which is a far worse
+// outcome than an unused few thousand tokens of ceiling headroom.
 const LENGTH_CONFIG = {
-  Quick: { words: "800 to 1200 words total", researchTokens: 4000, researchSearches: 5, draftTokens: 3500 },
-  Standard: { words: "1500 to 2200 words total", researchTokens: 6000, researchSearches: 8, draftTokens: 5500 },
-  "Deep dive": { words: "2500 to 3500 words total", researchTokens: 8000, researchSearches: 10, draftTokens: 8000 },
+  Quick: { words: "800 to 1200 words total", researchSearches: 5 },
+  Standard: { words: "1500 to 2200 words total", researchSearches: 8 },
+  "Deep dive": { words: "2500 to 3500 words total", researchSearches: 10 },
 };
 
 const DRAFT_SYSTEM = `You write the full draft of a dailyblip guide. ${EDITORIAL_RULES}
@@ -225,7 +229,12 @@ async function stageDraft(job) {
       sources: job.sources,
       unverifiable_claims: job.unverifiable_claims,
     }),
-    maxTokens: cfg.draftTokens,
+    // Flat, generous ceiling regardless of length tier \u2014 the prompt's
+    // length_target already tells the model how long to actually write;
+    // the ceiling only needs to be high enough to never be the limiting
+    // factor. This is the exact call that failed in production when it
+    // was scaled down for shorter tiers.
+    maxTokens: 8000,
   });
   assertArticleShape(job.article, "draft");
   job.article.last_reviewed_date = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
@@ -363,9 +372,12 @@ async function stageImages(job) {
     role: "write",
     system: IMAGE_BRIEF_SYSTEM,
     prompt: JSON.stringify({ slots, article_title: job.article.title, sections: sectionPreviews }),
-    // Scaled by how many images were actually requested (2 or 3), not a
-    // flat budget sized for the worst case every time.
-    maxTokens: slots.length >= 3 ? 4000 : 2800,
+    // Flat ceiling regardless of image count \u2014 same correction as
+    // research/draft above: the ceiling itself costs nothing unless
+    // actually hit, so there's no real saving from scaling it down by
+    // image count. The section-preview trimming above IS a genuine
+    // saving (real input tokens sent, not an unused limit).
+    maxTokens: 4000,
   });
   const briefs = briefResult.images || [];
 
