@@ -78,8 +78,8 @@
   },
   {
     "id": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5",
-    "status": "in_progress",
-    "stage": "Re-checking",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Getting start creating AI music",
       "article_type": "Beginner explainer",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T17:19:20.336Z",
-    "updated_at": "2026-07-17T17:52:26.013Z",
+    "updated_at": "2026-07-17T17:59:00.832Z",
     "brief": {
       "target_reader": "Creators (musicians, hobbyists, filmmakers, content creators) with zero experience using AI music tools, who are curious but skeptical of hype and want a practical starting point rather than a sales pitch",
       "reader_outcome": "The reader should be able to choose one AI music tool appropriate for their immediate need, generate their first piece of audio, and understand the basic constraints (quality, rights, cost) before committing to anything",
@@ -294,7 +294,7 @@
         {
           "id": "s2",
           "heading": "Three Tools Worth Starting With",
-          "body_markdown": "Here's a quick take on three tools that are actually accessible to beginners right now, each good for a slightly different situation.\n\n## Suno: Best for just getting started\n\nSuno is the easiest on-ramp. You type a prompt, optionally add style tags, and it generates a complete song with lyrics and vocals in seconds. The interface is minimal enough that you don't need to read any documentation to get going.\n\nPer Suno's help center (help.suno.com), the free plan includes 50 credits that replenish daily, which works out to roughly 10 songs per day. No credit card is required to start. According to Suno's Terms of Service, free-tier output is licensed for personal, non-commercial use only, and you must give attribution to Suno. If you want to use output commercially, that starts at the Pro plan ($10/month), which also grants you downloadable audio.\n\nOn stem separation: per Suno's release notes (suno.com/release-notes), three split modes have been released as distinct features: Auto Split (vocals/instruments), Split from Mix, and Advanced Split (individual instrument isolation). According to reporting from Dubspot Blog (citing Suno's feature rollout), Auto Split is available on Pro and Premier plans, while Advanced Split is gated to Premier. Confirm current tier gating at suno.com/pricing, as these details may have changed since that reporting.\n\nOne heads-up from the ToS: tracks made using the Remix feature may not be eligible for commercial use, even on paid plans, since Suno classifies remixes as joint works.\n\n## Udio: Great audio quality, but currently download-disabled\n\nUdio produces audio that many users find particularly detailed and musical. The catch right now is significant: according to Udio's own help center, downloads are currently unavailable. That means Udio is currently a streaming-only platform. You can make things and listen to them inside Udio, but you can't export them. Per reporting from Chartlex (citing Billboard and RouteNote), this followed a settlement with Universal Music Group, with those outlets as the underlying sources for that causal claim. Note that Udio Pro nominally still grants commercial rights per its terms, but with downloads disabled, those rights aren't practically accessible right now.\n\nFor free-tier limits, Udio's official help documentation confirms free-tier users are capped at 3 generations per day (framed as u-130 generations in their credit documentation). Chartlex (citing its own AI music comparison research published July 2026) reports the free tier as 10 daily credits plus 100 monthly credits, which it calculates as roughly 3 full-length song generations per day from the daily allotment. These two framings may be compatible, but the monthly credit pool figure comes from that secondary source rather than Udio's official help documentation; check help.udio.com for current details on how daily and monthly limits interact. A re-enabled download service is reportedly expected later in 2026, but hadn't launched as of the time this guide was researched. Keep an eye on it, but don't rely on it for a project right now.\n\n## Beatoven.ai: Better for background and sync music\n\nBeatoven.ai takes a different approach. Rather than lyrics-and-vocals songs, it focuses on instrumental background tracks for video, podcasts, and other content. You pick a mood, a genre, and a duration, and it generates something designed to sit under other audio without fighting for attention.\n\nBeatoven.ai claims a \"Fairly Trained\" certification. Fairly Trained is a program run by a nonprofit (Created by Humans); check the public registry at fairlytrained.org directly to confirm current certification status, rather than relying on company marketing materials. On paid plans, output is licensed for commercial use including YouTube and social media, and you get a perpetual, royalty-free license, though Beatoven retains ownership of the generated tracks. A free tier exists, but the specific quotas weren't reliably confirmed from official sources at the time of research. Check beatoven.ai/pricing directly for current details before making a plan around it.",
+          "body_markdown": "Here's a quick take on three tools that are actually accessible to beginners right now, each good for a slightly different situation.\n\n## Suno: Best for just getting started\n\nSuno is the easiest on-ramp. You type a prompt, optionally add style tags, and it generates a complete song with lyrics and vocals in seconds. The interface is minimal enough that you don't need to read any documentation to get going.\n\nPer Suno's help center (help.suno.com), the free plan includes 50 credits that replenish daily, which works out to roughly 10 songs per day. No credit card is required to start. According to Suno's Terms of Service, free-tier output is licensed for personal, non-commercial use only, and you must give attribution to Suno. If you want to use output commercially, that starts at the Pro plan. Check suno.com/pricing for the current monthly and annual rates, since pricing details may have changed.\n\nOn stem separation: per Suno's release notes (suno.com/release-notes/advanced-stems), three split modes have been released as distinct features: Auto Split (vocals/instruments), Split from Mix, and Advanced Split (individual instrument isolation). According to reporting from Dubspot Blog (citing Suno's feature rollout), Auto Split is available on Pro and Premier plans, while Advanced Split is gated to Premier. Confirm current tier gating at suno.com/pricing, as these details may have changed since that reporting.\n\nOne heads-up from the ToS: tracks made using the Remix feature may not be eligible for commercial use, even on paid plans, since Suno classifies remixes as joint works.\n\n## Udio: High audio quality, but check export availability before relying on it\n\nUdio produces audio that many users find particularly detailed and musical. A significant practical limitation: according to secondary reporting from Chartlex (published July 2026, citing Billboard and RouteNote), downloads were disabled following a settlement with Universal Music Group, and had not been re-enabled as of the time this guide was researched. Udio's own help center documentation does not address the download-disabled status directly, so check help.udio.com for current export availability before counting on Udio for a project you need to export.\n\nFor free-tier generation limits, Udio's official help documentation (help.udio.com) confirms free-tier users are capped at 3 u-130 generations per day. Chartlex (citing its own AI music comparison research published July 2026) additionally reports a monthly credit pool of 100 credits for free users, but that figure comes from that secondary source rather than Udio's official help documentation. Check help.udio.com directly for how daily and monthly limits interact and which figure is currently authoritative.\n\nRegarding commercial rights on paid plans: Chartlex's secondary reporting describes Udio Pro as nominally granting commercial rights, but this was not confirmed directly against Udio's own Terms of Service or pricing page for this guide. Check udio.com/pricing and Udio's ToS directly if commercial rights matter for your use case.\n\n## Beatoven.ai: Better for background and sync music\n\nBeatoven.ai takes a different approach. Rather than lyrics-and-vocals songs, it focuses on instrumental background tracks for video, podcasts, and other content. You pick a mood, a genre, and a duration, and it generates something designed to sit under other audio without fighting for attention.\n\nBeatoven.ai claims a \"Fairly Trained\" certification. Fairly Trained is a program that certifies AI companies for ethical training practices; check the public registry at fairlytrained.org directly to confirm current certification status and the organization behind it, rather than relying on company marketing materials. On paid plans, output is licensed for commercial use including YouTube and social media, and you get a perpetual, royalty-free license, though Beatoven retains ownership of the generated tracks. A free tier exists, but the specific quotas weren't reliably confirmed from official sources at the time of research. Check beatoven.ai/pricing directly for current details before making a plan around it.",
           "tools": [
             {
               "name": "Suno",
@@ -340,7 +340,7 @@
         {
           "id": "s4",
           "heading": "What to Watch Out For",
-          "body_markdown": "A few things that catch beginners off guard:\n\n**Rights are not the same across tools or tiers.** Suno's free tier is explicitly personal use only, per their ToS. Suno's Pro and Premier plans assign commercial rights to you, but this is an assignment of rights, not a copyright transfer. Current U.S. Copyright Office guidance holds that purely AI-generated works aren't copyrightable on their own. If you're making music for a client or putting it on streaming platforms, read the ToS for whatever plan you're on before you do anything.\n\n**Litigation is ongoing.** As of mid-2026, Suno is still in active litigation with Sony Music and Universal Music Group, according to secondary reporting. A settlement between Warner Music Group and Suno has been reported by Chartlex, which cites Billboard and RouteNote as underlying sources for that claim. This doesn't necessarily affect your ability to use the tool today, but it's worth knowing the legal landscape isn't settled.\n\n**Free tiers have real limits.** Per Suno's help center, the free plan includes 50 credits that replenish daily, good for roughly 10 songs per day. Udio's free tier includes a daily generation cap confirmed by Udio's help center (framed as 3 u-130 generations per day in their documentation); Chartlex reports this as 10 daily credits plus 100 monthly credits, though the monthly figure comes from that secondary source rather than Udio's official documentation. And again, no downloads from Udio right now.\n\n**Stems and editing are still mostly paid or limited.** If your plan involves dropping AI-generated audio into a DAW and mixing individual elements, verify that your tool and plan tier actually support stem export before committing. Per Dubspot Blog's reporting on Suno's feature rollout, Auto Split is available on Pro and Premier plans and Advanced Split is gated to Premier. Confirm this against Suno's current pricing documentation (suno.com/pricing), as tier gating may have changed since that reporting.\n\n**Quality is real, but not magic.** These tools can produce tracks that sound impressive on first listen and fall apart under scrutiny. Weird lyric choices, generic arrangements, and repetitive structures are common. Use AI output as a starting point, a sketch, or a reference, not always as a finished product.",
+          "body_markdown": "A few things that catch beginners off guard:\n\n**Rights are not the same across tools or tiers.** Suno's free tier is explicitly personal use only, per their ToS. Suno's Pro and Premier plans assign commercial rights to you, but this is an assignment of rights, not a copyright transfer. Current U.S. Copyright Office guidance holds that purely AI-generated works aren't copyrightable on their own. If you're making music for a client or putting it on streaming platforms, read the ToS for whatever plan you're on before you do anything.\n\n**Litigation is ongoing.** As of mid-2026, Suno is still in active litigation with Sony Music and Universal Music Group, according to secondary reporting. A settlement between Warner Music Group and Suno has been reported by outlets including Billboard and RouteNote, as cited by Chartlex in its July 2026 comparison research. This doesn't necessarily affect your ability to use the tool today, but it's worth knowing the legal landscape isn't settled.\n\n**Free tiers have real limits.** Per Suno's help center, the free plan includes 50 credits that replenish daily, good for roughly 10 songs per day. Udio's official help documentation confirms a daily generation cap for free-tier users (framed as 3 u-130 generations per day); Chartlex additionally reports a monthly credit pool of 100 credits, though that figure comes from secondary reporting rather than Udio's official documentation. Check help.udio.com for current details. And verify current export availability at Udio before relying on it for any project you need to take outside the platform.\n\n**Stems and editing are still mostly paid or limited.** If your plan involves dropping AI-generated audio into a DAW and mixing individual elements, verify that your tool and plan tier actually support stem export before committing. Per Dubspot Blog's reporting on Suno's feature rollout, Auto Split is available on Pro and Premier plans and Advanced Split is gated to Premier. Confirm this against Suno's current pricing documentation (suno.com/pricing), as tier gating may have changed since that reporting.\n\n**Quality is real, but not magic.** These tools can produce tracks that sound impressive on first listen and fall apart under scrutiny. Weird lyric choices, generic arrangements, and repetitive structures are common. Use AI output as a starting point, a sketch, or a reference, not always as a finished product.",
           "tools": []
         }
       ],
@@ -360,66 +360,58 @@
         {
           "severity": "high",
           "section_id": "s2",
-          "original_text": "downloads are currently unavailable... since October 2025",
-          "issue": "The article attributes Udio's download disabling directly to a UMG settlement as a stated fact, but the source chain is secondary (Chartlex citing Billboard/RouteNote), not confirmed by Udio's official help center, which is presented as a primary source for other Udio claims.",
-          "supporting_source_url": "https://help.udio.com/en/articles/10739134-credits-and-credit-limits"
+          "original_text": "downloads were disabled following a settlement with Universal Music Group",
+          "issue": "The article says downloads were disabled due to a UMG settlement, but the Chartlex source reports the settlement is with UMG and that a re-enabled licensed service is expected; the framing implies downloads are permanently disabled rather than temporarily suspended pending a new licensed platform launch, which is misleading about the nature of the situation."
         },
         {
           "severity": "high",
           "section_id": "s2",
-          "original_text": "Pro plan ($10/month), which also grants you downloadable audio",
-          "issue": "Suno's ToS and pricing page, as listed in the sources, do not confirm that downloads require the Pro plan specifically — the article states this as fact but the sources don't explicitly verify that free-tier users cannot download at all, only that commercial use is restricted; download availability for free users is stated as uncertain elsewhere in the same article.",
-          "supporting_source_url": "https://suno.com/terms-of-service"
+          "original_text": "Chartlex (published July 2026, citing Billboard and RouteNote)",
+          "issue": "The article attributes the Udio download-disabled claim partly to Chartlex citing Billboard and RouteNote, but the Chartlex source states it was confirmed against Udio's own help center — misrepresenting the sourcing chain for a significant factual claim."
         },
         {
           "severity": "medium",
           "section_id": "s2",
-          "original_text": "Warner Music Group settled with Suno has been reported by Chartlex",
-          "issue": "The article correctly cites Chartlex as the source but states the settlement occurred in 'November 2025' in the sources metadata while the article body doesn't specify a date — the month detail in the source record is unverified by any primary source listed.",
-          "supporting_source_url": "https://www.chartlex.com/blog/marketing/ai-music-generator-comparison-2026"
+          "original_text": "Udio's official help documentation confirms free-tier users are capped at 3 u-130 generations per day",
+          "issue": "The article omits the 10 daily credits + 100 monthly credits structure reported by Chartlex and confirmed plausibly against Udio's pricing page, presenting an incomplete picture of Udio's free-tier limits by selectively citing only one figure from official docs."
         },
         {
           "severity": "medium",
-          "section_id": "s2",
-          "original_text": "Beatoven.ai claims a 'Fairly Trained' certification",
-          "issue": "The article directs readers to verify at fairlytrained.org but the source listed is Beatoven's own pricing page, which is described as returning 'minimal crawlable detail' — the certification claim is unverified from a primary source (the actual Fairly Trained registry).",
-          "supporting_source_url": "https://www.beatoven.ai/pricing"
-        },
-        {
-          "severity": "medium",
-          "section_id": "quick_answer",
-          "original_text": "free plan includes 50 credits that replenish daily, enough for around 10 songs per day",
-          "issue": "The quick_answer omits the attribution requirement for free-tier use stated in Suno's ToS, which is a material commercial-use condition that beginners need upfront.",
-          "supporting_source_url": "https://suno.com/terms-of-service"
+          "section_id": "key_takeaways",
+          "original_text": "all downloads are currently disabled (since October 2025)",
+          "issue": "The article states downloads have been disabled since October 2025 as a settled fact, but the Chartlex source cites October 29, 2025 as the disable date per independent observation, not official Udio documentation — this should be caveated as secondary reporting rather than stated as verified fact."
         },
         {
           "severity": "medium",
           "section_id": "s4",
-          "original_text": "A settlement between Warner Music Group and Suno has been reported by Chartlex",
-          "issue": "Chartlex is a secondary source citing Billboard and RouteNote for this claim; the article presents the WMG settlement as reported fact without noting it couldn't be verified against a primary source, which is inconsistent with the methodology disclosure's stated standards.",
-          "supporting_source_url": "https://www.chartlex.com/blog/marketing/suno-vs-udio-2026"
+          "original_text": "A settlement between Warner Music Group and Suno has been reported by outlets including Billboard and RouteNote",
+          "issue": "The article says WMG settled with Suno, but the Chartlex source reports it was Warner Music Group settling — while consistent, the article also says Suno is still in active litigation with Sony and UMG in the same breath, which is accurate but could confuse readers into thinking WMG is also still litigating; minor but the phrasing is muddled."
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "per Suno's release notes (suno.com/release-notes/advanced-stems), three split modes have been released",
+          "issue": "The article says Auto Split splits into vocals/instruments (parenthetical), but the Dubspot Blog source reports Auto Split splits into up to 12 stem categories — the parenthetical description in the article is an understatement that mischaracterizes the feature."
         },
         {
           "severity": "low",
           "section_id": "s2",
-          "original_text": "Chartlex (citing its own AI music comparison research published July 2026)",
-          "issue": "Describing Chartlex as 'citing its own research' mischaracterizes the source — Chartlex is an independent blog, not a research institution, and framing its self-referential reporting this way overstates its credibility.",
-          "supporting_source_url": "https://www.chartlex.com/blog/marketing/ai-music-generator-comparison-2026"
+          "original_text": "Beatoven.ai claims a 'Fairly Trained' certification",
+          "issue": "The article correctly flags this as a company claim and directs readers to verify at fairlytrained.org, but the tool card in the same section describes it as a confirmed attribute without the same caveat, creating an inconsistency in how the claim is framed within the same section."
         },
         {
           "severity": "low",
-          "section_id": "s2",
-          "original_text": "three split modes have been released as distinct features: Auto Split...Split from Mix...Advanced Split",
-          "issue": "The release notes URL cited (suno.com/release-notes/advanced-stems) is a specific subdirectory path that has the appearance of an invented or constructed URL rather than a verified stable link, since Suno's release notes are typically paginated or listed differently.",
-          "supporting_source_url": "https://suno.com/release-notes/advanced-stems"
+          "section_id": "s3",
+          "original_text": "Suno will give you two variations by default",
+          "issue": "The article states Suno generates two variations by default, but this specific default behavior is not confirmed by any cited primary source and may have changed — no Suno help center or pricing page citation supports this specific claim."
         }
       ],
-      "checked_at": "2026-07-17T17:52:26.013Z",
+      "checked_at": "2026-07-17T17:59:00.832Z",
       "revised": true
     },
     "warnings": [
-      "s2: The article attributes Udio's download disabling directly to a UMG settlement as a stated fact, but the source chain is secondary (Chartlex citing Billboard/RouteNote), not confirmed by Udio's official help center, which is presented as a primary source for other Udio claims.",
-      "s2: Suno's ToS and pricing page, as listed in the sources, do not confirm that downloads require the Pro plan specifically — the article states this as fact but the sources don't explicitly verify that free-tier users cannot download at all, only that commercial use is restricted; download availability for free users is stated as uncertain elsewhere in the same article."
+      "s2: The article says downloads were disabled due to a UMG settlement, but the Chartlex source reports the settlement is with UMG and that a re-enabled licensed service is expected; the framing implies downloads are permanently disabled rather than temporarily suspended pending a new licensed platform launch, which is misleading about the nature of the situation.",
+      "s2: The article attributes the Udio download-disabled claim partly to Chartlex citing Billboard and RouteNote, but the Chartlex source states it was confirmed against Udio's own help center — misrepresenting the sourcing chain for a significant factual claim."
     ],
     "images": [
       {
