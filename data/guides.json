@@ -2209,7 +2209,7 @@
   {
     "id": "09859f39-9c90-4b00-b91c-ec5a012327cf",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top 1 music generation tool",
       "article_type": "Top tools list",
@@ -2221,7 +2221,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:30:05.655Z",
-    "updated_at": "2026-07-17T14:30:37.707Z",
+    "updated_at": "2026-07-17T14:31:57.857Z",
     "brief": {
       "target_reader": "Working musicians, producers, and composers who want to understand AI music generation tools: what they actually do, where they fit in a real workflow, and what their limitations are. Includes both technically curious beginners and experienced producers evaluating whether to integrate AI into their process.",
       "reader_outcome": "The reader should be able to identify the single most capable and practical AI music generation tool available today for their specific use case, understand what it does well and where it falls short, know the pricing and access model, and decide whether it is worth trying in their own workflow.",
@@ -2249,6 +2249,177 @@
         "Ownership and copyright policy for generated tracks as stated in current terms of service"
       ],
       "research_plan": "Prioritize the tool's official documentation, terms of service, and pricing pages for factual claims. Cross-reference with credible music technology outlets (MusicTech, Sound On Sound, CDM, The Verge music coverage) for independent assessments. Check producer and musician communities (Reddit r/WeAreTheMusicMakers, Gearslutz/Gearspace, YouTube walkthroughs by working producers) for real workflow feedback and quality comparisons. Review any published legal filings or news coverage of copyright or training data disputes from credible outlets. Avoid press releases and the tool's own marketing copy as primary sources for capability claims."
-    }
+    },
+    "sources": [
+      {
+        "title": "Suno – Official Product Homepage",
+        "publisher": "Suno, Inc.",
+        "url": "https://suno.com/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Free plan: ~50 credits/day (~10 songs/day), non-commercial use only",
+          "Pro plan: 2,500 credits/month (~500 songs), commercial rights for songs made while subscribed, stem separation into up to 12 WAV stems, audio uploads up to 8 minutes, access to v5.5 model",
+          "Premier plan: 10,000 credits/month (~2,000 songs), all Pro features plus Suno Studio (AI-native DAW), multitrack editor, MIDI export, persona voices, early feature access",
+          "Current production model is v5.5",
+          "Maximum audio output length is up to 8 minutes",
+          "Both vocal and instrumental-only generation supported",
+          "WAV stem export (up to 12 time-aligned stems) available on Pro and Premier"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Pricing Explained: Free, Pro $10, Premier $30 (2026)",
+        "publisher": "Tech Jacks Solutions",
+        "url": "https://techjacksolutions.com/ai-tools/suno/suno-pricing/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Free plan: $0, 50 daily credits (~10 songs/day), non-commercial use only — commercial rights are explicitly forbidden on free tier",
+          "Pro plan: $10/month (or $8/month billed annually), 2,500 credits/month, commercial use rights",
+          "Premier plan: $30/month (or $24/month billed annually), 10,000 credits/month, Suno Studio access",
+          "Commercial rights do NOT apply retroactively — music made on free plan cannot be monetized even after upgrading",
+          "Credits do not roll over; unused credits expire at end of billing cycle",
+          "Figures verified against suno.com/pricing on June 9, 2026"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno v5.5 Explained: Complete Guide 2026 to AI Music Models",
+        "publisher": "Tech Jacks Solutions",
+        "url": "https://techjacksolutions.com/ai-tools/suno/suno-v5/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Current stable production model is v5.5, released March 26, 2026",
+          "Free tier is capped at v4.5-all (released October 21, 2025); v5 and v5.5 are paid-only",
+          "Free plan outputs require attribution to Suno and carry no commercial rights",
+          "Pricing and model access verified against suno.com on June 9, 2026"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno launches v5.5 AI model with voice cloning tool",
+        "publisher": "Music Business Worldwide",
+        "url": "https://www.musicbusinessworldwide.com/suno-launches-v5-5-ai-model-with-voice-capture-and-personalization-features/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "v5.5 released March 27, 2026 — current production model as of mid-2026",
+          "'Voices' feature (voice cloning/capture) is limited to Pro and Premier subscribers only",
+          "'My Taste' personalization feature is available across all subscription tiers including free",
+          "RIAA filed suit against Suno and Udio in mid-2024 on behalf of all three majors, alleging 'mass infringement' of copyright",
+          "As of March 2026, Suno had 2 million paid subscribers and $300M ARR; over 100 million total users",
+          "Suno raised $250M Series C in November 2025 at a $2.45B valuation",
+          "Company hired former WMG exec Paul Sinclair as Chief Music Officer and former Merlin CEO Jeremy Sirota as CCO"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno (platform) – Wikipedia",
+        "publisher": "Wikipedia (citing Billboard, Music Business Worldwide, The Verge, 404 Media)",
+        "url": "https://en.wikipedia.org/wiki/Suno_(platform)",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "In November 2025, Suno agreed to a $500 million lawsuit settlement with Warner Music Group, allowing Suno to train on WMG's catalog; WMG gained control over aspects of AI likeness, music, copyrights, and user-created music on Suno",
+          "As part of the settlement, Suno acquired concert discovery platform Songkick from WMG",
+          "In June 2024, the RIAA filed a copyright infringement lawsuit against Suno seeking up to $150,000 per work",
+          "A July 2026 hack/data reveal showed Suno AI scraped music from YouTube, Deezer, and Genius (reported by 404 Media and The Verge, July 15, 2026)",
+          "In March 2025, thousands of musicians including Thom Yorke and ABBA's Björn Ulvaeus signed a letter calling for Suno to stop training on copyrighted music"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno adjusts AI music ownership terms after Warner Music partnership",
+        "publisher": "Music In Africa",
+        "url": "https://musicinafrica.net/magazine/suno-adjusts-ai-music-ownership-terms-after-warner-music-partnership/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "For paid users, Suno grants commercial use rights for music generated while a subscription is active (streaming, downloads, sync)",
+          "Under the post-WMG revised framework, music created on free accounts cannot be used commercially — even if the user later subscribes",
+          "Suno has outlined plans for 2026: greater emphasis on subscriber-only monetisation and revised ownership definitions following the WMG deal"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Commercial Use: Rights & Copyright Explained 2026",
+        "publisher": "Tech Jacks Solutions",
+        "url": "https://techjacksolutions.com/ai-tools/suno/suno-commercial-use/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno's Terms of Service state: 'Due to the nature of machine learning, Suno makes no representation or warranty to you that any copyright will vest in any Output' — i.e., commercial rights are granted but copyright in the output is not guaranteed",
+          "Suno was sued by the RIAA in June 2024 (damages sought up to $150,000 per work) and settled with Warner Music Group for $500 million in November 2025",
+          "Suno does not publicly disclose its training data sources",
+          "Fact-checked against vendor documentation and official sources, June 2026"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno V5 Review / Suno 5.5 Review (Distribution Perspective)",
+        "publisher": "Undetectr",
+        "url": "https://undetectr.com/blog/suno-v5-5-review",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "v5.5 inherits v5's 44.1kHz audio engine — v5.5 is not a core audio quality upgrade but adds personalization and workflow features",
+          "v5 introduced 44.1kHz native output (up from 24kHz in v3), qualifying as CD-quality and meeting Spotify/Apple Music minimum distribution specs",
+          "Post-WMG settlement, Suno's ownership language shifted away from 'you own your generations' to 'you are granted a commercial license'; Suno technically remains the 'author' of audio under current terms",
+          "Commercial use rights still exist for Pro and Premier subscribers but do not constitute full copyright ownership",
+          "v5/v5.5 tracks are still flagged by AI detection systems used by streaming platforms — raw Suno output passes no modern detection as of 2026"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno explores developer API, seeking apps 'that unlock experiences generative music makes possible for the first time'",
+        "publisher": "Music Business Worldwide",
+        "url": "https://www.musicbusinessworldwide.com/suno-explores-developer-api-seeking-apps-that-unlock-experiences-generative-music-makes-possible-for-the-first-time/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "As of July 2, 2026, Suno does NOT offer an official public API — no self-serve developer access or published official API documentation exists",
+          "On July 1, 2026, Suno's Chief Product Officer Jack Brody announced plans to explore a developer API, opening an intake form for early-access partners",
+          "Suno plans to start with 'a curated group of partners' and has not disclosed a timeline for API launch",
+          "Third-party developers have built unofficial API wrappers around Suno's platform, but these are not sanctioned by Suno",
+          "Suno raised $400M+ in Series D in June 2026 at a $5.4B post-money valuation"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Music Industry AI Lawsuits Tracker 2026: Live Status",
+        "publisher": "Chartlex",
+        "url": "https://www.chartlex.com/blog/business/music-industry-ai-lawsuits-tracker-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Warner Music Group settled with Suno — dismissal filed December 9, 2025; court entered order January 28, 2026",
+          "UMG and Sony Music are still active plaintiffs against Suno as of July 2026 — no fair-use or summary judgment ruling has issued",
+          "In May 2026, UMG and Sony moved to add 61,026 recordings to the lawsuit after audio fingerprinting via Audible Magic identified their works in Suno's training data",
+          "A magistrate judge denied UMG/Sony access to Warner-Suno deal terms in April 2026; their objection is pending",
+          "Sony's summary judgment hearing is scheduled for July 2026; any US fair-use ruling may now push into 2027"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Exact per-tier audio output format specs (e.g., whether free tier outputs MP3 only vs. paid tiers offering WAV downloads) — Suno's own marketing does not publish a precise per-plan format/bitrate table; third-party sources conflict (some cite MP3 at 128–192kbps for free, WAV for paid; others cite 320kbps MP3 or lossless WAV on Pro/Premier). Writer should verify by inspecting a downloaded file directly or checking suno.com/pricing for current export documentation.",
+      "Exact sample rate guarantee for v5.5 specifically — Suno's own marketing describes improvements in production terms without stating a precise kHz figure; most independent reviewers cite 44.1kHz for v5 (inherited by v5.5), but this is third-party-reported, not officially documented by Suno in a public spec sheet. Treat as likely accurate but unverified at the official-docs level.",
+      "Whether the WMG-settlement-announced download caps (free users lose downloads; paid users face monthly download limits) have fully shipped to all users — as of May–June 2026, multiple sources note these were 'announced but unshipped' in Suno's help center. Writer should check current Suno help center before asserting this as live policy.",
+      "Whether Suno's outputs are described internally as 'royalty-free' in the platform's current Terms of Service — the platform grants commercial use rights to paid subscribers but the current post-WMG terms do not straightforwardly describe outputs as 'royalty-free' in the traditional sense. The term is used in Suno's own marketing copy but the ToS language is more nuanced (license grant, not ownership).",
+      "Enterprise/API pricing specifics — no public pricing table exists for Suno enterprise or API access; as of July 2026, a developer API is only in early exploration/partner intake phase with no published pricing or SLA terms.",
+      "Whether a WMG-licensed v6 model has launched — multiple sources (as of mid-2026) note Suno committed to releasing WMG-licensed models in 2026 but no v6 release date has been announced; the v5.5 model in production was not trained on WMG's catalog under the settlement terms."
+    ]
   }
 ]
