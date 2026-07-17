@@ -175,5 +175,22 @@
       ],
       "research_plan": "Prioritize official documentation and pricing pages for each tool for accuracy on cost and licensing. Look for independent technical evaluations and benchmark comparisons from AI art and photography communities (e.g., community posts on Reddit r/StableDiffusion, Midjourney Discord feedback threads, or creator YouTube channels that do side-by-side prompt tests). Avoid relying on the tools' own marketing pages for capability claims. For commercial licensing, go directly to terms of service pages. For real-world output quality, find creator forums or published prompt comparisons with visible outputs across identical or near-identical prompts. Note publication dates carefully since model versions update frequently."
     }
+  },
+  {
+    "id": "164c1e40-ca84-483b-8136-d06d49cf0c61",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Comparing the options for photorealistic images",
+      "article_type": "Practical guide",
+      "target_audience": "",
+      "target_length": "Standard",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T03:22:22.119Z",
+    "updated_at": "2026-07-17T03:22:22.119Z"
   }
 ]
