@@ -79,7 +79,7 @@
   {
     "id": "3fe2d2e6-b607-4ab0-a1d1-02db8d6ccc44",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Top AI tools for musicians",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:53:46.758Z",
-    "updated_at": "2026-07-17T15:00:40.857Z",
+    "updated_at": "2026-07-17T15:01:47.017Z",
     "brief": {
       "target_reader": "Independent musicians and music producers who are curious about AI tools but wary of overpromised results. Includes singer-songwriters, beatmakers, film/game composers, and bedroom producers at intermediate skill level who already use DAWs and want to know where AI genuinely fits into their workflow.",
       "reader_outcome": "The reader can identify which AI music tools are relevant to their specific production stage (composition, arrangement, mixing, mastering, vocal processing, licensing), evaluate tradeoffs between tools, and take immediate next steps to try at least one in their existing workflow.",
@@ -595,6 +595,28 @@
     "warnings": [
       "s7: The RIAA lawsuit against Suno was filed by major labels including Sony Music, Universal Music Group, and Warner Music Group collectively — not WMG alone. The source cited (TechJack Solutions, an independent third-party site) is not a primary source for settlement details, and a $500 million figure for a Suno-WMG-only settlement is not verifiable from the sources provided. The source notes a WMG settlement but this figure and framing needs verification. Additionally, the intro states 'Sony had not settled as of March 2026' but the RIAA suit included UMG, WMG, and Sony — implying only Sony remains is potentially misleading if UMG also settled separately or not at all. The Udio source references UMG and WMG settlements but not Suno's. Cross-referencing the two sources creates confusion about which label settled with which company.",
       "s7: The RIAA itself did not file the lawsuits — the suits were filed by major record labels (Sony Music Entertainment, Universal Music Group Recordings, Warner Records, etc.) as plaintiffs. The RIAA supported and coordinated the litigation but is a trade association, not the legal plaintiff. Attributing the suit to 'the RIAA' is a common but technically inaccurate shorthand that could mislead readers about the legal parties involved."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "3fe2d2e6-b607-4ab0-a1d1-02db8d6ccc44-img1.jpg",
+        "prompt": "A musician's production workspace photographed from a low, intimate angle at golden hour. A sleek laptop is open on a wooden studio desk, showing abstract waveform shapes and colourful soft-glow equaliser bands—no readable text or recognisable software UI. Surrounding it: a MIDI keyboard half in frame, a pair of open-back headphones resting on the desk, a small audio interface with glowing trim, and scattered handwritten notes on paper (illegible). The mood is focused and considered, not flashy. Warm amber side-lighting with cool blue fill from the screen. Shallow depth of field. Generous empty space in the upper third for headline overlay. Editorial photography style—textured, real, no CGI elements, no glowing brains, no floating holograms. 16:9 composition.",
+        "placement": "hero",
+        "alt_text": "A musician's laptop and MIDI keyboard on a studio desk with warm ambient lighting",
+        "caption": "AI tools work best as fast assistants with strong human creative direction behind them.",
+        "approved": false,
+        "generated_at": "2026-07-17T15:01:21.447Z"
+      },
+      {
+        "id": "img2",
+        "file": "3fe2d2e6-b607-4ab0-a1d1-02db8d6ccc44-img2.jpg",
+        "prompt": "Overhead flat-lay of a composer's working surface at the moment of decision-making. A MIDI keyboard sits beside an open notebook filled with hand-drawn chord diagrams and notation (too small and abstract to read). A single pair of wired earbuds snakes across the desk. A tablet rests at an angle showing abstract horizontal stem-separation bars in muted colours—no logos, no text labels. A scattered set of small sticky notes in soft yellow and green add texture. The palette is warm neutrals—cream, walnut wood, slate grey—with a single accent of deep teal from the tablet glow. Shot from directly above with soft diffused daylight. The composition leaves the right side open for text overlay. No robots, no holograms, no stock-photo hands gesturing at nothing. 4:3 aspect ratio, editorial magazine quality.",
+        "placement": "s2",
+        "alt_text": "Overhead view of a composer's desk with MIDI keyboard, notebook with chord sketches, and a tablet showing stem visualisations",
+        "caption": "Choosing the right tool depends on your output format needs—MIDI and stems integrate far more deeply into a DAW workflow than audio-only generation.",
+        "approved": false,
+        "generated_at": "2026-07-17T15:01:47.017Z"
+      }
     ]
   }
 ]
