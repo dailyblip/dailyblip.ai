@@ -79,7 +79,7 @@
   {
     "id": "a59fc028-f5a1-46f2-b80a-34ff1d2c52c5",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Getting start creating AI music",
       "article_type": "Beginner explainer",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T17:19:20.336Z",
-    "updated_at": "2026-07-17T17:19:48.880Z",
+    "updated_at": "2026-07-17T17:21:10.050Z",
     "brief": {
       "target_reader": "Creators (musicians, hobbyists, filmmakers, content creators) with zero experience using AI music tools, who are curious but skeptical of hype and want a practical starting point rather than a sales pitch",
       "reader_outcome": "The reader should be able to choose one AI music tool appropriate for their immediate need, generate their first piece of audio, and understand the basic constraints (quality, rights, cost) before committing to anything",
@@ -110,6 +110,168 @@
         "Any announced deprecations or major feature changes for the tools covered, as of the most recent official changelog or announcement"
       ],
       "research_plan": "Prioritize official documentation, pricing pages, and terms of service from each tool's own website for quota and rights claims. For capability descriptions (prompt types, genres, output formats), cross-reference official feature pages with recent first-hand user walkthroughs on YouTube or creator blogs published within the last 6 months, clearly distinguishing which claims come from official sources vs. user reports. Avoid restating credit or quota limits from third-party comparison sites without verifying against the official source, since these change frequently."
-    }
+    },
+    "sources": [
+      {
+        "title": "What type of plan do I have?",
+        "publisher": "Suno Help Center (help.suno.com)",
+        "url": "https://help.suno.com/en/articles/2410049",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno Free plan offers 50 credits that replenish daily — described officially as 'enough to make 10 songs per day'",
+          "Pro plan includes 2,500 credits per month",
+          "Premier plan includes 10,000 credits per month",
+          "Pro and Premier subscribers can purchase additional credits; after monthly credits are exhausted, users receive up to 50 credits/day as a fallback"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Pricing Page",
+        "publisher": "Suno (suno.com/pricing)",
+        "url": "https://suno.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Credits included in subscriptions do not carry over day to day or month to month",
+          "Purchased top-up credits do not expire but require an active subscription to use",
+          "Commercial use is governed by the Terms of Service — the pricing page explicitly defers to ToS for limitations"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Terms of Service",
+        "publisher": "Suno (suno.com/terms-of-service)",
+        "url": "https://suno.com/terms-of-service",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Free-tier users may use outputs 'solely for your lawful, internal, personal and non-commercial purposes, provided that you give attribution credit to Suno in each case'",
+          "Pro and Premier subscribers are assigned Suno's right, title and interest in songs generated during the paid subscription — this grants commercial use rights",
+          "Suno does not transfer full copyright; it assigns commercial rights. Outputs may not be unique — the same output may be generated for another user",
+          "Suno retains a broad, worldwide, perpetual, irrevocable license to user-generated content regardless of plan tier",
+          "Tracks made through the Remix feature may lose commercial eligibility as jointly owned remixes are restricted to non-commercial use"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Stem Separation improvements — Suno Release Notes",
+        "publisher": "Suno (suno.com/release-notes)",
+        "url": "https://suno.com/release-notes/advanced-stems",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno updated its Stem Separation tool on June 11, 2026, introducing three modes: Auto Split, Split from Mix, and the new Advanced Split",
+          "Stems are described officially as 'cleaner, crisper, free from artifacts and ready to drop into your track'",
+          "Stem separation is accessed via the Edit menu"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Credits and credit limits",
+        "publisher": "Udio Help Center (help.udio.com)",
+        "url": "https://help.udio.com/en/articles/10739134-credits-and-credit-limits",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio free-tier and trial accounts are capped at creating 3 'u-130' (~2-minute song) generations per day",
+          "Trial accounts retain free-tier credit limits, not increased limits",
+          "Credits are available for purchase à la carte at udio.com/pricing"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing — udio.com/pricing",
+        "publisher": "Udio (udio.com)",
+        "url": "https://www.udio.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio offers three tiers: Free ($0), Standard ($10/month or $8/month annually), and Pro ($30/month or $24/month annually)",
+          "Add-on credit packs available: 100 credits for $3, 1,000 credits for $25 — purchased credits never expire",
+          "Subscription credits do not roll over month to month"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "AI Music Generator Comparison 2026: Suno vs Udio + 3 More",
+        "publisher": "Chartlex",
+        "url": "https://www.chartlex.com/blog/marketing/ai-music-generator-comparison-2026",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Udio downloads (audio, video, and stems) remain disabled since October 29, 2025, confirmed against Udio's official help center by the Chartlex team on July 11, 2026",
+          "Udio Pro now carries 6,000 monthly credits (previously 4,800) — independent observation based on live page checks",
+          "The UMG-licensed Udio platform had not publicly launched as of July 11, 2026",
+          "Suno remains in active litigation with Sony Music and Universal Music Group as of July 2026; Warner Music Group settled with Suno in November 2025",
+          "Suno's Pro plan grants commercial rights; free-tier songs are personal use only",
+          "Suno's Premier plan Suno Studio is described as a full AI-native DAW with stem extraction, MIDI export, and multi-track editing, per Suno's product pages",
+          "Udio Free tier: 10 daily credits + 100 monthly credits, capped at 3 full-length (~2-min) songs per day"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno vs Udio 2026: The Honest Head-to-Head Comparison",
+        "publisher": "Chartlex",
+        "url": "https://www.chartlex.com/blog/marketing/suno-vs-udio-2026",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Udio disabled all downloading — audio, video, and stems — as part of its UMG settlement terms; it is now a streaming-only walled garden",
+          "Suno grants commercial rights starting at the Pro tier ($10/month) and downloads remain available to paid users",
+          "Udio's Pro plan ($30/month) nominally grants commercial rights but downloads are currently disabled, so external distribution of Udio tracks is not currently possible",
+          "A re-enabled, fully licensed Udio download service is expected later in 2026 per Billboard and RouteNote reporting — but had not launched as of this article",
+          "Udio commercial rights are reserved for its $30/month Pro tier — not Standard"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Advanced Stem Separation: What's New and Is It Worth It",
+        "publisher": "Dubspot Blog",
+        "url": "https://blog.dubspot.com/suno-advanced-stem-separation-2026",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno's June 11, 2026 stem update introduced three modes: Auto Split (splits into up to 12 stem categories), Split from Mix (isolates one selected element plus remainder), and Advanced Split (lets you choose from nearly 100 instruments to extract)",
+          "Advanced Split uses Suno's v5.5 generative model to regenerate each stem from scratch rather than carving out from the mix, reducing bleed and artifacts",
+          "Auto Split is available on Pro and Premier plans; Advanced Split is gated to Premier per independent reporting"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Beatoven.ai Official Website & Pricing Page",
+        "publisher": "Beatoven.ai (beatoven.ai)",
+        "url": "https://www.beatoven.ai/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Beatoven.ai has a free tier (free trial) and paid plans — the official pricing page exists but returned minimal crawlable detail at time of research",
+          "Third-party sources citing the vendor page as of Sept 2025 list a Creator plan starting at approximately $2.50–$7/month, metered by minutes of monthly downloads",
+          "Beatoven.ai claims a Fairly Trained certification, meaning models are trained on licensed/authorized music data only",
+          "Beatoven.ai grants users a non-exclusive, perpetual, royalty-free license on paid plans — Beatoven retains ownership of generated tracks",
+          "Paid plan tracks are licensed for commercial use including YouTube, podcasts, social media, and commercial video"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Exact current Beatoven.ai free tier quota (number of minutes or tracks) could not be confirmed from a live official pricing page crawl — the official page (beatoven.ai/pricing) returned minimal detail; third-party sources cite figures as old as Sept 2025 and show conflicting numbers ($2.50/mo vs $7/mo Creator plan). Writer must check beatoven.ai/pricing directly before publishing any specific figure.",
+      "Exact Beatoven.ai paid plan pricing tiers and minute allocations as of July 2026 — third-party aggregators show stale or conflicting data; no live official page content was retrievable to confirm current tier names, prices, or minute caps.",
+      "Loudly and Musicfy pricing and free-tier quotas — no official pricing page content was retrieved for either tool in this research session. Any claims about these tools should be dropped or independently verified directly from loudly.com and musicfy.lol before inclusion.",
+      "Whether Udio ever officially claimed 'full copyright transfer' to users — Udio's FAQ has been quoted by third parties as stating users 'own their output,' but without downloads currently enabled, this is described by observers as confined to the platform. The exact current Udio ToS language on copyright ownership was not retrieved from an official source and should be verified at udio.com/terms before being characterized.",
+      "Which specific Suno plan tier (Pro vs Premier) gates each stem mode (Auto Split vs Split from Mix vs Advanced Split) — the official Suno release note confirms the feature update but does not specify per-tier access in the retrieved content. Third-party sources suggest Auto Split is on Pro+, Advanced Split on Premier only, but this needs direct verification at suno.com/account or release notes.",
+      "Any claim that Suno offers 'full copyright transfer' to users — no such claim was found in official ToS. The ToS language is an assignment of commercial rights, not a copyright transfer; purely AI-generated outputs are not copyrightable under current U.S. Copyright Office guidance (Jan 2025 Part 2 Report). Writer should not use 'copyright transfer' language for either tool.",
+      "Any announced deprecations or major feature changes for Loudly, Musicfy, or Beatoven.ai — no official changelog or announcement was found for any of these three tools in this research session."
+    ]
   }
 ]
