@@ -1171,7 +1171,7 @@
   {
     "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "Using AI to write better songs without losing your voice",
       "article_type": "Practical guide",
@@ -1183,7 +1183,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T19:17:05.201Z",
-    "updated_at": "2026-07-17T19:19:33.060Z",
+    "updated_at": "2026-07-17T19:20:51.017Z",
     "brief": {
       "target_reader": "A singer-songwriter who writes their own lyrics and melodies, is curious about AI tools but worried that using them will make their songs sound generic or less personal. Has probably never used an AI writing tool for music before.",
       "reader_outcome": "Feel confident enough to try one specific AI-assisted step in their songwriting process today, without feeling like they are handing their creative voice over to a machine.",
@@ -1383,43 +1383,101 @@
       "dek": "AI can help you get unstuck, find the right word, and write more freely — without turning your songs into something that sounds like everyone else's.",
       "meta_description": "A practical guide for singer-songwriters curious about AI tools. Learn how to use AI for lyric brainstorming and editing without losing your personal voice.",
       "quick_answer": "AI works best as a brainstorming partner for songwriters, not a ghostwriter. Use it to generate options you then curate and rewrite in your own voice.",
-      "introduction": "Here's the worry most songwriters have: if I let AI touch my lyrics, will they still sound like me? It's a fair question. And honestly, a little skepticism is healthy.\n\nBut here's what's actually happening in writing rooms right now. According to Billboard, it's now common for professional songwriters to open an AI tool when they're stuck, not to hand the song over, but to shake loose an idea. The AI throws out options. The songwriter picks what sparks something and throws the rest away. Your voice stays in the driver's seat.",
+      "introduction": "Here's the worry most songwriters have: if I let AI touch my lyrics, will they still sound like me? It's a fair question. And honestly, a little skepticism is healthy.\n\nBut here's what's actually happening in writing rooms right now. Billboard has reported on songwriters using AI tools like Suno when they're stuck, not to hand the song over, but to shake loose an idea. The AI throws out options. The songwriter picks what sparks something and throws the rest away. Your voice stays in the driver's seat.",
       "sections": [
         {
           "id": "s1",
           "heading": "Why the worry is partly valid (and partly not)",
-          "body_markdown": "The concern isn't irrational. Ask an AI to \"write a verse about heartbreak\" and you'll get something competent, structured, and completely forgettable. Generic inputs produce generic outputs. That's the trap.\n\nThe good news: that's a prompting problem, not an AI problem. The more specific and personal your prompt, the less generic the result. \"Write a verse about heartbreak\" is a dead end. \"Give me 10 metaphors for the feeling of checking your phone and hoping someone texted\" is a starting point you can actually use.\n\nMultiple independent reviewers note that AI lyric tools struggle specifically with personal, lived-experience detail. That's actually your advantage. The specific details only you know are exactly what make your songs yours. AI can help you build around them, but it can't supply them.",
+          "body_markdown": "The concern isn't irrational. Ask an AI to \"write a verse about heartbreak\" and you'll get something competent, structured, and completely forgettable. Generic inputs produce generic outputs. That's the trap.\n\nThe good news: that's a prompting problem, not an AI problem. The more specific and personal your prompt, the less generic the result. \"Write a verse about heartbreak\" is a dead end. \"Give me 10 metaphors for the feeling of checking your phone and hoping someone texted\" is a starting point you can actually use.\n\nAt least a couple of independent reviewers, including H2S Media, note that AI lyric tools struggle specifically with personal, lived-experience detail. That's actually your advantage. The specific details only you know are exactly what make your songs yours. AI can help you build around them, but it can't supply them.",
           "tools": []
         },
         {
           "id": "s2",
           "heading": "Where AI actually helps: getting unstuck",
-          "body_markdown": "The most useful thing AI does for songwriters is generate volume fast. Songwriter and music educator Ben Camp, writing for Berklee Online, describes a workflow that's worth borrowing directly: prompts like \"brainstorm 10 titles for a song about defying expectations\" or \"give me 20 metaphors about struggling to succeed.\" You're not asking the AI to write your song. You're asking it to throw a pile of raw material at the wall so you can pick what sticks.\n\nFor general lyric brainstorming, **ChatGPT** and **Claude** both have free tiers that are functional enough to try this today, no credit card needed. Claude is consistently rated by independent reviewers as stronger for emotional nuance and keeping meter consistent across longer drafts, which matters if you're working on something with real structure.\n\nIf you want something built specifically for songwriting, **LyricStudio** (lyricstudio.net) is worth a look. It's designed for lyrics rather than full song generation, with a built-in rhyme finder and genre-specific suggestions. A free trial exists, though based on available information it's limited, so treat it as a quick test rather than an extended free tool.",
+          "body_markdown": "The most useful thing AI does for songwriters is generate volume fast. In a Berklee Online interview, songwriter and music educator Ben Camp describes a workflow that's worth borrowing directly: prompts like \"brainstorm 10 titles for a song about defying expectations\" or \"give me 20 metaphors about struggling to succeed.\" You're not asking the AI to write your song. You're asking it to throw a pile of raw material at the wall so you can pick what sticks.\n\nFor general lyric brainstorming, **ChatGPT** and **Claude** both have free tiers that are functional enough to try this today. Some reviewers rate Claude as stronger for emotional nuance and keeping meter consistent across longer drafts, though that assessment comes from a small number of sources rather than broad consensus, so take it as a starting point for your own testing.\n\nIf you want something built specifically for songwriting, **LyricStudio** (lyricstudio.net) is worth a look. It's designed for lyrics rather than full song generation, with a built-in rhyme finder and genre-specific suggestions. The site confirms a free trial exists, though it's limited, so treat it as a quick test rather than an extended free tool.",
           "tools": []
         },
         {
           "id": "s3",
           "heading": "Using AI to edit without erasing yourself",
-          "body_markdown": "Getting a first draft down is one thing. The more interesting use is revision.\n\nTry this: paste a line you've written but aren't happy with and ask the AI for five alternative versions that keep the same emotional intent. Or ask it to rewrite your chorus so it scans to a specific syllable count. Or ask for three different rhyme options for a word that's boxing you in.\n\nYou're using it like a thesaurus that understands structure. The output gives you angles you hadn't considered. You pick one, rewrite it in your own phrasing, and suddenly the line is yours again but better than it was before.\n\nThis is where the craft development angle gets interesting. Camp notes that generating lots of variations of a single lyric sharpens your ear for what actually works. You're not just fixing a line, you're training your instincts.",
+          "body_markdown": "Getting a first draft down is one thing. The more interesting use is revision.\n\nTry this: paste a line you've written but aren't happy with and ask the AI for five alternative versions that keep the same emotional intent. Or ask it to rewrite your chorus so it scans to a specific syllable count. Or ask for three different rhyme options for a word that's boxing you in.\n\nYou're using it like a thesaurus that understands structure. The output gives you angles you hadn't considered. You pick one, rewrite it in your own phrasing, and suddenly the line is yours again but better than it was before.\n\nThis is where the craft development angle gets interesting. In the Berklee Online interview, Camp notes that generating lots of variations of a single lyric sharpens their ear for what actually works. You're not just fixing a line, you're training your instincts.",
           "tools": []
         },
         {
           "id": "s4",
           "heading": "One thing to try right now",
-          "body_markdown": "Open ChatGPT or Claude (free, no signup barrier for basic use). Pick a song you're stuck on, or even just a feeling you've been trying to write about.\n\nType something like: *\"I'm writing a song about [your specific situation]. Give me 10 different metaphors or images I could use. Make them concrete and specific, not abstract.\"*\n\nDon't use any of the output directly. Read through it and notice what your gut responds to. One image might feel almost right. Rewrite it in your own words. That rewrite is the song.\n\nThat's the whole workflow. AI as a prompt, you as the author. Your voice doesn't disappear — if anything, having something to react against can make it sharper.",
+          "body_markdown": "Open ChatGPT or Claude (both have free tiers, though you'll need to create an account to get started). Pick a song you're stuck on, or even just a feeling you've been trying to write about.\n\nType something like: *\"I'm writing a song about [your specific situation]. Give me 10 different metaphors or images I could use. Make them concrete and specific, not abstract.\"*\n\nDon't use any of the output directly. Read through it and notice what your gut responds to. One image might feel almost right. Rewrite it in your own words. That rewrite is the song.\n\nThat's the whole workflow. AI as a prompt, you as the author. Your voice doesn't disappear — if anything, having something to react against can make it sharper.",
           "tools": []
         }
       ],
       "key_takeaways": [
         "AI works best when you treat it as a brainstorming partner generating options, not a writer producing finished work.",
         "Generic prompts produce generic lyrics. Specific, personal prompts produce raw material you can actually use.",
-        "Dedicated tools like LyricStudio are built for lyric co-writing; general tools like Claude or ChatGPT work well for brainstorming and revision and are free to start.",
+        "Dedicated tools like LyricStudio are built for lyric co-writing; general tools like Claude or ChatGPT work well for brainstorming and revision. Both have free tiers, though their access levels and feature limits differ, so check each tool's site before assuming they work the same way.",
         "Using AI to generate variations of your own lines can sharpen your editing instincts, not just fix individual problems.",
         "Your lived-experience details are the one thing AI can't supply. That's where your voice lives."
       ],
       "conclusion": "The fear that AI will make your songs sound like everyone else's only comes true if you let it write them. Use it to generate the mess, then do what only you can do: pick what matters, throw out what doesn't, and rewrite it until it sounds like you said it. That's still songwriting. The tool just helped you get there faster.",
       "methodology_disclosure": "This guide was researched using official product documentation from LyricStudio and Suno, independent reporting from Billboard and Berklee Online, and editorial reviews from SoundGuys, Somio AI, and H2S Media. Claims about professional songwriter adoption patterns are drawn from Billboard's reporting and Berklee Online's documented interview with Ben Camp. Capability comparisons between tools reflect independent reviewer consensus across multiple sources rather than any single review. Pricing details were intentionally omitted given how frequently they change; readers are directed to each tool's own site for current plans. No claims were made about Udio's current export/download status given a sourced flag that this was in transition as of the most recent review date.",
       "last_reviewed_date": "July 17, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "introduction",
+          "original_text": "songwriters using AI tools like Suno when they're stuck",
+          "issue": "The Billboard source describes songwriters using Suno for brainstorming, but the article attributes this specifically to Billboard reporting on Suno, when Billboard's framing is about AI tools broadly and professional adoption generally — conflating a general trend report with a Suno-specific claim. More critically, Suno is a full-song generator (vocals, instrumentation), not primarily a lyric brainstorming tool, so presenting it as the example tool in this context is misleading about what Suno does."
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "In the Berklee Online interview, Camp notes that generating lots of variations",
+          "issue": "The Berklee Online source attributes this workflow to Camp describing it as one of their favorite aspects of AI, but the article shifts pronoun to 'their ear' suggesting first-person Camp quote, then in s3 says 'sharpens their ear' — the pronoun 'their' is ambiguous and could be read as the reader's instincts, misattributing the claim's subject. More substantively, the article states Camp 'notes that generating lots of variations of a single lyric sharpens their ear' as if Camp said this about the reader, when the source is Camp describing their own practice."
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Claude as stronger for emotional nuance and keeping meter consistent",
+          "issue": "The H2S Media source lists Claude Pro at $20/month, while the Somio AI source lists it at $19/month — the article avoids stating a price, which is fine, but the methodology disclosure says pricing was omitted, yet the key_takeaways and s2 imply both ChatGPT and Claude free tiers are functionally equivalent for this use case without noting that Claude's free tier has usage limits that may be more restrictive than ChatGPT's free tier."
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "Dedicated tools like LyricStudio are built for lyric co-writing; general tools like Claude or ChatGPT",
+          "issue": "The takeaway groups Claude and ChatGPT as equivalent free-tier options, but sources show Claude Pro is $19-20/month and the free tier is more limited; describing both as simply having 'free tiers' without noting meaningful access differences (especially Claude's more restricted free usage) could mislead readers into assuming parity."
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "LyricStudio (lyricstudio.net) is worth a look...The site confirms a free trial exists",
+          "issue": "The source URL given for LyricStudio is 'lyricstudio.net/generative-ai' — the article cites 'lyricstudio.net' as the domain but the specific page path in the sources suggests the official product page may be at a subpath, and the article doesn't link to it; more importantly, the article says 'the site confirms a free trial exists' which implies dailyblip verified this directly on the site, raising an implicit testing/verification claim."
+        },
+        {
+          "severity": "medium",
+          "section_id": "introduction",
+          "original_text": "Billboard has reported on songwriters using AI tools like Suno",
+          "issue": "The Billboard source is titled 'The 10 Biggest AI Music Stories of 2025' and is a year-end list article, not a reported piece specifically about songwriter workflows — presenting it as a reporting source on professional songwriter behavior overstates the nature of the source."
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "Some reviewers rate Claude as stronger for emotional nuance and keeping meter",
+          "issue": "The claim about Claude being stronger for 'keeping meter consistent across longer drafts' is not directly supported by the cited sources — H2S Media and the Complete AI Training source mention emotional nuance and structured meter control, but 'longer drafts' is an addition not present in the source material."
+        },
+        {
+          "severity": "low",
+          "section_id": "methodology_disclosure",
+          "original_text": "editorial reviews from SoundGuys, Somio AI, and H2S Media",
+          "issue": "The methodology disclosure credits SoundGuys as a source for capability comparisons, but the SoundGuys source in the article is focused on full AI music generators (Suno, Udio) and pricing — it is not cited anywhere in the article body for lyric tool or Claude/ChatGPT comparisons, making its inclusion in the methodology disclosure misleading about how it was actually used."
+        }
+      ],
+      "checked_at": "2026-07-17T19:20:51.016Z",
+      "revised": true
+    },
+    "warnings": [
+      "introduction: The Billboard source describes songwriters using Suno for brainstorming, but the article attributes this specifically to Billboard reporting on Suno, when Billboard's framing is about AI tools broadly and professional adoption generally — conflating a general trend report with a Suno-specific claim. More critically, Suno is a full-song generator (vocals, instrumentation), not primarily a lyric brainstorming tool, so presenting it as the example tool in this context is misleading about what Suno does.",
+      "s3: The Berklee Online source attributes this workflow to Camp describing it as one of their favorite aspects of AI, but the article shifts pronoun to 'their ear' suggesting first-person Camp quote, then in s3 says 'sharpens their ear' — the pronoun 'their' is ambiguous and could be read as the reader's instincts, misattributing the claim's subject. More substantively, the article states Camp 'notes that generating lots of variations of a single lyric sharpens their ear' as if Camp said this about the reader, when the source is Camp describing their own practice."
+    ]
   }
 ]
