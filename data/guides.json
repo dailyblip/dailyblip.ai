@@ -2722,8 +2722,8 @@
   },
   {
     "id": "a0c40a7c-b981-4f30-80e2-7fabf1de1840",
-    "status": "queued",
-    "stage": "Fact-checking",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Top two music generation AIs",
       "article_type": "Tool comparison",
@@ -2735,7 +2735,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T13:59:36.927Z",
-    "updated_at": "2026-07-17T14:04:10.242Z",
+    "updated_at": "2026-07-17T14:08:16.641Z",
     "brief": {
       "target_reader": "Independent musicians, producers, and composers who are curious about AI music generation tools but want an honest, practical comparison before committing time or money. They may have heard of Suno and Udio but have not yet formed a strong opinion on either.",
       "reader_outcome": "The reader should be able to decide which of the two leading AI music generation tools fits their specific workflow, budget, and creative goals, and know the concrete limitations of each before signing up.",
@@ -3073,6 +3073,128 @@
       "conclusion": "Suno and Udio are genuinely different tools at this point in their development, not just competing interfaces on top of similar technology. Suno has built a more complete production path for creators who want to move audio into a DAW, at the cost of higher tier prices and a voice cloning opt-in with real data rights implications. Udio has made more visible progress on label licensing but is currently in a transitional state where its most useful export features are offline.\n\nThe honest answer to \"which one is better\" is that it depends on one specific question: do you need to export audio files right now? If yes, Suno Premier is the clearer path. If you are comfortable working within a streaming or preview model while Udio's download situation resolves, Udio's iterative tools and sonic reputation in certain genres make it worth testing on the free tier.\n\nBoth tools reward skepticism. Run your own tests, read the ToS before paying, and do not build a production-critical workflow on either platform without a plan for what happens if the litigation reshapes their terms.",
       "methodology_disclosure": "This guide was synthesized from official platform documentation (Suno pricing page, Suno Help Center, Suno Terms of Service), verified independent reporting from Digital Music News, Music Business Worldwide, and the Chartlex AI Lawsuits Tracker, and secondary independent reviews from eesel.ai and RightsDocket. Primary legal claims are sourced directly from the RIAA's official press release on the original lawsuits. Several figures (Suno free-tier daily credit count, Suno Pro monthly price, Udio commercial rights language in Standard tier ToS, Udio download and stem availability, and Udio custom lyrics depth) could not be confirmed from static official documentation during research and are flagged explicitly in the text as requiring direct verification by the reader before publication or use in decision-making. No hands-on testing of either platform was conducted by dailyblip for this guide.",
       "last_reviewed_date": "July 17, 2026"
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Free tier** | ~50 credits/day (unverified on static page; verify at suno.com/pricing) | 10 credits/day + 100 credits/month |",
+          "issue": "The Suno free-tier figure of ~50 credits/day is flagged as unverified in the table itself, but the cited Help Center source (help.suno.com/en/articles/2410049) clarifies that 50 credits/day is the fallback for Pro and Premier subscribers who have exhausted their monthly credits, not the free-plan daily allotment. Presenting this figure in the free-tier row conflates the subscriber fallback with the free plan grant.",
+          "recommended_replacement": "Replace '~50 credits/day (unverified on static page; verify at suno.com/pricing)' with 'Unconfirmed — verify at suno.com/pricing (note: 50 credits/day is the exhausted-subscription fallback for paid tiers, not the confirmed free-plan figure)'",
+          "supporting_source_url": "https://help.suno.com/en/articles/2410049"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s5",
+          "original_text": "Suno's free tier gives approximately 50 credits per day (this figure is consistent across independent sources and the Suno Help Center, but was not confirmed in a static official pricing page capture; verify at suno.com/pricing).",
+          "issue": "The Suno Help Center source cited states that 50 credits/day is the fallback for Pro and Premier subscribers who exhaust their monthly allotment, not the free-plan daily grant. Describing this figure as consistent with the Suno Help Center for the free tier is misleading; the Help Center uses it in a paid-subscriber context only.",
+          "recommended_replacement": "Suno's free-tier daily credit allotment could not be confirmed from official sources reviewed for this guide; verify at suno.com/pricing. Note that the 50 credits/day figure cited in some independent sources refers to the fallback credit grant given to Pro and Premier subscribers who exhaust their monthly quota, not the free plan.",
+          "supporting_source_url": "https://help.suno.com/en/articles/2410049"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "Released in March 2026, the Voices feature lets Pro and Premier subscribers clone their own voice for use across generations.",
+          "issue": "The March 26, 2026 release date comes solely from RightsDocket, a source classified as 'independent observation' with no corroborating primary source in the article's source list. The date is presented as established fact without any attribution caveat.",
+          "recommended_replacement": "Released in March 2026 according to independent reporting (RightsDocket), the Voices feature lets Pro and Premier subscribers clone their own voice for use across generations.",
+          "supporting_source_url": "https://www.rightsdocket.com/insights/suno-v55-voice-cloning-rights"
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "Pro and Premier users can train a personalized version of v5.5 on at least 6 of their own original tracks, with up to 3 models available.",
+          "issue": "This claim (minimum 6 tracks, up to 3 models) comes solely from RightsDocket, classified as 'independent observation.' It is presented as established fact with no caveat. The Suno Help Center and official pricing page in the source list do not confirm these specific numbers.",
+          "recommended_replacement": "According to independent reporting, Pro and Premier users can train a personalized version of v5.5 on at least 6 of their own original tracks, with up to 3 models available. Verify specifics at suno.com before relying on these figures.",
+          "supporting_source_url": "https://www.rightsdocket.com/insights/suno-v55-voice-cloning-rights"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Suno updated its policy from \"you own the songs\" to \"you are generally not considered the owner of the songs, since the output was generated by Suno.\"",
+          "issue": "This quote is sourced from Digital Music News (a secondary source), not from Suno's Terms of Service directly. The Suno ToS source listed supports commercial use restrictions but does not specifically confirm this ownership-language shift verbatim. Presenting a secondary-source quote as direct Suno policy language without attributing the intermediary source is misleading.",
+          "recommended_replacement": "According to reporting in Digital Music News, Suno updated its policy language from 'you own the songs' to 'you are generally not considered the owner of the songs, since the output was generated by Suno.' Verify current language at suno.com/terms-of-service.",
+          "supporting_source_url": "https://www.digitalmusicnews.com/2025/12/22/suno-warner-music-deal-changes/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "UMG and Sony sought to add over 61,000 recordings to the lawsuit via audio-fingerprinting evidence in May 2026.",
+          "issue": "The Chartlex source specifies this filing was in the Suno Massachusetts case specifically. The article's phrasing 'UMG and Sony sought to add over 61,000 recordings to the lawsuit' could be read as referring to both the Suno and Udio lawsuits. The exact figure is also 61,026, not 'over 61,000.'",
+          "recommended_replacement": "UMG and Sony sought to add 61,026 recordings to the Suno lawsuit via audio-fingerprinting evidence in May 2026.",
+          "supporting_source_url": "https://www.chartlex.com/blog/business/music-industry-ai-lawsuits-tracker-2026"
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "Active litigation** | Sony Music ongoing; GEMA ruling pending July 2026 | Sony Music ongoing |",
+          "issue": "The article is dated July 17, 2026, and the GEMA ruling was scheduled for July 31, 2026. Describing it as 'pending July 2026' without a date anchor may mislead readers consulting this after July 31 into thinking the ruling is still pending.",
+          "recommended_replacement": "Sony Music ongoing; GEMA ruling scheduled July 31, 2026 (verify outcome after that date)",
+          "supporting_source_url": "https://www.chartlex.com/blog/business/music-industry-ai-lawsuits-tracker-2026"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s4",
+          "original_text": "Udio settled with UMG in October 2025 and WMG in November 2025.",
+          "issue": "Both settlements are confirmed only by secondary independent sources (UsagePricing.com, Chartlex). The RIAA primary source only covers the original June 2024 filing and does not confirm settlements. Stating settlements as unqualified fact without attributing to independent reporting overstates the sourcing.",
+          "recommended_replacement": "According to multiple independent industry sources, Udio settled with UMG in October 2025 and WMG in November 2025.",
+          "supporting_source_url": "https://www.chartlex.com/blog/business/music-industry-ai-lawsuits-tracker-2026"
+        },
+        {
+          "severity": "low",
+          "section_id": "s4",
+          "original_text": "A licensed re-enabled download system was expected \"later in 2026\" but had not shipped as of the sources reviewed for this guide.",
+          "issue": "No source in the article's source list is cited for the claim that a licensed re-enabled download system was expected 'later in 2026.' The UsagePricing.com source documents that downloads were disabled but does not include this forward-looking expectation. The origin of this claim is unattributed.",
+          "recommended_replacement": "A licensed re-enabled download system has been mentioned in some community discussions as expected later in 2026, but this could not be confirmed from official Udio documentation or verified independent reporting reviewed for this guide. Check udio.com's Help Center for current status.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "low",
+          "section_id": "s5",
+          "original_text": "Community feedback on r/WeAreTheMusicMakers and r/SunoAI suggests Suno's v5.5 models produce polished, radio-adjacent output across pop, hip-hop, and electronic genres. Udio is frequently described as stronger in acoustic, jazz, and ambient territory.",
+          "issue": "Reddit communities are cited as sources for quality claims without any linked posts, threads, or archived discussions. This gives the impression of documented community consensus when it is an unverifiable editorial synthesis. The methodology disclosure notes no hands-on testing was done, making this the primary quality claim in the article.",
+          "recommended_replacement": "Based on an editorial review of community discussions (without hands-on testing by dailyblip), Suno's v5.5 models are frequently described as producing polished, radio-adjacent output across pop, hip-hop, and electronic genres, while Udio is frequently described as stronger in acoustic, jazz, and ambient territory. These are unverified community observations; your own genre tests should take precedence.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "WAV export** | Premier (via Suno Studio) | Disabled as of June 2026 (UMG transition) |",
+          "issue": "The table states Udio WAV export is 'Disabled as of June 2026 (UMG transition).' The UsagePricing.com source shows the download removal occurred after the October 2025 UMG settlement, with the 48-hour window in November 2025. Framing this as a June 2026 event implies the disabling itself happened in June 2026, when June 2026 is only when it was confirmed still disabled.",
+          "recommended_replacement": "Disabled since late 2025 (UMG transition); confirmed still disabled as of June 2026",
+          "supporting_source_url": "https://www.usagepricing.com/blueprint/udio"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Stems export** | Premier only (WAV stems + MIDI per stem) | Disabled as of June 2026 |",
+          "issue": "Same dating issue as WAV export row. Stem export for Udio was not disabled in June 2026; it has been unavailable since downloads were removed following the October-November 2025 label settlements. June 2026 is when it was confirmed still disabled, not when the restriction began.",
+          "recommended_replacement": "Disabled since late 2025 (follows download restriction); confirmed still disabled as of June 2026",
+          "supporting_source_url": "https://www.usagepricing.com/blueprint/udio"
+        },
+        {
+          "severity": "low",
+          "section_id": "s7",
+          "original_text": "Suno's legal filings acknowledge training on broadly available internet audio.",
+          "issue": "This claim is presented as a verified fact but no specific legal filing or primary source is cited for it in the source list. The RIAA source covers the plaintiffs' allegations, not Suno's own filings. This should be attributed to a specific source or flagged as unverified.",
+          "recommended_replacement": "Suno's legal filings have been reported to acknowledge training on broadly available internet audio; verify this characterization against primary court documents before citing it.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "low",
+          "section_id": "s7",
+          "original_text": "Udio's UMG settlement includes audit rights over training data, suggesting some oversight.",
+          "issue": "The claim that the UMG-Udio settlement includes audit rights over training data is not supported by any source in the article's source list. Neither the UsagePricing.com capture nor the Chartlex tracker mentions audit rights as a settlement term. This is an unsupported conclusion.",
+          "recommended_replacement": "The terms of Udio's UMG settlement have not been fully disclosed publicly; specific provisions such as audit rights over training data could not be confirmed from sources reviewed for this guide.",
+          "supporting_source_url": ""
+        }
+      ],
+      "checked_at": "2026-07-17T14:05:55.150Z"
+    },
+    "error": {
+      "stage": "factcheck",
+      "message": "factcheck revise: response parsed as valid JSON but is structurally empty (no title, no sections) — the model likely returned a wrong-shaped or near-empty object that askJSON's parser accepted without checking its shape. Check stop_reason in the logs above this error.",
+      "at": "2026-07-17T14:08:16.641Z"
     }
   }
 ]
