@@ -2205,5 +2205,22 @@
       "message": "askJSON: unparseable JSON for prompt starting: {\"article\":{\"title\":\"Top 5 AI Image Generation Tools for Independent Creators (2026)\",\"alternative_titles\":[\"Which AI Im (last response was TRUNCATED — raise maxTokens for this call)",
       "at": "2026-07-17T04:48:07.160Z"
     }
+  },
+  {
+    "id": "09859f39-9c90-4b00-b91c-ec5a012327cf",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top 1 music generation tool",
+      "article_type": "Top tools list",
+      "target_audience": "musicians",
+      "target_length": "Standard",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T14:30:05.655Z",
+    "updated_at": "2026-07-17T14:30:05.655Z"
   }
 ]
