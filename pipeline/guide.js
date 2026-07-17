@@ -39,6 +39,10 @@ const NEXT_STAGE = {
   factcheck: "Generating images",
   images: "Formatting",
   format: "Ready for review",
+  // main()'s generic handler always does job.stage = NEXT_STAGE[stageName]
+  // after a stage runs \u2014 without this entry, that would overwrite
+  // stageRecheck's own "Ready for review" assignment with undefined.
+  recheck: "Ready for review",
 };
 
 function getJob(jobId) {
@@ -293,6 +297,19 @@ async function stageFactcheck(job) {
   // pipeline crashes." See admin.html's Approve button for the actual gate.
 }
 
+// ---- Standalone re-check (admin-triggered, not part of the main
+// pipeline chain) ------------------------------------------------------
+// Wraps stageFactcheck for the "I edited a flagged section by hand, now
+// clear the block" flow. Unlike the mid-pipeline factcheck stage (which
+// hands off to images/format next), this is a dead end on its own \u2014
+// nothing downstream is going to set status back to ready_for_review
+// for it, so it does that itself.
+async function stageRecheck(job) {
+  await stageFactcheck(job);
+  job.status = "ready_for_review";
+  job.stage = "Ready for review";
+}
+
 // ---- Stage: images --------------------------------------------------
 function buildImagePrompts(article, imageCount) {
   const mix3 = ["wide hero image, 16:9", "workflow or explanatory section image, 4:3", "creator-focused practical-use image, 4:3"];
@@ -380,12 +397,12 @@ async function stageFormat(job) {
 }
 
 // ---- CLI entry -----------------------------------------------------------
-const STAGE_FNS = { brief: stageBrief, research: stageResearch, draft: stageDraft, factcheck: stageFactcheck, images: stageImages, format: stageFormat };
+const STAGE_FNS = { brief: stageBrief, research: stageResearch, draft: stageDraft, factcheck: stageFactcheck, images: stageImages, format: stageFormat, recheck: stageRecheck };
 
 async function main() {
   const [, , stageName, jobId] = process.argv;
   if (!STAGE_FNS[stageName] || !jobId) {
-    console.error("usage: node pipeline/guide.js <brief|research|draft|factcheck|images|format> <jobId>");
+    console.error("usage: node pipeline/guide.js <brief|research|draft|factcheck|images|format|recheck> <jobId>");
     process.exit(1);
   }
   const { guides, job } = getJob(jobId);
