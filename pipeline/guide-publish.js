@@ -46,7 +46,19 @@ function validatePrePublish(job) {
   const allText = [a?.introduction, a?.conclusion, ...(a?.sections || []).map((s) => s.body_markdown)].join(" ");
   if (placeholderRe.test(allText)) problems.push("article still contains placeholder text (e.g. \"[x]\")");
   const unresolvedHigh = (job.fact_check?.issues || []).filter((i) => i.severity === "high");
-  if (unresolvedHigh.length) problems.push(`${unresolvedHigh.length} unresolved high-severity fact-check issue(s)`);
+  // The ONLY check an explicit override can skip \u2014 everything else
+  // above (slug, meta description, hero image, alt text, placeholder
+  // text) stays a hard requirement regardless. admin.html only sets
+  // published_despite_warnings after a person has explicitly seen the
+  // warnings and checked an acknowledgment box, so this isn't a silent
+  // bypass \u2014 but it's still worth a clear log line, since publishing
+  // known-unverified claims is exactly the failure mode this whole
+  // stage exists to prevent.
+  if (unresolvedHigh.length && !job.published_despite_warnings) {
+    problems.push(`${unresolvedHigh.length} unresolved high-severity fact-check issue(s)`);
+  } else if (unresolvedHigh.length && job.published_despite_warnings) {
+    console.warn(`guide-publish: publishing "${a?.slug}" with ${unresolvedHigh.length} unresolved high-severity issue(s) \u2014 explicitly overridden via admin.html.`);
+  }
   return problems;
 }
 
@@ -141,7 +153,14 @@ function renderPage(job) {
       ).join("")}</ul></div>`
     : "";
 
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+  // Hidden audit trail, visible in page source only \u2014 not shown to
+  // readers, but means an override is never invisible even in the
+  // published artifact itself, not just buried in data/guides.json.
+  const overrideComment = job.published_despite_warnings
+    ? `<!-- Published with ${(job.overridden_warnings || []).length} unresolved high-severity fact-check warning(s), explicitly overridden via admin.html on ${esc(job.approved_at || "")}. See data/guides.json job id ${esc(job.id)} for details. -->\n`
+    : "";
+
+  return `${overrideComment}<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(a.title)} \u2014 dailyblip</title>
 <meta name="description" content="${esc(a.meta_description)}">
