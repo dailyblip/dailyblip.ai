@@ -1754,5 +1754,22 @@
       "message": "askJSON: unparseable JSON for prompt starting: {\"article\":{\"title\":\"AI Music Tools for Musicians Who Don't Code: Where to Actually Start\",\"alternative_titles\":[\"Gettin (last response was TRUNCATED — raise maxTokens for this call)",
       "at": "2026-07-17T15:52:34.949Z"
     }
+  },
+  {
+    "id": "13e7d100-e80e-4198-8ee2-752c198f91c8",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Quick start guide for a traditional music incorporating AI into their music",
+      "article_type": "Practical guide",
+      "target_audience": "musicians",
+      "target_length": "Standard",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T16:08:24.554Z",
+    "updated_at": "2026-07-17T16:08:24.554Z"
   }
 ]
