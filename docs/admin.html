@@ -773,6 +773,19 @@ const STAGE_ORDER = ["Queued", "Researching", "Drafting", "Fact-checking", "Gene
 // no single stage (even image generation) should realistically take
 // this long.
 const STUCK_THRESHOLD_MS = 6 * 60 * 1000;
+// Deliberately much longer than the "might be stuck, check the log"
+// warning above \u2014 that one's fine to show early since it's just
+// informational. Offering a DESTRUCTIVE force-delete needs much higher
+// confidence the job is actually dead, not just slow (a legitimate
+// research retry can easily take several minutes). Set safely past
+// guide.yml's own timeout-minutes: 20 ceiling \u2014 if a job hasn't
+// updated by then, the GitHub Action itself has already been killed by
+// GitHub, so deleting the record can't possibly break an active run.
+const FORCE_DELETE_THRESHOLD_MS = 25 * 60 * 1000;
+function isForceDeletable(g){
+  return (g.status === "in_progress" || g.status === "queued") &&
+    (Date.now() - new Date(g.updated_at || g.created_at).getTime()) > FORCE_DELETE_THRESHOLD_MS;
+}
 
 async function loadGuidesFile(){
   const r = await readFile(GUIDES_PATH);
@@ -781,6 +794,31 @@ async function loadGuidesFile(){
 }
 async function saveGuidesFile(message){
   guidesSha = await writeFile(GUIDES_PATH, guides, guidesSha, message);
+}
+
+// GitHub rejects a write with 409 if data/guides.json changed since we
+// last read it \u2014 very possible here specifically, since a GitHub
+// Actions run commits a stage update to this exact file every time a
+// stage finishes, potentially at any moment while admin.html is also
+// trying to write to it. `mutate` must be a pure function of the
+// CURRENT guides array (not a closure over stale state) so that on
+// conflict, re-fetching fresh data and re-running the same mutation
+// against it produces the correct result \u2014 blindly retrying with the
+// original stale payload would silently overwrite whatever the
+// concurrent commit just wrote (e.g. a stage progressing).
+async function writeGuidesWithRetry(mutate, message){
+  for (let attempt = 0; attempt < 2; attempt++){
+    guides = mutate(guides);
+    try {
+      guidesSha = await writeFile(GUIDES_PATH, guides, guidesSha, message);
+      return;
+    } catch (e) {
+      const isConflict = /GitHub 409/.test(e.message);
+      if (!isConflict || attempt === 1) throw e;
+      console.warn("guides.json write conflict (likely a GitHub Action committing at the same time) \u2014 refetching latest and retrying once.");
+      await loadGuidesFile();
+    }
+  }
 }
 
 function uid(){
@@ -806,9 +844,14 @@ function guideStatusLabel(g){
 async function renderGuides(){
   try { await loadGuidesFile(); } catch (e) { toast(e.message, "err", 5000); return; }
   const list = $("#guideList");
-  if (!guides.length){ list.innerHTML = ""; }
+  // Explicit sort by created_at, newest first \u2014 don't rely on array
+  // insertion order, which isn't guaranteed to stay chronological once
+  // concurrent writes (admin.html edits interleaved with GitHub Actions
+  // commits) start reordering things.
+  const sorted = guides.slice().sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+  if (!sorted.length){ list.innerHTML = ""; }
   else {
-    list.innerHTML = guides.slice().reverse().map(g => `
+    list.innerHTML = sorted.map(g => `
       <div class="panel" style="margin-bottom:10px;cursor:pointer" onclick="openGuide('${g.id}')">
         <div style="display:flex;justify-content:space-between;align-items:center">
           <div>
@@ -818,25 +861,39 @@ async function renderGuides(){
           <div style="display:flex;gap:8px;align-items:center">
             ${g.status === "published" ? `<a href="${esc(g.published_url)}" target="_blank" onclick="event.stopPropagation()" class="btn">view live \u2192</a>` : ""}
             ${DELETABLE_STATUSES.has(g.status) ? `<button class="btn red" onclick="event.stopPropagation();deleteGuide('${g.id}')" title="Delete this job">\u00d7</button>` : ""}
+            ${isForceDeletable(g) ? `<button class="btn red" onclick="event.stopPropagation();deleteGuide('${g.id}',true)" title="No update in over ${FORCE_DELETE_THRESHOLD_MS/60000} min, past guide.yml's own 20-min timeout \u2014 the Action is definitely dead">\u00d7 (stuck)</button>` : ""}
           </div>
         </div>
       </div>`).join("");
   }
-  // Resume polling if something's mid-flight and this tab gets reopened.
-  const inFlight = guides.find(g => g.status === "in_progress" || g.status === "queued");
-  if (inFlight) startGuidePolling(inFlight.id);
+  // Resume polling ONLY for the job currently open in the review panel,
+  // if it's still in progress \u2014 never adopt some OTHER in-progress job
+  // found elsewhere in the list. That auto-adoption was the actual bug
+  // behind both the review panel "vanishing" (a leftover zombie job from
+  // earlier testing silently hijacked activeGuideId, then the next poll
+  // tick overwrote the visible panel with THAT job's progress instead)
+  // and, very likely, the delete/clear issue too (the resulting
+  // duplicate polling loops raced their own fetches against a delete's
+  // write-then-refresh sequence).
+  if (activeGuideId && !guidePollTimer) {
+    const openJob = guides.find(g => g.id === activeGuideId);
+    if (openJob && !TERMINAL_STATUSES.has(openJob.status)) startGuidePolling(activeGuideId);
+  }
 }
 
-async function deleteGuide(id){
+async function deleteGuide(id, force){
   const g = guides.find(x => x.id === id);
   if (!g) return;
-  if (!DELETABLE_STATUSES.has(g.status)) { toast("Can't delete a job that's still actively running.", "err"); return; }
+  const canDelete = DELETABLE_STATUSES.has(g.status) || (force && isForceDeletable(g));
+  if (!canDelete) { toast("Can't delete a job that's still actively running.", "err"); return; }
   const label = g.article?.title || g.submitted?.idea?.slice(0, 60) || "this job";
-  if (!confirm(`Delete "${label}"? This only removes it from the list \u2014 if it was published, the live page stays up.`)) return;
+  const stuckNote = (force && isForceDeletable(g))
+    ? `\n\nThis job hasn't updated in over ${FORCE_DELETE_THRESHOLD_MS/60000} minutes, well past guide.yml's own 20-minute timeout \u2014 the GitHub Action has definitely already been killed, so this is safe.`
+    : "";
+  if (!confirm(`Delete "${label}"? This only removes it from the list \u2014 if it was published, the live page stays up.${stuckNote}`)) return;
   try {
     await loadGuidesFile();
-    guides = guides.filter(x => x.id !== id);
-    await saveGuidesFile(`admin: delete guide job ${id}`);
+    await writeGuidesWithRetry(gs => gs.filter(x => x.id !== id), `admin: ${force ? "force-" : ""}delete guide job ${id}`);
     if (activeGuideId === id) closeGuideReview();
     await renderGuides();
     toast("Deleted.");
@@ -853,10 +910,13 @@ $("#guideClearFinished").addEventListener("click", async () => {
   if (!finished.length) { toast("Nothing to clear \u2014 no finished jobs in the list."); return; }
   const stillActive = guides.length - finished.length;
   const activeNote = stillActive ? `\n\n${stillActive} job(s) still in progress or awaiting publish will be left alone.` : "";
+  // The confirm() dialog above can sit open for an arbitrary amount of
+  // time while a person reads it \u2014 easily long enough for a GitHub
+  // Action to commit a stage update in the background, which is exactly
+  // why this needs the retry-safe write, not a plain save.
   if (!confirm(`Clear ${finished.length} finished job(s) (ready for review, published, failed, or rejected)?${activeNote}\n\nPublished pages themselves are not affected \u2014 this only clears the admin list.`)) return;
   try {
-    guides = guides.filter(g => !DELETABLE_STATUSES.has(g.status));
-    await saveGuidesFile(`admin: clear ${finished.length} finished guide job(s)`);
+    await writeGuidesWithRetry(gs => gs.filter(g => !DELETABLE_STATUSES.has(g.status)), `admin: clear ${finished.length} finished guide job(s)`);
     if (activeGuideId && !guides.find(g => g.id === activeGuideId)) closeGuideReview();
     await renderGuides();
     toast(`Cleared ${finished.length} job(s).`);
@@ -882,8 +942,7 @@ $("#gGenerate").addEventListener("click", async () => {
       },
       created_at: new Date().toISOString(), updated_at: new Date().toISOString(),
     };
-    guides.push(job);
-    await saveGuidesFile(`admin: new guide job ${id}`);
+    await writeGuidesWithRetry(g => (g.some(x => x.id === id) ? g : [...g, job]), `admin: new guide job ${id}`);
     await dispatchWorkflow("guide.yml", { job_id: id });
     toast("Generation started \u2014 this will take several minutes.");
     $("#gIdea").value = "";
@@ -897,14 +956,12 @@ $("#gGenerate").addEventListener("click", async () => {
 });
 
 function startGuidePolling(id){
-  activeGuideId = id;
   clearInterval(guidePollTimer);
   guidePollTimer = setInterval(async () => {
     try {
-      await loadGuidesFile();
-      const g = guides.find(x => x.id === id);
-      if (!g) return;
       await renderGuides();
+      const g = guides.find(x => x.id === id);
+      if (!g) { clearInterval(guidePollTimer); return; }
       // If this job's progress panel is the one currently open, refresh
       // its stage dots too \u2014 otherwise it visually freezes at whatever
       // stage it was on when opened, even though new data just arrived.
@@ -1063,15 +1120,18 @@ async function saveGuideEdits(id, thenPublish){
     const i = Number(el.dataset.sec), field = el.dataset.field;
     if (g.article.sections[i]) g.article.sections[i][field] = el.value;
   });
+  if (thenPublish) { g.status = "approved"; g.stage = "Approved"; g.approved_at = new Date().toISOString(); }
 
   const btn = thenPublish ? $("#gApprovePublish") : $("#gSaveEdits");
   if (btn) btn.disabled = true;
   try {
     await loadGuidesFile();
-    const idx = guides.findIndex(x => x.id === id);
-    guides[idx] = g;
-    if (thenPublish) { g.status = "approved"; g.stage = "Approved"; g.approved_at = new Date().toISOString(); }
-    await saveGuidesFile(`admin: ${thenPublish ? "approve" : "edit"} guide ${id}`);
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      const updated = [...gs];
+      if (i === -1) updated.push(g); else updated[i] = g;
+      return updated;
+    }, `admin: ${thenPublish ? "approve" : "edit"} guide ${id}`);
     if (thenPublish) {
       await dispatchWorkflow("guide-publish.yml", { job_id: id });
       toast("Publishing\u2026 the live URL will show up in the list shortly.");
