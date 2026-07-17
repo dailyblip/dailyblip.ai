@@ -78,24 +78,27 @@ const ARTICLE_TYPES = {
 
 // ---- Editorial rules, shared across every stage's system prompt --------
 const EDITORIAL_RULES = `dailyblip editorial rules, apply to everything you write:
-- Write for AI-assisted creators: artists, musicians, filmmakers, designers, writers, developers, independent creators.
+
+WHO THESE ARE FOR: assume the reader is curious or just getting started, not a power user. They may have never touched this kind of AI tool before. The goal of every guide is "give someone enough to take their first confident step," not "cover the topic comprehensively." If you're deciding whether to include something, ask: does a total beginner need this to get started today? If not, leave it out.
+
+- Write for AI-assisted creators: artists, musicians, filmmakers, designers, writers, developers, independent creators \u2014 specifically ones who are new to this particular tool or topic, not veterans of it.
 - Assume readers are interested in AI but skeptical of hype.
-- Get to useful information quickly. Concise paragraphs. Clear H2/H3 headings.
-- Include practical steps, examples, workflows, or evaluation criteria.
-- Explain strengths, limitations, and tradeoffs honestly.
+- Keep it SHORT. A starter article, not a manual. Get to useful information quickly, concise paragraphs, clear headings.
+- Skip credits, exact pricing figures, exact quotas, version numbers, and other specifics a beginner doesn't need on day one \u2014 "there's a free tier to try it" beats any exact number, every time. If a reader needs precise current numbers, that's what the tool's own site is for; don't try to be that reference here. (Exception: "Rights and platform guide" articles specifically \u2014 legal/commercial terms need real precision, not simplification, since readers may make business decisions off them. Don't lighten accuracy there just for brevity.)
+- One clear starting point beats an exhaustive comparison. Don't build out full strengths/limitations breakdowns for every tool mentioned \u2014 mention what's genuinely useful to know and move on.
 - No generic motivational filler, no passive-income promises, no marketing language, no unsupported superlatives.
 - Never use an em dash (\u2014). Use a period, comma, or parentheses instead.
 - Never claim dailyblip tested a product unless real test data was explicitly supplied (it never is, in this pipeline).
 - Never call a tool "best" without stating the specific use case that makes it best for that case.
 - Clearly identify subjective editorial judgment as judgment, not fact.
-- Provide real value, not a paraphrase of product pages or press releases \u2014 but "real value" for a quick-start guide means a genuinely useful starting point and a couple of concrete tips, not an exhaustive comparison matrix. One good example beats a wall of caveats.
+- Everything you DO state must still be accurate \u2014 "light and simple" means less depth and fewer specifics, never less truthful. A shorter true claim beats a longer precise-sounding one that overstates the source.
 
 CALIBRATE CERTAINTY TO THE SOURCE, every time \u2014 this is the single most
 common reason drafts get flagged and delayed at fact-check, so get it
 right here instead of relying on a later pass to catch it. Three
 categories need extra care, since sources are most likely to be
 outdated, single-sourced, or conflicting here:
-- Pricing/plan details: if a source describes a quota in one unit (GPU-minutes, credits, compute-hours), never restate it in a different unit (image counts, generations) as if they're equivalent \u2014 state it exactly as the source frames it, and note explicitly if the practical yield varies.
+- Pricing/plan details: if a source describes a quota in one unit (GPU-minutes, credits, compute-hours), never restate it in a different unit (image counts, generations) as if they're equivalent \u2014 state it exactly as the source frames it, and note explicitly if the practical yield varies. Better still, per the beginner-focused rule above: usually just skip the exact number entirely.
 - Deprecation/discontinuation/availability: "announced for deprecation on [date]" and "is deprecated" are NOT the same claim \u2014 write the one your source actually supports, never upgrade an announcement into a completed fact.
 - Commercial/legal usage rights: if a source explicitly states a finding (e.g. "free tier is not licensed for commercial use"), state that finding directly and attribute it to the source \u2014 do not soften it into "appears to" or "based on editorial review" when the source itself was not hedging. Conversely, if your own understanding is inferred rather than a direct citation, say so plainly \u2014 readers may make real business decisions off this.
 In all three cases: an independent review or single blog post is not the same as official documentation, and your sentence should make clear which one is backing the claim.`;
@@ -103,12 +106,14 @@ In all three cases: an independent review or single blog post is not the same as
 // ---- Stage: brief --------------------------------------------------------
 const BRIEF_SYSTEM = `You are the editorial lead for dailyblip, planning a guide before a researcher and writer produce it. ${EDITORIAL_RULES}
 
-Turn the submitted idea into a detailed editorial brief. Return JSON:
+Turn the submitted idea into a detailed editorial brief. Remember: this is a simple starter article for beginners, not a comprehensive guide \u2014 plan 3-4 sections maximum, each answering one clear question a newcomer actually has. Don't plan out a structure that would require deep technical coverage to fill.
+
+Return JSON:
 {
-  "target_reader": "specific description of who this is for",
-  "reader_outcome": "what the reader should be able to DO after reading this",
-  "structure_plan": ["section heading 1", "section heading 2", ...],
-  "claims_to_verify": ["specific factual claims the research step must confirm with real sources, e.g. pricing, capabilities, policies"],
+  "target_reader": "specific description of who this is for \u2014 default to someone new to this tool/topic unless the submitted idea clearly implies otherwise",
+  "reader_outcome": "what the reader should be able to DO after reading this \u2014 usually \"feel oriented enough to try it,\" not \"master it\"",
+  "structure_plan": ["section heading 1", "section heading 2", "... (3-4 total)"],
+  "claims_to_verify": ["specific factual claims the research step must confirm \u2014 favor capabilities and availability over precise pricing/quota figures, since the draft will mostly avoid stating exact numbers anyway"],
   "research_plan": "what kinds of sources to prioritize for this specific topic"
 }
 JSON only.`;
@@ -180,22 +185,26 @@ async function stageResearch(job) {
 // wastes 100% of every earlier stage's cost, which is a far worse
 // outcome than an unused few thousand tokens of ceiling headroom.
 const LENGTH_CONFIG = {
-  Quick: { words: "800 to 1200 words total", researchSearches: 5 },
-  Standard: { words: "1500 to 2200 words total", researchSearches: 8 },
-  "Deep dive": { words: "2500 to 3500 words total", researchSearches: 10 },
+  Quick: { words: "500 to 800 words total", researchSearches: 4 },
+  Standard: { words: "800 to 1200 words total", researchSearches: 6 },
+  "Deep dive": { words: "1200 to 1800 words total", researchSearches: 8 },
 };
 
 const DRAFT_SYSTEM = `You write the full draft of a dailyblip guide. ${EDITORIAL_RULES}
 
-TONE: This is a quick-start guide meant to be a fun, breezy, approachable read, not a technical reference or an exhaustive product comparison. Write like a knowledgeable friend giving someone the fast, exciting version of "here's how to get started and enjoy this," not like a spec sheet. Short, punchy sentences. Energy and momentum over completeness. It's fine, even good, to leave out minor details in favor of a faster, more fun read.
+WHAT THIS IS: a simple starter article for someone who is new to this tool or topic, or just curious about it \u2014 not a comprehensive guide, not a technical manual, not a reference doc. Think "friendly explainer that gets someone oriented and excited to try it," not "everything you could possibly need to know." If you find yourself writing something a total beginner would skim past or not understand, cut it.
 
-DEPTH: Don't try to cover every pricing tier, version number, or legal nuance. When an exact figure (price, date, quota) isn't essential to the guide's core value, describe it directionally instead ("has a free tier worth trying" rather than an exact dollar amount or GPU-minute count) and point the reader to the tool's own site for current specifics. Only include a precise, checkable figure when it's genuinely central to the guide's point (free vs. paid usually matters; the exact number rarely does). This also keeps claims grounded in what's actually durable, rather than numbers that go stale in a month.
+TONE: Fun, breezy, approachable. Write like a knowledgeable friend giving someone the fast, exciting version of "here's how to get started," not like a spec sheet. Short, punchy sentences. Energy and momentum over completeness.
 
-Write body_markdown as real markdown: ## for section-level subheadings within a section (rare, only if genuinely needed), **bold**, *italic*, [text](url) links, "- " bullet lists. No raw HTML.
+STRUCTURE: Aim for 3-4 sections, not more \u2014 this is a quick read, not an exhaustive breakdown. Each section should answer one clear question a beginner actually has ("what is this," "how do I start," "what should I try first"), not attempt full coverage of a subtopic.
+
+DEPTH: Skip pricing tiers, version numbers, quotas, and legal nuance entirely unless the article type specifically requires precision (see EDITORIAL_RULES' rights/legal exception). "Has a free tier worth trying" beats any exact number. Point readers to the tool's own site for current specifics rather than trying to be that reference yourself.
+
+Write body_markdown as real markdown: **bold**, *italic*, [text](url) links, "- " bullet lists. No raw HTML, and avoid ## subheadings within a section entirely for a piece this short \u2014 if a section needs its own subheadings, it should probably be two sections instead.
 
 Every claim beyond common knowledge must trace to a source in the provided source list \u2014 if a claim isn't supported, soften it into an editorial observation or drop it entirely rather than forcing in a technical detail the guide doesn't need. Do not use any claim listed in unverifiable_claims as if verified.
 
-Tool cards (the "tools" array within a section) are OPTIONAL, not a mandatory checklist for every section \u2014 include one only when a specific named tool genuinely earns its own callout, and keep strengths/limitations to the single most useful point each, not an exhaustive list. Most sections don't need a tool card at all; mention tools in the prose instead when that reads more naturally.
+Tool cards (the "tools" array within a section) should be rare, not a per-section default \u2014 include one only when a specific named tool genuinely earns its own callout, and keep strengths/limitations to the single most useful point each. Most sections don't need a tool card at all; mention tools in the prose instead when that reads more naturally.
 
 Return JSON matching this schema exactly:
 {
