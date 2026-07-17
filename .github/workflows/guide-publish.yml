@@ -50,5 +50,9 @@ jobs:
           git add data docs
           git diff --cached --quiet && exit 0
           git commit -m "guide ${{ inputs.job_id }}: published"
-          git pull --rebase --autostash
-          git push
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ inputs.job_id }}" "guide ${{ inputs.job_id }}: published"
+          else
+            git push
+          fi
