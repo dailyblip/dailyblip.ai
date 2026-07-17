@@ -821,8 +821,8 @@
   },
   {
     "id": "ab77d633-7bff-4771-a971-97b8be6f6dd3",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "How can I create lofi chill beats with AI?",
       "article_type": "Practical guide",
@@ -1157,6 +1157,13 @@
         "approved": false,
         "generated_at": "2026-07-17T19:03:47.673Z"
       }
+    ],
+    "approved_at": "2026-07-17T19:12:47.829Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s2: The article attributes the loss of free-tier downloads to a November 2025 Warner Music deal, but the Chartlex source credits this change to Udio's October 2025 UMG settlement, not Suno's Warner deal. The sourced Suno-specific claim from Undetectr/Dynamoi is about a Warner deal affecting downloads, but the article conflates the two platforms' separate licensing events.",
+      "s2: The Udio official pricing page (source 6) confirms a free tier exists and eesel AI (source 7) documents active credit-based plans, yet the article tells readers Udio is not a practical option without noting that paid users may still have some access pathway — the blanket characterization may be inaccurate for paid tiers.",
+      "quick_answer: The quick answer implies Suno's free tier allows downloading (just notes it 'has been in flux'), but the sourced independent reviews state downloads are fully removed for free users — understating a confirmed limitation creates a misleading first impression."
     ]
   }
 ]
