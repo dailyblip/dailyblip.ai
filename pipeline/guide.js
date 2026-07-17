@@ -227,29 +227,61 @@ Inspect: product capabilities, availability, pricing, free-plan claims, commerci
 Return JSON: {"issues": [{"severity":"low|medium|high","section_id":"matches a section id, or \\"intro\\"/\\"conclusion\\"","original_text":"exact quote from the article","issue":"what's wrong","recommended_replacement":"corrected text","supporting_source_url":"" }]}
 JSON only. Empty issues array if genuinely clean.`;
 
-const REVISE_SYSTEM = `Revise a dailyblip guide to fix specific flagged issues, changing as little else as possible. ${EDITORIAL_RULES}
+const REVISE_SYSTEM = `You are fixing specific flagged issues in a dailyblip guide, changing as little else as possible. ${EDITORIAL_RULES}
 
-Return the FULL corrected article in the exact same JSON schema you were given \u2014 same fields, same structure \u2014 with only the flagged issues fixed.`;
+You'll receive the full article for context, plus a list of specific issues to fix. Return ONLY the corrected content for whatever needs to change \u2014 do NOT reproduce the entire article. This keeps your response small and focused, and avoids accidentally altering parts of the article nobody flagged.
+
+Return JSON: {
+  "introduction": "corrected text, ONLY include this field if the introduction itself was flagged",
+  "conclusion": "corrected text, ONLY include this field if the conclusion itself was flagged",
+  "section_fixes": [{"id":"the flagged section's id, matching the article you were given","body_markdown":"the corrected body_markdown for just this section"}]
+}
+Only include entries for sections/fields that actually had a flagged issue \u2014 omit everything else entirely. JSON only.`;
+
+// Merges targeted fixes into the EXISTING article object rather than
+// replacing it \u2014 this is what makes "revise returned garbage" no
+// longer able to destroy a good draft: there's no wholesale
+// replacement for a bad response to corrupt. Unmatched/malformed
+// entries are just skipped rather than thrown on, since a partially-
+// applied revision (some real fixes landed, one weird entry ignored)
+// is a much better outcome than failing the whole job over one bad
+// fix entry.
+function applyRevisionFixes(article, fixes) {
+  if (typeof fixes?.introduction === "string" && fixes.introduction.trim()) article.introduction = fixes.introduction;
+  if (typeof fixes?.conclusion === "string" && fixes.conclusion.trim()) article.conclusion = fixes.conclusion;
+  for (const fix of fixes?.section_fixes || []) {
+    const sec = (article.sections || []).find((s) => s.id === fix?.id);
+    if (sec && typeof fix.body_markdown === "string" && fix.body_markdown.trim()) sec.body_markdown = fix.body_markdown;
+  }
+}
 
 async function stageFactcheck(job) {
   const result = await askJSON({
     role: "write",
     system: FACTCHECK_SYSTEM,
     prompt: JSON.stringify({ article: job.article, sources: job.sources }),
-    maxTokens: 3000,
+    // Was 3000 \u2014 raised after a real production truncation: an article
+    // with several flagged issues (each carrying a quoted original_text
+    // plus a full recommended_replacement) doesn't reliably fit in 3000
+    // tokens, same underestimation pattern already hit in research and
+    // images.
+    maxTokens: 6000,
   });
   job.fact_check = { issues: result.issues || [], checked_at: new Date().toISOString() };
 
   const needsRevision = job.fact_check.issues.some((i) => i.severity === "medium" || i.severity === "high");
   if (needsRevision) {
-    const revised = await askJSON({
+    // maxTokens is much smaller than the old whole-article-replacement
+    // approach on purpose \u2014 this only asks for the flagged pieces, not
+    // a full reproduction of the article, so it needs far less room and
+    // is far less likely to truncate in the first place.
+    const fixes = await askJSON({
       role: "write",
       system: REVISE_SYSTEM,
       prompt: JSON.stringify({ article: job.article, issues: job.fact_check.issues }),
-      maxTokens: 8000,
+      maxTokens: 3000,
     });
-    assertArticleShape(revised, "factcheck revise");
-    job.article = revised;
+    applyRevisionFixes(job.article, fixes);
     job.fact_check.revised = true;
   }
 
