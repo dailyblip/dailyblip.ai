@@ -300,5 +300,22 @@
       "message": "askJSON: unparseable JSON for prompt starting: {\"idea\":\"Quick start guide for a traditional music incorporating AI into their music\",\"article_type\":\"Practical guide\",\" (last response was TRUNCATED — raise maxTokens for this call)",
       "at": "2026-07-17T16:15:08.546Z"
     }
+  },
+  {
+    "id": "3e4e7b09-e632-4208-89fe-ba4b0e97f7b9",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Quick start guide for image generation",
+      "article_type": "Practical guide",
+      "target_audience": "new to generative AI",
+      "target_length": "Quick",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-17T16:17:54.770Z",
+    "updated_at": "2026-07-17T16:17:54.770Z"
   }
 ]
