@@ -35,8 +35,8 @@
   },
   {
     "id": "cf91fc3b-5603-4622-9f6f-86bfd9c20de8",
-    "status": "queued",
-    "stage": "Researching",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Comparing the options for realistic photo generation.",
       "article_type": "Tool comparison",
@@ -48,7 +48,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:08:38.717Z",
-    "updated_at": "2026-07-17T03:09:10.633Z",
+    "updated_at": "2026-07-17T03:10:18.943Z",
     "brief": {
       "target_reader": "Social media creators (Instagram, TikTok, Pinterest, LinkedIn) who want photorealistic AI-generated images for posts, ads, or branding, and are trying to choose between competing tools without wading through marketing copy",
       "reader_outcome": "The reader should be able to identify which AI image tool best fits their specific use case for realistic photo generation, understand the practical tradeoffs in quality, speed, cost, and workflow, and know which tools to trial first based on their platform and output needs",
@@ -77,6 +77,12 @@
         "Whether Ideogram or Leonardo.ai have aspect ratio presets matching common social formats (9:16, 1:1, 4:5)"
       ],
       "research_plan": "Prioritize official pricing and terms pages for each tool (not third-party summaries, which go stale quickly). Look for independent prompt comparison posts or YouTube breakdowns from AI art communities (Reddit r/StableDiffusion, r/midjourney, Civitai forums) that show side-by-side outputs on consistent prompts. Seek out creator-focused reviews from social media professionals rather than tech press. Check product changelogs or release notes to confirm current feature states. Avoid relying on tool marketing pages for capability claims. For Stable Diffusion, focus on hosted/no-code access routes since the target reader is a social media creator, not a developer."
+    },
+    "sources": [],
+    "error": {
+      "stage": "research",
+      "message": "no JSON found",
+      "at": "2026-07-17T03:10:18.943Z"
     }
   }
 ]
