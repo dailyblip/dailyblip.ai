@@ -2723,7 +2723,7 @@
   {
     "id": "a0c40a7c-b981-4f30-80e2-7fabf1de1840",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top two music generation AIs",
       "article_type": "Tool comparison",
@@ -2735,7 +2735,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T13:59:36.927Z",
-    "updated_at": "2026-07-17T14:00:11.173Z",
+    "updated_at": "2026-07-17T14:01:56.327Z",
     "brief": {
       "target_reader": "Independent musicians, producers, and composers who are curious about AI music generation tools but want an honest, practical comparison before committing time or money. They may have heard of Suno and Udio but have not yet formed a strong opinion on either.",
       "reader_outcome": "The reader should be able to decide which of the two leading AI music generation tools fits their specific workflow, budget, and creative goals, and know the concrete limitations of each before signing up.",
@@ -2770,6 +2770,196 @@
         "Any training data disclosure or opt-out policies published by either company"
       ],
       "research_plan": "Prioritize each company's official pricing and terms-of-service pages as primary sources for licensing, pricing, and feature claims. Cross-reference with recent coverage from music industry publications (Music Business Worldwide, Billboard, Pitchfork) and AI-focused outlets (The Verge, Ars Technica) for litigation status and policy developments. Look for hands-on creator reviews and forum discussions on Reddit (r/SunoAI, r/weddingbands, r/WeAreTheMusicMakers) and YouTube walkthroughs from working musicians to surface real workflow pain points. Avoid relying on either company's own blog or marketing copy as a source for capability claims. Check for any updates post-mid-2024 since both tools have iterated quickly on features and pricing."
-    }
+    },
+    "sources": [
+      {
+        "title": "Suno Pricing Page",
+        "publisher": "Suno (suno.com)",
+        "url": "https://suno.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno offers Free, Pro, and Premier tiers",
+          "Credits included in subscriptions do not carry over from day to day or month to month",
+          "Purchased top-up credits do not expire but require an active subscription to use",
+          "Pro plan includes access to best models, editing tools, and voice recording/upload",
+          "Premier plan includes maximum credits and every feature unlocked",
+          "Commercial use is subject to terms-of-service limitations (referenced but not detailed on pricing page)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "What type of plan do I have? – Suno Knowledge Base",
+        "publisher": "Suno Help Center (help.suno.com)",
+        "url": "https://help.suno.com/en/articles/2410049",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Pro plan includes 2,500 credits per month",
+          "Premier plan includes 10,000 credits per month",
+          "Pro and Premier plan users who exhaust monthly credits receive up to 50 credits per day as a fallback until the next billing date",
+          "Pro and Premier users can purchase additional credits via a 'Buy More Credits' button"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Exporting from Studio – Suno Knowledge Base",
+        "publisher": "Suno Help Center (help.suno.com)",
+        "url": "https://help.suno.com/en/articles/8128193",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno Studio (Premier-only) supports exporting the full song, selected time ranges, and multitrack stems",
+          "All audio exports from Suno Studio are delivered as WAV files",
+          "MIDI export is available per stem from Suno Studio (costs 10 credits per stem)",
+          "MIDI files follow standard MIDI format and can be imported into any DAW",
+          "Suno Studio supports stem-level editing (vocals, drums, bass, etc.)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Terms of Service",
+        "publisher": "Suno (suno.com)",
+        "url": "https://suno.com/terms-of-service",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Commercial use of outputs and voice models is prohibited unless expressly authorized by Suno (i.e., via a paid plan)",
+          "Suno collects usage data and may use it for any lawful purpose per its Privacy Policy",
+          "The ToS governs commercial use limitations for all plans"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno Adjusts AI Music Ownership Terms After Warner Music Partnership",
+        "publisher": "Digital Music News",
+        "url": "https://www.digitalmusicnews.com/2025/12/22/suno-warner-music-deal-changes/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno's official updated rights text states: 'Songs made while subscribed are granted commercial use rights... Commercial use rights allow you to monetize the songs however you wish, without Suno claiming a stake in the earnings.'",
+          "Suno's official policy states: 'Songs made on the free plan (not subscribed) are only available for non-commercial use and cannot be monetized'",
+          "Suno updated ownership language in December 2025 from 'you own the songs' to 'you are generally not considered the owner of the songs, since the output was generated by Suno'",
+          "Retroactive commercial rights for free-plan songs are 'not guaranteed and applies only to specific songs' per Suno's updated policy",
+          "Warner Music Group and Suno settled their copyright litigation in late November 2025 and committed to building licensed AI models trained on WMG's catalog"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing – Live Capture from udio.com/pricing",
+        "publisher": "UsagePricing.com (captured from udio.com/pricing on 2026-06-11)",
+        "url": "https://www.usagepricing.com/blueprint/udio",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio Free tier: $0, 10 credits/day + 100 credits/month, hard cap of 3 full-length (~2:10) songs/day, no rollover",
+          "Udio Standard tier: $10/month ($8/month billed annually = $96/year), 2,400 monthly credits",
+          "Udio Pro tier: $30/month ($24/month billed annually = $288/year), 6,000 monthly credits",
+          "Add-on credit packs available: 100 credits for $3.00 or 1,000 credits for $25.00; purchased credits never expire",
+          "Annual billing saves 20% on both paid tiers",
+          "After Udio's October 2025 settlement with UMG, free downloads of generated songs were removed; the platform moved toward a streaming 'walled garden'",
+          "A 48-hour download window (Nov 3–5, 2025) was offered for songs made under prior terms",
+          "Warner Music Group also settled with Udio on November 19, 2025",
+          "As of June 2026, downloads remain disabled as part of the UMG deal transition"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Udio Pricing 2026: A Complete Breakdown of Plans & Credits",
+        "publisher": "eesel AI (eesel.ai)",
+        "url": "https://www.eesel.ai/blog/udio-pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Udio Standard plan unlocks Voice Control (extract and reuse vocal character from Udio-native songs), Style Blending, and Inpaint — all locked to Standard and above",
+          "Udio Pro plan adds 5 concurrent generation slots and control over who can remix published songs",
+          "One short Udio generation (up to 32 seconds) costs roughly 1 credit; full-length tracks (~2:10) cost more, with the exact multiplier unpublished by Udio",
+          "Standard plan offers a free trial before committing",
+          "Pro includes student pricing at a discount (exact terms not published on pricing page as of June 2026)",
+          "Udio commercial rights for paid plans: Standard and Pro grant commercial use rights for generated content",
+          "Free tier is for non-commercial/personal use only",
+          "Udio completed licensing deals with Universal Music Group (October 2025) and Warner Music Group (November 2025)",
+          "Credits reset monthly with no rollover on all paid plans; only a-la-carte purchased credits never expire",
+          "Prices in USD; GBP and EUR also supported"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Record Companies Bring Landmark Cases for Responsible AI Against Suno and Udio",
+        "publisher": "RIAA (riaa.com)",
+        "url": "https://www.riaa.com/record-companies-bring-landmark-cases-for-responsible-ai-againstsuno-and-udio-in-boston-and-new-york-federal-courts-respectively/",
+        "source_type": "legal",
+        "is_primary": true,
+        "claims_supported": [
+          "RIAA filed copyright infringement lawsuits against Suno (U.S. District Court, District of Massachusetts) and Udio (U.S. District Court, Southern District of New York) on June 24, 2024",
+          "Plaintiffs were Sony Music Entertainment, UMG Recordings, Inc., and Warner Records Inc.",
+          "Damages sought: up to $150,000 per infringed work",
+          "Core allegation: both companies trained AI models on copyrighted sound recordings without permission"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno and Udio AI Music Lawsuit: 2026 Status & Timeline",
+        "publisher": "Music Business Worldwide + AI Vortex / Chartlex AI Lawsuits Tracker (multiple reputable industry outlets, corroborated)",
+        "url": "https://www.chartlex.com/blog/business/music-industry-ai-lawsuits-tracker-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Warner Music Group settled with Suno on November 25, 2025 and entered a licensing partnership; WMG exited the lawsuit",
+          "UMG settled with Udio in October 2025 and announced a licensed AI music platform partnership for 2026",
+          "Warner Music Group also settled with Udio (dismissal filed November 25, 2025)",
+          "As of July 2026, Sony Music has not settled with either Suno or Udio and continues to litigate against both",
+          "UMG and Sony continue to litigate against Suno in Massachusetts; UMG and Sony sought to add 61,026 recordings to the Suno lawsuit in May 2026 via audio-fingerprinting evidence",
+          "A summary judgment hearing on the fair-use question (Suno case) was scheduled for July 2026 in Massachusetts federal court",
+          "Sony's case against Udio had court schedules pushing any US fair-use ruling into 2027",
+          "Independent artist class actions (e.g., Justice v. Suno, Justice v. Udio) are still at the motion/early stage as of mid-2026",
+          "A GEMA v. Suno verdict was scheduled for July 31, 2026 in Germany (Munich Regional Court)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      },
+      {
+        "title": "Suno v5.5 Lets You Clone Your Voice. But Who Owns the Output?",
+        "publisher": "RightsDocket Insights (rightsdocket.com)",
+        "url": "https://www.rightsdocket.com/insights/suno-v55-voice-cloning-rights",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno released version 5.5 on March 26, 2026, introducing Voices (voice cloning), Custom Models, and My Taste",
+          "Voice cloning (Voices feature) is available only to Pro and Premier subscribers; not available on the free plan",
+          "Users must verify voice ownership by matching a spoken phrase before the Voices feature activates",
+          "Voices are private to the user's account — no sharing or marketplace as of April 2026",
+          "Activating the Voices feature grants Suno permission to use voice data to train, develop, and improve their AI models (not just personal songs)",
+          "Custom Models lets Pro/Premier users train a personalized version of v5.5 on at least 6 of their own original tracks (up to 3 models)",
+          "Voice cloning of another person's voice is prohibited under Suno's terms",
+          "Both custom lyrics input and style/genre prompts are supported in Suno's Create workflow (prompt or lyrics mode)",
+          "Suno's 2026 models use licensed training data per the WMG partnership; older unlicensed-data models are being phased out"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-17"
+      }
+    ],
+    "unverifiable_claims": [
+      "Exact Free plan credit count for Suno currently shown as '50 credits/day' on the official pricing page — the page renders dynamically and only surfaced descriptive text without a specific number in the scraped result; the '50/day' figure is corroborated by the official Suno Help Center article and multiple independent sources but was not directly confirmed in a static official pricing page text capture during this research session. Writer should verify at suno.com/pricing before publishing.",
+      "Exact monthly price for Suno Pro on monthly billing (widely reported as $10/month by third parties and the Suno FAQ) vs. the annual billing price ($8/month) — the official pricing page did not surface explicit dollar figures in the scraped text. Third-party sources and the Suno Help Center are consistent; writer should verify current checkout prices directly.",
+      "Whether Udio's Standard plan (not just Pro) explicitly grants full commercial licensing rights — multiple independent sources state Standard unlocks commercial use, but Udio's official Terms of Service page (last revised November 12, 2025) was flagged by one source (musicmake.ai, June 2026) as containing restrictive language that may complicate a flat 'yes' claim. The exact language could not be pulled from udio.com/terms directly. Writer should verify current Udio ToS before making a categorical commercial-rights claim for the Standard tier.",
+      "Exact audio clip maximum generation length for current Udio and Suno models — Udio's standard full-length generation is widely cited as approximately 130 seconds (~2:10), and Suno extensions can reach several minutes, but neither platform's official documentation explicitly states a hard maximum clip length per single generation in the sources retrieved. Writer should verify in each platform's Help Center.",
+      "Udio stem/WAV download availability status as of publication — as of June 2026, multiple sources confirm downloads (including WAV and stems) are disabled due to the UMG 'walled garden' transition, with a re-enabled licensed version expected 'later in 2026' but not shipped as of June 2026. This status may have changed by publication; writer must check udio.com Help Center for current export availability.",
+      "Whether Udio currently supports custom vocal input or voice cloning equivalent to Suno's Voices feature — multiple sources note Udio has 'Voice Control' (extracting vocal character from existing Udio-native songs and reusing/blending across generations), but this is NOT the same as cloning an external voice from uploaded audio. Udio does not appear to offer voice cloning from user-uploaded audio samples at the same level as Suno v5.5. This distinction should be verified at udio.com before publishing.",
+      "Whether Udio supports custom lyrics input — Udio is described as accepting text prompts that can include lyric-like content, but the exact degree of custom lyrics input (e.g., a dedicated 'Custom Mode' equivalent to Suno's) could not be confirmed from official Udio documentation in this research session. Writer should verify at udio.com/create.",
+      "Suno API availability and pricing — as of April 2026, Suno does not offer a public self-service API; Enterprise API access is available through custom agreements (contact sales). Third-party unofficial API wrappers (e.g., Apiframe, gcui-art/suno-api on GitHub) exist but are not sanctioned by Suno. There is no publicly listed API pricing from Suno itself; writer should not state a price without contacting Suno sales directly.",
+      "Udio API availability — no confirmed official Udio public API was found in research. Writer should verify directly with Udio before claiming API availability or absence.",
+      "Training data disclosure or opt-out policies published by Suno — Suno's legal filings acknowledge training on 'essentially all music files of reasonable quality accessible on the open internet' (excluding paywalled content), but Suno does not publish a formal training data disclosure or user opt-out policy on its website. The 2026 WMG partnership commits to future licensed models, but a formal opt-out mechanism for rights holders was not confirmed in official Suno documentation retrieved. Writer should soften or drop any claim of a published opt-out policy.",
+      "Training data disclosure or opt-out policies published by Udio — the UMG settlement includes audit rights over Udio training data, but no public-facing training data disclosure or rights-holder opt-out policy page from Udio was confirmed in research. Writer should soften or drop any claim of a published opt-out policy.",
+      "Specific output audio format tiers for Suno (i.e., which tier gets WAV vs. MP3) per current official documentation — multiple independent sources consistently report WAV download is Pro/Premier only and free users receive MP3 only, and the Suno Studio Help Center article confirms WAV export from Studio; however, the exact format-by-tier breakdown was not confirmed in a single official Suno pricing or Help Center document in this session. The writer may cite the independent sources with appropriate caveats or verify directly at suno.com."
+    ]
   }
 ]
