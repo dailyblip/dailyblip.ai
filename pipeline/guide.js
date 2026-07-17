@@ -81,14 +81,21 @@ const EDITORIAL_RULES = `dailyblip editorial rules, apply to everything you writ
 
 WHO THESE ARE FOR: assume the reader is curious or just getting started, not a power user. They may have never touched this kind of AI tool before. The goal of every guide is "give someone enough to take their first confident step," not "cover the topic comprehensively." If you're deciding whether to include something, ask: does a total beginner need this to get started today? If not, leave it out.
 
+VOICE: Direct, informed, slightly opinionated \u2014 a sharp human technology writer, not a content template. The reader is intelligent, internet-literate, and skeptical of AI-generated filler. Use contractions. Vary sentence and paragraph length; an occasional one-sentence paragraph is fine, but don't overuse them. Prioritize useful observations over motivational language. Don't sound like a corporate blog, an SEO agency, product documentation, or generic "friendly expert" writing.
+
+NEVER USE these phrases or their close equivalents: "in today's rapidly evolving landscape," "whether you're a beginner or a seasoned professional," "the good news is," "here's where things get interesting," "that's the point," "it's worth noting," "at the end of the day," "game changer," "powerful tool," "unlock," "dive into," "delve," "seamlessly," "robust." If you notice yourself reaching for a similar stock phrase, replace it with something specific to this article instead.
+
 - Write for AI-assisted creators: artists, musicians, filmmakers, designers, writers, developers, independent creators \u2014 specifically ones who are new to this particular tool or topic, not veterans of it.
-- Assume readers are interested in AI but skeptical of hype.
-- Keep it SHORT. A starter article, not a manual. Get to useful information quickly, concise paragraphs, clear headings.
+- Keep it SHORT. A starter article, not a manual. Get to useful information quickly, concise paragraphs, clear descriptive headings (never generic ones like "Getting Started" or "Final Thoughts").
+- Lead with the most useful information, not a sweeping introduction. Don't open every section with a broad introductory claim, and don't close every section with a miniature summary \u2014 that pattern reads as templated even when each individual sentence is fine.
+- Don't repeat the article's main premise across the introduction, conclusion, AND key takeaways. Say it once, in whichever spot it lands best.
 - Skip credits, exact pricing figures, exact quotas, version numbers, and other specifics a beginner doesn't need on day one \u2014 "there's a free tier to try it" beats any exact number, every time. If a reader needs precise current numbers, that's what the tool's own site is for; don't try to be that reference here. (Exception: "Rights and platform guide" articles specifically \u2014 legal/commercial terms need real precision, not simplification, since readers may make business decisions off them. Don't lighten accuracy there just for brevity.)
-- One clear starting point beats an exhaustive comparison. Don't build out full strengths/limitations breakdowns for every tool mentioned \u2014 mention what's genuinely useful to know and move on.
+- When you do cover licensing/commercial-use caveats, put them all in ONE clearly-titled section (e.g. "Before you publish or monetize anything") rather than repeating a warning in multiple places.
+- One clear starting point beats an exhaustive comparison. Don't build out full strengths/limitations breakdowns for every tool mentioned \u2014 mention what's genuinely useful to know and move on. When you do compare tools, make an actual judgment: say which reader should use which one and why, don't just list neutral facts side by side.
+- Rhetorical questions only when one genuinely improves the sentence, not as a section-opening habit. Use "it's not X, it's Y" contrast constructions at most once in the whole article. Don't stack three adjectives or three examples just because it sounds rhythmic. Don't call something "surprisingly good," "impressive," or "easy" without saying exactly why.
 - No generic motivational filler, no passive-income promises, no marketing language, no unsupported superlatives.
 - Never use an em dash (\u2014). Use a period, comma, or parentheses instead.
-- Never claim dailyblip tested a product unless real test data was explicitly supplied (it never is, in this pipeline).
+- Never claim dailyblip tested a product unless real test data was explicitly supplied (it never is, in this pipeline). Say so once, briefly, near the end \u2014 don't apologize for it repeatedly through the piece.
 - Never call a tool "best" without stating the specific use case that makes it best for that case.
 - Clearly identify subjective editorial judgment as judgment, not fact.
 - Everything you DO state must still be accurate \u2014 "light and simple" means less depth and fewer specifics, never less truthful. A shorter true claim beats a longer precise-sounding one that overstates the source.
@@ -100,7 +107,7 @@ categories need extra care, since sources are most likely to be
 outdated, single-sourced, or conflicting here:
 - Pricing/plan details: if a source describes a quota in one unit (GPU-minutes, credits, compute-hours), never restate it in a different unit (image counts, generations) as if they're equivalent \u2014 state it exactly as the source frames it, and note explicitly if the practical yield varies. Better still, per the beginner-focused rule above: usually just skip the exact number entirely.
 - Deprecation/discontinuation/availability: "announced for deprecation on [date]" and "is deprecated" are NOT the same claim \u2014 write the one your source actually supports, never upgrade an announcement into a completed fact.
-- Commercial/legal usage rights: if a source explicitly states a finding (e.g. "free tier is not licensed for commercial use"), state that finding directly and attribute it to the source \u2014 do not soften it into "appears to" or "based on editorial review" when the source itself was not hedging. Conversely, if your own understanding is inferred rather than a direct citation, say so plainly \u2014 readers may make real business decisions off this.
+- Commercial/legal usage rights: if a source explicitly states a finding (e.g. "free tier is not licensed for commercial use"), state that finding directly and attribute it to the source \u2014 do not soften it into "appears to" or "based on editorial review" when the source itself was not hedging. Conversely, if your own understanding is inferred rather than a direct citation, say so plainly \u2014 readers may make real business decisions off this. If sources conflict on a fact, state the conflict once, clearly, rather than hedging every sentence around it.
 In all three cases: an independent review or single blog post is not the same as official documentation, and your sentence should make clear which one is backing the claim.`;
 
 // ---- Stage: brief --------------------------------------------------------
@@ -194,9 +201,11 @@ const DRAFT_SYSTEM = `You write the full draft of a dailyblip guide. ${EDITORIAL
 
 WHAT THIS IS: a simple starter article for someone who is new to this tool or topic, or just curious about it \u2014 not a comprehensive guide, not a technical manual, not a reference doc. Think "friendly explainer that gets someone oriented and excited to try it," not "everything you could possibly need to know." If you find yourself writing something a total beginner would skim past or not understand, cut it.
 
-TONE: Fun, breezy, approachable. Write like a knowledgeable friend giving someone the fast, exciting version of "here's how to get started," not like a spec sheet. Short, punchy sentences. Energy and momentum over completeness.
+TONE: Direct and a little opinionated, per EDITORIAL_RULES' VOICE section above \u2014 not breezy filler, and not a spec sheet either. Short, punchy sentences where they help; longer ones where an idea genuinely needs the room. Energy and momentum over completeness.
 
-STRUCTURE: Aim for 3-4 sections, not more \u2014 this is a quick read, not an exhaustive breakdown. Each section should answer one clear question a beginner actually has ("what is this," "how do I start," "what should I try first"), not attempt full coverage of a subtopic.
+STRUCTURE: 3-4 sections, not more \u2014 this is a quick read. Between them, cover whichever of these actually apply to this topic, combined into that smaller number of sections rather than each getting its own: a direct recommendation of where to start, a practical step or two, a specific example, the most important limitation or common mistake, and (only if relevant) one licensing/commercial-use note consolidated in its own section per EDITORIAL_RULES. Don't force all of these in if the topic doesn't call for them \u2014 a natural 3-section piece beats a padded 4-section one.
+
+Introduction: no more than 100 words, and skip the sweeping windup \u2014 lead with the most useful thing a reader needs to know.
 
 DEPTH: Skip pricing tiers, version numbers, quotas, and legal nuance entirely unless the article type specifically requires precision (see EDITORIAL_RULES' rights/legal exception). "Has a free tier worth trying" beats any exact number. Point readers to the tool's own site for current specifics rather than trying to be that reference yourself.
 
@@ -206,12 +215,21 @@ Every claim beyond common knowledge must trace to a source in the provided sourc
 
 Tool cards (the "tools" array within a section) should be rare, not a per-section default \u2014 include one only when a specific named tool genuinely earns its own callout, and keep strengths/limitations to the single most useful point each. Most sections don't need a tool card at all; mention tools in the prose instead when that reads more naturally.
 
+SELF-EDIT PASS \u2014 before returning your answer, review your own draft against this checklist and revise anything that fails it:
+1. Delete any sentence generic enough to appear in an article about any AI tool.
+2. Cut repeated ideas \u2014 especially the same premise appearing in the intro, conclusion, and takeaways.
+3. Replace vague praise ("impressive," "easy," "surprisingly good") with the specific reason behind it, or cut it.
+4. Check for repetitive sentence openings or transitions across paragraphs.
+5. Confirm no experience, test, or result was invented anywhere.
+6. Read it back mentally \u2014 if any line sounds like presentation copy or a banned phrase from EDITORIAL_RULES, rewrite it.
+7. Trim about 10% of the word count if you can do it without losing anything a reader actually needs.
+
 Return JSON matching this schema exactly:
 {
   "title": "", "alternative_titles": ["",""], "slug": "kebab-case-slug",
   "dek": "", "meta_description": "", "quick_answer": "1-2 sentence direct answer if the topic has one, else empty string",
-  "introduction": "markdown, 1-2 short paragraphs",
-  "sections": [{"id":"s1","heading":"","body_markdown":"","tools":[{"name":"","url":"","description":"","strengths":["..."],"limitations":["..."]}]}],
+  "introduction": "markdown, no more than 100 words",
+  "sections": [{"id":"s1","heading":"descriptive, never generic like \\"Getting Started\\" or \\"Final Thoughts\\"","body_markdown":"","tools":[{"name":"","url":"","description":"","strengths":["..."],"limitations":["..."]}]}],
   "key_takeaways": ["3-5 short bullet points"],
   "conclusion": "markdown",
   "methodology_disclosure": "one paragraph describing how this guide was researched/synthesized, per dailyblip's disclosure requirement"
@@ -397,20 +415,45 @@ async function stageRecheck(job) {
 }
 
 // ---- Stage: images --------------------------------------------------
+// Only fixes count + aspect ratio per slot \u2014 which specific editorial
+// role (hero/explainer/comparison/workflow/list-support) each slot gets
+// is now the model's call, based on what this specific article actually
+// needs, not a fixed position-based template applied regardless of
+// content. See IMAGE_BRIEF_SYSTEM's variety requirements below.
 function buildImagePrompts(article, imageCount) {
-  const mix3 = ["wide hero image, 16:9", "workflow or explanatory section image, 4:3", "creator-focused practical-use image, 4:3"];
-  const mix2 = ["wide hero image, 16:9", "workflow or creator-focused section image, 4:3"];
-  return (imageCount === 3 ? mix3 : mix2).map((slot, i) => ({ id: `img${i + 1}`, slot }));
+  const mix3 = ["16:9 (hero)", "4:3", "4:3"];
+  const mix2 = ["16:9 (hero)", "4:3"];
+  return (imageCount === 3 ? mix3 : mix2).map((aspect, i) => ({ id: `img${i + 1}`, aspect }));
 }
 
-const IMAGE_BRIEF_SYSTEM = `Write image generation prompts for a dailyblip guide's images, one per required slot. ${EDITORIAL_RULES.split("\n")[0]}
+const IMAGE_BRIEF_SYSTEM = `You create image briefs for a dailyblip guide, one per required slot. ${EDITORIAL_RULES.split("\n")[0]}
 
-For EACH slot, ground the prompt in this specific article's real content (its actual sections, tools, and examples) \u2014 never a generic prompt that could apply to any article on this topic.
+Do not write generic blog-art prompts. Each image must have a clear editorial function (hero, explainer, comparison, workflow, or ranked-list support) and feel custom-made for this specific article, not like generic AI stock photography.
 
-Visual direction (apply to every prompt): premium, contemporary, editorial, creator-focused, visually distinct from generic corporate stock photography, legible at thumbnail size. Avoid: random robots, glowing AI brains, excessive holograms, meaningless interface elements, detailed generated text, watermarks, celebrity likenesses, copyrighted characters, unapproved company logos, fabricated product screenshots, near-duplicate compositions across the set. Leave negative space where HTML text may be placed. Never embed the article headline as text in the image.
+For EACH image, ground it in this article's real content (its actual sections, tools, examples) \u2014 never something that could apply to any article on this general topic.
 
-Return JSON: {"images": [{"id":"img1","prompt":"the full image generation prompt","alt_text":"","caption":"","placement":"which section this illustrates, by section id or \\"hero\\""}]}
-JSON only, one entry per slot given.`;
+VARIETY, across the full set of images for this article: don't make them all the same type. At least one image should help explain a process or workflow if the article describes one. If this is a comparison or ranked-list article, at least one image should visually organize the choices (not just illustrate one of them). The first slot is the hero; treat the remaining slots as genuinely different editorial jobs from each other and from the hero, not three variations on one idea.
+
+STYLE: editorial illustration, diagrammatic visuals, annotated product-style layouts, or conceptual composition \u2014 not stock photography, not vague "AI imagery." Clean, high-contrast, modern, web-editorial. Should look designed, not merely generated. Should be able to stand alone on social media as well as inside the article.
+
+AVOID across every image: random floating interfaces, generic futuristic aesthetics, people staring at screens unless essential to the concept, random robots, glowing AI brains, holograms, watermarks, celebrity likenesses, copyrighted characters, unapproved company logos, fabricated product screenshots, near-duplicate compositions across the set. Any text inside the image should be minimal, used only when it strengthens clarity \u2014 never the article headline. Leave negative space where HTML text may be placed afterward.
+
+Return JSON: {"images": [{
+  "id": "img1",
+  "role": "hero | explainer | comparison | workflow | list-support",
+  "concept": "the core visual idea in one sentence",
+  "purpose": "what this image should teach or communicate to the reader",
+  "composition": "how it's laid out \u2014 framing, focal point, arrangement",
+  "key_elements": "the specific objects/elements that should appear",
+  "style": "visual style, restated for this specific image",
+  "color_mood": "color palette and mood",
+  "avoid": "anything specifically worth avoiding for THIS image, beyond the general list above",
+  "prompt": "the exact, complete image-generation prompt, incorporating all of the above into one usable prompt",
+  "alt_text": "",
+  "caption": "",
+  "placement": "which section this illustrates, by section id, or \\"hero\\""
+}]}
+One entry per slot given, matching the requested aspect ratio for that slot. JSON only.`;
 
 async function stageImages(job) {
   const slots = buildImagePrompts(job.article, job.submitted.image_count);
@@ -423,13 +466,12 @@ async function stageImages(job) {
   const briefResult = await askJSON({
     role: "write",
     system: IMAGE_BRIEF_SYSTEM,
-    prompt: JSON.stringify({ slots, article_title: job.article.title, sections: sectionPreviews }),
-    // Flat ceiling regardless of image count \u2014 same correction as
-    // research/draft above: the ceiling itself costs nothing unless
-    // actually hit, so there's no real saving from scaling it down by
-    // image count. The section-preview trimming above IS a genuine
-    // saving (real input tokens sent, not an unused limit).
-    maxTokens: 4000,
+    prompt: JSON.stringify({ slots, article_type: job.submitted.article_type, article_title: job.article.title, sections: sectionPreviews }),
+    // Raised from 4000 \u2014 the richer 9-field-per-image brief (role,
+    // concept, purpose, composition, key_elements, style, color_mood,
+    // avoid, prompt) needs more room than the old 4-field version this
+    // was originally sized for. Ceiling costs nothing unless hit.
+    maxTokens: 6000,
   });
   const briefs = briefResult.images || [];
 
@@ -444,7 +486,7 @@ async function stageImages(job) {
     const b = briefs[i];
     const slot = slots[i] || {};
     try {
-      const size = /16:9/.test(slot.slot || "") ? "1536x1024" : "1024x1024";
+      const size = /16:9/.test(slot.aspect || "") ? "1536x1024" : "1024x1024";
       const res = await fetch("https://api.openai.com/v1/images/generations", {
         method: "POST",
         headers: { Authorization: `Bearer ${OPENAI_KEY}`, "Content-Type": "application/json" },
@@ -460,6 +502,10 @@ async function stageImages(job) {
       job.images.push({
         id: b.id || `img${i + 1}`, file: filename, prompt: b.prompt, placement: b.placement,
         alt_text: b.alt_text, caption: b.caption, approved: false, generated_at: new Date().toISOString(),
+        // Kept for admin review context (what this image is FOR, not
+        // just what its raw prompt says) even though the published page
+        // itself only needs alt_text/caption/placement.
+        role: b.role, concept: b.concept, purpose: b.purpose,
       });
     } catch (e) {
       // One image failing shouldn't lose the others \u2014 same
