@@ -2209,7 +2209,7 @@
   {
     "id": "09859f39-9c90-4b00-b91c-ec5a012327cf",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Top 1 music generation tool",
       "article_type": "Top tools list",
@@ -2221,7 +2221,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:30:05.655Z",
-    "updated_at": "2026-07-17T14:35:37.174Z",
+    "updated_at": "2026-07-17T14:37:03.913Z",
     "brief": {
       "target_reader": "Working musicians, producers, and composers who want to understand AI music generation tools: what they actually do, where they fit in a real workflow, and what their limitations are. Includes both technically curious beginners and experienced producers evaluating whether to integrate AI into their process.",
       "reader_outcome": "The reader should be able to identify the single most capable and practical AI music generation tool available today for their specific use case, understand what it does well and where it falls short, know the pricing and access model, and decide whether it is worth trying in their own workflow.",
@@ -2602,6 +2602,38 @@
     },
     "warnings": [
       "s7: The article describes this as a confirmed fact ('revealed'), but the source is Wikipedia citing 404 Media and The Verge — not the primary reporting itself. The Wikipedia article describes it as a 'hack/data reveal,' meaning the underlying data came from a hack of Suno's systems, not from Suno's own disclosures. Presenting hacked data findings as a clean factual 'reveal' without noting the sourcing chain (Wikipedia → 404 Media/The Verge reporting on hacked data) is misleading about both the provenance and the verification level. The methodology disclosure does acknowledge Wikipedia as a source, but the body text presents this as a confirmed fact without that caveat."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "09859f39-9c90-4b00-b91c-ec5a012327cf-img1.jpg",
+        "prompt": "A professional music producer sits at a spare, modern studio desk — acoustic foam panels visible on the wall behind, a pair of studio monitor speakers flanking a large display showing an abstract waveform or multitrack arrangement (no readable text, no fake UI). The producer holds a coffee cup and looks thoughtfully at the screen. Warm amber and cool blue studio lighting. The composition leaves generous negative space in the upper third. Shot with the depth-of-field feel of editorial photography. No logos, no glowing holograms, no robots. The palette is muted: dark grays, warm wood tones, soft amber glow. 16:9 aspect ratio.",
+        "placement": "hero",
+        "alt_text": "A music producer evaluating an AI-generated multitrack arrangement in a professional studio environment",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T14:36:17.480Z"
+      },
+      {
+        "id": "img2",
+        "file": "09859f39-9c90-4b00-b91c-ec5a012327cf-img2.jpg",
+        "prompt": "A flat-lay or slightly elevated studio workflow scene: an open laptop alongside a USB audio interface, a pair of studio headphones resting on a notebook with handwritten musical notation (not readable, purely gestural), and a small MIDI keyboard. On the laptop screen, a blurred multitrack waveform arrangement is visible — no identifiable software brand, no legible text. A single stem cable runs from the interface. Soft directional daylight from the left. The mood is practical and craft-focused, not aspirational tech. Color palette: off-white desk surface, warm gray hardware, muted green plant edge in frame for depth. 4:3 aspect ratio. Negative space at top for headline text overlay.",
+        "placement": "s4",
+        "alt_text": "A studio desk workflow showing a laptop with multitrack waveforms, a MIDI keyboard, audio interface, and studio headphones",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T14:36:44.649Z"
+      },
+      {
+        "id": "img3",
+        "file": "09859f39-9c90-4b00-b91c-ec5a012327cf-img3.jpg",
+        "prompt": "A songwriter in a relaxed home studio or spare room — acoustic guitar resting against a wall, a laptop open on a low table showing colorful abstract waveform blocks (no readable brand or UI text). The person (gender-neutral, mid-20s to mid-30s, casual clothing) leans back in a low chair looking at a phone, mid-thought, as if reviewing a rough audio sketch. Natural window light. The scene feels like real creative work in progress, not a staged advertisement. Objects in frame: a small notebook, a pair of earbuds on the table, the guitar. No robots, no glowing interfaces. Color palette: warm natural light, muted indigo and cream tones. 4:3 aspect ratio with negative space at the upper left.",
+        "placement": "s9",
+        "alt_text": "A songwriter reviewing an AI-generated audio sketch on their phone in a relaxed home studio setting",
+        "caption": "",
+        "approved": false,
+        "generated_at": "2026-07-17T14:37:03.912Z"
+      }
     ]
   }
 ]
