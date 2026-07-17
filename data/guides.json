@@ -1880,8 +1880,8 @@
   },
   {
     "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Top AI tools for audiobook narration",
       "article_type": "Top tools list",
@@ -1893,7 +1893,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T23:42:45.722Z",
-    "updated_at": "2026-07-17T23:48:45.831Z",
+    "updated_at": "2026-07-17T23:48:47.549Z",
     "brief": {
       "target_reader": "Writers who have drafted or finished a novel (possibly with AI help) and want to turn it into an audiobook without hiring a human narrator — new to AI voice/text-to-speech tools, probably familiar with the writing side but not the audio production side",
       "reader_outcome": "Understand which 2-3 AI narration tools are worth trying for audiobook-length projects, know which one to start with for their situation, and have a clear sense of what to watch out for before submitting to Audible or similar platforms",
