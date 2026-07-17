@@ -735,8 +735,8 @@
   },
   {
     "id": "4770dfcc-f47d-4137-aab8-cd902678c1ad",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Comparing the options for photorealistic images",
       "article_type": "Tool comparison",
@@ -748,7 +748,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T03:52:42.937Z",
-    "updated_at": "2026-07-17T03:59:43.544Z",
+    "updated_at": "2026-07-17T03:59:44.988Z",
     "brief": {
       "target_reader": "Independent content creators, social media producers, and visual artists who need photorealistic AI-generated images for professional or commercial work and want to choose a tool based on actual capability differences, not marketing claims",
       "reader_outcome": "The reader should be able to identify which photorealistic image generation tool fits their specific workflow, budget, and quality requirements, and understand the concrete tradeoffs between at least four named tools before spending money or time on any of them",
@@ -1098,7 +1098,12 @@
       "checked_at": "2026-07-17T03:57:11.533Z",
       "revised": true
     },
-    "warnings": [],
+    "warnings": [
+      "format: missing title",
+      "format: no sections",
+      "format: missing methodology disclosure",
+      "format: missing or invalid slug"
+    ],
     "images": [
       {
         "id": "img1",
