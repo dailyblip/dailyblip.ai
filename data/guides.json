@@ -78,8 +78,8 @@
   },
   {
     "id": "3fe2d2e6-b607-4ab0-a1d1-02db8d6ccc44",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Top AI tools for musicians",
       "article_type": "Practical guide",
@@ -91,7 +91,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:53:46.758Z",
-    "updated_at": "2026-07-17T15:01:47.017Z",
+    "updated_at": "2026-07-17T15:01:48.630Z",
     "brief": {
       "target_reader": "Independent musicians and music producers who are curious about AI tools but wary of overpromised results. Includes singer-songwriters, beatmakers, film/game composers, and bedroom producers at intermediate skill level who already use DAWs and want to know where AI genuinely fits into their workflow.",
       "reader_outcome": "The reader can identify which AI music tools are relevant to their specific production stage (composition, arrangement, mixing, mastering, vocal processing, licensing), evaluate tradeoffs between tools, and take immediate next steps to try at least one in their existing workflow.",
