@@ -1170,8 +1170,8 @@
   },
   {
     "id": "ff7f6a3d-6c0b-4e39-b804-b9a5dda70d15",
-    "status": "in_progress",
-    "stage": "Re-checking",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "Using AI to write better songs without losing your voice",
       "article_type": "Practical guide",
@@ -1510,6 +1510,12 @@
         "approved": false,
         "generated_at": "2026-07-17T19:22:01.058Z"
       }
+    ],
+    "approved_at": "2026-07-17T19:24:50.893Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "introduction: The Billboard source describes songwriters using Suno for brainstorming, but the article attributes this specifically to Billboard reporting on Suno, when Billboard's framing is about AI tools broadly and professional adoption generally — conflating a general trend report with a Suno-specific claim. More critically, Suno is a full-song generator (vocals, instrumentation), not primarily a lyric brainstorming tool, so presenting it as the example tool in this context is misleading about what Suno does.",
+      "s3: The Berklee Online source attributes this workflow to Camp describing it as one of their favorite aspects of AI, but the article shifts pronoun to 'their ear' suggesting first-person Camp quote, then in s3 says 'sharpens their ear' — the pronoun 'their' is ambiguous and could be read as the reader's instincts, misattributing the claim's subject. More substantively, the article states Camp 'notes that generating lots of variations of a single lyric sharpens their ear' as if Camp said this about the reader, when the source is Camp describing their own practice."
     ]
   }
 ]
