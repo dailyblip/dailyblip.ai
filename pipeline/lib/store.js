@@ -92,3 +92,12 @@ export const saveOverrides = (o) => writeJSON(PATHS_OVERRIDES, o);
 export const PATHS_COMMENTARY = path.join(ROOT, "data", "commentary.json");
 export const loadCommentaryLog = () => readJSON(PATHS_COMMENTARY, { used_topics: [], published: [] });
 export const saveCommentaryLog = (c) => writeJSON(PATHS_COMMENTARY, c);
+
+// guides.json: [{ id, status, stage, submitted:{...}, brief, article,
+// fact_check, images:[], sources:[], warnings:[], error, created_at,
+// updated_at, approved_at, published_at, published_url }]
+// One array of job records — guide.js reads/updates a single record by
+// id at each stage, admin.html polls this same file to show progress.
+export const PATHS_GUIDES = path.join(ROOT, "data", "guides.json");
+export const loadGuides = () => readJSON(PATHS_GUIDES, []);
+export const saveGuides = (g) => writeJSON(PATHS_GUIDES, g);
