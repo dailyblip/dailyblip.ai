@@ -79,7 +79,7 @@
   {
     "id": "3fe2d2e6-b607-4ab0-a1d1-02db8d6ccc44",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top AI tools for musicians",
       "article_type": "Practical guide",
@@ -91,6 +91,34 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T14:53:46.758Z",
-    "updated_at": "2026-07-17T14:53:46.760Z"
+    "updated_at": "2026-07-17T14:54:24.521Z",
+    "brief": {
+      "target_reader": "Independent musicians and music producers who are curious about AI tools but wary of overpromised results. Includes singer-songwriters, beatmakers, film/game composers, and bedroom producers at intermediate skill level who already use DAWs and want to know where AI genuinely fits into their workflow.",
+      "reader_outcome": "The reader can identify which AI music tools are relevant to their specific production stage (composition, arrangement, mixing, mastering, vocal processing, licensing), evaluate tradeoffs between tools, and take immediate next steps to try at least one in their existing workflow.",
+      "structure_plan": [
+        "What to Expect From AI in Music Production (and What to Ignore)",
+        "AI for Composition and Melody Generation: Tools and Honest Limits",
+        "AI for Arrangement and Instrumentation",
+        "AI Mixing and Mastering Tools: Where They Help, Where They Fall Short",
+        "AI Vocal Tools: Pitch Correction, Harmonies, and Voice Cloning Considerations",
+        "AI for Samples, Stems, and Sound Design",
+        "Licensing and Copyright: What Musicians Need to Know Before Using AI-Generated Audio",
+        "How to Evaluate Any AI Music Tool Before Committing",
+        "Suggested Workflows by Use Case"
+      ],
+      "claims_to_verify": [
+        "Current pricing and free tier availability for Suno, Udio, AIVA, Soundraw, Boomy, Splice AI, iZotope Ozone AI, Landr, Melodyne, Moises, and ElevenLabs Music",
+        "Whether Suno and Udio outputs are eligible for commercial licensing under their current terms of service",
+        "Copyright status of AI-generated music under current US Copyright Office guidance (as of latest ruling)",
+        "Whether iZotope Ozone 11 AI mastering is a standalone product or requires a subscription and which plans include it",
+        "Moises app specific feature set: stem separation, chord detection, AI backing tracks",
+        "AIVA licensing tiers and whether free tier allows commercial use",
+        "Soundraw's royalty-free policy specifics: who owns the output",
+        "Any DAW-native AI features in Logic Pro, Ableton, or FL Studio that are shipping or announced",
+        "ElevenLabs Music or any voice-to-instrument AI tools currently in public availability",
+        "Landr mastering current pricing and quality reputation in 2024-2025"
+      ],
+      "research_plan": "Prioritize official terms of service and pricing pages for each tool over third-party summaries, since these change frequently. Check US Copyright Office official statements and any 2024-2025 rulings on AI-generated music ownership. Look for hands-on reviews from music production communities such as Reddit r/WeAreTheMusicMakers, Gearspace, and music technology press (MusicRadar, Sound On Sound, Attack Magazine) for real-world quality assessments rather than vendor claims. Verify DAW-native AI features from official release notes or developer blogs, not press speculation. For licensing and copyright, cross-reference Electronic Frontier Foundation commentary and any recent legal cases involving AI music tools."
+    }
   }
 ]
