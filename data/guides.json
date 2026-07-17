@@ -2208,8 +2208,8 @@
   },
   {
     "id": "53c94efc-1438-4f48-8348-a9de5927cb65",
-    "status": "queued",
-    "stage": "Fact-checking",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "Top 5 AI Image Generation Tools for Independent Creators (2026)",
       "article_type": "Practical guide",
@@ -2221,7 +2221,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-17T04:57:02.638Z",
-    "updated_at": "2026-07-17T05:02:07.463Z",
+    "updated_at": "2026-07-17T05:06:23.346Z",
     "brief": {
       "target_reader": "Independent creators (illustrators, graphic designers, filmmakers, musicians needing visuals, indie game developers, and self-publishing authors) who already have some familiarity with AI image tools but want a clear, honest comparison to decide which tool fits their specific workflow and budget in 2026",
       "reader_outcome": "The reader should be able to evaluate each of the 5 tools against their own use case, understand the concrete tradeoffs in output quality, pricing, licensing, and workflow integration, and make a confident decision about which tool to start with or switch to",
@@ -2628,6 +2628,96 @@
       "conclusion": "The AI image generation market in mid-2026 is more mature but also more legally complicated than it was two years ago. The tools here represent meaningfully different tradeoffs, not just different UI aesthetics.\n\nIf you are doing client-facing design work and need commercial safety documentation, start with Adobe Firefly. If you are an illustrator or concept artist who generates daily and values output quality above all, Midjourney Standard is a reasonable $30/mo commitment. If you need custom model training for character consistency in a game pipeline, Leonardo.Ai at the Artisan tier is worth a trial. If you are building a tool or need API integration without a subscription floor, OpenAI GPT Image's API is the most accessible entry point. If you want full control and have technical capacity, FLUX via self-hosted deployment removes all per-image and per-seat costs at the expense of setup work and ongoing maintenance.\n\nPricing and terms change. Verify current plans directly with each provider before subscribing, especially credit allocations and what qualifies for commercial use at each tier.",
       "methodology_disclosure": "This guide was synthesized from official pricing and terms-of-service documentation accessed in July 2026 (Midjourney, Leonardo.Ai), independent pricing aggregators (CostBench, CostGoat, DigitalApplied), independent legal and commercial use analysis (StackSheriff), legal case tracking (AI Lawsuit Tracker), and ownership/acquisition reporting (UsagePricing.com). Claims about pricing, licensing, and platform terms were cross-referenced against primary sources where available and against multiple independent sources where primary documentation was ambiguous. Claims that could not be verified against primary or independent sources were either omitted or identified as editorial observation. This guide does not represent hands-on testing by dailyblip; output quality assessments reflect consensus from independent creator community reporting rather than first-party evaluation. Readers should verify current pricing, credit allocations, and licensing terms directly with each platform before making purchasing decisions, as these change frequently.",
       "last_reviewed_date": "July 17, 2026"
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s6",
+          "original_text": "DALL-E 2 and DALL-E 3 were removed from the API on May 12, 2026; the current API offers GPT Image 2, GPT Image 1.5, GPT Image 1 (deprecating October 23, 2026), and GPT Image 1 Mini.",
+          "issue": "The specific removal date of May 12, 2026 and the full model lineup are cited only from CostGoat, a third-party pricing aggregator, not from OpenAI's official API documentation or changelog. These specifics are presented as verified facts but lack a primary source citation. Developers may rely on these details for migration planning.",
+          "recommended_replacement": "Add a qualifier noting these details are sourced from a third-party aggregator: 'According to third-party API pricing sources, DALL-E 2 and DALL-E 3 were removed from the API in May 2026; verify current model availability and deprecation timelines at platform.openai.com/docs/models.'",
+          "supporting_source_url": "https://platform.openai.com/docs/models"
+        },
+        {
+          "severity": "high",
+          "section_id": "s4",
+          "original_text": "independent reporting (Bloomberg, 2024) found AI-generated images, including some apparently sourced from Midjourney, in Firefly's training data. Adobe has not publicly addressed this discrepancy in detail.",
+          "issue": "This serious reputational and legal claim is attributed to Bloomberg (2024) but no Bloomberg URL or article title appears anywhere in the sources list. The only listed source for this claim is StackSheriff, a secondary commentary site that references Bloomberg. The claim is presented as an established fact using 'found' when it is a secondary report of investigative reporting that has not been independently verified by dailyblip or linked to directly.",
+          "recommended_replacement": "Attribute this as a secondary citation: 'as reported by Bloomberg (2024) and summarized by independent legal commentary at StackSheriff — this guide has not independently reviewed the original Bloomberg reporting.' Alternatively, locate and cite the original Bloomberg article directly.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "high",
+          "section_id": "s7",
+          "original_text": "The UK High Court ruled in November 2025 that model weights are not themselves infringing copies of training images, which is a meaningful precedent, but the case remains on appeal and the US action is still active.",
+          "issue": "The AI Lawsuit Tracker source states the UK ruling also found limited trademark infringement where Stable Diffusion outputs reproduced recognizable Getty watermarks. The article omits this finding entirely, presenting a materially incomplete and more favorable-to-Stability-AI summary of the ruling. Omitting the trademark infringement finding understates the legal risk for creators.",
+          "recommended_replacement": "The UK High Court ruled in November 2025 that model weights are not themselves infringing copies of training images, but did find limited trademark infringement where Stable Diffusion outputs reproduced recognizable Getty watermarks. The case remains on appeal, and the US action is still active.",
+          "supporting_source_url": "https://ailawsuittracker.com/cases/getty-v-stability-ai/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "The Disney/Universal v. Midjourney lawsuit (filed June 2025, active as of mid-2026) alleges unauthorized generation of copyrighted characters.",
+          "issue": "The AI Lawsuit Tracker source states DreamWorks later joined as a plaintiff. The article names only Disney and Universal, understating the scope of the litigation. A reader assessing legal risk should know at least three major studios are named plaintiffs.",
+          "recommended_replacement": "The Disney, Universal, and DreamWorks v. Midjourney lawsuit (filed June 2025, active as of mid-2026) alleges unauthorized generation of copyrighted characters.",
+          "supporting_source_url": "https://ailawsuittracker.com/cases/getty-v-stability-ai/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "No IP indemnification; DALL-E 2/3 removed May 2026",
+          "issue": "Listing 'DALL-E 2/3 removed May 2026' as a notable limitation of OpenAI GPT Image is misleading. The removal of predecessor models is a migration note about deprecated products, not a limitation of the current offering. The actual relevant limitation is ongoing model deprecation risk for current versions.",
+          "recommended_replacement": "No IP indemnification; model deprecation risk (DALL-E 2/3 removed May 2026; GPT Image 1 deprecating Oct 2026)",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "medium",
+          "section_id": "s5",
+          "original_text": "Leonardo was acquired by Canva in July 2024 for approximately $370 million. It continues to run as an independent product, but Canva's September 2024 pricing increase attempt (later reversed after backlash) is worth noting as a signal of pricing risk for the platform going forward.",
+          "issue": "The UsagePricing.com source attributes the ~300% price increase attempt to Canva's own Teams subscription plans, not to Leonardo.Ai's token plans. The article conflates a Canva pricing event with Leonardo.Ai pricing risk without clarifying this distinction. A reader could reasonably infer Leonardo's own token pricing was raised and reversed, which is not what the source states.",
+          "recommended_replacement": "Leonardo was acquired by Canva in July 2024 for approximately $370 million. It continues to run as an independent product. Canva's September 2024 attempt to raise its own Teams plan pricing by approximately 300% — later reversed after customer backlash — is worth noting as a signal of potential pricing risk under Canva ownership, though Leonardo's own token-metered plans were not directly affected at that time.",
+          "supporting_source_url": "https://www.usagepricing.com/blueprint/leonardo-ai"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s4",
+          "original_text": "Firefly Standard: $9.99/mo, 2,000 premium credits\n- Firefly Pro: $19.99/mo, 4,000 premium credits",
+          "issue": "The CostBench source notes that as of February 2026, standard image generations on paid plans are no longer credit-gated — credits apply only to premium operations such as video, partner models, and high-resolution outputs. Listing credit counts without this context implies all generation is credit-limited on paid tiers, which is materially misleading for creators trying to estimate costs.",
+          "recommended_replacement": "Firefly Standard: $9.99/mo, 2,000 premium credits (note: as of February 2026, standard image generation on paid plans reportedly no longer consumes credits — credits apply to premium operations such as video, partner models, and high-res outputs; verify at firefly.adobe.com/plans)\n- Firefly Pro: $19.99/mo, 4,000 premium credits",
+          "supporting_source_url": "https://costbench.com/software/ai-image-generators/adobe-firefly/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s9",
+          "original_text": "the Thomson Reuters v. Ross Intelligence ruling (February 2025, finding AI training on copyrighted headnotes was not fair use)",
+          "issue": "Ross Intelligence was a legal research AI that trained on Westlaw legal headnotes, not an image generation model. Presenting this ruling in the context of image generation tool risk implies a legal applicability that courts have not established. The extrapolation is unsupported and should be qualified.",
+          "recommended_replacement": "the Thomson Reuters v. Ross Intelligence ruling (February 2025), the first final US judgment on AI training data copyright, found AI training on Westlaw legal headnotes was not fair use — though this involved a legal research tool rather than an image generator, and courts have not yet applied this precedent directly to image generation models",
+          "supporting_source_url": "https://ailawsuittracker.com/cases/getty-v-stability-ai/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s7",
+          "original_text": "FLUX 1.2 Pro from Black Forest Labs",
+          "issue": "The DigitalApplied source references 'Flux 1.2 Pro' but this is from a third-party aggregator, not Black Forest Labs' official documentation. Black Forest Labs' public model naming conventions use formats such as FLUX.1 [pro], FLUX.1 [dev], FLUX.1 [schnell]. 'FLUX 1.2 Pro' is not confirmed as an official model name from a primary source in the sources provided.",
+          "recommended_replacement": "FLUX Pro variants from Black Forest Labs (verify current model lineup at blackforestlabs.ai)",
+          "supporting_source_url": "https://blackforestlabs.ai"
+        },
+        {
+          "severity": "low",
+          "section_id": "methodology_disclosure",
+          "original_text": "This guide does not represent hands-on testing by dailyblip; output quality assessments reflect consensus from independent creator community reporting rather than first-party evaluation.",
+          "issue": "The methodology disclosure is appropriately transparent, but the phrase 'independent creator community reporting' is vague and not linked to any specific sources. The sources list does not include any creator community forums, subreddits, or community review aggregators. This claim cannot be verified from the sources provided and reads as a generic disclaimer rather than an accurate description of the actual research process.",
+          "recommended_replacement": "Output quality assessments reflect consensus from independent pricing and tool review sources cited in the methodology rather than first-party hands-on evaluation by dailyblip.",
+          "supporting_source_url": ""
+        }
+      ],
+      "checked_at": "2026-07-17T05:03:46.884Z"
+    },
+    "error": {
+      "stage": "factcheck",
+      "message": "factcheck revise: response parsed as valid JSON but is structurally empty (no title, no sections) — the model likely returned a wrong-shaped or near-empty object that askJSON's parser accepted without checking its shape. Check stop_reason in the logs above this error.",
+      "at": "2026-07-17T05:06:23.346Z"
     }
   }
 ]
