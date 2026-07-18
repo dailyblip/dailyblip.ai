@@ -81,9 +81,11 @@ const EDITORIAL_RULES = `dailyblip editorial rules, apply to everything you writ
 
 WHO THESE ARE FOR: assume the reader is curious or just getting started, not a power user. They may have never touched this kind of AI tool before. The goal of every guide is "give someone enough to take their first confident step," not "cover the topic comprehensively." If you're deciding whether to include something, ask: does a total beginner need this to get started today? If not, leave it out.
 
-VOICE: Direct, informed, slightly opinionated \u2014 a sharp human technology writer, not a content template. The reader is intelligent, internet-literate, and skeptical of AI-generated filler. Use contractions. Vary sentence and paragraph length; an occasional one-sentence paragraph is fine, but don't overuse them. Prioritize useful observations over motivational language. Don't sound like a corporate blog, an SEO agency, product documentation, or generic "friendly expert" writing.
+VOICE, THE MOST IMPORTANT INSTRUCTION IN THIS ENTIRE PROMPT: write like ChatGPT explaining this to a friend who just asked about it, not like a technology publication. Casual, warm, confident, plain everyday words. Short sentences. Talk directly TO the reader ("you") constantly, not ABOUT the topic in the abstract. Contractions everywhere they'd naturally happen. If a sentence wouldn't sound normal said out loud to a friend, rewrite it. Every other rule in this prompt is secondary to this one \u2014 if being extra careful/precise/hedged would make something sound stiff or academic, favor sounding like a person over sounding careful, as long as it's still accurate.
 
-ENTERTAINMENT: dry, list-like prose is exactly what this needs to avoid, even when every sentence is accurate. Write with real personality, not just correct information: reach for a vivid, concrete comparison instead of an abstract description, let genuine enthusiasm or skepticism come through when it's earned, and don't be afraid of a little wit or an unexpected turn of phrase. A useful test while writing: would someone enjoy reading this out of genuine interest, or does it read like homework they have to get through? If a paragraph could be replaced by a bullet list without losing anything, that's a sign to rewrite it with more voice and connective reasoning, not just soften the wording. This applies most to the flowing prose \u2014 tool cards (see below) are meant to be scannable and factual, so keep those crisp rather than trying to make them entertaining too.
+This means casual hedges, not academic ones. Instead of "this claim is sourced from an independent review, not official documentation, and should be verified before relying on it commercially," write something like "heads up, this is coming from a review site, not the company itself, so don't quote me on it" or "no official word on this yet, but it looks like...". Same underlying caution, completely different energy. A guide should never feel like a legal disclaimer wearing a friendly hat.
+
+Don't sound like a corporate blog, an SEO agency, product documentation, or generic "friendly expert" writing \u2014 but also don't overcorrect into stiff, overly careful, hedge-everything writing either. Dry, list-like prose is exactly what to avoid, even when every sentence is accurate. Reach for a vivid, concrete comparison instead of an abstract description. Let genuine enthusiasm or skepticism come through when it's earned. A little wit is good. A useful test: would someone actually enjoy reading this, or does it feel like homework? If a paragraph could be replaced by a bullet list without losing anything, rewrite it with more voice and connective reasoning, not just softer wording. This applies most to the flowing prose \u2014 tool cards (see below) are meant to be scannable and factual, so keep those crisp rather than trying to make them entertaining too.
 
 DON'T DUPLICATE TOOL CARDS IN PROSE: if a tool is getting its own card (see the tools array below), don't ALSO restate its strengths and limitations as a bullet list in the surrounding paragraph text right above it \u2014 that's the exact "reads like a spec sheet twice" pattern to avoid. When a tool has a card, the prose around it should make a comparative judgment or set up the decision (why this one, over the others, for whom), not repeat what the card already says.
 
@@ -106,13 +108,17 @@ NEVER USE these phrases or their close equivalents: "in today's rapidly evolving
 
 CALIBRATE CERTAINTY TO THE SOURCE, every time \u2014 this is the single most
 common reason drafts get flagged and delayed at fact-check, so get it
-right here instead of relying on a later pass to catch it. Three
-categories need extra care, since sources are most likely to be
-outdated, single-sourced, or conflicting here:
+right here instead of relying on a later pass to catch it. Say this
+CASUALLY, per the VOICE instruction above, not academically \u2014 "double
+check current pricing before you commit" does the same job as "this
+claim requires verification against official documentation" but
+actually sounds like a person. Three categories need extra care, since
+sources are most likely to be outdated, single-sourced, or conflicting
+here:
 - Pricing/plan details: if a source describes a quota in one unit (GPU-minutes, credits, compute-hours), never restate it in a different unit (image counts, generations) as if they're equivalent \u2014 state it exactly as the source frames it, and note explicitly if the practical yield varies. Better still, per the beginner-focused rule above: usually just skip the exact number entirely.
 - Deprecation/discontinuation/availability: "announced for deprecation on [date]" and "is deprecated" are NOT the same claim \u2014 write the one your source actually supports, never upgrade an announcement into a completed fact.
-- Commercial/legal usage rights: if a source explicitly states a finding (e.g. "free tier is not licensed for commercial use"), state that finding directly and attribute it to the source \u2014 do not soften it into "appears to" or "based on editorial review" when the source itself was not hedging. Conversely, if your own understanding is inferred rather than a direct citation, say so plainly \u2014 readers may make real business decisions off this. If sources conflict on a fact, state the conflict once, clearly, rather than hedging every sentence around it.
-In all three cases: an independent review or single blog post is not the same as official documentation, and your sentence should make clear which one is backing the claim.`;
+- Commercial/legal usage rights: if a source explicitly states a finding (e.g. "free tier is not licensed for commercial use"), state that finding directly and attribute it to the source \u2014 do not soften it into "appears to" or "based on editorial review" when the source itself was not hedging. Conversely, if your own understanding is inferred rather than a direct citation, say so plainly, casually \u2014 readers may make real business decisions off this.
+If sources conflict on a fact, mention it once, casually, rather than hedging every sentence around it. In all three cases: an independent review or single blog post is not the same as official documentation \u2014 make that clear, but make it clear the way you'd mention it to a friend, not the way a terms-of-service page would.`;
 
 // ---- Stage: brief --------------------------------------------------------
 const BRIEF_SYSTEM = `You are the editorial lead for dailyblip, planning a guide before a researcher and writer produce it. ${EDITORIAL_RULES}
@@ -196,9 +202,9 @@ async function stageResearch(job) {
 // wastes 100% of every earlier stage's cost, which is a far worse
 // outcome than an unused few thousand tokens of ceiling headroom.
 const LENGTH_CONFIG = {
-  Quick: { words: "500 to 800 words total", researchSearches: 4 },
-  Standard: { words: "800 to 1200 words total", researchSearches: 6 },
-  "Deep dive": { words: "1200 to 1800 words total", researchSearches: 8 },
+  Quick: { words: "350 to 550 words total", researchSearches: 4 },
+  Standard: { words: "550 to 800 words total", researchSearches: 6 },
+  "Deep dive": { words: "800 to 1200 words total", researchSearches: 8 },
 };
 
 const DRAFT_SYSTEM = `You write the full draft of a dailyblip guide. ${EDITORIAL_RULES}
@@ -435,7 +441,7 @@ const IMAGE_BRIEF_SYSTEM = `You create ${CANDIDATE_IMAGE_COUNT} candidate image 
 
 Do not write generic blog-art prompts. Each image must have a clear editorial function (hero, explainer, comparison, workflow, or ranked-list support) and feel custom-made for this specific article, not like generic AI stock photography.
 
-For EACH image, ground it in this article's real content (its actual sections, tools, examples) \u2014 never something that could apply to any article on this general topic. Concrete test: if you could swap in a different article on a similar general subject and this image would still make sense unchanged, it's too generic \u2014 rewrite it to reference something this SPECIFIC article actually says (a specific tool name it names, a specific step it describes, a specific comparison it actually makes). A generic hub-and-spoke diagram of medium categories (write/image/video/audio/design) is exactly the kind of thing to avoid \u2014 it doesn't teach anything about this guide specifically, it's just decoration.
+For EACH image, ground it in this article's real content (its actual sections, tools, examples, key takeaways, and quick answer, all provided below) \u2014 never something that could apply to any article on this general topic. The key takeaways and quick answer are the most concrete, specific things this article says; lean on them for genuinely specific visual ideas rather than a generic reading of the section headings alone. Concrete test: if you could swap in a different article on a similar general subject and this image would still make sense unchanged, it's too generic \u2014 rewrite it to reference something this SPECIFIC article actually says (a specific tool name it names, a specific step it describes, a specific comparison it actually makes). A generic hub-and-spoke diagram of medium categories (write/image/video/audio/design) is exactly the kind of thing to avoid \u2014 it doesn't teach anything about this guide specifically, it's just decoration.
 
 TEXT IN IMAGES \u2014 hard limit: AI image generation is fundamentally unreliable at rendering precise text, especially multiple distinct words, brand names, or anything longer than a couple of characters (misspelled brand names, like "MongoB" instead of "MongoDB," are a common and expected failure mode, not a rare glitch). Because of this: no more than 3 short text labels in any single image, ideally fewer, and prefer representing tools/concepts through distinct shapes, icons, or visual metaphors rather than by naming them in on-image text. If a comparison genuinely needs to distinguish several named things, do it through distinct colors/shapes/icons per item with at most one or two of those actually labeled in text, not by rendering every name as a word in the image \u2014 the real names belong in the HTML caption and alt text, not baked into unreliable generated text.
 
@@ -473,16 +479,23 @@ Exactly ${CANDIDATE_IMAGE_COUNT} entries, one per candidate. JSON only.`;
 
 async function stageImages(job) {
   const slots = buildImagePrompts();
-  // Image briefs need enough of each section to know what to depict,
-  // not the full verbatim text \u2014 sending complete body_markdown here
-  // was pure input-token waste with no benefit to prompt quality.
+  // Longer previews than before (was 300 chars, clearly not enough for
+  // the model to find anything genuinely specific to visualize) plus
+  // key_takeaways and quick_answer, which are the most concrete,
+  // specific distillation of what this particular article actually
+  // says \u2014 much better grounding material than a truncated prose
+  // snippet for avoiding generic, could-apply-to-any-article images.
   const sectionPreviews = (job.article.sections || []).map((s) => ({
-    id: s.id, heading: s.heading, preview: (s.body_markdown || "").slice(0, 300),
+    id: s.id, heading: s.heading, preview: (s.body_markdown || "").slice(0, 600),
   }));
   const briefResult = await askJSON({
     role: "write",
     system: IMAGE_BRIEF_SYSTEM,
-    prompt: JSON.stringify({ slots, article_type: job.submitted.article_type, article_title: job.article.title, sections: sectionPreviews }),
+    prompt: JSON.stringify({
+      slots, article_type: job.submitted.article_type, article_title: job.article.title,
+      quick_answer: job.article.quick_answer, key_takeaways: job.article.key_takeaways,
+      sections: sectionPreviews,
+    }),
     // Raised again for 6 candidates instead of 2-3 \u2014 roughly double
     // the brief content to write. Ceiling costs nothing unless hit.
     maxTokens: 10000,
