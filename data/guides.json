@@ -2181,7 +2181,7 @@
   {
     "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Top AI content creator tools for 2026",
       "article_type": "Top tools list",
@@ -2193,7 +2193,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T03:39:08.288Z",
-    "updated_at": "2026-07-18T03:44:00.239Z",
+    "updated_at": "2026-07-18T03:47:34.386Z",
     "brief": {
       "target_reader": "Someone who makes things — videos, music, writing, images, or some mix — and keeps hearing about AI tools but hasn't committed to any yet. They want to know which ones are actually worth their time in 2026, not a list of every tool that exists.",
       "reader_outcome": "Walk away knowing 4-5 AI tools genuinely useful for content creation, which type of creator each one suits best, and enough to pick one and try it today.",
@@ -2584,6 +2584,92 @@
     "warnings": [
       "s2: Sources indicate the ChatGPT free tier default model is GPT-4o mini (or equivalent mini-tier), not a GPT-5.x model; the article's own sources conflict on this point and the claim cannot be verified as stated.",
       "s3: Midjourney is listed in this section as an image option but has no free plan and requires a paid subscription — the article itself acknowledges this — making the blanket 'no credit card' claim false as written."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "95a0fbff-dc10-4758-b956-5d78a5240198-img1.jpg",
+        "prompt": "Editorial hero illustration, 16:9 landscape format, deep ink navy background (#071A1F). A large warm amber circle sits as the dominant hub element, positioned slightly left of center. Five thick amber-colored spokes radiate outward at varied angles to five smaller teal circles (#63D8C6). Each teal circle contains a single clean bold sans-serif word: WRITE, IMAGE, VIDEO, AUDIO, DESIGN. The spokes and nodes terminate well within the frame — all elements have at least 12% breathing room from every frame edge, nothing touches or bleeds past the border. The arrangement is asymmetric and energetic, not a regular pentagon. Upper-right quadrant is deliberately open with minimal elements, creating a clear negative space zone against the dark background for text overlay. Style: bold editorial graphic design, vector-clean lines, high contrast, no photographic textures, no glowing gradients, no people, no device mockups. The image should feel like a designed editorial diagram — confident and immediately readable even at small thumbnail sizes.",
+        "placement": "hero",
+        "alt_text": "Editorial diagram showing five AI creative categories — Write, Image, Video, Audio, Design — radiating from a central amber hub on a deep navy background.",
+        "caption": "Five tools, five creative categories — the guide maps one genuinely useful AI tool to each.",
+        "generated_at": "2026-07-18T03:45:54.247Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "Five distinct creative categories radiate from a single bold central hub, each one labeled with its creative domain — writing, image, video, audio, design — rendered as a high-contrast editorial constellation against deep ink.",
+        "purpose": "Instantly communicate that this guide maps five real creative categories, not a generic AI roundup — and create a visually confident first impression that earns the reader's attention at thumbnail size.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "95a0fbff-dc10-4758-b956-5d78a5240198-img2.jpg",
+        "prompt": "Editorial illustration, 16:9 landscape format. Deep ink navy background (#071A1F). Five equal-width vertical columns arranged side by side across the frame, separated by thin warm amber (#FFB454) vertical rule lines. The columns do not touch the left or right frame edges — at least 10% horizontal margin on each outer side. Each column contains: at top, a simple geometric teal icon shape (abstract, not a logo); below that, a bold white category label in clean sans-serif; then the tool name in warm amber (#FFB454) type; then a small rounded teal (#63D8C6) badge with a checkmark and the word FREE TIER. The column divider lines float with top and bottom padding, not extending fully to the frame edges. All text and elements have comfortable breathing room from the frame border. Style: editorial graphic design, annotated scorecard layout, vector-clean, no photography, no device mockups, no trademarked logos. The overall feel is structured, informative, and designed — like a premium editorial comparison graphic.",
+        "placement": "s2",
+        "alt_text": "Horizontal scorecard comparing five AI tools across five creative categories, each with a free-tier confirmation badge.",
+        "caption": "All five tools covered in this guide offer a functional free tier — no credit card required to find out if they're right for you.",
+        "generated_at": "2026-07-18T03:46:23.366Z",
+        "approved": true,
+        "role": "list-support",
+        "concept": "A clean horizontal scorecard layout showing all five tools side by side — each in its own column with category name, tool name, and a 'free tier usable?' indicator — like a comparison table rendered as an editorial graphic.",
+        "purpose": "Give the reader a visual reference for the five specific tools covered in this guide and their categories at a glance, reinforcing the section's promise that all five have functional free tiers.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img3",
+        "file": "95a0fbff-dc10-4758-b956-5d78a5240198-img3.jpg",
+        "prompt": "Editorial explainer illustration, 1:1 square format. Deep ink navy background (#071A1F). The frame is divided into two equal halves by a bold vertical amber (#FFB454) line running from top to bottom with comfortable margin at top and bottom — not extending fully to the frame edge. Left half labeled GENERATOR at the bottom in clean white sans-serif: a simple abstract arrow points downward from a small rounded source shape (representing a description or prompt) to a larger teal (#63D8C6) output shape below it — representing something being created from nothing. Right half labeled ASSISTANT at the bottom in clean white sans-serif: a document-like rectangular shape on the left side flows through a small warm amber processing node in the center, then exits as a slightly larger, cleaner document shape on the right — representing existing work being improved. Teal arrows indicate direction of flow in both halves. All labels and elements have at least 10% margin from the frame edges. Style: clean diagrammatic editorial illustration, bold abstract shapes, no photography, no chat-bubble UI mockups, no app logos. The two halves should feel visually distinct but part of the same design system.",
+        "placement": "s1",
+        "alt_text": "Split diagram comparing AI generators (create from a prompt) and AI assistants (improve what you bring), the two main tool types covered in this guide.",
+        "caption": "Two types of AI tool, two different use cases — which one you need depends on whether you're starting from scratch or improving existing work.",
+        "generated_at": "2026-07-18T03:46:41.156Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "A clean two-column split illustrating the article's 'generators vs. assistants' distinction — left side shows an input prompt arrow flowing into a finished output (generator), right side shows existing work entering a tool and returning improved (assistant).",
+        "purpose": "Visually explain the two fundamental AI tool types the article defines — generators and assistants — so the reader immediately understands the framework before the tool list begins.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img4",
+        "file": "95a0fbff-dc10-4758-b956-5d78a5240198-img4.jpg",
+        "prompt": "Editorial workflow illustration, 16:9 landscape format. Deep ink navy background (#071A1F). On the left side of the frame (with at least 12% left margin), a large amber (#FFB454) diamond shape contains bold white sans-serif text: WHAT DO YOU MAKE? Four teal (#63D8C6) connector lines extend rightward from the diamond, branching to four rounded rectangle nodes arranged vertically on the right side of the frame — evenly spaced from top to bottom. Each rounded rectangle has a teal border and dark ink fill. Each node contains two lines of text: a white creator-type label (WRITER / IMAGE CREATOR / VIDEO CREATOR / AUDIO CREATOR) and below it a smaller amber tool recommendation. The rightmost edges of the four outcome boxes have at least 12% margin from the right frame edge. All connector lines are clean horizontal or angled teal lines with small arrowheads. No elements touch the frame border anywhere — 10% minimum safe margin on all sides. Style: clean editorial flowchart, vector-style bold shapes, no photography, no app logos, no floating UI screens. The overall direction of reading is unmistakably left to right.",
+        "placement": "s3",
+        "alt_text": "Decision flowchart matching four creator types — writer, image creator, video creator, audio creator — to their recommended AI tool from this guide.",
+        "caption": "Match the tool to what you already make — the fastest path to actually using one is starting with the category you're already working in.",
+        "generated_at": "2026-07-18T03:46:58.867Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "A left-to-right decision flow showing the article's 'match the tool to what you already make' recommendation — four creator types branch from a central question node to their recommended tool, rendered as a clean editorial flowchart.",
+        "purpose": "Turn the article's 'pick one and actually try it' matching logic into a scannable visual decision guide — showing writers, designers, video creators, and audio creators which tool the article recommends they start with.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img5",
+        "file": "95a0fbff-dc10-4758-b956-5d78a5240198-img5.jpg",
+        "prompt": "Editorial comparison illustration, 9:16 portrait format. Deep ink navy background (#071A1F). A bold horizontal amber (#FFB454) band divides the frame roughly in half, acting as a visual boundary. The upper half of the frame has a subtle teal (#63D8C6) atmospheric tint overlaid on the dark background. Centered in the upper zone, clean bold white sans-serif text reads: COMMERCIAL USE INCLUDED. Below that label, two or three simple rounded pill shapes in teal contain abstract category labels (e.g., TEXT, IMAGE — kept generic, no real app names). The lower half of the frame has a subtle warm amber atmospheric tint on the dark background. Centered in the lower zone, bold white text reads: CHECK YOUR TIER FIRST. Below that, two or three rounded pill shapes in a muted amber-orange contain different category labels. The amber dividing band has a short bold white label on it: RIGHTS VARY BY PLAN. All elements have a minimum 10% margin from every frame edge — the topmost label and the bottommost label both have generous breathing room from the frame border. Style: editorial risk-level diagram, clean graphic design, no photography, no app logos, no legal text, no screenshot mockups. The two zones should feel distinctly different in mood — calm and confident above the line, cautious and warm-warning below it.",
+        "placement": "s4",
+        "alt_text": "Comparison chart dividing AI tools into two commercial-rights zones — tools with commercial use included versus tools where rights depend on your subscription tier.",
+        "caption": "Sort out commercial rights before you build a workflow around a tool — the tier you're on may matter more than the tool itself.",
+        "generated_at": "2026-07-18T03:47:18.834Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "A vertical stacked comparison of the two commercial-rights risk levels discussed in the article — tools with clear commercial use terms at the top versus tools requiring tier upgrades for commercial rights at the bottom — rendered as an editorial risk-level chart.",
+        "purpose": "Visually communicate the article's commercial rights section by organizing tools into two clear tiers before a reader builds a monetized workflow around the wrong one.",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img6",
+        "file": "95a0fbff-dc10-4758-b956-5d78a5240198-img6.jpg",
+        "prompt": "Editorial conceptual illustration, 1:1 square format. Deep ink navy background (#071A1F). Centered in the frame with comfortable margin on all sides (minimum 12% from every edge), a large bold hourglass shape rendered in warm amber (#FFB454) — the outline and structure of the hourglass are amber. Inside the upper chamber of the hourglass: many small scattered teal (#63D8C6) irregular fragment shapes, densely packed and chaotic, representing scattered attention and comparison paralysis. Inside the lower chamber of the hourglass: a single large, clean, solid teal shape (simple rounded rectangle or circle), representing one completed creative output. The narrow waist of the hourglass is the visual focal pinch point. At the top of the frame (well inside the safe margin), a small clean white sans-serif label: 2 HRS COMPARING. At the bottom of the frame (well inside the safe margin), a small clean teal label: 0 THINGS MADE. No other text. The hourglass does not touch the frame edges — clear ink-colored breathing room surrounds it. Style: bold abstract editorial graphic, conceptual illustration, no photography, no clock faces, no stressed people, no word clouds. The image should work as a standalone social media graphic that communicates its idea even without the article.",
+        "placement": "s3",
+        "alt_text": "Hourglass illustration: upper chamber full of scattered fragments representing hours spent comparing tools, lower chamber showing zero output — visualizing the guide's warning against comparison paralysis.",
+        "caption": "The honest failure mode isn't picking the wrong tool — it's spending two hours comparing and not making anything.",
+        "generated_at": "2026-07-18T03:47:34.386Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "A bold, single-focal-point editorial illustration of the 'don't compare, make something' thesis — an abstract hourglass or timer shape with one half showing 'comparing tools' in fragmented, scattered small shapes, and the other half showing a single clean output shape, representing the article's core failure-mode warning.",
+        "purpose": "Support the article's most counterintuitive advice — that the biggest failure mode isn't choosing the wrong tool, it's spending two hours comparing and never making anything — with a memorable, standalone visual that works on social.",
+        "aspect_ratio": "1:1"
+      }
     ]
   }
 ]
