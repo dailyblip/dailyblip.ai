@@ -3468,6 +3468,16 @@
         "concept": "Side-by-side contrast: a task-assignment model (Codex CLI) versus an inline suggestion model — showing that one works at the file/project level and the other at the line level",
         "purpose": "Reinforce for section s2 readers why Codex CLI's task-plus-context approach makes it especially suited to multi-file tasks like refactoring or test writing, versus single-line completions",
         "aspect_ratio": "1:1"
+      },
+      {
+        "id": "upload1",
+        "file": "da373217-6d0c-45bf-b802-fd66a19d540e-upload-1.jpg",
+        "placement": "hero",
+        "alt_text": "",
+        "caption": "",
+        "approved": true,
+        "role": "upload",
+        "generated_at": "2026-07-18T05:32:29.049Z"
       }
     ]
   }
