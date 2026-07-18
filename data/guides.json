@@ -2685,7 +2685,7 @@
   {
     "id": "b403d458-0ff3-40ed-b2bd-608518c03e28",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Why Your AI Content Looks Like AI and How to Fix It",
       "article_type": "Practical guide",
@@ -2697,6 +2697,25 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T04:15:40.120Z",
-    "updated_at": "2026-07-18T04:15:40.120Z"
+    "updated_at": "2026-07-18T04:16:45.287Z",
+    "brief": {
+      "target_reader": "Someone who has started using AI writing or image tools and noticed their output feels generic, flat, or obviously machine-made — they want to improve quality but aren't sure what they're doing wrong or where to start",
+      "reader_outcome": "Understand the specific habits and choices that make AI content feel synthetic, and have a handful of concrete techniques they can apply immediately to make their output feel more intentional and human",
+      "structure_plan": [
+        "What actually makes AI content look like AI (it's not what most people think)",
+        "The editing moves that close the gap",
+        "How your inputs shape the output more than any setting does",
+        "One pass to do before you publish anything"
+      ],
+      "claims_to_verify": [
+        "Whether common AI writing tells like overly uniform sentence length, hedge phrases, and transitional filler (e.g. 'it's worth noting', 'in conclusion') are genuinely statistically prevalent in LLM output or if this is folk wisdom",
+        "Whether AI image generators tend toward centered compositions and even lighting by default, and if so which ones are most associated with this",
+        "Whether prompt specificity (detailed, concrete prompts vs. vague ones) is documented to produce measurably less generic output across major text and image tools",
+        "Whether post-generation editing in image tools (inpainting, style adjustments) is available on free tiers of major platforms like Midjourney, Adobe Firefly, or DALL-E",
+        "Whether AI detectors like GPTZero or Originality.ai are reliable enough to recommend as a self-check tool, or if false-positive rates make them misleading for beginners",
+        "What specific linguistic patterns LLMs default to under low-specificity prompts — e.g. passive voice prevalence, list overuse, hedging language frequency"
+      ],
+      "research_plan": "Prioritize NLP research or journalism citing actual LLM output analysis over general content-marketing advice. For image output patterns, look at design and photography criticism of AI work rather than tool documentation. For AI detector reliability, look for independent benchmarks or academic evaluations rather than the detector companies' own claims. Avoid SEO content farm takes on this topic — they tend to recycle the same surface-level tips without grounding them in how these models actually work."
+    }
   }
 ]
