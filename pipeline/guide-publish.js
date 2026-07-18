@@ -51,7 +51,13 @@ function validatePrePublish(job) {
   // should never block a publish that doesn't actually use it.
   const selectedImages = (job.images || []).filter((img) => img.approved);
   if (selectedImages.length && !selectedImages.some((img) => img.placement === "hero")) problems.push("no hero-placement image among the SELECTED images");
-  const missingAlt = selectedImages.filter((img) => !img.alt_text);
+  // Alt text is only a hard requirement for AI-generated images, which
+  // should always have real alt text written by the model \u2014 a missing
+  // one there signals an actual pipeline problem worth blocking on.
+  // Uploaded photos have alt text as an explicitly OPTIONAL field (per
+  // admin.html's upload form), so they're excluded here rather than
+  // silently reversing that decision by blocking on it anyway.
+  const missingAlt = selectedImages.filter((img) => img.role !== "upload" && !img.alt_text);
   if (missingAlt.length) problems.push(`${missingAlt.length} selected image(s) missing alt text`);
   const placeholderRe = /\[x\]|\[TODO\]|\[insert|lorem ipsum/i;
   const allText = [a?.introduction, a?.conclusion, ...(a?.sections || []).map((s) => s.body_markdown)].join(" ");
@@ -164,6 +170,14 @@ function renderToolCard(tool) {
   </div>`;
 }
 
+// Falls back to the caption, then a generic default, if alt text was
+// left blank \u2014 mainly matters for uploads (an explicitly optional
+// field), so the published page never ships a literally empty alt=""
+// even when someone didn't fill it in.
+function altTextOrFallback(img) {
+  return img.alt_text || img.caption || "Image related to this guide";
+}
+
 function renderPage(job) {
   const a = job.article;
   // Only images explicitly selected via admin.html's checkboxes ever
@@ -173,11 +187,11 @@ function renderPage(job) {
   const imageFor = (placement) => images.find((img) => img.placement === placement);
 
   const heroImg = imageFor("hero");
-  const heroHtml = heroImg ? `<div class="img-block"><img src="/guides/${esc(heroImg.file)}" alt="${esc(heroImg.alt_text)}" loading="lazy">${heroImg.caption ? `<div class="img-caption">${esc(heroImg.caption)}</div>` : ""}</div>` : "";
+  const heroHtml = heroImg ? `<div class="img-block"><img src="/guides/${esc(heroImg.file)}" alt="${esc(altTextOrFallback(heroImg))}" loading="lazy">${heroImg.caption ? `<div class="img-caption">${esc(heroImg.caption)}</div>` : ""}</div>` : "";
 
   const sectionsHtml = (a.sections || []).map((s) => {
     const img = imageFor(s.id);
-    const imgHtml = img ? `<div class="img-block"><img src="/guides/${esc(img.file)}" alt="${esc(img.alt_text)}" loading="lazy">${img.caption ? `<div class="img-caption">${esc(img.caption)}</div>` : ""}</div>` : "";
+    const imgHtml = img ? `<div class="img-block"><img src="/guides/${esc(img.file)}" alt="${esc(altTextOrFallback(img))}" loading="lazy">${img.caption ? `<div class="img-caption">${esc(img.caption)}</div>` : ""}</div>` : "";
     const tools = (s.tools || []).map(renderToolCard).join("");
     return `<div class="section-block">
       <h2>${esc(s.heading)}</h2>
