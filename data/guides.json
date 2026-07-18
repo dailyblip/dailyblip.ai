@@ -848,5 +848,22 @@
     },
     "created_at": "2026-07-18T00:28:21.355Z",
     "updated_at": "2026-07-18T00:28:21.355Z"
+  },
+  {
+    "id": "8c517454-bc7c-4b27-8282-bfb822638a78",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top 3 AI image generators for 2026",
+      "article_type": "Top tools list",
+      "target_audience": "",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-18T00:49:56.490Z",
+    "updated_at": "2026-07-18T00:49:56.490Z"
   }
 ]
