@@ -1264,7 +1264,7 @@
   {
     "id": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top 3 AI services for generating video in 2026",
       "article_type": "Top tools list",
@@ -1276,6 +1276,26 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T01:48:13.054Z",
-    "updated_at": "2026-07-18T01:48:13.054Z"
+    "updated_at": "2026-07-18T01:48:44.942Z",
+    "brief": {
+      "target_reader": "A creator (filmmaker, YouTuber, marketer, or hobbyist) who has heard about AI video generation but hasn't committed to a tool yet and wants to know where to start without wading through every option on the market",
+      "reader_outcome": "Feel confident enough to pick one tool and generate their first AI video clip today",
+      "structure_plan": [
+        "What AI video generation actually does right now (set honest expectations in one paragraph before naming anything)",
+        "The three tools worth starting with in 2026 (Sora, Runway, Kling — with a clear recommendation on who each one suits)",
+        "Before you publish or monetize anything (licensing and commercial-use caveats for all three, consolidated)"
+      ],
+      "claims_to_verify": [
+        "Whether OpenAI Sora is publicly available in 2026 and what its current access model is (free tier, subscription, waitlist)",
+        "Whether Runway Gen-3 (or a later generation) is the current active product, and what its free access situation looks like",
+        "Whether Kling AI (by Kuaishou) has broad international availability in 2026",
+        "Approximate maximum clip length each tool supports",
+        "Whether each tool supports text-to-video, image-to-video, or both",
+        "Commercial use rights for free-tier outputs on Sora, Runway, and Kling — specifically whether free-tier generations are licensed for commercial use",
+        "Whether any of these three tools have been deprecated, rebranded, or significantly changed since late 2024",
+        "Any notable fourth contender (e.g. Google Veo, Pika, Hailuo) worth a brief mention as a runner-up"
+      ],
+      "research_plan": "Prioritize official documentation and Terms of Service pages for each tool for licensing/commercial-use claims — do not rely on third-party blog posts for those. For availability and feature status, check official product pages and recent (2025-2026) coverage from established tech outlets. Flag any claims where the most recent source is older than six months, since this space moves fast. Note explicitly if any tool's status changed significantly after late 2024."
+    }
   }
 ]
