@@ -2685,7 +2685,7 @@
   {
     "id": "b403d458-0ff3-40ed-b2bd-608518c03e28",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Why Your AI Content Looks Like AI and How to Fix It",
       "article_type": "Practical guide",
@@ -2697,7 +2697,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T04:15:40.120Z",
-    "updated_at": "2026-07-18T04:16:45.287Z",
+    "updated_at": "2026-07-18T04:18:03.607Z",
     "brief": {
       "target_reader": "Someone who has started using AI writing or image tools and noticed their output feels generic, flat, or obviously machine-made — they want to improve quality but aren't sure what they're doing wrong or where to start",
       "reader_outcome": "Understand the specific habits and choices that make AI content feel synthetic, and have a handful of concrete techniques they can apply immediately to make their output feel more intentional and human",
@@ -2716,6 +2716,152 @@
         "What specific linguistic patterns LLMs default to under low-specificity prompts — e.g. passive voice prevalence, list overuse, hedging language frequency"
       ],
       "research_plan": "Prioritize NLP research or journalism citing actual LLM output analysis over general content-marketing advice. For image output patterns, look at design and photography criticism of AI work rather than tool documentation. For AI detector reliability, look for independent benchmarks or academic evaluations rather than the detector companies' own claims. Avoid SEO content farm takes on this topic — they tend to recycle the same surface-level tips without grounding them in how these models actually work."
-    }
+    },
+    "sources": [
+      {
+        "title": "Do LLMs write like humans? Variation in grammatical and rhetorical styles",
+        "publisher": "PNAS (Proceedings of the National Academy of Sciences)",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2422455122",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "LLM linguistic tells — including agentless passive voice, hedging phrases, nominalizations, and clausal coordination — are measurable and statistically testable features, not merely folk wisdom. Differences between LLM and human use of these features were tested for statistical significance using the paired Wilcoxon signed-rank test with Bonferroni multiple comparison correction.",
+          "Specific linguistic patterns like passive voice and hedging are part of a documented 66-category tagset (Biber's system) applied to classify LLM vs. human writing."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Contrasting Linguistic Patterns in Human and LLM-Generated News Text",
+        "publisher": "arXiv / Springer (Artificial Intelligence Review)",
+        "url": "https://link.springer.com/article/10.1007/s10462-024-10903-2",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Human texts exhibit more scattered sentence length distributions and more variety of vocabulary compared to LLM output — confirming that overly uniform sentence length in LLM text is a documented, measurable phenomenon, not folk wisdom.",
+          "LLM outputs use more numbers, symbols, and auxiliaries (suggesting objective, emotionally flat language) than human texts, and more pronouns.",
+          "LLMs tend to produce text with less negative emotional register than humans — meaning AI text skews positive/neutral by default."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "The Homogenizing Effect of Large Language Models on Human Expression and Thought",
+        "publisher": "arXiv",
+        "url": "https://arxiv.org/html/2508.01491v1",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "The next-token prediction objective in LLMs favors high-probability continuations, reinforcing dominant patterns and smoothing over outliers — a documented structural reason why LLM output defaults toward generic, central-tendency language under low-specificity prompts.",
+          "LLM outputs tend to mirror a narrow and skewed slice of human experience because training data overrepresents dominant languages, cultures, and ideologies."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Refined Prompt Strategies in Generative Image Models: From Semantic Construction to Output Control",
+        "publisher": "ACM Digital Library (2025 International Conference on Generative AI for Business)",
+        "url": "https://dl.acm.org/doi/10.1145/3766918.3766963",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Detailed, concrete prompts measurably outperform vague ones in AI image generation: clear attribute specifications, spatiotemporal scene details, and explicit boundary settings are documented to reduce image distortion and enhance semantic consistency.",
+          "Vague prompts — such as a general subject, general environment, or underspecified style — often lead to unintended visual artifacts, stylistic mismatch, or incorrect spatial composition.",
+          "Prompt specificity is documented to produce less generic output in AI image tools; prompts are described as 'essential logical units for output regulation.'"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "GPTZero Accuracy Benchmarking (Official)",
+        "publisher": "GPTZero",
+        "url": "https://gptzero.me/news/ai-accuracy-benchmarking/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "GPTZero self-reports 99% accuracy when detecting AI-generated text vs. human writing on its own internal benchmark, and cites a 0.24% false positive rate in its own head-to-head test against Originality and Copyleaks across 3,000 samples.",
+          "GPTZero cites TechCrunch and ZDNet independent testing as positive external validation, though acknowledges these tests use small sample sizes."
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "GPTZero Review: Accuracy, False Positives & Top Alternatives",
+        "publisher": "Skywork AI",
+        "url": "https://skywork.ai/blog/ai-agent/gptzero-review/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "An independent review citing a 2024 PMC study found GPTZero has an 18% false positive rate — meaning nearly one in five human-authored texts may be falsely flagged as AI-generated.",
+          "GPTZero's accuracy drops significantly when moving from GPT-3.5 to GPT-4 output, suggesting it struggles to keep pace with more advanced models.",
+          "False positives are described as a 'destructive error' that 'leads to false accusations, undermines trust, and punishes innocent creators' — framing AI detectors as unreliable for high-stakes use without corroboration."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "AI Detection Accuracy Studies — Meta-Analysis of 15 Studies",
+        "publisher": "Originality.ai (company blog)",
+        "url": "https://originality.ai/blog/ai-detection-studies-round-up",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "A November 2025 arXiv study of 14 detectors across 16,000+ samples found Originality.ai achieved 96% accuracy and the lowest false positive rate (8% FPR) among commercial tools.",
+          "ZeroGPT demonstrated a 38% false positive rate and 80% accuracy in the same study — showing significant variance in reliability across tools.",
+          "Across multiple independent studies aggregated here, detector performance varies widely by tool, text type, and language — recommending against treating any single detector as definitive."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Are AI Detectors Accurate in 2026? Reliability, False Positives, and Real Tests",
+        "publisher": "WalterWrites.ai",
+        "url": "https://walterwrites.ai/are-ai-detectors-accurate/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Across tools, AI detector accuracy ranges from approximately 65%–90% depending on tool, text length, and writing style — making blanket recommendations for beginners problematic.",
+          "Paraphrased or humanized AI content drops detection accuracy by 20% or more across tested tools.",
+          "OpenAI shut down its own AI detection tool shortly after launch, citing poor accuracy — an independent data point against over-relying on any single detector."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Midjourney vs Adobe Firefly: Which Is Better in 2026?",
+        "publisher": "AIComparison.ai",
+        "url": "https://aicomparison.ai/midjourney-vs-adobe-firefly/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney's 'Vary (Region)' inpainting feature is confirmed as a platform capability, but Midjourney has no free tier — plans start at $10/month (Basic), meaning inpainting is not available on a free tier.",
+          "Both Midjourney and Adobe Firefly support inpainting and outpainting with comparable functional coverage.",
+          "Adobe Firefly offers a free tier with 25 monthly credits, and its Generative Fill/Expand (inpainting equivalents) are accessible via Creative Cloud integration — but the full inpainting workflow within Photoshop requires a Creative Cloud subscription."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Adobe Firefly Review 2026",
+        "publisher": "AIChatDaily",
+        "url": "https://www.aichatdaily.com/tools/adobe-firefly",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe Firefly's free tier offers 25 generations/month with watermarks — confirmed as a genuine but limited entry point; the full product (including robust Generative Fill/inpainting in Photoshop) requires a paid Creative Cloud or Firefly subscription.",
+          "DALL-E 3 (now effectively GPT Image 1.5 within ChatGPT) includes integrated inpainting accessible via ChatGPT Plus ($20/month) — not on a free tier.",
+          "Firefly outputs are described independently as 'slightly more safe looking' and carrying a 'stock photo quality' — an editorial observation relevant to why Firefly images may look generically AI-produced by default."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      }
+    ],
+    "unverifiable_claims": [
+      "That AI image generators 'tend toward centered compositions by default' as a structural/technical default setting — no peer-reviewed or official documentation was found confirming this as an engineered default across Midjourney, DALL-E, or Firefly specifically. Reviewer observations note these tools produce 'compositionally strong' or 'clean' images, but centered composition as a documented algorithmic default is not confirmed. The writer should soften this to 'a commonly observed tendency in reviewer testing' rather than a verified technical fact.",
+      "That 'it's worth noting' and 'in conclusion' are specifically the most statistically prevalent filler phrases in LLM output — research confirms hedging language and transitional markers are measurably elevated in LLM text generally, but no source specifically ranks these exact phrases as the top offenders. The writer should say these are 'commonly cited examples of LLM filler' rather than citing specific frequency rankings.",
+      "That prompt specificity produces 'measurably less generic output' for major text LLMs (e.g., GPT-4, Claude) specifically — the documented evidence covers image generation tools and medical AI contexts, but no peer-reviewed source was found measuring this effect for general-purpose LLM text output in a controlled study. The writer should note this is well-supported for image tools and is a widely held practitioner view for text tools, but not yet rigorously measured for text LLMs in comparable research.",
+      "That list overuse is a statistically documented LLM default pattern under low-specificity prompts — while homogenization and low lexical diversity are documented, list formatting as a specific statistically measured output bias was not confirmed in the sources retrieved. This claim should be framed as editorial/practitioner observation rather than a verified research finding.",
+      "That post-generation inpainting is available on free tiers of Midjourney — Midjourney has no free tier; this claim is false and must be dropped or corrected. Inpainting (Vary Region) requires a paid plan starting at $10/month."
+    ]
   }
 ]
