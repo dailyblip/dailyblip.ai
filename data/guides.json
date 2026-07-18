@@ -1670,7 +1670,7 @@
   {
     "id": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "10 Best AI Music Generators for Beginners: Features, Pricing, and Use Cases",
       "article_type": "Top tools list",
@@ -1682,7 +1682,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T03:12:22.094Z",
-    "updated_at": "2026-07-18T03:12:54.916Z",
+    "updated_at": "2026-07-18T03:14:25.944Z",
     "brief": {
       "target_reader": "Someone who has never used an AI music tool before — likely a content creator, hobbyist, or indie filmmaker who needs background music or simple tracks but has no music production background and doesn't know where to start",
       "reader_outcome": "Feel confident enough to pick one tool and actually generate their first track today — not evaluate all ten exhaustively",
@@ -1708,6 +1708,198 @@
         "Which tools are browser-based vs. requiring a download or app"
       ],
       "research_plan": "Prioritize each platform's own official documentation, pricing pages, and terms of service as the primary source for licensing and availability claims — especially for commercial use rights, since third-party roundups are frequently outdated or conflate free and paid tier terms. Cross-reference with recent (2024–2025) coverage from music tech outlets like MusicRadar, Sound On Sound, or Music Ally for capability and usability observations, but flag any claim that appears only in a single secondary source. Note the current status of any ongoing copyright litigation involving these platforms, since it directly affects how confidently commercial use guidance can be stated."
-    }
+    },
+    "sources": [
+      {
+        "title": "Terms of Service – Suno",
+        "publisher": "Suno, Inc.",
+        "url": "https://suno.com/terms-of-service",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Free/Basic tier users may only use outputs for lawful, internal, personal, and non-commercial purposes, with attribution to Suno required",
+          "Commercial use of any output or voice model is prohibited unless expressly authorized (i.e., on a paid plan)",
+          "Suno operates a Mobile App in addition to its browser interface",
+          "Suno grants itself a broad, royalty-free, perpetual license to use user Submissions"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Suno Commercial Use Rights Explained [2026]",
+        "publisher": "Dynamoi",
+        "url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno's free/Basic tier is limited to non-commercial use only — no distribution, monetization, or commercial projects",
+          "Suno Pro ($10/month) and Premier ($30/month) both grant commercial rights; commercial rights attach only to songs created while subscribed",
+          "In November 2025, Warner Music Group and Suno announced a partnership settling copyright litigation and committing Suno to licensed AI models trained on WMG's catalog",
+          "Sony had not settled with Suno as of March 2026",
+          "Free-tier users are expected to lose the ability to download audio files, limited to streaming and sharing only, under the WMG deal",
+          "Paid-tier users (Pro and Premier) will face monthly download caps with the option to purchase additional downloads",
+          "Premier users ($30/month or $24/month annually) get the same commercial rights as Pro — more credits and Studio access, not broader legal rights",
+          "Suno takes 0% of streaming royalties on paid commercial licenses",
+          "Fully AI-generated music may not qualify for copyright protection (no human authorship), per Suno's own documentation and D.C. Circuit precedent",
+          "DMCA takedowns, PRO registration (ASCAP/BMI), and Content ID may not apply to fully AI-generated works",
+          "Songs created while subscribed retain their commercial license even after cancellation; retroactive rights for free-tier songs are not granted"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Suno Pricing 2026: Free vs Pro vs Premier, Credits & Commercial Use",
+        "publisher": "Margabagus",
+        "url": "https://margabagus.com/suno-pricing/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno Free: $0, 50 credits/day (~10 songs/day), access to v4.5-all model, shared queue, personal non-commercial use only",
+          "Suno Pro: 2,500 credits/month (~500 songs), access to v5.5, priority queue, commercial use rights for songs made while subscribed",
+          "Suno Premier: 10,000 credits/month (~2,000 songs), includes Suno Studio, advanced workflow tools, and advanced stem separation",
+          "Annual billing saves approximately 20%: Pro ~$8/month, Premier ~$24/month billed yearly",
+          "In June 2026, Suno announced improvements to stem separation: Auto Split (drums, bass, guitar, keys, etc.) and Split from Mix (isolate or remove one selected part)",
+          "Suno is a text prompt–based tool (prompts generate full songs with vocals and lyrics)",
+          "Suno is browser-based with a mobile app available"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Udio Pricing 2026: A Complete Breakdown of Plans & Credits",
+        "publisher": "eesel AI",
+        "url": "https://www.eesel.ai/blog/udio-pricing",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Udio offers three tiers: Free ($0, 100 credits/month with 10-per-day hard cap), Standard ($10/month or $8/month annually, 2,400 credits), Pro ($30/month or $24/month annually, 6,000 credits)",
+          "Udio also offers pay-as-you-go credits (100 for $3, 1,000 for $25) that never expire",
+          "Udio's free tier requires no credit card",
+          "Free tier also caps full-length (2:10) song generations to 3 per day",
+          "Udio completed licensing deals with Universal Music Group (October 2025) and Warner Music Group (November 2025)",
+          "Voice Control and Style Blending are locked to Standard and above",
+          "Udio accepts text prompts and generates full songs with vocals",
+          "Udio has a more developed post-generation editing suite than Suno (Voice Control, Style Blending, Inpaint)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Udio 2026 Terms of Service: Commercial Use, Ownership & Rights Checklist",
+        "publisher": "Music Make AI",
+        "url": "https://musicmake.ai/blog/udio-terms-of-service-commercial-use-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "As of June 15, 2026, Udio's TOS was last revised November 12, 2025; it includes restrictive provisions on downloading, copying, publishing, distributing, and commercial use unless compliant with terms",
+          "Udio's TOS states that Udio and/or its licensors own generated works; users may only use them for personal and non-commercial purposes while following relevant regulations and providing attribution — unless on a qualifying paid plan",
+          "Commercial use rights on Udio cannot be assumed without verifying current plan, account process, and allowed usage scope",
+          "Rights attribution of AI-generated music is complex — 'ownership' may involve rights transfer, licensing, user content, and platform rights"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Udio Pricing Blueprint",
+        "publisher": "UsagePricing",
+        "url": "https://www.usagepricing.com/blueprint/udio",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "After Udio's October 2025 UMG settlement, Udio moved to a 'walled garden' model removing free downloads; users can stream/preview but not export generated audio",
+          "Udio had mass subscription cancellations after download removal; offered a 48-hour download window (Nov 3–5, 2025) for music made under prior terms",
+          "Warner Music Group followed with its own Udio settlement on November 19, 2025",
+          "No headline subscription price change accompanied the UMG deal — the lever was output rights (downloads/commercial use), not tier pricing",
+          "Udio pricing data was captured from udio.com/pricing on 2026-06-11",
+          "A jointly licensed UMG x Udio subscription service is planned for later in 2026"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Mubert Subscription – Buy Royalty-Free Music | Mubert Render (Pricing Page)",
+        "publisher": "Mubert Inc.",
+        "url": "https://mubert.com/render/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Each Mubert download includes a license certificate for the user's plan",
+          "On ALL Mubert plans, tracks are not licensed for Content ID, standalone release on streaming platforms, or stock music sites",
+          "Mubert supports MP3, WAV, FLAC, and M4A export formats",
+          "Mubert offers a free trial to explore its capabilities; full access requires a subscription"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Mubert Pricing 2026: 5 Plans from Free–$199/month",
+        "publisher": "CostBench",
+        "url": "https://costbench.com/software/ai-music-generators/mubert/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Mubert has 5 pricing tiers: Ambassador (Free, personal/non-commercial, ~25 tracks/month), Creator ($14/month, social media and NFT commercial use), Pro ($39/month, full digital commercial licensing including ads and client work), Business ($199/month, agency/app use), and API/Enterprise (custom pricing)",
+          "Mubert's free Ambassador plan is personal/non-commercial only",
+          "Creator ($14/month) and Pro ($39/month) both include 500 tracks/month and lossless quality; key difference is commercial licensing scope",
+          "Creator is limited to social media content and NFTs; Pro adds monetized content, digital advertising (YouTube, Facebook, Instagram, Twitter), TV/radio ads, and freelancer client projects",
+          "Mubert retains ultimate copyright to the music; paid users purchase a broad license to use tracks without paying royalties (not ownership)",
+          "Mubert cannot generate coherent lyrics or realistic lead vocals — it is instrumental/ambient only",
+          "Mubert uses a hybrid human-AI engine (arranging human-recorded stems), not a pure neural network",
+          "Mubert requires no musical background to operate",
+          "Mubert is browser-based with an API available for developers"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Best AI Music Generators 2026 (8 Tools Tested Head-to-Head)",
+        "publisher": "ToolChase",
+        "url": "https://toolchase.com/blog/best-ai-music-generators/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Soundraw uses parameter/mood/genre/energy selection rather than text prompts; it is instrumental only (no vocals)",
+          "Soundraw paid plans grant unlimited commercial use with stem downloads",
+          "Soundraw offers a free tier (up to 25 saved songs, non-commercial)",
+          "Boomy is the easiest entry point for beginners with no music background; users pick a style, press 'create,' and can release directly to Spotify/Apple Music via Boomy's distribution partner",
+          "Boomy paid plans grant commercial rights; Boomy takes a percentage of streaming royalties",
+          "Boomy Creator plan downloads are non-commercial; Pro plan required for ad/commercial use",
+          "Udio's Standard ($10/month) and Pro ($30/month) plans include commercial rights; free plan does not",
+          "Suno and Udio both settled major copyright lawsuits in 2025 and are rolling out licensed models",
+          "All five tools (Suno, Udio, Soundraw, Boomy, Mubert) are browser-based; none require a download or DAW to use",
+          "None of these tools require music theory knowledge or DAW experience"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "AI Music Generators with Commercial Rights: Full List [2026]",
+        "publisher": "Dynamoi",
+        "url": "https://dynamoi.com/learn/ai-music-distribution/which-ai-music-generators-allow-commercial-distribution",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "As of reporting, Udio had no downloads available due to its October 2025 UMG settlement; transitioning to a walled garden model with a new licensed platform expected in 2026",
+          "Music Udio users downloaded before October 2025 may still have commercial rights under original terms",
+          "New Udio content currently cannot be distributed externally",
+          "Soundraw is parameter-based (not text-prompt-based), instrumental only, and its AI model is trained exclusively on in-house original compositions — making it fully cleared for commercial use on paid plans",
+          "Suno Pro ($10/month) and Premier ($30/month) offer the clearest commercial distribution rights among current AI music generators, covering streaming, YouTube monetization, and sync licensing with 0% revenue share",
+          "Boomy and Suno both support full songs with vocals and lyrics"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      }
+    ],
+    "unverifiable_claims": [
+      "Whether Boomy's current TOS explicitly assigns copyright to the user vs. retaining it for the platform — Boomy's live TOS page was not directly retrieved; third-party sources confirm Boomy takes a streaming royalty share and that commercial rights require a paid plan, but exact copyright ownership language could not be confirmed from primary source",
+      "Exact current Soundraw pricing tiers and whether a free tier currently exists — sources conflict: one independent source (SaaSWorthy, Aug 2025) states no free plan exists; another (ToolChase, June 2026) states a free tier with 25 saved songs (non-commercial) is available. Soundraw's official license page returned only boilerplate. Writer should verify directly at soundraw.io/pricing before publishing",
+      "Udio commercial rights on Standard vs. Pro tiers — one source (eesel AI) states Pro ($30/month) is required for commercial rights; another source (ToolChase) states Standard ($10/month) includes commercial rights. Udio's own pricing page returned minimal content. Writer must verify directly at udio.com/pricing and udio.com/terms before publishing any commercial rights claim for Udio",
+      "Whether Udio free plan allows commercial use with attribution — one source (ChangelyricBlog, Sept 2025) claims Udio allows commercial use on free plans with attribution; this conflicts with more recent and more authoritative sources. This claim appears outdated post-October 2025 settlement and should be dropped or heavily caveated",
+      "Specific Mubert free tier credit count and whether credit card is required — sources give conflicting free tier credit numbers (25 tracks/month per CostBench; 24 credits/month per Dynamic Business; free trial language per official pricing page). The official mubert.com/render/pricing page did not return full plan details. Writer should verify directly",
+      "Whether Boomy is currently accepting new users and has not been deprecated or significantly changed availability — no direct confirmation from Boomy's official site was retrieved; only third-party references confirm it is still operating as of mid-2026",
+      "Specific Soundraw stem download availability and output formats (WAV, stems) — third-party sources confirm paid plans include stem downloads, but specific format details (MP3 vs. WAV) were not confirmed from Soundraw's official documentation",
+      "Suno output format specifics beyond stems — sources confirm stem separation exists on Premier (and partially on Pro), and that MP3 is a standard export, but WAV availability by tier could not be confirmed from the official TOS or help docs directly",
+      "Whether any of these platforms (Soundraw, Boomy, Mubert) are involved in active litigation that affects commercial use guidance — no active litigation was identified for these three platforms in search results, but absence of evidence is not confirmation; writer should note this was not surfaced in research rather than stating they are litigation-free"
+    ]
   }
 ]
