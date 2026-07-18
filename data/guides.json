@@ -2684,8 +2684,8 @@
   },
   {
     "id": "b403d458-0ff3-40ed-b2bd-608518c03e28",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "Why Your AI Content Looks Like AI and How to Fix It",
       "article_type": "Practical guide",
@@ -3070,6 +3070,8 @@
       "s4: The Originality.ai 8% false positive rate claim is sourced from the company's own blog, which the article itself flags as conflicted; the key_takeaways section repeats the 8%–38% range without the same caveat, presenting disputed company-sourced figures as settled fact.",
       "key_takeaways: Presenting the 8% figure as a clean data point strips away the article's own disclosure that this number comes from Originality.ai's self-interested blog post, misleading readers who only skim takeaways.",
       "s3: The sources confirm Firefly's free tier includes watermarks on outputs; the article implies watermarks are a periodic policy adjustment rather than a current default, which could mislead readers about whether free-tier outputs are usable for publishing."
-    ]
+    ],
+    "published_at": "2026-07-18T04:51:14.819Z",
+    "published_url": "https://dailyblip.ai/guides/why-ai-content-looks-like-ai-how-to-fix-it.html"
   }
 ]
