@@ -1264,7 +1264,7 @@
   {
     "id": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "Top 3 AI services for generating video in 2026",
       "article_type": "Top tools list",
@@ -1276,7 +1276,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T01:48:13.054Z",
-    "updated_at": "2026-07-18T01:50:09.488Z",
+    "updated_at": "2026-07-18T01:51:00.179Z",
     "brief": {
       "target_reader": "A creator (filmmaker, YouTuber, marketer, or hobbyist) who has heard about AI video generation but hasn't committed to a tool yet and wants to know where to start without wading through every option on the market",
       "reader_outcome": "Feel confident enough to pick one tool and generate their first AI video clip today",
@@ -1479,6 +1479,74 @@
       "Sora 2's status as a 'top 3' tool in July 2026: Multiple independent sources now treat Sora as effectively discontinued for practical use (consumer app shut down April 26, 2026; API sunsets September 24, 2026). The writer should reconsider framing Sora as a current 'top 3' recommendation and instead consider Kling, Runway, and Veo 3.1 as the active top 3, with a note about Sora's history and current API-only/sunset status.",
       "Specific OpenAI usage policy language around Sora 2 commercial rights at any access tier: the OpenAI policy pages were not directly retrieved. Writer should not make specific claims about commercial license grants under paid Sora tiers without verifying openai.com/policies directly.",
       "Hailuo/MiniMax's exact free tier terms and commercial rights: sources describe a free tier with credits but conflict on whether commercial use is permitted. Writer should soften any specific claims about Hailuo commercial use rights."
-    ]
+    ],
+    "article": {
+      "title": "The 3 AI Video Generators Worth Starting With in 2026",
+      "alternative_titles": [
+        "Kling, Runway, and What Happened to Sora: AI Video in 2026",
+        "Your First AI Video: Which Tool to Use Right Now"
+      ],
+      "slug": "top-ai-video-generators-2026",
+      "dek": "Kling and Runway are the two tools actually worth committing to right now. Here's who each one suits, what to expect from them, and the licensing caveats you need to know before publishing anything.",
+      "meta_description": "A beginner's guide to the best AI video generators in 2026. Covers Kling AI, Runway Gen-4.5, and what happened to Sora — with honest notes on free tiers, clip quality, and commercial use rights.",
+      "quick_answer": "Kling AI is the strongest starting point for most creators in 2026, with a generous free tier and excellent motion quality. Runway Gen-4.5 is the better pick if you need reliable text-to-video with a clear upgrade path.",
+      "introduction": "AI video generation in 2026 is genuinely usable, not just demo-reel impressive. You can take a text prompt or a still image and get back a short, realistic video clip in minutes. What you can't do yet: generate anything longer than a minute or so per clip without stitching, get reliable results every time, or count on audio syncing perfectly. Set that as your baseline, and these tools start to make a lot of sense for short-form content, promos, concept visualization, and experimentation.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "The two tools to actually start with — and a note on Sora",
+          "body_markdown": "**Kling AI** (by Kuaishou) is, as of mid-2026, the strongest overall pick for new creators based on independent reviews citing its character consistency and motion realism among consumer-facing tools. It supports both text-to-video and image-to-video, has a free tier with daily credits at 720p, and is accessible internationally at [kling.ai](https://kling.ai). The current flagship is Kling 3.0. Native clips run up to 10 seconds, but the extension feature lets you chain clips toward a few minutes of total footage.\n\nIf you're primarily a filmmaker or video editor who wants to work from text prompts rather than reference images, **Runway Gen-4.5** is a better fit. Runway has been a mainstay of the AI video space since before most competitors existed, and the Gen-4/4.5 lineup is its current active product. The free plan gives you a one-time batch of 125 non-renewing credits (enough to test the interface and generate a handful of short clips), with paid plans starting around $15/month that unlock text-to-video and all current models. Watermarks appear on free-tier output; paid tiers remove them.\n\nA word on **Sora**: OpenAI's video model gets a lot of coverage, but it's a poor choice for anyone starting out right now. The consumer app was shut down in April 2026. Sora 2 exists only as a developer API with per-second pricing, and that API is scheduled to sunset in September 2026. Unless you're a developer actively integrating it before that deadline, skip it. Google **Veo 3.1** is worth watching as a strong fourth option and is widely cited in mid-2026 reviews as the highest-quality output available — but access is currently limited to Google AI Ultra subscribers and API users, so it's not the easiest place to start. **Pika 2.5** is a reasonable alternative if you want stylized or social-media-optimized output specifically.",
+          "tools": [
+            {
+              "name": "Kling AI",
+              "url": "https://kling.ai",
+              "description": "Kuaishou's AI video generator, strong on motion realism and character consistency. Free tier available with daily credits at 720p. Best for creators who want to start without paying and prioritize visual quality over long clip lengths.",
+              "strengths": [
+                "Free daily credits let you iterate without committing to a subscription",
+                "Supports both text-to-video and image-to-video",
+                "Kling 3.0 is widely cited as leading on motion realism among consumer tools"
+              ],
+              "limitations": [
+                "Native clips cap at 10 seconds (extension required for longer footage)",
+                "Free tier is strictly non-commercial and adds a visible watermark",
+                "Content moderation aligns with Chinese regulatory requirements — some political or sensitive topics are blocked",
+                "Use only the official kling.ai domain; fake impersonator sites have distributed malware"
+              ]
+            },
+            {
+              "name": "Runway",
+              "url": "https://runwayml.com",
+              "description": "Long-running AI video platform now on Gen-4 and Gen-4.5. Better suited to creators who want text-to-video with a clear professional upgrade path. Free tier exists but is limited to a one-time credit batch.",
+              "strengths": [
+                "Text-to-video (Gen-4.5) and image-to-video (Gen-4) both available on paid plans",
+                "Established platform with consistent model updates",
+                "Commercial use rights apply on all tiers, per independent review verified against official pricing"
+              ],
+              "limitations": [
+                "Free plan's 125 credits are one-time only and don't renew — it's a trial, not an ongoing free tier",
+                "Free plan is restricted to Gen-4 Turbo image-to-video; text-to-video requires a paid plan",
+                "All free-tier videos include a Runway watermark"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "heading": "Before you publish or monetize anything",
+          "body_markdown": "**Kling AI free tier:** According to an independent review of Kling's pricing (Atlas Cloud, accessed July 2026), the free plan explicitly prohibits commercial use of generated content. If you're publishing for a brand, selling footage, or monetizing a YouTube channel, you need a paid plan. Paid tiers unlock commercial rights alongside 1080p/4K output and watermark removal.\n\n**Runway:** Independent reviews verified against Runway's official pricing page indicate that commercial use rights apply across all tiers, including the free plan. That said, Runway's free plan output carries a visible watermark, which is a practical problem for anything you'd actually publish. Check Runway's current Terms of Service at [runwayml.com](https://runwayml.com) before distributing anything commercially — the editorial read here is that paid tiers are where commercial use becomes cleanly viable.\n\n**Sora / OpenAI:** The consumer free tier is gone (ended January 2026), so the previous question of whether free-tier Sora output could be used commercially is moot. If you're accessing Sora 2 via the API before it sunsets, check OpenAI's current usage policies at openai.com/policies directly — specific commercial license terms for API output were not retrievable from official sources for this guide.\n\n**Veo and Pika:** If you end up trying either as an alternative, treat their free-tier commercial rights as unverified until you've read their current ToS. This space updates frequently enough that any third-party summary (including this one) may be stale by the time you're reading it.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "Kling AI is the strongest starting point for most creators right now — free daily credits, good motion quality, and broad international access at kling.ai.",
+        "Runway Gen-4.5 is the better pick if text-to-video is your priority and you're willing to pay from the start; the free plan is really just a trial.",
+        "Sora is not a practical recommendation for new creators in mid-2026 — consumer access ended in April 2026 and the remaining API sunsets in September 2026.",
+        "Never use Kling AI's free tier for anything commercial — the terms explicitly prohibit it. Paid tier required for commercial use.",
+        "Only use the official kling.ai domain; fake Kling sites have been used in malware distribution."
+      ],
+      "conclusion": "Start with Kling if you want to generate your first clip today without paying anything. Go to [kling.ai](https://kling.ai), describe what you want to see, and let Kling 3.0 do the work. If the 10-second clip length feels limiting immediately, Runway's free trial credits are worth burning through next to compare. Either way, you'll have a real sense of what these tools can and can't do within an afternoon — which is a more honest education than any guide can give you.",
+      "methodology_disclosure": "This guide was researched using a combination of official product documentation (Runway's help center and pricing page), independent editorial reviews (Atlas Cloud, Somake AI, Pixflow, SolidAITech, eesel AI, and others), and a structured source review conducted in July 2026. Licensing and commercial-use claims were prioritized from official sources where available; where only independent reviews were available, those are noted as such. dailyblip did not independently test any of the tools described. Readers should verify current pricing, plan limits, and commercial rights directly with each platform before making purchasing or publishing decisions, as this market changes rapidly.",
+      "last_reviewed_date": "July 18, 2026"
+    }
   }
 ]
