@@ -2288,7 +2288,7 @@
   {
     "id": "34e44941-18c0-4c92-af8e-12ac6c773455",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "What are the best tools for generating images?",
       "article_type": "Top tools list",
@@ -2300,6 +2300,28 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:30:10.931Z",
-    "updated_at": "2026-07-18T00:30:10.931Z"
+    "updated_at": "2026-07-18T00:31:53.514Z",
+    "brief": {
+      "target_reader": "A creative newcomer — artist, designer, filmmaker, writer — who has heard about AI image generation but hasn't committed to any tool yet and wants to know where to actually start, not a comprehensive breakdown of every option",
+      "reader_outcome": "Feel confident picking one tool to try today based on what kind of work they do, without needing to test all of them first",
+      "structure_plan": [
+        "What these tools actually do (and what they don't)",
+        "The tools worth trying, matched to what you're making",
+        "Before you publish or monetize anything",
+        "How to take your first shot at a good result"
+      ],
+      "claims_to_verify": [
+        "Whether Midjourney still requires Discord to access or has a standalone web interface",
+        "Whether DALL-E 3 is accessible via ChatGPT free tier or requires a paid plan",
+        "Whether Adobe Firefly outputs are commercially safe for all users or only for paid/enterprise plan holders",
+        "Whether Stable Diffusion (via platforms like DreamStudio or Automatic1111) is still the main open-source option for local/self-hosted generation",
+        "Whether Canva has integrated AI image generation (likely via Stable Diffusion or similar) and what its commercial use terms say",
+        "Whether Ideogram, Leonardo.ai, or other mid-tier tools have free tiers and what their general commercial licensing stance is",
+        "General capability differences: photorealism vs. illustration vs. concept art across the major tools",
+        "Which tools allow prompt-based editing or inpainting at a beginner-friendly level",
+        "Whether any of the listed tools have announced deprecation or major access changes recently"
+      ],
+      "research_plan": "Prioritize official documentation and pricing/terms pages for each tool over third-party roundups, since licensing terms especially need to be accurate. For capability comparisons, recent hands-on reviews from reputable tech or design publications (e.g. The Verge, Creative Bloq, Ars Technica) are acceptable but should be cross-referenced. Avoid over-relying on any single aggregator list. Flag any sourced claim where the publication date is more than six months old, since this space changes quickly. Do not restate credit/quota figures in units not used by the official source."
+    }
   }
 ]
