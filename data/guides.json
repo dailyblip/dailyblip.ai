@@ -2181,7 +2181,7 @@
   {
     "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top AI content creator tools for 2026",
       "article_type": "Top tools list",
@@ -2193,7 +2193,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T03:39:08.288Z",
-    "updated_at": "2026-07-18T03:39:43.336Z",
+    "updated_at": "2026-07-18T03:41:25.635Z",
     "brief": {
       "target_reader": "Someone who makes things — videos, music, writing, images, or some mix — and keeps hearing about AI tools but hasn't committed to any yet. They want to know which ones are actually worth their time in 2026, not a list of every tool that exists.",
       "reader_outcome": "Walk away knowing 4-5 AI tools genuinely useful for content creation, which type of creator each one suits best, and enough to pick one and try it today.",
@@ -2213,6 +2213,187 @@
         "Any notable restrictions on who can use the tool (region locks, age requirements, professional-only access)"
       ],
       "research_plan": "Prioritize official tool documentation and pricing/terms pages for capability and licensing claims — do not rely on third-party roundups for commercial rights details since those go stale fast and readers may make real business decisions off them. For availability and deprecation status, cross-check official blogs or changelogs against recent coverage (last 3 months). For general capability descriptions, recent hands-on reviews from credible tech outlets (The Verge, Ars Technica, creator-focused publications) are fine to supplement official docs. Flag any tool where the free-tier commercial rights are ambiguous or where sources conflict."
-    }
+    },
+    "sources": [
+      {
+        "title": "ChatGPT Release Notes",
+        "publisher": "OpenAI Help Center (official)",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "ChatGPT is actively maintained and shipping new model versions as of July 2026 (GPT-5.5 Instant, GPT-5.5 Thinking, GPT-5.4 Pro currently active in ChatGPT)",
+          "Older GPT model snapshots (GPT-5.2, GPT-5.1) have already been retired from ChatGPT; O3 and GPT-4.5 are also being retired (O3 on Aug 26, 2026; GPT-4.5 on Jun 26, 2026)",
+          "Canvas feature is being sunset for GPT-5.5 Instant and Thinking — writing/coding now flows through inline blocks; paid users can use canvas temporarily through legacy models",
+          "ChatGPT does require account creation (free, no credit card) to use; Advanced Voice mode is paid-only",
+          "ChatGPT free tier is ad-supported and excludes Advanced Voice and deep research features",
+          "ChatGPT now has dedicated parental controls for family accounts (2026 update)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "OpenAI API Deprecations",
+        "publisher": "OpenAI Developers (official)",
+        "url": "https://developers.openai.com/api/docs/deprecations",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "OpenAI Assistants API is officially deprecated and will be removed August 26, 2026 — this is a structural API break, not a simple model swap",
+          "DALL·E older model snapshots were deprecated from the API (notified Nov 2025, removed May 2026); current image generation in ChatGPT uses newer GPT Image models, though older GPT Image model snapshots are also being removed Dec 1, 2026",
+          "OpenAI Agent Builder and Evals platform (part of AgentKit) were deprecated June 3, 2026 and leave the platform November 30, 2026 — ChatKit is NOT deprecated",
+          "The Sora 2 video generation API model aliases and snapshots were notified of deprecation March 24, 2026 with removal Sept 24, 2026 — Sora the consumer product remains available but writer should not conflate product availability with API endpoint stability",
+          "OpenAI is actively maintaining and shipping ChatGPT as a product; model deprecations are at the model-snapshot level, not the product level"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "AI Model Deprecation Tracker 2026: OpenAI, Anthropic, Google Sunset Dates",
+        "publisher": "Presenc AI (independent tracker, cross-referenced against official docs)",
+        "url": "https://presenc.ai/research/ai-model-deprecation-tracker-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "GPT-4o was retired from all ChatGPT plans April 3, 2026 (deprecated Feb 13, 2026); replaced by GPT-5.3 Instant and GPT-5.4",
+          "Claude 3.7 Sonnet shut down May 11, 2026; Claude 3.5 Haiku shuts down July 5, 2026; Claude 3 Haiku shuts down August 23, 2026",
+          "Claude (Anthropic) remains actively maintained — these are older model-version retirements, not product deprecation; current active models include Claude Opus 4.7 and Sonnet 4.6+",
+          "Model lifecycles have compressed to 6–12 months vs the prior 18–24 month support windows",
+          "Google Gemini 3 Pro Preview was deprecated March 9, 2026; replaced by Gemini 3.1 Pro (released Feb 19, 2026) — Gemini as a product is actively maintained"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "ElevenLabs Commercial Rights & Voice Output Ownership 2026",
+        "publisher": "Terms.Law (attorney analysis by Sergei Tokmakov, CA Bar #279869)",
+        "url": "https://terms.law/ai-output-rights/elevenlabs/",
+        "source_type": "legal",
+        "is_primary": true,
+        "claims_supported": [
+          "ElevenLabs free plan users CANNOT use outputs commercially and must include attribution ('elevenlabs.io' or '11.ai') — commercial rights require paid plans (Starter $5/mo and above)",
+          "Paid ElevenLabs users retain commercial rights to generated audio perpetually, even after canceling",
+          "ElevenLabs free tier gives 10,000 characters/month (~10 minutes of audio); generation is capped at 2,500 characters per request on the free tier",
+          "ElevenLabs requires account creation; voice cloning is gated behind paid plans",
+          "ElevenLabs is actively maintained and not deprecated — it supports 29 languages with emotional inflection as of 2026"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Free AI Tools 2026: Every Pro Tier You Can Test Free",
+        "publisher": "FelloAI (independent review, verified against vendor pages May–July 2026)",
+        "url": "https://felloai.com/ai-free-trials/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Runway's free plan gives a ONE-TIME deposit of 125 credits on signup with NO daily refresh — roughly 5 seconds of Gen-4.5 video or a few still images at 720p with Runway watermark; not a sustainable free path",
+          "ElevenLabs free tier: 10,000 credits/month (~10 minutes audio), attribution required, no commercial rights",
+          "Claude free tier at claude.ai provides approximately 30–100 messages per day on Claude Sonnet 5 with no credit card required",
+          "ChatGPT Plus, Claude Pro, and Midjourney have NO public free trial — only referral or retention offers exist",
+          "Google AI Pro (30 days) and Microsoft Copilot Pro (1 month) are the only flagship paid tiers with public free trials as of July 2026 — both require a credit card",
+          "Cursor removed its Pro trial earlier in 2026; the Hobby free tier (no credit card) gives ~2,000 tab completions/month"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Free AI Tools 2026: 50+ Best Free AI Tools | No Credit Card",
+        "publisher": "AI Tool Discovery (independent review, verified May 2026)",
+        "url": "https://www.aitooldiscovery.com/guides/free-ai-tools",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "ChatGPT free tier requires account creation (no credit card) and provides access to a rate-limited GPT-5.x mini model with basic web browsing and image generation included",
+          "Claude free tier provides access to Claude Sonnet (top-tier model) with generous usage limits and no credit card required — excels at long-form analysis",
+          "Google Gemini free tier is available (Google AI Studio is completely free in all available countries per Google Cloud docs); Gemini Flash API offers up to 1,500 requests/day free",
+          "Leonardo AI offers 150 free daily credits for AI image generation (resets daily); no credit card required",
+          "Canva Free provides unlimited design creation with access to limited AI tools including Magic Write, Background Remover (limited), and Text-to-Image; no credit card required",
+          "Perplexity AI free tier includes unlimited standard searches plus 5 Pro searches daily; no credit card required",
+          "Notion AI now provides only 20 free AI responses — new users need Business or Enterprise for full AI feature access (this is a meaningful free-tier restriction vs. prior years)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "24 Best Free AI Tools 2026: Actually Free",
+        "publisher": "ToolChase (independent review)",
+        "url": "https://toolchase.com/blog/free-ai-tools/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "ChatGPT, Claude, Gemini, Grammarly, and Canva all allow commercial use of content created on their free tiers",
+          "Suno (AI music) restricts free-tier output to non-commercial use only",
+          "Midjourney and Jasper do NOT offer free plans — they require paid subscriptions to access any features",
+          "Canva free tier includes thousands of templates, drag-and-drop editor, 5GB storage, and limited AI features; does NOT include full AI image generator or premium templates",
+          "All tools listed (ChatGPT, Claude, Gemini, Perplexity, Grammarly, Canva, Runway, Cursor, HuggingChat) have free tiers usable indefinitely without a credit card"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Free Tiers Heat Up the 2026 AI Creativity Tools Race",
+        "publisher": "Windows News AI (independent reporting)",
+        "url": "https://windowsnews.ai/article/free-tiers-heat-up-the-2026-ai-creativity-tools-race.428489",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe Firefly has committed to indemnify enterprise users against copyright claims — a differentiator vs. ChatGPT which permits commercial use but does not offer legal defense",
+          "Canva offers full commercial rights for Magic Studio outputs as long as the user owns the inputs",
+          "ChatGPT's terms permit commercial use of generated text and images on free and paid tiers, but OpenAI does not provide legal indemnification",
+          "Runway's Gen-4 video model can generate 10-second clips from text prompts; its motion brush lets editors animate static images",
+          "Free tiers from Adobe Firefly, Canva, ChatGPT, Claude, Runway, Suno, and others are all currently active and not deprecated as of mid-2026"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "10 Best AI Video Generators in 2026 (Free Tiers Compared)",
+        "publisher": "SocialCrawl (independent review, tested June 2026)",
+        "url": "https://www.socialcrawl.dev/blog/ai-video-generator",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Runway free plan: 125 one-time credits (no monthly refresh); free outputs at 720p with Runway watermark — credits do not renew",
+          "Sora free access (via ChatGPT free tier): outputs are watermarked and limited to 480p resolution",
+          "Pika free tier: hard-limited to 5-second clips",
+          "HeyGen free tier: limited to 3 videos per month",
+          "Kling AI offers daily login credits that reset on a schedule — genuinely usable for ongoing free exploration",
+          "Canva's AI video is powered by Google Veo 3 but free tier output caps are not fully disclosed on the feature page",
+          "No AI video tool at production quality offers completely unrestricted free generation at meaningful volume — all cap resolution, clip length, or monthly volume on free tiers"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "AI Free Tiers Compared 2026 (ChatGPT vs Gemini vs Claude)",
+        "publisher": "PEC Collective (independent review, verified April 2026)",
+        "url": "https://pecollective.com/blog/ai-free-tiers-2026/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "ChatGPT free tier: access to GPT-4o mini as default model, limited GPT-4o access, basic web browsing, and rate-limited DALL-E image generation — all via web interface, no credit card",
+          "Rate limits on ChatGPT and Claude reset approximately every 3–5 hours on free tiers",
+          "Grammarly free plan includes basic grammar/spelling checks; premium at ~$12/month adds style, clarity, tone, and plagiarism checking",
+          "Google Gemini Flash API: 1,500 requests/day free — enough for a small production app; Google AI Studio usage is completely free in all available countries",
+          "Jasper targets professional marketing teams and enterprises; no free plan — pricing starts at $39/month",
+          "Opus Clip (video repurposing): actively maintained, serves creators/marketers; free tier available but credit-limited",
+          "Copy.ai has evolved into a GTM AI platform trusted by 17M+ users; free tier available; works with multiple underlying models (OpenAI, Anthropic, Gemini, Perplexity)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      }
+    ],
+    "unverifiable_claims": [
+      "Specific claim that any named tool cuts 'production time by 60–70%' — this figure appeared in agency blog content without cited methodology and could not be independently verified",
+      "Specific age requirements (e.g., minimum age gates of 13 or 18) for individual tools like Runway, Opus Clip, HeyGen, Copy.ai, or Lumen5 — terms-of-service age requirements for these specific platforms were not directly verified in this research pass; writer should check each tool's current ToS before publishing",
+      "Region locks or country-level access restrictions for specific tools (e.g., Runway, HeyGen, ElevenLabs) — no verified, current, tool-by-tool region restriction data was found; writer should note that some tools (particularly Google AI Studio) specify 'all available countries' but should independently verify availability for specific target audience regions",
+      "Whether Jasper offers any form of free trial or trial period — multiple independent sources confirm no free plan; however, whether a time-limited paid trial exists could not be confirmed or denied with certainty from current sources",
+      "Lumen5 current pricing and free tier limits — referenced in multiple roundups as having a free tier but specific current credit limits and commercial use terms were not directly verified against Lumen5's own pricing page in this research pass",
+      "HeyGen current free tier specifics beyond '3 videos per month' cap — format, resolution, watermark policy, and commercial use terms on the free tier were not verified against HeyGen's official pricing page",
+      "Whether Notion AI still offers any free AI responses to new users in July 2026 — sources conflict (one says 20 free responses, another says new users now require paid plans); writer should verify against Notion's current pricing page before publishing",
+      "Specific claim that '82% or 85% or 87% of marketers/creators now use AI tools daily' — multiple conflicting statistics from different roundup articles citing different surveys (Artlist 2025, HubSpot 2025, various others); none could be traced to a primary, publicly accessible survey report in this research pass",
+      "Whether CapCut's free tier is accessible in all regions — CapCut has faced regulatory scrutiny and potential bans in some jurisdictions (e.g., US); current availability status by region was not verified"
+    ]
   }
 ]
