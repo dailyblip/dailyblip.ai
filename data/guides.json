@@ -1669,8 +1669,8 @@
   },
   {
     "id": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "10 Best AI Music Generators for Beginners: Features, Pricing, and Use Cases",
       "article_type": "Top tools list",
@@ -2176,7 +2176,9 @@
     "overridden_warnings": [
       "s2: The article attributes this claim to 'independent reporting' but the source (UsagePricing) describes this as an observation, and a separate source (Dynamoi) says 'new Udio content currently cannot be distributed externally' — meaning the walled-garden restriction may apply to all tiers, not just free. The framing implies paid users can still download, which contradicts the sourced claim that downloads were removed broadly post-October 2025.",
       "s3: Per the sourced Dynamoi article, the November 2025 WMG announcement was a 'partnership settling copyright litigation' — the article here frames it as a settlement of a 'major copyright lawsuit,' but the primary lawsuit against Suno was filed by a group of labels including Sony; WMG's relationship may have been a licensing deal rather than a direct lawsuit settlement. The framing is potentially inaccurate."
-    ]
+    ],
+    "published_at": "2026-07-18T03:47:56.436Z",
+    "published_url": "https://dailyblip.ai/guides/best-ai-music-generators-beginners.html"
   },
   {
     "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
