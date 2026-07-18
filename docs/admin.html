@@ -446,6 +446,21 @@ async function writeFile(path, obj, sha, message){
   return (await res.json()).content.sha;
 }
 
+// For uploaded photos specifically \u2014 content is already base64 image
+// data (from a canvas export), not JSON, so this skips the
+// JSON.stringify step writeFile does. Never needs a sha: uploads always
+// get a fresh, unique filename (see uploadGuidePhoto below), so this is
+// always creating a new file, never updating an existing one.
+async function writeBinaryFile(path, base64Content, message){
+  const res = await gh(path, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message, content: base64Content, branch: "main" }),
+  });
+  if (!res.ok) throw new Error(`GitHub ${res.status}: ${(await res.json()).message || ""}`);
+  return (await res.json()).content.sha;
+}
+
 /* --- auth flow --- */
 function needAuth(){ return !cfg.repo || !cfg.token; }
 function openAuth(){
@@ -1089,20 +1104,36 @@ function openGuide(id){
     </div>`).join("");
 
   const selectedCount = (g.images || []).filter(img => img.approved).length;
-  const imagesHtml = (g.images || []).length
-    ? `<div class="panel"><h3>Images (${selectedCount} of ${g.images.length} selected)</h3>
-        <p class="tip" style="margin:0 0 10px">Check the ones to include in the published guide \u2014 uncheck any you don't want.</p>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px">
-          ${g.images.map((img, i) => `
-            <div style="border:1px solid ${img.approved ? "var(--amber)" : "var(--line-2)"};border-radius:8px;padding:8px;transition:border-color .15s ease">
-              <img src="/guides/${esc(img.file)}" style="width:100%;border-radius:6px;display:block" alt="${esc(img.alt_text)}">
-              <label style="display:flex;align-items:center;gap:6px;margin-top:8px;cursor:pointer">
-                <input type="checkbox" class="gImgSelect" data-img-index="${i}" ${img.approved ? "checked" : ""} style="width:auto">
-                <span class="tip">${esc(img.role || img.placement)}</span>
-              </label>
-            </div>`).join("")}
+  const placementOptions = [`<option value="hero">Hero</option>`,
+    ...(g.article?.sections || []).map(s => `<option value="${esc(s.id)}">${esc(s.heading || s.id)}</option>`)].join("");
+  const imagesGridHtml = (g.images || []).length
+    ? `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px">
+        ${g.images.map((img, i) => `
+          <div style="border:1px solid ${img.approved ? "var(--amber)" : "var(--line-2)"};border-radius:8px;padding:8px;transition:border-color .15s ease">
+            <img src="/guides/${esc(img.file)}" style="width:100%;border-radius:6px;display:block" alt="${esc(img.alt_text)}">
+            <label style="display:flex;align-items:center;gap:6px;margin-top:8px;cursor:pointer">
+              <input type="checkbox" class="gImgSelect" data-img-index="${i}" ${img.approved ? "checked" : ""} style="width:auto">
+              <span class="tip">${esc(img.role || img.placement)}</span>
+            </label>
+          </div>`).join("")}
+      </div>` : `<p class="tip" style="margin-top:10px">No images yet.</p>`;
+  const imagesHtml = `<div class="panel"><h3>Images (${selectedCount} of ${(g.images||[]).length} selected)</h3>
+      <p class="tip" style="margin:0 0 10px">Check the ones to include in the published guide \u2014 uncheck any you don't want.</p>
+      ${imagesGridHtml}
+      <div style="border-top:1px solid var(--line);margin-top:16px;padding-top:14px">
+        <label>Upload your own photo (optional)</label>
+        <input type="file" id="gPhotoFile" accept="image/*" style="margin-top:6px">
+        <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+          <div><label>Placement</label><select id="gPhotoPlacement">${placementOptions}</select></div>
+          <div><label>Alt text (optional)</label><input id="gPhotoAlt" placeholder="Describe the photo"></div>
         </div>
-      </div>` : "";
+        <label style="margin-top:10px">Caption (optional)</label>
+        <input id="gPhotoCaption" placeholder="Shown under the image">
+        <div style="display:flex;justify-content:flex-end;margin-top:10px">
+          <button class="btn amber" id="gPhotoAdd">Add photo</button>
+        </div>
+      </div>
+    </div>`;
 
   const highSeverity = (g.fact_check?.issues || []).filter(i => i.severity === "high").length;
 
@@ -1141,6 +1172,7 @@ function openGuide(id){
     e.target.closest("div[style*='border']").style.borderColor = e.target.checked ? "var(--amber)" : "var(--line-2)";
   }));
   $("#gApprovePublish")?.addEventListener("click", () => saveGuideEdits(id, true));
+  $("#gPhotoAdd")?.addEventListener("click", () => uploadGuidePhoto(id));
   $("#gRecheck")?.addEventListener("click", () => rerunFactCheck(id));
   $("#gOverrideCheck")?.addEventListener("change", (e) => { $("#gPublishAnyway").disabled = !e.target.checked; });
   $("#gPublishAnyway")?.addEventListener("click", () => saveGuideEdits(id, true, true));
@@ -1205,6 +1237,79 @@ async function saveGuideEdits(id, thenPublish, override){
   } catch (e) {
     toast(e.message, "err", 6000);
     if (btn) btn.disabled = false;
+  }
+}
+
+// Resizes an uploaded photo down to a reasonable web size before it
+// ever reaches GitHub \u2014 caps the LONGEST side at 1600px and scales
+// the other side by the exact same factor, so the aspect ratio is
+// mathematically preserved (stretch/deformation isn't something that
+// can happen with uniform scaling like this, not just something this
+// avoids by convention). Returns a base64 JPEG payload ready for the
+// Contents API, with no data: URL prefix.
+function resizeImageForUpload(file) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    const url = URL.createObjectURL(file);
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const maxSide = 1600;
+      const scale = Math.min(1, maxSide / Math.max(img.naturalWidth, img.naturalHeight));
+      const w = Math.round(img.naturalWidth * scale);
+      const h = Math.round(img.naturalHeight * scale);
+      const canvas = document.createElement("canvas");
+      canvas.width = w; canvas.height = h;
+      canvas.getContext("2d").drawImage(img, 0, 0, w, h);
+      const dataUrl = canvas.toDataURL("image/jpeg", 0.85);
+      resolve(dataUrl.split(",")[1]); // strip the "data:image/jpeg;base64," prefix
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error("Could not load that file as an image.")); };
+    img.src = url;
+  });
+}
+
+async function uploadGuidePhoto(id) {
+  const g = guides.find(x => x.id === id);
+  const fileInput = $("#gPhotoFile");
+  const file = fileInput?.files?.[0];
+  if (!g || !file) { toast("Choose a photo first.", "err"); return; }
+
+  const btn = $("#gPhotoAdd");
+  btn.disabled = true;
+  try {
+    const base64 = await resizeImageForUpload(file);
+    const uploadNum = (g.images || []).filter(img => img.role === "upload").length + 1;
+    const filename = `${id}-upload-${uploadNum}.jpg`;
+    await writeBinaryFile(`docs/guides/${filename}`, base64, `admin: upload photo for guide ${id}`);
+
+    const newImage = {
+      id: `upload${uploadNum}`, file: filename,
+      placement: $("#gPhotoPlacement").value,
+      alt_text: $("#gPhotoAlt").value || "",
+      caption: $("#gPhotoCaption").value || "",
+      // Defaults to selected \u2014 uploading a specific photo is already
+      // an affirmative choice to include it, unlike the 6 AI candidates
+      // which default to a smaller pre-selected subset. Still fully
+      // toggleable via the same checkbox as everything else.
+      approved: true,
+      role: "upload", generated_at: new Date().toISOString(),
+    };
+    g.images = [...(g.images || []), newImage];
+
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      const updated = [...gs];
+      if (i === -1) updated.push(g); else updated[i] = g;
+      return updated;
+    }, `admin: add uploaded photo to guide ${id}`);
+
+    toast("Photo added.");
+    openGuide(id); // re-render so the new photo shows up in the grid immediately
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  } finally {
+    btn.disabled = false;
   }
 }
 
