@@ -83,6 +83,10 @@ WHO THESE ARE FOR: assume the reader is curious or just getting started, not a p
 
 VOICE: Direct, informed, slightly opinionated \u2014 a sharp human technology writer, not a content template. The reader is intelligent, internet-literate, and skeptical of AI-generated filler. Use contractions. Vary sentence and paragraph length; an occasional one-sentence paragraph is fine, but don't overuse them. Prioritize useful observations over motivational language. Don't sound like a corporate blog, an SEO agency, product documentation, or generic "friendly expert" writing.
 
+ENTERTAINMENT: dry, list-like prose is exactly what this needs to avoid, even when every sentence is accurate. Write with real personality, not just correct information: reach for a vivid, concrete comparison instead of an abstract description, let genuine enthusiasm or skepticism come through when it's earned, and don't be afraid of a little wit or an unexpected turn of phrase. A useful test while writing: would someone enjoy reading this out of genuine interest, or does it read like homework they have to get through? If a paragraph could be replaced by a bullet list without losing anything, that's a sign to rewrite it with more voice and connective reasoning, not just soften the wording. This applies most to the flowing prose \u2014 tool cards (see below) are meant to be scannable and factual, so keep those crisp rather than trying to make them entertaining too.
+
+DON'T DUPLICATE TOOL CARDS IN PROSE: if a tool is getting its own card (see the tools array below), don't ALSO restate its strengths and limitations as a bullet list in the surrounding paragraph text right above it \u2014 that's the exact "reads like a spec sheet twice" pattern to avoid. When a tool has a card, the prose around it should make a comparative judgment or set up the decision (why this one, over the others, for whom), not repeat what the card already says.
+
 NEVER USE these phrases or their close equivalents: "in today's rapidly evolving landscape," "whether you're a beginner or a seasoned professional," "the good news is," "here's where things get interesting," "that's the point," "it's worth noting," "at the end of the day," "game changer," "powerful tool," "unlock," "dive into," "delve," "seamlessly," "robust." If you notice yourself reaching for a similar stock phrase, replace it with something specific to this article instead.
 
 - Write for AI-assisted creators: artists, musicians, filmmakers, designers, writers, developers, independent creators \u2014 specifically ones who are new to this particular tool or topic, not veterans of it.
@@ -549,7 +553,30 @@ function validateArticle(article) {
   return problems;
 }
 
+// Mechanical backstop for "never use an em dash," which until now was
+// ONLY a prompt instruction with nothing actually enforcing it \u2014
+// fact-check checks for factual/sourcing problems, not style
+// violations, so a stray em dash in the draft had no stage that would
+// ever catch or fix it. Walks every string in the article (recursing
+// into sections, tool cards, arrays) and replaces em dashes with a
+// comma, which reads naturally for the vast majority of real em-dash
+// usage (asides, pivots, joined clauses) without needing to understand
+// each sentence's specific grammar.
+function stripEmDashesDeep(value) {
+  if (typeof value === "string") {
+    return value.replace(/\s*\u2014\s*/g, ", ").replace(/,(\s*,)+/g, ",").replace(/[ \t]{2,}/g, " ");
+  }
+  if (Array.isArray(value)) return value.map(stripEmDashesDeep);
+  if (value && typeof value === "object") {
+    const out = {};
+    for (const [k, v] of Object.entries(value)) out[k] = stripEmDashesDeep(v);
+    return out;
+  }
+  return value;
+}
+
 async function stageFormat(job) {
+  job.article = stripEmDashesDeep(job.article);
   const problems = validateArticle(job.article);
   if (problems.length) {
     job.warnings = [...(job.warnings || []), ...problems.map((p) => `format: ${p}`)];
