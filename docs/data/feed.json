@@ -1,6 +1,6 @@
 {
   "issue": 235,
-  "generated_at": "2026-07-17T23:12:50.102Z",
+  "generated_at": "2026-07-18T20:32:35.894Z",
   "brief": {
     "items": [
       {
@@ -78,8 +78,76 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -1,
+      "move": 5,
       "top": true
+    },
+    {
+      "id": "s_c60035e6bb3c677d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Moonshot AI's Kimi K3 reaches frontier performance, rattles markets",
+      "dek": "Chinese company Moonshot AI released an open-source model rivaling Claude and GPT, drawing competitive analysis and sparking concerns about geopolitical AI dynamics. Market reaction was immediate.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+      "ts": "2026-07-18T18:51:07.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 100,
+      "move": 56
+    },
+    {
+      "id": "s_01582b84f95050bc",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Government pilots AI for insurance pre-authorization decisions",
+      "dek": "Federal program tests AI systems for medical claims approval, raising questions about accuracy and fairness in healthcare access.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/",
+      "ts": "2026-07-18T11:18:25.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 75,
+      "move": 36
+    },
+    {
+      "id": "s_3ad838364711ce9b",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Apple accuses OpenAI of stealing trade secrets",
+      "dek": "Apple alleges OpenAI misappropriated proprietary information during the company's interview process, raising corporate espionage questions.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/design/apple-paints-a-damning-picture-of-openais-interview-process",
+      "ts": "2026-07-18T08:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 89,
+      "move": 56
+    },
+    {
+      "id": "s_4e6f73ed1f19a4ce",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Meta backtracks on Muse Image AI tool, raising credibility questions",
+      "dek": "Meta scrapped its image generation tool; critics argue the company's stated regrets don't align with how it deployed and managed the product.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/design/metas-regret-over-its-scrapped-ai-tool-is-like-a-burglar-apologising-for-the-mess",
+      "ts": "2026-07-18T07:02:51.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 79,
+      "move": 51
     },
     {
       "id": "s_2eed32c959cdf779",
@@ -95,8 +163,8 @@
       "ts": "2026-07-17T22:55:09.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 84,
-      "move": 44
+      "heat": 62,
+      "move": -26
     },
     {
       "id": "s_a49f55bafe0aeb0e",
@@ -112,8 +180,8 @@
       "ts": "2026-07-17T21:20:47.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 82,
-      "move": 44
+      "heat": 61,
+      "move": -26
     },
     {
       "id": "s_133497b699bf0fd6",
@@ -129,8 +197,8 @@
       "ts": "2026-07-17T20:09:27.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 99,
-      "move": 0
+      "heat": 78,
+      "move": -9
     },
     {
       "id": "s_b51b6c107383df8e",
@@ -146,8 +214,8 @@
       "ts": "2026-07-17T19:34:30.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 98,
-      "move": 58
+      "heat": 78,
+      "move": -9
     },
     {
       "id": "s_ac7be8d09d06872b",
@@ -163,8 +231,8 @@
       "ts": "2026-07-17T17:45:46.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 87,
-      "move": -4
+      "heat": 68,
+      "move": -18
     },
     {
       "id": "s_4d76675668887bf8",
@@ -180,8 +248,8 @@
       "ts": "2026-07-17T16:10:05.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 95,
-      "move": -1
+      "heat": 78,
+      "move": -9
     },
     {
       "id": "s_a0bbc2c6e6f2a453",
@@ -197,8 +265,8 @@
       "ts": "2026-07-17T15:57:54.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 87,
-      "move": -4
+      "heat": 70,
+      "move": -12
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -214,8 +282,8 @@
       "ts": "2026-07-17T15:21:17.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
-      "move": -2
+      "heat": 78,
+      "move": -8
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -231,8 +299,8 @@
       "ts": "2026-07-17T11:56:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 73,
-      "move": -3
+      "heat": 60,
+      "move": -19
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -248,8 +316,8 @@
       "ts": "2026-07-17T10:42:08.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 89,
-      "move": -1
+      "heat": 78,
+      "move": -8
     },
     {
       "id": "s_252ccc31ca52ec00",
@@ -266,7 +334,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -283,7 +351,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -300,7 +368,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -317,7 +385,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -334,7 +402,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": 3
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -351,7 +419,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -368,7 +436,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -385,7 +453,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -402,7 +470,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_79ed56faeda92346",
@@ -419,7 +487,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -436,7 +504,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -453,7 +521,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -470,7 +538,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -487,7 +555,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -504,7 +572,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -521,7 +589,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_3090d72b6869197e",
@@ -538,7 +606,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -555,7 +623,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -572,7 +640,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -589,7 +657,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -606,7 +674,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -624,7 +692,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -641,7 +709,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -658,7 +726,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -675,7 +743,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -692,7 +760,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": 2
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -710,7 +778,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -727,7 +795,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": 3
     },
     {
       "id": "s_d173222f3e599859",
@@ -745,7 +813,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -762,7 +830,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -779,7 +847,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -796,7 +864,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": 3
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -813,7 +881,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_18de27eea197aabe",
@@ -830,7 +898,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_84777b05d9b25937",
@@ -847,7 +915,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -864,7 +932,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -1
+      "move": 5
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -881,7 +949,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_a9eaf0c587df10e3",
@@ -898,7 +966,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_83d5a15310e3a6b6",
@@ -915,7 +983,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_b4c19111324a67ee",
@@ -932,7 +1000,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_110aa69c02571475",
@@ -949,7 +1017,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_a7a2286fcda29082",
@@ -966,7 +1034,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_569d5689452ac2df",
@@ -983,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": -1
     },
     {
       "id": "s_d71a059cc728fd04",
@@ -1000,7 +1068,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -4
     },
     {
       "id": "s_ee230258f27f8a0d",
@@ -1017,75 +1085,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -3
-    },
-    {
-      "id": "s_b7c7277aa894fd0b",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Ghost Font—an optical illusion font designed to confuse AI image readers",
-      "dek": "A typeface engineered with visual tricks intended to defeat AI OCR and vision models. Tests user effectiveness against AI text recognition.",
-      "src": "Creative Bloq AI",
-      "url": "https://www.creativebloq.com/design/fonts-typography/this-optical-illusion-font-was-created-to-baffle-ai-and-it-actually-works-for-now",
-      "ts": "2026-07-15T07:00:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -3
-    },
-    {
-      "id": "s_210f6726bf4a719a",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Inkling by Thinking Machines now available on Hugging Face",
-      "dek": "Inkling, the 1T-parameter multimodal open model, is now deployed with inference support via Transformers, vLLM, and llama.cpp for agentic coding and multi-token prediction tasks.",
-      "src": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/thinkingmachines-inkling",
-      "ts": "2026-07-15T00:00:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 70,
-      "move": -3
-    },
-    {
-      "id": "s_7218bca86f1b347e",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "OpenAI developing screenless AI speaker with physical movement",
-      "dek": "OpenAI's first hardware product is reportedly a mobile smart speaker with mechanical elements designed to function as a ChatGPT-powered home companion.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openais-first-hardware-device-is-reportedly-a-screenless-speaker-that-can-move/",
-      "ts": "2026-07-14T22:22:24.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -3
-    },
-    {
-      "id": "s_2175a7f109e222f7",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "OpenAI denies merit in Apple trade secret lawsuit",
-      "dek": "OpenAI responded to Apple's allegations that it poached employees to steal confidential information, stating the complaint lacks evidence.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/14/openai-pushes-back-on-apple-trade-secret-lawsuit/",
-      "ts": "2026-07-14T22:07:42.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 58,
-      "move": -3
+      "move": -4
     }
   ],
   "models": [
@@ -1153,7 +1153,7 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 24
+      "c": 23
     },
     {
       "n": "The Verge AI",
@@ -1161,22 +1161,22 @@
     },
     {
       "n": "Hugging Face Blog",
-      "c": 7
+      "c": 6
+    },
+    {
+      "n": "Ars Technica AI",
+      "c": 4
+    },
+    {
+      "n": "Creative Bloq AI",
+      "c": 4
     },
     {
       "n": "PetaPixel",
       "c": 4
     },
     {
-      "n": "Ars Technica AI",
-      "c": 3
-    },
-    {
       "n": "dailyblip",
-      "c": 3
-    },
-    {
-      "n": "Creative Bloq AI",
       "c": 3
     },
     {
@@ -1188,11 +1188,11 @@
     "#openai",
     "#google",
     "#apple",
-    "#hugging",
-    "#face",
     "#gemini",
     "#youtube",
-    "#anthropic"
+    "#anthropic",
+    "#hugging",
+    "#face"
   ],
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -1202,9 +1202,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 8,
-    "published_today": 10,
+    "scanned_last_run": 13,
+    "published_today": 6,
     "sources_live": 14,
-    "slopped_last_run": 5
+    "slopped_last_run": 9
   }
 }

@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Jul 2026 23:12:50 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jul 2026 20:32:35 GMT</lastBuildDate>
     <item>
       <title>Hugging Face details AI-driven autonomous intrusion into production infrastructure</title>
       <link>https://huggingface.co/blog/security-incident-july-2026</link>
@@ -13,6 +13,38 @@
       <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Moonshot AI's Kimi K3 reaches frontier performance, rattles markets</title>
+      <link>https://techcrunch.com/2026/07/18/kimi-threat-or-menace/</link>
+      <guid isPermaLink="false">s_c60035e6bb3c677d</guid>
+      <description>Chinese company Moonshot AI released an open-source model rivaling Claude and GPT, drawing competitive analysis and sparking concerns about geopolitical AI dynamics. Market reaction was immediate.</description>
+      <category>industry</category>
+      <pubDate>Sat, 18 Jul 2026 18:51:07 GMT</pubDate>
+    </item>
+    <item>
+      <title>Government pilots AI for insurance pre-authorization decisions</title>
+      <link>https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/</link>
+      <guid isPermaLink="false">s_01582b84f95050bc</guid>
+      <description>Federal program tests AI systems for medical claims approval, raising questions about accuracy and fairness in healthcare access.</description>
+      <category>industry</category>
+      <pubDate>Sat, 18 Jul 2026 11:18:25 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple accuses OpenAI of stealing trade secrets</title>
+      <link>https://www.creativebloq.com/design/apple-paints-a-damning-picture-of-openais-interview-process</link>
+      <guid isPermaLink="false">s_3ad838364711ce9b</guid>
+      <description>Apple alleges OpenAI misappropriated proprietary information during the company's interview process, raising corporate espionage questions.</description>
+      <category>rights</category>
+      <pubDate>Sat, 18 Jul 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Meta backtracks on Muse Image AI tool, raising credibility questions</title>
+      <link>https://www.creativebloq.com/design/metas-regret-over-its-scrapped-ai-tool-is-like-a-burglar-apologising-for-the-mess</link>
+      <guid isPermaLink="false">s_4e6f73ed1f19a4ce</guid>
+      <description>Meta scrapped its image generation tool; critics argue the company's stated regrets don't align with how it deployed and managed the product.</description>
+      <category>tools</category>
+      <pubDate>Sat, 18 Jul 2026 07:02:51 GMT</pubDate>
     </item>
     <item>
       <title>Vertu's $6,880 AI-agent foldable: performance review for executives</title>
@@ -133,38 +165,6 @@
       <description>Google rolled out custom digital avatars based on selfies and voice, plus multi-modal video generation from text prompts and reference images, with step-by-step editing in Vids.</description>
       <category>tools</category>
       <pubDate>Thu, 16 Jul 2026 18:32:54 GMT</pubDate>
-    </item>
-    <item>
-      <title>DJI faces backlash for AI avatar in TikTok product ad</title>
-      <link>https://petapixel.com/2026/07/16/dji-used-an-ai-generated-person-in-an-ad-angering-the-actual-humans-who-buy-products/</link>
-      <guid isPermaLink="false">s_e5756d56cbcffa7c</guid>
-      <description>Creator-focused company used AI-generated human in Mic Mini advertisement, sparking criticism over not hiring actual talent.</description>
-      <category>rights</category>
-      <pubDate>Thu, 16 Jul 2026 18:31:31 GMT</pubDate>
-    </item>
-    <item>
-      <title>Roblox launches AI game-builder in mobile app with text prompts</title>
-      <link>https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/</link>
-      <guid isPermaLink="false">s_e3176d1ee3b1cf6b</guid>
-      <description>Roblox's new Build feature generates basic playable games from single text prompts, no coding required, powered by open-source and proprietary models.</description>
-      <category>tools</category>
-      <pubDate>Thu, 16 Jul 2026 18:22:06 GMT</pubDate>
-    </item>
-    <item>
-      <title>NVIDIA Nemotron 3 Embed ranks #1 on RTEB benchmark for agentic retrieval</title>
-      <link>https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb</link>
-      <guid isPermaLink="false">s_ff8c14b3821e60f1</guid>
-      <description>NVIDIA's embedding model tops retrieval evaluation, advancing RAG infrastructure for agentic workflows.</description>
-      <category>tools</category>
-      <pubDate>Thu, 16 Jul 2026 16:01:21 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google AI Mode gains app integrations with Instacart, Canva, YouTube</title>
-      <link>https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/</link>
-      <guid isPermaLink="false">s_4ccf42e2190c31a2</guid>
-      <description>Google's conversational search now lets users link and execute tasks across select apps, matching ChatGPT and Claude's agentic capabilities.</description>
-      <category>tools</category>
-      <pubDate>Thu, 16 Jul 2026 16:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
