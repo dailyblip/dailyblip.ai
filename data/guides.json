@@ -1880,8 +1880,8 @@
   },
   {
     "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
-    "status": "in_progress",
-    "stage": "Re-checking",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "Top AI tools for audiobook narration",
       "article_type": "Top tools list",
@@ -2243,6 +2243,12 @@
         "purpose": "Make the platform rules concrete and scannable: walk the reader through the actual decision points (Is it AI-generated? Does ACX accept it? What are the alternatives?) so they understand the compliance landscape before they upload anything",
         "aspect_ratio": "9:16"
       }
+    ],
+    "approved_at": "2026-07-18T00:03:48.142Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s2: The Spotify distribution partnership is sourced only from ElevenLabs' own product page with no independent corroboration, yet the article presents it as a factual partnership rather than an unverified company claim — the caveat buried later in the same paragraph is insufficient given how the claim is initially framed.",
+      "s3: This future/speculative date (August 2, 2026) is presented as a confirmed fact, but the article's review date is July 17, 2026, meaning the rules had not yet come into force at time of publication — the phrasing implies they are already in effect."
     ]
   },
   {
