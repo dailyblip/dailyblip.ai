@@ -1263,8 +1263,8 @@
   },
   {
     "id": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Top 3 AI services for generating video in 2026",
       "article_type": "Top tools list",
@@ -1276,7 +1276,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T01:48:13.054Z",
-    "updated_at": "2026-07-18T01:53:56.825Z",
+    "updated_at": "2026-07-18T01:53:58.241Z",
     "brief": {
       "target_reader": "A creator (filmmaker, YouTuber, marketer, or hobbyist) who has heard about AI video generation but hasn't committed to a tool yet and wants to know where to start without wading through every option on the market",
       "reader_outcome": "Feel confident enough to pick one tool and generate their first AI video clip today",
