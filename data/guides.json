@@ -2288,7 +2288,7 @@
   {
     "id": "34e44941-18c0-4c92-af8e-12ac6c773455",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "What are the best tools for generating images?",
       "article_type": "Top tools list",
@@ -2300,7 +2300,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:30:10.931Z",
-    "updated_at": "2026-07-18T00:35:52.711Z",
+    "updated_at": "2026-07-18T00:37:43.268Z",
     "brief": {
       "target_reader": "A creative newcomer — artist, designer, filmmaker, writer — who has heard about AI image generation but hasn't committed to any tool yet and wants to know where to actually start, not a comprehensive breakdown of every option",
       "reader_outcome": "Feel confident picking one tool to try today based on what kind of work they do, without needing to test all of them first",
@@ -2605,6 +2605,50 @@
     "warnings": [
       "s2: The source (offlinecreator.com) is a single independent review, not official documentation, and the specific model name \"GPT Image 1.5\" is unverified; the article itself flags skepticism but still presents this as a named model, which could mislead readers.",
       "s2: No cited source — including OpenAI's own documentation — substantiates a specific \"disclosure requirement\" for free-tier ChatGPT image commercial use; this claim is unsupported and potentially invented."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "34e44941-18c0-4c92-af8e-12ac6c773455-img1.jpg",
+        "prompt": "Editorial hero image, 16:9 landscape. A clean horizontal band divided into four equal vertical columns, each depicting a distinctly different visual style to represent different AI image generator strengths. Column 1: crisp photorealistic architectural interior, warm neutral tones. Column 2: cinematic stylized landscape, teal and gold film-still mood. Column 3: bold flat geometric graphic pattern, saturated primary colors. Column 4: textured painterly fantasy scene, muted earthy ochre and indigo. Thin neutral light-gray dividers between columns. Each column has a small, minimal sans-serif label at its bottom interior: 'PHOTO', 'CINEMATIC', 'GRAPHIC', 'PAINTERLY' — labels sit at least 40px from the bottom edge. The entire composition is framed by a generous off-white margin of at least 60px on all sides so nothing touches or bleeds past the frame border. Modern editorial illustration style, high-contrast, clean, designed. No logos, no UI chrome, no people staring at screens, no glowing AI imagery.",
+        "placement": "hero",
+        "alt_text": "Four side-by-side panels illustrating the distinct visual styles of different AI image generators: photorealistic, cinematic, graphic, and painterly.",
+        "caption": "Every major AI image tool produces something different — the right choice depends on what you're actually making.",
+        "approved": false,
+        "generated_at": "2026-07-18T00:37:08.085Z",
+        "role": "hero",
+        "concept": "Four distinct AI image tool identities arranged as a visual lineup, each with a defining stylistic character, so readers can immediately sense they are genuinely different.",
+        "purpose": "Signal that this article helps readers choose between real, differentiated tools — not that all AI image generators are interchangeable.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "34e44941-18c0-4c92-af8e-12ac6c773455-img2.jpg",
+        "prompt": "Square editorial infographic, 1:1. A clean 2×2 decision-matrix grid on a light warm-neutral background (#F5F5F2). Four quadrants separated by thin dark cross-divider lines meeting at the center. Each quadrant has a soft accent background fill: top-left sage green, top-right warm amber, bottom-left dusty blue, bottom-right terracotta. Inside each quadrant, a simple flat icon and a short bold sans-serif label: top-left shows a compass icon with label 'Try it free now'; top-right shows a layout-grid icon with label 'Social & content'; bottom-left shows a paintbrush icon with label 'Concept & fantasy art'; bottom-right shows a chat-bubble-plus-image icon with label 'Chat-native workflow'. Each quadrant also has a one-word descriptor below the label in smaller light type. All icons and text are centered within their quadrant with at least 32px clearance from the cross-dividers and at least 48px from the outer frame edge — nothing touches or bleeds past the border. Modern flat editorial illustration style, clean, high-contrast, designed. No logos, no UI chrome, no photography, no decorative flourishes.",
+        "placement": "s2",
+        "alt_text": "A 2×2 decision matrix matching four creative use-cases — try it free, social content, concept art, chat-native workflow — to different starting points.",
+        "caption": "Which creative profile are you? The right starting tool depends less on the technology and more on how you work.",
+        "approved": false,
+        "generated_at": "2026-07-18T00:37:22.814Z",
+        "role": "comparison",
+        "concept": "A visual decision matrix matching four creative use-cases to their recommended starting tool, making the article's core recommendation scannable at a glance.",
+        "purpose": "Help readers self-identify which tool fits their situation without reading every paragraph — externalizing the article's matching logic from s2.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "34e44941-18c0-4c92-af8e-12ac6c773455-img3.jpg",
+        "prompt": "Landscape editorial workflow diagram, 16:9. Three sequential horizontal panels on a clean off-white background, connected by two bold dark-charcoal right-pointing arrows, showing the evolution of a text prompt into a detailed image. Panel 1 (leftmost): labeled 'SUBJECT' in small caps above it — a deliberately vague, desaturated gray-blue sketchy silhouette of a person on a city street, rough and undefined. Below the panel, a small text-label bar reads: 'a woman walking in a city'. Panel 2 (center): labeled 'STYLE + MOOD' — the same street scene now with warm amber streetlight and teal shadow, more atmosphere, medium detail. Below it, text bar reads: 'golden-hour lighting, cinematic'. Panel 3 (rightmost): labeled 'CONTEXT + DETAIL' — the scene rendered with rich cinematic quality, deep contrast, specific architectural background, motion blur. Below it, text bar reads: '35mm, overcast dusk, film grain'. All three panels are equal width. All labels, text bars, and panel edges sit at least 56px from the outer frame boundary on all sides — the leftmost panel's label and the rightmost panel's edge both have explicit inward margin so nothing is cropped. Arrows between panels are bold, clean, and centered vertically. Editorial illustration style, flat-to-painterly progression, annotation-diagram aesthetic. No UI chrome, no fabricated screenshots, no photography mixed in.",
+        "placement": "s4",
+        "alt_text": "A three-stage workflow diagram showing how a vague prompt ('a woman walking in a city') gains specificity through style, mood, and context layers to produce a detailed cinematic result.",
+        "caption": "Specificity is the lever: adding style, mood, and context to a vague subject is the single biggest improvement most beginners can make.",
+        "approved": false,
+        "generated_at": "2026-07-18T00:37:43.268Z",
+        "role": "workflow",
+        "concept": "A three-stage prompt-building workflow showing how a vague subject grows into a specific, output-ready prompt — illustrating the article's prompt structure advice from s4.",
+        "purpose": "Make the article's prompt-improvement method tangible and memorable by showing the transformation from vague to specific as a left-to-right progression.",
+        "aspect_ratio": "16:9"
+      }
     ]
   }
 ]
