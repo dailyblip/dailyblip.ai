@@ -2287,8 +2287,8 @@
   },
   {
     "id": "34e44941-18c0-4c92-af8e-12ac6c773455",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "What are the best tools for generating images?",
       "article_type": "Top tools list",
@@ -2300,7 +2300,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:30:10.931Z",
-    "updated_at": "2026-07-18T00:37:43.268Z",
+    "updated_at": "2026-07-18T00:37:44.920Z",
     "brief": {
       "target_reader": "A creative newcomer — artist, designer, filmmaker, writer — who has heard about AI image generation but hasn't committed to any tool yet and wants to know where to actually start, not a comprehensive breakdown of every option",
       "reader_outcome": "Feel confident picking one tool to try today based on what kind of work they do, without needing to test all of them first",
