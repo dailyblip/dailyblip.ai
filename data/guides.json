@@ -2287,8 +2287,8 @@
   },
   {
     "id": "34e44941-18c0-4c92-af8e-12ac6c773455",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "What are the best tools for generating images?",
       "article_type": "Top tools list",
@@ -2655,6 +2655,8 @@
     "overridden_warnings": [
       "s2: The source (offlinecreator.com) is a single independent review, not official documentation, and the specific model name \"GPT Image 1.5\" is unverified; the article itself flags skepticism but still presents this as a named model, which could mislead readers.",
       "s2: No cited source — including OpenAI's own documentation — substantiates a specific \"disclosure requirement\" for free-tier ChatGPT image commercial use; this claim is unsupported and potentially invented."
-    ]
+    ],
+    "published_at": "2026-07-18T00:44:20.381Z",
+    "published_url": "https://dailyblip.ai/guides/best-ai-image-generation-tools-for-beginners.html"
   }
 ]
