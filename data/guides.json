@@ -3073,5 +3073,22 @@
     ],
     "published_at": "2026-07-18T04:51:14.819Z",
     "published_url": "https://dailyblip.ai/guides/why-ai-content-looks-like-ai-how-to-fix-it.html"
+  },
+  {
+    "id": "da373217-6d0c-45bf-b802-fd66a19d540e",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "OpenAI's New Codex Keyboard explained - what does it do and how can you use it?",
+      "article_type": "Practical guide",
+      "target_audience": "",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-18T05:00:05.750Z",
+    "updated_at": "2026-07-18T05:00:05.750Z"
   }
 ]
