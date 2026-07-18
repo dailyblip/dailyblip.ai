@@ -852,7 +852,7 @@
   {
     "id": "8c517454-bc7c-4b27-8282-bfb822638a78",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "Top 3 AI image generators for 2026",
       "article_type": "Top tools list",
@@ -864,7 +864,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:49:56.490Z",
-    "updated_at": "2026-07-18T00:52:39.646Z",
+    "updated_at": "2026-07-18T00:54:07.590Z",
     "brief": {
       "target_reader": "Someone who has heard about AI image generators but hasn't committed to one yet — maybe they've tried a free tool briefly or seen others' results, but they don't know which tool fits their actual use case or how to choose",
       "reader_outcome": "Know which one of three tools to try first based on what they're actually making, and feel confident enough to open an account and generate something today",
@@ -1065,13 +1065,13 @@
         {
           "id": "s1",
           "heading": "What you're making should decide which tool you pick",
-          "body_markdown": "Most roundups treat these tools as interchangeable with slightly different quality scores. They're not.\n\n**Midjourney** is the one to use when the image itself is the finished product — editorial illustration, concept art, visual branding, anything where aesthetic quality is the whole point. Its output has a visual coherence that's still hard to match. The tradeoff: it's paid-only (no free tier on the main platform), and while it now has a proper web app at midjourney.com so you don't need Discord anymore, it's still its own learning curve.\n\n**Adobe Firefly** makes the most sense if you're working inside Adobe's ecosystem — Photoshop, Illustrator, Premiere — or if you want a free way to experiment before committing to anything. Firefly has a free tier with daily generations, and its models are trained on licensed and public domain content, which matters if you're worried about IP risk. It also pulls in third-party models (including Flux and OpenAI's generation) inside the same interface, so it's more of a hub than a single model.\n\n**OpenAI's image generation via ChatGPT** (previously DALL-E 3, now running on GPT Image 2 after the May 2026 transition) is the lowest-friction option. If you already use ChatGPT, the image tool is already there. Free-tier accounts get a small daily allowance; paid plans get more. It handles text-in-images better than most, and its conversational interface makes iteration fast. It won't match Midjourney on raw aesthetics, but it's often good enough — and you're already logged in.",
+          "body_markdown": "Most roundups treat these tools as interchangeable with slightly different quality scores. They're not.\n\n**Midjourney** is the one to use when the image itself is the finished product — editorial illustration, concept art, visual branding, anything where aesthetic quality is the whole point. Its output has a visual coherence that's still hard to match. The tradeoff: it's paid-only (no free tier on the main platform), and while it now has a proper web app at midjourney.com so you don't need Discord anymore, the prompting system and parameter controls still take time to learn.\n\n**Adobe Firefly** makes the most sense if you're working inside Adobe's ecosystem — Photoshop, Illustrator, Premiere — or if you want a free way to experiment before committing to anything. Firefly has a free tier with daily generations, and its models are trained on licensed and public domain content, which matters if you're worried about IP risk. It also pulls in third-party models (including Flux, Google Imagen, and OpenAI's generation) inside the same interface, so it's more of a hub than a single model.\n\n**OpenAI's image generation via ChatGPT** is the lowest-friction option. If you already use ChatGPT, the image tool is already there — it runs natively through GPT-4o as of late 2025. Free-tier accounts get a small daily allowance; paid plans get more. It handles text-in-images better than most, and its conversational interface makes iteration fast. It won't match Midjourney on raw aesthetics, but it's often good enough — and you're already logged in.",
           "tools": []
         },
         {
           "id": "s2",
           "heading": "The three generators, and what each one actually does well",
-          "body_markdown": "A note before the cards: dailyblip didn't run independent benchmark testing here. The capability observations below are drawn from independent reviews published in 2025–2026 and each tool's official documentation, noted in the methodology section.",
+          "body_markdown": "The capability observations below are drawn from independent reviews published in 2025–2026 and each tool's official documentation, noted in the methodology section at the bottom of this article.\n\n**Tools compared:**\n\n**Midjourney** — The go-to for high-quality, aesthetically distinctive images. Subscription-only, but now accessible via a full web app — no Discord required. All paid plans include commercial usage rights, with one exception: companies earning over $1M annually need a Pro or Mega plan to use outputs commercially.\n\nStrengths: Consistently strong aesthetic output — editorial, conceptual, and stylized work all land well. Web app at midjourney.com works without Discord, as of late 2024. All paid tiers include commercial usage rights for most creators.\n\nLimitations: No free tier on the main platform — paid subscription required to generate anything. Midjourney's visual style is distinctive, which is a constraint if you need something more neutral or documentary.\n\n---\n\n**Adobe Firefly** — A free-to-start image generator that lives both as a standalone web and mobile app and inside Creative Cloud. Trained on licensed and public domain content. Also serves as a hub for third-party models including Flux, Google Imagen, and OpenAI's generation.\n\nStrengths: Free daily generations with no credit card required to start. Trained on licensed content — Adobe describes it as commercially safe for production use, though verify current terms at adobe.com before monetizing. Deep integration with Photoshop, Illustrator, and Premiere for existing Adobe users.\n\nLimitations: Adobe's own Firefly model tends toward clean, polished output — not the best fit for raw or gritty aesthetics. Commercial use terms between free and paid tiers aren't fully spelled out in the product page — check Adobe's current terms before using free-tier outputs commercially.\n\n---\n\n**OpenAI Image Generation (via ChatGPT)** — Built into ChatGPT and running natively through GPT-4o as of late 2025. The easiest entry point if you're already using ChatGPT. According to aitoolradar.io, commercial usage rights apply to paid ChatGPT tiers; free-tier image outputs are not licensed for commercial use. Free-tier users get a limited daily allowance; paid plans offer more.\n\nStrengths: No separate account needed if you use ChatGPT already. Handles text inside images better than most generators. Conversational prompting makes iteration quick — you can refine in plain language.\n\nLimitations: Free-tier outputs are not licensed for commercial use (per aitoolradar.io — confirm against OpenAI's current usage policies before publishing). Aesthetic output is competent but less distinctive than Midjourney — better for functional images than artistic ones.",
           "tools": [
             {
               "name": "Midjourney",
@@ -1120,20 +1120,88 @@
         {
           "id": "s3",
           "heading": "Before you publish or sell anything made with these tools",
-          "body_markdown": "Commercial rights vary by tool and by plan tier, and the details change often enough that linking to the tool's own terms is more reliable than any summary here.\n\n**Midjourney:** All paid plans include commercial usage rights for most creators. If your business earns over $1 million annually, you need a Pro or Mega plan specifically. Confirm at [midjourney.com/legal](https://www.midjourney.com/legal).\n\n**Adobe Firefly:** Adobe describes its own Firefly models as trained on licensed and public domain content, and positions them as commercially safe for production use. However, the distinction between free-tier and paid-tier commercial rights wasn't fully explicit in Adobe's product page at the time this was written. Check [Adobe's terms](https://www.adobe.com/legal/terms.html) before using free-tier outputs in client work or products for sale.\n\n**OpenAI (ChatGPT image generation):** Commercial usage rights are confirmed for paid ChatGPT tiers. Whether free-tier image outputs carry those same rights wasn't directly confirmed against OpenAI's current Terms of Use during research for this guide. Review [OpenAI's usage policies](https://openai.com/policies/usage-policies) before publishing or monetizing free-tier outputs.\n\nOne more thing worth knowing: Firefly now integrates Flux models from Black Forest Labs. The Apache 2.0 licensed Flux variants (like Flux Schnell) allow free commercial use, but Flux Dev carries a non-commercial license. If a platform tells you it's running Flux, ask which variant — or check the platform's own terms rather than assuming.",
+          "body_markdown": "Commercial rights vary by tool and by plan tier, and the details change often enough that linking to the tool's own terms is more reliable than any summary here.\n\n**Midjourney:** All paid plans include commercial usage rights for most creators. If your business earns over $1 million annually, you need a Pro or Mega plan specifically. Confirm at [midjourney.com/legal](https://www.midjourney.com/legal).\n\n**Adobe Firefly:** Adobe describes its own Firefly models as trained on licensed and public domain content, and positions them as commercially safe for production use. However, the distinction between free-tier and paid-tier commercial rights wasn't fully explicit in Adobe's product page at the time this was written. Check [Adobe's terms](https://www.adobe.com/legal/terms.html) before using free-tier outputs in client work or products for sale.\n\n**OpenAI (ChatGPT image generation):** According to aitoolradar.io, commercial usage rights apply to paid ChatGPT tiers; free-tier image outputs are not licensed for commercial use. Review [OpenAI's usage policies](https://openai.com/policies/usage-policies) to confirm current terms before publishing or monetizing any outputs.\n\nOne more thing worth knowing: Firefly integrates Flux models from Black Forest Labs. The Flux model naming and licensing tiers have shifted over time — the Apache 2.0 licensed variants allow free commercial use, while others carry non-commercial licenses. If a platform tells you it's running Flux, check which variant and what license applies, using the platform's own terms rather than assuming.",
           "tools": []
         }
       ],
       "key_takeaways": [
         "Midjourney produces the most consistently strong aesthetic results but requires a paid subscription — no free tier exists on the main platform.",
         "Adobe Firefly is the best starting point if you want free daily generations or already work in Creative Cloud; verify commercial rights before monetizing free-tier outputs.",
-        "OpenAI's image generation is already inside ChatGPT — use it if you want the lowest-friction first try, especially for images with text.",
+        "OpenAI's image generation is already inside ChatGPT — use it if you want the lowest-friction first try, especially for images with text. Note that free-tier outputs are not licensed for commercial use according to aitoolradar.io.",
         "For all three tools, check the current terms of service before using outputs commercially — rights vary by plan and change more often than any guide can track.",
-        "Flux (Black Forest Labs) is a genuine top-tier model in 2026 and appears inside Adobe Firefly — worth knowing, but better suited to technical users or API workflows than total beginners."
+        "Flux (Black Forest Labs) appears inside Adobe Firefly alongside Google Imagen and OpenAI's generation, making Firefly a multi-model hub. Flux's licensing varies by variant, so check which one a platform is running before using outputs commercially."
       ],
       "conclusion": "Start with whichever tool matches your actual workflow today. If you're already in ChatGPT, generate something there first. If you're in Adobe's ecosystem, Firefly is a natural fit and costs nothing to try. If you've seen Midjourney work you admire and want that quality, it's worth the subscription — just know it's a commitment from day one.",
       "methodology_disclosure": "This guide was researched using official documentation from Midjourney, Adobe, and Adobe's press releases; independent reviews from pxlpeak.com, aitoolradar.io, DataCamp, toolradar.com, and tooldirectory.ai published in 2025–2026; and OpenAI's publicly available product information. dailyblip did not conduct independent benchmark testing or generate images across these tools for comparison. Capability and aesthetic observations reflect editorial judgments from the independent reviews cited, not firsthand testing. Pricing, plan availability, and commercial rights terms were drawn from official sources where available but should be verified directly with each platform before making purchasing or commercial decisions, as these details change frequently.",
       "last_reviewed_date": "July 18, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "running natively through GPT-4o as of late 2025",
+          "issue": "The body text of s2 says image generation runs through GPT-4o, but the tool card for OpenAI in the same section says it runs on GPT Image 2 as of mid-2026 after DALL-E 3 was deprecated in May 2026 — these two claims directly contradict each other within the same section.",
+          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
+        },
+        {
+          "severity": "high",
+          "section_id": "s1",
+          "original_text": "it runs natively through GPT-4o as of late 2025",
+          "issue": "The intro section states OpenAI image generation runs through GPT-4o, but sources confirm DALL-E 3 was deprecated May 2026 and replaced by GPT Image 2 (gpt-image-2), making this description outdated and technically inaccurate.",
+          "supporting_source_url": "https://www.datacamp.com/blog/best-free-ai-image-generators"
+        },
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "According to aitoolradar.io, commercial usage rights apply to paid ChatGPT tiers; free-tier image outputs are not licensed for commercial use",
+          "issue": "The article attributes the commercial-use restriction on free-tier outputs solely to aitoolradar.io, an independent third-party site, rather than to OpenAI's own usage policies — this is an unreliable sourcing choice for a legal/commercial-rights claim that readers may act on.",
+          "supporting_source_url": "https://openai.com/policies/usage-policies"
+        },
+        {
+          "severity": "high",
+          "section_id": "key_takeaways",
+          "original_text": "free-tier outputs are not licensed for commercial use according to aitoolradar.io",
+          "issue": "Same problem as s2: a consequential commercial-rights claim is attributed to a third-party review site rather than OpenAI's own policies, which is inappropriate for a statement readers may rely on before publishing work commercially.",
+          "supporting_source_url": "https://openai.com/policies/usage-policies"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Also serves as a hub for third-party models including Flux, Google Imagen, and OpenAI's generation",
+          "issue": "The body text lists 'Google Imagen' generically, but the Adobe source confirms integration of Google Imagen 3 & 4 specifically — the vague attribution is inconsistent with the sourced detail and could mislead readers about which Imagen version is available.",
+          "supporting_source_url": "https://news.adobe.com/news/2025/06/adobe-firefly-revolutionizes-creative-ideation-new-mobile-app"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Flux models from Black Forest Labs. The Flux model naming and licensing tiers have shifted",
+          "issue": "The article states 'Apache 2.0 licensed variants allow free commercial use' but the DataCamp source specifies it is FLUX.1 Schnell and FLUX.2 Klein that are Apache 2.0 licensed — the article's generalized framing risks readers incorrectly assuming other Flux variants share that license.",
+          "supporting_source_url": "https://www.datacamp.com/blog/best-free-ai-image-generators"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "The capability observations below are drawn from independent reviews published in 2025–2026 and each tool's official documentation, noted in the methodology section",
+          "issue": "The methodology disclosure states dailyblip did not conduct independent testing, but the section intro implies more authoritative sourcing than it delivers — readers may not realize some 'capability observations' come from editorially variable third-party sites like tooldirectory.ai and toolradar.com.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "low",
+          "section_id": "s1",
+          "original_text": "it's more of a hub than a single model",
+          "issue": "The claim that Firefly integrates OpenAI's generation is sourced to an Adobe blog post (company claim), but this is presented in an unqualified, factual tone without noting it is Adobe's own characterization of its product capabilities.",
+          "supporting_source_url": "https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here"
+        }
+      ],
+      "checked_at": "2026-07-18T00:54:07.590Z",
+      "revised": true
+    },
+    "warnings": [
+      "s2: The body text of s2 says image generation runs through GPT-4o, but the tool card for OpenAI in the same section says it runs on GPT Image 2 as of mid-2026 after DALL-E 3 was deprecated in May 2026 — these two claims directly contradict each other within the same section.",
+      "s1: The intro section states OpenAI image generation runs through GPT-4o, but sources confirm DALL-E 3 was deprecated May 2026 and replaced by GPT Image 2 (gpt-image-2), making this description outdated and technically inaccurate.",
+      "s2: The article attributes the commercial-use restriction on free-tier outputs solely to aitoolradar.io, an independent third-party site, rather than to OpenAI's own usage policies — this is an unreliable sourcing choice for a legal/commercial-rights claim that readers may act on.",
+      "key_takeaways: Same problem as s2: a consequential commercial-rights claim is attributed to a third-party review site rather than OpenAI's own policies, which is inappropriate for a statement readers may rely on before publishing work commercially."
+    ]
   }
 ]
