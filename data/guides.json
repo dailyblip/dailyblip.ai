@@ -3494,8 +3494,8 @@
   },
   {
     "id": "6c5bc120-1a5f-422e-b1ac-b0659fb86a4b",
-    "status": "queued",
-    "stage": "Queued",
+    "status": "failed",
+    "stage": "Failed",
     "submitted": {
       "idea": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
       "article_type": "Practical guide",
@@ -3507,6 +3507,11 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T05:47:59.131Z",
-    "updated_at": "2026-07-18T05:47:59.131Z"
+    "updated_at": "2026-07-18T05:48:15.194Z",
+    "error": {
+      "stage": "brief",
+      "message": "400 {\"type\":\"error\",\"error\":{\"type\":\"invalid_request_error\",\"message\":\"You have reached your specified API usage limits. You will regain access on 2026-08-01 at 00:00 UTC.\"},\"request_id\":\"req_011Cd8zmic7QknQDTa2Mfo5C\"}",
+      "at": "2026-07-18T05:48:15.193Z"
+    }
   }
 ]
