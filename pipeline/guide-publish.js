@@ -45,9 +45,14 @@ function validatePrePublish(job) {
   if (!a?.slug || !/^[a-z0-9-]+$/.test(a.slug)) problems.push("missing or invalid slug");
   else if (fs.existsSync(path.join(GUIDES_DIR, `${a.slug}.html`))) problems.push(`slug "${a.slug}" already published — rename before republishing`);
   if (!a?.meta_description) problems.push("missing meta description");
-  if ((job.images || []).length && !job.images.some((img) => img.placement === "hero")) problems.push("no hero-placement image");
-  const missingAlt = (job.images || []).filter((img) => !img.alt_text);
-  if (missingAlt.length) problems.push(`${missingAlt.length} image(s) missing alt text`);
+  // Scoped to SELECTED images only (job.images may hold up to 6
+  // candidates now, most of which were never checked for inclusion) \u2014
+  // an unselected candidate missing alt text, or not being the hero,
+  // should never block a publish that doesn't actually use it.
+  const selectedImages = (job.images || []).filter((img) => img.approved);
+  if (selectedImages.length && !selectedImages.some((img) => img.placement === "hero")) problems.push("no hero-placement image among the SELECTED images");
+  const missingAlt = selectedImages.filter((img) => !img.alt_text);
+  if (missingAlt.length) problems.push(`${missingAlt.length} selected image(s) missing alt text`);
   const placeholderRe = /\[x\]|\[TODO\]|\[insert|lorem ipsum/i;
   const allText = [a?.introduction, a?.conclusion, ...(a?.sections || []).map((s) => s.body_markdown)].join(" ");
   if (placeholderRe.test(allText)) problems.push("article still contains placeholder text (e.g. \"[x]\")");
@@ -100,11 +105,11 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .img-block{margin:26px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
 .img-block img{display:block;width:100%;height:auto}
 .img-caption{font-family:var(--mono);font-size:11.5px;color:var(--faint);padding:8px 2px}
-.tool-card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:16px 0;background:rgba(158,216,210,.02)}
-.tool-card .name{font-weight:600;font-size:15px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
-.tool-logo{width:20px;height:20px;object-fit:contain;border-radius:4px;flex-shrink:0}
-.tool-card .desc{color:var(--dim);font-size:14px;margin-bottom:8px}
-.tool-card .sw{font-size:12.5px;color:var(--faint);line-height:1.6}
+.tool-card{border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin:20px 0;background:rgba(158,216,210,.02)}
+.tool-card .name{font-weight:700;font-size:19px;margin-bottom:8px;display:flex;align-items:center;gap:11px}
+.tool-logo{width:28px;height:28px;object-fit:contain;border-radius:6px;flex-shrink:0}
+.tool-card .desc{color:var(--dim);font-size:15.5px;line-height:1.6;margin-bottom:12px}
+.tool-card .sw{font-size:14px;color:var(--faint);line-height:1.7;margin-bottom:6px}
 .takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
 .takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
 .takeaways ul{margin:0 0 0 18px;color:var(--dim)}
@@ -161,7 +166,10 @@ function renderToolCard(tool) {
 
 function renderPage(job) {
   const a = job.article;
-  const images = job.images || [];
+  // Only images explicitly selected via admin.html's checkboxes ever
+  // reach the published page \u2014 job.images may hold up to 6 generated
+  // candidates, most of which were never meant to be included.
+  const images = (job.images || []).filter((img) => img.approved);
   const imageFor = (placement) => images.find((img) => img.placement === placement);
 
   const heroImg = imageFor("hero");
