@@ -2685,7 +2685,7 @@
   {
     "id": "b403d458-0ff3-40ed-b2bd-608518c03e28",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "Why Your AI Content Looks Like AI and How to Fix It",
       "article_type": "Practical guide",
@@ -2697,7 +2697,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T04:15:40.120Z",
-    "updated_at": "2026-07-18T04:18:58.225Z",
+    "updated_at": "2026-07-18T04:20:16.389Z",
     "brief": {
       "target_reader": "Someone who has started using AI writing or image tools and noticed their output feels generic, flat, or obviously machine-made — they want to improve quality but aren't sure what they're doing wrong or where to start",
       "reader_outcome": "Understand the specific habits and choices that make AI content feel synthetic, and have a handful of concrete techniques they can apply immediately to make their output feel more intentional and human",
@@ -2878,25 +2878,25 @@
         {
           "id": "s1",
           "heading": "What's actually producing that flat, generic feeling",
-          "body_markdown": "The blandness isn't accidental. LLMs are trained to predict the most probable next token, which means under-specified prompts push them toward the statistical center of everything they've seen. Two peer-reviewed studies confirm what most people sense: LLM text shows measurably more uniform sentence lengths, less vocabulary variety, and a flatter emotional register than human writing. A 2024 study in *Artificial Intelligence Review* found that human texts exhibit more scattered sentence-length distributions and richer lexical variety, while LLM outputs skew toward neutral, emotionally flat language. A PNAS study applied a 66-category linguistic framework to LLM vs. human writing and found statistically significant differences in passive voice use, hedging language, and what linguists call nominalization (turning verbs into nouns, like \"provide assistance\" instead of \"help\").\n\nThese aren't stylistic quirks. They're structural outputs of how the model works. Low-specificity prompts get you the average of all training data. High-specificity prompts get you something closer to what you actually had in mind.\n\nFor images, the research picture is less precise. But independent reviewers consistently describe AI image tools as defaulting to clean compositions and even, sourceless lighting. Adobe Firefly in particular has been editorially described as producing output with a \"stock photo quality\" by default. Whether that's compositional or lighting-based or just a function of the training data, the perceptual result is the same: the image reads as produced rather than captured.",
+          "body_markdown": "The blandness isn't accidental. LLMs are trained to predict the most probable next token, which means under-specified prompts push them toward the statistical center of everything they've seen. Two peer-reviewed studies confirm what most people sense: LLM text shows measurably more uniform sentence lengths, less vocabulary variety, and a flatter emotional register than human writing. A 2024 study in *Artificial Intelligence Review* found that human texts exhibit more scattered sentence-length distributions and richer lexical variety, while LLM outputs skew toward neutral, emotionally flat language. A PNAS study applied a 66-category linguistic framework to LLM vs. human writing and found statistically significant differences in passive voice use, hedging language, and what linguists call nominalization (turning verbs into nouns, like \"provide assistance\" instead of \"help\").\n\nThese aren't stylistic quirks. They're structural outputs of how the model works. Low-specificity prompts get you the average of all training data. High-specificity prompts get you something closer to what you actually had in mind.\n\nFor images, the research picture is less precise. Reviewers across several independent write-ups tend to describe AI image tools as defaulting to clean compositions and even, sourceless lighting — Adobe Firefly among them. Whether that's compositional or lighting-based or just a function of the training data, the perceptual result is the same: the image reads as produced rather than captured.",
           "tools": []
         },
         {
           "id": "s2",
           "heading": "Your prompt is doing more work than you think",
-          "body_markdown": "The single highest-leverage change most beginners can make is writing a more specific prompt. This is well-documented for image generation: a 2025 ACM study found that clear attribute specifications, explicit spatial details, and defined style boundaries measurably reduce distortion and improve semantic consistency in generated images. Vague prompts, the same study found, consistently produce stylistic mismatch and unintended composition.\n\nFor text tools, this is widely held practitioner wisdom rather than a rigorously measured finding in peer-reviewed research. But the underlying mechanism is the same. A prompt like \"write a blog post about remote work\" gives the model nothing to anchor to except its statistical defaults. A prompt like \"write an opening paragraph for a piece aimed at freelance designers who resent productivity culture, in a tone that's dry and a little impatient\" gives it actual constraints to work within.\n\nTry building your text prompts around three things: who this is for, what tone or register you want, and one specific thing you do NOT want (\"avoid bullet points,\" \"no inspirational language,\" \"don't open with a question\"). Negative constraints are underused and often do more than positive ones.\n\nFor images, add specificity to lighting direction, camera angle, time of day, and surface texture. \"Soft window light from the left, slightly cluttered desk, mid-morning\" will break the stock-photo flatness that \"professional workspace\" produces. Spatiotemporal detail, as the ACM paper puts it, is where the specificity pays off.",
+          "body_markdown": "The single highest-leverage change most beginners can make is writing a more specific prompt. This is well-documented for image generation: a 2025 ACM study found that clear attribute specifications, explicit spatial details, and defined style boundaries measurably reduce distortion and improve semantic consistency in generated images. Vague prompts, the same study found, consistently produce stylistic mismatch and unintended composition. That study examined image models specifically, not text generation, but the underlying mechanic maps across.\n\nFor text tools, this is widely held practitioner wisdom rather than a rigorously measured finding in peer-reviewed research. A prompt like \"write a blog post about remote work\" gives the model nothing to anchor to except its statistical defaults. A prompt like \"write an opening paragraph for a piece aimed at freelance designers who resent productivity culture, in a tone that's dry and a little impatient\" gives it actual constraints to work within.\n\nTry building your text prompts around three things: who this is for, what tone or register you want, and one specific thing you do NOT want (\"avoid bullet points,\" \"no inspirational language,\" \"don't open with a question\"). Negative constraints are underused and often do more than positive ones.\n\nFor images, add specificity to lighting direction, camera angle, time of day, and surface texture. \"Soft window light from the left, slightly cluttered desk, mid-morning\" will break the stock-photo flatness that \"professional workspace\" produces. Spatiotemporal detail, as the ACM paper puts it, is where the specificity pays off.",
           "tools": []
         },
         {
           "id": "s3",
           "heading": "The editing pass that changes everything",
-          "body_markdown": "Generation is step one. The actual work is what you do after.\n\nFor text: read it out loud, even quietly. The tells will surface immediately. You're listening for sentences that land with identical weight back to back, hedging phrases like \"it is important to consider\" or \"this approach can often be beneficial\", and transitions that exist only to connect paragraphs that shouldn't be separate. Cut or rewrite those on sight. Add a sentence that only you could write, something with a specific reference, a concrete example, an actual opinion. The goal isn't to hide that you used AI. It's to make the piece worth reading.\n\nFor images: post-generation editing is where AI image tools stop being vending machines and start behaving more like software. Adobe Firefly's Generative Fill lets you select and reprompt specific regions of an image, which is useful for changing elements that read as generic without regenerating the whole thing. Firefly has a free tier worth testing (25 monthly credits, with watermarks), though the full inpainting workflow in Photoshop requires a paid Creative Cloud subscription. Midjourney's equivalent feature, called Vary Region, is solid but requires a paid plan. No free tier there.\n\nThe specific thing to fix in AI images: light direction and shadow consistency. Adding a shadow that matches a specific light source will do more to make an image feel real than any prompt refinement. Most AI image defaults have light coming from everywhere, which is how you get that \"no one actually took this photo\" feeling.",
+          "body_markdown": "Generation is step one. The actual work is what you do after.\n\nFor text: read it out loud, even quietly. The tells will surface immediately. You're listening for sentences that land with identical weight back to back, hedging phrases like \"it is important to consider\" or \"this approach can often be beneficial\", and transitions that exist only to connect paragraphs that shouldn't be separate. Cut or rewrite those on sight. Add a sentence that only you could write, something with a specific reference, a concrete example, an actual opinion. The goal isn't to hide that you used AI. It's to make the piece worth reading.\n\nFor images: post-generation editing is where AI image tools stop being vending machines and start behaving more like software. Adobe Firefly's Generative Fill lets you select and reprompt specific regions of an image, which is useful for changing elements that read as generic without regenerating the whole thing. Firefly has a free tier worth testing, though Adobe adjusts credit limits and watermark policies periodically — check Adobe's site for current terms. The full inpainting workflow in Photoshop requires a paid Creative Cloud subscription. Midjourney has an equivalent inpainting feature for selected regions; check Midjourney's documentation for its current name and plan requirements, as both have changed over time.\n\nThe specific thing to fix in AI images: light direction and shadow consistency. Adding a shadow that matches a specific light source will do more to make an image feel real than any prompt refinement. Most AI image defaults have light coming from everywhere, which is how you get that \"no one actually took this photo\" feeling.",
           "tools": []
         },
         {
           "id": "s4",
           "heading": "One check before you publish",
-          "body_markdown": "You might be tempted to run your text through an AI detector as a final gut-check. Use that temptation carefully. Independent analysis of detection tools shows wildly inconsistent results: a 2024 PMC study cited in an independent Skywork AI review found GPTZero has an 18% false positive rate on human-written text. A November 2025 arXiv study found Originality.ai performed best among commercial tools at 96% accuracy, but with an 8% false positive rate. ZeroGPT showed 38% false positives in the same study. OpenAI launched and then shut down its own detection tool, citing poor accuracy.\n\nThe practical takeaway: AI detectors are not reliable enough to treat as a verdict on your own work. A false positive doesn't mean your writing sounds like AI. It might just mean you wrote in a formal register on a short text sample.\n\nA more useful final pass: ask yourself whether any single paragraph could have been written without your specific knowledge, experience, or point of view. If every paragraph could have come from anyone, that's the actual problem, and no detector will catch it for you.\n\nDailyblip hasn't run independent tests on these tools or techniques. These observations draw on published research and independent reviews, linked throughout.",
+          "body_markdown": "You might be tempted to run your text through an AI detector as a final gut-check. Use that temptation carefully. Independent analysis of detection tools shows wildly inconsistent results: a 2024 PMC study (cited secondhand via a Skywork AI blog post, which is worth noting given that Skywork AI is a competing AI company) found GPTZero has an 18% false positive rate on human-written text. A November 2025 arXiv study cited by Originality.ai's own blog — a source with an obvious stake in the findings, since Originality.ai came out on top — found Originality.ai performed best among commercial tools at 96% accuracy, but with an 8% false positive rate; the same source reported ZeroGPT at 38% false positives. OpenAI launched its own detection tool and later shut it down; the company's stated reason included concerns about reliability, though third-party reporting has characterized this in varying ways. The direct-from-OpenAI version is: treat that shutdown as a data point, not a full explanation.\n\nThe practical takeaway: AI detectors are not reliable enough to treat as a verdict on your own work. A false positive doesn't mean your writing sounds like AI. It might just mean you wrote in a formal register on a short text sample.\n\nA more useful final pass: ask yourself whether any single paragraph could have been written without your specific knowledge, experience, or point of view. If every paragraph could have come from anyone, that's the actual problem, and no detector will catch it for you.\n\nDailyBlip hasn't run independent tests on these tools or techniques. These observations draw on published research and independent reviews, linked throughout.",
           "tools": []
         }
       ],
@@ -2910,6 +2910,73 @@
       "conclusion": "None of this requires a paid upgrade or a new tool. Most of it is a change in how you're using the tools you already have. Treat generation as a rough draft, not a deliverable. Put something specific only you could write into every piece. And do the editing pass that AI can't do for you.",
       "methodology_disclosure": "This guide was written by synthesizing peer-reviewed research (PNAS, Artificial Intelligence Review, ACM Digital Library), independent tool reviews, and publicly available benchmarking data from both tool companies and third-party evaluators. Where claims were supported only by company self-reporting, they are labeled as such. Where peer-reviewed sources conflicted with or complicated single-source claims, the conflict is noted in the text rather than resolved editorially. DailyBlip did not conduct independent testing of any tool, detector, or prompt technique described here. Specific accuracy figures for AI detectors are drawn from independent reviews citing 2024 and 2025 published studies, not from detector companies' own benchmarks alone.",
       "last_reviewed_date": "July 18, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s4",
+          "original_text": "a November 2025 arXiv study cited by Originality.ai's own blog...found Originality.ai performed best...96% accuracy...8% false positive rate",
+          "issue": "The Originality.ai 8% false positive rate claim is sourced from the company's own blog, which the article itself flags as conflicted; the key_takeaways section repeats the 8%–38% range without the same caveat, presenting disputed company-sourced figures as settled fact.",
+          "supporting_source_url": "https://originality.ai/blog/ai-detection-studies-round-up"
+        },
+        {
+          "severity": "high",
+          "section_id": "key_takeaways",
+          "original_text": "AI detectors have false positive rates ranging from 8% to 38% depending on the tool",
+          "issue": "Presenting the 8% figure as a clean data point strips away the article's own disclosure that this number comes from Originality.ai's self-interested blog post, misleading readers who only skim takeaways.",
+          "supporting_source_url": "https://originality.ai/blog/ai-detection-studies-round-up"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "Firefly has a free tier worth testing, though Adobe adjusts credit limits and watermark policies periodically",
+          "issue": "The sources confirm Firefly's free tier includes watermarks on outputs; the article implies watermarks are a periodic policy adjustment rather than a current default, which could mislead readers about whether free-tier outputs are usable for publishing.",
+          "supporting_source_url": "https://www.aichatdaily.com/tools/adobe-firefly"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Midjourney has an equivalent inpainting feature for selected regions; check Midjourney's documentation for its current name and plan requirements",
+          "issue": "The source confirms Midjourney has no free tier and plans start at $10/month; the article's vague hedge about 'plan requirements' omits that inpainting requires a paid subscription with no free entry point, unlike Firefly.",
+          "supporting_source_url": "https://aicomparison.ai/midjourney-vs-adobe-firefly/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s4",
+          "original_text": "a 2024 PMC study (cited secondhand via a Skywork AI blog post, which is worth noting given that Skywork AI is a competing AI company)",
+          "issue": "Skywork AI is listed in the sources as the publisher of the review citing the 18% GPTZero false-positive figure, but Skywork AI is an AI productivity/writing tool company, making it a competitor with an interest in undermining GPTZero; the article notes this but the source is still listed as 'independent review' in the sources metadata, which is inconsistent.",
+          "supporting_source_url": "https://skywork.ai/blog/ai-agent/gptzero-review/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s1",
+          "original_text": "Adobe Firefly among them...Whether that's compositional or lighting-based or just a function of the training data",
+          "issue": "The article cites 'several independent write-ups' for the claim about AI image tools defaulting to even lighting, but only one source (AIChatDaily) supports this with an editorial description of Firefly as 'slightly more safe looking'; this is thin support for a stated pattern across multiple tools.",
+          "supporting_source_url": "https://www.aichatdaily.com/tools/adobe-firefly"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s4",
+          "original_text": "OpenAI launched its own detection tool and later shut it down; the company's stated reason included concerns about reliability",
+          "issue": "The WalterWrites.ai source is an independent review blog of unclear provenance (aicomparison.ai and walterwrites.ai are both non-established outlets); using these as corroboration for the OpenAI detector shutdown characterization, without linking to OpenAI's own statement, is insufficiently sourced for a factual claim.",
+          "supporting_source_url": "https://walterwrites.ai/are-ai-detectors-accurate/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "That study examined image models specifically, not text generation, but the underlying mechanic maps across",
+          "issue": "The article presents the ACM image-prompt study's findings as applicable to text generation via an unsupported analogy; this is an editorial leap not validated by the cited research or any secondary source.",
+          "supporting_source_url": "https://dl.acm.org/doi/10.1145/3766918.3766963"
+        }
+      ],
+      "checked_at": "2026-07-18T04:20:16.388Z",
+      "revised": true
+    },
+    "warnings": [
+      "s4: The Originality.ai 8% false positive rate claim is sourced from the company's own blog, which the article itself flags as conflicted; the key_takeaways section repeats the 8%–38% range without the same caveat, presenting disputed company-sourced figures as settled fact.",
+      "key_takeaways: Presenting the 8% figure as a clean data point strips away the article's own disclosure that this number comes from Originality.ai's self-interested blog post, misleading readers who only skim takeaways.",
+      "s3: The sources confirm Firefly's free tier includes watermarks on outputs; the article implies watermarks are a periodic policy adjustment rather than a current default, which could mislead readers about whether free-tier outputs are usable for publishing."
+    ]
   }
 ]
