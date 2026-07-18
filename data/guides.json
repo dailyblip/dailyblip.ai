@@ -3077,7 +3077,7 @@
   {
     "id": "da373217-6d0c-45bf-b802-fd66a19d540e",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "OpenAI's New Codex Keyboard explained - what does it do and how can you use it?",
       "article_type": "Practical guide",
@@ -3089,6 +3089,26 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T05:00:05.750Z",
-    "updated_at": "2026-07-18T05:00:05.750Z"
+    "updated_at": "2026-07-18T05:00:34.936Z",
+    "brief": {
+      "target_reader": "A developer or technically curious creator who has heard about OpenAI's Codex CLI/keyboard tool but has no idea what it actually does day-to-day or how to get started with it",
+      "reader_outcome": "Understand what Codex CLI is, what kinds of tasks it's actually useful for, and feel confident enough to install it and run their first command",
+      "structure_plan": [
+        "What Codex CLI actually is (and what it's not)",
+        "The kinds of tasks it handles well",
+        "How to get it running in under five minutes"
+      ],
+      "claims_to_verify": [
+        "Whether 'Codex Keyboard' is an official OpenAI product name or a colloquial/misattributed term — clarify what the actual product is (Codex CLI, a browser extension, a VS Code plugin, or something else entirely)",
+        "Which underlying model Codex CLI uses (codex-1, GPT-4o, or another model)",
+        "Whether Codex CLI is open source and where it is officially hosted (GitHub repo URL)",
+        "What operating systems and environments Codex CLI supports",
+        "Whether there is a free tier or API credit requirement to use Codex CLI, and what access is needed",
+        "What 'sandbox mode' or safety restrictions are built in — does it ask before executing commands?",
+        "Whether Codex CLI can read and edit existing files in a project, or only generate new code",
+        "Current availability status — is it generally available or still in limited/beta release"
+      ],
+      "research_plan": "Prioritize OpenAI's official GitHub repository for Codex CLI, the official OpenAI blog announcement post, and OpenAI's own documentation pages. Cross-reference with recent (post-April 2025) developer coverage from outlets like The Verge, Ars Technica, or Simon Willison's blog for real-world usage notes. Avoid relying on pre-2025 coverage of the older Codex API/GitHub Copilot era, since 'Codex' has been used for multiple distinct OpenAI products — be precise about which one this article covers."
+    }
   }
 ]
