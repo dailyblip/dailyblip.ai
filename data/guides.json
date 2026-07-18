@@ -851,7 +851,7 @@
   },
   {
     "id": "8c517454-bc7c-4b27-8282-bfb822638a78",
-    "status": "approved",
+    "status": "failed",
     "stage": "Approved",
     "submitted": {
       "idea": "Top 3 AI image generators for 2026",
@@ -1254,6 +1254,11 @@
       "s1: The intro section states OpenAI image generation runs through GPT-4o, but sources confirm DALL-E 3 was deprecated May 2026 and replaced by GPT Image 2 (gpt-image-2), making this description outdated and technically inaccurate.",
       "s2: The article attributes the commercial-use restriction on free-tier outputs solely to aitoolradar.io, an independent third-party site, rather than to OpenAI's own usage policies — this is an unreliable sourcing choice for a legal/commercial-rights claim that readers may act on.",
       "key_takeaways: Same problem as s2: a consequential commercial-rights claim is attributed to a third-party review site rather than OpenAI's own policies, which is inappropriate for a statement readers may rely on before publishing work commercially."
-    ]
+    ],
+    "error": {
+      "stage": "publish",
+      "message": "Pre-publish validation failed: slug \"top-ai-image-generators-2026\" already published — rename before republishing",
+      "at": "2026-07-18T01:06:54.085Z"
+    }
   }
 ]
