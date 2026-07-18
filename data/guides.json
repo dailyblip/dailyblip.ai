@@ -852,7 +852,7 @@
   {
     "id": "8c517454-bc7c-4b27-8282-bfb822638a78",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top 3 AI image generators for 2026",
       "article_type": "Top tools list",
@@ -864,6 +864,27 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:49:56.490Z",
-    "updated_at": "2026-07-18T00:49:56.490Z"
+    "updated_at": "2026-07-18T00:50:27.057Z",
+    "brief": {
+      "target_reader": "Someone who has heard about AI image generators but hasn't committed to one yet — maybe they've tried a free tool briefly or seen others' results, but they don't know which tool fits their actual use case or how to choose",
+      "reader_outcome": "Know which one of three tools to try first based on what they're actually making, and feel confident enough to open an account and generate something today",
+      "structure_plan": [
+        "What you're making should decide which tool you pick",
+        "The three generators worth your time right now",
+        "Before you publish or sell anything made with these tools"
+      ],
+      "claims_to_verify": [
+        "Current availability and access method for Midjourney (still Discord-based or web app now?)",
+        "Whether Midjourney still requires a paid subscription or has reintroduced a free tier",
+        "Current availability and access method for Adobe Firefly (standalone, Creative Cloud integrated, or both?)",
+        "Whether DALL-E 3 is accessible via ChatGPT free tier or requires a paid plan",
+        "Whether Stable Diffusion (or a leading hosted version like Stability AI's platform) remains a strong open-source option versus newer competitors like Flux",
+        "Whether Flux (Black Forest Labs) has emerged as a genuine top-3 contender by early 2026 — check for recent coverage",
+        "Which tools are confirmed available as of 2025/2026 versus announced but not fully launched",
+        "Commercial use rights for outputs: free tier vs paid tier distinctions for each tool — check each tool's current terms of service directly",
+        "Whether any of the three shortlisted tools have changed ownership, been deprecated, or had major capability changes since mid-2024"
+      ],
+      "research_plan": "Prioritize each tool's official documentation and terms of service for availability, pricing tiers, and commercial rights — these change frequently and blog summaries go stale fast. For capability comparisons, look for hands-on reviews published in late 2025 or early 2026 from credible tech outlets (The Verge, Ars Technica, or similar). Avoid SEO roundups that list features without real comparisons. For the Flux/open-source angle, check Black Forest Labs' official site and recent coverage to assess whether it belongs in a top-3 for beginners or is still better suited to technical users. The goal is to make an actual judgment call on three tools, not list five with neutral bullet points."
+    }
   }
 ]
