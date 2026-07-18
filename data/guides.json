@@ -1260,5 +1260,22 @@
       "message": "Pre-publish validation failed: slug \"top-ai-image-generators-2026\" already published — rename before republishing",
       "at": "2026-07-18T01:06:54.085Z"
     }
+  },
+  {
+    "id": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top 3 AI services for generating video in 2026",
+      "article_type": "Top tools list",
+      "target_audience": "",
+      "target_length": "Standard",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-18T01:48:13.054Z",
+    "updated_at": "2026-07-18T01:48:13.054Z"
   }
 ]
