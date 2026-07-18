@@ -1264,7 +1264,7 @@
   {
     "id": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top 3 AI services for generating video in 2026",
       "article_type": "Top tools list",
@@ -1276,7 +1276,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T01:48:13.054Z",
-    "updated_at": "2026-07-18T01:48:44.942Z",
+    "updated_at": "2026-07-18T01:50:09.488Z",
     "brief": {
       "target_reader": "A creator (filmmaker, YouTuber, marketer, or hobbyist) who has heard about AI video generation but hasn't committed to a tool yet and wants to know where to start without wading through every option on the market",
       "reader_outcome": "Feel confident enough to pick one tool and generate their first AI video clip today",
@@ -1296,6 +1296,189 @@
         "Any notable fourth contender (e.g. Google Veo, Pika, Hailuo) worth a brief mention as a runner-up"
       ],
       "research_plan": "Prioritize official documentation and Terms of Service pages for each tool for licensing/commercial-use claims — do not rely on third-party blog posts for those. For availability and feature status, check official product pages and recent (2025-2026) coverage from established tech outlets. Flag any claims where the most recent source is older than six months, since this space moves fast. Note explicitly if any tool's status changed significantly after late 2024."
-    }
+    },
+    "sources": [
+      {
+        "title": "Sora AI: OpenAI's Video Model — Full Guide 2026",
+        "publisher": "SolidAITech",
+        "url": "https://www.solidaitech.com/2026/05/sora-ai.html",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "The Sora consumer app (web + iOS) was officially discontinued on April 26, 2026",
+          "Free tier access to Sora ended on January 10, 2026 — video generation became exclusive to ChatGPT Plus ($20/month) and Pro ($200/month) subscribers",
+          "Sora 1 was fully retired in March 2026; only Sora 2 remains active",
+          "As of May 2026, Sora 2 is available only through the OpenAI API for developers, with pricing per second of generated video",
+          "The Sora 2 API is scheduled for final sunset on September 24, 2026",
+          "Sora 1 launched publicly in December 2024 and supported text-to-video and image-to-video but produced silent output",
+          "Sora 2 introduced synchronized dialogue and sound effects generated alongside video in a single pass",
+          "Sora 2 generation length: up to 60 seconds (vs. 20 seconds in Sora 1)",
+          "API pricing: $0.10/s at 720p Standard, $0.30–$0.70/s at Pro tier"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Sora 2 Pricing: A Complete Guide to OpenAI's Video Model Costs in 2026",
+        "publisher": "eesel AI",
+        "url": "https://www.eesel.ai/blog/sora-2-pricing",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Three access paths for Sora 2 in 2026: free app tier (now ended), ChatGPT subscription, and usage-based API",
+          "ChatGPT Plus ($20/month) includes video generation with rate limits; ChatGPT Pro ($200/month) includes full priority access",
+          "The developer API is live with usage-based, pay-per-second pricing"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "OpenAI Sora 2 Pricing Policy Update: Starting January 2026, Available Only to Plus/Pro",
+        "publisher": "Apiyi.com Blog",
+        "url": "https://help.apiyi.com/en/openai-sora-2-policy-change-plus-pro-only-en.html",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Starting January 10, 2026, free users can no longer generate images or videos with Sora — only Plus ($20/month) and Pro ($200/month) subscribers retain access",
+          "OpenAI's free Sora tier was suspended effective January 10, 2026"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Runway AI Pricing 2026: Free Plan, Credits, Max Plan & Best Value",
+        "publisher": "Somake AI",
+        "url": "https://www.somake.ai/blog/runway-ai-pricing",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Runway's current active product lineup is Gen-4, Gen-4.5, and Gen-4 Turbo — Gen-2 and 'Runway ML' branding are outdated",
+          "The free plan provides 125 one-time, non-renewing credits — enough to test the interface but not for production",
+          "Free tier: Gen-4 Turbo (image-to-video only) — no Gen-4 text-to-video, no Gen-4.5 on free tier",
+          "Standard plan ($15/month or $12/month annual) unlocks all models including Gen-4.5 text-to-video",
+          "Credits-to-seconds: 625 Standard credits ≈ 25s of Gen-4.5, 52s of Gen-4, or 125s of Gen-4 Turbo",
+          "Runway supports both text-to-video (Gen-4.5) and image-to-video (Gen-4)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Free Plan Details – Runway (Official Help)",
+        "publisher": "Runway",
+        "url": "https://help.runwayml.com/hc/en-us/articles/50404627334547-Free-plan-details",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "The free plan includes a one-time deposit of 125 credits that do not expire and do not renew once spent",
+          "All videos generated on a free plan feature a Runway watermark",
+          "Credits cannot be purchased on a free plan; users must upgrade to Standard or above"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "AI Image and Video Pricing from $12/month | Runway AI (Official Pricing Page)",
+        "publisher": "Runway",
+        "url": "https://runwayml.com/pricing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Gen-4.5 uses 12 credits per second of generated video",
+          "Max plan: 9,500 credits = 791s of Gen-4.5 or Gen-4, 1,900s of Gen-4 Turbo",
+          "Free plan includes 125 one-time credits; paid plans include monthly allotments",
+          "On Standard and Pro, credits reset monthly; on Max, up to one month of unused credits rolls over"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Runway Gen-4 Pricing 2026 (Verified June 2026)",
+        "publisher": "gptprompts.ai",
+        "url": "https://gptprompts.ai/runway-pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Commercial use rights apply on all Runway tiers — users own their generated content",
+          "Verified June 2026 against the official Runway pricing page",
+          "Runway's tier structure (Free, Standard, Pro, Unlimited/Max) has remained consistent through 2026",
+          "Standard: $15/month or $12/month annual; Pro: $35/month or $28/month annual; Unlimited: $95/month or $76/month annual"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Kling AI: Complete Guide to Models, Pricing & Features (2026)",
+        "publisher": "Atlas Cloud",
+        "url": "https://www.atlascloud.ai/blog/guides/kling-ai",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Kling AI is built by Kuaishou, a Chinese technology company",
+          "Kling 3.0 is the current flagship model; Kling 3.0 Turbo and Omni launched June 17, 2026",
+          "Kling AI supports both text-to-video and image-to-video workflows",
+          "Clip length natively up to 10 seconds; extendable toward roughly 3 minutes using the extension feature",
+          "Kling AI uses a credit-based pricing model starting free and climbing to roughly $130/month at the top tier",
+          "In 2026, Kling AI generally leads on character consistency and motion realism among consumer video models"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Kling AI Pricing (2026): Free vs Paid Plans & Real Video Costs",
+        "publisher": "Atlas Cloud",
+        "url": "https://www.atlascloud.ai/blog/guides/kling-ai-pricing",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Kling AI free plan strictly prohibits any commercial use of generated content",
+          "Free tier: 66 credits/day (non-rolling), capped at 720p resolution with visible watermark",
+          "Paid tiers unlock 1080p and 4K output, watermark removal, and commercial use rights",
+          "Kling AI has separate international (kling.ai, USD) and Chinese domestic (klingai.com, CNY) sites"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Kling AI - Wikipedia",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Kling_AI",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Kling AI was developed by Kuaishou, a Chinese technology company founded in 2011",
+          "The first version launched in June 2024; Kling 1.6 released December 2024; Kling 2.0 in April 2025; Kling 2.1 in May 2025",
+          "Kling AI's content moderation policies enforce censorship rules aligned with Chinese government regulations, preventing generation of content related to sensitive political topics",
+          "In May 2025, a malware campaign using fake Kling AI websites distributed infostealer malware — writer should flag the risk of unofficial/impersonator sites"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Best AI Video Generators in 2026 – Free & Paid Ranked",
+        "publisher": "Pixflow",
+        "url": "https://pixflow.net/blog/best-ai-video-generator/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Google Veo 3.1 is widely cited as the strongest all-around quality pick in 2026, based on prompt adherence, native audio, and realism",
+          "Kling 3.0 and Runway Gen-4.5 are the strongest runner-ups",
+          "OpenAI has announced the Sora web/app experience is being discontinued and the API will follow later in 2026 — production work should treat Sora as availability-dependent",
+          "Pika (now version 2.5) is frequently cited as a fourth contender, particularly for social media and stylized content",
+          "Hailuo (MiniMax) is cited as an emerging value option"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-18"
+      }
+    ],
+    "unverifiable_claims": [
+      "Exact current maximum clip length for Runway Gen-4/Gen-4.5 with high confidence: sources conflict — one independent source (Presenc AI) states up to 40 seconds for Runway Gen-4, while Atlas Cloud notes Runway's tip to generate in 10-second blocks. The official Runway pricing page references per-second credit costs but does not publish a stated maximum duration. Writer should verify directly at runwayml.com or soften to 'up to ~40 seconds per clip' and flag as subject to change.",
+      "Exact maximum clip length for Sora 2 via API: sources conflict. One source (Cliprise) states up to 60 seconds; another (Atlas Cloud/Kling review) cites 12 seconds; Presenc AI states up to 4 minutes. Given Sora 2's consumer app discontinuation and API-only status, the writer should not state a single definitive max and should note this is API-dependent.",
+      "Whether Sora's commercial use terms explicitly prohibited free-tier commercial use before the free tier was discontinued in January 2026: one independent site (smashingapps.com) states OpenAI's terms restrict commercial use of watermarked free-tier videos, but this cannot be verified against the current OpenAI policy page since the free tier no longer exists. Writer should acknowledge this as a moot point given free tier is now closed.",
+      "Runway Gen-4 free tier and commercial use: one source (aitoolsdevpro.com) states free tier users 'do not hold commercial rights,' but Runway's official free plan page does not explicitly state commercial use restrictions — it only notes watermarks and credit limits. Writer should soften this claim and direct readers to check Runway's current ToS.",
+      "Whether Kling AI's international availability is fully unrestricted: Kling.ai is accessible globally, but availability of all features, payment methods, and specific model versions may vary by region. No official Kling country/region availability page was found. Writer should frame this as 'broadly available internationally via kling.ai' with a caveat that feature parity and payment support may vary.",
+      "Sora 2's status as a 'top 3' tool in July 2026: Multiple independent sources now treat Sora as effectively discontinued for practical use (consumer app shut down April 26, 2026; API sunsets September 24, 2026). The writer should reconsider framing Sora as a current 'top 3' recommendation and instead consider Kling, Runway, and Veo 3.1 as the active top 3, with a note about Sora's history and current API-only/sunset status.",
+      "Specific OpenAI usage policy language around Sora 2 commercial rights at any access tier: the OpenAI policy pages were not directly retrieved. Writer should not make specific claims about commercial license grants under paid Sora tiers without verifying openai.com/policies directly.",
+      "Hailuo/MiniMax's exact free tier terms and commercial rights: sources describe a free tier with credits but conflict on whether commercial use is permitted. Writer should soften any specific claims about Hailuo commercial use rights."
+    ]
   }
 ]
