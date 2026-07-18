@@ -1264,7 +1264,7 @@
   {
     "id": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Top 3 AI services for generating video in 2026",
       "article_type": "Top tools list",
@@ -1276,7 +1276,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T01:48:13.054Z",
-    "updated_at": "2026-07-18T01:52:15.162Z",
+    "updated_at": "2026-07-18T01:53:56.825Z",
     "brief": {
       "target_reader": "A creator (filmmaker, YouTuber, marketer, or hobbyist) who has heard about AI video generation but hasn't committed to a tool yet and wants to know where to start without wading through every option on the market",
       "reader_outcome": "Feel confident enough to pick one tool and generate their first AI video clip today",
@@ -1613,6 +1613,50 @@
     "warnings": [
       "s1: The article's s1 tool card for Runway states commercial use rights apply on all tiers, but s2 immediately contradicts this by noting official Runway documentation does not confirm commercial rights for the free tier — the tool card presents unverified information as fact.",
       "s2: The article hedges that commercial use rights for Runway's free tier are unconfirmed against the ToS, yet the s1 tool card already asserts they apply on all tiers — this internal contradiction could mislead creators into publishing commercially without proper rights."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52-img1.jpg",
+        "prompt": "Editorial illustration, three vertically-oriented product-style cards arranged in a horizontal row on a deep charcoal (#1a1a2e) background. All cards and labels must sit fully within a safe 10% margin from every frame edge — nothing touches or bleeds off the border. The left card labeled 'Kling AI' with the tag 'Top Pick' is slightly taller and elevated a few pixels above the other two, with a teal/cyan accent border. The center card labeled 'Runway' with the tag 'Versatile' has a warm amber accent border. The right card labeled 'Sora' with the tag 'Premium' has a cool violet accent border. Each card has a simple abstract motion icon (a stylized curved line suggesting video playback) centered inside it, rendered as a flat shape. Cards are off-white with clean sans-serif labels. Generous space between cards and at the outer left and right edges. Upper portion of frame has clear negative space for HTML headline overlay. Flat editorial design, high contrast, modern, no photography, no logos, no fabricated UI screenshots. All text and elements remain well within frame boundaries.",
+        "placement": "hero",
+        "alt_text": "Three labeled cards representing Kling AI, Runway, and Sora, with Kling AI elevated as the top pick among the three AI video generators reviewed.",
+        "caption": "The three AI video tools this guide evaluates — with Kling AI as the strongest starting point for most new creators.",
+        "approved": false,
+        "generated_at": "2026-07-18T01:53:26.207Z",
+        "role": "hero",
+        "concept": "Three distinct AI video tools side by side, visually ranked with Kling AI elevated as the lead pick, Runway and Sora as supporting entries, against a clean editorial backdrop",
+        "purpose": "Immediately communicate that this article compares three specific tools and has a clear winner recommendation, not a generic AI video overview",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52-img2.jpg",
+        "prompt": "Editorial information-design illustration of a clean comparison grid on a near-white background. Three columns representing 'Kling AI' (teal header accent), 'Runway' (amber header accent), and 'Sora' (violet header accent), with a left-side label column for row names: 'Free Tier', 'Commercial Use (Free Plan)', and 'Starting Resolution'. Each data cell contains a simple flat icon — green checkmark or red X for boolean values, or a short text label like '720p'. All columns, row labels, and cells sit fully within a safe 8% margin from every frame edge — no element touches or bleeds to the border. The 'Commercial Use (Free Plan)' row has a subtle warm highlight or callout border around it to signal its importance. Clean sans-serif typography, flat icon style, no gradients, no shadows, no photography, no logos, no fabricated screenshots. The composition reads clearly as a feature comparison for three AI tools. Everything well within frame boundaries.",
+        "placement": "s1",
+        "alt_text": "Comparison grid showing Kling AI, Runway, and Sora across free tier availability, commercial use rights on free plans, and starting resolution.",
+        "caption": "Key practical differences across the three tools — note the commercial-use restriction on Kling AI's free tier.",
+        "approved": false,
+        "generated_at": "2026-07-18T01:53:41.928Z",
+        "role": "comparison",
+        "concept": "A structured comparison table-as-illustration showing Kling AI vs Runway vs Sora across the dimensions that matter most to new creators: free tier availability, commercial use rights, and output resolution",
+        "purpose": "Help readers scan the three tools' key practical differences at a glance — especially the commercial-use restriction on Kling's free tier — without reading the full section",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img3",
+        "file": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52-img3.jpg",
+        "prompt": "Editorial flat flowchart illustration in portrait (9:16) orientation on a white background. The diagram flows top to bottom. At the top, a teal rounded rectangle node labeled 'You made a video with Kling AI's free tier' — positioned with at least 10% margin from the top edge. Below it, a downward arrow leads to a gray diamond decision node labeled 'Publishing online or monetizing it?'. A 'No' branch on the left leads to a soft green rounded rectangle outcome box labeled 'Free tier is fine'. A 'Yes' branch on the right leads to a second gray diamond node labeled 'Brand content or YouTube revenue?'. From that, a 'Yes' branch leads to an amber rounded rectangle outcome box labeled 'Upgrade to paid plan'. All nodes, arrows, and text labels are cleanly spaced within a safe 8% margin from every frame edge — the top node and bottom outcome boxes have explicit padding so nothing clips. Left and right outcome boxes are fully contained within the frame with visible margins on their outer sides. Clean sans-serif typography, flat geometric shapes, no gradients, no photography, no icons beyond the node shapes, no logos. Reads clearly as a licensing decision guide for a single AI video tool.",
+        "placement": "s2",
+        "alt_text": "Decision flowchart: starting from 'You made a video with Kling AI's free tier', two yes/no questions lead to either 'Free tier is fine' or 'Upgrade to paid plan' depending on whether you're publishing, monetizing, or creating brand content.",
+        "caption": "Follow this before hitting publish: Kling AI's free tier explicitly prohibits commercial use — two questions tell you which plan you actually need.",
+        "approved": false,
+        "generated_at": "2026-07-18T01:53:56.825Z",
+        "role": "explainer",
+        "concept": "A vertical decision-flow diagram guiding a new creator through two key questions — 'Am I publishing or monetizing this?' and 'Is this for a brand or YouTube revenue?' — to arrive at one of two outcomes: free tier is fine, or upgrade to paid",
+        "purpose": "Make the commercial-use licensing rule in the 'Before you publish' section immediately actionable and scannable — readers can follow the arrows to know exactly what plan they need before hitting publish",
+        "aspect_ratio": "9:16"
+      }
     ]
   }
 ]
