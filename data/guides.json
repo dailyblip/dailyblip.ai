@@ -2171,5 +2171,22 @@
         "aspect_ratio": "1:1"
       }
     ]
+  },
+  {
+    "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "Top AI content creator tools for 2026",
+      "article_type": "Top tools list",
+      "target_audience": "",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-18T03:39:08.288Z",
+    "updated_at": "2026-07-18T03:39:08.289Z"
   }
 ]
