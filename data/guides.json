@@ -3077,7 +3077,7 @@
   {
     "id": "da373217-6d0c-45bf-b802-fd66a19d540e",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "OpenAI's New Codex Keyboard explained - what does it do and how can you use it?",
       "article_type": "Practical guide",
@@ -3089,7 +3089,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T05:00:05.750Z",
-    "updated_at": "2026-07-18T05:03:34.310Z",
+    "updated_at": "2026-07-18T05:06:51.282Z",
     "brief": {
       "target_reader": "A developer or technically curious creator who has heard about OpenAI's Codex CLI/keyboard tool but has no idea what it actually does day-to-day or how to get started with it",
       "reader_outcome": "Understand what Codex CLI is, what kinds of tasks it's actually useful for, and feel confident enough to install it and run their first command",
@@ -3383,6 +3383,92 @@
     "warnings": [
       "s1: 'GPT-5.6 Sol' does not appear in any cited source; the official developer docs source lists the default model only as 'GPT-5.6 Sol' without corroboration, and this model name appears to be fabricated or hallucinated — no OpenAI announcement or doc confirms this naming.",
       "s1: The sources consistently name the model family as 'GPT-5.x-Codex' (e.g., GPT-5.2-Codex, GPT-5.3-Codex), not 'GPT-5-Codex family' as a marketing umbrella; this framing could mislead readers about how the product is actually named."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "da373217-6d0c-45bf-b802-fd66a19d540e-img1.jpg",
+        "prompt": "Flat vector illustration, professional infographic style, 16:9 aspect ratio. Deep ink navy (#071A1F) full-bleed background. Center: a large, clean, rectangular terminal window frame in dark (#0C242B) with a subtle amber (#FFB454) title bar stripe — this terminal occupies roughly 60% of canvas width and is vertically centered, with clear margin from all four edges. Inside the terminal, a single clean amber (#FFB454) horizontal prompt line with a small blinking amber cursor block — the undisputed focal point. Left side of the canvas (with generous left margin, nothing closer than 10% from the left edge): a vertical stack of three flat, minimal document/file icons in muted aqua (#63D8C6) outline, evenly spaced. Right side of the canvas (with generous right margin, nothing closer than 10% from the right edge): a vertical stack of three flat gear/cog icons in muted amber outline, evenly spaced. A bold, clean aqua (#63D8C6) arc arrow flows from the file icons on the left, through the center of the terminal, to the gear icons on the right — conveying a read-reason-act loop. No text labels, no simulated code characters, no glowing effects, no photorealism. Every element stays well within safe margins — nothing touches or is clipped by the frame edges. Clean, precise, high-contrast. Should read clearly at thumbnail size.",
+        "placement": "hero",
+        "alt_text": "Hero illustration showing a terminal window at center with file icons on the left and action gear icons on the right, connected by a flowing aqua arrow — representing Codex CLI reading project files and applying changes",
+        "caption": "Codex CLI works as a terminal agent: it reads your project files, reasons about them, and applies reviewable changes — all from a single prompt.",
+        "generated_at": "2026-07-18T05:05:33.655Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A terminal window as the command center for a junior-developer agent — bold, purposeful, unmistakably action-oriented",
+        "purpose": "Immediately signal to the reader that Codex CLI is a powerful terminal-based agent, not a passive autocomplete plugin — earn their attention before they read a word",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "da373217-6d0c-45bf-b802-fd66a19d540e-img2.jpg",
+        "prompt": "Flat vector illustration, professional infographic style, 16:9 aspect ratio. Deep ink navy (#071A1F) background. Three equally sized, evenly spaced rounded-rectangle panels arranged in a horizontal row across the center of the canvas. The leftmost panel has at least 12% margin from the left canvas edge; the rightmost panel has at least 12% margin from the right canvas edge. Between each adjacent pair of panels, a bold amber (#FFB454) right-pointing arrow, centered vertically. Panel 1 (left): contains a flat amber folder/file-stack icon with a small amber magnifying glass overlay; below the icon, one short amber text label 'Read.' Panel 2 (center): contains a flat split-rectangle diff icon — left half has a subtle red-tinted stripe across it, right half has a subtle aqua (#63D8C6) stripe — representing a before/after code diff; below the icon, one short amber text label 'Diff.' Panel 3 (right): contains a flat amber circle with a clean white checkmark inside; below the icon, one short amber text label 'Run.' All panels have dark (#0C242B) fill with a thin amber border. Everything well within safe margins, nothing clipped. No simulated code text, no photorealism, no gradient fills. Even, precise spacing between all elements.",
+        "placement": "s1",
+        "alt_text": "Three-step workflow diagram showing Codex CLI's loop: Read (file icons), Diff (split before/after diff view), Run (checkmark approval) — connected by amber arrows",
+        "caption": "Every Codex CLI task follows the same loop: it reads your project files, proposes a reviewable diff, and only executes after you approve.",
+        "generated_at": "2026-07-18T05:05:49.220Z",
+        "approved": true,
+        "role": "workflow",
+        "concept": "The three-step loop Codex CLI follows for every task: Read files → Propose diff → Execute (with approval)",
+        "purpose": "Show the reader exactly how one Codex CLI interaction works end-to-end — the read/propose/approve loop that the article describes in section s1",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img3",
+        "file": "da373217-6d0c-45bf-b802-fd66a19d540e-img3.jpg",
+        "prompt": "Flat vector illustration, professional infographic style, 1:1 square aspect ratio. The canvas is divided diagonally from the top-left area to the bottom-right area by a bold, clean amber (#FFB454) diagonal dividing line, 4px weight. Top-left triangular zone: fill #071A1F (deep ink navy). Contains a flat, minimal text-cursor icon (vertical amber line with a small horizontal ghost-text bar extending right, representing inline code suggestion) centered in that zone, well within the zone and away from all canvas edges (minimum 12% margin). Below the icon, a short amber text label: 'autocomplete.' Bottom-right triangular zone: fill #0C242B (slightly lighter navy). Contains a flat inbox/tray icon with a small document sheet and a small clean checkmark overlay, in aqua (#63D8C6), centered in that zone, well within margins. Below the icon, a short aqua text label: 'agent.' No simulated code text, no gradients, no photorealism. Every element — especially the icons and labels — stays at least 12% from all canvas edges. Clean, balanced, crisp.",
+        "placement": "s1",
+        "alt_text": "Diagonal split illustration contrasting inline autocomplete (cursor with ghost text, top-left) versus Codex CLI as an agent (inbox with checkmark, bottom-right)",
+        "caption": "Codex CLI isn't an autocomplete plugin — it's closer to assigning a task to a junior developer who reads your files and proposes reviewable changes.",
+        "generated_at": "2026-07-18T05:06:05.127Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "The key distinction between autocomplete (inline, passive, character-by-character) and Codex CLI (task-level, file-aware, agentic) — the core reframe in section s1",
+        "purpose": "Help readers who arrive expecting 'another Copilot' immediately understand the conceptual shift: this is task delegation, not keystroke assistance",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img4",
+        "file": "da373217-6d0c-45bf-b802-fd66a19d540e-img4.jpg",
+        "prompt": "Flat vector illustration, professional infographic style, 9:16 portrait aspect ratio. Deep ink navy (#071A1F) background. Four equally sized, evenly spaced rounded-rectangle cards stacked vertically, all horizontally centered in the canvas. Left and right margins for each card: minimum 14% of canvas width from each side edge — cards should not extend anywhere near the canvas edges. Top margin from first card: minimum 12%. Bottom margin from last card: minimum 12%. Even vertical gap between adjacent cards. Cards alternate fill colors: #0C242B and #071A1F. A thin aqua (#63D8C6) vertical accent line runs down the left interior side of all four cards, connecting them visually. Card 1: flat amber loop-arrows/recycling icon on the left inside the card; short amber text label 'Refactor' on the right side of the card interior. Card 2: flat amber shield/warning-badge icon; short amber text label 'Error handling.' Card 3: flat amber clipboard/checklist icon; short amber text label 'Write tests.' Card 4: flat amber wrench/tool icon; short amber text label 'Debug build.' Each card has consistent internal padding — icon and label never touch card edges. No simulated code, no gradients, no photorealism. All elements well within safe margins.",
+        "placement": "s2",
+        "alt_text": "Vertical card stack listing four Codex CLI use cases: Refactor, Error handling, Write tests, and Debug build — each with a matching icon",
+        "caption": "Codex CLI works best when the context lives in files you already have — refactoring functions, adding error handling, writing tests, and diagnosing broken builds are its strongest use cases.",
+        "generated_at": "2026-07-18T05:06:23.129Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "Four use cases Codex CLI actually handles well — refactor, error handling, test writing, build debugging — as a clean vertical card stack",
+        "purpose": "Give the reader a quick visual reference for the specific task types named in section s2, making the abstract concept concrete and scannable",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img5",
+        "file": "da373217-6d0c-45bf-b802-fd66a19d540e-img5.jpg",
+        "prompt": "Flat vector illustration, professional infographic style, 16:9 aspect ratio. Deep ink navy (#071A1F) background. Three rounded-rectangle panels in a horizontal row, connected by bold amber (#FFB454) right-pointing arrows. Leftmost panel has at least 12% margin from left canvas edge; rightmost panel has at least 12% margin from right canvas edge. All panels vertically centered with clear top and bottom breathing room. Panel 1 (slightly taller than panels 2 and 3): dark fill (#0C242B), thin amber border. Inside: two small flat icons stacked vertically — top icon is a flat amber chat-bubble (representing ChatGPT account), bottom icon is a flat amber key shape — with a tiny short aqua (#63D8C6) text label 'or' centered between the two icons. Panel 2: dark fill (#0C242B), thin amber border. Inside: a flat amber dollar-sign ($) symbol inside a small square box, representing setting an environment variable. Panel 3: dark fill (#0C242B), thin amber border. Inside: a flat amber equilateral triangle play-button inside a circle, representing running the first command. Amber right-pointing arrows between panels, centered vertically. No simulated terminal text, no API key strings, no gradients, no photorealism. Every element within safe margins, nothing clipped.",
+        "placement": "s3",
+        "alt_text": "Three-step setup flow: Step 1 shows ChatGPT account or API key (two icons with 'or' between them), Step 2 shows setting an environment variable, Step 3 shows running the first command",
+        "caption": "Before your first Codex CLI command: you'll need either a ChatGPT account or an OpenAI API key set as an environment variable.",
+        "generated_at": "2026-07-18T05:06:39.381Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "The three installation prerequisites in sequence: ChatGPT account OR API key → environment variable set → first command run",
+        "purpose": "Give readers a visual checklist of what they need before their first Codex CLI command, as described in section s3 — reducing friction at the setup step",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img6",
+        "file": "da373217-6d0c-45bf-b802-fd66a19d540e-img6.jpg",
+        "prompt": "Flat vector illustration, professional infographic style, 1:1 square aspect ratio. Canvas split vertically down the exact center by a clean, bold amber (#FFB454) vertical dividing line, 3px weight. Left half fill: #071A1F (deep ink navy). Right half fill: #0C242B (slightly lighter navy). Left half: centered in its zone (keeping at least 14% margin from the left canvas edge and at least 8% margin from the center dividing line), a flat amber icon composed of a single thin horizontal rectangle (representing a line of text) with a short ghost-stub amber rectangle extending from its right end — symbolizing an inline code suggestion. Near the bottom of the left half, a short amber text label 'line.' Right half: centered in its zone (keeping at least 8% margin from the center dividing line and at least 14% margin from the right canvas edge), three small flat aqua (#63D8C6) document/file icons arranged as a fanned overlapping stack, with a single clean amber curved arrow converging from the stack toward a small amber filled circle to the right of it — symbolizing the agent reading multiple files. Near the bottom of the right half, a short aqua text label 'project.' No simulated code text, no product UI, no gradients, no photorealism. Every element stays well within safe margins and nothing is clipped by the frame edges.",
+        "placement": "s2",
+        "alt_text": "Split comparison: left side shows a single line-level inline suggestion icon labeled 'line'; right side shows three stacked file icons converging toward a central point, labeled 'project' — contrasting autocomplete with Codex CLI's file-level agent approach",
+        "caption": "Inline autocomplete works at the line level. Codex CLI works at the project level — reading across files to complete a whole task.",
+        "generated_at": "2026-07-18T05:06:51.282Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "Side-by-side contrast: a task-assignment model (Codex CLI) versus an inline suggestion model — showing that one works at the file/project level and the other at the line level",
+        "purpose": "Reinforce for section s2 readers why Codex CLI's task-plus-context approach makes it especially suited to multi-file tasks like refactoring or test writing, versus single-line completions",
+        "aspect_ratio": "1:1"
+      }
     ]
   }
 ]
