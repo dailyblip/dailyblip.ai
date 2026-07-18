@@ -2288,7 +2288,7 @@
   {
     "id": "34e44941-18c0-4c92-af8e-12ac6c773455",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "What are the best tools for generating images?",
       "article_type": "Top tools list",
@@ -2300,7 +2300,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:30:10.931Z",
-    "updated_at": "2026-07-18T00:31:53.514Z",
+    "updated_at": "2026-07-18T00:33:25.929Z",
     "brief": {
       "target_reader": "A creative newcomer — artist, designer, filmmaker, writer — who has heard about AI image generation but hasn't committed to any tool yet and wants to know where to actually start, not a comprehensive breakdown of every option",
       "reader_outcome": "Feel confident picking one tool to try today based on what kind of work they do, without needing to test all of them first",
@@ -2322,6 +2322,175 @@
         "Whether any of the listed tools have announced deprecation or major access changes recently"
       ],
       "research_plan": "Prioritize official documentation and pricing/terms pages for each tool over third-party roundups, since licensing terms especially need to be accurate. For capability comparisons, recent hands-on reviews from reputable tech or design publications (e.g. The Verge, Creative Bloq, Ars Technica) are acceptable but should be cross-referenced. Avoid over-relying on any single aggregator list. Flag any sourced claim where the publication date is more than six months old, since this space changes quickly. Do not restate credit/quota figures in units not used by the official source."
-    }
+    },
+    "sources": [
+      {
+        "title": "Web vs Discord – Midjourney Official Help Docs",
+        "publisher": "Midjourney (docs.midjourney.com)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/33329300781837-Web-vs-Discord",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney subscribers can now create images on both the official website (midjourney.com) AND Discord — Discord is no longer required.",
+          "Most features and tools are offered on both platforms, though some have different names.",
+          "The web editor includes image editing tools (crop, pan, aspect ratio adjustment) not available on Discord.",
+          "Option Sets can be used in prompts on the web but can only be created and managed in Discord."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Midjourney Website vs Midjourney on Discord: Which is Best?",
+        "publisher": "TechFinitive (updated June 12, 2026)",
+        "url": "https://www.techfinitive.com/midjourney-website-now-lets-you-generate-images-without-discord/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "For the past couple of years, Midjourney has offered a website that has gradually added more features; as of 2026 it is a full-featured alternative to Discord.",
+          "The web interface is more beginner-friendly: no /imagine command needed, clickable parameter options instead of text commands.",
+          "Web-exclusive features include an image editor (brush to remove objects), Moodboards (style reference uploads), and an Organizer with filters.",
+          "Midjourney no longer offers a free trial; a paid plan is required to generate images. The Basic plan starts at $10/month."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "ChatGPT + DALL-E 2026: What Changed & Free Limits",
+        "publisher": "AI Tool Radar (aitoolradar.io)",
+        "url": "https://aitoolradar.io/guides/dall-e",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "DALL-E 3 was removed from the ChatGPT interface in December 2025 and replaced by GPT-4o native image generation.",
+          "DALL-E 3 remains reachable only through the OpenAI API, with deprecation announced for May 2026.",
+          "ChatGPT's free tier includes limited GPT-4o image generation access, with queue-based processing and dynamic usage caps (not a fixed public quota).",
+          "Images generated through ChatGPT Plus, Pro, Team, and Enterprise plans belong to the user per OpenAI's ToS and can be used commercially; free tier usage may have additional restrictions."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "DALL-E 3 in 2026: What You Actually Get Before It Sunsets",
+        "publisher": "Offline Creator (offlinecreator.com)",
+        "url": "https://offlinecreator.com/tool/dall-e",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "OpenAI announced on November 14, 2025 that DALL-E 3 will be removed from the API on May 12, 2026 (a major deprecation/access change).",
+          "ChatGPT already transitioned to GPT Image 1.5 in December 2025.",
+          "Free tier gives approximately 2–3 images per day; Plus ($20/month) gives significantly more.",
+          "DALL-E 3 (and its GPT Image successor) is cloud-only — local generation is not an option; for that, look at Stable Diffusion via ComfyUI, Fooocus, or Forge.",
+          "OpenAI applies the strictest content filtering of any major image generator, frequently blocking benign prompts."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Adobe Firefly Commercial Use 2026: Honest Legal Guide",
+        "publisher": "Stack Sheriff (stacksheriff.com, updated June 13, 2026)",
+        "url": "https://stacksheriff.com/ai-tools/adobe-firefly-commercial-use/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly is described as the only mainstream consumer image generator that ships with explicit commercial-use permission AND copyright indemnification — but only on paid plans.",
+          "Firefly was trained on Adobe Stock, licensed content, and public domain content — not scraped open-web data — which is the basis for its commercial safety claim.",
+          "The IP indemnification protects paid users from third-party copyright claims on policy-compliant generations, but does NOT grant the user copyright ownership of the AI output (per US Copyright Office guidance).",
+          "Firefly's outputs can feel 'stocky' or generic compared to Midjourney because the training set is narrower by design.",
+          "Midjourney, OpenAI's image tools, and Stability AI do not offer equivalent indemnification for commercial use."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Commercial Use of Free Adobe Firefly Generated Images — Adobe Community",
+        "publisher": "Adobe Community Forum (community.adobe.com)",
+        "url": "https://community.adobe.com/t5/adobe-firefly-discussions/commercial-use-of-free-adobe-firefly-generated-images-for-marketing/m-p/15340725",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe's Generative AI User Guidelines state that content created with generative AI features (including Firefly) can be used for commercial use unless the product is in beta and explicitly states otherwise.",
+          "A community moderator noted as of May 2025: 'there does not appear to be any differentiation between the free tier and paid tiers and how the images can be used' — however, the free plan watermarks images and has severely limited monthly credits, making practical commercial use difficult.",
+          "The free Firefly plan images cannot have watermarks removed.",
+          "IP indemnification (the legal backstop) is only offered on paid plans, not the free tier — meaning free users can technically use images commercially but without Adobe's legal protection."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Local AI Image Generation in 2026: Flux, SD & ComfyUI",
+        "publisher": "Digital Applied (digitalapplied.com, updated ~July 2026)",
+        "url": "https://www.digitalapplied.com/blog/local-image-generation-flux-stable-diffusion-comfyui-2026",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Stable Diffusion (Stability AI) and Flux (Black Forest Labs) are the two dominant model families for local/self-hosted open-source image generation in 2026.",
+          "ComfyUI is the 2026 production default for local generation — node-based, fastest model support; Forge covers low-VRAM cards; Fooocus is SDXL-only and effectively abandoned.",
+          "AUTOMATIC1111 (A1111) needs the Forge fork to run Flux at all; vanilla A1111 does not natively support the latest Flux or SD 3.5 model architectures.",
+          "Local generation collapses variable cloud API costs to zero after hardware is paid for — DALL-E API costs $0.04–$0.08/image, Midjourney runs $10–$120/month.",
+          "License caution: Some Flux models (e.g., Flux.1 Dev) are released under non-commercial licenses; Flux Schnell is Apache 2.0 and license-clean for commercial use."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "AUTOMATIC1111 Review 2026: Should You Still Use It?",
+        "publisher": "AI FOSS Dev (aifoss.dev, May 2026)",
+        "url": "https://aifoss.dev/blog/automatic1111-review-2026/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "AUTOMATIC1111 is still the most-installed Stable Diffusion UI but has been surpassed on performance and model support by Forge and ComfyUI in 2026.",
+          "A1111's main development has slowed significantly; the project is maintained but not aggressively developed, and most active contributors have moved to Forge or ComfyUI.",
+          "A1111 has no native Flux.1 support — the single biggest practical limitation in 2026.",
+          "A1111 uses 7.5 GB VRAM for SDXL vs. Forge at ~5.5 GB and ComfyUI at ~4.5 GB on the same hardware.",
+          "For new users in 2026, Forge is the recommended starting point over vanilla A1111."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Leonardo.ai Review 2026: Pricing, Features & Realtime Canvas",
+        "publisher": "Knowara (knowara.com, verified July 2026)",
+        "url": "https://knowara.com/ai-tools/leonardo-ai-review/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Leonardo.ai offers a permanent free plan with 150 Fast Tokens per day, resetting every 24 hours with no rollover.",
+          "Free-tier generations are public and carry only a non-exclusive commercial license, not full ownership — paid subscribers retain full ownership and commercial rights.",
+          "Free-tier users grant Leonardo.ai broader usage rights including the right to display and reuse public creations.",
+          "Leonardo offers 80+ models including photorealistic (Lucid Realism, PhotoReal), general purpose (Phoenix), and cinematic (Kino XL) options.",
+          "Realtime Canvas allows sketch-to-image generation updating roughly every 2 seconds per new stroke — a beginner-friendly inpainting/live-edit feature.",
+          "Paid plans run $12/month (Essential), $30/month (Premium), $60/month (Ultimate); Midjourney has no free tier."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Best Free AI Image Generators in 2026",
+        "publisher": "DataCamp (datacamp.com, updated ~June 2026)",
+        "url": "https://www.datacamp.com/blog/best-free-ai-image-generators",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Ideogram 4.0 was released as an open-weight model on June 3, 2026, now available on Hugging Face, ComfyUI, Replicate, and other platforms for local or API deployment.",
+          "Ideogram free tier provides 10 slow credits per week (~40 images), with commercial use permitted with one exception: outputs cannot be used to train competing image models.",
+          "Ideogram is best-in-class for text rendering inside images; Leonardo is broader as an image, video, design, and motion workspace.",
+          "Free-plan Ideogram and Leonardo generations are public by default — a real issue for confidential client work.",
+          "Canva's AI image generation has weaker text rendering than Ideogram or ChatGPT; it is best for users already inside the Canva workflow.",
+          "Ideogram free tier images are public and limited; private generation requires Plus or higher (paid)."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      }
+    ],
+    "unverifiable_claims": [
+      "Whether Canva's AI image generation is specifically powered by Stable Diffusion or another model — Canva does not publicly confirm the underlying model architecture for its AI image generator; the claim should be softened to 'AI-powered image generation' without naming the backend.",
+      "Exact commercial use terms for Canva AI image generation — no primary source (Canva ToS or official help page) was retrieved specifically addressing commercial use rights for AI-generated images on free vs. paid Canva plans; the writer should verify directly at canva.com/policies.",
+      "Adobe Firefly's IP indemnification dollar cap for individual (non-enterprise) plans — the $10,000 per-asset figure found in one source applied specifically to VIP B2B plans; the exact individual plan indemnification cap was not confirmed from official Adobe documentation and should be verified or omitted.",
+      "The claim that Midjourney is 'the best' or 'highest quality' for photorealism or artistic illustration — quality rankings are editorial judgments and shift with every model update; multiple independent sources disagree on rankings (e.g., FLUX.1 is ranked above Midjourney on the LM Arena leaderboard for photorealism as of late 2025).",
+      "Whether DreamStudio (Stability AI's hosted platform) is still actively maintained as a primary access point for Stable Diffusion — no current source was retrieved confirming DreamStudio's operational or deprecation status in 2025–2026; writer should check stability.ai directly.",
+      "Specific Canva free-tier limits for AI image generation (number of credits or generations per month) — not confirmed from a primary Canva source during this research pass.",
+      "The claim that 'inpainting at a beginner-friendly level' is available in ChatGPT free tier — multiple sources confirm free-tier users cannot access image editing/inpainting in ChatGPT (only paid plans); this claim is likely false for the free tier and should be corrected."
+    ]
   }
 ]
