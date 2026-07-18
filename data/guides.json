@@ -1670,7 +1670,7 @@
   {
     "id": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "10 Best AI Music Generators for Beginners: Features, Pricing, and Use Cases",
       "article_type": "Top tools list",
@@ -1682,7 +1682,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T03:12:22.094Z",
-    "updated_at": "2026-07-18T03:17:42.076Z",
+    "updated_at": "2026-07-18T03:21:03.396Z",
     "brief": {
       "target_reader": "Someone who has never used an AI music tool before — likely a content creator, hobbyist, or indie filmmaker who needs background music or simple tracks but has no music production background and doesn't know where to start",
       "reader_outcome": "Feel confident enough to pick one tool and actually generate their first track today — not evaluate all ten exhaustively",
@@ -2084,6 +2084,92 @@
     "warnings": [
       "s2: The article attributes this claim to 'independent reporting' but the source (UsagePricing) describes this as an observation, and a separate source (Dynamoi) says 'new Udio content currently cannot be distributed externally' — meaning the walled-garden restriction may apply to all tiers, not just free. The framing implies paid users can still download, which contradicts the sourced claim that downloads were removed broadly post-October 2025.",
       "s3: Per the sourced Dynamoi article, the November 2025 WMG announcement was a 'partnership settling copyright litigation' — the article here frames it as a settlement of a 'major copyright lawsuit,' but the primary lawsuit against Suno was filed by a group of labels including Sony; WMG's relationship may have been a licensing deal rather than a direct lawsuit settlement. The framing is potentially inaccurate."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0-img1.jpg",
+        "prompt": "Editorial hero illustration for a web article about AI music generators for beginners. Deep ink navy background (#071A1F). Left third of the wide landscape frame: a clean rectangular text input field with warm amber (#FFB454) glow, containing the short text 'upbeat lo-fi with rain sounds' in white sans-serif. Center: a bold rightward-pointing energy burst or arrow shape in aqua (#63D8C6), suggesting transformation. Right third: a stylized song structure diagram — four horizontal bands stacked vertically labeled 'Intro', 'Verse', 'Chorus', 'Outro' in small white type, each band filled with amber (#FFB454) waveform bar visualizations of varying heights. All elements sit inside a generous safe margin — at minimum 8% from every frame edge, with the leftmost text field and rightmost song structure each clearly inset from their respective borders. No element, label, or shape is cropped or touches the frame edge. Style: clean editorial diagram, bold graphic design, high contrast, designed not generated. No stock photography, no floating UI windows, no people, no AI robots or brains. Should read as attention-grabbing at thumbnail size.",
+        "placement": "hero",
+        "alt_text": "A text prompt on the left transforms through an aqua energy burst into a labeled song structure waveform on the right, on a dark navy background.",
+        "caption": "Every tool on this list starts with a text prompt and ends with playable audio — no DAW or music theory required.",
+        "generated_at": "2026-07-18T03:19:41.046Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A bold, high-contrast visual of a text prompt transforming into a waveform and full song structure — representing the core magic of AI music generation at a glance.",
+        "purpose": "Grab attention immediately and communicate the article's central premise: type words, get music — no experience needed.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0-img2.jpg",
+        "prompt": "Editorial comparison diagram for a web article about AI music generators. Wide landscape format. Deep navy background (#0C242B). Three equal vertical columns divided by thin aqua (#63D8C6) lines. Each column represents a different AI music input/output mode. Left column: amber (#FFB454) text-cursor icon at top, center label in white reading 'Text Prompt → Full Song', bottom shows a stylized waveform with a thin vocal melody line overlay. Middle column: amber microphone/wavy-hum-lines icon at top, center label 'Hum or Melody → Instrumental', bottom shows a clean smooth instrumental waveform in aqua. Right column: amber layered-tracks icon at top, center label 'Prompt → Stems Only', bottom shows three separated horizontal track layers in amber, aqua, and white. All columns, icons, and labels sit inside a safe margin: at least 8% from left and right frame edges, at least 10% from top and bottom edges. Thin aqua dividers only between columns, not touching top or bottom frame edges. Style: clean editorial diagram, designed layout, no logos, no UI screenshots, no photography. High contrast, minimal, modern web-editorial.",
+        "placement": "s1",
+        "alt_text": "Three-column comparison diagram showing the three main input-output modes of AI music generators: text-to-song, hum-to-instrumental, and prompt-to-stems.",
+        "caption": "The tools differ most in what they ask for and what they give back — understanding this first saves a lot of trial and error.",
+        "generated_at": "2026-07-18T03:19:58.140Z",
+        "approved": true,
+        "role": "comparison",
+        "concept": "A side-by-side matrix comparing the three main input/output modes across AI music tools: text-to-song (Suno/Udio style), melody-humming input, and stem/instrumental-only output.",
+        "purpose": "Help beginners immediately understand that 'AI music generator' doesn't mean one thing — tools differ fundamentally in what they accept as input and what they produce as output.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img3",
+        "file": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0-img3.jpg",
+        "prompt": "Editorial workflow diagram for a web article, wide landscape format. Deep ink navy background (#071A1F). A clean left-to-right four-step flow with generous spacing. Four rounded-rectangle cards equally spaced horizontally across the frame. Between each card: a bold warm amber (#FFB454) rightward arrow. Each card has a dark navy fill with amber border. Inside each card: top-left corner shows a step number (01, 02, 03, 04) in aqua (#63D8C6) bold type. Center of each card: a simple white line icon above a short white label. Card 1 (leftmost): pencil icon, label 'Write a prompt'. Card 2: waveform/spark icon, label 'Generate'. Card 3: play-button circle icon, label 'Preview & tweak'. Card 4 (rightmost): download arrow icon, label 'Export'. The leftmost card's left edge and the rightmost card's right edge each sit at least 10% inward from the frame border. All cards are vertically centered with at least 12% margin above and below. Nothing touches or is cropped by any frame edge. Style: clean editorial diagram, instructional layout, designed not generated. No product screenshots, no photography, no logos.",
+        "placement": "s2",
+        "alt_text": "Four-step workflow diagram showing the beginner process for using an AI music generator: write a prompt, generate, preview and tweak, then export.",
+        "caption": "Suno's free tier lets you run through this loop as many times as daily credits allow — which is enough to get a feel for what the tool can and can't do.",
+        "generated_at": "2026-07-18T03:20:15.243Z",
+        "approved": true,
+        "role": "workflow",
+        "concept": "A four-step beginner workflow for using Suno (the article's recommended first tool): write a prompt → generate → preview and iterate → export — shown as a clean left-to-right flow diagram.",
+        "purpose": "Give first-time users a mental map of what the actual process looks like before they open the tool, reducing intimidation.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img4",
+        "file": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0-img4.jpg",
+        "prompt": "Editorial ranked-list diagram for a web article about AI music generators, portrait orientation (9:16). Deep navy background (#0C242B). Three horizontal tier bands stacked vertically, separated by thin aqua (#63D8C6) divider lines. Top band: bold amber (#FFB454) left-aligned label reading 'Start Here' above two rounded-rectangle badge pills side by side, each with white tool name text (Suno, Udio) and amber border on dark navy fill. Middle band: slightly smaller amber label 'Worth Exploring' above a row of four badge pills with aqua (#63D8C6) border, tool names in white (Loudly, Soundraw, Beatoven, Boomy). Bottom band: muted grey-blue label 'More Specialized' above a row of four smaller badge pills with muted border, names in light grey (Mubert, Aiva, Stable Audio, Melobytes). All elements sit inside a safe margin: at least 8% from left, right, top, and bottom frame edges. Badge pills and labels do not touch any frame edge. Aqua divider lines span the inner width between the left and right safe margins only. Style: clean editorial typographic diagram, modern web-editorial, no logos, no photography, no decorative icons. High contrast and readable.",
+        "placement": "s2",
+        "alt_text": "Vertical tier diagram organizing ten AI music generators into three beginner-friendliness levels: Start Here (Suno, Udio), Worth Exploring, and More Specialized.",
+        "caption": "Not every tool deserves equal time from a beginner — this breakdown shows where to start and where to go once you've outgrown it.",
+        "generated_at": "2026-07-18T03:20:34.326Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "A vertically stacked ranked-list visual organizing the ten tools into three tiers by beginner-friendliness: 'Start here', 'Worth exploring', and 'More specialized' — without using logos.",
+        "purpose": "Give readers a quick visual hierarchy of all ten tools so they know where to direct attention first, matching the article's ranked structure.",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img5",
+        "file": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0-img5.jpg",
+        "prompt": "Editorial explainer diagram, square (1:1) format, for a web article section about AI music licensing restrictions. Deep navy background (#071A1F). Square frame divided down the vertical center by a thin aqua (#63D8C6) line. Left half: centered amber (#FFB454) stylized waveform/music-note icon, overlaid with a bold amber-red circle-slash restriction symbol (like a 'no entry' icon). Below the icon: small white sans-serif label reading 'Free tier: personal use only'. Right half: centered aqua (#63D8C6) stylized waveform icon, overlaid with a bold aqua checkmark in a circle. Below: white label 'Paid tier: commercial use'. Both halves are internally padded so no icon, symbol, or label comes within 10% of any frame edge. The dividing line runs vertically from top safe margin to bottom safe margin, not touching the frame edges. Style: clean editorial explainer, iconic and minimal, designed not generated. No photography, no UI screenshots, no decorative gradients. High contrast, immediately readable.",
+        "placement": "s3",
+        "alt_text": "Split diagram contrasting free-tier AI music output marked as restricted for personal use only versus paid-tier output marked as cleared for commercial use.",
+        "caption": "Free tiers on nearly every tool explicitly prohibit commercial use — publishing or monetizing without upgrading can violate the platform's TOS.",
+        "generated_at": "2026-07-18T03:20:48.534Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "A warning-style explainer visual showing the commercial licensing gap: a free-tier output icon blocked by a red/amber restriction symbol, contrasted with a paid-tier output icon marked with a clear checkmark — illustrating why free-tier tracks can't be monetized.",
+        "purpose": "Visually communicate the critical TOS distinction between free and paid tiers before readers try to publish or sell their AI-generated tracks.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img6",
+        "file": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0-img6.jpg",
+        "prompt": "Editorial explainer 2x2 matrix diagram, square (1:1) format, for a web article about AI music generators for beginners. Deep ink navy background (#071A1F). Clean two-by-two grid created by two aqua (#63D8C6) axis lines — one horizontal, one vertical — each running through the center of the frame but stopping at least 10% from all frame edges. The horizontal axis line has a small aqua label on its far left end reading 'Text Input' and on its far right end reading 'Melody / Stem Input'. The vertical axis line has a small aqua label near its top reading 'Personal / Explore' and near its bottom reading 'Content Creation'. All axis labels are inside the safe margin. Each of the four quadrants contains: a small amber (#FFB454) icon centered in the quadrant and below it a short white 2-3 word descriptor. Top-left quadrant: headphones icon + 'Fun & Experimentation'. Top-right quadrant: musical note icon + 'Refine Your Ideas'. Bottom-left quadrant: video play-button icon + 'Background for Videos'. Bottom-right quadrant: layered tracks icon + 'Custom Soundtracks'. All icons and text are at least 10% from any frame edge. Style: clean editorial matrix diagram, typographic and iconic, designed not generated. No logos, no screenshots, no photography. High contrast, modern web-editorial.",
+        "placement": "s1",
+        "alt_text": "2x2 matrix mapping AI music generator use cases: Fun and Experimentation (text input, personal), Refine Your Ideas (melody input, personal), Background for Videos (text input, content creation), and Custom Soundtracks (stem input, content creation).",
+        "caption": "Your use case changes which type of tool is actually worth your time — most beginners want the bottom-left quadrant and don't realize it.",
+        "generated_at": "2026-07-18T03:21:03.396Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "A 2×2 matrix comparing the four main use-case quadrants for beginner AI music generators: personal/creative exploration vs. content creation, and text-input tools vs. melody/stem-based tools.",
+        "purpose": "Help beginners self-identify which type of tool fits their actual goal, mapping use case to tool type in one visual.",
+        "aspect_ratio": "1:1"
+      }
     ]
   }
 ]
