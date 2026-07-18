@@ -852,7 +852,7 @@
   {
     "id": "8c517454-bc7c-4b27-8282-bfb822638a78",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "Top 3 AI image generators for 2026",
       "article_type": "Top tools list",
@@ -864,7 +864,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:49:56.490Z",
-    "updated_at": "2026-07-18T00:50:27.057Z",
+    "updated_at": "2026-07-18T00:51:47.139Z",
     "brief": {
       "target_reader": "Someone who has heard about AI image generators but hasn't committed to one yet — maybe they've tried a free tool briefly or seen others' results, but they don't know which tool fits their actual use case or how to choose",
       "reader_outcome": "Know which one of three tools to try first based on what they're actually making, and feel confident enough to open an account and generate something today",
@@ -885,6 +885,170 @@
         "Whether any of the three shortlisted tools have changed ownership, been deprecated, or had major capability changes since mid-2024"
       ],
       "research_plan": "Prioritize each tool's official documentation and terms of service for availability, pricing tiers, and commercial rights — these change frequently and blog summaries go stale fast. For capability comparisons, look for hands-on reviews published in late 2025 or early 2026 from credible tech outlets (The Verge, Ars Technica, or similar). Avoid SEO roundups that list features without real comparisons. For the Flux/open-source angle, check Black Forest Labs' official site and recent coverage to assess whether it belongs in a top-3 for beginners or is still better suited to technical users. The goal is to make an actual judgment call on three tools, not list five with neutral bullet points."
-    }
+    },
+    "sources": [
+      {
+        "title": "Web vs Discord – Midjourney Official Documentation",
+        "publisher": "Midjourney (docs.midjourney.com)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/33390994570509-Logging-In-Connecting-Accounts",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney now has a full web app at midjourney.com accessible without Discord — users can sign in with Google or Discord",
+          "All subscription plans allow use on both the website and in Discord — Discord is no longer required",
+          "Google login was introduced as an option after August 2024; before that, Discord was the only login method",
+          "Every Midjourney plan lets users access both web and Discord platforms"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Free Trials – Midjourney Official Documentation",
+        "publisher": "Midjourney (docs.midjourney.com)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/27870399340173-Free-Trials",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "No free trial is currently available on Discord or the midjourney.com website",
+          "A limited trial is available only on the niji·journey mobile app (iOS and Android)",
+          "Midjourney is subscription-only on its main platform as of 2026"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Midjourney Pricing 2026: Plans From $10/mo (No Free Tier)",
+        "publisher": "pxlpeak.com (independent review, verified against official pricing June 2026)",
+        "url": "https://pxlpeak.com/blog/ai-tools/midjourney-pricing-plans",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney offers four paid tiers: Basic ($10/mo), Standard ($30/mo), Pro ($60/mo), Mega ($120/mo) — annual billing is 20% cheaper",
+          "Free trial was removed in late 2024 (no free credits or trial periods as of February 2026)",
+          "All paid plans include commercial usage rights — users own generated images and can use them for client work, ads, and products",
+          "Companies with more than $1 million in annual revenue must be on Pro or Mega to use Midjourney commercially",
+          "Basic plan does not grant Stealth Mode; Pro and Mega plans include private/stealth generation"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Adobe Firefly Revolutionizes Creative Ideation with New Mobile App (Press Release)",
+        "publisher": "Adobe (news.adobe.com)",
+        "url": "https://news.adobe.com/news/2025/06/adobe-firefly-revolutionizes-creative-ideation-new-mobile-app",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly is available as both a standalone experience AND as part of Creative Cloud — confirmed dual access model",
+          "Firefly has iOS and Android mobile apps launched in June 2025",
+          "Content created in Firefly automatically syncs with Creative Cloud accounts",
+          "Firefly integrates third-party AI models including Google Imagen 3 & 4, OpenAI image generation, and Black Forest Labs Flux 1.1 Pro",
+          "The Firefly web and mobile apps are also included in the Creative Cloud Pro plan"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Adobe Firefly Product Page (Official)",
+        "publisher": "Adobe (adobe.com/products/firefly.html)",
+        "url": "https://www.adobe.com/products/firefly.html",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly has a free plan that provides users with free daily generations",
+          "Paid plans offer more generative credits; credits reset each billing cycle",
+          "Firefly models are trained on licensed content and public domain content — not on Creative Cloud subscribers' personal content",
+          "Firefly accepts text prompts in 100+ languages",
+          "Firefly creations sync automatically with Adobe Creative Cloud account"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Adobe Firefly: The Next Evolution of Creative AI Is Here (Adobe Blog)",
+        "publisher": "Adobe (blog.adobe.com)",
+        "url": "https://blog.adobe.com/en/publish/2025/04/24/adobe-firefly-next-evolution-creative-ai-is-here",
+        "source_type": "company announcement",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe's Firefly now integrates non-Adobe AI models including Google Imagen3/Veo2, OpenAI GPT image generation, and Black Forest Labs Flux 1.1 Pro within the Creative Cloud ecosystem",
+          "Adobe's own Firefly models are described as 'commercially safe and IP-friendly for production use'",
+          "Firefly Image Model 4 was introduced delivering high-resolution image generation"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "ChatGPT + DALL-E 2026: What Changed & Free Limits",
+        "publisher": "aitoolradar.io (independent review, verified March 2026)",
+        "url": "https://aitoolradar.io/guides/dall-e",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "DALL-E 3 was replaced by GPT-4o native image generation inside ChatGPT in December 2025 — what users now see in ChatGPT is GPT-4o output, not technically DALL-E 3",
+          "DALL-E 3 deprecation on the API was announced for May 2026",
+          "ChatGPT free tier DOES include limited image generations (queue-based processing) — approximately 2–3 images per 24-hour window",
+          "ChatGPT Plus ($20/mo) and higher plans offer more image generation with fewer restrictions",
+          "Commercial usage rights are granted to all paid ChatGPT tiers"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "OpenAI DALL-E 3 Deprecated May 12, 2026 — DataCamp",
+        "publisher": "DataCamp (datacamp.com)",
+        "url": "https://www.datacamp.com/blog/best-free-ai-image-generators",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "OpenAI deprecated DALL-E 3 on May 12, 2026 — ChatGPT image generation now uses GPT Image 2 (gpt-image-2)",
+          "FLUX.2 (Black Forest Labs) family launched in November 2025: Dev is a 32B-parameter open-weight model; Klein is faster and designed for consumer hardware; Pro is API-only",
+          "FLUX.1 Schnell and FLUX.2 Klein are Apache 2.0 licensed, allowing free commercial use",
+          "FLUX Dev variants carry non-commercial licenses — users should verify which variant a platform is using before commercial deployment"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Best AI Image Generators 2026: Midjourney vs DALL-E vs Stable Diffusion",
+        "publisher": "toolradar.com (independent review)",
+        "url": "https://toolradar.com/guides/best-ai-image-generators",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Flux (Black Forest Labs) is editorially positioned as an open-weights model matching Midjourney on photorealism at lower cost — a genuine top-tier contender in 2026",
+          "Stable Diffusion remains the free self-hostable base model, but most serious SD users have migrated to Flux by 2026",
+          "Flux's open-weights release in 2024 + commercial Pro tier in 2025 'fundamentally changed the economics' of AI image generation",
+          "The 2026 model landscape splits into: proprietary quality leaders (Midjourney, Flux Pro, Ideogram), accessible generalists (DALL-E, Adobe Firefly), and open-weights community (Flux Schnell, SD variants)",
+          "Midjourney Standard ($30/mo) described as 'the path of least resistance to beautiful images' for most users; Flux recommended for developers and API-driven use cases"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-18"
+      },
+      {
+        "title": "Top 6 AI Image Generators Compared (2026) — Tool Directory",
+        "publisher": "tooldirectory.ai (independent review, May 2026)",
+        "url": "https://tooldirectory.ai/best-ai-collections/top-6-ai-image-generators-compared-2026",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Flux by Black Forest Labs is confirmed as a genuine top-tier contender in 2026 — 'what serious creators reach for when Midjourney's house style doesn't fit and DALL-E's filter is in the way'",
+          "Stability AI raised emergency funding led by Sean Parker in 2024 after a leadership reset — Stable Diffusion ecosystem remains large (200M+ model downloads) but the lab has been turbulent",
+          "Flux Pro variants (1.1 Pro, Ultra, Kontext) lead most prompt-adherence benchmarks",
+          "DALL-E inside ChatGPT 'owns the easiest entry point' editorially; Midjourney 'owns aesthetics'; Flux 'owns power users and prompt adherence'",
+          "Commercial usage rights granted to all paid ChatGPT tiers for DALL-E/GPT image outputs"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-18"
+      }
+    ],
+    "unverifiable_claims": [
+      "DALL-E 3 is specifically the model used in ChatGPT as of 2026 — UNVERIFIABLE AND OUTDATED: Multiple independent sources and DataCamp confirm DALL-E 3 was deprecated on May 12, 2026, and replaced by GPT Image 2 (gpt-image-2) inside ChatGPT. The guide should refer to 'OpenAI's image generation via ChatGPT' rather than 'DALL-E 3' specifically, or flag this model transition.",
+      "Midjourney free tier reintroduction — UNVERIFIABLE: No evidence of a free tier being reintroduced. Official docs and multiple independent sources confirm it remains paid-only since March 2023 (with very limited niji·journey mobile trial only). Writer should not imply a free tier exists.",
+      "Exact Adobe Firefly standalone pricing in USD for 2026 — PARTIALLY UNVERIFIABLE: Adobe's product page confirms a free tier with daily credits and paid plans exist, and Creative Cloud Pro includes Firefly; however, the specific current standalone Firefly plan price (cited variously as ~$9.99/mo) was found only in third-party sources, not confirmed directly from Adobe's current pricing page. Writer should direct readers to adobe.com/creativecloud/plans for current pricing.",
+      "Stable Diffusion (Stability AI) remaining a 'strong' competitive option vs. Flux — EDITORIALLY CONTESTED: Multiple independent sources note that most serious SD users have migrated to Flux, and Stability AI underwent a leadership and financial crisis in 2024. Stable Diffusion's ecosystem tooling (ComfyUI, Automatic1111) remains large, but the platform itself is not described as 'top 3' by any 2026 source reviewed. Writer should frame SD as a legacy/community option rather than a current top-3 contender.",
+      "Specific commercial rights terms for Adobe Firefly free tier vs. paid tier — PARTIALLY UNVERIFIABLE: Adobe's product page states the free plan exists and paid plans offer more credits, and that models are trained on licensed data (commercially safe). However, the specific ToS language distinguishing commercial rights between free and paid Firefly tiers was not confirmed from Adobe's official terms page directly. Writer should link to Adobe's Firefly terms page and note this requires direct verification.",
+      "Whether ChatGPT free-tier image outputs carry commercial use rights — PARTIALLY UNVERIFIABLE: One independent source (jenova.ai) states ChatGPT free tier allows commercial use; however, this was not confirmed against OpenAI's current Terms of Use directly. Writer should soften this claim and direct readers to OpenAI's usage policies."
+    ]
   }
 ]
