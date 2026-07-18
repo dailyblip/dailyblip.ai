@@ -3077,7 +3077,7 @@
   {
     "id": "da373217-6d0c-45bf-b802-fd66a19d540e",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "OpenAI's New Codex Keyboard explained - what does it do and how can you use it?",
       "article_type": "Practical guide",
@@ -3089,7 +3089,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T05:00:05.750Z",
-    "updated_at": "2026-07-18T05:01:40.755Z",
+    "updated_at": "2026-07-18T05:02:24.963Z",
     "brief": {
       "target_reader": "A developer or technically curious creator who has heard about OpenAI's Codex CLI/keyboard tool but has no idea what it actually does day-to-day or how to get started with it",
       "reader_outcome": "Understand what Codex CLI is, what kinds of tasks it's actually useful for, and feel confident enough to install it and run their first command",
@@ -3275,6 +3275,48 @@
       "Specific current pricing tiers and rate limits for Codex CLI — these change frequently and could not be pinned to a stable verified figure at time of research. The writer should link to the official pricing page rather than state specific numbers.",
       "Whether a 'sandbox mode' is a named, discrete toggle — the sandboxing is better described as a configurable approval policy with permission profiles (e.g., ':workspace'), not a single on/off 'sandbox mode' toggle. The writer should soften any claim that implies a simple sandbox on/off switch.",
       "Windows native support without WSL — earlier sources described Windows as requiring WSL2, but the official GitHub README now lists a native Windows PowerShell install script. The current state of full native Windows support (vs. WSL-only) should be treated as potentially evolving and the writer should note it may vary by version."
-    ]
+    ],
+    "article": {
+      "title": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
+      "alternative_titles": [
+        "What Is OpenAI Codex CLI? A Beginner's Guide to the Terminal Coding Agent",
+        "OpenAI Codex CLI Explained: First Steps for Curious Developers"
+      ],
+      "slug": "openai-codex-cli-explained-how-to-get-started",
+      "dek": "It's not a keyboard. It's a terminal agent that reads your codebase, writes patches, and asks before it does anything scary. Here's what that means in practice.",
+      "meta_description": "OpenAI Codex CLI is a terminal-based coding agent that reads, edits, and runs code in your project. Here's what it actually does and how to install it in minutes.",
+      "quick_answer": "Codex CLI is an open-source terminal tool from OpenAI that acts as a coding agent inside your project directory — it reads your files, suggests and applies code changes, and runs shell commands, all with your approval. It requires a paid ChatGPT plan or an OpenAI API key.",
+      "introduction": "First, a clarification: there's no official OpenAI product called \"Codex Keyboard.\" That phrase is a colloquial mash-up that's been floating around, probably conflating Codex with IDE keyboard shortcuts or autocomplete tools. The real product is **Codex CLI**, a terminal-based coding agent that OpenAI open-sourced in April 2025. It reached general availability in October 2025 and has been actively evolving since. If you've heard the name and wondered what it actually does, this is the starting point.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "A terminal agent, not an autocomplete tool",
+          "body_markdown": "Codex CLI is not a plugin that completes your next line of code as you type. It's closer to a junior developer you can assign a task to: you describe what you want in plain English, and it reads your project files, proposes changes as a reviewable diff, and can execute shell commands — with your sign-off before anything consequential happens.\n\nThe underlying models are from OpenAI's GPT-5-Codex family (the exact default shifts as OpenAI updates things; you can pin a specific model via a config file or a `--model` flag if you need consistency). These are purpose-built for code work: long-context understanding, reliable tool use, and the ability to navigate a large repository over an extended session without losing the thread.\n\nCrucially, it works on your *existing* codebase. This isn't a tool for generating greenfield boilerplate and pasting it in — it's designed to read what's already there and make targeted edits. That's what separates it from a chatbot you copy-paste from.\n\nOne thing worth knowing upfront: Codex is a product *layer*, not a single model. The same underlying infrastructure powers the CLI, IDE extensions for VS Code, Cursor, and Windsurf, a desktop app, and a cloud-based version at chatgpt.com/codex that can work against GitHub repos in the background. The CLI is the most direct way in, and the one this guide covers.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "What it's actually good for",
+          "body_markdown": "The tasks Codex CLI handles best are ones where the context lives in files you already have. Ask it to refactor a function to handle edge cases, add error handling to an API route, write tests for an existing module, or explain why a build script is failing — and it will read the relevant files, reason about them, and produce a diff you can accept or reject.\n\nIt's less suited to tasks that require it to know your deployment environment, company-specific tooling it's never seen, or anything that needs a human judgment call about product direction. Think of it as a capable generalist who can read code fluently but needs good prompts and clear scope.\n\nThe approval flow is worth understanding before you start. By default, Codex operates within a sandboxed environment: it can edit files in your working directory and use cached web search, but it will pause and ask permission before running commands that touch the network or require elevated access. This isn't a single on/off switch — it's a configurable approval policy. If you want to give it more autonomy (or less), that's adjustable, and workspace admins on Business and Enterprise plans can enforce safer defaults across a team.\n\nOne thing it is *not*: editor-bound. Unlike Cursor or GitHub Copilot, it doesn't live inside an IDE. It runs in any terminal, which makes it usable with whatever editor setup you already have.",
+          "tools": []
+        },
+        {
+          "id": "s3",
+          "heading": "Installing it and running your first command",
+          "body_markdown": "**What you need before you start:** A paid ChatGPT plan (Plus, Pro, Business, Edu, or Enterprise) gets you access without a separate API key. If you'd rather use an API key directly, that's supported too (set `OPENAI_API_KEY` in your environment). There's no standalone free tier for the CLI itself — you're drawing from either your ChatGPT plan quota or API credits.\n\n**Install options:**\n\n- npm: `npm i -g @openai/codex`\n- Homebrew: `brew install --cask codex`\n- Windows: a native PowerShell install script is available via the GitHub repo, though WSL2 has historically been the more stable path on Windows — check the repo's README for the current recommendation.\n\n**Get it running:**\n\n1. Navigate to a project directory you want to work in.\n2. Run `codex` to open the interactive session, or `codex \"<your task description>\"` to give it an instruction immediately.\n3. If you're signing in with a ChatGPT account rather than an API key, it will prompt you to authenticate the first time.\n4. Codex will read your files, show you a proposed diff, and wait for your approval before applying anything.\n\nA useful first task: point it at a function that's bothering you and ask it to add proper error handling. You'll see what the review-and-approve loop feels like before trusting it with anything more significant.\n\nThe official repo is [github.com/openai/codex](https://github.com/openai/codex), licensed under Apache-2.0. That's also where you'll find the most current installation instructions, since the setup details have evolved as the tool has matured.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "\"Codex Keyboard\" isn't an official product — the real tool is Codex CLI, a terminal-based coding agent from OpenAI.",
+        "It reads and edits your existing project files, not just generates new code from scratch.",
+        "Codex asks for permission before running potentially risky commands — the approval flow is configurable, not a simple on/off switch.",
+        "Access requires a paid ChatGPT plan or an OpenAI API key; there's no standalone free tier.",
+        "Install via npm or Homebrew, navigate to your project, and run your first task with a single command."
+      ],
+      "conclusion": "Codex CLI is genuinely different from the autocomplete tools most developers already have. Whether the review-and-approve loop fits your workflow is something you'll only know after trying it on a real task — and the install is short enough that trying it costs less than reading another overview article. Start with something small and observable, like adding tests to a function you already understand, so you can actually evaluate what it produces.",
+      "methodology_disclosure": "This guide was researched using OpenAI's official GitHub repository for Codex CLI, two OpenAI announcement posts (the general availability announcement and the Codex upgrades post), official developer documentation at developers.openai.com/codex, and several independent reviews and write-ups from sources including freeCodeCamp, Augment Code, and aiwiki.ai. No hands-on testing was conducted by dailyblip for this article; all claims about behavior, approval flows, and capabilities reflect what sources describe rather than direct verification. Given that Codex's default model and some installation details have changed multiple times since launch, readers should treat the GitHub README as the authoritative source for current setup instructions.",
+      "last_reviewed_date": "July 18, 2026"
+    }
   }
 ]
