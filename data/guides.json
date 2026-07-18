@@ -2244,5 +2244,22 @@
         "aspect_ratio": "9:16"
       }
     ]
+  },
+  {
+    "id": "a6916e41-b9ec-48ae-a7da-9453e68f25b5",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "The best AI image generators to try right now",
+      "article_type": "Top tools list",
+      "target_audience": "people curious about AI image tools",
+      "target_length": "Standard",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-18T00:01:42.005Z",
+    "updated_at": "2026-07-18T00:01:42.005Z"
   }
 ]
