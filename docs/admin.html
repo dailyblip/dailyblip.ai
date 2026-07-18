@@ -1088,13 +1088,18 @@ function openGuide(id){
       <textarea data-sec="${i}" data-field="body_markdown" class="gSecField" rows="6">${esc(s.body_markdown)}</textarea>
     </div>`).join("");
 
+  const selectedCount = (g.images || []).filter(img => img.approved).length;
   const imagesHtml = (g.images || []).length
-    ? `<div class="panel"><h3>Images (${g.images.length})</h3>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:10px">
-          ${g.images.map(img => `
-            <div>
-              <img src="/guides/${esc(img.file)}" style="width:100%;border-radius:6px;border:1px solid var(--line-2)" alt="${esc(img.alt_text)}">
-              <div class="tip" style="margin-top:4px">${esc(img.placement)}</div>
+    ? `<div class="panel"><h3>Images (${selectedCount} of ${g.images.length} selected)</h3>
+        <p class="tip" style="margin:0 0 10px">Check the ones to include in the published guide \u2014 uncheck any you don't want.</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px">
+          ${g.images.map((img, i) => `
+            <div style="border:1px solid ${img.approved ? "var(--amber)" : "var(--line-2)"};border-radius:8px;padding:8px;transition:border-color .15s ease">
+              <img src="/guides/${esc(img.file)}" style="width:100%;border-radius:6px;display:block" alt="${esc(img.alt_text)}">
+              <label style="display:flex;align-items:center;gap:6px;margin-top:8px;cursor:pointer">
+                <input type="checkbox" class="gImgSelect" data-img-index="${i}" ${img.approved ? "checked" : ""} style="width:auto">
+                <span class="tip">${esc(img.role || img.placement)}</span>
+              </label>
             </div>`).join("")}
         </div>
       </div>` : "";
@@ -1128,6 +1133,13 @@ function openGuide(id){
     </div>` : ""}`;
 
   $("#gSaveEdits")?.addEventListener("click", () => saveGuideEdits(id, false));
+  $$(".gImgSelect").forEach(cb => cb.addEventListener("change", (e) => {
+    const idx = Number(e.target.dataset.imgIndex);
+    if (g.images[idx]) g.images[idx].approved = e.target.checked;
+    // Border color reflects selection state live, without needing a
+    // full panel re-render for something this small.
+    e.target.closest("div[style*='border']").style.borderColor = e.target.checked ? "var(--amber)" : "var(--line-2)";
+  }));
   $("#gApprovePublish")?.addEventListener("click", () => saveGuideEdits(id, true));
   $("#gRecheck")?.addEventListener("click", () => rerunFactCheck(id));
   $("#gOverrideCheck")?.addEventListener("change", (e) => { $("#gPublishAnyway").disabled = !e.target.checked; });
