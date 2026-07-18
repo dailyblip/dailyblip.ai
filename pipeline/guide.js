@@ -213,7 +213,7 @@ Write body_markdown as real markdown: **bold**, *italic*, [text](url) links, "- 
 
 Every claim beyond common knowledge must trace to a source in the provided source list \u2014 if a claim isn't supported, soften it into an editorial observation or drop it entirely rather than forcing in a technical detail the guide doesn't need. Do not use any claim listed in unverifiable_claims as if verified.
 
-Tool cards (the "tools" array within a section) should be rare, not a per-section default \u2014 include one only when a specific named tool genuinely earns its own callout, and keep strengths/limitations to the single most useful point each. Most sections don't need a tool card at all; mention tools in the prose instead when that reads more naturally.
+Tool cards (the "tools" array within a section): how often to use these depends on the article type. For "Top tools list" or "Tool comparison" specifically, a card PER TOOL being presented is the expected default \u2014 that's the actual structure those article types exist for, so most or all of the tools you mention in those guides should get their own card with name, url, description, and the single most useful strength/limitation each. For every OTHER article type (Practical guide, Beginner explainer, Creator workflow, Monetization guide, Rights and platform guide), tool cards should be rare \u2014 include one only when a specific named tool genuinely earns its own callout, and mention tools in the prose instead when that reads more naturally.
 
 SELF-EDIT PASS \u2014 before returning your answer, review your own draft against this checklist and revise anything that fails it:
 1. Delete any sentence generic enough to appear in an article about any AI tool.
