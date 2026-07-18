@@ -1278,12 +1278,21 @@ async function uploadGuidePhoto(id) {
   btn.disabled = true;
   try {
     const base64 = await resizeImageForUpload(file);
-    const uploadNum = (g.images || []).filter(img => img.role === "upload").length + 1;
-    const filename = `${id}-upload-${uploadNum}.jpg`;
+    // Timestamp, not a count of existing uploads \u2014 counting local
+    // state was the actual bug here: if a prior attempt's image file
+    // wrote successfully but the follow-up guides.json save didn't (or
+    // you tried twice), the count goes stale and a retry recomputes the
+    // SAME filename, colliding with a file that's already on GitHub
+    // from the earlier attempt (which is exactly what "sha wasn't
+    // supplied" means \u2014 GitHub sees an existing file and demands proof
+    // you have its current version before overwriting). A timestamp
+    // can't collide with a previous attempt no matter what state
+    // guides.json is in.
+    const filename = `${id}-upload-${Date.now()}.jpg`;
     await writeBinaryFile(`docs/guides/${filename}`, base64, `admin: upload photo for guide ${id}`);
 
     const newImage = {
-      id: `upload${uploadNum}`, file: filename,
+      id: `upload-${Date.now()}`, file: filename,
       placement: $("#gPhotoPlacement").value,
       alt_text: $("#gPhotoAlt").value || "",
       caption: $("#gPhotoCaption").value || "",
