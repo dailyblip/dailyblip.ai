@@ -2182,8 +2182,8 @@
   },
   {
     "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
-    "status": "in_progress",
-    "stage": "Re-checking",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Top AI content creator tools for 2026",
       "article_type": "Top tools list",
@@ -2195,7 +2195,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T03:39:08.288Z",
-    "updated_at": "2026-07-18T03:47:36.251Z",
+    "updated_at": "2026-07-18T03:55:02.618Z",
     "brief": {
       "target_reader": "Someone who makes things — videos, music, writing, images, or some mix — and keeps hearing about AI tools but hasn't committed to any yet. They want to know which ones are actually worth their time in 2026, not a list of every tool that exists.",
       "reader_outcome": "Walk away knowing 4-5 AI tools genuinely useful for content creation, which type of creator each one suits best, and enough to pick one and try it today.",
@@ -2500,13 +2500,13 @@
         {
           "id": "s3",
           "heading": "Pick one and actually try it",
-          "body_markdown": "The honest failure mode for new AI tool users isn't picking the wrong one. It's spending two hours comparing options and not making anything.\n\nMatch the tool to what you already make:\n\n- **You write** (essays, scripts, captions, copy): start with ChatGPT. It's the fastest path from idea to first draft.\n- **You make images** (for clients, products, or commercial use): Adobe Firefly's licensed training data is worth prioritizing from the start if you publish commercially. If it's personal or artistic, Midjourney has the stronger aesthetic range, but unlike the five tools above, it requires a paid subscription and has no free plan.\n- **You make video** (social, short-form, experimental): Runway's free trial is enough to understand what AI video can actually do. Expect to hit the credit wall fast, but you'll know within an hour whether it's worth upgrading.\n- **You do voice, narration, or audio content**: ElevenLabs free tier is enough to hear the quality difference. Just know you can't publish those outputs commercially until you're on a paid plan.\n- **You want to experiment across formats without committing**: Google AI Studio is the most latitude for zero dollars, though it rewards some willingness to poke around.\n\nAll five featured tools are accessible without a credit card to start.",
+          "body_markdown": "The honest failure mode for new AI tool users isn't picking the wrong one. It's spending two hours comparing options and not making anything.\n\nMatch the tool to what you already make:\n\n- **You write** (essays, scripts, captions, copy): start with ChatGPT. It's the fastest path from idea to first draft.\n- **You make images** (for clients, products, or commercial use): Adobe Firefly's licensed training data is worth prioritizing from the start if you publish commercially. If it's personal or artistic, Midjourney has the stronger aesthetic range, but unlike the five tools above, it requires a paid subscription and has no free plan.\n- **You make video** (social, short-form, experimental): Runway's free trial is enough to understand what AI video can actually do. You'll hit the credit wall fast since those credits don't reset, but you'll know within an hour whether it's worth upgrading.\n- **You do voice, narration, or audio content**: ElevenLabs free tier is enough to hear the quality difference. Just know you can't publish those outputs commercially until you're on a paid plan.\n- **You want to experiment across formats without committing**: Google AI Studio is the most latitude for zero dollars, though it rewards some willingness to poke around.\n\nAll five tools let you sign up without a credit card, though Runway's free tier is notably thinner than the others — one-time credits, no monthly refresh, watermarked output.",
           "tools": []
         },
         {
           "id": "s4",
           "heading": "Before you publish or monetize anything",
-          "body_markdown": "Commercial rights vary significantly across tools and tiers, and this is worth sorting out before you build a workflow around something.\n\n**ChatGPT:** OpenAI's terms permit commercial use of generated text and images on both free and paid tiers. What they don't provide is legal indemnification, if a copyright dispute arises over output, you're on your own.\n\n**Adobe Firefly:** Enterprise users get copyright indemnification, which is the headline differentiator. Free-tier users get commercial use rights but not that legal backstop. Check your plan before pitching client work.\n\n**Runway:** Free-tier outputs are watermarked and the terms restrict commercial use to paid plans. Verify current terms on Runway's site before publishing anything.\n\n**ElevenLabs:** This one is explicit. Free-tier audio output is not licensed for commercial use and requires attribution (elevenlabs.io or 11.ai). Commercial rights start at the Starter paid tier. Per attorney analysis of ElevenLabs' terms, paid users retain commercial rights to generated audio even after canceling.\n\n**Google Gemini / AI Studio:** Google's terms generally permit commercial use of outputs, but AI Studio usage falls under Google Cloud terms, which are worth reading if you're building a product rather than just experimenting.\n\n**Suno (AI music, not covered in the tool cards above):** Worth knowing: Suno's free tier restricts output to non-commercial use only, which catches a lot of creators off guard when they try to use AI-generated music in monetized videos.\n\nFor anything you plan to sell, license, or publish under a brand, check the current terms directly on each tool's site. These details change with plan updates, and no third-party roundup, including this one, stays current long enough to be your final source.",
+          "body_markdown": "Commercial rights vary significantly across tools and tiers, and this is worth sorting out before you build a workflow around something.\n\n**ChatGPT:** OpenAI's terms permit commercial use of generated text and images on both free and paid tiers. What they don't provide is legal indemnification, if a copyright dispute arises over output, you're on your own.\n\n**Adobe Firefly:** Enterprise users get copyright indemnification, which is the headline differentiator. Free-tier users get commercial use rights but not that legal backstop. Check your plan before pitching client work.\n\n**Runway:** Free-tier outputs are watermarked and the terms restrict commercial use to paid plans. Verify current terms on Runway's site before publishing anything.\n\n**ElevenLabs:** This one is explicit. Free-tier audio output is not licensed for commercial use and requires attribution (elevenlabs.io or 11.ai). Commercial rights start at the Starter paid tier. According to a third-party review of ElevenLabs' terms on Terms.Law, paid users retain commercial rights to generated audio even after canceling — but treat that as a starting point for your own review of the current terms, not settled legal advice.\n\n**Google Gemini / AI Studio:** Google's terms generally permit commercial use of outputs, but AI Studio usage falls under Google Cloud terms, which are worth reading if you're building a product rather than just experimenting.\n\n**Suno (AI music, not covered in the tool cards above):** Worth knowing: Suno's free tier restricts output to non-commercial use only, which catches a lot of creators off guard when they try to use AI-generated music in monetized videos.\n\nFor anything you plan to sell, license, or publish under a brand, check the current terms directly on each tool's site. These details change with plan updates, and no third-party roundup, including this one, stays current long enough to be your final source.",
           "tools": []
         }
       ],
@@ -2527,65 +2527,67 @@
           "severity": "high",
           "section_id": "s2",
           "original_text": "free tier runs on a rate-limited GPT-5.x model with basic image generation",
-          "issue": "Sources indicate the ChatGPT free tier default model is GPT-4o mini (or equivalent mini-tier), not a GPT-5.x model; the article's own sources conflict on this point and the claim cannot be verified as stated.",
+          "issue": "Source (PEC Collective, April 2026) indicates ChatGPT free tier defaults to GPT-4o mini, not a GPT-5.x model; the claim of a GPT-5.x free tier model is not supported by the cited sources and may be inaccurate.",
           "supporting_source_url": "https://pecollective.com/blog/ai-free-tiers-2026/"
         },
         {
           "severity": "high",
-          "section_id": "s3",
-          "original_text": "All five featured tools are accessible without a credit card to start",
-          "issue": "Midjourney is listed in this section as an image option but has no free plan and requires a paid subscription — the article itself acknowledges this — making the blanket 'no credit card' claim false as written.",
-          "supporting_source_url": "https://toolchase.com/blog/free-ai-tools/"
+          "section_id": "s2",
+          "original_text": "Inline editing (replacing the old Canvas feature) feels natural for iterating",
+          "issue": "The OpenAI source states Canvas is being sunset only for GPT-5.5 Instant and Thinking and paid users can still use Canvas temporarily via legacy models — describing it as fully replaced is inaccurate and implies hands-on testing the methodology disclosure explicitly disavows.",
+          "supporting_source_url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
         },
         {
-          "severity": "medium",
+          "severity": "high",
           "section_id": "s2",
-          "original_text": "Gen-4 and Gen-4.5 let you generate short clips from text prompts",
-          "issue": "The article describes Gen-4 as current but sources note Runway's free plan outputs are 720p watermarked with no monthly refresh; the article does not distinguish which generation tiers are available on free vs. paid, risking misleading readers about free-tier access to Gen-4/4.5.",
-          "supporting_source_url": "https://www.socialcrawl.dev/blog/ai-video-generator"
-        },
-        {
-          "severity": "medium",
-          "section_id": "s2",
-          "original_text": "Canva's AI video feature is now powered by Google Veo 3, so Gemini's video capabilities",
-          "issue": "This claim conflates Canva's use of Veo 3 with Gemini's own video output capabilities; Canva being a third-party integration does not mean Gemini/AI Studio itself offers consumer video generation, which is misleading as a listed 'strength' of the Gemini tool card.",
-          "supporting_source_url": "https://www.socialcrawl.dev/blog/ai-video-generator"
-        },
-        {
-          "severity": "medium",
-          "section_id": "s2",
-          "original_text": "full commercial indemnification applies to enterprise plans, not free-tier users",
-          "issue": "The article body says free-tier users get 'commercial use rights but not that legal backstop' (s4), but the Firefly tool card limitation implies indemnification is entirely absent for free users without clarifying they still have commercial use rights — the two sections are inconsistent.",
+          "original_text": "Full commercial indemnification applies to enterprise plans, not free-tier users",
+          "issue": "The article states free-tier Firefly users get commercial use rights but not indemnification, yet the sources only confirm enterprise indemnification — whether free-tier users have any commercial use rights at all is not verified by a cited source and is presented as settled fact.",
           "supporting_source_url": "https://windowsnews.ai/article/free-tiers-heat-up-the-2026-ai-creativity-tools-race.428489"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "All five tools let you sign up without a credit card",
+          "issue": "Runway's free tier is listed among the five, but the FelloAI source indicates Runway requires no credit card for signup; however, this claim bundles Midjourney (mentioned in the same section) which has no free plan at all — the sentence is ambiguous and could mislead readers about Midjourney requiring no credit card.",
+          "supporting_source_url": "https://felloai.com/ai-free-trials/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Gemini Flash API offers up to 1,500 requests/day via AI Studio",
+          "issue": "This figure comes from an independent review (AI Tool Discovery, May 2026), not official Google documentation, and API rate limits change frequently; citing it as a specific reliable number without flagging its source tier is potentially misleading.",
+          "supporting_source_url": "https://www.aitooldiscovery.com/guides/free-ai-tools"
         },
         {
           "severity": "medium",
           "section_id": "s2",
           "original_text": "Gemini 3 Pro Preview was already deprecated and replaced within months",
-          "issue": "The source states Gemini 3 Pro Preview was deprecated March 9, 2026 and replaced by Gemini 3.1 Pro released February 2026 — citing this as a limitation of AI Studio when it reflects normal versioning cadence across all AI tools is an unsupported negative framing.",
+          "issue": "The deprecation tracker source shows Gemini 3 Pro Preview was deprecated March 9, 2026 and replaced by Gemini 3.1 Pro — framing this as evidence of instability is a fair observation, but citing a third-party tracker (not Google's official docs) for a specific product-level claim about deprecation speed is not sufficiently sourced.",
           "supporting_source_url": "https://presenc.ai/research/ai-model-deprecation-tracker-2026"
         },
         {
           "severity": "medium",
-          "section_id": "key_takeaways",
-          "original_text": "All five tools (except Midjourney) have free tiers accessible without a credit card",
-          "issue": "Midjourney is not one of the five featured tools — it is mentioned as an aside in s3 — so the parenthetical exception is confusing and implies Midjourney is among the five, which it is not.",
-          "supporting_source_url": ""
+          "section_id": "s4",
+          "original_text": "According to a third-party review of ElevenLabs' terms on Terms.Law, paid users retain commercial rights",
+          "issue": "The article attributes perpetual post-cancellation commercial rights to a single third-party attorney analysis rather than ElevenLabs' own current terms; the methodology disclosure acknowledges terms change, making this a claim that may already be outdated and should be sourced directly from ElevenLabs.",
+          "supporting_source_url": "https://terms.law/ai-output-rights/elevenlabs/"
         },
         {
           "severity": "low",
-          "section_id": "s4",
-          "original_text": "Per attorney analysis of ElevenLabs' terms, paid users retain commercial rights",
-          "issue": "Citing 'attorney analysis' from a third-party site (Terms.Law) as authoritative for a business-decision claim without noting readers should verify against ElevenLabs' current official terms creates false confidence in a claim that may change with plan updates.",
-          "supporting_source_url": "https://terms.law/ai-output-rights/elevenlabs/"
+          "section_id": "s2",
+          "original_text": "Canva's AI video feature is now powered by Google Veo 3, so Gemini's video",
+          "issue": "This claim about Canva's Veo 3 integration is listed as a strength of Gemini/AI Studio, but Canva is a separate product not part of Google AI Studio — conflating Canva's Veo 3 integration as evidence of Gemini's consumer video reach is a misleading logical leap.",
+          "supporting_source_url": "https://www.socialcrawl.dev/blog/ai-video-generator"
         }
       ],
-      "checked_at": "2026-07-18T03:44:00.239Z",
+      "checked_at": "2026-07-18T03:55:02.617Z",
       "revised": true
     },
     "warnings": [
-      "s2: Sources indicate the ChatGPT free tier default model is GPT-4o mini (or equivalent mini-tier), not a GPT-5.x model; the article's own sources conflict on this point and the claim cannot be verified as stated.",
-      "s3: Midjourney is listed in this section as an image option but has no free plan and requires a paid subscription — the article itself acknowledges this — making the blanket 'no credit card' claim false as written."
+      "s2: Source (PEC Collective, April 2026) indicates ChatGPT free tier defaults to GPT-4o mini, not a GPT-5.x model; the claim of a GPT-5.x free tier model is not supported by the cited sources and may be inaccurate.",
+      "s2: The OpenAI source states Canvas is being sunset only for GPT-5.5 Instant and Thinking and paid users can still use Canvas temporarily via legacy models — describing it as fully replaced is inaccurate and implies hands-on testing the methodology disclosure explicitly disavows.",
+      "s2: The article states free-tier Firefly users get commercial use rights but not indemnification, yet the sources only confirm enterprise indemnification — whether free-tier users have any commercial use rights at all is not verified by a cited source and is presented as settled fact.",
+      "s3: Runway's free tier is listed among the five, but the FelloAI source indicates Runway requires no credit card for signup; however, this claim bundles Midjourney (mentioned in the same section) which has no free plan at all — the sentence is ambiguous and could mislead readers about Midjourney requiring no credit card."
     ],
     "images": [
       {
