@@ -852,7 +852,7 @@
   {
     "id": "8c517454-bc7c-4b27-8282-bfb822638a78",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Top 3 AI image generators for 2026",
       "article_type": "Top tools list",
@@ -864,7 +864,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:49:56.490Z",
-    "updated_at": "2026-07-18T00:54:07.590Z",
+    "updated_at": "2026-07-18T00:56:01.286Z",
     "brief": {
       "target_reader": "Someone who has heard about AI image generators but hasn't committed to one yet — maybe they've tried a free tool briefly or seen others' results, but they don't know which tool fits their actual use case or how to choose",
       "reader_outcome": "Know which one of three tools to try first based on what they're actually making, and feel confident enough to open an account and generate something today",
@@ -1202,6 +1202,50 @@
       "s1: The intro section states OpenAI image generation runs through GPT-4o, but sources confirm DALL-E 3 was deprecated May 2026 and replaced by GPT Image 2 (gpt-image-2), making this description outdated and technically inaccurate.",
       "s2: The article attributes the commercial-use restriction on free-tier outputs solely to aitoolradar.io, an independent third-party site, rather than to OpenAI's own usage policies — this is an unreliable sourcing choice for a legal/commercial-rights claim that readers may act on.",
       "key_takeaways: Same problem as s2: a consequential commercial-rights claim is attributed to a third-party review site rather than OpenAI's own policies, which is inappropriate for a statement readers may rely on before publishing work commercially."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "8c517454-bc7c-4b27-8282-bfb822638a78-img1.jpg",
+        "prompt": "Editorial triptych illustration, landscape 16:9 format, three side-by-side vertical panels on a deep navy background, separated by thin light-gray divider lines. Left panel labeled 'Midjourney' in bold white sans-serif at top, filled with a richly layered painterly canvas visual — thick gestural brushwork in amber, indigo, and violet, evoking aesthetic craft and finished art. Center panel labeled 'DALL·E 3' in bold white sans-serif at top, showing a clean drafting-grid layout with small iterative thumbnail sketches in cyan and white, evoking iterative chat-driven workflow. Right panel labeled 'Stable Diffusion' in bold white sans-serif at top, showing an open-source technical diagram of interlocking gears and image-layer stack in earthy green and slate, evoking customization and control. All three panel labels and all visual elements sit well within a generous safe margin — nothing touches or crosses the outer frame edge. No logos, no photography, no glowing effects, no robot imagery. Clean, high-contrast, modern editorial illustration style, designed to stand alone on social media.",
+        "placement": "hero",
+        "alt_text": "A triptych editorial illustration showing three AI image generators — Midjourney, DALL·E 3, and Stable Diffusion — each represented by a distinct visual metaphor: painterly craft, iterative sketches, and technical layering.",
+        "caption": "Three tools, three different jobs. Choosing the right one starts with knowing what you're actually making.",
+        "approved": false,
+        "generated_at": "2026-07-18T00:55:26.785Z",
+        "role": "hero",
+        "concept": "Three distinct AI image generators shown as three clearly differentiated creative instruments, each with a visual identity that signals its purpose — aesthetic craft, iterative workflow, and integrated utility.",
+        "purpose": "Immediately communicate that these three tools are not interchangeable — each has a distinct role — and draw the reader into a comparison article that will help them choose.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "8c517454-bc7c-4b27-8282-bfb822638a78-img2.jpg",
+        "prompt": "Editorial comparison grid infographic, landscape 16:9 format, clean white background. A structured 3-column by 4-row matrix. Column headers at top: 'Midjourney' with an amber color band, 'DALL·E 3' with a cyan color band, 'Stable Diffusion' with a green color band — all in bold dark sans-serif. Row labels on the far left column: 'Finished aesthetic output,' 'Chat-based iteration,' 'Commercial integration,' 'Custom & open workflows' — in medium-weight dark sans-serif. Each grid cell contains a colored fit indicator: a filled circle (green = Best fit, yellow = Capable, gray = Limited) plus a 2–3 word descriptor in small text. Subtle light gray grid lines divide cells. All elements — especially the leftmost row labels and rightmost column cells — sit well within a 48px safe margin from every frame edge; nothing touches or bleeds past the border. No logos, no screenshots, no photography, no glowing effects. Clean, designed, editorial infographic style.",
+        "placement": "s2",
+        "alt_text": "A comparison grid mapping Midjourney, DALL·E 3, and Stable Diffusion against four use-case categories, showing which tool is best suited for each job.",
+        "caption": "Not all three tools are strong in the same areas. This matrix maps each tool to the tasks it actually handles best.",
+        "approved": false,
+        "generated_at": "2026-07-18T00:55:45.682Z",
+        "role": "comparison",
+        "concept": "A side-by-side matrix visually mapping each of the three tools against the use cases where it excels, making the 'which tool for which job' decision scannable at a glance.",
+        "purpose": "Help readers immediately see which tool fits their specific use case — editorial illustration, iterative chat prompting, or custom/open-source workflows — without reading every word of the section.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img3",
+        "file": "8c517454-bc7c-4b27-8282-bfb822638a78-img3.jpg",
+        "prompt": "Editorial flowchart illustration, square 1:1 format, light warm gray background. A clean decision tree flowing top to bottom, centered with generous margin on all four sides. Top node: a white rounded rectangle with dark border, bold dark sans-serif text 'What are you making?' — positioned with strong top and side margins, well away from the frame edge. Three arrows branch downward to three intermediate question nodes in white rounded rectangles with smaller text. From each intermediate node, a single arrow leads to a terminal recommendation node at the bottom: left terminal in amber with label 'Midjourney,' center terminal in cyan with label 'DALL·E 3,' right terminal in green with label 'Stable Diffusion.' Branch path arrows are dark navy with directional arrowheads. Short category labels on each branch path (e.g., 'Finished art,' 'Chat workflow,' 'Custom build'). All nodes — especially the leftmost Midjourney terminal and rightmost Stable Diffusion terminal — sit well inside the frame with explicit side margins, nothing touching or near the frame edge. No photography, no logos, no glowing effects, no robot imagery. Clean, modern, editorial flowchart style — designed, not generated.",
+        "placement": "s1",
+        "alt_text": "A decision-tree flowchart starting with 'What are you making?' and branching into three paths that each resolve to a tool recommendation: Midjourney, DALL·E 3, or Stable Diffusion.",
+        "caption": "Start with your use case, not the tool. This decision path covers the most common creator scenarios.",
+        "approved": false,
+        "generated_at": "2026-07-18T00:56:01.286Z",
+        "role": "explainer",
+        "concept": "A decision-tree or flowchart that walks a creator through three key questions to arrive at the right tool choice — framed around the article's core argument that use case should drive the selection.",
+        "purpose": "Give readers a fast, visual shortcut to the right tool based on their specific situation, reinforcing the article's central premise that what you're making should decide which tool you pick.",
+        "aspect_ratio": "1:1"
+      }
     ]
   }
 ]
