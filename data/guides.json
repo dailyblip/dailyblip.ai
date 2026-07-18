@@ -1670,7 +1670,7 @@
   {
     "id": "ebed959a-3450-4aed-bf58-6dd9d84d7dc0",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "10 Best AI Music Generators for Beginners: Features, Pricing, and Use Cases",
       "article_type": "Top tools list",
@@ -1682,7 +1682,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T03:12:22.094Z",
-    "updated_at": "2026-07-18T03:16:29.656Z",
+    "updated_at": "2026-07-18T03:17:42.076Z",
     "brief": {
       "target_reader": "Someone who has never used an AI music tool before — likely a content creator, hobbyist, or indie filmmaker who needs background music or simple tracks but has no music production background and doesn't know where to start",
       "reader_outcome": "Feel confident enough to pick one tool and actually generate their first track today — not evaluate all ten exhaustively",
@@ -1910,19 +1910,19 @@
       "slug": "best-ai-music-generators-beginners",
       "dek": "You don't need to know anything about music production to make a usable track. Here's where to start.",
       "meta_description": "A beginner's guide to AI music generators — what they actually do, which tools are worth trying first, and what to know before you publish anything.",
-      "quick_answer": "For most beginners who want a full song with vocals and no music background required, start with Suno's free tier. For background music on commercial projects, look at Mubert or Soundraw on a paid plan.",
+      "quick_answer": "For most beginners who want a full song with vocals and no music background required, start with Suno's free tier. For background music on commercial projects, look at Mubert or Soundraw on a paid plan — but note that Mubert prohibits standalone streaming release and Content ID registration on all plans, so check whether your intended use is actually covered.",
       "introduction": "AI music generators let you describe a song in plain English (or click a few mood/genre buttons) and get a finished track in under a minute. No DAW, no theory, no instruments required. The tricky part isn't learning to use them — it's knowing which one to pick, and understanding what you can actually do with the music once you have it. This guide covers the tools worth starting with and the one thing beginners consistently overlook before they publish.",
       "sections": [
         {
           "id": "s1",
           "heading": "What these tools actually do (and where they fall short)",
-          "body_markdown": "Every tool on this list works through a browser. None require a download, a DAW, or any music theory knowledge. The difference between them is mostly *what kind of input they want* and *what kind of output they produce*.\n\nSome tools, like Suno and Udio, take a text prompt and generate a full song complete with vocals, lyrics, and instrumentation. Type \"upbeat indie pop song about a road trip\" and you'll get something that sounds like an actual record. Others, like Soundraw and Mubert, skip the vocals entirely and generate instrumental tracks based on genre, mood, and energy sliders. That's a feature, not a limitation, if you need background music for a video or podcast and don't want a synthetic voice in the mix.\n\nWhat none of them do: follow your specific harmonic or rhythmic ideas, guarantee a unique result no one else could generate with the same prompt, or produce stems on free tiers. They're not a replacement for a composer on anything where musical originality is the point — but for a YouTube intro, a lo-fi study loop, or a proof-of-concept demo track, they're genuinely useful.",
+          "body_markdown": "Every tool on this list works through a browser. None require a download, a DAW, or any music theory knowledge. The difference between them is mostly *what kind of input they want* and *what kind of output they produce*.\n\nSome tools, like Suno and Udio, take a text prompt and generate a full song complete with vocals, lyrics, and instrumentation. Type \"upbeat indie pop song about a road trip\" and you'll get something that sounds like an actual record. Others, like Soundraw and Mubert, skip the vocals entirely and generate instrumental tracks based on genre, mood, and energy sliders. That's a feature, not a limitation, if you need background music for a video or podcast and don't want a synthetic voice in the mix.\n\nWhat none of them do: follow your specific harmonic or rhythmic ideas, guarantee a unique result no one else could generate with the same prompt, or produce stems on free tiers (stem downloads are available on certain paid plans, but not across the board). They're not a replacement for a composer on anything where musical originality is the point — but for a YouTube intro, a lo-fi study loop, or a proof-of-concept demo track, they're genuinely useful.",
           "tools": []
         },
         {
           "id": "s2",
           "heading": "The tools worth starting with",
-          "body_markdown": "For a first-time user who just wants to hear something come out, **Suno** is the clearest starting point. The free tier requires no credit card and gives you enough daily credits to experiment meaningfully. Text prompts generate full songs with vocals and you can get quite specific about genre, tempo, and mood. Udio is the closest competitor and has a similarly accessible free tier, though per independent reporting, Udio's October 2025 settlement with Universal Music Group moved it toward a more restricted download model, and its commercial rights situation by tier remains actively contested across sources (verify at udio.com/terms before relying on it for anything you plan to release).\n\nIf you need instrumental-only tracks for a short film, a podcast, or a product video, **Mubert** and **Soundraw** are built for exactly that. Mubert works more like a radio station you tune: set the vibe, get a generated stream or downloadable track. Soundraw gives you slightly more control via parameter sliders. Neither requires any creative input beyond a few clicks.\n\n**Boomy** sits in its own lane: it's the simplest of the group, with a style-picker interface and built-in distribution to Spotify and Apple Music. Third-party sources confirm it's still operating as of mid-2026, but Boomy's official terms around copyright ownership could not be confirmed from primary sources for this guide — check boomy.com before releasing anything commercially.",
+          "body_markdown": "For a first-time user who just wants to hear something come out, **Suno** is the clearest starting point. The free tier requires no credit card and gives you enough daily credits to experiment meaningfully. Text prompts generate full songs with vocals and you can get quite specific about genre, tempo, and mood. Udio is the closest competitor and has a similarly accessible free tier, though per independent reporting, Udio's October 2025 settlement with Universal Music Group moved it to a walled-garden model where free downloads were removed entirely, and its commercial rights situation by tier remains actively contested across sources (verify at udio.com/terms before relying on it for anything you plan to release).\n\nIf you need instrumental-only tracks for a short film, a podcast, or a product video, **Mubert** and **Soundraw** are built for exactly that. Mubert works more like a radio station you tune: set the vibe, get a generated stream or downloadable track. Soundraw gives you more meaningful control via parameter sliders, and paid plans add stem downloads if you need to edit individual layers in post. Neither requires any creative input beyond a few clicks — but be aware that Mubert prohibits Content ID registration and standalone streaming release on all plans, so it's suited to background use in other projects, not to releasing music on its own.\n\n**Boomy** sits in its own lane: it's the simplest of the group, with a style-picker interface and built-in distribution to Spotify and Apple Music. Per third-party reporting (ToolChase), Creator accounts are non-commercial and a Pro plan is required for ad-supported or monetized use; Boomy also takes a percentage of streaming royalties. Confirm current rates and terms at boomy.com before releasing anything commercially.",
           "tools": [
             {
               "name": "Suno",
@@ -2004,13 +2004,13 @@
         {
           "id": "s3",
           "heading": "Before you publish or monetize anything",
-          "body_markdown": "This is the part most beginners skip, and it's the one that can actually cost you.\n\n**Free tiers are almost universally non-commercial.** Suno's TOS explicitly restricts free-tier outputs to personal, non-commercial use. Udio's TOS (last revised November 2025) states that generated works may only be used for personal and non-commercial purposes unless you're on a qualifying paid plan. Mubert's free Ambassador tier is the same. If you're putting a track in a monetized YouTube video, a client project, or anything generating revenue, you need a paid plan — and you need to verify that the specific tier you're on actually grants commercial rights before you publish.\n\n**Commercial rights don't equal copyright ownership.** Fully AI-generated music has a weak claim to copyright protection under current U.S. law — Suno's own documentation acknowledges this, citing the requirement for human authorship. What paid plans typically grant is a *license* to use the output commercially, not ownership of the underlying composition. Content ID registration, PRO registration (ASCAP/BMI), and certain forms of sync licensing may not apply to your tracks as a result.\n\n**The litigation landscape is still settling.** Suno and Udio both resolved major copyright lawsuits with Warner Music Group in November 2025, and Udio separately settled with Universal Music Group in October 2025. Per independent reporting, Sony had not settled with Suno as of March 2026. For lower-stakes use — a personal project, a YouTube channel, a podcast — paid tiers on Suno or Mubert are straightforward enough to navigate. For anything with significant commercial distribution, read the terms for your specific plan carefully before you hit publish.",
+          "body_markdown": "This is the part most beginners skip, and it's the one that can actually cost you.\n\n**Free tiers are almost universally non-commercial.** Suno's TOS explicitly restricts free-tier outputs to personal, non-commercial use. Udio's TOS (last revised November 2025) states that generated works may only be used for personal and non-commercial purposes unless you're on a qualifying paid plan. Mubert's free Ambassador tier is the same. If you're putting a track in a monetized YouTube video, a client project, or anything generating revenue, you need a paid plan — and you need to verify that the specific tier you're on actually grants commercial rights before you publish.\n\n**Commercial rights don't equal copyright ownership.** Fully AI-generated music has a weak claim to copyright protection under current U.S. law — Suno's own documentation acknowledges this, citing the requirement for human authorship. What paid plans typically grant is a *license* to use the output commercially, not ownership of the underlying composition. Content ID registration, PRO registration (ASCAP/BMI), and certain forms of sync licensing may not apply to your tracks as a result.\n\n**The litigation landscape is still settling.** Suno settled a major copyright lawsuit with Warner Music Group in November 2025. Udio settled separately with Warner Music Group on November 19, 2025, and had previously settled with Universal Music Group in October 2025. Per independent reporting, Sony had not settled with Suno as of March 2026. For lower-stakes use — a personal project, a YouTube channel, a podcast — paid tiers on Suno or Mubert are straightforward enough to navigate. For anything with significant commercial distribution, read the terms for your specific plan carefully before you hit publish.",
           "tools": []
         }
       ],
       "key_takeaways": [
         "For a first track with vocals, Suno's free tier is the clearest starting point — no credit card required, and the text-prompt interface needs no music knowledge.",
-        "For instrumental background music on commercial projects, Mubert or Soundraw on a paid plan are purpose-built for that use case — but verify which tier grants commercial rights before publishing.",
+        "For instrumental background music on commercial projects, Mubert or Soundraw on a paid plan are purpose-built for that use case — but note that Mubert prohibits Content ID registration and standalone streaming release on all plans, so verify your intended use is actually covered before publishing.",
         "Free tiers across all these tools are non-commercial only. Monetize anything and you need a paid plan with verified commercial rights.",
         "AI-generated music has limited copyright protection under current U.S. law. Paid plans grant a commercial license, not ownership.",
         "Udio's download and commercial rights situation changed significantly after its October 2025 licensing settlements — verify current terms at udio.com before relying on it for a release."
@@ -2018,6 +2018,72 @@
       "conclusion": "Pick one tool based on what you actually need — vocals or no vocals, text prompt or parameter sliders — and generate something today. You'll learn more from one real session than from comparing feature lists. Just don't wait until after you've published to read the terms of service.",
       "methodology_disclosure": "This guide was researched using each platform's official terms of service and pricing pages where accessible, supplemented by independent reporting from music tech sources including Dynamoi, Music Make AI, eesel AI, UsagePricing, ToolChase, and CostBench, all accessed in July 2026. For several platforms including Soundraw, Boomy, and Udio, official documentation either returned limited content or could not be fully retrieved; those claims are flagged in the guide text with instructions to verify at each platform's own site. Dailyblip did not independently test any of these tools for this article. Pricing and licensing terms change frequently — treat all specifics here as a starting orientation and check each platform directly before making commercial use decisions.",
       "last_reviewed_date": "July 18, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "Udio's October 2025 settlement with Universal Music Group moved it to a walled-garden model where free downloads were removed entirely",
+          "issue": "The article attributes this claim to 'independent reporting' but the source (UsagePricing) describes this as an observation, and a separate source (Dynamoi) says 'new Udio content currently cannot be distributed externally' — meaning the walled-garden restriction may apply to all tiers, not just free. The framing implies paid users can still download, which contradicts the sourced claim that downloads were removed broadly post-October 2025.",
+          "supporting_source_url": "https://www.usagepricing.com/blueprint/udio"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "Suno settled a major copyright lawsuit with Warner Music Group in November 2025",
+          "issue": "Per the sourced Dynamoi article, the November 2025 WMG announcement was a 'partnership settling copyright litigation' — the article here frames it as a settlement of a 'major copyright lawsuit,' but the primary lawsuit against Suno was filed by a group of labels including Sony; WMG's relationship may have been a licensing deal rather than a direct lawsuit settlement. The framing is potentially inaccurate.",
+          "supporting_source_url": "https://dynamoi.com/learn/ai-music-distribution/suno-commercial-rights-explained"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Creator accounts are non-commercial and a Pro plan is required for ad-supported or monetized use",
+          "issue": "The ToolChase source says 'Boomy Creator plan downloads are non-commercial; Pro plan required for ad/commercial use,' but the article attributes this specifically to ToolChase without noting that Boomy's own TOS could not be verified — the section implies this is a confirmed fact rather than a secondary-source claim requiring direct verification.",
+          "supporting_source_url": "https://toolchase.com/blog/best-ai-music-generators/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Soundraw gives you more meaningful control via parameter sliders, and paid plans add stem downloads",
+          "issue": "The ToolChase source supports stem downloads on paid plans, but the Soundraw tool card flags that 'free tier availability is unclear — sources conflict.' The body text implies paid plans are a clear upgrade path without acknowledging that the baseline free tier may not exist, which could mislead beginners about entry cost.",
+          "supporting_source_url": "https://toolchase.com/blog/best-ai-music-generators/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Udio settled separately with Warner Music Group on November 19, 2025, and had previously settled with Universal Music Group in October 2025",
+          "issue": "The sourced UsagePricing article describes these as 'settlements' but the nature of the UMG deal — whether it was a copyright lawsuit settlement or a licensing agreement — is not clearly established in the sources. Calling both events 'settlements' of lawsuits may overstate the legal framing.",
+          "supporting_source_url": "https://www.usagepricing.com/blueprint/udio"
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "For instrumental background music on commercial projects, Mubert or Soundraw on a paid plan are purpose-built",
+          "issue": "Recommending Mubert for 'commercial projects' in the same breath as noting its Content ID and streaming release prohibitions is internally contradictory — a 'commercial project' could easily include a monetized YouTube video where Content ID matters, and this caveat is insufficient to prevent a beginner from misapplying it.",
+          "supporting_source_url": "https://mubert.com/render/pricing"
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "Mubert works more like a radio station you tune: set the vibe, get a generated stream or downloadable track",
+          "issue": "The CostBench source notes Mubert requires a subscription for full access and the free Ambassador tier is personal/non-commercial only — the 'radio station' framing implies easy, frictionless access without flagging that meaningful use (downloads with a license) requires a paid plan.",
+          "supporting_source_url": "https://costbench.com/software/ai-music-generators/mubert/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s1",
+          "original_text": "stem downloads are available on certain paid plans, but not across the board",
+          "issue": "This is stated as a general limitation but Suno's Premier plan now includes stem separation (Auto Split and Split from Mix) per the Margabagus source — the phrasing 'not across the board' is accurate but slightly misleading given that at least two tools (Suno Premier, Soundraw paid) offer stems, making it more available than implied.",
+          "supporting_source_url": "https://margabagus.com/suno-pricing/"
+        }
+      ],
+      "checked_at": "2026-07-18T03:17:42.076Z",
+      "revised": true
+    },
+    "warnings": [
+      "s2: The article attributes this claim to 'independent reporting' but the source (UsagePricing) describes this as an observation, and a separate source (Dynamoi) says 'new Udio content currently cannot be distributed externally' — meaning the walled-garden restriction may apply to all tiers, not just free. The framing implies paid users can still download, which contradicts the sourced claim that downloads were removed broadly post-October 2025.",
+      "s3: Per the sourced Dynamoi article, the November 2025 WMG announcement was a 'partnership settling copyright litigation' — the article here frames it as a settlement of a 'major copyright lawsuit,' but the primary lawsuit against Suno was filed by a group of labels including Sony; WMG's relationship may have been a licensing deal rather than a direct lawsuit settlement. The framing is potentially inaccurate."
+    ]
   }
 ]
