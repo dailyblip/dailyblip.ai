@@ -2175,7 +2175,7 @@
   {
     "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "Top AI content creator tools for 2026",
       "article_type": "Top tools list",
@@ -2187,6 +2187,26 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T03:39:08.288Z",
-    "updated_at": "2026-07-18T03:39:08.289Z"
+    "updated_at": "2026-07-18T03:39:43.336Z",
+    "brief": {
+      "target_reader": "Someone who makes things — videos, music, writing, images, or some mix — and keeps hearing about AI tools but hasn't committed to any yet. They want to know which ones are actually worth their time in 2026, not a list of every tool that exists.",
+      "reader_outcome": "Walk away knowing 4-5 AI tools genuinely useful for content creation, which type of creator each one suits best, and enough to pick one and try it today.",
+      "structure_plan": [
+        "What 'AI content tools' actually means right now (a one-paragraph reality check cutting through the hype — sets scope and saves time)",
+        "The tools worth knowing about (tool cards: one per major creative category — image, video, writing, music, and one wild-card multimodal pick)",
+        "How to pick your first one without overthinking it (a short decision frame: match tool to what you already make, not what sounds impressive)",
+        "Before you publish or monetize anything (consolidated licensing/commercial-use caveats for all tools covered)"
+      ],
+      "claims_to_verify": [
+        "Which tools are genuinely available and actively maintained heading into 2026 (not deprecated, sunset, or absorbed into another product)",
+        "Whether each tool has a free tier or trial that a beginner can access without a credit card or waitlist",
+        "Core capability of each tool: what media type it generates or assists with, and any meaningful output quality or format limitations a beginner would hit immediately",
+        "Which tools allow commercial use of outputs on free tiers vs. paid tiers only",
+        "Whether any tools listed have announced deprecation or major platform changes for 2025-2026",
+        "Which tools require account creation vs. can be tried immediately in a browser",
+        "Any notable restrictions on who can use the tool (region locks, age requirements, professional-only access)"
+      ],
+      "research_plan": "Prioritize official tool documentation and pricing/terms pages for capability and licensing claims — do not rely on third-party roundups for commercial rights details since those go stale fast and readers may make real business decisions off them. For availability and deprecation status, cross-check official blogs or changelogs against recent coverage (last 3 months). For general capability descriptions, recent hands-on reviews from credible tech outlets (The Verge, Ars Technica, creator-focused publications) are fine to supplement official docs. Flag any tool where the free-tier commercial rights are ambiguous or where sources conflict."
+    }
   }
 ]
