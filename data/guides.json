@@ -2182,8 +2182,8 @@
   },
   {
     "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "in_progress",
+    "stage": "Re-checking",
     "submitted": {
       "idea": "Top AI content creator tools for 2026",
       "article_type": "Top tools list",
