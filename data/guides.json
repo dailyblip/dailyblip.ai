@@ -2136,7 +2136,7 @@
         "alt_text": "Vertical tier diagram organizing ten AI music generators into three beginner-friendliness levels: Start Here (Suno, Udio), Worth Exploring, and More Specialized.",
         "caption": "Not every tool deserves equal time from a beginner — this breakdown shows where to start and where to go once you've outgrown it.",
         "generated_at": "2026-07-18T03:20:34.326Z",
-        "approved": false,
+        "approved": true,
         "role": "list-support",
         "concept": "A vertically stacked ranked-list visual organizing the ten tools into three tiers by beginner-friendliness: 'Start here', 'Worth exploring', and 'More specialized' — without using logos.",
         "purpose": "Give readers a quick visual hierarchy of all ten tools so they know where to direct attention first, matching the article's ranked structure.",
@@ -2164,14 +2164,14 @@
         "alt_text": "2x2 matrix mapping AI music generator use cases: Fun and Experimentation (text input, personal), Refine Your Ideas (melody input, personal), Background for Videos (text input, content creation), and Custom Soundtracks (stem input, content creation).",
         "caption": "Your use case changes which type of tool is actually worth your time — most beginners want the bottom-left quadrant and don't realize it.",
         "generated_at": "2026-07-18T03:21:03.396Z",
-        "approved": false,
+        "approved": true,
         "role": "explainer",
         "concept": "A 2×2 matrix comparing the four main use-case quadrants for beginner AI music generators: personal/creative exploration vs. content creation, and text-input tools vs. melody/stem-based tools.",
         "purpose": "Help beginners self-identify which type of tool fits their actual goal, mapping use case to tool type in one visual.",
         "aspect_ratio": "1:1"
       }
     ],
-    "approved_at": "2026-07-18T03:40:38.920Z",
+    "approved_at": "2026-07-18T03:41:52.512Z",
     "published_despite_warnings": true,
     "overridden_warnings": [
       "s2: The article attributes this claim to 'independent reporting' but the source (UsagePricing) describes this as an observation, and a separate source (Dynamoi) says 'new Udio content currently cannot be distributed externally' — meaning the walled-garden restriction may apply to all tiers, not just free. The framing implies paid users can still download, which contradicts the sourced claim that downloads were removed broadly post-October 2025.",
