@@ -1880,8 +1880,8 @@
   },
   {
     "id": "52b99122-b6f7-430e-8a83-7e71753aa1e9",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "in_progress",
+    "stage": "Re-checking",
     "submitted": {
       "idea": "Top AI tools for audiobook narration",
       "article_type": "Top tools list",
