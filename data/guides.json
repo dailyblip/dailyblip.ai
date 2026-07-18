@@ -2685,7 +2685,7 @@
   {
     "id": "b403d458-0ff3-40ed-b2bd-608518c03e28",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "Why Your AI Content Looks Like AI and How to Fix It",
       "article_type": "Practical guide",
@@ -2697,7 +2697,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T04:15:40.120Z",
-    "updated_at": "2026-07-18T04:20:16.389Z",
+    "updated_at": "2026-07-18T04:23:33.836Z",
     "brief": {
       "target_reader": "Someone who has started using AI writing or image tools and noticed their output feels generic, flat, or obviously machine-made — they want to improve quality but aren't sure what they're doing wrong or where to start",
       "reader_outcome": "Understand the specific habits and choices that make AI content feel synthetic, and have a handful of concrete techniques they can apply immediately to make their output feel more intentional and human",
@@ -2977,6 +2977,92 @@
       "s4: The Originality.ai 8% false positive rate claim is sourced from the company's own blog, which the article itself flags as conflicted; the key_takeaways section repeats the 8%–38% range without the same caveat, presenting disputed company-sourced figures as settled fact.",
       "key_takeaways: Presenting the 8% figure as a clean data point strips away the article's own disclosure that this number comes from Originality.ai's self-interested blog post, misleading readers who only skim takeaways.",
       "s3: The sources confirm Firefly's free tier includes watermarks on outputs; the article implies watermarks are a periodic policy adjustment rather than a current default, which could mislead readers about whether free-tier outputs are usable for publishing."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "b403d458-0ff3-40ed-b2bd-608518c03e28-img1.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape. Deep ink navy background (#071A1F). A horizontal row of vertical rectangular bars fills the center band of the image — approximately 18–22 bars total. All bars except one are the same short-to-medium height, filled with a muted desaturated teal-grey color, evenly spaced, precisely aligned at their bases, representing statistical sameness. One bar — positioned slightly left of center — is noticeably taller than all the others, filled with warm amber (#FFB454), with a very subtle warm glow radiating outward a short distance. The amber bar is the clear focal point. The entire row of bars sits within generous margin on all four sides — the leftmost and rightmost bars are at least 12% from the frame edge, nothing touches or clips the border. Right side of the composition has open dark space. No text in the image. Crisp geometric shapes, flat color fills, consistent even spacing, no textures, no painterly rendering, no gradients except the small amber halo. Looks like a polished professional slide infographic.",
+        "placement": "hero",
+        "alt_text": "A row of nearly identical muted bars at the same height, with one tall amber bar standing out sharply from the rest — representing a distinctive voice breaking through the statistical average of AI-generated content.",
+        "caption": "LLMs trained on probability push output toward the statistical center. The result is content that sounds like everything — and nothing.",
+        "generated_at": "2026-07-18T04:22:20.966Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A single bold signal cutting through a field of identical, muted copies — the one real voice standing out from the statistical average.",
+        "purpose": "Immediately convey the core problem: AI content collapses toward a bland center, and this guide is about breaking out of it.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "b403d458-0ff3-40ed-b2bd-608518c03e28-img2.jpg",
+        "prompt": "Flat vector explainer diagram, 1:1 square format. Deep ink navy background (#071A1F). Top half of the composition: two rectangular input shapes side by side with generous spacing between them and clear padding from the top and side frame edges. Left rectangle is wider, with slightly blurred or indistinct soft edges, filled muted grey-teal — representing a vague prompt. Right rectangle is narrower, with sharp clean edges, filled a slightly lighter teal — representing a specific prompt. Each has one short text label directly below it in small clean sans-serif: 'vague' on the left, 'specific' on the right. From each rectangle, a tapered funnel arrow points downward to the bottom half of the image. The left funnel is wide and diffuse, leading to a large, softly-edged muted grey-teal circular blob — representing statistical average output. The right funnel is narrow and precise, leading to a small, sharp, crisp circle filled with warm amber (#FFB454) — representing distinct output. A thin horizontal dashed line at the midpoint separates input from output zones. All elements are at least 10% from every frame edge. Flat color fills, no gradients, no textures, crisp geometry, even spacing. Looks like a polished infographic slide.",
+        "placement": "s2",
+        "alt_text": "A split funnel diagram: a vague prompt on the left flows down into a wide muted blob representing average AI output, while a specific prompt on the right narrows to a sharp amber point representing distinct, precise output.",
+        "caption": "Under-specified prompts let the model default to its statistical center — the average of everything it's seen. Specificity is the escape route.",
+        "generated_at": "2026-07-18T04:22:34.186Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "A probability funnel showing how under-specified prompts collapse into the statistical center, while a specific prompt routes to a distinct, precise output.",
+        "purpose": "Make the abstract mechanism concrete: vague input → generic output because the model is predicting the most probable next token, and specificity breaks that pull toward the middle.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "b403d458-0ff3-40ed-b2bd-608518c03e28-img3.jpg",
+        "prompt": "Flat vector workflow diagram, 16:9 landscape. Deep ink navy background (#071A1F). Two main columns arranged horizontally with a generous central gap between them. Left column: a clean, simple document icon in muted desaturated teal, passive and calm, with a small text label '1  Generate' in light off-white sans-serif above it. Right column: a noticeably larger document icon in warm amber (#FFB454), with a few small abstract geometric edit marks on its face — short horizontal strike lines and a small curved mark suggesting revision activity — conveying active human editing. Small text label '2  Edit' above it in light off-white. Between the two columns, a bold thick rightward-pointing arrow in amber (#E58E2B) connects them. The right column is visually larger and more prominent than the left, reflecting that editing is the heavier step. The entire composition sits well within the frame — the left column has at least 15% horizontal margin from the left edge, the right column at least 15% from the right edge, and both have clear top and bottom padding. No element touches the frame border. Flat fills, no textures, crisp geometry, even spacing. Looks like a polished designed infographic.",
+        "placement": "s3",
+        "alt_text": "A two-step workflow: a small teal document icon labeled 'Generate' on the left, connected by an amber arrow to a larger amber document icon labeled 'Edit' on the right — the editing step shown as visually heavier to emphasize it's where the real work happens.",
+        "caption": "Generation is step one. The actual work — reading aloud, cutting hedging phrases, rewriting flat sentences — happens in the editing pass after.",
+        "generated_at": "2026-07-18T04:22:51.379Z",
+        "approved": true,
+        "role": "workflow",
+        "concept": "A two-step horizontal workflow: Generate → Edit, with the editing pass shown as the heavier, more active step — not an afterthought.",
+        "purpose": "Visualize the guide's core process argument: generation is step one, but the editing pass after is where the real work happens and where AI-feel gets removed.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img4",
+        "file": "b403d458-0ff3-40ed-b2bd-608518c03e28-img4.jpg",
+        "prompt": "Flat vector comparison diagram, 9:16 portrait format. Deep ink navy background (#071A1F). Two stacked rectangular panels occupying the full height, separated by a thin horizontal dividing line at the vertical midpoint. Top panel: small label 'Before edit' in light off-white sans-serif text at top-left of the panel with comfortable padding from the edge. Below the label: a column of 7 horizontal rectangular bars, all left-aligned with a consistent left margin of at least 12% from the frame edge, all approximately the same length — representing uniform sentence rhythm. Bars are filled with muted desaturated teal-grey. Each bar has equal vertical spacing between them. No bar extends past 80% of panel width. Bottom panel: small label 'After edit' in the same style at top-left. Below: 7 horizontal bars, left-aligned at the same left margin, but deliberately varying in length — some short (30% of panel width), some long (75%), some medium (50%) — creating visible rhythm variety. Bars filled with warm amber (#FFB454). All bars stay well within horizontal margins on both sides. Generous padding from left, right, top, and bottom frame edges throughout. Flat fills, crisp geometry, no textures, even spacing. Looks like a clean infographic panel.",
+        "placement": "s3",
+        "alt_text": "Two stacked panels comparing sentence rhythm: the top 'Before edit' panel shows uniform-length muted bars representing AI text's monotonous rhythm; the bottom 'After edit' panel shows varied-length amber bars representing natural human-edited variation.",
+        "caption": "Peer-reviewed analysis confirms it: LLM text shows measurably more uniform sentence lengths. Reading aloud surfaces this immediately — and varied rhythm is the fix.",
+        "generated_at": "2026-07-18T04:23:06.106Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "A stacked before/after comparison of sentence rhythm — uniform flat bars (AI output) versus varied-height bars (human-edited output) — making the 'measurably more uniform sentence length' finding visible.",
+        "purpose": "Make the peer-reviewed finding tangible: AI text has statistically more uniform sentence lengths, which produces the flat feeling. Show what that looks like visually versus varied rhythm.",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img5",
+        "file": "b403d458-0ff3-40ed-b2bd-608518c03e28-img5.jpg",
+        "prompt": "Flat vector explainer illustration, 1:1 square format. Deep ink navy background (#071A1F). Centered composition with generous margin on all sides. Main element: a large semicircular gauge/dial centered in the upper-center of the square, with clear padding from top and side frame edges. The gauge arc spans 180 degrees. The left half of the arc is filled with muted desaturated teal; the right half with warm amber (#FFB454). The arc itself is thick and clean. A needle extends from the center pivot point of the gauge. The needle appears in three overlapping positions simultaneously — one pointing left toward the teal zone, one pointing roughly center, one pointing right toward the amber zone — each successive ghost position slightly more transparent, suggesting inability to settle on a reading. The three needles are thin, crisp, flat vector shapes in off-white or light grey. Below the gauge, centered, a simple flat vector equilateral triangle warning icon in amber (#E58E2B) with an exclamation mark as a simple geometric shape inside it. No text anywhere in the image. The entire composition is well within frame — gauge arc and warning icon each have at least 12% margin from every frame edge. Flat fills, crisp geometry, no gradients, no textures. Looks like a designed infographic icon.",
+        "placement": "s4",
+        "alt_text": "A semicircular gauge with its needle shown in three overlapping positions — unable to settle on a reading — with a warning triangle below, representing the wildly inconsistent results of AI detection tools.",
+        "caption": "Independent analysis of AI detection tools shows wildly inconsistent results. Treat detector scores as a rough signal, not a reliable verdict.",
+        "generated_at": "2026-07-18T04:23:16.831Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "An unreliable meter — a gauge or dial showing wildly inconsistent readings — to represent the 2024 PMC finding that AI detection tools produce wildly inconsistent results.",
+        "purpose": "Warn readers visually about the detection tools section's key point: don't over-rely on AI detectors, because independent analysis shows they're inconsistent and unreliable.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img6",
+        "file": "b403d458-0ff3-40ed-b2bd-608518c03e28-img6.jpg",
+        "prompt": "Flat vector checklist illustration, 9:16 portrait format. Deep ink navy background (#071A1F). A thin amber (#FFB454) vertical rule runs along the left side of the composition, inset at least 12% from the left frame edge, spanning most of the image height with clear top and bottom padding. To the right of this rule: four rows stacked evenly from top to bottom, each occupying roughly equal vertical space, with generous padding from the top and bottom frame edges, and at least 12% margin from the right edge. Each row contains two elements left-aligned: a small square checkbox icon in amber on the far-left of the row (unfilled, just an outlined square with a small corner tick suggesting 'to do'), followed by a single simple flat geometric icon in aqua teal (#63D8C6) representing one editing action. Row 1 icon: a simple sound wave / audio waveform shape (three arcs of increasing size). Row 2 icon: a horizontal rectangle with a diagonal strikethrough line across it. Row 3 icon: three horizontal bars of clearly different lengths stacked vertically (short, long, medium). Row 4 icon: a simple crosshair or target circle with center dot. All icons are the same size, consistently spaced and aligned. No text anywhere in the image. Flat color fills, crisp geometry, no textures, no gradients. Looks like a clean designed infographic checklist.",
+        "placement": "s3",
+        "alt_text": "A vertical checklist of four editing actions illustrated by icons: a sound wave (read aloud), a strikethrough bar (cut hedging phrases), three varied-length bars (vary sentence length), and a target crosshair (add specificity).",
+        "caption": "The editing pass checklist: read it aloud to surface flat rhythm; cut hedging phrases like 'it is important to consider'; vary sentence length deliberately; replace vague gestures with specific details.",
+        "generated_at": "2026-07-18T04:23:33.836Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "A vertical checklist of four concrete editing interventions from the guide — read aloud, cut hedging phrases, vary sentence length, add specificity — shown as checkable items with distinct visual weight.",
+        "purpose": "Give readers a scannable, at-a-glance summary of the editing pass actions described in section 3, reinforcing the guide's actionable takeaways.",
+        "aspect_ratio": "9:16"
+      }
     ]
   }
 ]
