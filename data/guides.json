@@ -1263,8 +1263,8 @@
   },
   {
     "id": "ecd7b706-e7c4-4e6d-8be6-76f63d641c52",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "Top 3 AI services for generating video in 2026",
       "article_type": "Top tools list",
@@ -1657,6 +1657,12 @@
         "purpose": "Make the commercial-use licensing rule in the 'Before you publish' section immediately actionable and scannable — readers can follow the arrows to know exactly what plan they need before hitting publish",
         "aspect_ratio": "9:16"
       }
+    ],
+    "approved_at": "2026-07-18T02:06:02.715Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s1: The article's s1 tool card for Runway states commercial use rights apply on all tiers, but s2 immediately contradicts this by noting official Runway documentation does not confirm commercial rights for the free tier — the tool card presents unverified information as fact.",
+      "s2: The article hedges that commercial use rights for Runway's free tier are unconfirmed against the ToS, yet the s1 tool card already asserts they apply on all tiers — this internal contradiction could mislead creators into publishing commercially without proper rights."
     ]
   }
 ]
