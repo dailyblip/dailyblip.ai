@@ -851,8 +851,8 @@
   },
   {
     "id": "8c517454-bc7c-4b27-8282-bfb822638a78",
-    "status": "queued",
-    "stage": "Formatting",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "Top 3 AI image generators for 2026",
       "article_type": "Top tools list",
@@ -864,7 +864,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:49:56.490Z",
-    "updated_at": "2026-07-18T00:56:01.286Z",
+    "updated_at": "2026-07-18T00:56:03.127Z",
     "brief": {
       "target_reader": "Someone who has heard about AI image generators but hasn't committed to one yet — maybe they've tried a free tool briefly or seen others' results, but they don't know which tool fits their actual use case or how to choose",
       "reader_outcome": "Know which one of three tools to try first based on what they're actually making, and feel confident enough to open an account and generate something today",
