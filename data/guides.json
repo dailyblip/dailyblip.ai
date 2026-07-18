@@ -3076,8 +3076,8 @@
   },
   {
     "id": "da373217-6d0c-45bf-b802-fd66a19d540e",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "OpenAI's New Codex Keyboard explained - what does it do and how can you use it?",
       "article_type": "Practical guide",
@@ -3479,6 +3479,12 @@
         "role": "upload",
         "generated_at": "2026-07-18T05:32:29.049Z"
       }
+    ],
+    "approved_at": "2026-07-18T05:37:00.185Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s1: 'GPT-5.6 Sol' does not appear in any cited source; the official developer docs source lists the default model only as 'GPT-5.6 Sol' without corroboration, and this model name appears to be fabricated or hallucinated — no OpenAI announcement or doc confirms this naming.",
+      "s1: The sources consistently name the model family as 'GPT-5.x-Codex' (e.g., GPT-5.2-Codex, GPT-5.3-Codex), not 'GPT-5-Codex family' as a marketing umbrella; this framing could mislead readers about how the product is actually named."
     ]
   }
 ]
