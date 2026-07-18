@@ -2182,8 +2182,8 @@
   },
   {
     "id": "95a0fbff-dc10-4758-b956-5d78a5240198",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "Top AI content creator tools for 2026",
       "article_type": "Top tools list",
@@ -2678,6 +2678,8 @@
     "overridden_warnings": [
       "s2: Sources indicate the ChatGPT free tier default model is GPT-4o mini (or equivalent mini-tier), not a GPT-5.x model; the article's own sources conflict on this point and the claim cannot be verified as stated.",
       "s3: Midjourney is listed in this section as an image option but has no free plan and requires a paid subscription — the article itself acknowledges this — making the blanket 'no credit card' claim false as written."
-    ]
+    ],
+    "published_at": "2026-07-18T04:08:07.316Z",
+    "published_url": "https://dailyblip.ai/guides/best-ai-content-creator-tools-2026.html"
   }
 ]
