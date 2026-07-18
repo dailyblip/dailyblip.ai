@@ -2288,7 +2288,7 @@
   {
     "id": "34e44941-18c0-4c92-af8e-12ac6c773455",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "What are the best tools for generating images?",
       "article_type": "Top tools list",
@@ -2300,7 +2300,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-18T00:30:10.931Z",
-    "updated_at": "2026-07-18T00:34:31.930Z",
+    "updated_at": "2026-07-18T00:35:52.711Z",
     "brief": {
       "target_reader": "A creative newcomer — artist, designer, filmmaker, writer — who has heard about AI image generation but hasn't committed to any tool yet and wants to know where to actually start, not a comprehensive breakdown of every option",
       "reader_outcome": "Feel confident picking one tool to try today based on what kind of work they do, without needing to test all of them first",
@@ -2500,7 +2500,7 @@
       ],
       "slug": "best-ai-image-generation-tools-for-beginners",
       "dek": "Midjourney, Adobe Firefly, Leonardo, ChatGPT images, local generation — here's how to pick one based on what you're actually making, not what the hype says.",
-      "meta_description": "Not sure which AI image generator to try first? This plain-language guide matches the right tool to what you're actually making — no testing required.",
+      "meta_description": "Not sure which AI image generator to try first? This plain-language guide matches the right tool to what you're actually making, based on official documentation and independent reporting.",
       "quick_answer": "For most creative newcomers: start with Leonardo.ai if you want a free tier with real flexibility, or ChatGPT's image generation if you're already using it. Commit to one tool, not five.",
       "introduction": "There are more AI image generators than anyone needs, and most comparisons assume you want to test all of them. You probably don't. The real question is simpler: what are you trying to make, and which tool gets you there without a steep setup curve? Each of the main options has a genuinely different personality — not just technically, but in what kind of output it's good at. Here's how to read the landscape fast.",
       "sections": [
@@ -2513,13 +2513,13 @@
         {
           "id": "s2",
           "heading": "Matched to what you're making: which tool fits which creative",
-          "body_markdown": "**You want to try something right now, for free, without committing:** Start with [Leonardo.ai](https://leonardo.ai). Its free plan gives you 150 Fast Tokens per day, refreshing every 24 hours — no credit card, no trial expiration. It has 80+ models covering photorealism, illustration, and cinematic looks, and its Realtime Canvas feature lets you sketch something rough and watch it turn into an image in near-real time. That live feedback loop makes it genuinely useful for figuring out what prompts actually do. The catch: free-tier generations are public and carry only a non-exclusive commercial license, not full ownership. For personal exploration or learning the craft, that's fine.\n\n**You're already inside ChatGPT:** OpenAI's GPT-4o generates images natively now (DALL-E 3 was phased out in late 2025). The free tier includes limited image generation, but usage caps are dynamic and not published as a fixed number — you may hit a limit and need to wait. Paid plans give meaningfully more. Per OpenAI's terms, images from paid plans (Plus, Pro, Team, Enterprise) belong to the user and can be used commercially; free-tier commercial rights have additional restrictions, so check the current ToS if that matters to you. The content filtering here is the strictest of any major tool — expect occasional blocked prompts on things that seem benign.\n\n**You're doing client work or anything commercial:** [Adobe Firefly](https://firefly.adobe.com) is the one mainstream generator built specifically for commercial safety. It was trained on Adobe Stock, licensed content, and public domain material, and paid plans come with IP indemnification — meaning Adobe covers you if a third-party copyright claim arises on policy-compliant output. Note that this indemnification applies to paid plans, not the free tier (free users can technically use images commercially per Adobe's guidelines, but without that legal backstop, and free images are watermarked). The tradeoff is style: Firefly's outputs can feel generic compared to Midjourney, because the training set is narrower by design. It's the right call for professional use, not necessarily for personal creative work.\n\n**You want the highest creative ceiling and you're willing to pay for it:** [Midjourney](https://midjourney.com) has no free tier — a paid plan is required to generate anything. But it's consistently the tool that produces images with a distinctive, high-craft quality across illustration and stylized work. The web interface is now fully functional without Discord (you can use either), and the web version is more beginner-friendly: no slash commands, just clickable options. If you're a visual artist, concept designer, or filmmaker building mood boards, this is worth the starting subscription cost to evaluate.\n\n**You want text inside images:** [Ideogram](https://ideogram.ai) has a free tier (10 slow credits per week, roughly 40 images) and is consistently the strongest performer for rendering legible text inside an image — a real weakness for most other tools. Free commercial use is allowed with one exception: you can't use outputs to train competing image models. Free-tier generations are public.\n\n**You want local, offline, no subscription:** The open-source route means running models on your own hardware. In 2026, Flux (from Black Forest Labs) and Stable Diffusion are the two dominant model families for this. [ComfyUI](https://github.com/comfyanonymous/ComfyUI) is the current recommended interface — it runs Flux natively and has the strongest community support, though its node-based setup has a learning curve. If you have a lower-end GPU, Forge is a gentler starting point. Vanilla AUTOMATIC1111 doesn't natively support the latest Flux architectures and isn't where you want to start in 2026. One license note: Flux.1 Dev is non-commercial; if you want license-clean local generation, use Flux Schnell, which is Apache 2.0.",
+          "body_markdown": "**You want to try something right now, for free, without committing:** Start with [Leonardo.ai](https://leonardo.ai). Its free plan gives you 150 Fast Tokens per day, refreshing every 24 hours — no credit card, no trial expiration. It has 80+ models covering photorealism, illustration, and cinematic looks, and its Realtime Canvas feature lets you sketch something rough and watch it turn into an image in near-real time. That live feedback loop makes it genuinely useful for figuring out what prompts actually do. The catch: free-tier generations are public and carry only a non-exclusive commercial license, not full ownership. For personal exploration or learning the craft, that's fine.\n\n**You're already inside ChatGPT:** OpenAI's image generation has evolved significantly and is currently integrated into ChatGPT, though the underlying model details have shifted over time — independent sources describe a transition to \"GPT Image 1.5\" in late 2025, but this isn't clearly documented in OpenAI's own public-facing materials, so treat that specific name with some skepticism. The free tier includes limited image generation; whether and when you'll hit a cap isn't documented as a fixed number in OpenAI's official help pages, so expect variability. Paid plans give meaningfully more. Per OpenAI's terms, images from paid plans (Plus, Pro, Team, Enterprise) belong to the user and can be used commercially; free-tier users face additional restrictions on commercial use, including requirements around disclosure and limitations that depend on how the output is used. Check the current ToS directly before using free-tier images in any commercial context. The content filtering here is the strictest of any major tool — expect occasional blocked prompts on things that seem benign.\n\n**You're doing client work or anything commercial:** [Adobe Firefly](https://firefly.adobe.com) is the one mainstream generator built specifically for commercial safety. It was trained on Adobe Stock, licensed content, and public domain material, and paid plans come with IP indemnification — meaning Adobe covers you if a third-party copyright claim arises on policy-compliant output. Note that this indemnification applies to paid plans, not the free tier (free users can technically use images commercially per Adobe's guidelines, but without that legal backstop, and free images are watermarked). The tradeoff is style: Firefly's outputs can feel generic compared to Midjourney, because the training set is narrower by design. It's the right call for professional use, not necessarily for personal creative work.\n\n**You want the highest creative ceiling and you're willing to pay for it:** [Midjourney](https://midjourney.com) has no free tier — a paid plan is required to generate anything. But it's consistently the tool that produces images with a distinctive, high-craft quality across illustration and stylized work. The web interface is now fully functional without Discord (you can use either), and the web version is more beginner-friendly: no slash commands, just clickable options. If you're a visual artist, concept designer, or filmmaker building mood boards, this is worth evaluating — check current plan pricing at midjourney.com, as it changes.\n\n**You want text inside images:** [Ideogram](https://ideogram.ai) has a free tier and is consistently the strongest performer for rendering legible text inside an image — a real weakness for most other tools. Free commercial use is allowed with one exception: you can't use outputs to train competing image models. Free-tier generations are public. The exact quota on the free tier is listed on Ideogram's site and is worth checking directly, since the conversion between credits and image counts depends on settings you choose.\n\n**You want local, offline, no subscription:** The open-source route means running models on your own hardware. In 2026, Flux (from Black Forest Labs) and Stable Diffusion are the two dominant model families for this. [ComfyUI](https://github.com/comfyanonymous/ComfyUI) is the current recommended interface — it runs Flux natively and has the strongest community support, though its node-based setup has a learning curve. Forge is also worth considering as a starting point; independent sources like aifoss.dev describe it as beginner-friendly regardless of GPU tier. Vanilla AUTOMATIC1111 doesn't natively support the latest Flux architectures and isn't where you want to start in 2026. One license note: Flux.1 Dev is non-commercial; if you want license-clean local generation, use Flux Schnell, which is Apache 2.0.",
           "tools": []
         },
         {
           "id": "s3",
           "heading": "Before you publish or monetize anything",
-          "body_markdown": "Commercial rights in AI image generation are patchwork, and the free tier is almost never the safe tier for paid work.\n\n- **Leonardo.ai free tier:** non-exclusive commercial license only; full ownership requires a paid plan. Free generations are public.\n- **ChatGPT / GPT-4o images:** paid plans (Plus and above) explicitly allow commercial use per OpenAI's ToS; free-tier commercial rights carry additional restrictions — read the current terms before publishing anything for a client.\n- **Adobe Firefly:** free-tier users can use images commercially per Adobe's guidelines, but IP indemnification (the legal protection against third-party copyright claims) is paid-plan only. If you're doing commercial work, the free tier leaves you unprotected. Also: free images carry watermarks that can't be removed.\n- **Ideogram free tier:** commercial use permitted, with the exception that outputs cannot be used to train competing image models.\n- **Midjourney:** check current terms at midjourney.com — usage rights have changed over time and depend on your plan and account status.\n- **Local / open-source (Flux, Stable Diffusion):** license terms live with the individual model, not the UI. Flux Schnell is Apache 2.0 (commercially clean); Flux.1 Dev is non-commercial. Always check the model card on Hugging Face before using outputs commercially.\n\nNo AI-generated image currently qualifies for copyright protection in the US under Copyright Office guidance — you can own the commercial rights to use and publish an image, but not the underlying copyright. That distinction matters for licensing your work to others.",
+          "body_markdown": "Commercial rights in AI image generation are patchwork, and the free tier is almost never the safe tier for paid work.\n\n- **Leonardo.ai free tier:** non-exclusive commercial license only; full ownership requires a paid plan. Free generations are public.\n- **ChatGPT image generation:** paid plans (Plus and above) explicitly allow commercial use per OpenAI's ToS; free-tier users face additional restrictions on commercial use. OpenAI's terms are detailed and have changed over time — read the current ToS directly at openai.com before using free-tier output in any client or commercial context.\n- **Adobe Firefly:** free-tier users can use images commercially per Adobe's guidelines, but IP indemnification (the legal protection against third-party copyright claims) is paid-plan only. If you're doing commercial work, the free tier leaves you unprotected. Also: free images carry watermarks that can't be removed.\n- **Ideogram free tier:** commercial use permitted, with the exception that outputs cannot be used to train competing image models.\n- **Midjourney:** check current terms at midjourney.com — usage rights have changed over time and depend on your plan and account status.\n- **Local / open-source (Flux, Stable Diffusion):** license terms live with the individual model, not the UI. Flux Schnell is Apache 2.0 (commercially clean); Flux.1 Dev is non-commercial. Always check the model card on Hugging Face before using outputs commercially.\n\nCopyright protection for AI-generated images in the US is an actively evolving area. The US Copyright Office's current position is that purely AI-generated content without sufficient human authorship doesn't qualify for copyright, though human-authored elements within AI-assisted works have received protection in some cases. The line isn't fixed. You can hold commercial rights to use and publish an image without holding copyright in the traditional sense — and that distinction matters if you're ever licensing your work to others.",
           "tools": []
         },
         {
@@ -2539,6 +2539,72 @@
       "conclusion": "Pick one tool based on your actual use case, not reputation. If you're not sure what your use case is yet, Leonardo's free tier gives you enough room to find out. The tools that are genuinely worth your time will become obvious once you've spent 30 minutes with one of them — and the prompting instincts you build carry over to whichever tool you use next.",
       "methodology_disclosure": "This guide was researched using official documentation from Midjourney, Adobe, and OpenAI where available, supplemented by independent reporting from TechFinitive, Stack Sheriff, Knowara, DataCamp, Digital Applied, and AI FOSS Dev — all accessed in July 2026. Claims about commercial licensing and deprecation status were cross-referenced against primary sources where possible; where a claim rests on a single independent review rather than official documentation, the article notes that distinction. Dailyblip did not conduct independent testing of any of these tools. Exact pricing figures, quota numbers, and plan-specific terms were deliberately omitted in favor of directing readers to each tool's current pricing page, since these details change frequently.",
       "last_reviewed_date": "July 18, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "independent sources describe a transition to \"GPT Image 1.5\" in late 2025",
+          "issue": "The source (offlinecreator.com) is a single independent review, not official documentation, and the specific model name \"GPT Image 1.5\" is unverified; the article itself flags skepticism but still presents this as a named model, which could mislead readers.",
+          "supporting_source_url": "https://offlinecreator.com/tool/dall-e"
+        },
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "free-tier users face additional restrictions on commercial use, including requirements around disclosure",
+          "issue": "No cited source — including OpenAI's own documentation — substantiates a specific \"disclosure requirement\" for free-tier ChatGPT image commercial use; this claim is unsupported and potentially invented.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Ideogram has a free tier and is consistently the strongest performer for rendering legible text",
+          "issue": "The DataCamp source states the Ideogram free tier provides \"10 slow credits per week (~40 images),\" but the article omits this specific quota entirely, telling readers to check the site instead — this under-informs on a verifiable current detail that was cross-referenced in sources.",
+          "supporting_source_url": "https://www.datacamp.com/blog/best-free-ai-image-generators"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Forge is also worth considering as a starting point; independent sources like aifoss.dev describe it",
+          "issue": "The aifoss.dev source is categorized as a secondary/non-primary independent review, yet the article cites it as if it were a well-established independent report, giving it more authority than warranted.",
+          "supporting_source_url": "https://aifoss.dev/blog/automatic1111-review-2026/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "Leonardo.ai free tier: non-exclusive commercial license only; full ownership requires a paid plan",
+          "issue": "The Knowara source (itself an independent review, not Leonardo's official terms) is the basis for this licensing claim; no primary/official Leonardo.ai terms-of-service source is cited to verify this commercial license characterization.",
+          "supporting_source_url": "https://knowara.com/ai-tools/leonardo-ai-review/"
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "ComfyUI with Flux Schnell (Apache 2.0 license) is the recommended starting point over vanilla AUTOMATIC1111",
+          "issue": "The aifoss.dev source actually recommends Forge (not ComfyUI) as the starting point for new users, creating a direct contradiction between the key takeaway and the cited source.",
+          "supporting_source_url": "https://aifoss.dev/blog/automatic1111-review-2026/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "Midjourney has no free tier — a paid plan is required to generate anything. The Basic plan",
+          "issue": "The article omits the specific price ($10/month) that appears in the TechFinitive source and is a verified current fact, while including it would be more useful than directing readers away — inconsistent with the article's own approach for other tools where some pricing is mentioned.",
+          "supporting_source_url": "https://www.techfinitive.com/midjourney-website-now-lets-you-generate-images-without-discord/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s1",
+          "original_text": "free tiers on most tools make your generations public by default",
+          "issue": "This is stated as a general rule but Midjourney (no free tier) and Adobe Firefly (watermarked but not clearly described as public) don't straightforwardly fit this characterization, making \"most tools\" imprecise relative to the tools actually covered.",
+          "supporting_source_url": ""
+        }
+      ],
+      "checked_at": "2026-07-18T00:35:52.710Z",
+      "revised": true
+    },
+    "warnings": [
+      "s2: The source (offlinecreator.com) is a single independent review, not official documentation, and the specific model name \"GPT Image 1.5\" is unverified; the article itself flags skepticism but still presents this as a named model, which could mislead readers.",
+      "s2: No cited source — including OpenAI's own documentation — substantiates a specific \"disclosure requirement\" for free-tier ChatGPT image commercial use; this claim is unsupported and potentially invented."
+    ]
   }
 ]
