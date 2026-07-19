@@ -4127,7 +4127,7 @@
   {
     "id": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "What is ChatGPT's new keyboard?",
       "article_type": "Practical guide",
@@ -4139,6 +4139,25 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T04:32:27.410Z",
-    "updated_at": "2026-07-19T04:32:27.411Z"
+    "updated_at": "2026-07-19T04:33:36.449Z",
+    "brief": {
+      "target_reader": "Someone who just heard that ChatGPT has a keyboard app and wants to know what it actually is, what it does, and whether it's worth downloading — no prior experience with AI keyboard apps assumed",
+      "reader_outcome": "Feel confident enough to download the ChatGPT keyboard, enable it on their phone, and know what to actually use it for",
+      "structure_plan": [
+        "What the ChatGPT keyboard actually is (and what it isn't)",
+        "How to get it set up on your phone",
+        "What you can do with it day-to-day"
+      ],
+      "claims_to_verify": [
+        "Whether the ChatGPT keyboard is a standalone app or built into the existing ChatGPT iOS/Android app",
+        "Which platforms it's available on (iOS, Android, or both) and current availability status",
+        "Whether it requires a ChatGPT account or paid plan to use",
+        "What specific features the keyboard offers (e.g. text rewriting, tone adjustment, autocomplete, translation, voice input)",
+        "Whether the keyboard can access conversation history or context from the main ChatGPT app",
+        "Any known privacy considerations around the keyboard reading typed input",
+        "How to enable it in iOS/Android settings (the actual steps)"
+      ],
+      "research_plan": "Prioritize OpenAI's official announcement posts and the ChatGPT app's own App Store/Play Store description for capabilities and availability. Check recent hands-on coverage from tech publications (The Verge,9to5Mac, Android Authority) for how it actually behaves in use and any friction points during setup. Look specifically for iOS settings steps since enabling third-party keyboards has a known multi-step process that trips people up. Flag anything sourced only from reviews rather than official docs, especially around privacy behavior and feature scope."
+    }
   }
 ]
