@@ -3517,7 +3517,7 @@
   {
     "id": "084e5bb8-c77c-4918-ae78-38b9cfff4e89",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
       "article_type": "Beginner explainer",
@@ -3529,7 +3529,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T03:58:19.658Z",
-    "updated_at": "2026-07-19T04:00:30.074Z",
+    "updated_at": "2026-07-19T04:01:40.815Z",
     "brief": {
       "target_reader": "A developer or technically curious creator who has heard of OpenAI Codex CLI but has no idea what it actually does or whether it's worth trying — they're comfortable opening a terminal but have never used an AI coding agent in their local environment before",
       "reader_outcome": "Understand what Codex CLI is, what makes it different from just using ChatGPT for code help, and feel ready to install it and run their first command",
@@ -3734,26 +3734,91 @@
         {
           "id": "s2",
           "heading": "How to install it and run something on day one",
-          "body_markdown": "Codex CLI is open source and lives at [github.com/openai/codex](https://github.com/openai/codex). The quickest way to install on Mac or Linux is a single shell command:\n\n\ncurl -fsSL https://chatgpt.com/codex/install.sh | sh\n\n\nOn Windows with PowerShell:\n\n\nirm https://chatgpt.com/codex/install.ps1 | iex\n\n\nYou can also install via npm (`npm i -g @openai/codex`), Homebrew (`brew install --cask codex`), or winget. Note: Windows support runs through WSL2 per Microsoft's own documentation, so if you're on native Windows without WSL2, set that up first.\n\nOnce it's installed, sign in with your ChatGPT account or drop in an OpenAI API key. If you already have a ChatGPT Plus, Pro, Business, or Edu subscription, you can use that directly without adding a separate API key. If you don't have any of those, you'll need API credits — there's no standalone free tier confirmed for new accounts with no existing subscription.\n\nThen navigate into a project folder and just run `codex`. It'll drop you into an interactive session. Try something concrete: \"list the functions defined in this file\" or \"write a README based on what's in this repo.\" You'll see it working with your actual files, not hypotheticals.",
+          "body_markdown": "Codex CLI is open source and lives at [github.com/openai/codex](https://github.com/openai/codex). The quickest way to install on Mac or Linux is a single shell command:\n\n\ncurl -fsSL https://chatgpt.com/codex/install.sh | sh\n\n\nOn Windows with PowerShell:\n\n\nirm https://chatgpt.com/codex/install.ps1 | iex\n\n\nYou can also install via npm (`npm i -g @openai/codex`) or Homebrew — the exact Homebrew command isn't confirmed in official docs, so check the [GitHub README](https://github.com/openai/codex) for the current one. Note: Windows support may run through WSL2 or a native sandbox mode depending on your setup — the official [config reference](https://developers.openai.com/codex/config-reference) has the current details, since this is still evolving.\n\nOnce it's installed, sign in with your ChatGPT account or drop in an OpenAI API key. If you already have a paid ChatGPT subscription, you may be able to use that directly without a separate API key — check the [official CLI page](https://developers.openai.com/codex/cli) to confirm which plans qualify, since the specifics aren't fully spelled out in every doc. If you don't have a subscription, you'll need API credits — there's no confirmed standalone free tier for new accounts.\n\nThen navigate into a project folder and just run `codex`. It'll drop you into an interactive session. Try something concrete: \"list the functions defined in this file\" or \"write a README based on what's in this repo.\" You'll see it working with your actual files, not hypotheticals.",
           "tools": []
         },
         {
           "id": "s3",
           "heading": "What it's allowed to do — and when it asks permission",
-          "body_markdown": "This is the part worth understanding before you let it loose.\n\nCodex CLI has two independent controls: a **sandbox mode** (what it's technically allowed to touch) and an **approval policy** (when it stops and asks you before acting). By default, the sandbox limits it to your current working directory with no outbound network access. It can read files, edit files, and run local commands within that workspace — but it can't reach the internet or wander outside the folder you started in without explicitly asking you first.\n\nThe default approval policy (`on-request`) means Codex will act autonomously on routine tasks but pause and ask before doing anything outside those boundaries. You can tighten this to require approval for every action, or loosen it to `never` if you want it to run fully hands-off. There's also a `danger-full-access` sandbox mode if you deliberately want to remove restrictions — but that name is doing a lot of work, and you probably don't need it starting out.\n\nOn macOS this sandboxing works out of the box using the system's built-in security framework. Linux and WSL2 have their own implementations. The setup differs a bit across platforms, so if something feels off, check the [official sandboxing docs](https://developers.openai.com/codex/concepts/sandboxing).\n\nOne last thing: the tool is still in very active development (pre-release version numbers, frequent updates). The default model has already shifted since launch — the early default was o4-mini, but as of mid-2026 the recommended models are GPT-5.6 variants. Check the [official model docs](https://developers.openai.com/codex/models) for what's current, since this is moving fast. We haven't tested this ourselves — this guide is based on official OpenAI documentation and the public GitHub repo.",
+          "body_markdown": "This is the part worth understanding before you let it loose.\n\nCodex CLI has two independent controls: a **sandbox mode** (what it's technically allowed to touch) and an **approval policy** (when it stops and asks you before acting). By default, the sandbox limits it to your current working directory with no outbound network access. It can read files, edit files, and run local commands within that workspace — but it can't reach the internet or wander outside the folder you started in without explicitly asking you first.\n\nThe default approval policy is called `on-request`, which is part of the \"Auto\" preset. In practice that means it'll handle straightforward actions on its own but pause and ask before doing anything riskier or outside its boundaries. The exact line between \"go ahead\" and \"ask first\" is worth reading up on before you run it on anything important — the [official agent approvals docs](https://developers.openai.com/codex) have the details. You can tighten this to require approval for every action, or loosen it to `never` if you want it to run fully hands-off. There's also a `danger-full-access` sandbox mode if you deliberately want to remove restrictions — but that name is doing a lot of work, and you probably don't need it starting out.\n\nOn macOS this sandboxing works out of the box using the system's built-in security framework. Linux and WSL2 have their own implementations. The setup differs a bit across platforms, so check the official docs if something feels off.\n\nOne last thing: the tool is still in very active development, with frequent updates and model defaults that have already shifted since launch. Check the [official model docs](https://developers.openai.com/codex) for what's current rather than relying on anything you read secondhand — this is moving fast. We haven't tested this ourselves; this guide is based on official OpenAI documentation and the public GitHub repo.",
           "tools": []
         }
       ],
       "key_takeaways": [
         "Codex CLI is a local AI coding agent — it reads your actual project files and can make edits and run commands, unlike a chat interface.",
-        "Install it with a single shell command on Mac or Linux; Windows users need WSL2.",
-        "Sign in with a ChatGPT subscription or OpenAI API key — no confirmed free tier for brand-new accounts.",
+        "Install it with a single shell command on Mac or Linux; Windows support varies by setup, so check the official docs for your path.",
+        "Sign in with a paid ChatGPT account or OpenAI API key — no confirmed free tier for brand-new accounts, and which subscription plans qualify isn't fully spelled out in every official doc.",
         "By default it's sandboxed to your current working directory with no internet access, and it asks before doing anything outside that.",
-        "The tool is still under active development, so expect the default model and some behaviors to keep changing — treat the official docs as the source of truth."
+        "The tool is still under active development, so the default model and some behaviors will keep changing — treat the official docs as the source of truth, not any secondhand summary."
       ],
       "conclusion": "If you've wanted an AI that actually works inside your codebase instead of alongside it, Codex CLI is the most direct way to try that right now. Start small: point it at one file, give it a specific task, and see how it handles it. The sandbox defaults are reasonable, so you're not risking much by experimenting.",
       "methodology_disclosure": "This guide was researched using the official OpenAI Codex CLI GitHub repository README, the OpenAI developer documentation at developers.openai.com/codex, the official sandboxing and agent approvals documentation, and the GitHub releases page for version status. Installation methods for Windows were cross-referenced against Microsoft Learn documentation. An independent review from Augment Code was used for supplementary context on licensing and package manager options, and is identified as such where referenced. Pricing and free-tier claims were explicitly not confirmed from official sources and are flagged accordingly. No hands-on testing was conducted by dailyblip; all capability descriptions reflect official documentation as accessed in July 2026.",
       "last_reviewed_date": "July 19, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "official config reference has the current details, since this is still evolving",
+          "issue": "The link labeled 'official config reference' points to developers.openai.com/codex/config-reference, but the surrounding claim is about Windows WSL2 vs. native sandbox behavior — the config reference doc covers configuration syntax, not platform sandbox setup paths; this misdirects readers.",
+          "supporting_source_url": "https://developers.openai.com/codex/config-reference"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "check the official CLI page to confirm which plans qualify",
+          "issue": "The link labeled 'official CLI page' points to developers.openai.com/codex/cli, but the sources show that doc covers installation and commands, not subscription plan qualification details — the link destination doesn't support the specific claim being made.",
+          "supporting_source_url": "https://developers.openai.com/codex/cli"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s3",
+          "original_text": "official agent approvals docs have the details",
+          "issue": "Both approval-policy and model-defaults links in s3 resolve to the same bare URL (developers.openai.com/codex), not to the specific agent-approvals or models sub-pages documented in the sources — generic root URL doesn't help readers find the referenced detail.",
+          "supporting_source_url": "https://developers.openai.com/codex"
+        },
+        {
+          "severity": "low",
+          "section_id": "s1",
+          "original_text": "connects to OpenAI's models through the Responses API",
+          "issue": "The article states Codex CLI connects via the Responses API as a settled fact, but sources also note Chat Completions API support exists (though deprecated) — framing it as exclusively Responses API is slightly ahead of current reality.",
+          "supporting_source_url": "https://developers.openai.com/codex/cli"
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "default approval policy is called 'on-request', which is part of the 'Auto' preset",
+          "issue": "Source documents name the preset parameter as '--ask-for-approval on-request' combined with '--sandbox workspace-write' to form the Auto preset, but the article implies 'on-request' alone is the default preset name, which may confuse readers trying to replicate it.",
+          "supporting_source_url": "https://developers.openai.com/codex/agent-approvals-security"
+        },
+        {
+          "severity": "low",
+          "section_id": "key_takeaways",
+          "original_text": "Sign in with a paid ChatGPT account or OpenAI API key",
+          "issue": "The sources indicate first-time users can sign in with a ChatGPT account (not necessarily 'paid') — the free-tier ambiguity is flagged elsewhere in the article but the takeaway states 'paid' as a definitive requirement without the same hedging.",
+          "supporting_source_url": "https://developers.openai.com/codex/cli"
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "Homebrew — the exact Homebrew command isn't confirmed in official docs",
+          "issue": "The Augment Code independent source and the Microsoft Learn source both confirm 'brew install --cask codex' as a valid Homebrew command, so claiming it isn't confirmed in official docs understates source coverage and may unnecessarily deter users.",
+          "supporting_source_url": "https://www.augmentcode.com/learn/openai-codex-cli-terminal-agent"
+        },
+        {
+          "severity": "high",
+          "section_id": "s2",
+          "original_text": "curl -fsSL https://chatgpt.com/codex/install.sh | sh",
+          "issue": "The install script URLs use the chatgpt.com domain (chatgpt.com/codex/install.sh and chatgpt.com/codex/install.ps1), which is an unusual and unverifiable domain for a developer CLI installer — if these are incorrect or change, readers executing them pipe arbitrary scripts into their shell; the article provides no verification step and no checksum guidance.",
+          "supporting_source_url": "https://github.com/openai/codex"
+        }
+      ],
+      "checked_at": "2026-07-19T04:01:40.815Z",
+      "revised": true
+    },
+    "warnings": [
+      "s2: The install script URLs use the chatgpt.com domain (chatgpt.com/codex/install.sh and chatgpt.com/codex/install.ps1), which is an unusual and unverifiable domain for a developer CLI installer — if these are incorrect or change, readers executing them pipe arbitrary scripts into their shell; the article provides no verification step and no checksum guidance."
+    ]
   }
 ]
