@@ -4143,8 +4143,8 @@
   },
   {
     "id": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd",
-    "status": "failed",
-    "stage": "Approved",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "submitted": {
       "idea": "What is ChatGPT's new keyboard?",
       "article_type": "Practical guide",
@@ -4440,7 +4440,7 @@
         "alt_text": "A compact amber mechanical macropad sits centered against a deep navy background, with a faint aqua smartphone silhouette receding behind it.",
         "caption": "The ChatGPT 'keyboard' isn't a mobile app — it's the Codex Micro, a $230 physical macropad built for desktop AI coding workflows.",
         "generated_at": "2026-07-19T04:38:14.952Z",
-        "approved": false,
+        "approved": true,
         "role": "hero",
         "concept": "A physical macropad glowing in amber sits center-frame against a dark navy background, visually distinct from a smartphone — immediately signaling 'this is hardware, not an app'",
         "purpose": "Earn the reader's attention and set up the article's core reveal: the ChatGPT keyboard is a physical desktop device, not a mobile app",
@@ -4454,7 +4454,7 @@
         "alt_text": "Top-down diagram showing a full-size keyboard beside a smaller amber macropad labeled 'Codex Micro', illustrating that the macropad sits next to, not instead of, a regular keyboard.",
         "caption": "The Codex Micro isn't a keyboard — it's a compact macropad that sits alongside your existing keyboard as a dedicated control pad for AI coding agents.",
         "generated_at": "2026-07-19T04:38:35.553Z",
-        "approved": false,
+        "approved": true,
         "role": "explainer",
         "concept": "A labeled diagram showing what the Codex Micro actually is: a small physical macropad that sits beside a full keyboard, not replacing it",
         "purpose": "Help readers immediately understand the Codex Micro's form factor and spatial relationship to a standard keyboard — it's an add-on control pad, not a keyboard replacement",
@@ -4482,7 +4482,7 @@
         "alt_text": "Horizontal three-step workflow: a macropad icon connects via arrow to a Codex Agent symbol, which connects via arrow to three stacked parallel task blocks.",
         "caption": "One button press on the Codex Micro dispatches an AI coding agent — the point is managing multiple parallel Codex tasks without switching context in your keyboard or mouse.",
         "generated_at": "2026-07-19T04:39:10.499Z",
-        "approved": true,
+        "approved": false,
         "role": "workflow",
         "concept": "A simple horizontal flow showing how the Codex Micro fits into a developer's desktop workflow: macropad → triggers Codex agent → multiple parallel tasks complete",
         "purpose": "Illustrate what the Codex Micro actually does in use — a physical button press dispatches an AI coding agent, enabling parallel task management without context-switching",
@@ -4496,7 +4496,7 @@
         "alt_text": "A vertical fact-card listing four key Codex Micro details: $230 price, co-made with Work Louder, designed for Codex users only, and available as a limited run.",
         "caption": "The Codex Micro at a glance: $230, co-made with Work Louder, built specifically for Codex coding-agent users, and sold as a limited-run product with no guaranteed long-term availability.",
         "generated_at": "2026-07-19T04:39:27.031Z",
-        "approved": true,
+        "approved": false,
         "role": "list-support",
         "concept": "A vertical stacked list of four key facts about the Codex Micro — price, co-maker, target user, and availability caveat — as a clean scannable card",
         "purpose": "Give readers a fast at-a-glance summary of the Codex Micro's defining specs and caveats: $230, made with Work Louder, for Codex developers, limited run",
@@ -4510,18 +4510,22 @@
         "alt_text": "Concentric circle diagram: a large outer navy circle labeled 'ChatGPT users' contains a smaller amber circle labeled 'Codex devs', which contains a tiny aqua macropad icon — showing the Codex Micro's narrow target audience.",
         "caption": "The Codex Micro isn't for the general ChatGPT audience — it targets the specific slice of developers who run Codex coding agents heavily enough that $230 for a dedicated control pad makes sense.",
         "generated_at": "2026-07-19T04:39:39.237Z",
-        "approved": true,
+        "approved": false,
         "role": "explainer",
         "concept": "A Venn-style or concentric circle diagram showing that Codex users are a specific subset of general ChatGPT users — making clear why this device isn't for most people",
         "purpose": "Visually communicate the audience mismatch at the heart of the article: the Codex Micro serves Codex developers, a small specialized group within the much larger ChatGPT user base",
         "aspect_ratio": "1:1"
+      },
+      {
+        "id": "upload-1784437592055",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-upload-1784437590952.jpg",
+        "placement": "hero",
+        "alt_text": "",
+        "caption": "",
+        "approved": true,
+        "role": "upload",
+        "generated_at": "2026-07-19T05:06:32.055Z"
       }
-    ],
-    "approved_at": "2026-07-19T05:05:11.323Z",
-    "error": {
-      "stage": "publish",
-      "message": "Pre-publish validation failed: no hero-placement image among the SELECTED images",
-      "at": "2026-07-19T05:05:29.146Z"
-    }
+    ]
   }
 ]
