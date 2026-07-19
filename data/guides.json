@@ -3910,7 +3910,7 @@
   {
     "id": "f4dcd270-c1f9-49fc-88ed-1f148e7fa7d6",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "OpenAI's new AI keyboard explained - what does it do?",
       "article_type": "Practical guide",
@@ -3922,7 +3922,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T04:27:18.838Z",
-    "updated_at": "2026-07-19T04:27:47.143Z",
+    "updated_at": "2026-07-19T04:28:37.890Z",
     "brief": {
       "target_reader": "Someone who saw a headline about OpenAI's AI keyboard and has no idea what it actually is or does — probably a regular iPhone or Android user, not a developer or AI enthusiast",
       "reader_outcome": "Understand what the keyboard is, what it actually lets you do, and feel ready to download it and try it",
@@ -3942,6 +3942,104 @@
         "The name of the keyboard product (e.g. is it called 'ChatGPT keyboard' or something else)"
       ],
       "research_plan": "Prioritize official OpenAI announcements and product pages, then major tech news outlets (The Verge, TechCrunch, 9to5Mac) for coverage of the launch. Avoid relying solely on secondary aggregator posts. Check App Store and Google Play listings for availability and user-facing feature descriptions. Flag anything that appears to be pre-launch speculation versus confirmed shipped features."
-    }
+    },
+    "sources": [
+      {
+        "title": "Amid hardware legal battle, OpenAI releases a $230 keyboard for Codex",
+        "publisher": "TechCrunch",
+        "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "The product is called the 'Codex Micro' — not a 'ChatGPT keyboard' or any software/mobile keyboard",
+          "It is a physical hardware keyboard co-designed with Work Louder, priced at $230",
+          "It is OpenAI's first hardware product",
+          "It is designed for developers managing AI coding agents (Codex), not for general writing assistance",
+          "OpenAI described the Codex Micro as a 'limited-run collaboration', signaling it is not a mass-market product",
+          "It features light-up 'Agent Keys', customizable Command Keys, a joystick, and a reasoning dial — not writing/rewriting/translation features"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "OpenAI Just Launched Its First Hardware Product — and It's a Tiny Keyboard for Bossing Around AI Agents",
+        "publisher": "Gizmodo",
+        "url": "https://gizmodo.com/openai-just-launched-its-first-hardware-product-and-its-a-tiny-keyboard-for-bossing-around-ai-agents-2000786080",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Six illuminated keys show AI agent status using color codes (green, blue, orange, red)",
+          "A joystick can be programmed to launch developer workflows like debugging or refactoring code",
+          "A dial adjusts the level of reasoning Codex should apply to a task",
+          "The keyboard is a physical device for Codex coding agent management, not a software mobile keyboard"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "OpenAI Codex Micro Mechanical Keyboard Specifications",
+        "publisher": "Geeky Gadgets",
+        "url": "https://www.geeky-gadgets.com/openai-work-louder-codex-micro/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "The Codex Micro has 32 customizable keycaps and a dynamic rotary dial",
+          "It is a mechanical keyboard designed for coding workflows"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "OpenAI brings Codex to ChatGPT mobile app for iOS and Android",
+        "publisher": "TestingCatalog",
+        "url": "https://www.testingcatalog.com/openai-brings-codex-to-chatgpt-mobile-app-for-ios-and-android/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "OpenAI's Codex (coding agent) is integrated into the ChatGPT mobile app on iOS and Android — this is a coding agent feature, not a software keyboard product",
+          "Codex mobile preview is rolling out in supported regions across all ChatGPT plans including Free and Go",
+          "Windows phone-to-Codex desktop support is listed as coming soon"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "OpenAI Brings Codex to ChatGPT Mobile App for iOS and Android Users",
+        "publisher": "Elets CIO",
+        "url": "https://cio.eletsonline.com/news/openai-brings-codex-to-chatgpt-mobile-app-for-ios-and-android-users/76110/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Codex mobile integration allows users to review outputs, approve commands, switch AI models, and track coding threads from their phones — not text rewriting, tone changes, or translation",
+          "The feature is in preview mode, rolling out across all ChatGPT plans including Free and Go in supported regions"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "ChatGPT – App Store",
+        "publisher": "Apple / OpenAI",
+        "url": "https://apps.apple.com/us/app/chatgpt/id6448311069",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "The official ChatGPT iOS app exists and is free to download",
+          "The app's listed features are: image generation, Advanced Voice Mode, photo upload, creative inspiration, and tailored advice — no mention of a keyboard extension or replacement product"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      }
+    ],
+    "unverifiable_claims": [
+      "CRITICAL — TOPIC MISMATCH: No OpenAI product called a 'ChatGPT keyboard' or 'AI keyboard' (software mobile keyboard) exists as of July 19, 2026. The only keyboard OpenAI has released is the Codex Micro, a $230 physical hardware device for developers managing AI coding agents. The entire premise of the brief appears to be based on a non-existent or misidentified product.",
+      "Which platforms the keyboard is available on (iOS, Android, or both) — cannot be verified for a software AI keyboard; no such OpenAI product exists.",
+      "Whether it is a standalone app or built into an existing OpenAI app — cannot be verified; no software AI keyboard from OpenAI has been announced.",
+      "Core features: rewriting, tone changes, translation, autocomplete — none of these are features of the Codex Micro or any other OpenAI keyboard product found in research.",
+      "Whether a ChatGPT account or OpenAI subscription is required to use it — cannot be verified for this product type.",
+      "Whether there is a free tier or if it requires a paid plan — cannot be verified for a software AI keyboard from OpenAI.",
+      "Whether it works across all apps or only certain ones — cannot be verified; no such product exists.",
+      "Current availability — fully launched, in beta, or rolling out in limited regions — cannot be verified for this product.",
+      "The name of the keyboard product (e.g. 'ChatGPT keyboard') — the only OpenAI keyboard product found is the Codex Micro, a physical hardware device. No software mobile keyboard product name could be verified."
+    ]
   }
 ]
