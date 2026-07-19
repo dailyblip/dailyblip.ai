@@ -773,6 +773,88 @@ $("#tdClear").addEventListener("click", () => {
 // file's "edit locally, Publish when ready" pattern.
 let guides = [];
 let guidesSha = null;
+let manifestSha = null;
+const MANIFEST_PATH = "docs/data/guides-manifest.json";
+
+async function loadManifestFile(){
+  try {
+    const res = await gh(MANIFEST_PATH);
+    if (res.ok) {
+      const data = await res.json();
+      manifestSha = data.sha;
+      return JSON.parse(b64dec(data.content));
+    }
+  } catch {}
+  manifestSha = null;
+  return []; // no manifest yet (nothing published, or pre-manifest guides never backfilled)
+}
+
+// Same retry-on-conflict pattern as writeGuidesWithRetry \u2014 the manifest
+// is written by guide-publish.js on every publish AND by admin.html's
+// unlist/re-list toggle, so the same kind of concurrent-write collision
+// is possible here too, just less frequently than guides.json.
+async function writeManifestWithRetry(mutate, message){
+  let manifest = await loadManifestFile();
+  for (let attempt = 0; attempt < 3; attempt++){
+    manifest = mutate(manifest);
+    try {
+      manifestSha = await writeFile(MANIFEST_PATH, manifest, manifestSha, message);
+      return;
+    } catch (e) {
+      const isConflict = /GitHub 409/.test(e.message);
+      if (!isConflict || attempt === 2) throw e;
+      const waitMs = 500 + Math.random() * 1000;
+      await new Promise((r) => setTimeout(r, waitMs));
+      manifest = await loadManifestFile();
+    }
+  }
+}
+
+async function toggleGuideListing(id){
+  const g = guides.find(x => x.id === id);
+  if (!g || g.status !== "published") return;
+  const willUnlist = !g.unlisted;
+  const label = g.article?.title || g.article?.slug || "this guide";
+  const msg = willUnlist
+    ? `Remove "${label}" from the homepage and library? The live page itself stays up at its current URL \u2014 this only stops it from being featured/browsable.`
+    : `Add "${label}" back to the homepage and library?`;
+  if (!confirm(msg)) return;
+
+  try {
+    // Job record: just the flag, for admin.html's own display and so
+    // this is reversible later without guessing what was unlisted.
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      if (i === -1) return gs;
+      const updated = [...gs];
+      updated[i] = { ...updated[i], unlisted: willUnlist };
+      return updated;
+    }, `admin: ${willUnlist ? "unlist" : "re-list"} guide ${id}`);
+
+    // Manifest: the thing that actually controls what the homepage and
+    // library show. Re-listing re-adds a fresh entry from the current
+    // article data (in case anything changed since original publish)
+    // rather than trying to recover the exact old entry.
+    await writeManifestWithRetry(manifest => {
+      const withoutThis = manifest.filter(m => m.slug !== g.article.slug);
+      if (willUnlist) return withoutThis;
+      const heroImg = (g.images || []).find(img => img.approved && img.placement === "hero");
+      return [...withoutThis, {
+        title: g.article.title, slug: g.article.slug, dek: g.article.dek,
+        hero_image: heroImg ? `/guides/${heroImg.file}` : null,
+        published_at: g.published_at || g.article.last_reviewed_date,
+        tags: g.article.tags || [],
+      }];
+    }, `admin: ${willUnlist ? "unlist" : "re-list"} guide ${id} from manifest`);
+
+    toast(willUnlist ? "Unlisted." : "Re-listed.");
+    await renderGuides();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
 let guidePollTimer = null;
 let activeGuideId = null;
 let guideTickTimer = null; // separate from the 10s poll — ticks every 1s just to refresh "last updated Xs ago" text, so the review screen feels alive between actual polls
@@ -822,15 +904,24 @@ async function saveGuidesFile(message){
 // original stale payload would silently overwrite whatever the
 // concurrent commit just wrote (e.g. a stage progressing).
 async function writeGuidesWithRetry(mutate, message){
-  for (let attempt = 0; attempt < 2; attempt++){
+  // 3 attempts now, not 2 \u2014 data/guides.json gets written by far more
+  // concurrent sources than when this was first built (guide.yml
+  // commits after every single stage during active generation,
+  // guide-recheck.yml, guide-publish.js, plus every admin.html write
+  // path including uploads). A short backoff before retrying also
+  // matters: retrying instantly can re-collide with a commit that's
+  // still mid-flight on GitHub's side, not yet fully landed.
+  for (let attempt = 0; attempt < 3; attempt++){
     guides = mutate(guides);
     try {
       guidesSha = await writeFile(GUIDES_PATH, guides, guidesSha, message);
       return;
     } catch (e) {
       const isConflict = /GitHub 409/.test(e.message);
-      if (!isConflict || attempt === 1) throw e;
-      console.warn("guides.json write conflict (likely a GitHub Action committing at the same time) \u2014 refetching latest and retrying once.");
+      if (!isConflict || attempt === 2) throw e;
+      const waitMs = 500 + Math.random() * 1000;
+      console.warn(`guides.json write conflict (likely a GitHub Action committing at the same time) \u2014 refetching latest and retrying in ${Math.round(waitMs)}ms (attempt ${attempt + 2} of 3).`);
+      await new Promise((r) => setTimeout(r, waitMs));
       await loadGuidesFile();
     }
   }
@@ -850,7 +941,7 @@ const DELETABLE_STATUSES = new Set(["ready_for_review", "published", "failed", "
 
 function guideStatusLabel(g){
   if (g.status === "failed") return `Failed (${g.error?.stage || "?"})`;
-  if (g.status === "published") return "Published";
+  if (g.status === "published") return g.unlisted ? "Published (unlisted)" : "Published";
   if (g.status === "approved") return "Approved \u2014 publishing\u2026";
   if (g.status === "ready_for_review") return "Ready for review";
   return g.stage || "Queued";
@@ -875,6 +966,7 @@ async function renderGuides(){
           </div>
           <div style="display:flex;gap:8px;align-items:center">
             ${g.status === "published" ? `<a href="${esc(g.published_url)}" target="_blank" onclick="event.stopPropagation()" class="btn">view live \u2192</a>` : ""}
+            ${g.status === "published" ? `<button class="btn" onclick="event.stopPropagation();toggleGuideListing('${g.id}')" title="${g.unlisted ? "Add back to the homepage and library" : "Remove from the homepage and library, without deleting the live page"}">${g.unlisted ? "Re-list" : "Unlist"}</button>` : ""}
             ${DELETABLE_STATUSES.has(g.status) ? `<button class="btn red" onclick="event.stopPropagation();deleteGuide('${g.id}')" title="Delete this job">\u00d7</button>` : ""}
             ${isForceDeletable(g) ? `<button class="btn red" onclick="event.stopPropagation();deleteGuide('${g.id}',true)" title="No update in over ${FORCE_DELETE_THRESHOLD_MS/60000} min, past guide.yml's own 20-min timeout \u2014 the Action is definitely dead">\u00d7 (stuck)</button>` : ""}
           </div>
@@ -1082,10 +1174,22 @@ function openGuide(id){
   }
   clearInterval(guideTickTimer);
   if (g.status === "failed") {
-    panel.innerHTML = `<h3 style="color:var(--red)">Generation failed</h3>
-      <p class="tip">Stage: ${esc(g.error?.stage)} \u2014 ${esc(g.error?.message)}</p>
-      <button class="btn" onclick="closeGuideReview()">\u2190 back to list</button>`;
-    return;
+    // A failure during PUBLISH specifically means the article already
+    // exists and is fully reviewable \u2014 it just didn't pass one gate
+    // (like "select a hero image"). Falling through to the normal
+    // editable review screen lets the person actually fix the problem
+    // and retry, instead of being stuck on a dead-end error message
+    // with no way back to the image grid or section editor. A failure
+    // during GENERATION (brief/research/draft/factcheck/images/format)
+    // is different \u2014 the article may genuinely not exist yet, so
+    // there's nothing to review, and that case still shows the plain
+    // error message below.
+    if (g.error?.stage !== "publish" || !g.article?.sections?.length) {
+      panel.innerHTML = `<h3 style="color:var(--red)">Generation failed</h3>
+        <p class="tip">Stage: ${esc(g.error?.stage)} \u2014 ${esc(g.error?.message)}</p>
+        <button class="btn" onclick="closeGuideReview()">\u2190 back to list</button>`;
+      return;
+    }
   }
 
   const a = g.article || {};
@@ -1136,10 +1240,16 @@ function openGuide(id){
     </div>`;
 
   const highSeverity = (g.fact_check?.issues || []).filter(i => i.severity === "high").length;
+  const publishErrorHtml = (g.status === "failed" && g.error?.stage === "publish")
+    ? `<div class="panel" style="border-color:rgba(255,122,107,.4);background:rgba(255,122,107,.05);margin-bottom:14px">
+        <div class="tip" style="color:var(--red);margin-bottom:6px">\u26a0 Publish failed \u2014 fix this and try Approve &amp; publish again</div>
+        <div style="font-size:12.5px;color:var(--dim)">${esc(g.error.message)}</div>
+      </div>` : "";
 
   panel.innerHTML = `
     <h3>Review draft</h3>
     <p class="tip" style="margin:0 0 12px">Nothing publishes until you click Publish below.</p>
+    ${publishErrorHtml}
     ${warnHtml}
     <label>Title</label><input id="gaTitle" value="${esc(a.title)}">
     <label style="margin-top:10px">Dek</label><textarea id="gaDek" rows="2">${esc(a.dek)}</textarea>
