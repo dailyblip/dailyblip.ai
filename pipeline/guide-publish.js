@@ -276,23 +276,231 @@ $("#subForm").addEventListener("submit", async e => {
 </body></html>`;
 }
 
-function rebuildGuidesIndex(dir, guides) {
-  const published = guides.filter((g) => g.status === "published").slice().reverse();
-  const rows = published.map((g) =>
-    `<div class="item"><a href="${esc(g.article.slug)}.html">${esc(g.article.title)}</a> <span style="color:#9AB7B2">${esc(g.article.last_reviewed_date)}</span></div>`
-  ).join("");
-  fs.writeFileSync(path.join(dir, "index.html"), `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>dailyblip \u2014 guides</title>
-<style>${PAGE_CSS}</style></head><body>
-<div class="wrap">
-  <div class="back"><a href="../">\u2190 dailyblip</a></div>
-  <h1>Guides</h1>
-  <p class="dek">Practical, evergreen guides for AI-assisted creators.</p>
-  ${rows || "<p>Nothing published yet.</p>"}
-</div>
-</body></html>`);
+// Single shared source of truth for "what guides exist," read by BOTH
+// the homepage's guides teaser and this library page itself \u2014 avoids
+// maintaining the guide list in two places that could drift apart.
+// hero_image is stored root-relative (/guides/<file>) rather than a
+// bare filename: this is the exact same lesson already learned once
+// from a real production bug (a bare filename only resolves correctly
+// if the page displaying it happens to live in the same directory as
+// the image, which broke when admin.html \u2014 at the site root \u2014 tried
+// to show the same images). Storing it root-relative here means it
+// resolves correctly from both docs/index.html (site root) and
+// docs/guides/index.html (one level down) without needing to special-
+// case either caller.
+function buildGuidesManifest(guides) {
+  return guides
+    .filter((g) => g.status === "published" && g.article)
+    .map((g) => {
+      const heroImg = (g.images || []).find((img) => img.approved && img.placement === "hero");
+      return {
+        title: g.article.title,
+        slug: g.article.slug,
+        dek: g.article.dek,
+        hero_image: heroImg ? `/guides/${heroImg.file}` : null,
+        published_at: g.published_at || g.article.last_reviewed_date,
+        tags: g.article.tags || [],
+      };
+    })
+    .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
 }
+
+function writeGuidesManifest(manifest) {
+  fs.mkdirSync("docs/data", { recursive: true });
+  fs.writeFileSync("docs/data/guides-manifest.json", JSON.stringify(manifest, null, 2) + "\n");
+}
+
+// The real, full library page \u2014 search, tag filtering, sort \u2014 fetching
+// the shared manifest at load time rather than having its data baked in
+// at rebuild time, so it never goes stale between publishes and matches
+// the exact same fetch pattern docs/index.html already uses for
+// data/feed.json.
+function rebuildGuidesIndex(dir) {
+  fs.writeFileSync(path.join(dir, "index.html"), `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>dailyblip \u2014 guide library</title>
+<meta name="description" content="Every quick-start guide dailyblip has published, searchable and filterable by topic.">
+<link rel="canonical" href="${SITE_URL}/guides/">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --ink-3:#123039;
+  --line:rgba(158,216,210,.13); --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79;
+  --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6; --red:#FF7A6B;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+  --radius:10px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+header{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:30px 24px 0}
+.masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.wordmark{font-family:var(--display);font-weight:750;font-size:clamp(28px,4.5vw,42px);letter-spacing:-.02em;display:flex;align-items:center;gap:2px}
+.wordmark .blip-dot{width:.34em;height:.34em;border-radius:50%;background:var(--amber);display:inline-block;margin-left:.18em;
+  box-shadow:0 0 0 0 rgba(255,180,84,.6);animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(255,180,84,.55)}70%{box-shadow:0 0 0 14px rgba(255,180,84,0)}100%{box-shadow:0 0 0 0 rgba(255,180,84,0)}}
+.wordmark .ai-hl{color:var(--amber)}
+.back-link{font-family:var(--mono);font-size:12px;color:var(--faint)}
+.back-link:hover{color:var(--amber)}
+.tagline{margin-top:6px;color:var(--dim);font-size:14.5px;margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:26px 24px 80px}
+h1{font-family:var(--display);font-weight:750;font-size:clamp(26px,5vw,36px);letter-spacing:-.02em;margin-bottom:8px}
+.sub{color:var(--dim);font-size:15px;margin-bottom:26px;max-width:560px}
+.controls{display:flex;gap:12px;margin-bottom:22px;flex-wrap:wrap}
+.search-box{flex:1;min-width:220px;position:relative;display:flex;align-items:center;gap:8px;
+  border:1px solid var(--line);border-radius:8px;padding:0 12px;background:var(--ink-2)}
+.search-box input{flex:1;background:none;border:none;outline:none;color:var(--text);font-family:var(--mono);font-size:13px;padding:11px 0}
+.search-box input::placeholder{color:var(--faint)}
+.search-box svg{opacity:.5;flex-shrink:0}
+.sort-select{background:var(--ink-2);border:1px solid var(--line-strong);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:12.5px;padding:0 12px;cursor:pointer}
+.tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.tag-pill{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--dim);
+  border:1px solid var(--line-strong);border-radius:20px;padding:7px 14px;cursor:pointer;transition:all .15s ease;background:none}
+.tag-pill:hover{border-color:var(--aqua);color:var(--aqua)}
+.tag-pill.active{background:rgba(255,180,84,.12);border-color:var(--amber);color:var(--amber)}
+.result-count{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:16px}
+.guide-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+.guide-card{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--ink-2);
+  transition:border-color .15s ease,transform .15s ease;cursor:pointer;display:flex;flex-direction:column}
+.guide-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.guide-thumb{aspect-ratio:16/10;background:linear-gradient(135deg,var(--ink-2),var(--ink-3));display:flex;align-items:center;justify-content:center;color:var(--faint);font-family:var(--mono);font-size:11px;overflow:hidden}
+.guide-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.guide-body{padding:16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.guide-title{font-family:var(--display);font-weight:650;font-size:16.5px;line-height:1.3}
+.guide-dek{color:var(--dim);font-size:13px;line-height:1.5;flex:1}
+.guide-meta-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px}
+.guide-date{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
+.guide-tags{display:flex;gap:5px;flex-wrap:wrap}
+.guide-tag-chip{font-family:var(--mono);font-size:9.5px;color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:2px 8px}
+.empty-state{text-align:center;padding:60px 20px;color:var(--faint);font-family:var(--mono);font-size:13px}
+footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:40px;padding:26px 24px 40px}
+.foot-in{max-width:1180px;margin:0 auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--faint)}
+.foot-in a:hover{color:var(--amber)}
+.foot-links{display:flex;gap:18px}
+.blip-sprite{position:fixed;right:18px;bottom:18px;z-index:40}
+.blip-sprite-btn{display:block;width:72px;height:88px;padding:0;animation:blipFloat 4.2s ease-in-out infinite;transition:transform .2s ease}
+.blip-sprite-btn:hover{animation-play-state:paused;transform:translateY(-4px) scale(1.05)}
+.blip-sprite-btn svg{display:block;filter:drop-shadow(0 8px 18px rgba(0,0,0,.4))}
+.blip-body,.blip-arm{fill:var(--ink-2);stroke:var(--aqua);stroke-width:1.5}
+.blip-antenna{fill:none;stroke:var(--aqua);stroke-width:2.5;stroke-linecap:round}
+.blip-antenna-tip{fill:var(--aqua)}
+.blip-glow{fill:var(--aqua);opacity:.18}
+.blip-eye{fill:var(--amber);stroke:var(--ink-2);stroke-width:1.5;transform-origin:70px 75px;animation:blipBlink 6.5s ease-in-out infinite}
+.blip-eye-highlight{fill:var(--text)}
+@keyframes blipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes blipBlink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.12)}97%{transform:scaleY(1)}}
+@media(prefers-reduced-motion:reduce){.wordmark .blip-dot,.blip-sprite-btn,.blip-eye{animation:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="masthead">
+    <div class="wordmark">d<span class="ai-hl">ai</span>lyblip<span class="blip-dot" aria-hidden="true"></span></div>
+    <a href="../" class="back-link">\u2190 back to dailyblip</a>
+  </div>
+  <p class="tagline">A ruthlessly curated AI-creator brief \u2014 only the signal, none of the slop.</p>
+</header>
+<div class="wrap">
+  <h1>The Guide Library</h1>
+  <p class="sub">Every quick-start guide dailyblip has published, in one place. Search by name, or filter by what you're actually trying to do.</p>
+  <div class="controls">
+    <div class="search-box">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="Search guides\u2026">
+    </div>
+    <select class="sort-select" id="sortSelect">
+      <option value="newest">Newest first</option>
+      <option value="oldest">Oldest first</option>
+      <option value="az">A \u2192 Z</option>
+    </select>
+  </div>
+  <div class="tags-row" id="tagsRow"></div>
+  <div class="result-count" id="resultCount"></div>
+  <div class="guide-grid" id="guideGrid"></div>
+  <div class="empty-state" id="emptyState" style="display:none">No guides match that search or filter.</div>
+</div>
+<footer>
+  <div class="foot-in">
+    <div>dailyblip // the AI brief for people who make things</div>
+    <div class="foot-links"><a href="../showcase.html">showcase</a><a href="../standards.html">standards</a><a href="../commentary/">commentary</a><a href="../archive/">archive</a><a href="../feed.xml">rss</a></div>
+  </div>
+</footer>
+<div class="blip-sprite">
+  <button class="blip-sprite-btn" type="button" aria-label="Blip">
+    <svg viewBox="0 0 140 170" width="72" height="88" aria-hidden="true">
+      <ellipse class="blip-glow" cx="70" cy="150" rx="34" ry="6"/>
+      <path class="blip-antenna" d="M70 40 Q84 18 90 8"/>
+      <circle class="blip-antenna-tip" cx="90" cy="8" r="4"/>
+      <rect class="blip-body" x="35" y="40" width="70" height="90" rx="35"/>
+      <ellipse class="blip-arm" cx="24" cy="95" rx="9" ry="15"/>
+      <ellipse class="blip-arm" cx="116" cy="95" rx="9" ry="15"/>
+      <circle class="blip-eye" cx="70" cy="75" r="13"/>
+      <circle class="blip-eye-highlight" cx="66" cy="71" r="3"/>
+    </svg>
+  </button>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+function esc(t){ const d=document.createElement("div"); d.textContent=t??""; return d.innerHTML; }
+let GUIDES = [], activeTag = "All", searchTerm = "", sortMode = "newest";
+
+function renderTags(){
+  const allTags = ["All", ...new Set(GUIDES.flatMap(g => g.tags || []))];
+  $("#tagsRow").innerHTML = allTags.map(tag =>
+    \`<button class="tag-pill \${tag === activeTag ? "active" : ""}" data-tag="\${esc(tag)}">\${esc(tag)}</button>\`
+  ).join("");
+  document.querySelectorAll(".tag-pill").forEach(btn =>
+    btn.addEventListener("click", () => { activeTag = btn.dataset.tag; renderTags(); renderGrid(); })
+  );
+}
+
+function renderGrid(){
+  let results = GUIDES.filter(g => {
+    const matchesTag = activeTag === "All" || (g.tags || []).includes(activeTag);
+    const matchesSearch = !searchTerm || ((g.title||"") + (g.dek||"")).toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesTag && matchesSearch;
+  });
+  if (sortMode === "newest") results.sort((a,b) => new Date(b.published_at) - new Date(a.published_at));
+  if (sortMode === "oldest") results.sort((a,b) => new Date(a.published_at) - new Date(b.published_at));
+  if (sortMode === "az") results.sort((a,b) => (a.title||"").localeCompare(b.title||""));
+
+  $("#resultCount").textContent = \`\${results.length} guide\${results.length === 1 ? "" : "s"}\${activeTag !== "All" ? \` tagged "\${esc(activeTag)}"\` : ""}\`;
+  $("#emptyState").style.display = results.length ? "none" : "block";
+  $("#guideGrid").innerHTML = results.map(g => \`
+    <a class="guide-card" href="\${esc(g.slug)}.html">
+      <div class="guide-thumb">\${g.hero_image ? \`<img src="\${esc(g.hero_image)}" alt="" loading="lazy" onerror="this.parentElement.textContent='no image'">\` : "no image"}</div>
+      <div class="guide-body">
+        <div class="guide-title">\${esc(g.title)}</div>
+        <div class="guide-dek">\${esc(g.dek)}</div>
+        <div class="guide-meta-row">
+          <div class="guide-date">\${g.published_at ? new Date(g.published_at).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : ""}</div>
+          <div class="guide-tags">\${(g.tags||[]).slice(0,2).map(t => \`<span class="guide-tag-chip">\${esc(t)}</span>\`).join("")}</div>
+        </div>
+      </div>
+    </a>\`).join("");
+}
+
+$("#searchInput").addEventListener("input", e => { searchTerm = e.target.value; renderGrid(); });
+$("#sortSelect").addEventListener("change", e => { sortMode = e.target.value; renderGrid(); });
+
+(async function boot(){
+  try {
+    const res = await fetch("../data/guides-manifest.json", { cache: "no-store" });
+    if (res.ok) GUIDES = await res.json();
+  } catch { /* no manifest yet (first guide never published) -- empty state handles it */ }
+  renderTags();
+  renderGrid();
+})();
+</script>
+</body>
+</html>
+`);
+}
+
 
 async function main() {
   const jobId = process.argv[2];
@@ -317,7 +525,8 @@ async function main() {
   job.published_url = `${SITE_URL}/guides/${job.article.slug}.html`;
   const updated = guides.map((g) => (g.id === jobId ? job : g));
   saveGuides(updated);
-  rebuildGuidesIndex(GUIDES_DIR, updated);
+  writeGuidesManifest(buildGuidesManifest(updated));
+  rebuildGuidesIndex(GUIDES_DIR);
 
   console.log(`guide-publish: published ${job.article.slug} \u2014 ${job.published_url}`);
 }
