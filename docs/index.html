@@ -115,26 +115,29 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
   font-family:var(--mono);font-size:12px;color:var(--amber);
 }
 
-/* ---------- creator spotlight ---------- */
-.spotlight{margin-top:26px}
-.spot-head{
+/* ---------- guides feature (replaces the old creator spotlight) ---------- */
+.guides-feature{margin-top:26px}
+.guides-head{
   font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--aqua);display:flex;align-items:center;gap:10px;margin-bottom:12px;
+  color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:12px;
 }
-.spot-head::before{content:"✦"}
-.spot-head::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(99,216,198,.4),transparent)}
-.spot-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
-.spot-card{
-  border:1px solid rgba(99,216,198,.3);border-radius:var(--radius);
-  background:linear-gradient(165deg,rgba(99,216,198,.07),var(--ink-2) 55%);
+.guides-head::before{content:"✦"}
+.guides-head::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(255,180,84,.4),transparent)}
+.guides-browse-all{font-family:var(--mono);font-size:11.5px;color:var(--aqua);white-space:nowrap}
+.guides-browse-all:hover{color:var(--text)}
+.guides-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.guide-card{
+  border:1px solid rgba(255,180,84,.3);border-radius:var(--radius);
+  background:linear-gradient(165deg,rgba(255,180,84,.06),var(--ink-2) 55%);
   padding:16px 18px;transition:border-color .15s ease, transform .15s ease;
+  display:flex;flex-direction:column;gap:8px;
 }
-.spot-card:hover{border-color:rgba(99,216,198,.6);transform:translateY(-2px)}
-.spot-card h3{font-family:var(--display);font-weight:640;font-size:16px;line-height:1.35;margin-bottom:6px}
-.spot-card h3 a:hover{color:var(--aqua)}
-.spot-card p{color:var(--dim);font-size:13px;line-height:1.5}
-.spot-card .foot{margin-top:10px;font-family:var(--mono);font-size:11px;color:var(--faint)}
-.story .spot-flag{color:var(--aqua);font-size:10.5px;letter-spacing:.08em}
+.guide-card:hover{border-color:rgba(255,180,84,.6);transform:translateY(-2px)}
+.guide-card h3{font-family:var(--display);font-weight:640;font-size:16px;line-height:1.35}
+.guide-card h3 a:hover{color:var(--amber)}
+.guide-card p{color:var(--dim);font-size:13px;line-height:1.5;flex:1}
+.guide-card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:4px;font-family:var(--mono);font-size:11px;color:var(--faint)}
+.guide-tag-chip{color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:2px 8px}
 
 /* ---------- tool drop (premium, full-width — the sponsorship slot) ---------- */
 .tooldrop-feature{margin-top:30px}
@@ -354,6 +357,7 @@ nav.cats{
 .story:hover{border-color:var(--line-strong);transform:translateX(3px)}
 .story.top-story{border-color:rgba(255,180,84,.45);background:linear-gradient(155deg,rgba(255,180,84,.07),var(--ink-2) 45%)}
 .story-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:8px}
+.story-logo{width:16px;height:16px;object-fit:contain;border-radius:4px;flex-shrink:0}
 .tag{
   padding:2px 9px;border-radius:4px;font-size:11px;letter-spacing:.03em;
   border:1px solid var(--line-strong);color:var(--dim);
@@ -658,10 +662,21 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
     <div id="fyGrid"></div>
   </section>
 
-  <!-- CREATOR SPOTLIGHT -->
-  <section class="spotlight" id="spotlightWrap" style="display:none" aria-label="Creator spotlight">
-    <div class="spot-head">People creating cool things with AI</div>
-    <div class="spot-grid" id="spotGrid"></div>
+  <!-- GUIDES FEATURE — replaces the old creator spotlight in the exact
+       same position in the page. Same visual language as the old
+       .spotlight/.spot-card treatment (amber gradient, hover lift) per
+       "format should be relatively similar to the creator block," just
+       its own class names since the old spotlight classes are gone
+       along with the section itself. Fetches data/guides-manifest.json
+       (written by guide-publish.js on every publish) independently of
+       feed.json, so it reflects whatever's published right now
+       regardless of when the daily brief last ran. -->
+  <section class="guides-feature" id="guidesFeatureWrap" style="display:none" aria-label="Featured guides">
+    <div class="guides-head">
+      Fresh guides
+      <a href="guides/" class="guides-browse-all">Browse the full library →</a>
+    </div>
+    <div class="guides-grid" id="guidesFeatureGrid"></div>
   </section>
 
   <!-- TOOL DROP — deliberately a full-width, premium-styled placement.
@@ -730,7 +745,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   <div class="foot-in">
     <div>dailyblip // the AI brief for people who make things // rescanned every 20 min</div>
     <div class="foot-links">
-      <a href="showcase.html">showcase</a><a href="standards.html">standards</a><a href="commentary/">commentary</a><a href="archive/">archive</a><a href="feed.xml">rss</a>
+      <a href="showcase.html">showcase</a><a href="standards.html">standards</a><a href="commentary/">commentary</a><a href="guides/">guides</a><a href="archive/">archive</a><a href="feed.xml">rss</a>
     </div>
   </div>
 </footer>
@@ -878,6 +893,69 @@ let FEED = {
 const $ = s => document.querySelector(s);
 let activeCat = "all", query = "", visible = 8;
 const readSet = new Set();
+
+// Not a secret \u2014 Brandfetch's public "client ID" model, safe to sit in
+// committed source (same as guide-publish.js's server-side use of it).
+// Fill in your actual client ID from brandfetch.com/developers; logos
+// just don't render until this is set, same graceful-degradation
+// pattern as the Buttondown form below.
+const BRANDFETCH_CLIENT_ID = "";
+
+// Keyword -> domain, checked as a case-insensitive substring match.
+// Deliberately curated to companies that actually show up in dailyblip's
+// beat, not an exhaustive registry \u2014 add to this list as new companies
+// become recurring rather than trying to cover everything up front.
+const COMPANY_LOGOS = {
+  "openai": "openai.com", "chatgpt": "openai.com", "gpt-image": "openai.com", "dall-e": "openai.com", "sora": "openai.com",
+  "midjourney": "midjourney.com",
+  "anthropic": "anthropic.com", "claude": "anthropic.com",
+  "google": "google.com", "gemini": "google.com", "imagen": "google.com", "veo": "google.com",
+  "meta": "meta.com",
+  "adobe": "adobe.com", "firefly": "adobe.com",
+  "runway": "runwayml.com",
+  "kling": "klingai.com",
+  "xai": "x.ai", "grok": "x.ai",
+  "microsoft": "microsoft.com", "copilot": "microsoft.com",
+  "amazon": "amazon.com", "aws": "amazon.com",
+  "nvidia": "nvidia.com",
+  "suno": "suno.com",
+  "udio": "udio.com",
+  "elevenlabs": "elevenlabs.io",
+  "stability ai": "stability.ai", "stable diffusion": "stability.ai",
+  "pika": "pika.art",
+  "luma": "lumalabs.ai",
+  "ideogram": "ideogram.ai",
+  "perplexity": "perplexity.ai",
+  "huggingface": "huggingface.co", "hugging face": "huggingface.co",
+  "character.ai": "character.ai",
+  "deepseek": "deepseek.com",
+  "mistral": "mistral.ai",
+  "black forest labs": "blackforestlabs.ai", "flux": "blackforestlabs.ai",
+  "recraft": "recraft.ai",
+  "freepik": "freepik.com",
+  "canva": "canva.com",
+  "capcut": "capcut.com",
+  "descript": "descript.com",
+  "artlist": "artlist.io",
+  "cloudflare": "cloudflare.com",
+};
+
+// Checks story.src first (the most reliable signal \u2014 it's literally
+// who's being reported on or announcing something) before falling back
+// to scanning the free-text title/dek, which can mention OTHER
+// companies in passing (a "Midjourney vs DALL-E" story would mention
+// both, but the SRC field is what the story is actually about).
+function detectCompanyDomain(story){
+  const src = (story.src || "").toLowerCase();
+  for (const [keyword, domain] of Object.entries(COMPANY_LOGOS)) {
+    if (src.includes(keyword)) return domain;
+  }
+  const text = ((story.title||"") + " " + (story.dek||"")).toLowerCase();
+  for (const [keyword, domain] of Object.entries(COMPANY_LOGOS)) {
+    if (text.includes(keyword)) return domain;
+  }
+  return null;
+}
 
 function storyHrs(s){
   if(s.ts){ return Math.max(1, Math.round((Date.now() - new Date(s.ts)) / 3.6e6)); }
@@ -1080,10 +1158,15 @@ function storyCardHtml(s){
   const hits = stackHits(s);
   const stackFlag = hits.size ? `<span class="stack-flag" title="Affects your stack: ${esc(stackToolLabel(hits))}">affects your stack</span>` : "";
   const commentaryFlag = s.commentary ? `<span class="commentary-flag" title="Opinion piece from the dailyblip editors, not a news item">Commentary</span>` : "";
+  const domain = detectCompanyDomain(s);
+  const logoHtml = (domain && BRANDFETCH_CLIENT_ID)
+    ? `<img class="story-logo" src="https://cdn.brandfetch.io/${domain}?c=${BRANDFETCH_CLIENT_ID}" alt="" loading="lazy" onerror="this.style.display='none'">`
+    : "";
   return `
   <article class="story${s.top?" top-story":""}" id="${s.id}" tabindex="0">
     ${s.top?'<div class="top-label">top signal</div>':""}
     <div class="story-meta">
+      ${logoHtml}
       <span class="tag c-${s.cat}">${cat.label}</span>
       <span class="badge ${s.badge}">${s.badge}</span>
       ${moveArrow(s)}
@@ -1096,17 +1179,6 @@ function storyCardHtml(s){
     <p>${esc(s.dek)}</p>
     <div class="foot">via <b>${esc(s.src)}</b> · ${esc(s.read)} read${also}</div>
   </article>`;
-}
-
-function renderSpotlight(){
-  const spots = FEED.stories.filter(s=>s.spotlight).slice(0,3);
-  $("#spotlightWrap").style.display = spots.length ? "block" : "none";
-  $("#spotGrid").innerHTML = spots.map(s=>{
-    const h3 = s.url && s.url !== "#"
-      ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a>` : esc(s.title);
-    return `<div class="spot-card"><h3>${h3}</h3><p>${esc(s.dek)}</p>
-      <div class="foot">via ${esc(s.src)} · ${ago(storyHrs(s))}</div></div>`;
-  }).join("");
 }
 
 function renderForYou(){
@@ -1153,6 +1225,37 @@ function renderForYou(){
   }).join("");
 }
 
+async function renderGuidesFeature(){
+  const wrap = $("#guidesFeatureWrap");
+  try{
+    const res = await fetch("data/guides-manifest.json", {cache:"no-store"});
+    if(!res.ok) throw new Error("no manifest yet");
+    const guides = await res.json();
+    if(!Array.isArray(guides) || !guides.length){ wrap.style.display = "none"; return; }
+    // Sorted here explicitly rather than trusting the manifest's given
+    // order \u2014 guide-publish.js's buildGuidesManifest() already sorts
+    // newest-first, but depending on that silently holding forever
+    // (with nothing here to catch it if it ever didn't) is exactly the
+    // kind of fragile assumption this pipeline has been burned by
+    // before. Cheap to just verify locally instead of trusting it.
+    const featured = guides.slice().sort((a, b) => new Date(b.published_at) - new Date(a.published_at)).slice(0, 3);
+    wrap.style.display = "block";
+    $("#guidesFeatureGrid").innerHTML = featured.map(g => `
+      <div class="guide-card">
+        <h3><a href="guides/${esc(g.slug)}.html">${esc(g.title)}</a></h3>
+        <p>${esc(g.dek)}</p>
+        <div class="foot">
+          <span>${g.published_at ? new Date(g.published_at).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : ""}</span>
+          ${g.tags && g.tags[0] ? `<span class="guide-tag-chip">${esc(g.tags[0])}</span>` : ""}
+        </div>
+      </div>`).join("");
+  }catch{
+    // No guides published yet, or the fetch failed (e.g. local file://
+    // preview) — just hide the section rather than show anything broken.
+    wrap.style.display = "none";
+  }
+}
+
 function renderToolDrop(){
   const td = FEED.tooldrop;
   if(!td){ $("#tooldropFeature").style.display = "none"; return; }
@@ -1196,7 +1299,7 @@ function renderSidebar(){
 }
 
 function renderAll(){
-  renderHeader(); renderStreak(); renderTicker(); renderCats(); renderBrief(); renderForYou(); renderSpotlight(); renderToolDrop(); renderFeed(); renderSidebar();
+  renderHeader(); renderStreak(); renderTicker(); renderCats(); renderBrief(); renderForYou(); renderToolDrop(); renderFeed(); renderSidebar();
 }
 
 /* ---- events (delegated; bound once) ---- */
@@ -1308,6 +1411,7 @@ $("#subForm").addEventListener("submit", async e=>{
     $("#staleBanner").style.display = "block";
   }
   renderAll();
+  renderGuidesFeature();
 
   // Personal Stack: inject styles, mount the gear in the header, re-render
   // whenever the user updates their picks, and show the first-run modal.
