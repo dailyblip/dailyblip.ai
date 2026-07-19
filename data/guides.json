@@ -3910,7 +3910,7 @@
   {
     "id": "f4dcd270-c1f9-49fc-88ed-1f148e7fa7d6",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "OpenAI's new AI keyboard explained - what does it do?",
       "article_type": "Practical guide",
@@ -3922,7 +3922,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T04:27:18.838Z",
-    "updated_at": "2026-07-19T04:28:37.890Z",
+    "updated_at": "2026-07-19T04:29:14.582Z",
     "brief": {
       "target_reader": "Someone who saw a headline about OpenAI's AI keyboard and has no idea what it actually is or does — probably a regular iPhone or Android user, not a developer or AI enthusiast",
       "reader_outcome": "Understand what the keyboard is, what it actually lets you do, and feel ready to download it and try it",
@@ -4040,6 +4040,53 @@
       "Whether it works across all apps or only certain ones — cannot be verified; no such product exists.",
       "Current availability — fully launched, in beta, or rolling out in limited regions — cannot be verified for this product.",
       "The name of the keyboard product (e.g. 'ChatGPT keyboard') — the only OpenAI keyboard product found is the Codex Micro, a physical hardware device. No software mobile keyboard product name could be verified."
-    ]
+    ],
+    "article": {
+      "title": "OpenAI's AI Keyboard Is Not What You Think It Is",
+      "alternative_titles": [
+        "What Is the OpenAI Keyboard? (It's Probably Not What You Saw in That Headline)",
+        "The OpenAI Codex Micro Keyboard Explained for Normal People"
+      ],
+      "slug": "openai-codex-micro-keyboard-explained",
+      "dek": "Headlines made it sound like a new way to type on your phone. It's actually a $230 physical keyboard for developers. Here's what's really going on.",
+      "meta_description": "Saw a headline about OpenAI's AI keyboard and got confused? It's not a phone keyboard app. Here's what the Codex Micro actually is and who it's actually for.",
+      "quick_answer": "OpenAI's keyboard is the Codex Micro, a $230 physical mechanical keyboard designed for developers who work with AI coding agents. It is not a mobile keyboard app, and it's not meant for general writing or everyday typing.",
+      "tags": [
+        "Tools & Workflow",
+        "Coding",
+        "Getting Started"
+      ],
+      "introduction": "If you saw a headline about OpenAI releasing a keyboard and assumed it was some kind of smart phone keyboard that rewrites your texts or changes your tone, that's a completely reasonable guess. It isn't, though. What OpenAI actually released is the Codex Micro: a physical keyboard, made with a company called Work Louder, that costs $230 and is built specifically for software developers. If you're not a developer managing AI coding agents, this probably wasn't made for you.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "A physical keyboard, not a phone app",
+          "body_markdown": "The Codex Micro is a real, hold-it-in-your-hands mechanical keyboard. You plug it in. It has keys you can press. It is OpenAI's first hardware product, and it's a limited-run collaboration with Work Louder, so it's not something designed to reach mass audiences.\n\nThe confusion is understandable. \"AI keyboard\" sounds like it could mean a keyboard *feature*, something you'd download. But this is hardware, and its job is narrow: it helps developers control and monitor OpenAI's Codex, which is an AI agent that writes and edits code on your behalf.\n\nNothing about this keyboard helps you write emails faster, fix your grammar, or translate a message. Those features don't exist on it.",
+          "tools": []
+        },
+        {
+          "id": "s2",
+          "heading": "What the Codex Micro actually does",
+          "body_markdown": "The keyboard's features are built around coding workflows, not writing. According to reporting from TechCrunch and Gizmodo, it has:\n\n- **Six illuminated \"Agent Keys\"** that light up in different colors (green, blue, orange, red) to show what the Codex AI agent is currently doing\n- **A joystick** you can program to trigger developer actions like starting a debugging session or kicking off a code refactor\n- **A rotary dial** that adjusts how much \"reasoning\" Codex applies to a task, basically a physical slider for how hard the AI thinks before responding\n- **32 customizable keycaps** for building out your own workflow shortcuts\n\nIf none of those features mean anything to you, that's fine. It means this keyboard genuinely isn't aimed at you. It's a control panel for people who spend their day supervising AI agents writing software.\n\nOne separate thing worth knowing: OpenAI *has* added Codex (the coding agent, not the keyboard) to the regular ChatGPT mobile app on iOS and Android. That rollout is in preview across all ChatGPT plans, including the free one. But that's a feature inside the ChatGPT app, not a keyboard, and it's still aimed at developers rather than general users.",
+          "tools": []
+        },
+        {
+          "id": "s3",
+          "heading": "What to actually try if you wanted an AI writing assistant on your phone",
+          "body_markdown": "The product the headlines seemed to promise, a keyboard app that helps you write better while you type, isn't something OpenAI has released as of mid-2026. If that's what you were hoping for, a few options do exist from other companies. Grammarly's keyboard works across apps on both iOS and Android. There are also third-party keyboards like Keezel and others that have added AI rewriting features, though these aren't from OpenAI.\n\nFor most people, the closest thing from OpenAI right now is just the ChatGPT app itself. You can paste text in, ask it to rewrite or improve something, and paste it back. It's a few extra steps, but it works, and the free tier is plenty for casual use.\n\nWe haven't personally tested the Codex Micro (and at $230 for a developer-focused limited-edition device, that's probably fine). For specs and current availability, OpenAI's site and the Work Louder collaboration page are your best bets.",
+          "tools": []
+        }
+      ],
+      "key_takeaways": [
+        "The OpenAI keyboard is a $230 physical hardware device called the Codex Micro, not a phone keyboard app.",
+        "It's built for developers using OpenAI's Codex AI coding agent, not for general writing tasks.",
+        "It has no rewriting, translation, tone, or autocomplete features — those simply aren't what it does.",
+        "If you wanted an AI phone keyboard, OpenAI hasn't released one. The ChatGPT app is the closest option from them right now.",
+        "OpenAI did add Codex to the ChatGPT mobile app in preview, but that's a coding tool inside an existing app, not a keyboard."
+      ],
+      "conclusion": "The gap between the headline and the actual product here is pretty wide. The Codex Micro is a real, interesting piece of hardware for a specific slice of developers, but it has nothing to do with smarter everyday typing. If a headline pointed you here expecting a phone keyboard revolution, you didn't miss the launch of something useful for you. It just wasn't built for you.",
+      "methodology_disclosure": "This guide was researched using sources published around the July 2026 product launch, primarily a TechCrunch report on the Codex Micro and supporting coverage from Gizmodo and Geeky Gadgets, plus a TestingCatalog and Elets CIO report on the separate Codex mobile integration in the ChatGPT app. The App Store listing for ChatGPT was also reviewed. No OpenAI product matching the brief's original premise (a software AI mobile keyboard) was found in any source. The guide was reoriented to correct that mismatch rather than repeat claims the sources don't support. No hands-on testing was conducted.",
+      "last_reviewed_date": "July 19, 2026"
+    }
   }
 ]
