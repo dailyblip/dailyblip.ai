@@ -1,20 +1,38 @@
 {
-  "issue": 235,
-  "generated_at": "2026-07-18T23:37:40.093Z",
+  "issue": 236,
+  "generated_at": "2026-07-19T02:53:12.345Z",
   "brief": {
     "items": [
       {
-        "story": "s_d4ca69cf5d377e30",
-        "html": "Google Vids now offers <b>custom AI avatars from selfies plus Gemini Omni multi-modal video editing</b> from text prompts and reference images.",
+        "story": "s_f8bec47bee6c00a0",
+        "html": "Leaked code confirms <b>Suno scraped millions of songs from YouTube, Deezer, and Genius</b> without disclosed consent — record labels are invoking the DMCA.",
         "secs": 10,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b51b6c107383df8e",
+        "html": "TikTok is piloting an opt-in tool to <b>detect AI-generated likenesses of creators</b> and enable reporting, mirroring YouTube's existing protection.",
+        "secs": 9,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_6d307adecd0de02e",
-        "html": "NYC landlords must now <b>disclose when AI has altered property listing images</b> — a transparency precedent that could spread to other visual advertising sectors.",
+        "story": "s_4d76675668887bf8",
+        "html": "San Francisco sent cease-and-desist letters ordering Apple and Google to <b>remove 13 AI nudify apps</b> from their stores immediately.",
+        "secs": 9,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_a0bbc2c6e6f2a453",
+        "html": "NVIDIA and Hugging Face jointly released NeMo Automodel, enabling <b>large-scale fine-tuning of video and image diffusion models</b> including FLUX checkpoints with LoRA support.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -22,45 +40,27 @@
         "commentary": false
       },
       {
-        "story": "s_e3176d1ee3b1cf6b",
-        "html": "Roblox's new mobile <b>Build feature generates playable games from a single text prompt</b>, opening game creation to anyone without coding skills.",
-        "secs": 9,
+        "story": "s_04f6651476d4c4ae",
+        "html": "Google open-sourced GNM Head, a <b>parametric 3D human head model with 170+ controls</b> and a free Blender add-on for facial variation in character work.",
+        "secs": 10,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_ba15284a70a8e23c",
-        "html": "Linus Torvalds <b>will not ban AI coding tools from Linux kernel contributions</b>, effectively endorsing AI-assisted development at the OS level.",
+        "story": "s_7be29e0c57cbc116",
+        "html": "Patreon is now <b>actively blocking AI training bots via Cloudflare</b>, moving beyond passive robots.txt to direct access denial for scrapers.",
         "secs": 9,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_09e86f1db1bc975b",
-        "html": "A new survey finds <b>54% of enterprises have already experienced AI agent security incidents</b> — check your own agent credentials and permission scopes now.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_e5756d56cbcffa7c",
-        "html": "DJI faced creator backlash for <b>using an AI-generated human instead of real talent</b> in its Mic Mini ad, intensifying the debate over AI replacing hired performers.",
-        "secs": 10,
-        "impact": 6,
+        "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Friday, July 17 — six things that changed today",
-    "date": "2026-07-17T07:29:54.129Z",
-    "edition": "pm"
+    "title": "Saturday, July 18 — six things creators need to know",
+    "date": "2026-07-19T02:53:10.004Z",
+    "edition": "am"
   },
   "stories": [
     {

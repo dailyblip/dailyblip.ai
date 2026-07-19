@@ -1,0 +1,148 @@
+{
+  "date": "2026-07-18",
+  "issue": 236,
+  "brief": {
+    "items": [
+      {
+        "story": "s_f8bec47bee6c00a0",
+        "html": "Leaked code confirms <b>Suno scraped millions of songs from YouTube, Deezer, and Genius</b> without disclosed consent — record labels are invoking the DMCA.",
+        "secs": 10,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b51b6c107383df8e",
+        "html": "TikTok is piloting an opt-in tool to <b>detect AI-generated likenesses of creators</b> and enable reporting, mirroring YouTube's existing protection.",
+        "secs": 9,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4d76675668887bf8",
+        "html": "San Francisco sent cease-and-desist letters ordering Apple and Google to <b>remove 13 AI nudify apps</b> from their stores immediately.",
+        "secs": 9,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_a0bbc2c6e6f2a453",
+        "html": "NVIDIA and Hugging Face jointly released NeMo Automodel, enabling <b>large-scale fine-tuning of video and image diffusion models</b> including FLUX checkpoints with LoRA support.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_04f6651476d4c4ae",
+        "html": "Google open-sourced GNM Head, a <b>parametric 3D human head model with 170+ controls</b> and a free Blender add-on for facial variation in character work.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_7be29e0c57cbc116",
+        "html": "Patreon is now <b>actively blocking AI training bots via Cloudflare</b>, moving beyond passive robots.txt to direct access denial for scrapers.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      }
+    ],
+    "title": "Saturday, July 18 — six things creators need to know",
+    "date": "2026-07-19T02:53:10.004Z",
+    "edition": "am"
+  },
+  "tooldrop": {
+    "name": "Review by Eddie AI",
+    "blurb": "AI-powered video review tool that lets editors and clients leave time-stamped feedback directly on footage — cuts the back-and-forth for video creators.",
+    "meta": "video — free tier",
+    "url": "https://www.producthunt.com/products/eddie-your-ai-video-editor",
+    "date": "2026-07-15T17:45:31.573Z"
+  },
+  "stories": [
+    {
+      "id": "s_c60035e6bb3c677d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Moonshot AI's Kimi K3 reaches frontier performance, rattles markets",
+      "dek": "Chinese company Moonshot AI released an open-source model rivaling Claude and GPT, drawing competitive analysis and sparking concerns about geopolitical AI dynamics. Market reaction was immediate.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+      "ts": "2026-07-18T18:51:07.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 97,
+      "move": 0
+    },
+    {
+      "id": "s_01582b84f95050bc",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Government pilots AI for insurance pre-authorization decisions",
+      "dek": "Federal program tests AI systems for medical claims approval, raising questions about accuracy and fairness in healthcare access.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/",
+      "ts": "2026-07-18T11:18:25.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 72,
+      "move": 0
+    },
+    {
+      "id": "s_3ad838364711ce9b",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Apple accuses OpenAI of stealing trade secrets",
+      "dek": "Apple alleges OpenAI misappropriated proprietary information during the company's interview process, raising corporate espionage questions.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/design/apple-paints-a-damning-picture-of-openais-interview-process",
+      "ts": "2026-07-18T08:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 86,
+      "move": -3
+    },
+    {
+      "id": "s_4e6f73ed1f19a4ce",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Meta backtracks on Muse Image AI tool, raising credibility questions",
+      "dek": "Meta scrapped its image generation tool; critics argue the company's stated regrets don't align with how it deployed and managed the product.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/design/metas-regret-over-its-scrapped-ai-tool-is-like-a-burglar-apologising-for-the-mess",
+      "ts": "2026-07-18T07:02:51.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 75,
+      "move": -12
+    }
+  ],
+  "stats": {
+    "scanned_last_run": 1,
+    "published_today": 4,
+    "sources_live": 14,
+    "slopped_last_run": 1
+  }
+}
