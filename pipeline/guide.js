@@ -234,10 +234,13 @@ SELF-EDIT PASS \u2014 before returning your answer, review your own draft agains
 6. Read it back mentally \u2014 if any line sounds like presentation copy or a banned phrase from EDITORIAL_RULES, rewrite it.
 7. Trim about 10% of the word count if you can do it without losing anything a reader actually needs.
 
+TAGS: pick 2-3 tags from this EXACT fixed list, copied verbatim (matching casing/spelling exactly, so the guide library's filtering stays reliable rather than fragmenting into near-duplicate tags like "AI Music" vs "Music Tools" vs "Music & Audio" for the same thing): "Image Generation", "Video", "AI Music", "Voice", "Writing", "Coding", "Tools & Workflow", "Tool Comparison", "Rights & Licensing", "Getting Started". Pick only ones that genuinely apply \u2014 most guides for total beginners should include "Getting Started"; use "Tool Comparison" only if the guide actually compares named tools against each other.
+
 Return JSON matching this schema exactly:
 {
   "title": "", "alternative_titles": ["",""], "slug": "kebab-case-slug",
   "dek": "", "meta_description": "", "quick_answer": "1-2 sentence direct answer if the topic has one, else empty string",
+  "tags": ["2-3 tags from the exact fixed list above"],
   "introduction": "markdown, no more than 100 words",
   "sections": [{"id":"s1","heading":"descriptive, never generic like \\"Getting Started\\" or \\"Final Thoughts\\"","body_markdown":"","tools":[{"name":"","url":"","description":"","strengths":["..."],"limitations":["..."]}]}],
   "key_takeaways": ["3-5 short bullet points"],
@@ -246,6 +249,10 @@ Return JSON matching this schema exactly:
 }
 JSON only.`;
 
+// Fixed vocabulary, must match DRAFT_SYSTEM's tag list above exactly \u2014
+// used to validate the model's output and as the definitive source of
+// truth for what tags the guide library can filter by.
+const VALID_TAGS = new Set(["Image Generation", "Video", "AI Music", "Voice", "Writing", "Coding", "Tools & Workflow", "Tool Comparison", "Rights & Licensing", "Getting Started"]);
 // Thrown immediately if a draft/revise response is syntactically valid
 // JSON but structurally empty or wrong-shaped (missing title, no
 // sections). Without this, a malformed-but-parseable response — the
@@ -290,6 +297,14 @@ async function stageDraft(job) {
     maxTokens: 8000,
   });
   assertArticleShape(job.article, "draft");
+  // Mechanical enforcement of the fixed tag vocabulary \u2014 same reason
+  // as the em-dash strip and issue-count cap elsewhere in this file: a
+  // prompt instruction alone doesn't guarantee the model won't
+  // occasionally invent a close-but-not-exact variant, and even one
+  // stray tag breaks the whole point of a controlled vocabulary for
+  // reliable library filtering.
+  const validTags = (job.article.tags || []).filter((t) => VALID_TAGS.has(t));
+  job.article.tags = validTags.length ? validTags : ["Getting Started"];
   job.article.last_reviewed_date = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 }
 
@@ -447,7 +462,13 @@ TEXT IN IMAGES \u2014 hard limit: AI image generation is fundamentally unreliabl
 
 VARIETY, across all 6 candidates: don't make them all the same type or a set of near-duplicates \u2014 a real choice requires real differences. Aim for a genuine mix: 1-2 hero-style candidates (bold, attention-grabbing), and the rest split across explainer, workflow, comparison, and list-support roles as the article's actual content supports. At least one candidate should help explain a process or workflow if the article describes one. If this is a comparison or ranked-list article, at least one candidate should visually organize the choices (not just illustrate one of them). Vary aspect ratio and composition across the set too, not just role \u2014 give the human genuinely different options to choose between, not 6 versions of one idea.
 
-ASPECT RATIO: choose per image, based on its actual content \u2014 don't default to square out of habit. A wide left-to-right flow (workflow steps, before/after, a row of compared items) needs landscape room; a single focused subject can suit square; a tall stacked list can suit portrait. Squeezing a genuinely horizontal composition into a square frame is exactly what causes text and elements to get clipped at the edges \u2014 pick the shape the content actually needs. Must be one of: "16:9" (landscape), "1:1" (square), or "9:16" (portrait).
+ASPECT RATIO: for the HERO candidate specifically, always 16:9 \u2014 not a per-image choice. Hero images from every guide end up side by side in the guide library grid, so they need a uniform shape to tile cleanly; a mix of square, landscape, and portrait thumbnails looks messy no matter how good each individual image is. For every OTHER role (explainer, comparison, workflow, list-support), still choose per image based on actual content, same as before: a wide left-to-right flow needs landscape room, a single focused subject can suit square, a tall stacked list can suit portrait. Must be one of: "16:9" (landscape), "1:1" (square), or "9:16" (portrait).
+
+HERO CONSISTENCY: beyond aspect ratio, every hero should share the same "frame" so a grid of them across different guides reads as one coherent publication, not six unrelated pieces of art \u2014 think of it like a magazine's cover template staying consistent issue to issue while what's actually on the cover changes every time. For the hero candidate specifically:
+- Background: a consistent dark gradient using the brand ink tones (deep navy, #071A1F to #0C242B), not a different background treatment per guide.
+- Color accent: amber (#FFB454) as the dominant pop of color on the subject, aqua (#63D8C6) as a secondary accent if needed \u2014 consistent with the site's actual palette every time, not a different hue emphasis per guide.
+- Framing: one clear subject, centered, occupying roughly the same proportion of the frame as you'd expect from a typical hero in this set \u2014 not sometimes-huge, sometimes-tiny relative to the frame.
+What should still vary freely: the actual subject/concept itself, which must stay genuinely specific to this guide's real content, same as the grounding requirement above \u2014 consistency here is about the frame the subject sits in, not about making every hero look like the same image.
 
 MARGINS: every element and every text label needs real breathing room from the frame edge \u2014 nothing should touch or extend past the border, especially the outermost elements in a left-to-right or top-to-bottom sequence. If a composition has items at both ends (like a flow diagram's first and last step, or the first and last column of a comparison grid), explicitly build in margin around those end labels rather than letting the layout run edge-to-edge. This matters MOST for wide multi-column comparisons: a row of 4 or more items is the single most common case for edge-clipping (the leftmost and rightmost columns getting cut off), so for anything comparing more than 3 items, either build in generous margin on both outer columns explicitly in the prompt, or consider a vertical/stacked layout instead of a horizontal row \u2014 vertical stacking is much less prone to this failure than a wide horizontal row.
 
@@ -462,7 +483,7 @@ AVOID across every image: random floating interfaces, generic futuristic aesthet
 Return JSON: {"images": [{
   "id": "img1",
   "role": "hero | explainer | comparison | workflow | list-support",
-  "aspect_ratio": "16:9 | 1:1 | 9:16",
+  "aspect_ratio": "16:9 always if role is hero; otherwise 16:9 | 1:1 | 9:16 based on content",
   "concept": "the core visual idea in one sentence",
   "purpose": "what this image should teach or communicate to the reader",
   "composition": "how it's laid out \u2014 framing, focal point, arrangement, with explicit margin around edge elements",
@@ -512,9 +533,16 @@ async function stageImages(job) {
   for (let i = 0; i < briefs.length; i++) {
     const b = briefs[i];
     try {
-      // Driven by the model's own per-image aspect_ratio choice now,
-      // not slot position \u2014 gpt-image-1 only accepts these three sizes.
-      const size = b.aspect_ratio === "16:9" ? "1536x1024" : b.aspect_ratio === "9:16" ? "1024x1536" : "1024x1024";
+      // Hero is mechanically forced to 16:9 here, not just requested in
+      // the prompt \u2014 this is a hard requirement (every guide's hero
+      // needs to tile consistently in the library grid), and a prompt
+      // alone doesn't guarantee compliance any more reliably here than
+      // it did for the issue-count cap or the em-dash rule earlier in
+      // this pipeline. Every other role still uses the model's own
+      // per-image choice, since only hero has this cross-guide
+      // consistency requirement.
+      const effectiveAspect = b.role === "hero" ? "16:9" : b.aspect_ratio;
+      const size = effectiveAspect === "16:9" ? "1536x1024" : effectiveAspect === "9:16" ? "1024x1536" : "1024x1024";
       const res = await fetch("https://api.openai.com/v1/images/generations", {
         method: "POST",
         headers: { Authorization: `Bearer ${OPENAI_KEY}`, "Content-Type": "application/json" },
@@ -537,7 +565,7 @@ async function stageImages(job) {
         // Kept for admin review context (what this image is FOR, not
         // just what its raw prompt says) even though the published page
         // itself only needs alt_text/caption/placement.
-        role: b.role, concept: b.concept, purpose: b.purpose, aspect_ratio: b.aspect_ratio,
+        role: b.role, concept: b.concept, purpose: b.purpose, aspect_ratio: effectiveAspect,
       });
     } catch (e) {
       // One image failing shouldn't lose the others \u2014 same
