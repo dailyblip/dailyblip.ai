@@ -3516,8 +3516,8 @@
   },
   {
     "id": "084e5bb8-c77c-4918-ae78-38b9cfff4e89",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
       "article_type": "Beginner explainer",
@@ -3920,7 +3920,9 @@
     "published_despite_warnings": true,
     "overridden_warnings": [
       "s2: The install script URLs use the chatgpt.com domain (chatgpt.com/codex/install.sh and chatgpt.com/codex/install.ps1), which is an unusual and unverifiable domain for a developer CLI installer — if these are incorrect or change, readers executing them pipe arbitrary scripts into their shell; the article provides no verification step and no checksum guidance."
-    ]
+    ],
+    "published_at": "2026-07-19T04:41:35.018Z",
+    "published_url": "https://dailyblip.ai/guides/openai-codex-cli-beginner-guide.html"
   },
   {
     "id": "f4dcd270-c1f9-49fc-88ed-1f148e7fa7d6",
