@@ -1,38 +1,38 @@
 {
-  "issue": 236,
-  "generated_at": "2026-07-19T02:53:12.345Z",
+  "issue": 237,
+  "generated_at": "2026-07-19T04:23:28.748Z",
   "brief": {
     "items": [
       {
-        "story": "s_f8bec47bee6c00a0",
-        "html": "Leaked code confirms <b>Suno scraped millions of songs from YouTube, Deezer, and Genius</b> without disclosed consent — record labels are invoking the DMCA.",
-        "secs": 10,
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines released <b>Inkling, an open 975B-parameter multimodal model</b> reasoning natively across text, image, audio, and video — free to use and fine-tune.",
+        "secs": 11,
         "impact": 9,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_b51b6c107383df8e",
-        "html": "TikTok is piloting an opt-in tool to <b>detect AI-generated likenesses of creators</b> and enable reporting, mirroring YouTube's existing protection.",
-        "secs": 9,
+        "story": "s_4e6f73ed1f19a4ce",
+        "html": "Meta <b>scrapped its Muse Image AI tool</b> and walked back its deployment — a credibility hit that raises questions about which Meta image features creators can rely on.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_4d76675668887bf8",
-        "html": "San Francisco sent cease-and-desist letters ordering Apple and Google to <b>remove 13 AI nudify apps</b> from their stores immediately.",
-        "secs": 9,
+        "story": "s_c60035e6bb3c677d",
+        "html": "Moonshot AI released <b>Kimi K3, an open-source frontier model rivaling Claude and GPT</b>, with immediate market impact — a serious new free option for text and creative workflows.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_a0bbc2c6e6f2a453",
-        "html": "NVIDIA and Hugging Face jointly released NeMo Automodel, enabling <b>large-scale fine-tuning of video and image diffusion models</b> including FLUX checkpoints with LoRA support.",
+        "story": "s_3ff6c4eb3a8015a3",
+        "html": "Google Vids now lets you <b>edit video with natural-language commands via Gemini Omni</b> and generate personal AI avatars from your own face and voice.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -40,8 +40,8 @@
         "commentary": false
       },
       {
-        "story": "s_04f6651476d4c4ae",
-        "html": "Google open-sourced GNM Head, a <b>parametric 3D human head model with 170+ controls</b> and a free Blender add-on for facial variation in character work.",
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "Houdini 22 adds <b>native Gaussian Splatting creation, editing, and animation</b> with no third-party tools needed — a significant workflow upgrade for VFX and procedural artists.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -49,17 +49,17 @@
         "commentary": false
       },
       {
-        "story": "s_7be29e0c57cbc116",
-        "html": "Patreon is now <b>actively blocking AI training bots via Cloudflare</b>, moving beyond passive robots.txt to direct access denial for scrapers.",
-        "secs": 9,
-        "impact": 7,
+        "story": "s_fe6ab2efc212fece",
+        "html": "Apple Intelligence officially launched in China via <b>Alibaba Qwen integration on iOS, iPadOS, macOS, and visionOS</b> after regulatory approval — opening a major new user market.",
+        "secs": 10,
+        "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
     "title": "Saturday, July 18 — six things creators need to know",
-    "date": "2026-07-19T02:53:10.004Z",
+    "date": "2026-07-19T04:23:23.839Z",
     "edition": "am"
   },
   "stories": [
