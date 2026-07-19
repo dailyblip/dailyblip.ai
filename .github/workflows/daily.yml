@@ -1,54 +1,35 @@
-name: Generate Guide
-# workflow_dispatch ONLY — no schedule. Triggered from admin.html's
-# Guides tab, never automatically. The job record (submitted idea, type,
-# audience, length, etc.) is committed to data/guides.json by admin.html
-# BEFORE this dispatches, so job_id is the only input needed here — the
-# workflow just looks that record up and works through it stage by stage.
-#
-# Each stage is its own step, immediately followed by its own commit
-# step, on purpose: this is what lets admin.html poll data/guides.json
-# and show real incremental progress (queued -> researching -> drafting
-# -> ...) instead of staring at one state for the entire multi-minute
-# run. See pipeline/guide.js's top comment for why this can't be done
-# with git calls from inside a single long-running Node process instead.
-#
-# Every commit step below uses `if: always()` — if a stage fails,
-# pipeline/guide.js has already written the failure state to disk before
-# exiting non-zero (see fail() in guide.js), and that state still needs
-# to reach the repo so admin.html can show "Failed" instead of hanging
-# on the last successful stage forever. The failure itself still stops
-# later STAGE steps from running (their default `if` requires success).
-
+name: Daily Blip
 on:
+  schedule:
+    # 12:00 UTC = 5:00 AM Pacific (PDT, summer). 23:00 UTC = 4:00 PM Pacific
+    # (PDT, summer). NOTE: GitHub cron has no timezone support — in winter
+    # (PST, UTC-8) these fire an hour earlier on the Pacific clock (4am /
+    # 3pm). Nudge to "0 13 * * *" / "0 0 * * *" each November and back each
+    # March if you want 5am/4pm exactly year-round.
+    - cron: "0 12 * * *"
+    - cron: "0 23 * * *"
   workflow_dispatch:
     inputs:
-      job_id:
-        description: "Guide job id (created by admin.html before dispatch)"
-        required: true
-        type: string
+      edition:
+        description: "Which edition to run (only used for manual triggers)"
+        type: choice
+        default: am
+        options:
+          - am
+          - pm
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
-  # Shared across EVERY guide workflow, not scoped to one job_id \u2014
-  # deliberately serializes ALL git writes to data/guides.json across
-  # generate/recheck/publish, all of which are independent Actions runs
-  # that would otherwise commit to the same shared JSON array
-  # concurrently. Git's merge is line-based, not JSON-aware, so two
-  # unrelated changes to the same array can still collide as a literal
-  # text conflict (a real one hit this exact file in production). A
-  # per-job_id group didn't prevent that, since it only serialized a
-  # single job against itself, not against every OTHER job's writes.
-  # Guides taking turns during their few-seconds commit step is a small
-  # cost next to a stuck rebase that silently drops a publish.
-  group: guide-pipeline-writes
+  group: daily-pipeline
   cancel-in-progress: false
 
 jobs:
-  generate:
+  daily:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 6
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -56,119 +37,102 @@ jobs:
           node-version: 20
       - run: npm install
 
-      - name: "Stage: brief"
-        run: node pipeline/guide.js brief "${{ inputs.job_id }}"
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - name: "Commit: brief"
-        if: always()
+      # Figure out which edition this run is. Scheduled runs are identified
+      # by which exact cron string fired them (GitHub exposes this as
+      # github.event.schedule); manual runs use the workflow_dispatch input.
+      - name: Determine edition
+        id: edition
         run: |
-          git config user.name "dailyblip-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && exit 0
-          git commit -m "guide ${{ inputs.job_id }}: brief"
-          if ! git pull --rebase --autostash; then
-            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
-            node pipeline/resolve-guides-conflict.js "${{ inputs.job_id }}" "guide ${{ inputs.job_id }}: brief"
+          if [ "${{ github.event.schedule }}" = "0 23 * * *" ]; then
+            echo "value=pm" >> "$GITHUB_OUTPUT"
+          elif [ "${{ github.event.schedule }}" = "0 12 * * *" ]; then
+            echo "value=am" >> "$GITHUB_OUTPUT"
           else
-            git push
+            echo "value=${{ github.event.inputs.edition || 'am' }}" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: "Stage: research"
-        run: node pipeline/guide.js research "${{ inputs.job_id }}"
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - name: "Commit: research"
-        if: always()
+      # Commentary runs Mon/Wed/Fri, AM only — fixed schedule regardless of
+      # news volume, per an explicit decision. Uses ISO day-of-week (%u:
+      # Monday=1 ... Sunday=7) so this is correct regardless of what locale
+      # the runner defaults to. Runs BEFORE "Write the brief" so a same-day
+      # piece is actually eligible as a candidate for that day's six.
+      - name: Determine commentary day
+        id: commentary_day
         run: |
-          git config user.name "dailyblip-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && exit 0
-          git commit -m "guide ${{ inputs.job_id }}: research"
-          if ! git pull --rebase --autostash; then
-            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
-            node pipeline/resolve-guides-conflict.js "${{ inputs.job_id }}" "guide ${{ inputs.job_id }}: research"
+          DOW=$(date -u +%u)
+          if [ "${{ steps.edition.outputs.value }}" = "am" ] && { [ "$DOW" = "1" ] || [ "$DOW" = "3" ] || [ "$DOW" = "5" ]; }; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
           else
-            git push
+            echo "run=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: "Stage: draft"
-        run: node pipeline/guide.js draft "${{ inputs.job_id }}"
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - name: "Commit: draft"
-        if: always()
-        run: |
-          git config user.name "dailyblip-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && exit 0
-          git commit -m "guide ${{ inputs.job_id }}: draft"
-          if ! git pull --rebase --autostash; then
-            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
-            node pipeline/resolve-guides-conflict.js "${{ inputs.job_id }}" "guide ${{ inputs.job_id }}: draft"
-          else
-            git push
-          fi
-
-      - name: "Stage: factcheck"
-        run: node pipeline/guide.js factcheck "${{ inputs.job_id }}"
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - name: "Commit: factcheck"
-        if: always()
-        run: |
-          git config user.name "dailyblip-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && exit 0
-          git commit -m "guide ${{ inputs.job_id }}: factcheck"
-          if ! git pull --rebase --autostash; then
-            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
-            node pipeline/resolve-guides-conflict.js "${{ inputs.job_id }}" "guide ${{ inputs.job_id }}: factcheck"
-          else
-            git push
-          fi
-
-      # Images write real files under docs/guides/, not just data/, so
-      # this commit step (only) also stages docs.
-      - name: "Stage: images"
-        run: node pipeline/guide.js images "${{ inputs.job_id }}"
+      # Publishes automatically, no review gate — an explicit decision.
+      # Grounded in real web-searched examples/data, never fabricated (see
+      # RESEARCH_SYSTEM in commentary.js). Adds itself as an eligible brief
+      # candidate (tier: "commentary"), capped at 1 per edition in brief.js.
+      - name: Generate commentary
+        if: steps.commentary_day.outputs.run == 'true'
+        run: node pipeline/commentary.js
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      - name: "Commit: images"
-        if: always()
+          SITE_URL: https://dailyblip.ai
+
+      - name: Write the brief (${{ steps.edition.outputs.value }})
+        run: node pipeline/brief.js ${{ steps.edition.outputs.value }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      # Tool Drop stays once-a-day (AM only) — "tool of the day" means one
+      # pick per day, not one per edition.
+      - name: Pick the tool drop
+        if: steps.edition.outputs.value == 'am'
+        run: node pipeline/tooldrop.js
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Write the archive
+        run: node pipeline/archive.js
+        env:
+          SITE_URL: https://dailyblip.ai
+
+      # Instagram card + caption — AM only, same once-daily cadence as Tool
+      # Drop and the newsletter. Runs BEFORE Commit so the generated image
+      # lands in the same push as everything else. Skips cleanly if
+      # OPENAI_API_KEY isn't set (optional feature, same pattern as
+      # BUTTONDOWN_API_KEY).
+      - name: Generate social post
+        if: steps.edition.outputs.value == 'am'
+        run: node pipeline/social.js
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Commit
         run: |
           git config user.name "dailyblip-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data docs
           git diff --cached --quiet && exit 0
-          git commit -m "guide ${{ inputs.job_id }}: images"
-          if ! git pull --rebase --autostash; then
-            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
-            node pipeline/resolve-guides-conflict.js "${{ inputs.job_id }}" "guide ${{ inputs.job_id }}: images"
-          else
-            git push
-          fi
+          git commit -m "${{ steps.edition.outputs.value }} blip: $(date -u +'%Y-%m-%d %H:%M') UTC"
+          git pull --rebase --autostash
+          git push
 
-      - name: "Stage: format"
-        run: node pipeline/guide.js format "${{ inputs.job_id }}"
+      # Runs AFTER commit+push on purpose — by now the image's live URL has
+      # actually had a chance to resolve, so the GitHub Issue it creates
+      # doesn't reference something that doesn't exist yet.
+      - name: "Notify: today's social post"
+        if: steps.edition.outputs.value == 'am'
+        run: node pipeline/social-notify.js
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-      - name: "Commit: format (ready for review)"
-        if: always()
-        run: |
-          git config user.name "dailyblip-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add data
-          git diff --cached --quiet && exit 0
-          git commit -m "guide ${{ inputs.job_id }}: ready for review"
-          if ! git pull --rebase --autostash; then
-            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
-            node pipeline/resolve-guides-conflict.js "${{ inputs.job_id }}" "guide ${{ inputs.job_id }}: ready for review"
-          else
-            git push
-          fi
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SITE_URL: https://dailyblip.ai
+
+      # Newsletter stays once-a-day (AM only) — subscribers were promised
+      # "one email daily," and the PM edition is a web-only refresh.
+      - name: Send newsletter
+        if: steps.edition.outputs.value == 'am'
+        run: node pipeline/newsletter.js
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          SITE_URL: https://dailyblip.ai
