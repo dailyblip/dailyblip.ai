@@ -56,16 +56,19 @@
   {
     "name": "Branda",
     "url": "https://www.producthunt.com/products/branda-open-source-on-brand-ad-maker",
-    "date": "2026-07-15T03:53:34.798Z"
+    "date": "2026-07-15T03:53:34.798Z",
+    "alive": true
   },
   {
     "name": "Goose Ads Remixer",
     "url": "https://www.producthunt.com/products/gooseworks",
-    "date": "2026-07-15T13:46:23.957Z"
+    "date": "2026-07-15T13:46:23.957Z",
+    "alive": true
   },
   {
     "name": "Review by Eddie AI",
     "url": "https://www.producthunt.com/products/eddie-your-ai-video-editor",
-    "date": "2026-07-15T17:45:31.573Z"
+    "date": "2026-07-15T17:45:31.573Z",
+    "alive": true
   }
 ]

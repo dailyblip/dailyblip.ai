@@ -1,5 +1,5 @@
 {
-  "_comment": "News feeds power the main story feed. tool_feeds power the daily tool drop. hint = default category nudge given to the classifier. tier = 'journalism' (official blogs, professional newsrooms -- eligible for the Daily Blip). Reddit history, for anyone reading this later: removed 2026-07-11 (unauthenticated requests blocked from datacenter IPs), re-enabled 2026-07-13 with a real OAuth app + a two-stage quality gate (numeric thresholds + actual comment-sentiment reading), then removed AGAIN 2026-07-13 same day once Reddit's 'Responsible Builder Policy' turned out to require manual approval for new API access (no longer 2-minute self-service) -- owner decided the wait/rejection odds weren't worth it, and isn't a Reddit fan regardless. The OAuth-based fetcher, the two-stage gate, and the showcase_small tier all still exist in pipeline/lib/reddit.js, fully dormant -- reactivating just needs approved credentials and the source entries added back (see git history for the exact 5-subreddit block if wanted later). Add/remove sources freely \u2014 the pipeline adapts.",
+  "_comment": "News feeds power the main story feed. tool_feeds power the daily tool drop. hint = default category nudge given to the classifier. tier = 'journalism' (official blogs, professional newsrooms -- eligible for the Daily Blip). Reddit history, for anyone reading this later: removed 2026-07-11 (unauthenticated requests blocked from datacenter IPs), re-enabled 2026-07-13 with a real OAuth app + a two-stage quality gate (numeric thresholds + actual comment-sentiment reading), then removed AGAIN 2026-07-13 same day once Reddit's 'Responsible Builder Policy' turned out to require manual approval for new API access (no longer 2-minute self-service) -- owner decided the wait/rejection odds weren't worth it, and isn't a Reddit fan regardless. The OAuth-based fetcher, the two-stage gate, and the showcase_small tier all still exist in pipeline/lib/reddit.js, fully dormant -- reactivating just needs approved credentials and the source entries added back (see git history for the exact 5-subreddit block if wanted later). Add/remove sources freely — the pipeline adapts.",
   "feeds": [
     {
       "name": "TechCrunch AI",
@@ -101,7 +101,10 @@
       "url": "https://www.unite.ai/feed/",
       "hint": "tools",
       "tier": "journalism",
-      "_comment": "Confirmed live 2026-07-12 -- covers AI tools/products frequently, real RSS content-type verified."
+      "_comment": "Confirmed live 2026-07-12 -- covers AI tools/products frequently, real RSS content-type verified.",
+      "disabled": true,
+      "disabled_reason": "curator: proposed replacement did not parse (https://www.unite.ai/feed/)",
+      "disabled_at": "2026-07-19T18:09:54.788Z"
     },
     {
       "name": "Creative Bloq AI",
