@@ -3517,7 +3517,7 @@
   {
     "id": "084e5bb8-c77c-4918-ae78-38b9cfff4e89",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
       "article_type": "Beginner explainer",
@@ -3529,7 +3529,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T03:58:19.658Z",
-    "updated_at": "2026-07-19T03:58:51.756Z",
+    "updated_at": "2026-07-19T03:59:47.349Z",
     "brief": {
       "target_reader": "A developer or technically curious creator who has heard of OpenAI Codex CLI but has no idea what it actually does or whether it's worth trying — they're comfortable opening a terminal but have never used an AI coding agent in their local environment before",
       "reader_outcome": "Understand what Codex CLI is, what makes it different from just using ChatGPT for code help, and feel ready to install it and run their first command",
@@ -3551,6 +3551,167 @@
         "Whether it is the same as or distinct from the older Codex API/model that was deprecated"
       ],
       "research_plan": "Start with the official OpenAI Codex CLI GitHub repository (README and changelog) as the primary source for capabilities, install steps, and safety modes — that is more reliable than blog coverage for technical specifics. Cross-reference the OpenAI developer docs or any official launch blog post for model details and API key requirements. For availability and free-tier questions, check the OpenAI pricing page directly. Treat third-party tutorials and reviews as supplementary context only, not as sources for specific claims. Flag clearly if any capability (file editing, shell execution, sandboxing) is described only in third-party coverage and not in official docs."
-    }
+    },
+    "sources": [
+      {
+        "title": "openai/codex — GitHub Repository (README)",
+        "publisher": "OpenAI (GitHub)",
+        "url": "https://github.com/openai/codex",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Codex CLI is open source and lives at github.com/openai/codex",
+          "Install command on Mac/Linux: curl -fsSL https://chatgpt.com/codex/install.sh | sh",
+          "Install command on Windows (PowerShell): irm https://chatgpt.com/codex/install.ps1 | iex",
+          "Also installable via package managers (npm, Homebrew, winget)",
+          "Codex CLI is a coding agent from OpenAI that runs locally on your computer",
+          "Distinct from the cloud-based agent Codex Web at chatgpt.com/codex"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "Codex CLI — Official Documentation (developers.openai.com/codex/cli)",
+        "publisher": "OpenAI",
+        "url": "https://developers.openai.com/codex/cli",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Codex CLI can inspect files, make edits, and run tools already installed on the machine",
+          "First-time users can sign in with ChatGPT or via API key",
+          "Supports /init, /status, /permissions, /model, /review slash commands",
+          "Install for macOS and Linux via standalone installer"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "Models — Official Codex Documentation",
+        "publisher": "OpenAI",
+        "url": "https://developers.openai.com/codex/models",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "If no model is specified, the CLI uses a recommended model (no longer o4-mini as of mid-2026; current recommended models are GPT-5.6 variants: Sol, Terra, Luna)",
+          "Models can be switched at launch with --model or mid-session with /model",
+          "gpt-5.2-codex and gpt-5.3-codex are deprecated for ChatGPT sign-in users",
+          "Chat Completions API support is deprecated and will be removed in future releases",
+          "Users can point Codex at any model supporting the Responses API"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "Sandbox — Official Codex Documentation",
+        "publisher": "OpenAI",
+        "url": "https://developers.openai.com/codex/concepts/sandboxing",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Codex CLI uses OS-level sandbox mechanisms; defaults include no network access and write permissions limited to the active workspace",
+          "The sandbox defines technical boundaries; the approval policy decides when the agent must stop and ask",
+          "On macOS, sandboxing works out of the box using the built-in Seatbelt framework",
+          "Codex can read and edit files in the current workspace and run routine local commands; it asks before using the internet or going beyond the workspace boundary",
+          "Sandboxing implementation differs between macOS, Linux, WSL2, and native Windows"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "Agent Approvals & Security — Official Codex Documentation",
+        "publisher": "OpenAI",
+        "url": "https://developers.openai.com/codex/agent-approvals-security",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Codex CLI sandbox defaults: no network access, write permissions limited to active workspace",
+          "In the Auto preset (--sandbox workspace-write --ask-for-approval on-request), Codex can read files, make edits, and run commands in the working directory automatically",
+          "Codex asks for approval to edit files outside the workspace or to run commands that require network access",
+          "Three sandbox modes: read-only, workspace-write (default), danger-full-access",
+          "Three approval policies: untrusted, on-request, never (plus granular)",
+          "Approval policy and sandbox mode are two independent controls"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "Configuration Reference — Official Codex Documentation",
+        "publisher": "OpenAI",
+        "url": "https://developers.openai.com/codex/config-reference",
+        "source_type": "official docs",
+        "is_primary": false,
+        "claims_supported": [
+          "Config lives at ~/.codex/config.toml",
+          "Approval policy values: untrusted | on-request | never | granular",
+          "Built-in permission profiles: :read-only, :workspace, :danger-full-access",
+          "Native Windows sandbox mode exists (separate from WSL2 path)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "OpenAI Releases Codex CLI: What Developers Should Know",
+        "publisher": "Augment Code",
+        "url": "https://www.augmentcode.com/learn/openai-codex-cli-terminal-agent",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Project is licensed under Apache-2.0",
+          "Codebase is primarily written in Rust (94.9%)",
+          "Installable via npm i -g @openai/codex, brew install --cask codex, or direct binary download for macOS (Apple Silicon and x86_64) and Linux (x86_64 and arm64)",
+          "ChatGPT plan integration means teams already paying for OpenAI access can use it without adding a separate API key"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "openai/codex — GitHub Releases Page",
+        "publisher": "OpenAI (GitHub)",
+        "url": "https://github.com/openai/codex/releases",
+        "source_type": "official docs",
+        "is_primary": false,
+        "claims_supported": [
+          "As of July 2025, the repo shows version numbers in the 0.144–0.145 alpha range, with pre-release tags — confirming the tool is still in active/alpha development, not a stable GA release",
+          "Releases are extremely frequent (hundreds of releases), indicating active iteration"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "OpenAI Codex CLI (Medium — Cobus Greyling)",
+        "publisher": "Medium / Cobus Greyling",
+        "url": "https://cobusgreyling.medium.com/openai-codex-cli-7b73b60bc006",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "The original OpenAI Codex model (the GPT-based API model for code) has been deprecated — the CLI is a distinct, new product that shares only the name",
+          "Codex CLI serves as a bridge to OpenAI's Responses API",
+          "Early default model was o4-mini (as of April 2025 launch); this has since evolved"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-19"
+      },
+      {
+        "title": "Codex CLI on Azure OpenAI — Microsoft Learn",
+        "publisher": "Microsoft",
+        "url": "https://learn.microsoft.com/en-us/azure/foundry/openai/how-to/codex",
+        "source_type": "official docs",
+        "is_primary": false,
+        "claims_supported": [
+          "Windows support requires WSL2 (not native Windows terminal, per this doc's prerequisites)",
+          "macOS install supported via Homebrew or npm",
+          "An API key (or Azure credential) is required for non-ChatGPT-subscription use",
+          "Approval modes determine how much autonomy and interaction the user has with Codex"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-19"
+      }
+    ],
+    "unverifiable_claims": [
+      "Whether there is any free tier or trial access without a paid ChatGPT subscription or API key: The official docs confirm ChatGPT Plus/Pro/Business/Edu/Enterprise subscribers can use Codex CLI without a separate API key, but there is no verified evidence of a standalone free trial or free tier for new users with no existing OpenAI subscription. This should be softened or omitted.",
+      "That o4-mini is the current default model as of mid-2025: The original April 2025 launch used o4-mini as the default, but official docs as of July 2026 describe GPT-5.6 variants (Sol, Terra, Luna) as the recommended models with no explicit statement that o4-mini remains the default. The default appears to have changed. Writers should note 'o4-mini was the launch default; the current recommended model has evolved — check official docs for the current default.'",
+      "Exact 'beta vs. GA vs. preview' status label: GitHub releases show versions in the 0.144–0.145 alpha range with 'Pre-release' tags as of July 2026, but OpenAI has not published a formal 'beta' or 'GA' announcement page. The tool is described as 'experimental' in some older docs and 'actively developed' in current docs. No single authoritative status label can be cited.",
+      "Whether pip is a valid install method: One independent source mentions pip, but the official GitHub repo and OpenAI docs only list the shell script installer, npm, Homebrew, winget, and binary downloads. pip should not be cited as a supported install method without further verification."
+    ]
   }
 ]
