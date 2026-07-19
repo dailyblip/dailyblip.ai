@@ -3906,5 +3906,22 @@
         "aspect_ratio": "9:16"
       }
     ]
+  },
+  {
+    "id": "f4dcd270-c1f9-49fc-88ed-1f148e7fa7d6",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "OpenAI's new AI keyboard explained - what does it do?",
+      "article_type": "Practical guide",
+      "target_audience": "",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-19T04:27:18.838Z",
+    "updated_at": "2026-07-19T04:27:18.838Z"
   }
 ]
