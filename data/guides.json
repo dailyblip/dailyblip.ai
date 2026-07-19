@@ -4147,7 +4147,7 @@
   {
     "id": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "What is ChatGPT's new keyboard?",
       "article_type": "Practical guide",
@@ -4159,7 +4159,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T04:32:27.410Z",
-    "updated_at": "2026-07-19T04:36:25.598Z",
+    "updated_at": "2026-07-19T04:39:39.237Z",
     "brief": {
       "target_reader": "Someone who just heard that ChatGPT has a keyboard app and wants to know what it actually is, what it does, and whether it's worth downloading — no prior experience with AI keyboard apps assumed",
       "reader_outcome": "Feel confident enough to download the ChatGPT keyboard, enable it on their phone, and know what to actually use it for",
@@ -4433,6 +4433,92 @@
       "checked_at": "2026-07-19T04:36:25.598Z",
       "revised": true
     },
-    "warnings": []
+    "warnings": [],
+    "images": [
+      {
+        "id": "img1",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-img1.jpg",
+        "prompt": "Flat vector-style illustration, polished and geometric like a professional infographic. Deep navy gradient background (#071A1F to #0C242B), wide 16:9 frame. Centered in frame: a compact chunky mechanical macropad — small, rectangular, with a few large square keys — rendered in warm amber (#FFB454) with clean flat fills, slight upward perspective tilt for subtle depth. In the far background, a faint simplified smartphone silhouette in muted aqua (#63D8C6) sits behind and well below the macropad, visually receded and secondary. No text anywhere in the image. All elements fully within a safe inner margin — nothing within 10% of any frame edge. Crisp alignment, consistent spacing, flat colors, no photorealistic texture, no painterly rendering, no glow effects, no floating UI elements.",
+        "placement": "hero",
+        "alt_text": "A compact amber mechanical macropad sits centered against a deep navy background, with a faint aqua smartphone silhouette receding behind it.",
+        "caption": "The ChatGPT 'keyboard' isn't a mobile app — it's the Codex Micro, a $230 physical macropad built for desktop AI coding workflows.",
+        "generated_at": "2026-07-19T04:38:14.952Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A physical macropad glowing in amber sits center-frame against a dark navy background, visually distinct from a smartphone — immediately signaling 'this is hardware, not an app'",
+        "purpose": "Earn the reader's attention and set up the article's core reveal: the ChatGPT keyboard is a physical desktop device, not a mobile app",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-img2.jpg",
+        "prompt": "Flat vector top-down illustration, square 1:1 frame. Dark ink background (#0C242B). On the left portion of the frame, a simplified rectangular full-size keyboard silhouette in dark muted navy/slate — no individual key labels, just clean geometric shape with subtle key-grid suggestion. To its right, a noticeably smaller, chunkier rectangular macropad shape in warm amber (#FFB454), with a few large square keys visible as simple flat squares. A single short aqua (#63D8C6) bracket or arrow points to the macropad with the short label 'Codex Micro' in clean sans-serif. Both devices rest comfortably centered in the square frame with generous margin on all sides — at least 12% clearance from every frame edge. Polished, professional infographic style. No other text. Flat fills, crisp edges, consistent spacing.",
+        "placement": "s1",
+        "alt_text": "Top-down diagram showing a full-size keyboard beside a smaller amber macropad labeled 'Codex Micro', illustrating that the macropad sits next to, not instead of, a regular keyboard.",
+        "caption": "The Codex Micro isn't a keyboard — it's a compact macropad that sits alongside your existing keyboard as a dedicated control pad for AI coding agents.",
+        "generated_at": "2026-07-19T04:38:35.553Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "A labeled diagram showing what the Codex Micro actually is: a small physical macropad that sits beside a full keyboard, not replacing it",
+        "purpose": "Help readers immediately understand the Codex Micro's form factor and spatial relationship to a standard keyboard — it's an add-on control pad, not a keyboard replacement",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-img3.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape frame. Dark ink background (#071A1F). A thin warm amber (#FFB454) vertical line divides the frame precisely in half. Left half: subtle cool aqua tint overlay (#63D8C6 at low opacity). Center of left half: a simple clean smartphone silhouette with a minimal flat keyboard grid icon on its screen. Below it, a short white sans-serif label reading 'What people expected'. Right half: subtle warm amber tint overlay. Center of right half: a compact chunky rectangular macropad shape in amber (#FFB454) with a few large flat square keys. Below it, a short white sans-serif label reading 'What OpenAI released'. All elements fully within a safe inner margin — left smartphone at least 14% from left frame edge, right macropad at least 14% from right frame edge, labels at least 10% from bottom edge. No other text. Clean alignment, flat fills, consistent icon scale on both sides, polished professional infographic style.",
+        "placement": "s1",
+        "alt_text": "Two-column comparison: left side shows a smartphone with a keyboard icon labeled 'What people expected'; right side shows the Codex Micro macropad labeled 'What OpenAI released'.",
+        "caption": "The confusion is understandable — but what OpenAI actually released is a $230 physical macropad for developers, not a mobile keyboard app.",
+        "generated_at": "2026-07-19T04:38:53.063Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "Two-column visual split: left side shows a smartphone with a third-party app icon (generic, not branded), right side shows the physical Codex Micro macropad — 'what people searched for' vs 'what actually exists'",
+        "purpose": "Visually anchor the article's core correction: readers looking for a mobile keyboard app and what OpenAI actually released are two completely different things",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img4",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-img4.jpg",
+        "prompt": "Flat vector horizontal workflow diagram, 16:9 landscape frame. Dark ink background (#0C242B). Three evenly spaced nodes connected by clean white right-pointing arrows, all horizontally centered in the frame with equal spacing between them. Left node: a compact amber (#FFB454) macropad icon with a simple downward-press indicator (a small finger shape or tap icon above one key). Center node: an abstract geometric agent shape in aqua (#63D8C6) — a simple hexagon or circle with a small lightning bolt or play icon inside. Right node: three small stacked horizontal rectangles in alternating amber and aqua tones, suggesting parallel tasks. Short white sans-serif label beneath the center node only: 'Codex Agent'. All nodes centered vertically in the frame. Minimum 15% margin from both left and right frame edges (left node left edge clear, right node right edge clear), 12% margin from top and bottom. No other text labels. Clean consistent icon scale, flat fills, crisp edges, professional infographic style.",
+        "placement": "s1",
+        "alt_text": "Horizontal three-step workflow: a macropad icon connects via arrow to a Codex Agent symbol, which connects via arrow to three stacked parallel task blocks.",
+        "caption": "One button press on the Codex Micro dispatches an AI coding agent — the point is managing multiple parallel Codex tasks without switching context in your keyboard or mouse.",
+        "generated_at": "2026-07-19T04:39:10.499Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "A simple horizontal flow showing how the Codex Micro fits into a developer's desktop workflow: macropad → triggers Codex agent → multiple parallel tasks complete",
+        "purpose": "Illustrate what the Codex Micro actually does in use — a physical button press dispatches an AI coding agent, enabling parallel task management without context-switching",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img5",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-img5.jpg",
+        "prompt": "Flat vector infographic card, 9:16 portrait frame. Dark ink background (#071A1F). Four horizontally-centered rows stacked vertically with generous even spacing between them. Each row: a simple flat amber (#FFB454) icon on the left and a short white sans-serif label to its right. Row 1: a price-tag icon with label '$230'. Row 2: a two-interlocking-piece puzzle icon with label 'Work Louder'. Row 3: a code bracket icon with label 'Codex only'. Row 4: a simple clock or caution-triangle icon with label 'Limited run'. Thin aqua (#63D8C6) horizontal lines between each row as subtle separators. All icons and labels at least 15% from the left frame edge and 15% from the right frame edge. All content vertically centered in the frame with 12% clear margin at top and bottom. Consistent icon sizing, flat fills, clean alignment, polished professional style. No other text or elements.",
+        "placement": "s2",
+        "alt_text": "A vertical fact-card listing four key Codex Micro details: $230 price, co-made with Work Louder, designed for Codex users only, and available as a limited run.",
+        "caption": "The Codex Micro at a glance: $230, co-made with Work Louder, built specifically for Codex coding-agent users, and sold as a limited-run product with no guaranteed long-term availability.",
+        "generated_at": "2026-07-19T04:39:27.031Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "A vertical stacked list of four key facts about the Codex Micro — price, co-maker, target user, and availability caveat — as a clean scannable card",
+        "purpose": "Give readers a fast at-a-glance summary of the Codex Micro's defining specs and caveats: $230, made with Work Louder, for Codex developers, limited run",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img6",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-img6.jpg",
+        "prompt": "Flat vector concentric circle diagram, square 1:1 frame. Dark ink background (#0C242B). Three circles centered in the frame. Outermost: a large circle in muted dark navy with a slightly lighter navy fill, taking up roughly 75% of the frame width — with comfortable margin from all frame edges (at least 12%). Inside it, a medium circle in warm amber (#FFB454), roughly 45% of frame width, slightly offset toward center-right for visual interest. Inside the amber circle, a small compact macropad icon shape in aqua (#63D8C6) centered within it, roughly 18% of frame width. Short white sans-serif label inside the outer navy ring (not overlapping inner circles): 'ChatGPT users'. Short white sans-serif label inside the amber circle (above the macropad icon): 'Codex devs'. No other text. All shapes fully within safe frame margin. Flat fills, clean crisp circle edges, consistent alignment, professional infographic style.",
+        "placement": "s2",
+        "alt_text": "Concentric circle diagram: a large outer navy circle labeled 'ChatGPT users' contains a smaller amber circle labeled 'Codex devs', which contains a tiny aqua macropad icon — showing the Codex Micro's narrow target audience.",
+        "caption": "The Codex Micro isn't for the general ChatGPT audience — it targets the specific slice of developers who run Codex coding agents heavily enough that $230 for a dedicated control pad makes sense.",
+        "generated_at": "2026-07-19T04:39:39.237Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "A Venn-style or concentric circle diagram showing that Codex users are a specific subset of general ChatGPT users — making clear why this device isn't for most people",
+        "purpose": "Visually communicate the audience mismatch at the heart of the article: the Codex Micro serves Codex developers, a small specialized group within the much larger ChatGPT user base",
+        "aspect_ratio": "1:1"
+      }
+    ]
   }
 ]
