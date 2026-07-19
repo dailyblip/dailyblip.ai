@@ -3516,8 +3516,8 @@
   },
   {
     "id": "084e5bb8-c77c-4918-ae78-38b9cfff4e89",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
       "article_type": "Beginner explainer",
@@ -3829,7 +3829,7 @@
         "alt_text": "A flat vector illustration showing a terminal window panel connected by an arrow to a file-tree icon, representing Codex CLI operating on a local project directory.",
         "caption": "Codex CLI lives in your terminal and works directly on your project files — not in a chat window.",
         "generated_at": "2026-07-19T04:03:39.829Z",
-        "approved": false,
+        "approved": true,
         "role": "hero",
         "concept": "A terminal window becomes an active coding agent — your project folder is open, a single prompt is typed, and the agent is visibly at work inside the codebase.",
         "purpose": "Immediately communicate that Codex CLI is something that lives in your terminal and operates on real project files — not a chat window, not a web interface.",
@@ -3857,7 +3857,7 @@
         "alt_text": "A four-step horizontal workflow diagram showing the Codex CLI session flow: Open (folder icon), Prompt (cursor icon), Read (magnifying glass on document), Edit (pencil icon), connected by amber arrows.",
         "caption": "A typical Codex CLI session: you open your project folder, type a natural-language prompt, and the agent reads your files and makes targeted edits — showing you what it plans before acting.",
         "generated_at": "2026-07-19T04:04:11.421Z",
-        "approved": true,
+        "approved": false,
         "role": "workflow",
         "concept": "The four-step flow of a single Codex CLI session: open project folder → type a prompt → agent reads files and plans → edits are made (and shown for approval).",
         "purpose": "Show readers the actual sequence of what happens when they run Codex CLI on day one, grounding the 'install and run something' section in a concrete mental model.",
@@ -3906,25 +3906,20 @@
         "aspect_ratio": "9:16"
       },
       {
-        "id": "upload-1784435916847",
-        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-upload-1784435915768.jpg",
+        "id": "upload-1784435860111",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-upload-1784435858978.jpg",
         "placement": "hero",
-        "alt_text": "",
+        "alt_text": "OpenAI Codex Micro",
         "caption": "",
         "approved": true,
         "role": "upload",
-        "generated_at": "2026-07-19T04:38:36.847Z"
-      },
-      {
-        "id": "upload-1784435975928",
-        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-upload-1784435974725.jpg",
-        "placement": "hero",
-        "alt_text": "",
-        "caption": "",
-        "approved": true,
-        "role": "upload",
-        "generated_at": "2026-07-19T04:39:35.928Z"
+        "generated_at": "2026-07-19T04:37:40.111Z"
       }
+    ],
+    "approved_at": "2026-07-19T04:40:39.719Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s2: The install script URLs use the chatgpt.com domain (chatgpt.com/codex/install.sh and chatgpt.com/codex/install.ps1), which is an unusual and unverifiable domain for a developer CLI installer — if these are incorrect or change, readers executing them pipe arbitrary scripts into their shell; the article provides no verification step and no checksum guidance."
     ]
   },
   {
