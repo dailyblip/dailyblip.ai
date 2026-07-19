@@ -3910,7 +3910,7 @@
   {
     "id": "f4dcd270-c1f9-49fc-88ed-1f148e7fa7d6",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "submitted": {
       "idea": "OpenAI's new AI keyboard explained - what does it do?",
       "article_type": "Practical guide",
@@ -3922,7 +3922,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T04:27:18.838Z",
-    "updated_at": "2026-07-19T04:29:14.582Z",
+    "updated_at": "2026-07-19T04:29:47.819Z",
     "brief": {
       "target_reader": "Someone who saw a headline about OpenAI's AI keyboard and has no idea what it actually is or does — probably a regular iPhone or Android user, not a developer or AI enthusiast",
       "reader_outcome": "Understand what the keyboard is, what it actually lets you do, and feel ready to download it and try it",
@@ -4067,13 +4067,13 @@
         {
           "id": "s2",
           "heading": "What the Codex Micro actually does",
-          "body_markdown": "The keyboard's features are built around coding workflows, not writing. According to reporting from TechCrunch and Gizmodo, it has:\n\n- **Six illuminated \"Agent Keys\"** that light up in different colors (green, blue, orange, red) to show what the Codex AI agent is currently doing\n- **A joystick** you can program to trigger developer actions like starting a debugging session or kicking off a code refactor\n- **A rotary dial** that adjusts how much \"reasoning\" Codex applies to a task, basically a physical slider for how hard the AI thinks before responding\n- **32 customizable keycaps** for building out your own workflow shortcuts\n\nIf none of those features mean anything to you, that's fine. It means this keyboard genuinely isn't aimed at you. It's a control panel for people who spend their day supervising AI agents writing software.\n\nOne separate thing worth knowing: OpenAI *has* added Codex (the coding agent, not the keyboard) to the regular ChatGPT mobile app on iOS and Android. That rollout is in preview across all ChatGPT plans, including the free one. But that's a feature inside the ChatGPT app, not a keyboard, and it's still aimed at developers rather than general users.",
+          "body_markdown": "The keyboard's features are built around coding workflows, not writing. According to reporting from TechCrunch and Gizmodo, it has:\n\n- **Six illuminated \"Agent Keys\"** that light up in different colors (green, blue, orange, red) to show what the Codex AI agent is currently doing\n- **A joystick** you can program to trigger developer actions like starting a debugging session or kicking off a code refactor\n- **A rotary dial** that adjusts how much \"reasoning\" Codex applies to a task, basically a physical slider for how hard the AI thinks before responding\n- **32 customizable keycaps** for building out your own workflow shortcuts\n\nIf none of those features mean anything to you, that's fine. It means this keyboard genuinely isn't aimed at you. It's a control panel for people who spend their day supervising AI agents writing software.\n\nOne separate thing worth knowing: OpenAI *has* added Codex (the coding agent, not the keyboard) to the regular ChatGPT mobile app on iOS and Android. That rollout is in preview across all ChatGPT plans, including the free one, in supported regions. But that's a feature inside the ChatGPT app, not a keyboard, and it's still aimed at developers rather than general users.",
           "tools": []
         },
         {
           "id": "s3",
           "heading": "What to actually try if you wanted an AI writing assistant on your phone",
-          "body_markdown": "The product the headlines seemed to promise, a keyboard app that helps you write better while you type, isn't something OpenAI has released as of mid-2026. If that's what you were hoping for, a few options do exist from other companies. Grammarly's keyboard works across apps on both iOS and Android. There are also third-party keyboards like Keezel and others that have added AI rewriting features, though these aren't from OpenAI.\n\nFor most people, the closest thing from OpenAI right now is just the ChatGPT app itself. You can paste text in, ask it to rewrite or improve something, and paste it back. It's a few extra steps, but it works, and the free tier is plenty for casual use.\n\nWe haven't personally tested the Codex Micro (and at $230 for a developer-focused limited-edition device, that's probably fine). For specs and current availability, OpenAI's site and the Work Louder collaboration page are your best bets.",
+          "body_markdown": "The product the headlines seemed to promise, a keyboard app that helps you write better while you type, isn't something OpenAI has released as of this writing. If that's what you were hoping for, a few options do exist from other companies. Grammarly's keyboard works across apps on both iOS and Android, and there are third-party keyboards with AI rewriting features built in, though none of them are from OpenAI.\n\nFor most people, the closest thing from OpenAI right now is just the ChatGPT app itself. You can paste text in, ask it to rewrite or improve something, and paste it back. It's a few extra steps, but it works, and the free tier is plenty for casual use.\n\nNo hands-on testing of the Codex Micro was done for this guide. For specs and current availability, OpenAI's site and the Work Louder collaboration page are your best bets.",
           "tools": []
         }
       ],
@@ -4087,6 +4087,41 @@
       "conclusion": "The gap between the headline and the actual product here is pretty wide. The Codex Micro is a real, interesting piece of hardware for a specific slice of developers, but it has nothing to do with smarter everyday typing. If a headline pointed you here expecting a phone keyboard revolution, you didn't miss the launch of something useful for you. It just wasn't built for you.",
       "methodology_disclosure": "This guide was researched using sources published around the July 2026 product launch, primarily a TechCrunch report on the Codex Micro and supporting coverage from Gizmodo and Geeky Gadgets, plus a TestingCatalog and Elets CIO report on the separate Codex mobile integration in the ChatGPT app. The App Store listing for ChatGPT was also reviewed. No OpenAI product matching the brief's original premise (a software AI mobile keyboard) was found in any source. The guide was reoriented to correct that mismatch rather than repeat claims the sources don't support. No hands-on testing was conducted.",
       "last_reviewed_date": "July 19, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "rollout is in preview across all ChatGPT plans, including the free one",
+          "issue": "The source says 'Free and Go' plans, but ChatGPT's standard free tier is simply called 'Free' — 'Go' is a distinct paid plan tier, so lumping them as 'the free one' is imprecise and potentially misleading about which paid plans are included.",
+          "supporting_source_url": "https://www.testingcatalog.com/openai-brings-codex-to-chatgpt-mobile-app-for-ios-and-android/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s1",
+          "original_text": "it's a limited-run collaboration with Work Louder, so it's not something designed",
+          "issue": "The article conflates 'limited-run' (production volume) with not being designed for mass audiences — these are related but not identical claims, and the inference is editorially added beyond what the source states.",
+          "supporting_source_url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "the free tier is plenty for casual use",
+          "issue": "This is an unsupported editorial conclusion about ChatGPT's free tier sufficiency; no source cited in the article substantiates this claim.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "low",
+          "section_id": "key_takeaways",
+          "original_text": "OpenAI did add Codex to the ChatGPT mobile app in preview",
+          "issue": "Sources indicate the rollout covers 'supported regions' without specifying which, so stating this without a regional caveat could mislead readers in unsupported regions into expecting access.",
+          "supporting_source_url": "https://www.testingcatalog.com/openai-brings-codex-to-chatgpt-mobile-app-for-ios-and-android/"
+        }
+      ],
+      "checked_at": "2026-07-19T04:29:47.819Z",
+      "revised": true
+    },
+    "warnings": []
   }
 ]
