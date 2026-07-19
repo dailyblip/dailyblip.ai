@@ -4143,7 +4143,7 @@
   },
   {
     "id": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd",
-    "status": "approved",
+    "status": "failed",
     "stage": "Approved",
     "submitted": {
       "idea": "What is ChatGPT's new keyboard?",
@@ -4517,6 +4517,11 @@
         "aspect_ratio": "1:1"
       }
     ],
-    "approved_at": "2026-07-19T05:05:11.323Z"
+    "approved_at": "2026-07-19T05:05:11.323Z",
+    "error": {
+      "stage": "publish",
+      "message": "Pre-publish validation failed: no hero-placement image among the SELECTED images",
+      "at": "2026-07-19T05:05:29.146Z"
+    }
   }
 ]
