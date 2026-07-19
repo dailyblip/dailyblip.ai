@@ -1,6 +1,6 @@
 {
   "issue": 238,
-  "generated_at": "2026-07-19T15:33:51.211Z",
+  "generated_at": "2026-07-19T18:46:33.520Z",
   "brief": {
     "items": [
       {
@@ -78,8 +78,25 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": 0,
+      "move": -1,
       "top": true
+    },
+    {
+      "id": "s_c0ef7a87d4b35aa6",
+      "cat": "music",
+      "badge": "hot",
+      "spotlight": true,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Artist 1010Benja makes genuinely engaging song with Suno AI",
+      "dek": "A working creator demonstrates compositional intent and distinctive voice using Suno, contradicting the widespread perception that AI music is inherently generic. The Verge profiles the work and artist's unapologetic stance on the tool.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/entertainment/967678/1010benja-semiramis-dream-suno-ai-music",
+      "ts": "2026-07-19T17:35:54.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 101,
+      "move": 59
     },
     {
       "id": "s_5767ddd493bb4165",
@@ -95,8 +112,8 @@
       "ts": "2026-07-19T14:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 90,
-      "move": 58
+      "heat": 87,
+      "move": -4
     },
     {
       "id": "s_c60035e6bb3c677d",
@@ -112,8 +129,8 @@
       "ts": "2026-07-18T18:51:07.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": -3
+      "heat": 78,
+      "move": -1
     },
     {
       "id": "s_01582b84f95050bc",
@@ -419,7 +436,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -777,7 +794,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -812,7 +829,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_d173222f3e599859",
@@ -881,7 +898,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -949,7 +966,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_c0ac8f261d4797a3",
@@ -1069,23 +1086,6 @@
       "also": [],
       "heat": 68,
       "move": -1
-    },
-    {
-      "id": "s_d71a059cc728fd04",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "AI image generation called 'pop culture's greatest tribute band'",
-      "dek": "Analysis of generative AI's tendency toward derivative cultural pastiche, examining why novelty in AI-made content feels exhausted.",
-      "src": "Creative Bloq AI",
-      "url": "https://www.creativebloq.com/ai/i-laughed-at-this-image-of-england-players-as-queen-but-it-reveals-ais-biggest-problem",
-      "ts": "2026-07-15T11:00:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 50,
-      "move": -1
     }
   ],
   "models": [
@@ -1157,7 +1157,7 @@
     },
     {
       "n": "The Verge AI",
-      "c": 9
+      "c": 10
     },
     {
       "n": "Hugging Face Blog",
@@ -1168,12 +1168,12 @@
       "c": 4
     },
     {
-      "n": "Creative Bloq AI",
+      "n": "PetaPixel",
       "c": 4
     },
     {
-      "n": "PetaPixel",
-      "c": 4
+      "n": "Creative Bloq AI",
+      "c": 3
     },
     {
       "n": "dailyblip",
@@ -1188,11 +1188,11 @@
     "#google",
     "#openai",
     "#apple",
+    "#suno",
     "#gemini",
     "#youtube",
     "#anthropic",
-    "#hugging",
-    "#face"
+    "#hugging"
   ],
   "tooldrop": {
     "name": "Review by Eddie AI",
@@ -1202,9 +1202,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 6,
-    "published_today": 2,
-    "sources_live": 14,
-    "slopped_last_run": 5
+    "scanned_last_run": 1,
+    "published_today": 3,
+    "sources_live": 13,
+    "slopped_last_run": 0
   }
 }
