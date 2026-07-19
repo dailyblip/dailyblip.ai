@@ -3904,6 +3904,16 @@
         "concept": "A vertical checklist of five key facts about Codex CLI — local agent, install method, auth requirement, sandbox default, and active development status — each as a distinct icon + visual marker.",
         "purpose": "Give readers a scannable visual summary of the five key takeaways: local agent / single install command / paid API key required / sandboxed by default / still under active development.",
         "aspect_ratio": "9:16"
+      },
+      {
+        "id": "upload-1784435860111",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-upload-1784435858978.jpg",
+        "placement": "hero",
+        "alt_text": "OpenAI Codex Micro",
+        "caption": "",
+        "approved": true,
+        "role": "upload",
+        "generated_at": "2026-07-19T04:37:40.111Z"
       }
     ]
   },
