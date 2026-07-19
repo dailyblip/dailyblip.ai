@@ -3910,7 +3910,7 @@
   {
     "id": "f4dcd270-c1f9-49fc-88ed-1f148e7fa7d6",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "OpenAI's new AI keyboard explained - what does it do?",
       "article_type": "Practical guide",
@@ -3922,6 +3922,26 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T04:27:18.838Z",
-    "updated_at": "2026-07-19T04:27:18.838Z"
+    "updated_at": "2026-07-19T04:27:47.143Z",
+    "brief": {
+      "target_reader": "Someone who saw a headline about OpenAI's AI keyboard and has no idea what it actually is or does — probably a regular iPhone or Android user, not a developer or AI enthusiast",
+      "reader_outcome": "Understand what the keyboard is, what it actually lets you do, and feel ready to download it and try it",
+      "structure_plan": [
+        "It's a keyboard app, not a physical keyboard — here's what that means",
+        "What you can actually do with it while you type",
+        "How to get it on your phone and set it up"
+      ],
+      "claims_to_verify": [
+        "Which platforms the keyboard is available on (iOS, Android, or both)",
+        "Whether it is a standalone app or built into an existing OpenAI app",
+        "Core features: what AI actions are available directly in the keyboard (rewriting, tone changes, translation, autocomplete, etc.)",
+        "Whether a ChatGPT account or OpenAI subscription is required to use it",
+        "Whether there is a free tier or if it requires a paid plan",
+        "Whether it works across all apps or only certain ones",
+        "Current availability — is it fully launched, in beta, or rolling out in limited regions",
+        "The name of the keyboard product (e.g. is it called 'ChatGPT keyboard' or something else)"
+      ],
+      "research_plan": "Prioritize official OpenAI announcements and product pages, then major tech news outlets (The Verge, TechCrunch, 9to5Mac) for coverage of the launch. Avoid relying solely on secondary aggregator posts. Check App Store and Google Play listings for availability and user-facing feature descriptions. Flag anything that appears to be pre-launch speculation versus confirmed shipped features."
+    }
   }
 ]
