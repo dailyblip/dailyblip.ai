@@ -3517,7 +3517,7 @@
   {
     "id": "084e5bb8-c77c-4918-ae78-38b9cfff4e89",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
       "article_type": "Beginner explainer",
@@ -3529,6 +3529,28 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T03:58:19.658Z",
-    "updated_at": "2026-07-19T03:58:19.658Z"
+    "updated_at": "2026-07-19T03:58:51.756Z",
+    "brief": {
+      "target_reader": "A developer or technically curious creator who has heard of OpenAI Codex CLI but has no idea what it actually does or whether it's worth trying — they're comfortable opening a terminal but have never used an AI coding agent in their local environment before",
+      "reader_outcome": "Understand what Codex CLI is, what makes it different from just using ChatGPT for code help, and feel ready to install it and run their first command",
+      "structure_plan": [
+        "What Codex CLI actually is (and what makes it different from chatting with an AI)",
+        "What you can do with it on day one",
+        "How to install it and run your first command",
+        "One thing to know before you let it touch your files"
+      ],
+      "claims_to_verify": [
+        "Whether Codex CLI is open source and where it lives (GitHub repo URL)",
+        "What model(s) it runs on by default (e.g. o4-mini, GPT-4o, or a dedicated Codex model)",
+        "Whether it requires an OpenAI API key and whether there is any free tier or trial access",
+        "What operating systems it supports (macOS, Linux, Windows/WSL)",
+        "What the install command actually is (npm, pip, brew, or other)",
+        "What approval/safety modes exist (auto-approve vs confirm-each-action) and what the default behavior is",
+        "Whether it can read and edit files, run shell commands, and browse the local filesystem — and what sandboxing if any is in place",
+        "Current status: is it in beta, GA, or preview as of mid-2025",
+        "Whether it is the same as or distinct from the older Codex API/model that was deprecated"
+      ],
+      "research_plan": "Start with the official OpenAI Codex CLI GitHub repository (README and changelog) as the primary source for capabilities, install steps, and safety modes — that is more reliable than blog coverage for technical specifics. Cross-reference the OpenAI developer docs or any official launch blog post for model details and API key requirements. For availability and free-tier questions, check the OpenAI pricing page directly. Treat third-party tutorials and reviews as supplementary context only, not as sources for specific claims. Flag clearly if any capability (file editing, shell execution, sandboxing) is described only in third-party coverage and not in official docs."
+    }
   }
 ]
