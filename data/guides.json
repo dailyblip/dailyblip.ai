@@ -3517,7 +3517,7 @@
   {
     "id": "084e5bb8-c77c-4918-ae78-38b9cfff4e89",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
       "article_type": "Beginner explainer",
@@ -3529,7 +3529,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-19T03:58:19.658Z",
-    "updated_at": "2026-07-19T04:01:40.815Z",
+    "updated_at": "2026-07-19T04:05:02.665Z",
     "brief": {
       "target_reader": "A developer or technically curious creator who has heard of OpenAI Codex CLI but has no idea what it actually does or whether it's worth trying — they're comfortable opening a terminal but have never used an AI coding agent in their local environment before",
       "reader_outcome": "Understand what Codex CLI is, what makes it different from just using ChatGPT for code help, and feel ready to install it and run their first command",
@@ -3819,6 +3819,92 @@
     },
     "warnings": [
       "s2: The install script URLs use the chatgpt.com domain (chatgpt.com/codex/install.sh and chatgpt.com/codex/install.ps1), which is an unusual and unverifiable domain for a developer CLI installer — if these are incorrect or change, readers executing them pipe arbitrary scripts into their shell; the article provides no verification step and no checksum guidance."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-img1.jpg",
+        "prompt": "Flat vector illustration, 16:9 aspect ratio, professional infographic style. Deep ink-navy background (#071A1F) filling the entire frame. Left two-thirds: a clean, flat rectangular terminal window panel in a slightly lighter dark tone (#0C242B), with a minimal title bar stripe at the top (no text). Inside the terminal panel, a single bold amber (#FFB454) horizontal cursor line with a blinking block cursor shape — this is the visual focal point, centered vertically in the panel. All edges of the terminal panel have at least 8% of frame width as clear margin from the frame edge. Right third: a simple flat aqua (#63D8C6) file-tree icon — a folder shape with two or three nested document lines beneath it, clean geometric shapes only. A short amber arrow with rounded cap points from the terminal panel toward the file-tree icon, showing connection. Consistent flat color fills, crisp edges, even spacing. No text rendered in the image. No gradients, no glow halos, no decorative particles. All elements fully visible within a safe margin — nothing cropped or touching the frame border.",
+        "placement": "hero",
+        "alt_text": "A flat vector illustration showing a terminal window panel connected by an arrow to a file-tree icon, representing Codex CLI operating on a local project directory.",
+        "caption": "Codex CLI lives in your terminal and works directly on your project files — not in a chat window.",
+        "generated_at": "2026-07-19T04:03:39.829Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A terminal window becomes an active coding agent — your project folder is open, a single prompt is typed, and the agent is visibly at work inside the codebase.",
+        "purpose": "Immediately communicate that Codex CLI is something that lives in your terminal and operates on real project files — not a chat window, not a web interface.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-img2.jpg",
+        "prompt": "Flat vector illustration, 1:1 square aspect ratio, professional two-panel infographic style. Deep ink-navy background (#071A1F). A thin vertical amber (#FFB454) line divides the frame precisely in half. Left half (inside a safe margin of at least 8% from frame edge and from divider): a flat muted gray-blue speech bubble icon, centered vertically, with a small flat padlock icon directly below it — both in muted cool gray (#4A6570). One short flat-style text label 'Chat' in small clean sans-serif, centered under the icon cluster, in the same muted gray. Right half (matching margins): a flat aqua (#63D8C6) terminal bracket icon (like '>_'), centered vertically, with a small flat file-document icon and a small flat gear icon clustered below it, both in aqua. One short label 'Agent' in small clean sans-serif in amber (#FFB454), centered under the icon cluster. Consistent geometric shapes, flat fills, crisp edges, perfectly even spacing. No gradients, no glow, no additional decorative elements. All icons and labels well within safe margins — nothing touches or approaches the frame edge.",
+        "placement": "s1",
+        "alt_text": "Two-panel comparison: left panel shows a speech-bubble icon labeled 'Chat' representing a passive interface; right panel shows a terminal icon with file and gear icons labeled 'Agent' representing Codex CLI's active, file-aware approach.",
+        "caption": "Unlike a chat interface, Codex CLI is an active agent: it reads your files, makes edits, and runs commands — it doesn't just respond to questions.",
+        "generated_at": "2026-07-19T04:03:53.704Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "Side-by-side contrast: the old chat-style interface (passive, isolated) versus the Codex CLI agent model (active, file-aware, command-running).",
+        "purpose": "Visually anchor the key distinction the article opens with — Codex CLI is not a chat interface. Readers who skim will immediately grasp the difference.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-img3.jpg",
+        "prompt": "Flat vector illustration, 16:9 aspect ratio, professional workflow diagram style. Deep ink-navy background (#071A1F). Four flat rounded-rectangle panels arranged in a horizontal row, centered vertically in the frame. Each panel is the same size. IMPORTANT: the leftmost panel's left edge and the rightmost panel's right edge must each be at least 10% of the total frame width away from the frame border — never touching or approaching the frame edge. Between each adjacent pair of panels, a short rightward-pointing amber (#FFB454) arrow, centered vertically, with clear space between the arrowhead and each panel. Inside each panel (background #0C242B): one flat aqua (#63D8C6) geometric icon centered in the upper portion, and one single short word label in clean off-white sans-serif centered in the lower portion. Left to right: Panel 1 — a flat folder icon, label 'Open'. Panel 2 — a flat terminal cursor/prompt icon (a small rectangle with a cursor mark), label 'Prompt'. Panel 3 — a flat magnifying glass overlapping a document rectangle, label 'Read'. Panel 4 — a flat pencil icon, label 'Edit'. All elements have even spacing, flat color fills, no gradients, no glow, no extra decoration. Everything fully visible inside safe margins.",
+        "placement": "s2",
+        "alt_text": "A four-step horizontal workflow diagram showing the Codex CLI session flow: Open (folder icon), Prompt (cursor icon), Read (magnifying glass on document), Edit (pencil icon), connected by amber arrows.",
+        "caption": "A typical Codex CLI session: you open your project folder, type a natural-language prompt, and the agent reads your files and makes targeted edits — showing you what it plans before acting.",
+        "generated_at": "2026-07-19T04:04:11.421Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "The four-step flow of a single Codex CLI session: open project folder → type a prompt → agent reads files and plans → edits are made (and shown for approval).",
+        "purpose": "Show readers the actual sequence of what happens when they run Codex CLI on day one, grounding the 'install and run something' section in a concrete mental model.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img4",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-img4.jpg",
+        "prompt": "Flat vector illustration, 9:16 portrait aspect ratio, professional infographic style. Deep ink-navy background (#071A1F). Center of the frame: a flat rounded-corner square outline in aqua (#63D8C6), representing the sandbox safe zone. Inside this rounded square: three small flat aqua geometric icons evenly spaced — a stack of document rectangles (files), a folder shape, and a terminal bracket symbol ('>_'). Surrounding the aqua rounded square at an even distance: a bold dashed amber (#FFB454) border rectangle with rounded corners — this represents the sandbox boundary. The amber dashed border has clear space between it and the inner aqua square, and also clear space between it and the outer frame. Outside the amber dashed boundary, one flat muted gray (#4A6570) padlock icon centered above it (top region), and one flat muted gray padlock icon centered below it (bottom region). Both padlocks are well within the frame — at least 8% of frame height from the top and bottom frame edges respectively. No text in the image. Flat fills, consistent icon sizes, even spacing, no gradients, no glow effects. All elements fully within safe margins — nothing cropped.",
+        "placement": "s3",
+        "alt_text": "A concentric-zone diagram showing Codex CLI's sandbox: an inner aqua zone containing file, folder, and terminal icons represents the allowed working directory; an amber dashed boundary surrounds it; padlock icons outside the boundary indicate blocked internet access and external paths.",
+        "caption": "By default, Codex CLI is sandboxed to your current working directory with no outbound network access. It can read files, edit files, and run local commands — but it can't reach outside that boundary without asking you first.",
+        "generated_at": "2026-07-19T04:04:28.990Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "The sandbox boundary: a clearly defined inner zone (current working directory, files, local commands) surrounded by a hard outer wall, with the internet and external paths locked out beyond it.",
+        "purpose": "Make the sandbox model immediately intuitive — the current directory is the safe zone the agent lives inside, and everything outside that boundary is off-limits without explicit permission.",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img5",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-img5.jpg",
+        "prompt": "Flat vector illustration, 1:1 square aspect ratio, professional diagram style. Deep ink-navy background (#071A1F). Three main elements arranged in a triangle layout within safe margins (at least 10% of frame width/height from every frame edge). Top-left element: a flat off-white geometric icon cluster — a simple apple silhouette and a small penguin silhouette side by side, both in clean off-white (#D4E0E4). Top-right element: a flat off-white square package/box icon with a small downward-arrow mark on it, representing a package manager. Bottom-center element: a flat aqua (#63D8C6) terminal bracket icon ('>_' style), slightly larger than the other two icons to signal it as the destination. From the top-left icon, a curved amber (#FFB454) arrow line sweeps downward and inward toward the bottom-center terminal icon. From the top-right icon, a mirrored curved amber arrow line sweeps downward and inward to the same terminal icon. Arrow lines are smooth, consistent stroke width, flat color — no gradient. No text in the image. All elements flat, crisp, evenly sized relative to each other, with clear breathing room. Nothing touches the frame edge.",
+        "placement": "s2",
+        "alt_text": "A convergence diagram showing two installation paths — Mac/Linux (apple and penguin icons) and npm (package icon) — both leading via amber arrows to a central aqua terminal icon representing Codex CLI.",
+        "caption": "Two main ways to install Codex CLI: the curl one-liner on Mac or Linux, or npm install globally. Both get you to the same place — a working codex command in your terminal.",
+        "generated_at": "2026-07-19T04:04:43.984Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "Two installation paths shown as distinct visual tracks: the curl one-liner (Mac/Linux) versus the npm global install — both routes lead to the same Codex CLI terminal icon.",
+        "purpose": "Help readers immediately see that there are two primary install methods from the article's install section, and that both arrive at the same destination.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img6",
+        "file": "084e5bb8-c77c-4918-ae78-38b9cfff4e89-img6.jpg",
+        "prompt": "Flat vector illustration, 9:16 portrait aspect ratio, professional vertical checklist infographic style. Deep ink-navy background (#071A1F). Five flat rounded-rectangle rows stacked vertically, centered horizontally, with even spacing between each row and at least 8% of frame height as clear margin above the top row and below the bottom row, and at least 8% of frame width as clear margin on the left and right sides of each row. Each row has the same height and width, background color slightly lighter navy (#0C242B). Inside each row: on the left side, a flat amber (#FFB454) filled checkmark or small circle-check icon. On the right side, a distinct flat aqua (#63D8C6) icon representing one concept. Row 1 icon: a terminal bracket ('>_'). Row 2 icon: a downward-pointing arrow into a tray. Row 3 icon: a key shape. Row 4 icon: a shield outline. Row 5 icon: a circular refresh/cycle arrow. All five icons are visually distinct from each other in shape. Consistent icon sizes, flat fills, even spacing within each row, clean alignment. No text in the image. No gradients, no glow effects, no decorative elements. All rows and their contents fully visible within safe margins — nothing cropped.",
+        "placement": "s1",
+        "alt_text": "A vertical checklist of five icons representing Codex CLI's key facts: a terminal bracket (local agent), download arrow (single install), key (auth required), shield (sandboxed by default), and refresh arrow (actively developed) — each paired with an amber checkmark.",
+        "caption": "Five things worth knowing before you run Codex CLI: it's a local agent, installs with one command, requires a paid OpenAI account, runs sandboxed by default, and is still under active development.",
+        "generated_at": "2026-07-19T04:05:02.665Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "A vertical checklist of five key facts about Codex CLI — local agent, install method, auth requirement, sandbox default, and active development status — each as a distinct icon + visual marker.",
+        "purpose": "Give readers a scannable visual summary of the five key takeaways: local agent / single install command / paid API key required / sandboxed by default / still under active development.",
+        "aspect_ratio": "9:16"
+      }
     ]
   }
 ]
