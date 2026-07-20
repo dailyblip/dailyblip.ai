@@ -74,6 +74,7 @@ const ARTICLE_TYPES = {
   "Monetization guide": "a guide to actually earning money with a skill or tool, grounded and non-hypey",
   "Beginner explainer": "an accessible explainer assuming zero prior knowledge of the topic",
   "Rights and platform guide": "a guide to legal/platform-policy questions — commercial use, ownership, ToS",
+  "Prompt list": "a short intro, a curated list of ready-to-use prompts (each copy-pasteable as-is), and a short close — much lighter than a normal guide, the prompts themselves ARE the content",
 };
 
 // ---- Editorial rules, shared across every stage's system prompt --------
@@ -123,13 +124,13 @@ If sources conflict on a fact, mention it once, casually, rather than hedging ev
 // ---- Stage: brief --------------------------------------------------------
 const BRIEF_SYSTEM = `You are the editorial lead for dailyblip, planning a guide before a researcher and writer produce it. ${EDITORIAL_RULES}
 
-Turn the submitted idea into a detailed editorial brief. Remember: this is a simple starter article for beginners, not a comprehensive guide \u2014 plan 3-4 sections maximum, each answering one clear question a newcomer actually has. Don't plan out a structure that would require deep technical coverage to fill.
+Turn the submitted idea into a detailed editorial brief. Remember: this is a simple starter article for beginners, not a comprehensive guide \u2014 plan 2-3 sections maximum, each answering one clear question a newcomer actually has. Don't plan out a structure that would require deep technical coverage to fill.
 
 Return JSON:
 {
   "target_reader": "specific description of who this is for \u2014 default to someone new to this tool/topic unless the submitted idea clearly implies otherwise",
   "reader_outcome": "what the reader should be able to DO after reading this \u2014 usually \"feel oriented enough to try it,\" not \"master it\"",
-  "structure_plan": ["section heading 1", "section heading 2", "... (3-4 total)"],
+  "structure_plan": ["section heading 1", "section heading 2", "... (2-3 total)"],
   "claims_to_verify": ["specific factual claims the research step must confirm \u2014 favor capabilities and availability over precise pricing/quota figures, since the draft will mostly avoid stating exact numbers anyway"],
   "research_plan": "what kinds of sources to prioritize for this specific topic"
 }
@@ -202,9 +203,9 @@ async function stageResearch(job) {
 // wastes 100% of every earlier stage's cost, which is a far worse
 // outcome than an unused few thousand tokens of ceiling headroom.
 const LENGTH_CONFIG = {
-  Quick: { words: "350 to 550 words total", researchSearches: 4 },
-  Standard: { words: "550 to 800 words total", researchSearches: 6 },
-  "Deep dive": { words: "800 to 1200 words total", researchSearches: 8 },
+  Quick: { words: "250 to 400 words total", researchSearches: 3 },
+  Standard: { words: "400 to 600 words total", researchSearches: 5 },
+  "Deep dive": { words: "600 to 900 words total", researchSearches: 6 },
 };
 
 const DRAFT_SYSTEM = `You write the full draft of a dailyblip guide. ${EDITORIAL_RULES}
@@ -213,9 +214,11 @@ WHAT THIS IS: a simple starter article for someone who is new to this tool or to
 
 TONE: Direct and a little opinionated, per EDITORIAL_RULES' VOICE section above \u2014 not breezy filler, and not a spec sheet either. Short, punchy sentences where they help; longer ones where an idea genuinely needs the room. Energy and momentum over completeness.
 
-STRUCTURE: 3-4 sections, not more \u2014 this is a quick read. Between them, cover whichever of these actually apply to this topic, combined into that smaller number of sections rather than each getting its own: a direct recommendation of where to start, a practical step or two, a specific example, the most important limitation or common mistake, and (only if relevant) one licensing/commercial-use note consolidated in its own section per EDITORIAL_RULES. Don't force all of these in if the topic doesn't call for them \u2014 a natural 3-section piece beats a padded 4-section one.
+DENSITY, THE ACTUAL POINT OF THIS ARTICLE: this needs to read as genuinely quick and easy for someone with very little patience for reading, not just be short in total word count. That means: most paragraphs are 1-2 sentences, never more than 3. Most sentences are short and plain \u2014 one clear idea each, not stacked clauses joined by commas and "which" and "since." If you catch yourself writing a sentence with more than one comma-separated clause, that's a sign to split it into two short sentences instead. Long, dense paragraphs feel heavy to read even when the total word count is short \u2014 white space and short punchy lines are doing real work here, not just decoration.
 
-Introduction: no more than 100 words, and skip the sweeping windup \u2014 lead with the most useful thing a reader needs to know.
+STRUCTURE: 2-3 sections, not more \u2014 this is a quick read. Between them, cover whichever of these actually apply to this topic, combined into that smaller number of sections rather than each getting its own: a direct recommendation of where to start, a practical step or two, a specific example, the most important limitation or common mistake, and (only if relevant) one licensing/commercial-use note consolidated in its own section per EDITORIAL_RULES. Don't force all of these in if the topic doesn't call for them \u2014 a natural 2-section piece beats a padded 3-section one.
+
+Introduction: no more than 60 words, and skip the sweeping windup \u2014 lead with the most useful thing a reader needs to know.
 
 DEPTH: Skip pricing tiers, version numbers, quotas, and legal nuance entirely unless the article type specifically requires precision (see EDITORIAL_RULES' rights/legal exception). "Has a free tier worth trying" beats any exact number. Point readers to the tool's own site for current specifics rather than trying to be that reference yourself.
 
@@ -224,6 +227,10 @@ Write body_markdown as real markdown: **bold**, *italic*, [text](url) links, "- 
 Every claim beyond common knowledge must trace to a source in the provided source list \u2014 if a claim isn't supported, soften it into an editorial observation or drop it entirely rather than forcing in a technical detail the guide doesn't need. Do not use any claim listed in unverifiable_claims as if verified.
 
 Tool cards (the "tools" array within a section): how often to use these depends on the article type. For "Top tools list" or "Tool comparison" specifically, a card PER TOOL being presented is the expected default \u2014 that's the actual structure those article types exist for, so most or all of the tools you mention in those guides should get their own card with name, url, description, and the single most useful strength/limitation each. For every OTHER article type (Practical guide, Beginner explainer, Creator workflow, Monetization guide, Rights and platform guide), tool cards should be rare \u2014 include one only when a specific named tool genuinely earns its own callout, and mention tools in the prose instead when that reads more naturally.
+
+Prompts (the "prompts" array within a section): this is for genuinely usable, copy-pasteable prompt text, not a description of a prompting technique. Only include a prompt when there's a real, specific, complete prompt that would actually work if pasted as-is into an image/video/text generator \u2014 never a vague placeholder like "describe your subject in detail." If the article's topic is about achieving a specific visual style or effect (e.g. "how to make images look like flat vector art"), include 1-3 real example prompts in the most relevant section that a reader could genuinely use right now. Most articles won't have any \u2014 don't force this in where it doesn't fit.
+
+FOR THE "Prompt list" ARTICLE TYPE SPECIFICALLY: this is a different, lighter shape than every other type. Keep the introduction and conclusion short, per the rules above. Use just 1-2 sections total (fewer than the normal 2-3 cap, since this format doesn't need narrative sections) and put the actual prompts \u2014 as many as the idea calls for, typically 5 or so \u2014 in that section's "prompts" array, each with a short one-line label. body_markdown for that section should be minimal, just enough to frame the list \u2014 the prompts themselves are the actual content, not supporting prose around them.
 
 SELF-EDIT PASS \u2014 before returning your answer, review your own draft against this checklist and revise anything that fails it:
 1. Delete any sentence generic enough to appear in an article about any AI tool.
@@ -242,8 +249,8 @@ Return JSON matching this schema exactly:
   "dek": "", "meta_description": "", "quick_answer": "1-2 sentence direct answer if the topic has one, else empty string",
   "tags": ["2-3 tags from the exact fixed list above"],
   "introduction": "markdown, no more than 100 words",
-  "sections": [{"id":"s1","heading":"descriptive, never generic like \\"Getting Started\\" or \\"Final Thoughts\\"","body_markdown":"","tools":[{"name":"","url":"","description":"","strengths":["..."],"limitations":["..."]}]}],
-  "key_takeaways": ["3-5 short bullet points"],
+  "sections": [{"id":"s1","heading":"descriptive, never generic like \\"Getting Started\\" or \\"Final Thoughts\\"","body_markdown":"","tools":[{"name":"","url":"","description":"","strengths":["..."],"limitations":["..."]}],"prompts":[{"label":"short phrase describing what this prompt does or achieves","prompt":"the exact, complete, ready-to-copy prompt text"}]}],
+  "key_takeaways": ["exactly 3 short bullet points, one clause each"],
   "conclusion": "markdown",
   "methodology_disclosure": "one paragraph describing how this guide was researched/synthesized, per dailyblip's disclosure requirement"
 }
