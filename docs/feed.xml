@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jul 2026 21:37:51 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 08:28:36 GMT</lastBuildDate>
     <item>
       <title>Hugging Face details AI-driven autonomous intrusion into production infrastructure</title>
       <link>https://huggingface.co/blog/security-incident-july-2026</link>
@@ -13,6 +13,22 @@
       <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Suno Can Write a Hit. It Still Can't Write a Career.</title>
+      <link>https://dailyblip.ai/commentary/suno-can-write-a-hit-it-still-can-t-write-a-career-2026-07-20.html</link>
+      <guid isPermaLink="false">s_c57b245c362dd255</guid>
+      <description>AI music has cleared the sonic bar. It keeps tripping over a different one entirely.</description>
+      <category>writing</category>
+      <pubDate>Mon, 20 Jul 2026 04:07:57 GMT</pubDate>
+    </item>
+    <item>
+      <title>Museums Won't Touch AI Art. That's Starting to Crack.</title>
+      <link>https://dailyblip.ai/commentary/museums-won-t-touch-ai-art-that-s-starting-to-crack-2026-07-20.html</link>
+      <guid isPermaLink="false">s_444761f503abeda7</guid>
+      <description>The institutional art world has spent years treating AI-generated work like a rumor it hopes will go away. It won't, and a few cracks in the wall are getting hard to ignore.</description>
+      <category>writing</category>
+      <pubDate>Mon, 20 Jul 2026 00:31:13 GMT</pubDate>
     </item>
     <item>
       <title>Nvidia's Japan push: sovereign AI, robotics, and chip supply deals</title>
@@ -149,22 +165,6 @@
       <description>Google Vids update enables natural-language editing via Gemini Omni and AI-generated personal avatars for video starring, supporting multi-modal input (audio, video, photos, text).</description>
       <category>video</category>
       <pubDate>Fri, 17 Jul 2026 10:42:08 GMT</pubDate>
-    </item>
-    <item>
-      <title>EU forces Google to share search data and open AI on Android</title>
-      <link>https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/</link>
-      <guid isPermaLink="false">s_252ccc31ca52ec00</guid>
-      <description>Digital Markets Act enforcement orders Google to share search results and loosen AI restrictions on Android, raising privacy concerns.</description>
-      <category>rights</category>
-      <pubDate>Thu, 16 Jul 2026 20:41:45 GMT</pubDate>
-    </item>
-    <item>
-      <title>NYC mayor mandates landlords disclose AI-generated property images</title>
-      <link>https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/</link>
-      <guid isPermaLink="false">s_6d307adecd0de02e</guid>
-      <description>New regulation requires transparency when AI is used to alter real estate listings; part of broader crackdown on deceptive practices.</description>
-      <category>rights</category>
-      <pubDate>Thu, 16 Jul 2026 20:39:10 GMT</pubDate>
     </item>
   </channel>
 </rss>
