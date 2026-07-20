@@ -1,11 +1,20 @@
 {
-  "issue": 238,
-  "generated_at": "2026-07-19T21:37:51.138Z",
+  "issue": 239,
+  "generated_at": "2026-07-20T00:31:57.633Z",
   "brief": {
     "items": [
       {
-        "story": "s_b51b6c107383df8e",
-        "html": "TikTok is piloting an <b>opt-in AI likeness detection tool</b> to catch synthetic impersonations of creators — mirror YouTube's existing protection.",
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines released <b>Inkling, an open 975B-parameter model trained natively on text, image, audio, and video</b> — one checkpoint for every creative medium.",
+        "secs": 11,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4e6f73ed1f19a4ce",
+        "html": "Meta has <b>scrapped its Muse Image AI tool</b> — if it's in your workflow or you were watching it as a Firefly/Ideogram rival, find a replacement now.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -13,8 +22,8 @@
         "commentary": false
       },
       {
-        "story": "s_a0bbc2c6e6f2a453",
-        "html": "NVIDIA and Hugging Face's NeMo Automodel adds <b>large-scale fine-tuning for video and image diffusion models</b>, including FLUX checkpoints and LoRA support.",
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "Houdini 22 ships <b>native Gaussian Splatting creation, editing, and animation</b> with no third-party tools required — a major unlock for VFX and procedural artists.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -22,8 +31,8 @@
         "commentary": false
       },
       {
-        "story": "s_04f6651476d4c4ae",
-        "html": "Google open-sourced <b>GNM Head, a free parametric 3D human head model with 170+ controls</b> and a Blender add-on — a practical gift for character artists.",
+        "story": "s_c0ef7a87d4b35aa6",
+        "html": "Artist 1010Benja's <b>genuinely compositional Suno track</b>, profiled by The Verge, is the clearest public case yet that AI music isn't inherently generic in skilled hands.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -31,38 +40,45 @@
         "commentary": false
       },
       {
-        "story": "s_264ddc681c98a9a5",
-        "html": "Leaked Suno source code confirms the AI music tool <b>scraped YouTube, Deezer, and podcasts without disclosed consent</b> — record labels are pressing DMCA claims.",
+        "story": "s_3ff6c4eb3a8015a3",
+        "html": "Google Vids now supports <b>natural-language editing via Gemini Omni plus AI personal avatars</b> generated from your own photos and voice.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4d76675668887bf8",
+        "html": "San Francisco issued cease-and-desist orders forcing Apple and Google to <b>remove 13 AI nudify apps</b> that generate non-consensual explicit images from ordinary photos.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
-      },
-      {
-        "story": "s_7be29e0c57cbc116",
-        "html": "Patreon is now <b>actively blocking AI training scrapers via Cloudflare</b>, moving beyond robots.txt as bots grow more sophisticated.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_230cdabf888d5a7c",
-        "html": "The real creative edge has shifted from prompting to <b>directing AI like a production — judgment, not typing, is the new skill gap</b>.",
-        "secs": 9,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": true
       }
     ],
-    "title": "Saturday, July 18 — six things that changed today",
-    "date": "2026-07-19T04:42:42.480Z",
-    "edition": "pm"
+    "title": "Sunday, July 19 — six things creators need to know",
+    "date": "2026-07-20T00:31:48.078Z",
+    "edition": "am"
   },
   "stories": [
+    {
+      "id": "s_444761f503abeda7",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "Museums Won't Touch AI Art. That's Starting to Crack.",
+      "dek": "The institutional art world has spent years treating AI-generated work like a rumor it hopes will go away. It won't, and a few cracks in the wall are getting hard to ignore.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/museums-won-t-touch-ai-art-that-s-starting-to-crack-2026-07-20.html",
+      "ts": "2026-07-20T00:31:13.665Z",
+      "read": "3 min",
+      "also": []
+    },
     {
       "id": "s_d8ed319939f5c0ae",
       "cat": "industry",

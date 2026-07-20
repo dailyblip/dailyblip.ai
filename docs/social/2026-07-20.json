@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-20",
+  "posts": [
+    {
+      "index": 1,
+      "image": "2026-07-20-1.png",
+      "caption": "Mira Murati's Thinking Machines Lab just dropped Inkling — a 975-billion-parameter open-weight model trained on 45 trillion tokens. It's a mixture-of-experts architecture that reasons natively across text, image, audio, and video in a single model. Open weights, multimodal from the ground up, and it's out now.\n\nFull breakdown in today's brief: link in bio.\n\n#AINews #OpenSource #MultimodalAI #ThinkingMachines #MiraMurati #GenerativeAI",
+      "story": {
+        "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
+        "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/"
+      }
+    },
+    {
+      "index": 2,
+      "image": "2026-07-20-2.png",
+      "caption": "Meta has quietly pulled its Muse image generation tool — and the explanation doesn't quite add up. Critics say the company's stated regrets conflict directly with how the product was actually built, deployed, and managed. It's raising real questions about how seriously AI labs mean it when they walk something back.\n\nFull breakdown + today's 6-story brief: link in bio.\n\n#AINews #MetaAI #ImageGeneration #AITools #CreatorTools #AIEthics",
+      "story": {
+        "title": "Meta backtracks on Muse Image AI tool, raising credibility questions",
+        "dek": "Meta scrapped its image generation tool; critics argue the company's stated regrets don't align with how it deployed and managed the product.",
+        "src": "Creative Bloq AI",
+        "url": "https://www.creativebloq.com/design/metas-regret-over-its-scrapped-ai-tool-is-like-a-burglar-apologising-for-the-mess"
+      }
+    },
+    {
+      "index": 3,
+      "image": "2026-07-20-3.png",
+      "caption": "Houdini 22 just landed, and native Gaussian Splat support is the headline feature. SideFX built 3DGS creation, editing, and animation directly into the app — no third-party plugins required. VFX artists, game devs, and procedural creators also get a redesigned UI and broader workflow upgrades across the board.\n\nFull story + today's brief: link in bio.\n\n#Houdini #GaussianSplatting #VFX #ProceduralArt #3D #AITools",
+      "story": {
+        "title": "Houdini 22 adds native Gaussian Splatting support and redesigned UI",
+        "dek": "SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.",
+        "src": "80 Level",
+        "url": "https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/"
+      }
+    },
+    {
+      "index": 4,
+      "image": "2026-07-20-4.png",
+      "caption": "Artist 1010Benja used Suno AI to make a genuinely compelling track — and The Verge sat down with him to talk about it. His argument: compositional intent and a distinctive voice matter more than the tool you use. It's a real challenge to the reflexive 'AI music is all slop' take.\n\nFull story + today's brief: link in bio.\n\n#AIMusic #Suno #MusicProduction #AICreators #CreativeAI",
+      "story": {
+        "title": "Artist 1010Benja makes genuinely engaging song with Suno AI",
+        "dek": "A working creator demonstrates compositional intent and distinctive voice using Suno, contradicting the widespread perception that AI music is inherently generic. The Verge profiles the work and artist's unapologetic stance on the tool.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/entertainment/967678/1010benja-semiramis-dream-suno-ai-music"
+      }
+    },
+    {
+      "index": 5,
+      "image": "2026-07-20-5.png",
+      "caption": "Google Vids just got a serious upgrade. Gemini Omni is now baked in for conversational editing — describe changes in plain language and the video updates in real time. Plus: AI-generated personal avatars so you can star in your own videos without being on camera.\n\nMulti-modal input (audio, video, photos, text) means the whole editing workflow just got a lot more flexible. Full story + today's brief: link in bio.\n\n#GoogleVids #GeminiAI #AIVideo #VideoEditing #AIAvatars",
+      "story": {
+        "title": "Google Vids adds Gemini Omni conversational editing and personal avatars",
+        "dek": "Google Vids update enables natural-language editing via Gemini Omni and AI-generated personal avatars for video starring, supporting multi-modal input (audio, video, photos, text).",
+        "src": "PetaPixel",
+        "url": "https://petapixel.com/2026/07/17/google-vids-gets-conversational-editing-tools-and-personal-avatars/"
+      }
+    },
+    {
+      "index": 6,
+      "image": "2026-07-20-6.png",
+      "caption": "San Francisco is going after AI nudify apps — directly. The city sent cease-and-desist letters to Apple and Google demanding removal of 13 apps that generate non-consensual explicit images from ordinary photos. It's one of the most direct municipal enforcement actions yet against this category of AI abuse.\n\nFull story + today's brief: link in bio\n\n#AIRights #NonConsensualImageAbuse #AIPolicy #AppStore #AIRegulation #DeepfakeAbuse",
+      "story": {
+        "title": "San Francisco orders removal of AI nudify apps from app stores",
+        "dek": "Apple and Google received cease-and-desist letters to remove 13 nudification apps that use AI to create non-consensual explicit images from ordinary photos.",
+        "src": "Ars Technica AI",
+        "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/"
+      }
+    }
+  ]
+}

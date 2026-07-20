@@ -2,7 +2,8 @@
   "used_topics": [
     "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
     "Style Transfer Isn't Theft, Except When It Obviously Is",
-    "The Best AI Artists Aren't Prompting. They're Directing."
+    "The Best AI Artists Aren't Prompting. They're Directing.",
+    "Why Museums Still Won't Touch AI Art, and Whether That's About to Change"
   ],
   "published": [
     {
@@ -19,6 +20,11 @@
       "slug": "the-best-ai-artists-aren-t-prompting-they-re-directing-2026-07-15",
       "title": "The Best AI Artists Aren't Prompting. They're Directing.",
       "date": "July 15, 2026"
+    },
+    {
+      "slug": "museums-won-t-touch-ai-art-that-s-starting-to-crack-2026-07-20",
+      "title": "Museums Won't Touch AI Art. That's Starting to Crack.",
+      "date": "July 19, 2026"
     }
   ]
 }
