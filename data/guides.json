@@ -468,5 +468,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T21:16:54.522Z",
+    "created_at": "2026-07-20T21:16:54.522Z",
+    "published_url": "https://dailyblip.ai/guides/15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural.html",
+    "article": {
+      "title": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural",
+      "slug": "15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural",
+      "dek": "Copy-paste style prompts for fingerstyle, folk, and singer-songwriter tracks that don't sound stiff.",
+      "tags": [
+        "AI Music",
+        "Getting Started"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "07.png",
+        "approved": true,
+        "alt_text": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural"
+      }
+    ],
+    "backfilled": true
   }
 ]
