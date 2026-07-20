@@ -92,5 +92,16 @@
       "Image Generation",
       "Getting Started"
     ]
+  },
+  {
+    "title": "How to Keep Characters Consistent in ChatGPT Image Generation",
+    "slug": "how-to-keep-characters-consistent-in-chatgpt-image-generation",
+    "dek": "Keep the same face, outfit, and style across a whole set of images.",
+    "hero_image": "/guides/13.jpg",
+    "published_at": "2026-07-20T23:24:08.585Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ]
   }
 ]
