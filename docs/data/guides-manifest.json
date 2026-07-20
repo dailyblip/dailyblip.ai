@@ -147,5 +147,16 @@
       "Image Generation",
       "Getting Started"
     ]
+  },
+  {
+    "title": "How to Create a Consistent Visual Style in Midjourney",
+    "slug": "how-to-create-a-consistent-visual-style-in-midjourney",
+    "dek": "Reuse style references and prompt language across a whole campaign or series.",
+    "hero_image": "/guides/18.jpg",
+    "published_at": "2026-07-20T23:44:36.366Z",
+    "tags": [
+      "Image Generation",
+      "Tools & Workflow"
+    ]
   }
 ]
