@@ -1469,7 +1469,7 @@
   {
     "id": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "10 prompts to un-sloppify your AI images",
       "article_type": "Practical guide",
@@ -1481,7 +1481,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T02:46:24.164Z",
-    "updated_at": "2026-07-20T02:50:05.305Z",
+    "updated_at": "2026-07-20T02:54:05.536Z",
     "brief": {
       "target_reader": "Someone who has tried Midjourney once or twice and gotten results that look obviously AI-generated — muddy details, weird lighting, plastic skin, that unmistakable 'slop' quality — and wants to know which prompt additions actually fix that",
       "reader_outcome": "Walk away with a handful of specific prompt phrases they can drop into their next Midjourney generation right now and immediately see a more polished, convincing result",
@@ -1809,6 +1809,92 @@
       "checked_at": "2026-07-20T02:50:05.305Z",
       "revised": true
     },
-    "warnings": []
+    "warnings": [],
+    "images": [
+      {
+        "id": "img1",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-img1.jpg",
+        "prompt": "Flat vector-style infographic illustration on a deep navy (#071A1F) background, 16:9 aspect ratio. Centered vertical split layout: the left panel uses cool aqua-tinted (#63D8C6), hyper-saturated, unnaturally smooth abstract gradient blocks representing an over-processed AI aesthetic — perfectly plastic, no texture. The right panel uses warm amber-tinted (#FFB454), slightly desaturated tones with visible fine grain texture overlaid, representing a natural film photograph look. A narrow vertical amber (#FFB454) bar sits precisely at the center seam between the two panels, acting as a divider — no text, just a clean amber stripe. Both panels are framed with a generous deep navy (#0C242B) margin: at least 8% of the total frame width on the left edge of the left panel and the right edge of the right panel, and at least 8% of the total frame height on the top and bottom edges of both panels — nothing touches the frame boundary. The overall frame has a subtle deep ink border. Clean geometric shapes, flat color fills with minimal grain texture only inside panels, no photorealistic rendering, no floating UI, no robot imagery, no people.",
+        "placement": "hero",
+        "alt_text": "Side-by-side comparison split: left panel showing an over-saturated, smooth AI-processed aesthetic in cool blue tones; right panel showing a warm, grainy, natural-looking result — separated by an amber divider bar representing the --raw parameter.",
+        "caption": "The single biggest lever: --raw (V8.1) shifts Midjourney away from its over-processed default and toward something that reads as a real photograph.",
+        "generated_at": "2026-07-20T02:52:23.856Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A single photograph-like image visually splits into two halves: the left showing the over-stylized, plastic Midjourney default; the right showing a grounded, film-grain result — with '--raw' as the hinge between them.",
+        "purpose": "Immediately communicate the transformation this guide delivers: from over-processed AI aesthetic to something that looks like a real photograph, anchored to the article's core quick answer.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-img2.jpg",
+        "prompt": "Flat vector-style infographic illustration, 16:9 aspect ratio, deep navy (#0C242B) background. A single horizontal row of rounded pill-shaped blocks representing a Midjourney prompt string, centered both horizontally and vertically in the frame with at least 10% margin from the left and right frame edges and 12% from top and bottom — no element touches the border. The pills are grouped into three color-coded clusters with a small gap between each group: left cluster of 2–3 pills in amber (#FFB454) representing the subject portion, center cluster of 3–4 pills in aqua (#63D8C6) representing film and lens language additions (these are slightly larger/taller to emphasize importance), right cluster of 2 pills in muted amber (#E58E2B) representing parameters. Below each cluster, a thin white bracket line connects to a short single-word white label in clean sans-serif: 'subject', 'film + lens', '--raw --s 50'. Three labels maximum. Clean consistent pill heights, even spacing inside clusters, generous gap between clusters. No decorative elements, no floating UI, flat color fills only, no photorealistic rendering.",
+        "placement": "s2",
+        "alt_text": "Diagram of a Midjourney prompt broken into three color-coded token groups: the subject in amber, film and lens language additions in aqua, and the --raw --s 50 parameter tail in muted amber, each labeled beneath with a bracket.",
+        "caption": "Where each addition lives in the prompt: film and lens language (aqua) stacks between your subject and the parameter tail — you can add just these without changing anything else.",
+        "generated_at": "2026-07-20T02:52:43.254Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "A prompt anatomy diagram showing a single example prompt broken into labeled segments: the subject, the film/lens language additions ('shot on 35mm film', 'f/1.8 aperture'), and the parameter tail ('--raw --s 50').",
+        "purpose": "Show exactly how the quick-answer additions slot into a real Midjourney prompt — making the instruction concrete and copy-ready rather than abstract.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img3",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-img3.jpg",
+        "prompt": "Flat vector-style infographic illustration, 1:1 square aspect ratio, deep navy (#071A1F) background. A clean 2×2 grid of four equal square quadrants, each representing a Midjourney --s stylize value level — arranged with at least 8% deep navy margin on all four outer sides of the entire grid so no quadrant corner touches the frame edge. Each quadrant is separated by a thin navy divider line (2px). Inside each quadrant is an abstract tonal gradient block (no photorealistic imagery, no people, no scenes) that visually suggests the stylization level: top-left quadrant (#s 1000) is highly saturated aqua-cool (#63D8C6 dominant) with an unnaturally smooth gradient; top-right (#s 250) is balanced polished blue-neutral tones; bottom-left (#s 100) is muted warm neutral with subtle grain texture; bottom-right (#s 50) is warm amber-tinted (#FFB454 dominant) with visible fine grain texture, the most natural. Each quadrant has a single short white sans-serif label in its top-left corner with a small margin from the corner: '--s 1000', '--s 250', '--s 100', '--s 50'. The bottom-right quadrant has a clean amber (#FFB454) rectangular border ring inside it (inset 4px from its edges) to highlight it as the recommended value. Flat color fills, no painterly rendering, crisp even edges, consistent spacing throughout.",
+        "placement": "s2",
+        "alt_text": "A 2×2 comparison grid showing four Midjourney --s stylize values: top-left --s 1000 with saturated cool tones, top-right --s 250 with balanced polished tones, bottom-left --s 100 with muted warm tones, and bottom-right --s 50 with warm amber grain — highlighted with an amber border as the recommended value.",
+        "caption": "How --s affects output character: dropping from the default (--s 250) toward --s 50 progressively reduces over-stylization. The guide recommends stacking these changes gradually rather than all at once.",
+        "generated_at": "2026-07-20T02:53:01.096Z",
+        "approved": true,
+        "role": "comparison",
+        "concept": "A 2×2 grid comparing four --s (stylize) value levels — high vs low — showing how the visual character shifts from over-rendered to naturalistic as the number drops, with a clear visual metaphor rather than rendered screenshots.",
+        "purpose": "Make the --s parameter's effect tangible: readers see at a glance that lower values move output toward photographic realism, directly supporting the key takeaway about stacking --s values gradually.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img4",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-img4.jpg",
+        "prompt": "Flat vector-style infographic illustration, 16:9 aspect ratio, deep navy (#0C242B) background. A clean horizontal left-to-right four-step workflow diagram centered in the frame. Four equal-sized circular nodes evenly spaced across the horizontal axis, with the leftmost node's center at least 14% from the left frame edge, the rightmost node's center at least 14% from the right frame edge, and all nodes vertically centered with at least 15% margin from top and bottom frame edges. Connected by amber (#FFB454) rightward-pointing arrow shapes between each adjacent pair of nodes. Node interiors: node 1 (leftmost) has aqua (#63D8C6) fill with a simple white circle outline icon inside (representing unfiltered/raw); node 2 has navy fill with amber outline and a simple white aperture/lens circle icon; node 3 has navy fill with amber outline and a simple white horizontal slider bar icon; node 4 has navy fill with amber outline and a simple white minus-sign or X icon. Beneath each node, a short white sans-serif label in clean type (not inside the circle): '1 · --raw', '2 · film', '3 · --s', '4 · --no' — four labels maximum, each centered under its node with consistent spacing. No detailed illustration, no photorealistic elements, no people, flat color fills, crisp geometric edges, all elements and labels stay well within frame boundaries.",
+        "placement": "s1",
+        "alt_text": "A horizontal four-step workflow diagram showing the recommended sequence for reducing AI-generated aesthetics in Midjourney: step 1 --raw (aqua node), step 2 film language, step 3 --s value, step 4 --no, connected by amber arrows.",
+        "caption": "The guide's recommended stacking order: start with --raw, then layer in film and lens language, then tune --s downward, then use --no for specific visual elements you want to suppress.",
+        "generated_at": "2026-07-20T02:53:22.482Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "A four-step linear workflow showing the recommended order for layering the guide's additions: start with --raw, add film language, tune --s, then use --no for cleanup — each step as a numbered node on a horizontal flow.",
+        "purpose": "Operationalize the key takeaway that you should 'stack them gradually rather than all at once' — give readers a concrete sequence to follow rather than adding everything at once.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img5",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-img5.jpg",
+        "prompt": "Flat vector-style infographic illustration, 9:16 portrait aspect ratio, deep navy (#071A1F) background. A vertical stack of five equal-height horizontally full-width cards, centered in the frame with at least 8% margin from the left edge, 8% from the right edge, 10% from the top frame edge (above the first card), and 10% from the bottom frame edge (below the last card). Even vertical spacing between cards. Each card: deep navy (#0C242B) fill, a 4px amber (#FFB454) vertical accent stripe on its left interior edge, a clean geometric icon in amber centered in the left third of the card interior, and a short white sans-serif label in the right two-thirds of the card interior. Five cards from top to bottom with these icon/label pairings: (1) a simple horizontal ruler or distance arrow icon — label 'focal length'; (2) a clean circular aperture iris with blades icon — label 'aperture'; (3) a small horizontal film strip with two square frame marks icon — label 'film stock'; (4) a 3×3 grid of small dots pattern icon — label 'grain'; (5) a minimal rectangular camera body outline icon — label 'format'. Card 2 (aperture) uses aqua (#63D8C6) for the icon interior fill as a highlight variation. All icons are flat, geometric, no fine detail. Five labels maximum. Crisp even card heights, consistent internal padding, flat color fills, no photorealistic rendering, no people, all elements well within the frame boundary.",
+        "placement": "s2",
+        "alt_text": "A vertical stack of five cards representing film and lens language additions for Midjourney prompts: focal length (ruler icon), aperture (iris icon), film stock (film strip icon), grain (dot pattern icon), and format (camera outline icon), each with an amber left border accent.",
+        "caption": "Five categories of film and lens language the guide covers — adding any of these gives Midjourney a specific visual target rather than letting it invent its own interpretation.",
+        "generated_at": "2026-07-20T02:53:50.663Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "A tall vertical list of five distinct lens/film language icons in a ranked-card layout, each representing a different type of addition from the guide: focal length, aperture, film stock, grain, and camera format.",
+        "purpose": "Give the '10 things to add' section a visual anchor that makes the film/lens language category feel concrete and varied — showing readers the range of specific prompt additions available without rendering text-heavy labels.",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img6",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-img6.jpg",
+        "prompt": "Flat vector-style infographic illustration, 1:1 square aspect ratio, deep navy (#071A1F) background. Centered composition with all elements well within a 10% safe margin from every frame edge. A wide horizontal gradient bar spanning roughly 75% of the frame width, horizontally centered and vertically centered in the frame — left end in aqua (#63D8C6), right end in warm amber (#FFB454), smooth linear gradient between them. Left end of the bar: a small abstract smooth blob shape floating above it (aqua, unnaturally smooth, representing over-stylized) and below the bar a short white sans-serif label 'over-stylized'. Right end of the bar: a small abstract block with fine dot grain texture floating above it (amber-tinted, representing natural film look) and below the bar a short white sans-serif label 'natural'. Two labels maximum for end states. Positioned at roughly 68% along the bar from the left (toward the natural end): a clean downward-pointing triangular amber (#FFB454) indicator marker sitting on the top edge of the bar, with a narrow amber vertical stem rising from it to a small rounded rectangle icon group above (containing two tiny geometric symbols — a plain circle and a horizontal slider dash — representing --raw and --s without spelling them out). The indicator marker is the dominant focal accent. Flat color fills throughout, no photorealistic rendering, no people, crisp geometric edges, consistent spacing, all elements and labels stay well inside the frame boundary.",
+        "placement": "s1",
+        "alt_text": "A horizontal spectrum diagram running from 'over-stylized' on the left in aqua tones to 'natural' on the right in amber tones, with a dial marker positioned toward the natural end — representing how --raw and lower --s values shift Midjourney output away from its over-processed default.",
+        "caption": "Midjourney's default sits toward the over-stylized end of this spectrum. The --raw parameter and lower --s values push output toward the natural end — the core mechanism behind all ten additions in this guide.",
+        "generated_at": "2026-07-20T02:54:05.536Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "A dial/spectrum graphic showing the tension between Midjourney's 'opinionated' default at one end and a naturalistic, photo-like output at the other — with --raw and low --s values visually positioned as the levers that move the dial toward the natural end.",
+        "purpose": "Visually explain the core mechanism described in the 'Why your images look like AI' section: Midjourney's default adds its own creative interpretation on top of your prompt, and --raw + lower --s reduce that layer.",
+        "aspect_ratio": "1:1"
+      }
+    ]
   }
 ]
