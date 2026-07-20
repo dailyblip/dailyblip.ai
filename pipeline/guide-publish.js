@@ -121,9 +121,19 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
 .takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
 .takeaways ul{margin:0 0 0 18px;color:var(--dim)}
-.methodology{margin-top:40px;padding:16px 18px;border:1px dashed var(--line-strong);border-radius:10px;font-size:13.5px;color:var(--faint);line-height:1.6}
-.sources{margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
-.sources h2{margin-top:0}
+.prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
+.prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.prompt-card{margin-bottom:14px}
+.prompt-card:last-child{margin-bottom:0}
+.prompt-label{font-size:13px;color:var(--dim);margin-bottom:6px}
+.prompt-row{display:flex;gap:8px;align-items:flex-start}
+.prompt-text{flex:1;display:block;font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--text);background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;white-space:pre-wrap;word-break:break-word}
+.prompt-copy{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--aqua);border:1px solid rgba(99,216,198,.4);border-radius:6px;padding:6px 12px;background:none;cursor:pointer;transition:all .15s ease;align-self:flex-start}
+.prompt-copy:hover{border-color:var(--aqua);background:rgba(99,216,198,.08)}
+.prompt-copy.copied{color:var(--amber);border-color:var(--amber-deep)}
+.sources{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.sources summary{cursor:pointer;font-family:var(--display);font-weight:650;font-size:16px;color:var(--text);list-style:revert}
+.sources ul{margin-top:12px}
 .sources li{font-size:13.5px;color:var(--dim);padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
 .sources .pub{color:var(--faint);font-family:var(--mono);font-size:11px}
 .foot-note{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint);line-height:1.6}
@@ -152,6 +162,21 @@ function domainFromUrl(url) {
   } catch {
     return null;
   }
+}
+
+function renderPromptsBlock(prompts) {
+  if (!prompts || !prompts.length) return "";
+  return `<div class="prompts-block">
+    <div class="prompts-label">PROMPTS TO TRY</div>
+    ${prompts.map((p) => `
+      <div class="prompt-card">
+        <div class="prompt-label">${esc(p.label)}</div>
+        <div class="prompt-row">
+          <code class="prompt-text">${esc(p.prompt)}</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="${esc(p.prompt)}" type="button">Copy</button>
+        </div>
+      </div>`).join("")}
+  </div>`;
 }
 
 function renderToolCard(tool) {
@@ -195,11 +220,13 @@ function renderPage(job) {
     const img = imageFor(s.id);
     const imgHtml = img ? `<div class="img-block"><img src="/guides/${esc(img.file)}" alt="${esc(altTextOrFallback(img))}" loading="lazy">${img.caption ? `<div class="img-caption">${esc(img.caption)}</div>` : ""}</div>` : "";
     const tools = (s.tools || []).map(renderToolCard).join("");
+    const prompts = renderPromptsBlock(s.prompts);
     return `<div class="section-block">
       <h2>${esc(s.heading)}</h2>
       ${renderSafeMarkdown(s.body_markdown)}
       ${imgHtml}
       ${tools}
+      ${prompts}
     </div>`;
   }).join("\n");
 
@@ -208,9 +235,9 @@ function renderPage(job) {
     : "";
 
   const sourcesHtml = (job.sources || []).length
-    ? `<div class="sources"><h2>Sources</h2><ul>${(job.sources || []).map((s) =>
+    ? `<details class="sources"><summary>Sources (${job.sources.length})</summary><ul>${(job.sources || []).map((s) =>
         `<li>${esc(s.title)} \u2014 ${esc(s.publisher)}<br><span class="pub">${esc(s.source_type)}${s.is_primary ? " \u00b7 primary source" : ""}${s.url ? ` \u00b7 <a href="${esc(s.url)}" rel="noopener">source</a>` : ""}</span></li>`
-      ).join("")}</ul></div>`
+      ).join("")}</ul></details>`
     : "";
 
   // Hidden audit trail, visible in page source only \u2014 not shown to
@@ -253,11 +280,36 @@ function renderPage(job) {
     <div class="sub-ok" id="subOk">\u2713 You're on the list.</div>
   </div>
   ${sourcesHtml}
-  <div class="methodology"><b style="color:var(--text)">Methodology:</b> ${esc(a.methodology_disclosure)}</div>
+
   <div class="foot-note">Last reviewed ${esc(a.last_reviewed_date)}. Have a correction? <a href="mailto:hello@dailyblip.ai">Tell us</a>.</div>
 </div>
 <script>
 const $ = s => document.querySelector(s);
+function copyPrompt(btn){
+  const text = btn.dataset.prompt;
+  const showCopied = () => {
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    btn.classList.add("copied");
+    setTimeout(() => { btn.textContent = original; btn.classList.remove("copied"); }, 1800);
+  };
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(showCopied).catch(() => { btn.textContent = "Copy failed \u2014 select manually"; });
+  } else {
+    // Fallback for contexts without the Clipboard API (older browsers,
+    // non-HTTPS) -- selects the text so the person can copy it manually
+    // with their own keyboard shortcut instead of failing silently.
+    const range = document.createRange();
+    const codeEl = btn.previousElementSibling;
+    if (codeEl) {
+      range.selectNodeContents(codeEl);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    btn.textContent = "Selected \u2014 press Ctrl/Cmd+C";
+  }
+}
 $("#subForm").addEventListener("submit", async e => {
   e.preventDefault();
   const email = $("#subEmail").value;
