@@ -1517,5 +1517,446 @@
       }
     ],
     "approved_at": "2026-07-20T03:00:53.907Z"
+  },
+  {
+    "id": "3e4481a4-b898-48fb-9448-2f25dc8db494",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
+    "submitted": {
+      "idea": "User guide to make your AI generated images look more realistic and not more AI-slop - cite the ChatGPT and Midjourney methods, and give a list of prompts for both services that will help the user make their images look more real and lifelike, not AI-slop",
+      "article_type": "Practical guide",
+      "target_audience": "",
+      "target_length": "Standard",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "The article should cover the basics for image prompting, what to do and not do when it comes to trying to create and image that doesn't look like obvious AI. It should cover ChatGPT and Midjourney and have a breakdown and section for both, as well as, explain how the prompts should vary between services to get the best results",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-20T03:11:07.970Z",
+    "updated_at": "2026-07-20T03:19:20.190Z",
+    "brief": {
+      "target_reader": "Someone who has tried AI image generation once or twice and keeps getting results that look obviously fake or 'AI-ish' — glossy skin, weird hands, too-perfect lighting, that unmistakable synthetic sheen. They've heard of ChatGPT image gen and Midjourney but aren't sure how to use either well. Not a designer or photographer, just a curious creator who wants better results today.",
+      "reader_outcome": "Feel confident writing prompts for both ChatGPT and Midjourney that push results toward realistic, grounded images instead of the generic AI-slop aesthetic — and understand why the two tools need to be prompted differently to get there.",
+      "structure_plan": [
+        "What makes an image look 'AI' in the first place (and what to do instead)",
+        "How to prompt ChatGPT for realistic images — with example prompts",
+        "How to prompt Midjourney for realistic images — with example prompts"
+      ],
+      "claims_to_verify": [
+        "ChatGPT image generation is powered by DALL-E 3 (or confirm if a newer model is now default)",
+        "Midjourney's most current default model version and whether --style raw or equivalent parameters still exist and function as described",
+        "Whether Midjourney still supports stylize, chaos, and ar parameters in current versions",
+        "Whether ChatGPT image gen accepts camera/lens/film-style language meaningfully or largely ignores it compared to Midjourney",
+        "Whether Midjourney's 'photo' or 'photorealistic' style modes have changed in recent model updates",
+        "Confirm that ChatGPT image generation is available to free and paid users, and whether any meaningful difference in quality or access exists between tiers",
+        "Confirm Midjourney's current access model (subscription required, no free tier as of recent changes)",
+        "Whether negative prompting syntax works in current Midjourney (--no parameter) and if ChatGPT image gen supports any equivalent",
+        "Specific prompt elements that are broadly agreed to push realism: e.g. specifying lens type, film grain, natural lighting, imperfections, specific time of day, shallow depth of field"
+      ],
+      "research_plan": "Prioritize Midjourney's official documentation and changelog for current parameter syntax and model defaults. For ChatGPT image gen, use OpenAI's official feature pages and any current model notes. Supplement with well-regarded prompt engineering community sources (Midjourney subreddit, PromptHero, creator-focused YouTube channels) specifically for the 'what actually works' prompt language — but flag anything that comes only from community sources rather than official docs, since model updates can make community tips stale fast. Avoid relying on any single blog post for parameter specifics. Focus research on the *why* behind realism techniques (imperfection, specificity, photographic language) as much as the exact syntax, since that reasoning is more durable than any particular parameter value."
+    },
+    "sources": [
+      {
+        "title": "Introducing 4o Image Generation",
+        "publisher": "OpenAI (official)",
+        "url": "https://openai.com/index/introducing-4o-image-generation/",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "ChatGPT image generation is NO LONGER powered by DALL-E 3 — it was replaced by GPT-4o native image generation (also called '4o Image Generation'), which rolled out to Plus, Pro, Team, and Free users as the default image generator in ChatGPT",
+          "GPT-4o image generation excels at accurately rendering text, precisely following prompts, and leveraging 4o's inherent knowledge base and chat context, including uploaded images",
+          "DALL-E 3 is still accessible via a dedicated DALL-E GPT in the GPT store, but is no longer the default",
+          "The model is available to Free users (with limits) and all paid tiers"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Version – Midjourney (Official Documentation)",
+        "publisher": "Midjourney (official docs)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "The current default Midjourney version is V8.1, which was released on midjourney.com on April 30, 2026, and became the default version on June 10, 2026",
+          "V6.1 was the default until June 16, 2025; V7 was default from June 17, 2025 until V8.1 replaced it",
+          "--style raw has a V8 equivalent: on V8 family write --raw (not --style raw); --style raw is still correct syntax when explicitly selecting V7",
+          "The --chaos parameter is confirmed active and documented for V8.1 (listed under Midjourney Controls official docs)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney Controls – Official Documentation (Parameter List, Stylize, Chaos, No, Raw)",
+        "publisher": "Midjourney (official docs)",
+        "url": "https://docs.midjourney.com/hc/en-us/sections/33329522730509-Midjourney-Controls",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "--chaos (or --c) parameter is confirmed active in current Midjourney, including V8.1",
+          "--stylize (or --s) parameter is confirmed active in current Midjourney, including V8.1 — described as controlling 'artistic flair'",
+          "--no parameter (negative prompt) is confirmed active in current Midjourney V8.1 — documented as 'Tell Midjourney what you don't want in your image'",
+          "--ar (aspect ratio) parameter is confirmed active and functional in current versions",
+          "Raw mode is confirmed active for V8.1 — documented as a separate control option (written as --raw for V8 family, --style raw for V7)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Free Trials – Midjourney (Official Documentation)",
+        "publisher": "Midjourney (official docs)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/27870399340173-Free-Trials",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "No free trial is currently available in Discord or the midjourney.com website",
+          "A limited trial is available only on the niji·journey app (iOS and Android)",
+          "Midjourney requires a paid subscription to generate images on the main platform"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney 8.1 Guide: Prompts, Omni Reference & Parameters",
+        "publisher": "blakecrosley.com (independent review, well-sourced with official citations)",
+        "url": "https://blakecrosley.com/guides/midjourney",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "V8.1 is confirmed as the default model as of June 11, 2026; V7 remains fully selectable",
+          "--style raw is V7 syntax and still correct when V7 is explicitly selected; on V8 family write --raw",
+          "V7 strengths for realism: natural language understanding, excellent photorealism, strong text rendering, better human anatomy (hands, bodies), improved spatial relationships",
+          "Full V7 parameter surface confirmed: includes Omni Reference, Quality values, multi-prompts, No parameter (negative prompting)",
+          "V8.1-specific parameters confirmed: --hd (native 2048px output), --sd (standard definition), --raw (literal prompt control), --ar (aspect ratio), --chaos still present"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "V7 is now the default model! (Official Midjourney Update Announcement)",
+        "publisher": "Midjourney (official update blog)",
+        "url": "https://updates.midjourney.com/v7-is-now-the-default-model/",
+        "source_type": "company announcement",
+        "is_primary": false,
+        "claims_supported": [
+          "V7 became the default Midjourney model on June 17, 2025 (now superseded by V8.1 as of June 2026)",
+          "V7 introduced Draft Mode (--draft, 10x speed), Omni-reference (--oref), and updated Style Reference (sref) algorithms",
+          "V7 described officially as 'a smarter model with higher image quality, better prompt understanding, and improved image coherence'"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney Pricing: Complete Guide to Plans 2026",
+        "publisher": "techjacksolutions.com (independent, fact-checked against vendor docs, verified June 9, 2026)",
+        "url": "https://techjacksolutions.com/ai-tools/midjourney/midjourney-pricing/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney removed its free trial in March 2023 and has been subscription-only since",
+          "There is no free plan and no free trial as of June 2026; the cheapest entry point is $10/month Basic plan",
+          "Midjourney has four monthly plans: Basic ($10), Standard ($30), Pro ($60), Mega ($120); annual billing gives 20% discount",
+          "Midjourney bills by fast GPU time, not by image count",
+          "Basic plan: 3.3 fast GPU hours/month; Standard: 15 hours; Pro: 30 hours; Mega: 60 hours",
+          "All plan tiers produce the same image quality — users pay for speed and privacy (Stealth Mode on Pro/Mega), not quality differences"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "GPT Image Generation Models Prompting Guide (OpenAI Developer Cookbook)",
+        "publisher": "OpenAI (official developer documentation / cookbook)",
+        "url": "https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "OpenAI officially confirms that photography language (lens, lighting, framing) meaningfully steers realism in GPT image generation — this is not ignored",
+          "Officially recommended approach: 'prompt the model as if a real photo is being captured in the moment' — use photography language and explicitly ask for real texture (pores, wrinkles, fabric wear, imperfections)",
+          "Avoid words that imply studio polish or staging",
+          "Camera/lens specs may be interpreted loosely for exact physical simulation, but are useful for high-level look and composition",
+          "'Photorealistic', 'real photograph', 'taken on a real camera', 'professional photography', or 'iPhone photo' all help engage photorealistic mode",
+          "Prompt structure guidance: background/scene → subject → key details → constraints; include intended use to set level of polish",
+          "For photorealism, 'camera/composition terms (lens, aperture feel, lighting) often steer realism more reliably than generic 8K/ultra-detailed'",
+          "ChatGPT image generation does NOT support a formal negative prompt parameter like Midjourney's --no; negative guidance is written inline in natural language"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "ChatGPT image generation: What's changed and why it matters",
+        "publisher": "Jisc National Centre for AI (independent education technology body)",
+        "url": "https://nationalcentreforai.jiscinvolve.org/wp/2025/04/08/chatgpt-image-generation-whats-changed-and-why-it-matters/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "GPT-4o shows noticeably improved photorealism over DALL-E 3; 'many of the usual giveaways, such as facial features and hands, have been significantly improved'",
+          "The level of photorealism in GPT-4o outputs was described as 'remarkable' in direct comparison to DALL-E 3 on identical prompts",
+          "Poses feel more natural, and overall image quality including lighting, shadows, clothing, and textures is noticeably enhanced in GPT-4o vs DALL-E 3",
+          "Free users experience rate limits and queue-based processing (cool-down periods) distinguishing their experience from paid tiers"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "ChatGPT Image Generation Access Model: Free vs Paid Tiers (AI Tool Radar)",
+        "publisher": "aitoolradar.io (independent)",
+        "url": "https://aitoolradar.io/guides/dall-e",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "GPT-4o native image generation replaced DALL-E 3 in the ChatGPT interface in December 2025 (rolled out from March 2025, became full default by December 2025)",
+          "ChatGPT Free tier includes limited GPT-4o image generations with queue-based processing and dynamic usage caps",
+          "ChatGPT Plus ($20/mo) raises limits and adds priority processing, but exact image count per day is not publicly documented and varies with server load",
+          "ChatGPT Pro ($200/mo) offers the highest limits and fastest processing",
+          "OpenAI does not publish a fixed image quota for any tier",
+          "GPT-4o is NOT DALL-E 4 — it is a fundamentally different architecture (omnimodel) where image generation is built natively into the language model"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      }
+    ],
+    "unverifiable_claims": [
+      "The claim that ChatGPT 'largely ignores' camera/lens/film-style language compared to Midjourney is NOT verified and should be softened or dropped. OpenAI's own official prompting guide explicitly endorses and recommends using photography language (lens, lighting, framing) for realism, and states it steers results meaningfully. The difference is that ChatGPT interprets camera specs loosely (for composition/look rather than exact physical simulation), and uses natural language rather than CLI-style syntax — but it does not ignore this language.",
+      "Whether Midjourney has a distinct 'photo' or 'photorealistic' style mode as a named toggle in current V8.1 could not be confirmed. V7 and V8.1 support --raw (reduces aesthetic interpretation, increases prompt literalism) and --style raw (V7 syntax), but a specific named 'photorealistic mode' toggle was not confirmed in current documentation. Writers should use 'raw mode' language rather than implying a dedicated 'photorealistic mode' switch.",
+      "Specific numeric stylize values best suited for realism in V8.1 (e.g., exact recommended --stylize range for photorealism) could not be verified from official V8.1 docs directly — the general principle (lower stylize = more literal/prompt-faithful, higher = more artistic) is verified, but specific recommended ranges for V8.1 realism are community/editorial observations, not official specs.",
+      "Whether the --no parameter in Midjourney V8.1 is reliably effective (vs. inconsistent/less predictable) is noted in independent reviews as variable — the parameter exists and is documented, but its reliability for complex exclusions is editorially described as imperfect. Writers should caveat this.",
+      "The claim that Midjourney is accessible for free via Meta AI (meta.ai) was reported by one pricing-focused independent source but could not be cross-verified from official Midjourney or Meta sources within this research pass. Writers should treat this as unverified and not cite it as a confirmed free access path."
+    ],
+    "article": {
+      "title": "How to Make AI Images Look Real, Not Obviously AI",
+      "alternative_titles": [
+        "Stop Getting AI-Slop: A Prompting Guide for ChatGPT and Midjourney",
+        "Prompting for Realism: ChatGPT and Midjourney Tips That Actually Work"
+      ],
+      "slug": "how-to-make-ai-images-look-realistic-chatgpt-midjourney",
+      "dek": "Glossy skin, creepy hands, that plasticky sheen, here's how to prompt your way out of it on both ChatGPT and Midjourney.",
+      "meta_description": "Learn how to write prompts for ChatGPT and Midjourney that produce realistic, lifelike images instead of obvious AI-slop. Includes ready-to-copy example prompts for both tools.",
+      "quick_answer": "The biggest fix is specificity: describe your scene like a photographer setting up a shot, not like you're ordering a stock photo. Add imperfections, real lighting conditions, and camera language, and avoid anything that sounds like 'professional studio render.'",
+      "tags": [
+        "Image Generation",
+        "Getting Started",
+        "Tools & Workflow"
+      ],
+      "introduction": "You type something reasonable, hit generate, and get back something that looks like a video game cutscene from 2019. Too smooth, too lit, too fake. The fix isn't a secret setting, it's how you write the prompt. ChatGPT and Midjourney both respond to the same core idea: describe a real moment, not an ideal one. But they need to hear it differently.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Why AI images look fake, and the one mindset shift that helps",
+          "body_markdown": "AI image generators default to a kind of hyper-polished average. They've seen millions of stock photos, studio shoots, and CGI renders, so when you give them a vague prompt, that's the aesthetic they reach for.\n\nThe counter-move is to be specific in ways that imply *reality*, not quality. A real photo has a time of day, a slightly messy background, imperfect skin, a specific lens doing a specific thing. A fake-looking AI image has none of that, just vibes.\n\nA few things that reliably push results toward real:\n\n- **Name a specific light source.** \"Overcast afternoon light\" beats \"good lighting\" every time.\n- **Add something imperfect.** Mention worn fabric, uneven skin texture, a shadow that falls at an odd angle.\n- **Give it a context.** Where is this? What just happened? A subject in a specific place looks more real than a subject floating in a void.\n- **Avoid words that imply polish.** \"Professional,\" \"studio,\" \"ultra-detailed,\" and \"8K\" tend to pull the image toward render-land. Camera and photography terms tend to steer toward something more realistic, OpenAI's own documentation notes that framing, but the specifics are worth checking directly if you want the source.",
+          "tools": [],
+          "prompts": []
+        },
+        {
+          "id": "s2",
+          "heading": "Prompting ChatGPT for realistic images",
+          "body_markdown": "ChatGPT's image generation now runs on GPT-4o's native image model, not DALL-E 3, and it's noticeably better at hands, faces, and natural lighting than its predecessor. There's a free tier to try it, though access is dynamic and OpenAI doesn't publish fixed quotas, so how much you can actually do for free on a given day varies. Paid plans give you more consistent headroom.\n\nThe key thing to know: ChatGPT understands natural language really well, so write your prompt like you're describing a scene to a director, not configuring a settings panel. Framing it as if a real photo is being *captured in the moment* is a useful mental model, and explicitly asking for real texture like pores, fabric wear, and wrinkles helps.\n\nCamera and lens language works here. It won't simulate exact optics, but \"shot on a 50mm lens, shallow depth of field\" tends to shift the feel toward something photographic. Negative guidance goes inline, there's no `--no` parameter, so you just say what you don't want in the prompt itself.\n\nGood structure for a realistic ChatGPT prompt: **setting → subject → key details → what you don't want.**",
+          "tools": [],
+          "prompts": [
+            {
+              "label": "Candid portrait, natural light, imperfect skin",
+              "prompt": "A candid photo of a woman in her 40s sitting at a small wooden table in a dimly lit café, late afternoon light coming through a window to her left. She's looking slightly off-camera. Natural skin texture, slight under-eye shadows, no makeup. Shot on a 50mm lens, shallow depth of field, slightly soft background. No studio lighting, no retouching, no perfect symmetry."
+            },
+            {
+              "label": "Outdoor street scene, documentary feel",
+              "prompt": "A real photograph of a man in his 30s walking down a wet city street at dusk, motion slightly blurred, puddles reflecting neon signs. Worn jacket, slightly hunched against the wind. Shot from across the street, 85mm equivalent, grain visible. No posed look, no dramatic lighting setup, no stock-photo composition."
+            },
+            {
+              "label": "Interior room, lived-in and believable",
+              "prompt": "A photo of a small, cluttered home office, desk covered in papers and a half-empty coffee mug, warm lamp light, window showing overcast sky outside. No one in the frame. Shot like a documentary still, 35mm lens feel, natural shadows, slightly imperfect white balance. No staged or minimalist aesthetic."
+            }
+          ]
+        },
+        {
+          "id": "s3",
+          "heading": "Prompting Midjourney for realistic images",
+          "body_markdown": "Midjourney's current default model is V8.1, which became default in early June 2026 (the official docs and at least one independent source give slightly different exact dates, so double-check if it matters). It's subscription-only, no free tier on the main platform, so you'll need at least the Basic plan to use it.\n\nMidjourney is more parameter-driven than ChatGPT, which means you have more dials to turn, but also more ways to accidentally turn the wrong one. For realism specifically, two parameters matter most:\n\n- **`--raw`** tells V8.1 to interpret your prompt more literally, dialing back the artistic interpretation the model normally adds. This is your single biggest tool for avoiding that painterly, over-styled look.\n- **`--stylize` (or `--s`)** controls how much aesthetic flair the model applies. Lower values mean it sticks closer to what you actually described. The default leans artistic, pulling it down nudges results toward documentary.\n\nThe **`--no` parameter** lets you explicitly exclude things (`--no soft focus, studio lighting, plastic skin`). It's documented and active in V8.1, though from what I've seen reported, it works better for straightforward exclusions than complex ones, so treat it as a nudge, not a guarantee.\n\nMidjourney also responds well to photographic language, but unlike ChatGPT, it lets you lean harder into technical terms, film stock names, specific lens focal lengths, lighting setups, since it was trained heavily on photography-tagged data.",
+          "tools": [],
+          "prompts": [
+            {
+              "label": "Candid portrait, raw mode, low stylize",
+              "prompt": "candid photograph of a woman in her early 50s sitting outside a café, overcast morning light, natural skin texture, slight windblown hair, worn linen jacket, looking slightly past the camera, 85mm f/1.8, shallow depth of field, film grain, muted tones --raw --s 50 --ar 4:5 --no studio lighting, retouching, symmetrical composition"
+            },
+            {
+              "label": "Urban street scene, documentary style",
+              "prompt": "documentary street photography, man in his 30s crossing a busy intersection in the rain, motion blur on passing cars, neon reflections in wet pavement, natural ambient light, worn sneakers, looking down at his phone, shot from mid-distance, 35mm f/2, slight grain, slightly underexposed --raw --s 40 --ar 3:2 --no dramatic lighting, stock photo feel, posed expression"
+            },
+            {
+              "label": "Environmental portrait, real imperfection",
+              "prompt": "environmental portrait of an older man in his 70s in a cluttered workshop, dusty afternoon light from a single window, sawdust on his shirt, weathered hands holding a tool, background shelves with jars and wood scraps, slightly harsh shadows, shot on film, 50mm, candid moment --raw --s 60 --ar 4:3 --no soft focus, clean background, professional lighting"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Describe a real captured moment, not an ideal rendered one, specificity about light, place, and imperfection does most of the work",
+        "For ChatGPT, write naturally and include what you *don't* want inline; for Midjourney, use `--raw` and lower `--stylize` values to reduce the default artistic polish",
+        "Midjourney requires a paid subscription; ChatGPT image gen has a free tier, but access is dynamic and limits aren't publicly documented, so treat it as a way to try things out, not a reliable quota"
+      ],
+      "conclusion": "The prompts above are starting points, not recipes, tweak the details to fit your actual scene. The underlying principle holds across both tools: the more your prompt sounds like a photographer describing a real shot, the less it'll look like a machine guessing what \"good\" means.\n\nWe didn't run controlled A/B tests for this guide, the prompt techniques here are drawn from OpenAI's official GPT-4o image generation announcement, Midjourney's official docs, and a few independent reviews and pricing guides. Model updates can shift what works, so if something stops landing, the Midjourney docs and OpenAI's developer resources are worth a direct check.",
+      "methodology_disclosure": "This guide was researched using OpenAI's official GPT-4o image generation announcement and developer prompting cookbook, Midjourney's official documentation for V8.1 parameters and version history, an independent educational review from Jisc's National Centre for AI, and two independent pricing and feature guides. Claims about parameter syntax and model defaults were verified against primary official sources wherever possible. Community-sourced observations about parameter reliability (specifically --no behavior) are noted as editorial rather than official. No images were generated or tested by dailyblip during the production of this guide.",
+      "last_reviewed_date": "July 20, 2026"
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "Midjourney's current default model is V8.1, which became default in early June 2026",
+          "issue": "The article says V8.1 became default 'in early June 2026' but the primary source (Midjourney official docs) gives June 10, 2026 and the independent source gives June 11, 2026 — 'early June' is loosely accurate but the hedged disclaimer ('official docs and at least one independent source give slightly different exact dates') implies more conflict than exists between those two dates, and obscures that a verified date is available.",
+          "supporting_source_url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version"
+        },
+        {
+          "severity": "high",
+          "section_id": "s3",
+          "original_text": "from what I've seen reported, it works better for straightforward exclusions",
+          "issue": "The phrase 'from what I've seen reported' implies first-person editorial observation by the author/dailyblip, which contradicts the methodology disclosure stating no testing was done and creates undisclosed ambiguity about the source of this claim.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "medium",
+          "section_id": "s1",
+          "original_text": "OpenAI's own documentation notes that framing, but the specifics are worth checking directly",
+          "issue": "This vague attribution gesture neither cites the source properly nor gives the reader enough to verify it, despite a specific primary source (OpenAI developer cookbook) existing in the source list that directly supports the claim.",
+          "supporting_source_url": "https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "There's a free tier to try it, though access is dynamic and OpenAI doesn't publish fixed quotas",
+          "issue": "The article frames this as 'a free tier to try it,' which undersells the limitation; the source indicates access is queue-based with dynamic caps, making it unreliable for practical use, and the key_takeaways section characterizes it more accurately than s2 does.",
+          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "ChatGPT image gen has a free tier, but access is dynamic and limits aren't publicly documented",
+          "issue": "This is more accurate than s2 but still somewhat inconsistent with the source, which specifies queue-based processing and dynamic usage caps — 'limits aren't publicly documented' is correct but omits the queue/cooldown mechanic that meaningfully affects usability.",
+          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
+        },
+        {
+          "severity": "medium",
+          "section_id": "conclusion",
+          "original_text": "the prompt techniques here are drawn from OpenAI's official GPT-4o image generation announcement",
+          "issue": "The conclusion credits the OpenAI announcement as a prompting source, but the substantive prompting guidance actually comes from the OpenAI developer cookbook, not the product announcement — this misattributes the primary editorial basis.",
+          "supporting_source_url": "https://openai.com/index/introducing-4o-image-generation/"
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "ChatGPT's image generation now runs on GPT-4o's native image model, not DALL-E 3",
+          "issue": "The independent source notes the transition was rolled out from March 2025 and became full default by December 2025, so 'now' is accurate but omitting this timeline context could mislead readers who used ChatGPT during the transition period and remember DALL-E 3 behavior.",
+          "supporting_source_url": "https://aitoolradar.io/guides/dall-e"
+        },
+        {
+          "severity": "low",
+          "section_id": "s3",
+          "original_text": "--stylize (or --s) controls how much aesthetic flair the model applies. The default leans artistic",
+          "issue": "The article states the default 'leans artistic' without specifying the actual default --stylize value, which matters practically; Midjourney's official docs document a specific default value that would be useful to readers adjusting this parameter.",
+          "supporting_source_url": "https://docs.midjourney.com/hc/en-us/sections/33329522730509-Midjourney-Controls"
+        }
+      ],
+      "checked_at": "2026-07-20T03:15:36.781Z",
+      "revised": true
+    },
+    "warnings": [
+      "s3: The article says V8.1 became default 'in early June 2026' but the primary source (Midjourney official docs) gives June 10, 2026 and the independent source gives June 11, 2026 — 'early June' is loosely accurate but the hedged disclaimer ('official docs and at least one independent source give slightly different exact dates') implies more conflict than exists between those two dates, and obscures that a verified date is available.",
+      "s3: The phrase 'from what I've seen reported' implies first-person editorial observation by the author/dailyblip, which contradicts the methodology disclosure stating no testing was done and creates undisclosed ambiguity about the source of this claim."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "3e4481a4-b898-48fb-9448-2f25dc8db494-img1.jpg",
+        "prompt": "Flat vector illustration, 16:9, deep navy gradient background (#071A1F to #0C242B). Centered composition. On the center-left, a large geometric amber (#FFB454) camera viewfinder frame — clean rectangular outline with corner marks. Inside the viewfinder, a small flat scene icon: a simplified human figure standing in warm, slightly directional overcast light, with a subtle imperfect shadow falling to one side, and a hint of a real background (faint horizon line, slightly uneven). On the right side, a semi-transparent, faded flat icon representing a generic stock-photo output — perfectly smooth, symmetrical, lifeless, rendered in muted aqua-grey (#63D8C6 at low opacity). A soft ambient glow of amber light around the viewfinder element. The two elements are horizontally balanced but visually weighted toward the amber/real left side. All elements stay at least 10% margin from every frame edge — nothing cropped, nothing touching the border. No text anywhere in the image. Polished infographic style, crisp geometric shapes, flat color fills, no texture, no photorealism, no painterly rendering, no floating UI panels. Should read clearly as a thumbnail.",
+        "placement": "hero",
+        "alt_text": "A camera viewfinder in amber frames a specific, imperfectly lit scene, contrasted against a faded, over-smooth generic icon — illustrating the gap between a real-looking AI image and a fake-looking one.",
+        "caption": "The difference between a fake-looking AI image and a believable one usually comes down to specificity: real light, real imperfection, real framing intent.",
+        "generated_at": "2026-07-20T03:17:39.442Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A photographer's eye — framing a shot with specificity: named light source, imperfect detail, real place — contrasted against a flat, over-polished AI default output.",
+        "purpose": "Immediately communicate the article's core premise: the gap between a vague prompt that produces a fake-looking render and a specific, grounded prompt that produces something believably real.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "3e4481a4-b898-48fb-9448-2f25dc8db494-img2.jpg",
+        "prompt": "Flat vector illustration, 1:1 square canvas, deep navy background (#0C242B). Canvas split vertically down the center by a thin aqua (#63D8C6) dividing line. LEFT HALF: a simplified flat icon of a generic, perfectly symmetric, smooth human figure or object — muted grey-amber color, perfectly centered in its half, overly smooth and static. Small short amber text label 'vague' in a clean sans-serif near the top of the left panel, well inside the safe margin. RIGHT HALF: the same type of icon but with clear specificity — a small amber sun icon positioned upper-right casting a visible directional shadow to the lower-left of the figure, the subject slightly off-center, a tiny imperfection marker (small notch or irregular edge) on the outline. Small aqua text label 'specific' near the top of the right panel. Both icons and all labels are at minimum 12% margin from every edge of the canvas — nothing touching the border. The right half reads warmer and more alive. Flat color fills, no texture, no photorealism, crisp geometric shapes, polished infographic style. No floating UI, no AI brain imagery.",
+        "placement": "s1",
+        "alt_text": "Two-panel comparison: a vague prompt produces a smooth, generic, lifeless icon on the left; a specific prompt with named directional light and a slight imperfection produces a warmer, more grounded result on the right.",
+        "caption": "Specificity does most of the work. Naming a light source, a time of day, and one real imperfection moves the result from stock-photo aesthetic to something that feels captured.",
+        "generated_at": "2026-07-20T03:17:55.401Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "A direct visual of the 'mindset shift' — two prompts, two visual outcomes: vague/stock-photo aesthetic on one side vs. specific/real-captured-moment on the other.",
+        "purpose": "Show readers exactly what 'specificity' means in practice — the left prompt is vague and produces a polished-average result; the right prompt names a light source, a moment, an imperfection, and produces something grounded.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "3e4481a4-b898-48fb-9448-2f25dc8db494-img3.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape canvas, deep navy background (#071A1F). Three horizontally arranged rounded-rectangle tiles centered vertically, connected by amber (#FFB454) rightward-pointing arrows between them. Generous margins: all three tiles are centered in the canvas with at least 12% clear space on the outer left edge before tile 1 and on the outer right edge after tile 3 — nothing touches the frame border. TILE 1 (leftmost): dark navy fill, a flat amber clapperboard icon centered in the tile, amber numeral '1' above the tile. TILE 2 (center): dark navy fill, a flat aqua (#63D8C6) combined sun-and-cloud icon representing overcast light, amber numeral '2' above. TILE 3 (rightmost): dark navy fill, a flat icon of a generic smooth rectangle with a bold amber X or strikethrough across it, representing 'what you don't want,' amber numeral '3' above. Amber arrow icons between tile 1→2 and tile 2→3, horizontally aligned. Even spacing between all three tiles. No text labels other than the three numerals. Flat color fills, no texture, no photorealism, no floating UI panels, crisp geometric shapes, polished infographic style. All elements stay within a safe margin from every edge of the frame.",
+        "placement": "s2",
+        "alt_text": "A three-step workflow for ChatGPT image prompts: step 1, describe the scene like a director; step 2, name the specific light source; step 3, include what you don't want inline.",
+        "caption": "ChatGPT understands natural language well — so write your prompt like you're briefing a director: scene, light, and inline negatives all in one go.",
+        "generated_at": "2026-07-20T03:18:13.061Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "A prompt-building workflow for ChatGPT image generation: three sequential steps — describe the scene like a director, name the specific light, add what you don't want inline — flowing left to right.",
+        "purpose": "Walk readers through the ChatGPT-specific prompting approach described in the article: natural language, director framing, inline negative intent — as a clear three-step sequence.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img4",
+        "file": "3e4481a4-b898-48fb-9448-2f25dc8db494-img4.jpg",
+        "prompt": "Flat vector illustration, 9:16 portrait canvas, deep navy background (#0C242B). Canvas split horizontally into two equal halves by a thin aqua (#63D8C6) dividing line across the full width, centered vertically. TOP HALF: dark navy panel. A simplified flat icon of a generic subject (humanoid silhouette or simple object) centered in the panel — overly smooth, symmetric, with a soft radiant amber glow emanating from behind it suggesting over-stylized polish. Short amber (#FFB454) text label 'default' placed near the top of the top panel, well within a 10% safe margin from the top edge. BOTTOM HALF: same dark navy panel. The same type of icon but rendered flatter and more literal — slightly off-center, with a small directional aqua (#63D8C6) light source indicator at upper left casting a subtle shadow, and a minor imperfection on the outline (small notch). Short aqua text label '--raw' placed near the bottom of the bottom panel, well within a 10% safe margin from the bottom edge. All icons and labels have at least 10% clear margin from every edge of the canvas — nothing cropped. Even spacing, flat fills, no texture, no photorealism, polished infographic style. Two text labels total. No Midjourney logo.",
+        "placement": "s3",
+        "alt_text": "Vertical comparison: the default Midjourney output (top) shows an over-stylized, glowing, artificially smooth result; the --raw version (bottom) is flatter, more literal, with directional light and a subtle imperfection.",
+        "caption": "Midjourney's --raw flag tells V8.1 to interpret your prompt more literally, dialing back its default artistic polish. Pair it with a lower --stylize value for the most grounded results.",
+        "generated_at": "2026-07-20T03:18:31.208Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "A vertical stacked comparison of two Midjourney parameter states: high --stylize (default, over-polished, artistic) vs. low --stylize with --raw (literal, grounded, real-looking).",
+        "purpose": "Visualize exactly what the article says about Midjourney's two key realism parameters — --raw and lower --stylize values — and what they change about the output.",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img5",
+        "file": "3e4481a4-b898-48fb-9448-2f25dc8db494-img5.jpg",
+        "prompt": "Flat vector illustration, 1:1 square canvas, deep navy background (#071A1F). A 2×2 grid of four equal rounded-rectangle tiles, centered in the canvas with at least 12% clear margin on all four outer edges (top, bottom, left, right) — no tile touches or approaches the frame border. Even gutter spacing between tiles. TILE 1 (top-left): amber (#FFB454) fill, centered flat icon of a combined sun and cloud representing named overcast light. TILE 2 (top-right): aqua (#63D8C6) fill, centered flat icon of a simple object outline with a small notch or irregular edge representing imperfection. TILE 3 (bottom-left): amber (#FFB454) fill, centered flat icon of a camera aperture (geometric circle with petal blades) representing camera language. TILE 4 (bottom-right): aqua (#63D8C6) fill, centered flat icon of a smooth rectangle with a bold X strikethrough representing what you don't want. All four icons are the same size and weight. No text anywhere in the image. Flat color fills, no texture, no photorealism, no floating UI, crisp geometric shapes, polished infographic style. Alternating amber/aqua tile fills create a visual rhythm.",
+        "placement": "s1",
+        "alt_text": "A 2×2 icon grid showing the four specificity ingredients for realistic AI images: a named light source (sun and cloud), an imperfection marker, camera language (aperture), and an inline negative (strikethrough).",
+        "caption": "Four things that reliably move AI image results toward real: a named light source, one real imperfection, camera-language framing, and telling the model what you don't want.",
+        "generated_at": "2026-07-20T03:18:52.922Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "A visual checklist of the four 'specificity ingredients' that reliably push AI images toward real — named light source, imperfect detail, camera language, and inline negative — each as a distinct icon in a 2×2 grid.",
+        "purpose": "Give readers a scannable visual summary of the article's most actionable tactics from the key takeaways — the specific ingredients to add to any prompt.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img6",
+        "file": "3e4481a4-b898-48fb-9448-2f25dc8db494-img6.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape canvas, deep navy background (#0C242B). Canvas split vertically by a thin amber (#FFB454) center dividing line running the full height. LEFT PANEL (left half of canvas): dark navy fill. Centered in the panel: a large flat amber (#FFB454) speech bubble icon (representing natural language input). Below it, a smaller aqua (#63D8C6) padlock-open icon (representing free tier access). Short amber text label 'ChatGPT' near the top of the left panel, well within safe margins. RIGHT PANEL (right half of canvas): dark navy fill. Centered in the panel: a large flat aqua (#63D8C6) dial or horizontal slider icon (representing parameter-driven input). Below it, a smaller amber (#FFB454) key icon (representing subscription requirement). Short aqua text label 'Midjourney' near the top of the right panel, well within safe margins. ALL elements — icons, labels, and the divider endpoints — stay at least 12% clear margin from every outer edge of the canvas (left edge, right edge, top edge, bottom edge). Two text labels total. Flat color fills, no texture, no photorealism, no floating UI panels, crisp geometric shapes, polished infographic style. The left panel reads warm/amber; the right reads cool/aqua.",
+        "placement": "s2",
+        "alt_text": "Side-by-side comparison of ChatGPT image generation (natural language, speech bubble, free tier padlock) and Midjourney (parameter-driven, dial icon, subscription key) — the two tools covered in this guide.",
+        "caption": "ChatGPT understands natural language and has a free tier to experiment with; Midjourney is more parameter-driven and requires a paid subscription. Both reward specificity, but you talk to them differently.",
+        "generated_at": "2026-07-20T03:19:18.668Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "A side-by-side tool comparison: ChatGPT image gen (natural language, inline negatives, free tier exists) vs. Midjourney (parameter-driven, --raw flag, subscription required) — visualized through their distinct interaction metaphors, not logos.",
+        "purpose": "Help readers quickly grasp the practical difference between the two tools covered in this article — how you talk to each one and what the access situation looks like — so they can choose the right starting point.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "upload-1784520462420",
+        "file": "3e4481a4-b898-48fb-9448-2f25dc8db494-upload-1784520460996.jpg",
+        "placement": "hero",
+        "alt_text": "",
+        "caption": "",
+        "approved": true,
+        "role": "upload",
+        "generated_at": "2026-07-20T04:07:42.420Z"
+      }
+    ]
   }
 ]
