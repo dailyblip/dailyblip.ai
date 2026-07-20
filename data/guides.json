@@ -792,5 +792,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T23:53:35.830Z",
+    "created_at": "2026-07-20T23:53:35.830Z",
+    "published_url": "https://dailyblip.ai/guides/15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images.html",
+    "article": {
+      "title": "15 Midjourney Prompts for Editorial Illustrations and Article Hero Images",
+      "slug": "15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images",
+      "dek": "Clean, composed images for blogs, newsletters, and explainer articles.",
+      "tags": [
+        "Image Generation",
+        "Tools & Workflow"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "19.jpg",
+        "approved": true,
+        "alt_text": "15 Midjourney Prompts for Editorial Illustrations and Article Hero Images"
+      }
+    ],
+    "backfilled": true
   }
 ]
