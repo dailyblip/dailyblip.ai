@@ -765,5 +765,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-how-to-create-a-consistent-visual-style-in-midjourney",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T23:44:36.366Z",
+    "created_at": "2026-07-20T23:44:36.366Z",
+    "published_url": "https://dailyblip.ai/guides/how-to-create-a-consistent-visual-style-in-midjourney.html",
+    "article": {
+      "title": "How to Create a Consistent Visual Style in Midjourney",
+      "slug": "how-to-create-a-consistent-visual-style-in-midjourney",
+      "dek": "Reuse style references and prompt language across a whole campaign or series.",
+      "tags": [
+        "Image Generation",
+        "Tools & Workflow"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "18.jpg",
+        "approved": true,
+        "alt_text": "How to Create a Consistent Visual Style in Midjourney"
+      }
+    ],
+    "backfilled": true
   }
 ]
