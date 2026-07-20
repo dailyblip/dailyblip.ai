@@ -1894,6 +1894,16 @@
         "concept": "A dial/spectrum graphic showing the tension between Midjourney's 'opinionated' default at one end and a naturalistic, photo-like output at the other — with --raw and low --s values visually positioned as the levers that move the dial toward the natural end.",
         "purpose": "Visually explain the core mechanism described in the 'Why your images look like AI' section: Midjourney's default adds its own creative interpretation on top of your prompt, and --raw + lower --s reduce that layer.",
         "aspect_ratio": "1:1"
+      },
+      {
+        "id": "upload-1784516369498",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-upload-1784516368106.jpg",
+        "placement": "hero",
+        "alt_text": "AI Slop Reflection ",
+        "caption": "",
+        "approved": true,
+        "role": "upload",
+        "generated_at": "2026-07-20T02:59:29.498Z"
       }
     ]
   }
