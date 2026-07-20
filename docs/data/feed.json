@@ -1,20 +1,20 @@
 {
-  "issue": 240,
-  "generated_at": "2026-07-20T08:28:36.764Z",
+  "issue": 241,
+  "generated_at": "2026-07-20T10:25:46.951Z",
   "brief": {
     "items": [
       {
-        "story": "s_264ddc681c98a9a5",
-        "html": "A hack exposed Suno's source code confirming it <b>scraped YouTube, Deezer, and podcasts for AI training</b> without disclosed consent — record labels are invoking DMCA.",
-        "secs": 11,
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines released <b>Inkling, a free 975B open-weight multimodal model</b> reasoning natively across text, image, audio, and video.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_7be29e0c57cbc116",
-        "html": "Patreon is now <b>actively blocking AI training bots via Cloudflare</b>, moving beyond robots.txt to hard access denial as scraping tactics grow more aggressive.",
+        "story": "s_ac7be8d09d06872b",
+        "html": "Apple's lawsuit alleges OpenAI hired <b>400+ former Apple employees in a trade-secret theft</b> that now threatens the company's 2026 IPO timeline.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -22,45 +22,45 @@
         "commentary": false
       },
       {
-        "story": "s_b51b6c107383df8e",
-        "html": "TikTok is piloting an opt-in tool that <b>detects AI-generated likenesses of creators</b> and enables reporting, mirroring YouTube's existing synthetic-impersonation protection.",
-        "secs": 10,
+        "story": "s_4e6f73ed1f19a4ce",
+        "html": "Meta <b>quietly scrapped its Muse image generation tool</b> — worth checking if it's in your pipeline before you find it gone.",
+        "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_04f6651476d4c4ae",
-        "html": "Google open-sourced GNM Head, a <b>free parametric 3D human head model with 170+ controls and a Blender add-on</b> — immediately useful for character and facial-variation work.",
-        "secs": 11,
+        "story": "s_3ff6c4eb3a8015a3",
+        "html": "Google Vids now supports <b>natural-language editing via Gemini Omni plus AI personal avatars</b> for video starring from photos.",
+        "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_a0bbc2c6e6f2a453",
-        "html": "NVIDIA and Hugging Face jointly released NeMo Automodel, enabling <b>large-scale fine-tuning of video and image diffusion models</b> including FLUX checkpoints with LoRA examples.",
-        "secs": 11,
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "Houdini 22 ships <b>native Gaussian Splatting creation, editing, and animation</b> with no third-party tools required.",
+        "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_c60035e6bb3c677d",
-        "html": "Moonshot AI's open-source <b>Kimi K3 is benchmarking near Claude and GPT</b> — another free frontier-level writing and reasoning model now in the mix for creators.",
-        "secs": 10,
+        "story": "s_c0ef7a87d4b35aa6",
+        "html": "Artist 1010Benja demonstrates <b>genuine compositional intent using Suno AI</b>, challenging the assumption that AI music is inherently generic.",
+        "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Sunday, July 19 — six things creators need to know",
-    "date": "2026-07-20T04:08:32.047Z",
-    "edition": "am"
+    "title": "Monday, July 20 — six things that changed today",
+    "date": "2026-07-20T10:25:46.874Z",
+    "edition": "pm"
   },
   "stories": [
     {

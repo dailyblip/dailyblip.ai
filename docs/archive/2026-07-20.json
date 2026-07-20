@@ -1,0 +1,167 @@
+{
+  "date": "2026-07-20",
+  "issue": 241,
+  "brief": {
+    "items": [
+      {
+        "story": "s_976a1a3eff5f1d7b",
+        "html": "Mira Murati's Thinking Machines released <b>Inkling, a free 975B open-weight multimodal model</b> reasoning natively across text, image, audio, and video.",
+        "secs": 10,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_ac7be8d09d06872b",
+        "html": "Apple's lawsuit alleges OpenAI hired <b>400+ former Apple employees in a trade-secret theft</b> that now threatens the company's 2026 IPO timeline.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4e6f73ed1f19a4ce",
+        "html": "Meta <b>quietly scrapped its Muse image generation tool</b> — worth checking if it's in your pipeline before you find it gone.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_3ff6c4eb3a8015a3",
+        "html": "Google Vids now supports <b>natural-language editing via Gemini Omni plus AI personal avatars</b> for video starring from photos.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_4367c4f1a18b0bbe",
+        "html": "Houdini 22 ships <b>native Gaussian Splatting creation, editing, and animation</b> with no third-party tools required.",
+        "secs": 9,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_c0ef7a87d4b35aa6",
+        "html": "Artist 1010Benja demonstrates <b>genuine compositional intent using Suno AI</b>, challenging the assumption that AI music is inherently generic.",
+        "secs": 9,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      }
+    ],
+    "title": "Monday, July 20 — six things that changed today",
+    "date": "2026-07-20T10:25:46.874Z",
+    "edition": "pm"
+  },
+  "tooldrop": {
+    "name": "Review by Eddie AI",
+    "blurb": "AI-powered video review tool that lets editors and clients leave time-stamped feedback directly on footage — cuts the back-and-forth for video creators.",
+    "meta": "video — free tier",
+    "url": "https://www.producthunt.com/products/eddie-your-ai-video-editor",
+    "date": "2026-07-15T17:45:31.573Z"
+  },
+  "stories": [
+    {
+      "id": "s_c57b245c362dd255",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "Suno Can Write a Hit. It Still Can't Write a Career.",
+      "dek": "AI music has cleared the sonic bar. It keeps tripping over a different one entirely.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/suno-can-write-a-hit-it-still-can-t-write-a-career-2026-07-20.html",
+      "ts": "2026-07-20T04:07:57.883Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 90,
+      "move": 57
+    },
+    {
+      "id": "s_444761f503abeda7",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "Museums Won't Touch AI Art. That's Starting to Crack.",
+      "dek": "The institutional art world has spent years treating AI-generated work like a rumor it hopes will go away. It won't, and a few cracks in the wall are getting hard to ignore.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/museums-won-t-touch-ai-art-that-s-starting-to-crack-2026-07-20.html",
+      "ts": "2026-07-20T00:31:13.665Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 86,
+      "move": 53
+    },
+    {
+      "id": "s_90851a797dd057ee",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Nvidia's Japan push: sovereign AI, robotics, and chip supply deals",
+      "dek": "Jensen Huang secured partnerships across Japan's tech ecosystem, including a national AI factory and robotics collaborations. The strategy targets manufacturing and physical AI applications.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/19/what-to-watch-for-after-jensen-huangs-japan-visit/",
+      "ts": "2026-07-19T21:16:07.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 81,
+      "move": -7
+    },
+    {
+      "id": "s_c0ef7a87d4b35aa6",
+      "cat": "music",
+      "badge": "hot",
+      "spotlight": true,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Artist 1010Benja makes genuinely engaging song with Suno AI",
+      "dek": "A working creator demonstrates compositional intent and distinctive voice using Suno, contradicting the widespread perception that AI music is inherently generic. The Verge profiles the work and artist's unapologetic stance on the tool.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/entertainment/967678/1010benja-semiramis-dream-suno-ai-music",
+      "ts": "2026-07-19T17:35:54.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 87,
+      "move": -5
+    },
+    {
+      "id": "s_5767ddd493bb4165",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Nonprofit Current AI launches offline multilingual AI device for rural India",
+      "dek": "Current AI released Suno Sutra, an open-source device running AI in 22 Indian languages without internet, addressing AI's linguistic blind spots in the Global South.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
+      "ts": "2026-07-19T14:00:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 74,
+      "move": -16
+    }
+  ],
+  "stats": {
+    "scanned_last_run": 3,
+    "published_today": 5,
+    "sources_live": 13,
+    "slopped_last_run": 3
+  }
+}
