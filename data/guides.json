@@ -1469,7 +1469,7 @@
   {
     "id": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "10 prompts to un-sloppify your AI images",
       "article_type": "Practical guide",
@@ -1481,6 +1481,26 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T02:46:24.164Z",
-    "updated_at": "2026-07-20T02:46:24.164Z"
+    "updated_at": "2026-07-20T02:47:09.614Z",
+    "brief": {
+      "target_reader": "Someone who has tried Midjourney once or twice and gotten results that look obviously AI-generated — muddy details, weird lighting, plastic skin, that unmistakable 'slop' quality — and wants to know which prompt additions actually fix that",
+      "reader_outcome": "Walk away with a handful of specific prompt phrases they can drop into their next Midjourney generation right now and immediately see a more polished, convincing result",
+      "structure_plan": [
+        "Why your prompts are producing that AI look (and what actually fixes it)",
+        "10 prompt additions that make Midjourney images look less generated"
+      ],
+      "claims_to_verify": [
+        "Which Midjourney version is current and whether these prompt techniques apply to it (v6 vs v7 vs any newer release)",
+        "Whether Midjourney still uses a Discord-based interface as primary entry point, or whether the web app is now the main way in",
+        "Whether --style raw (or similar parameters) still functions in the current version as a way to reduce the over-processed AI aesthetic",
+        "Whether negative prompting (--no) is still effective in current Midjourney for removing common AI artifacts like extra fingers, lens flare, oversaturation",
+        "Whether prompt phrases like 'shot on 35mm film,' 'f/1.8 aperture,' 'golden hour lighting,' 'film grain,' and 'kodachrome' are confirmed to meaningfully affect output realism in community testing",
+        "Whether aspect ratio parameters like --ar still work as described and affect perceived realism/composition quality",
+        "Whether stylize parameter (--s or --stylize) values affect how 'AI-looking' an image appears, and what lower values tend to produce",
+        "Whether chaos parameter affects output consistency in ways relevant to a beginner",
+        "Whether prompting for specific camera models (e.g. 'shot on Canon 5D') produces measurably different realism vs generic photography prompts — community consensus on this"
+      ],
+      "research_plan": "Prioritize active Midjourney community sources: the official Midjourney documentation and changelog, the Midjourney subreddit, and well-regarded prompt engineering accounts on X/Twitter or YouTube who test these techniques hands-on. Look for posts from the last 3-6 months specifically, since prompt behavior changes significantly between model versions. Avoid SEO listicles that just repeat the same 10 prompts without showing before/after evidence. Where community consensus conflicts with official docs, flag it. Don't rely on any single blog post for parameter behavior — cross-check at least two sources per claim."
+    }
   }
 ]
