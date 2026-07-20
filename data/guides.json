@@ -1920,7 +1920,7 @@
   {
     "id": "3e4481a4-b898-48fb-9448-2f25dc8db494",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "User guide to make your AI generated images look more realistic and not more AI-slop - cite the ChatGPT and Midjourney methods, and give a list of prompts for both services that will help the user make their images look more real and lifelike, not AI-slop",
       "article_type": "Practical guide",
@@ -1932,6 +1932,27 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T03:11:07.970Z",
-    "updated_at": "2026-07-20T03:11:07.970Z"
+    "updated_at": "2026-07-20T03:11:44.649Z",
+    "brief": {
+      "target_reader": "Someone who has tried AI image generation once or twice and keeps getting results that look obviously fake or 'AI-ish' — glossy skin, weird hands, too-perfect lighting, that unmistakable synthetic sheen. They've heard of ChatGPT image gen and Midjourney but aren't sure how to use either well. Not a designer or photographer, just a curious creator who wants better results today.",
+      "reader_outcome": "Feel confident writing prompts for both ChatGPT and Midjourney that push results toward realistic, grounded images instead of the generic AI-slop aesthetic — and understand why the two tools need to be prompted differently to get there.",
+      "structure_plan": [
+        "What makes an image look 'AI' in the first place (and what to do instead)",
+        "How to prompt ChatGPT for realistic images — with example prompts",
+        "How to prompt Midjourney for realistic images — with example prompts"
+      ],
+      "claims_to_verify": [
+        "ChatGPT image generation is powered by DALL-E 3 (or confirm if a newer model is now default)",
+        "Midjourney's most current default model version and whether --style raw or equivalent parameters still exist and function as described",
+        "Whether Midjourney still supports stylize, chaos, and ar parameters in current versions",
+        "Whether ChatGPT image gen accepts camera/lens/film-style language meaningfully or largely ignores it compared to Midjourney",
+        "Whether Midjourney's 'photo' or 'photorealistic' style modes have changed in recent model updates",
+        "Confirm that ChatGPT image generation is available to free and paid users, and whether any meaningful difference in quality or access exists between tiers",
+        "Confirm Midjourney's current access model (subscription required, no free tier as of recent changes)",
+        "Whether negative prompting syntax works in current Midjourney (--no parameter) and if ChatGPT image gen supports any equivalent",
+        "Specific prompt elements that are broadly agreed to push realism: e.g. specifying lens type, film grain, natural lighting, imperfections, specific time of day, shallow depth of field"
+      ],
+      "research_plan": "Prioritize Midjourney's official documentation and changelog for current parameter syntax and model defaults. For ChatGPT image gen, use OpenAI's official feature pages and any current model notes. Supplement with well-regarded prompt engineering community sources (Midjourney subreddit, PromptHero, creator-focused YouTube channels) specifically for the 'what actually works' prompt language — but flag anything that comes only from community sources rather than official docs, since model updates can make community tips stale fast. Avoid relying on any single blog post for parameter specifics. Focus research on the *why* behind realism techniques (imperfection, specificity, photographic language) as much as the exact syntax, since that reasoning is more durable than any particular parameter value."
+    }
   }
 ]
