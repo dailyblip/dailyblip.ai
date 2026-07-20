@@ -346,7 +346,7 @@
         "alt_text": "A stylized Suno Style input field showing four stacked prompt tags ordered from Genre at the top in amber, down through Mood, Instruments, and Vocals in aqua — illustrating the layered tagging approach",
         "caption": "In Suno's Style field, order matters: lead with genre, then stack mood, instrumentation, and vocal style after it for the most steerable results.",
         "generated_at": "2026-07-20T05:05:51.510Z",
-        "approved": false,
+        "approved": true,
         "role": "hero",
         "concept": "A single Suno Style field prompt built up in stacked layers — genre at the top, then mood, instruments, vocal style — glowing amber against a deep navy background",
         "purpose": "Immediately communicate the core mechanic: layering specific tags in order is what makes Suno output match what you're imagining",
@@ -374,7 +374,7 @@
         "alt_text": "A four-step workflow diagram: Genre → Mood → Instruments → Vocals, showing the recommended order for building a Suno Style field prompt",
         "caption": "Build every Suno Style prompt in this order: genre first, then mood, instrumentation, and vocal style — earlier tags are reported to carry more weight.",
         "generated_at": "2026-07-20T05:06:25.133Z",
-        "approved": true,
+        "approved": false,
         "role": "workflow",
         "concept": "A four-step left-to-right flow showing how to build a Suno Style prompt: Genre → Mood → Instrumentation → Vocal Style, each step a distinct icon-labeled node connected by arrows",
         "purpose": "Give readers a reusable mental model for constructing any of the 10 prompts in the article — the ordering rule from the key takeaways made visual",
@@ -423,14 +423,14 @@
         "aspect_ratio": "16:9"
       },
       {
-        "id": "upload-1784524333383",
-        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-upload-1784524332025.jpg",
+        "id": "upload-1784524418068",
+        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-upload-1784524416599.jpg",
         "placement": "hero",
         "alt_text": "",
         "caption": "",
         "approved": true,
         "role": "upload",
-        "generated_at": "2026-07-20T05:12:13.383Z"
+        "generated_at": "2026-07-20T05:13:38.068Z"
       }
     ]
   }
