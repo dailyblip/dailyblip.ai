@@ -1,47 +1,15 @@
 [
   {
-    "title": "10 Prompts to Make Your Suno Music Actually Sound Like What You're Imagining",
-    "slug": "suno-prompts-that-actually-work",
-    "dek": "Most people write Suno prompts the way they'd describe a song to a friend. That's the problem. Here's how to write them the way Suno actually listens.",
-    "hero_image": "/guides/1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-upload-1784524416599.jpg",
-    "published_at": "2026-07-20T05:27:22.288Z",
+    "title": "20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks",
+    "slug": "20-suno-prompts-for-better-song-structure-bigger-choruses-an",
+    "dek": "Fix weak arrangements and forgettable choruses with these structure-focused prompts.",
+    "hero_image": "/guides/10.jpg",
+    "published_at": "2026-07-20T21:22:07.648Z",
     "tags": [
       "AI Music",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "How Musicians Can Use Suno Without Replacing Their Own Creativity",
-    "slug": "how-musicians-can-use-suno-without-replacing-their-own-creat",
-    "dek": "Use it for demos, arrangement ideas, and backing tracks. Keep the actual songwriting yours.",
-    "hero_image": "/guides/06.jpg",
-    "published_at": "2026-07-20T21:14:48.414Z",
-    "tags": [
-      "AI Music",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural",
-    "slug": "15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural",
-    "dek": "Copy-paste style prompts for fingerstyle, folk, and singer-songwriter tracks that don't sound stiff.",
-    "hero_image": "/guides/07.png",
-    "published_at": "2026-07-20T21:16:54.522Z",
-    "tags": [
-      "AI Music",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "How to Use AI to Brainstorm Better Song Lyrics Without Sounding Generic",
-    "slug": "how-to-use-ai-to-brainstorm-better-song-lyrics-without-sound",
-    "dek": "Use AI as a brainstorming partner for themes and imagery, not a lyric-writing machine.",
-    "hero_image": "/guides/08.jpg",
-    "published_at": "2026-07-20T21:17:55.963Z",
-    "tags": [
-      "Writing",
-      "AI Music"
-    ]
+      "Tools & Workflow"
+    ],
+    "pinned": false
   },
   {
     "title": "How to Turn a Simple Guitar or Piano Idea Into a Full Song With Suno",
@@ -52,17 +20,55 @@
     "tags": [
       "AI Music",
       "Getting Started"
-    ]
+    ],
+    "pinned": false
   },
   {
-    "title": "20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks",
-    "slug": "20-suno-prompts-for-better-song-structure-bigger-choruses-an",
-    "dek": "Fix weak arrangements and forgettable choruses with these structure-focused prompts.",
-    "hero_image": "/guides/10.jpg",
-    "published_at": "2026-07-20T21:22:07.648Z",
+    "title": "How to Use AI to Brainstorm Better Song Lyrics Without Sounding Generic",
+    "slug": "how-to-use-ai-to-brainstorm-better-song-lyrics-without-sound",
+    "dek": "Use AI as a brainstorming partner for themes and imagery, not a lyric-writing machine.",
+    "hero_image": "/guides/08.jpg",
+    "published_at": "2026-07-20T21:17:55.963Z",
+    "tags": [
+      "Writing",
+      "AI Music"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural",
+    "slug": "15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural",
+    "dek": "Copy-paste style prompts for fingerstyle, folk, and singer-songwriter tracks that don't sound stiff.",
+    "hero_image": "/guides/07.png",
+    "published_at": "2026-07-20T21:16:54.522Z",
     "tags": [
       "AI Music",
-      "Tools & Workflow"
-    ]
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "How Musicians Can Use Suno Without Replacing Their Own Creativity",
+    "slug": "how-musicians-can-use-suno-without-replacing-their-own-creat",
+    "dek": "Use it for demos, arrangement ideas, and backing tracks. Keep the actual songwriting yours.",
+    "hero_image": "/guides/06.jpg",
+    "published_at": "2026-07-20T21:14:48.414Z",
+    "tags": [
+      "AI Music",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "10 Prompts to Make Your Suno Music Actually Sound Like What You're Imagining",
+    "slug": "suno-prompts-that-actually-work",
+    "dek": "Most people write Suno prompts the way they'd describe a song to a friend. That's the problem. Here's how to write them the way Suno actually listens.",
+    "hero_image": "/guides/1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-upload-1784524416599.jpg",
+    "published_at": "2026-07-20T05:27:22.288Z",
+    "tags": [
+      "AI Music",
+      "Getting Started"
+    ],
+    "pinned": false
   }
 ]

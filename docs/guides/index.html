@@ -113,7 +113,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:4
   </div>
 </footer>
 <div class="blip-sprite">
-  <button class="blip-sprite-btn" type="button" aria-label="Blip">
+  <button class="blip-sprite-btn" id="blipMain" type="button" aria-label="Back to top">
     <svg viewBox="0 0 140 170" width="72" height="88" aria-hidden="true">
       <ellipse class="blip-glow" cx="70" cy="150" rx="34" ry="6"/>
       <path class="blip-antenna" d="M70 40 Q84 18 90 8"/>
@@ -169,6 +169,7 @@ function renderGrid(){
 
 $("#searchInput").addEventListener("input", e => { searchTerm = e.target.value; renderGrid(); });
 $("#sortSelect").addEventListener("change", e => { sortMode = e.target.value; renderGrid(); });
+$("#blipMain").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
 (async function boot(){
   try {
