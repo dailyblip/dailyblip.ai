@@ -169,5 +169,16 @@
       "Image Generation",
       "Tools & Workflow"
     ]
+  },
+  {
+    "title": "How to Make Midjourney Images Look Less Like AI Art",
+    "slug": "how-to-make-midjourney-images-look-less-like-ai-art",
+    "dek": "The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.",
+    "hero_image": "/guides/20.jpg",
+    "published_at": "2026-07-20T23:56:16.521Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ]
   }
 ]
