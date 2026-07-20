@@ -1,0 +1,49 @@
+name: Rebuild Guide Library
+# workflow_dispatch only. Regenerates docs/data/guides-manifest.json and
+# docs/guides/index.html from whatever's currently in data/guides.json,
+# without publishing anything new — for reaching already-published
+# guides after a template/CSS fix, or after admin.html's "Resync from
+# manifest" adds back records for guides that had gone untracked.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shared with the other guide workflows, same reasoning as guide.yml's
+  # comment: serializes ALL git writes to the guides-related files across
+  # generate/recheck/publish/rebuild, since these are independent Actions
+  # runs that would otherwise commit to overlapping files concurrently.
+  group: guide-pipeline-writes
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+
+      - name: Rebuild library
+        run: node pipeline/rebuild-guide-library.js
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/data/guides-manifest.json docs/guides/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "admin: rebuild guide library"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict -- falling back to conflict resolution (see pipeline/resolve-daily-conflict.js)"
+            node pipeline/resolve-daily-conflict.js "admin: rebuild guide library (resolved)"
+          else
+            git push
+          fi
