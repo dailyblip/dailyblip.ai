@@ -819,5 +819,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-how-to-make-midjourney-images-look-less-like-ai-art",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T23:56:16.521Z",
+    "created_at": "2026-07-20T23:56:16.521Z",
+    "published_url": "https://dailyblip.ai/guides/how-to-make-midjourney-images-look-less-like-ai-art.html",
+    "article": {
+      "title": "How to Make Midjourney Images Look Less Like AI Art",
+      "slug": "how-to-make-midjourney-images-look-less-like-ai-art",
+      "dek": "The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.",
+      "tags": [
+        "Image Generation",
+        "Getting Started"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "20.jpg",
+        "approved": true,
+        "alt_text": "How to Make Midjourney Images Look Less Like AI Art"
+      }
+    ],
+    "backfilled": true
   }
 ]
