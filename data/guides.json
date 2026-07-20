@@ -630,5 +630,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-how-to-keep-characters-consistent-in-chatgpt-image-generation",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T23:24:08.585Z",
+    "created_at": "2026-07-20T23:24:08.585Z",
+    "published_url": "https://dailyblip.ai/guides/how-to-keep-characters-consistent-in-chatgpt-image-generation.html",
+    "article": {
+      "title": "How to Keep Characters Consistent in ChatGPT Image Generation",
+      "slug": "how-to-keep-characters-consistent-in-chatgpt-image-generation",
+      "dek": "Keep the same face, outfit, and style across a whole set of images.",
+      "tags": [
+        "Image Generation",
+        "Getting Started"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "13.jpg",
+        "approved": true,
+        "alt_text": "How to Keep Characters Consistent in ChatGPT Image Generation"
+      }
+    ],
+    "backfilled": true
   }
 ]
