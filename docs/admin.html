@@ -317,7 +317,9 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
       <input id="bfDek" placeholder="Short one-sentence summary">
       <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
         <div><label>Tags (comma-separated, from the fixed list)</label><input id="bfTags" placeholder="AI Music, Getting Started"></div>
-        <div><label>Hero image filename</label><input id="bfHero" placeholder="e.g. 06.jpg \u2014 must already be in docs/guides/"></div>
+        <div><label>Hero image filename</label><input id="bfHero" placeholder="e.g. 06.jpg \u2014 must already be in docs/guides/">
+          <div class="tip" style="margin-top:4px">Double-check the extension \u2014 if you cropped/converted the image before uploading, this is often .jpg even if your original file was .png.</div>
+        </div>
       </div>
       <div style="display:flex;justify-content:flex-end;margin-top:12px">
         <button class="btn amber" id="bfAdd">Register this guide</button>
@@ -1662,6 +1664,7 @@ async function renderMaintenance(){
           <div class="tip">${esc(guideStatusLabel(g))}${g.resynced ? " \u00b7 resynced" : ""} \u00b7 ${esc(ago(g.created_at))} ago</div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
+          ${g.status === "published" ? `<button class="btn" onclick="editHeroImage('${g.id}')">Edit hero image</button>` : ""}
           ${g.status === "published" ? `<button class="btn" onclick="toggleGuideListing('${g.id}')">${g.unlisted ? "Re-list" : "Unlist"}</button>` : ""}
           ${g.status === "published" ? `<button class="btn" onclick="toggleGuidePin('${g.id}')">${g.pinned ? "Unpin" : "Pin to homepage"}</button>` : ""}
           <button class="btn red" onclick="maintenanceForceDelete('${g.id}')">Force delete</button>
@@ -1676,6 +1679,47 @@ async function renderMaintenance(){
 // commit) is real, so the confirmation says so plainly rather than
 // hiding it \u2014 the normal Guides tab's more conservative delete is still
 // there unchanged for everyday use.
+// Fixes exactly the mismatch that caused thumbnails not to load for a
+// couple of backfilled guides: the filename typed into the registration
+// form (matching what was originally uploaded, e.g. "09.png") didn't
+// match what the crop step actually converted it to on disk ("09.jpg").
+// Updates both the job record and the manifest entry so the fix shows
+// up everywhere at once, not just one of the two.
+async function editHeroImage(id){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  const current = g.images?.find(img => img.placement === "hero")?.file || "";
+  const next = prompt(`Hero image filename for "${g.article?.title}"\n\nMust exactly match a file already sitting in docs/guides/ \u2014 check the extension (.jpg vs .png) carefully, that's the most common mismatch.`, current);
+  if (next === null) return; // cancelled
+  const newFile = next.trim();
+  if (!newFile || newFile === current) return;
+
+  try {
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      if (i === -1) return gs;
+      const updated = [...gs];
+      const images = (updated[i].images || []).map(img => img.placement === "hero" ? { ...img, file: newFile } : img);
+      updated[i] = { ...updated[i], images };
+      return updated;
+    }, `admin: fix hero image filename for guide ${id}`);
+
+    await writeManifestWithRetry(manifest => {
+      const i = manifest.findIndex(m => m.slug === g.article.slug);
+      if (i === -1) return manifest;
+      const updated = [...manifest];
+      updated[i] = { ...updated[i], hero_image: `/guides/${newFile}` };
+      return updated;
+    }, `admin: fix hero image filename for guide ${id} in manifest`);
+
+    toast("Hero image filename updated.");
+    await renderMaintenance();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
 async function maintenanceForceDelete(id){
   const g = guides.find(x => x.id === id);
   if (!g) return;
