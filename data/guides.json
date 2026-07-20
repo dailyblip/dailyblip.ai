@@ -657,5 +657,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-12-chatgpt-prompts-for-professional-product-photography-without-a-studio",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T23:25:12.928Z",
+    "created_at": "2026-07-20T23:25:12.928Z",
+    "published_url": "https://dailyblip.ai/guides/12-chatgpt-prompts-for-professional-product-photography-without-a-studio.html",
+    "article": {
+      "title": "12 ChatGPT Prompts for Professional Product Photography Without a Studio",
+      "slug": "12-chatgpt-prompts-for-professional-product-photography-without-a-studio",
+      "dek": "Clean ecommerce shots, lifestyle scenes, and premium ad images, no photographer required.",
+      "tags": [
+        "Image Generation",
+        "Getting Started"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "14.jpg",
+        "approved": true,
+        "alt_text": "12 ChatGPT Prompts for Professional Product Photography Without a Studio"
+      }
+    ],
+    "backfilled": true
   }
 ]
