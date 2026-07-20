@@ -98,7 +98,9 @@ a{color:var(--amber);text-decoration:none} a:hover{text-decoration:underline}
 }
 h1{font-family:var(--display);font-weight:750;font-size:clamp(28px,5vw,40px);letter-spacing:-.02em;line-height:1.14;margin-bottom:16px}
 .dek{color:var(--dim);font-size:18px;line-height:1.55;margin-bottom:22px}
-.meta-row{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.meta-row{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.page-tags{display:flex;gap:6px;flex-wrap:wrap;margin:-8px 0 24px}
+.page-tag-chip{font-family:var(--mono);font-size:10.5px;color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:12px;padding:3px 10px}
 .quick-answer{border:1px solid var(--line-strong);border-radius:10px;padding:18px 20px;margin-bottom:30px;background:rgba(255,180,84,.05)}
 .quick-answer .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--amber-deep);margin-bottom:6px}
 article p{color:var(--dim);margin-bottom:18px}
@@ -232,6 +234,7 @@ function renderPage(job) {
   <h1>${esc(a.title)}</h1>
   <p class="dek">${esc(a.dek)}</p>
   <div class="meta-row">Last reviewed ${esc(a.last_reviewed_date)}</div>
+  ${(a.tags || []).length ? `<div class="page-tags">${a.tags.map((t) => `<span class="page-tag-chip">${esc(t)}</span>`).join("")}</div>` : ""}
   ${a.quick_answer ? `<div class="quick-answer"><div class="label">QUICK ANSWER</div>${renderSafeMarkdown(a.quick_answer)}</div>` : ""}
   ${heroHtml}
   <article>
@@ -337,6 +340,7 @@ function rebuildGuidesIndex(dir) {
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:15.5px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
+button{font-family:inherit;color:inherit;background:none;border:none;cursor:pointer}
 header{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:30px 24px 0}
 .masthead{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px}
 .wordmark{font-family:var(--display);font-weight:750;font-size:clamp(28px,4.5vw,42px);letter-spacing:-.02em;display:flex;align-items:center;gap:2px}
@@ -531,4 +535,17 @@ async function main() {
   console.log(`guide-publish: published ${job.article.slug} \u2014 ${job.published_url}`);
 }
 
-main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
+// Exported so pipeline/rebuild-guide-library.js can reuse the exact same
+// manifest/page-template logic rather than duplicating this large
+// template in a second place, which would mean fixing bugs in it twice
+// forever.
+export { buildGuidesManifest, writeGuidesManifest, rebuildGuidesIndex };
+
+// Only runs main() when this file is invoked directly as a CLI script
+// (node pipeline/guide-publish.js <jobId>), not when imported by
+// another script for its exports \u2014 without this check, importing this
+// file would ALSO immediately run main(), which expects a job id
+// argument that wouldn't exist in that context and would fail.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
+}
