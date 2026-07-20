@@ -1,6 +1,6 @@
 {
   "issue": 242,
-  "generated_at": "2026-07-20T17:12:37.565Z",
+  "generated_at": "2026-07-20T20:46:15.873Z",
   "brief": {
     "items": [
       {
@@ -55,22 +55,6 @@
   },
   "stories": [
     {
-      "id": "s_c4923a542f7b6a55",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "The Sample Clearance Problem, Except It's the Whole Song Now",
-      "dek": "The music industry spent three decades building a legal framework to stop people from lifting four bars of someone else's record. AI just swallowed 40 million complete recordings and called it research.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/the-sample-clearance-problem-except-it-s-the-whole-song-now-2026-07-20.html",
-      "ts": "2026-07-20T17:12:04.408Z",
-      "read": "3 min",
-      "also": []
-    },
-    {
       "id": "s_d8ed319939f5c0ae",
       "cat": "industry",
       "badge": "breaking",
@@ -85,8 +69,128 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -1,
+      "move": -3,
       "top": true
+    },
+    {
+      "id": "s_502e6d35fbb7908f",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "OpenAI head pushes for US regulation against open-weight models",
+      "dek": "Strategic debate over Chinese open-weight LLMs, OpenAI's regulatory concerns, and pushback from industry figures on innovation. Direct policy signal for AI creators.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/openai-is-scared-of-open-weight-models-should-the-us-be/",
+      "ts": "2026-07-20T19:33:25.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 101,
+      "move": 52
+    },
+    {
+      "id": "s_c4923a542f7b6a55",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Sample Clearance Problem, Except It's the Whole Song Now",
+      "dek": "The music industry spent three decades building a legal framework to stop people from lifting four bars of someone else's record. AI just swallowed 40 million complete recordings and called it research.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-sample-clearance-problem-except-it-s-the-whole-song-now-2026-07-20.html",
+      "ts": "2026-07-20T17:12:04.408Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 90,
+      "move": 48
+    },
+    {
+      "id": "s_c0f02d7ca9b061c8",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Scientists warn AI-edited wildlife photos could compromise research databases",
+      "dek": "Researchers caution that AI-enhanced bird photos shared on citizen science platforms may undermine credibility of iNaturalist and Macaulay Library. Policy/ethics signal.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/20/scientists-warn-wildlife-photographers-ai-enhanced-bird-photos-could-threaten-research/",
+      "ts": "2026-07-20T16:28:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 98,
+      "move": 53
+    },
+    {
+      "id": "s_43177eeccf608f86",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Adobe Project Indigo launches AI Playground for mobile photography",
+      "dek": "Project Indigo now includes generative AI for photo critiques, object removal, depth of field, and style transfer. Overlaps with items 2 and 3; PetaPixel version.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/20/adobes-project-indigo-iphone-camera-app-now-offers-photography-advice/",
+      "ts": "2026-07-20T16:00:43.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 79,
+      "move": 43
+    },
+    {
+      "id": "s_a549b2f2489b487f",
+      "cat": "image",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Adobe's Project Indigo integrates generative AI into iPhone photography",
+      "dek": "Project Indigo now includes generative AI tools powered by Google's Nano model for editing, removal, and style application. Overlaps with item 2; uses different framing.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/967791/adobe-indigo-camera-app-ai-playground-update",
+      "ts": "2026-07-20T16:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 79,
+      "move": 43
+    },
+    {
+      "id": "s_8030c8e0dc091db7",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "NVIDIA releases Cosmos 3 Edge for edge-based world modeling",
+      "dek": "NVIDIA shipped Cosmos 3 Edge, an AI model for physical systems to understand scene changes and anticipate outcomes on memory-constrained hardware. Released tool.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/nvidia/cosmos3edge",
+      "ts": "2026-07-20T15:58:51.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 79,
+      "move": 43
+    },
+    {
+      "id": "s_cdc3fbd3b50a8a83",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Adobe Project Indigo adds LLM photo critique and generative features",
+      "dek": "Adobe's experimental iOS camera app now uses LLMs to critique photos and includes AI-powered object removal, depth of field, and style transfer. Shipped feature.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/adobe-camera-apps-new-feature-will-critique-your-photos-using-ai/",
+      "ts": "2026-07-20T15:45:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 89,
+      "move": 52
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -102,8 +206,8 @@
       "ts": "2026-07-20T15:30:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 102,
-      "move": 56
+      "heat": 97,
+      "move": -2
     },
     {
       "id": "s_93c83145e8c7884e",
@@ -119,8 +223,8 @@
       "ts": "2026-07-20T15:23:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": 54
+      "heat": 87,
+      "move": -6
     },
     {
       "id": "s_90cef26b7e07e68a",
@@ -136,8 +240,25 @@
       "ts": "2026-07-20T10:16:33.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 97,
-      "move": 57
+      "heat": 92,
+      "move": -3
+    },
+    {
+      "id": "s_d4ff9ec891b78868",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "OpenAI discusses safety lessons from long-horizon AI deployments",
+      "dek": "OpenAI shares findings on safety risks and safeguards from running extended-duration AI models. Policy and research signal.",
+      "src": "OpenAI News",
+      "url": "https://openai.com/index/safety-alignment-long-horizon-models",
+      "ts": "2026-07-20T10:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 63,
+      "move": 12
     },
     {
       "id": "s_6dea1640e408017e",
@@ -153,8 +274,8 @@
       "ts": "2026-07-20T08:58:49.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": 52
+      "heat": 80,
+      "move": -5
     },
     {
       "id": "s_c57b245c362dd255",
@@ -171,8 +292,8 @@
       "ts": "2026-07-20T04:07:57.883Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": -9
+      "heat": 77,
+      "move": -22
     },
     {
       "id": "s_444761f503abeda7",
@@ -189,8 +310,8 @@
       "ts": "2026-07-20T00:31:13.665Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": -6
+      "heat": 74,
+      "move": -21
     },
     {
       "id": "s_90851a797dd057ee",
@@ -206,8 +327,8 @@
       "ts": "2026-07-19T21:16:07.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 74,
-      "move": -18
+      "heat": 68,
+      "move": -10
     },
     {
       "id": "s_c0ef7a87d4b35aa6",
@@ -223,7 +344,7 @@
       "ts": "2026-07-19T17:35:54.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 80,
+      "heat": 78,
       "move": -6
     },
     {
@@ -241,7 +362,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -8
+      "move": -7
     },
     {
       "id": "s_c60035e6bb3c677d",
@@ -258,7 +379,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_01582b84f95050bc",
@@ -275,7 +396,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_3ad838364711ce9b",
@@ -292,7 +413,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_4e6f73ed1f19a4ce",
@@ -309,7 +430,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_2eed32c959cdf779",
@@ -326,7 +447,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_a49f55bafe0aeb0e",
@@ -343,7 +464,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_133497b699bf0fd6",
@@ -360,7 +481,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_b51b6c107383df8e",
@@ -377,7 +498,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_ac7be8d09d06872b",
@@ -394,7 +515,7 @@
       "read": "5 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_4d76675668887bf8",
@@ -411,7 +532,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_a0bbc2c6e6f2a453",
@@ -428,7 +549,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -6
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -445,7 +566,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -462,7 +583,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -479,7 +600,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_252ccc31ca52ec00",
@@ -496,7 +617,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -513,7 +634,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -530,7 +651,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -547,7 +668,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -564,7 +685,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -581,7 +702,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -598,7 +719,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -615,7 +736,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -632,7 +753,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_79ed56faeda92346",
@@ -649,7 +770,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -666,7 +787,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -683,7 +804,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -700,7 +821,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -717,7 +838,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -734,7 +855,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -751,7 +872,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_3090d72b6869197e",
@@ -768,7 +889,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -785,7 +906,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -802,7 +923,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -819,7 +940,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -836,7 +957,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -854,7 +975,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -6
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -871,7 +992,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": -8
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -888,7 +1009,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": -7
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -905,7 +1026,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -922,7 +1043,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": -2
+      "move": -1
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -940,7 +1061,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -3
+      "move": -6
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -957,144 +1078,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": -2
-    },
-    {
-      "id": "s_d173222f3e599859",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "The Hands Problem Is Basically Solved. So What's Left to Distrust?",
-      "dek": "For two years, 'count the fingers' was the internet's favorite AI detector. That test is now mostly useless, and the real tells are stranger and more unsettling than an extra thumb.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/the-hands-problem-is-basically-solved-so-what-s-left-to-dist-2026-07-15.html",
-      "ts": "2026-07-15T17:45:15.948Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 70,
       "move": -3
-    },
-    {
-      "id": "s_53e3149d2cc17d3e",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Shippy: building a high-stakes maritime AI agent",
-      "dek": "Ai2 details the architecture behind Shippy, an AI agent for maritime protection decisions. Covers agent anatomy, deterministic tools, sandboxed hosting, and evaluation.",
-      "src": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/allenai/shippy-tech-blog",
-      "ts": "2026-07-15T17:29:41.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 60,
-      "move": -4
-    },
-    {
-      "id": "s_5c8332d4091eee10",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Model routing in agents: cost, complexity, and latency tradeoffs",
-      "dek": "IBM Research breaks down the real challenges of routing requests between different AI models in agent systems, beyond simple cost optimization.",
-      "src": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
-      "ts": "2026-07-15T17:27:01.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 60,
-      "move": -4
-    },
-    {
-      "id": "s_264ddc681c98a9a5",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 8,
-      "tier": "journalism",
-      "title": "Hack reveals Suno scraped YouTube, Deezer, and podcasts for AI training",
-      "dek": "A supply chain attack exposed source code showing the AI music generator harvested audio from multiple platforms. Record labels argue this violates the DMCA despite Suno's fair-use defense.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/",
-      "ts": "2026-07-15T17:00:34.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 88,
-      "move": -2
-    },
-    {
-      "id": "s_8ed791a2a8b1f044",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Microsoft patches record 570 vulnerabilities using AI-assisted discovery",
-      "dek": "Microsoft's monthly Patch Tuesday resolved a record number of security flaws, with at least two zero-day exploits, using AI to help identify code vulnerabilities.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/microsoft-patches-record-number-of-security-vulnerabilities-citing-its-use-of-ai/",
-      "ts": "2026-07-15T16:20:18.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -4
-    },
-    {
-      "id": "s_18de27eea197aabe",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "Hugging Face releases Real World VoiceEQ benchmark for voice AI quality",
-      "dek": "New metric measures human perception of voice AI output, advancing evaluation beyond specialized metrics as voice AI capabilities accelerate.",
-      "src": "Daily.dev",
-      "url": "https://daily.dev/posts/introducing-real-world-voiceeq-measuring-the-human-quality-of-voice-ai-ceqodha2j",
-      "ts": "2026-07-15T16:00:33.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_84777b05d9b25937",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "OpenAI launches Codex Micro, a programmable keyboard for AI coding",
-      "dek": "Collaboration with Work Louder, the Codex Micro light-up button block monitors multiple AI coding threads, separate from OpenAI's rumored smart speaker project.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/965901/openai-hardware-codex-micro-launch",
-      "ts": "2026-07-15T16:00:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -4
-    },
-    {
-      "id": "s_fe6ab2efc212fece",
-      "cat": "industry",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Apple Intelligence launches in China via Alibaba Qwen partnership",
-      "dek": "China's regulator approved Apple Intelligence by integrating Alibaba's Qwen AI model into iOS, iPadOS, macOS, and visionOS, marking Apple's major expansion into a key market.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
-      "ts": "2026-07-15T15:29:33.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 85,
-      "move": -1
     }
   ],
   "models": [
@@ -1162,23 +1146,23 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 21
+      "c": 20
     },
     {
       "n": "The Verge AI",
       "c": 11
     },
     {
-      "n": "Hugging Face Blog",
+      "n": "PetaPixel",
       "c": 6
+    },
+    {
+      "n": "Hugging Face Blog",
+      "c": 5
     },
     {
       "n": "dailyblip",
       "c": 5
-    },
-    {
-      "n": "PetaPixel",
-      "c": 4
     },
     {
       "n": "Ars Technica AI",
@@ -1189,19 +1173,19 @@
       "c": 3
     },
     {
-      "n": "80 Level",
+      "n": "OpenAI News",
       "c": 2
     }
   ],
   "topics": [
     "#openai",
     "#google",
+    "#project",
+    "#indigo",
+    "#nvidia",
     "#youtube",
     "#suno",
-    "#apple",
-    "#alibaba",
-    "#gemini",
-    "#hugging"
+    "#apple"
   ],
   "tooldrop": {
     "name": "LayerProof Mylar",
@@ -1211,9 +1195,9 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 23,
-    "published_today": 8,
+    "scanned_last_run": 25,
+    "published_today": 15,
     "sources_live": 13,
-    "slopped_last_run": 19
+    "slopped_last_run": 18
   }
 }

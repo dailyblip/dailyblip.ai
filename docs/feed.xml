@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 15:33:14 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 20:46:15 GMT</lastBuildDate>
     <item>
       <title>Hugging Face details AI-driven autonomous intrusion into production infrastructure</title>
       <link>https://huggingface.co/blog/security-incident-july-2026</link>
@@ -13,6 +13,62 @@
       <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI head pushes for US regulation against open-weight models</title>
+      <link>https://techcrunch.com/2026/07/20/openai-is-scared-of-open-weight-models-should-the-us-be/</link>
+      <guid isPermaLink="false">s_502e6d35fbb7908f</guid>
+      <description>Strategic debate over Chinese open-weight LLMs, OpenAI's regulatory concerns, and pushback from industry figures on innovation. Direct policy signal for AI creators.</description>
+      <category>industry</category>
+      <pubDate>Mon, 20 Jul 2026 19:33:25 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Sample Clearance Problem, Except It's the Whole Song Now</title>
+      <link>https://dailyblip.ai/commentary/the-sample-clearance-problem-except-it-s-the-whole-song-now-2026-07-20.html</link>
+      <guid isPermaLink="false">s_c4923a542f7b6a55</guid>
+      <description>The music industry spent three decades building a legal framework to stop people from lifting four bars of someone else's record. AI just swallowed 40 million complete recordings and called it research.</description>
+      <category>writing</category>
+      <pubDate>Mon, 20 Jul 2026 17:12:04 GMT</pubDate>
+    </item>
+    <item>
+      <title>Scientists warn AI-edited wildlife photos could compromise research databases</title>
+      <link>https://petapixel.com/2026/07/20/scientists-warn-wildlife-photographers-ai-enhanced-bird-photos-could-threaten-research/</link>
+      <guid isPermaLink="false">s_c0f02d7ca9b061c8</guid>
+      <description>Researchers caution that AI-enhanced bird photos shared on citizen science platforms may undermine credibility of iNaturalist and Macaulay Library. Policy/ethics signal.</description>
+      <category>rights</category>
+      <pubDate>Mon, 20 Jul 2026 16:28:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Adobe Project Indigo launches AI Playground for mobile photography</title>
+      <link>https://petapixel.com/2026/07/20/adobes-project-indigo-iphone-camera-app-now-offers-photography-advice/</link>
+      <guid isPermaLink="false">s_43177eeccf608f86</guid>
+      <description>Project Indigo now includes generative AI for photo critiques, object removal, depth of field, and style transfer. Overlaps with items 2 and 3; PetaPixel version.</description>
+      <category>image</category>
+      <pubDate>Mon, 20 Jul 2026 16:00:43 GMT</pubDate>
+    </item>
+    <item>
+      <title>Adobe's Project Indigo integrates generative AI into iPhone photography</title>
+      <link>https://www.theverge.com/tech/967791/adobe-indigo-camera-app-ai-playground-update</link>
+      <guid isPermaLink="false">s_a549b2f2489b487f</guid>
+      <description>Project Indigo now includes generative AI tools powered by Google's Nano model for editing, removal, and style application. Overlaps with item 2; uses different framing.</description>
+      <category>image</category>
+      <pubDate>Mon, 20 Jul 2026 16:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>NVIDIA releases Cosmos 3 Edge for edge-based world modeling</title>
+      <link>https://huggingface.co/blog/nvidia/cosmos3edge</link>
+      <guid isPermaLink="false">s_8030c8e0dc091db7</guid>
+      <description>NVIDIA shipped Cosmos 3 Edge, an AI model for physical systems to understand scene changes and anticipate outcomes on memory-constrained hardware. Released tool.</description>
+      <category>tools</category>
+      <pubDate>Mon, 20 Jul 2026 15:58:51 GMT</pubDate>
+    </item>
+    <item>
+      <title>Adobe Project Indigo adds LLM photo critique and generative features</title>
+      <link>https://techcrunch.com/2026/07/20/adobe-camera-apps-new-feature-will-critique-your-photos-using-ai/</link>
+      <guid isPermaLink="false">s_cdc3fbd3b50a8a83</guid>
+      <description>Adobe's experimental iOS camera app now uses LLMs to critique photos and includes AI-powered object removal, depth of field, and style transfer. Shipped feature.</description>
+      <category>tools</category>
+      <pubDate>Mon, 20 Jul 2026 15:45:00 GMT</pubDate>
     </item>
     <item>
       <title>Lightcraft's Spark Story uses iPhone to generate virtual film sets from scripts</title>
@@ -37,6 +93,14 @@
       <description>Chinese AI companies launched competitive models claimed to match OpenAI/Anthropic capabilities at lower cost, narrowing the US AI lead.</description>
       <category>industry</category>
       <pubDate>Mon, 20 Jul 2026 10:16:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI discusses safety lessons from long-horizon AI deployments</title>
+      <link>https://openai.com/index/safety-alignment-long-horizon-models</link>
+      <guid isPermaLink="false">s_d4ff9ec891b78868</guid>
+      <description>OpenAI shares findings on safety risks and safeguards from running extended-duration AI models. Policy and research signal.</description>
+      <category>industry</category>
+      <pubDate>Mon, 20 Jul 2026 10:00:00 GMT</pubDate>
     </item>
     <item>
       <title>DeepMind AI reconstructs Pelé's legendary unfilmed goal using motion synthesis</title>
@@ -101,70 +165,6 @@
       <description>Federal program tests AI systems for medical claims approval, raising questions about accuracy and fairness in healthcare access.</description>
       <category>industry</category>
       <pubDate>Sat, 18 Jul 2026 11:18:25 GMT</pubDate>
-    </item>
-    <item>
-      <title>Apple accuses OpenAI of stealing trade secrets</title>
-      <link>https://www.creativebloq.com/design/apple-paints-a-damning-picture-of-openais-interview-process</link>
-      <guid isPermaLink="false">s_3ad838364711ce9b</guid>
-      <description>Apple alleges OpenAI misappropriated proprietary information during the company's interview process, raising corporate espionage questions.</description>
-      <category>rights</category>
-      <pubDate>Sat, 18 Jul 2026 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Meta backtracks on Muse Image AI tool, raising credibility questions</title>
-      <link>https://www.creativebloq.com/design/metas-regret-over-its-scrapped-ai-tool-is-like-a-burglar-apologising-for-the-mess</link>
-      <guid isPermaLink="false">s_4e6f73ed1f19a4ce</guid>
-      <description>Meta scrapped its image generation tool; critics argue the company's stated regrets don't align with how it deployed and managed the product.</description>
-      <category>tools</category>
-      <pubDate>Sat, 18 Jul 2026 07:02:51 GMT</pubDate>
-    </item>
-    <item>
-      <title>Vertu's $6,880 AI-agent foldable: performance review for executives</title>
-      <link>https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/</link>
-      <guid isPermaLink="false">s_2eed32c959cdf779</guid>
-      <description>Vertu's luxury Alphafold pairs high-end materials with an AI agent for workflow automation. A hands-on review tests whether the AI actually delivers on executive productivity claims.</description>
-      <category>tools</category>
-      <pubDate>Fri, 17 Jul 2026 22:55:09 GMT</pubDate>
-    </item>
-    <item>
-      <title>Always-on AI transcription: the backlash and workarounds</title>
-      <link>https://techcrunch.com/2026/07/17/the-zoom-hack-that-says-dont-record-me/</link>
-      <guid isPermaLink="false">s_a49f55bafe0aeb0e</guid>
-      <description>AI note-taking apps are fueling ubiquitous meeting recording, sparking pushback. The piece explores how creators and professionals are responding to widespread automated transcription.</description>
-      <category>industry</category>
-      <pubDate>Fri, 17 Jul 2026 21:20:47 GMT</pubDate>
-    </item>
-    <item>
-      <title>AI chip demand reshapes smartphone market, driving prices up in India</title>
-      <link>https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/</link>
-      <guid isPermaLink="false">s_133497b699bf0fd6</guid>
-      <description>Memory manufacturers are diverting RAM and storage capacity toward AI accelerators, leaving less supply and raising costs for consumer devices. India's 10% smartphone shipment drop signals the disruption has arrived.</description>
-      <category>industry</category>
-      <pubDate>Fri, 17 Jul 2026 20:09:27 GMT</pubDate>
-    </item>
-    <item>
-      <title>TikTok testing AI likeness detection tool for creators</title>
-      <link>https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool</link>
-      <guid isPermaLink="false">s_b51b6c107383df8e</guid>
-      <description>TikTok is piloting an opt-in tool to detect AI-generated likenesses of creators and enable reporting. The feature mirrors YouTube's similar detection capability, offering creators protection against synthetic impersonation.</description>
-      <category>rights</category>
-      <pubDate>Fri, 17 Jul 2026 19:34:30 GMT</pubDate>
-    </item>
-    <item>
-      <title>Apple trade secrets lawsuit against OpenAI threatens IPO timeline</title>
-      <link>https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/</link>
-      <guid isPermaLink="false">s_ac7be8d09d06872b</guid>
-      <description>Apple alleges OpenAI hired over 400 former employees and engaged in misconduct reaching executive level. The timing complicates OpenAI's reported 2026 IPO plans and raises questions about data trust at AI companies.</description>
-      <category>industry</category>
-      <pubDate>Fri, 17 Jul 2026 17:45:46 GMT</pubDate>
-    </item>
-    <item>
-      <title>San Francisco orders removal of AI nudify apps from app stores</title>
-      <link>https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/</link>
-      <guid isPermaLink="false">s_4d76675668887bf8</guid>
-      <description>Apple and Google received cease-and-desist letters to remove 13 nudification apps that use AI to create non-consensual explicit images from ordinary photos.</description>
-      <category>rights</category>
-      <pubDate>Fri, 17 Jul 2026 16:10:05 GMT</pubDate>
     </item>
   </channel>
 </rss>
