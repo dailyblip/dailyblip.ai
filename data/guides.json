@@ -1,8 +1,8 @@
 [
   {
     "id": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "10 Prompts to make your Suno music better",
       "article_type": "Top tools list",
@@ -346,7 +346,7 @@
         "alt_text": "A stylized Suno Style input field showing four stacked prompt tags ordered from Genre at the top in amber, down through Mood, Instruments, and Vocals in aqua — illustrating the layered tagging approach",
         "caption": "In Suno's Style field, order matters: lead with genre, then stack mood, instrumentation, and vocal style after it for the most steerable results.",
         "generated_at": "2026-07-20T05:05:51.510Z",
-        "approved": true,
+        "approved": false,
         "role": "hero",
         "concept": "A single Suno Style field prompt built up in stacked layers — genre at the top, then mood, instruments, vocal style — glowing amber against a deep navy background",
         "purpose": "Immediately communicate the core mechanic: layering specific tags in order is what makes Suno output match what you're imagining",
@@ -374,7 +374,7 @@
         "alt_text": "A four-step workflow diagram: Genre → Mood → Instruments → Vocals, showing the recommended order for building a Suno Style field prompt",
         "caption": "Build every Suno Style prompt in this order: genre first, then mood, instrumentation, and vocal style — earlier tags are reported to carry more weight.",
         "generated_at": "2026-07-20T05:06:25.133Z",
-        "approved": false,
+        "approved": true,
         "role": "workflow",
         "concept": "A four-step left-to-right flow showing how to build a Suno Style prompt: Genre → Mood → Instrumentation → Vocal Style, each step a distinct icon-labeled node connected by arrows",
         "purpose": "Give readers a reusable mental model for constructing any of the 10 prompts in the article — the ordering rule from the key takeaways made visual",
@@ -432,6 +432,12 @@
         "role": "upload",
         "generated_at": "2026-07-20T05:13:38.068Z"
       }
+    ],
+    "approved_at": "2026-07-20T05:24:23.907Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s1: The article conflates V4.5, V5, and V5.5 under one 1,000-character cap, but the source (aimusicapi.ai) lists V4.5, V4.5+, V5, and V5.5 separately — the article should not imply V5 and V5.5 share the V4.5 limit without noting V5/V5.5 may differ, and 'V4.5 and newer' overgeneralizes across model versions not confirmed to be identical.",
+      "s1: The official Suno X announcement source confirms the Exclude feature is Pro/Premier only in Custom Mode, but the article does not clarify that Basic/free-plan users lack access to this field entirely — a material omission for readers on the free tier."
     ]
   }
 ]
