@@ -443,7 +443,7 @@
   {
     "id": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "10 Prompts to make your Suno music better",
       "article_type": "Top tools list",
@@ -455,7 +455,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T05:00:17.169Z",
-    "updated_at": "2026-07-20T05:00:49.499Z",
+    "updated_at": "2026-07-20T05:01:59.738Z",
     "brief": {
       "target_reader": "Someone who has tried Suno once or twice and gotten okay results, but isn't sure how to write prompts that actually sound like what they're imagining",
       "reader_outcome": "Feel confident enough to go back to Suno and write a noticeably better prompt today",
@@ -472,6 +472,164 @@
         "Whether Suno allows negative prompting (telling it what NOT to include) — confirm if this is supported"
       ],
       "research_plan": "Prioritize Suno's own documentation and official help/FAQ pages for UI details and supported prompt features. Supplement with hands-on creator writeups, Reddit threads (r/SunoAI), and YouTube tutorials from active users to understand what prompt patterns actually work in practice. Avoid relying on single blog posts for capability claims — cross-check anything about what Suno 'understands' against multiple user reports. Since this is a prompting guide not a pricing guide, skip plan/quota details entirely."
-    }
+    },
+    "sources": [
+      {
+        "title": "How do I exclude elements of a song?",
+        "publisher": "Suno Help / Knowledge Base",
+        "url": "https://help.suno.com/en/articles/3161921",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno officially supports an 'Exclude' mechanism for negative prompting — users can specify genres, specific instruments, voice styles, and more that they do NOT want in the output",
+          "The feature is called 'Exclude' in Suno's own documentation"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Create in V4.5: Better Prompts in Lyrics",
+        "publisher": "Suno Help / Knowledge Base (V4.5 category)",
+        "url": "https://help.suno.com/en/categories/1389249",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno has a Style field for genre-specific information and a separate Lyrics box — these are distinct prompt inputs in the current UI",
+          "Custom Mode exists as a named feature in the current Suno UI",
+          "Creative Sliders (Weirdness) are available in Custom Mode in V4.5+",
+          "V4.5 was the model version that introduced improved prompt handling in the Lyrics box"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Suno on X: 'You can now Exclude Styles when making new songs'",
+        "publisher": "Suno (official @suno_ai_ account on X/Twitter)",
+        "url": "https://x.com/suno_ai_/status/1836920791981568094",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "Suno officially announced an 'Exclude Styles' feature accessible in Custom Mode for Pro and Premier subscribers",
+          "Users can exclude specific instruments, styles, or vocal styles (e.g. male/female vocals)",
+          "Excluded styles appear in the Song Preview with a '-' prefix (e.g., -piano)",
+          "The feature is accessed via Create > Custom > 'Exclude Styles' switch (Pro/Premier only)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Suno AI Prompt & Lyrics Character Limits: The Complete Cheat Sheet (2026)",
+        "publisher": "AI Music API (independent developer platform)",
+        "url": "https://aimusicapi.ai/en/blog/suno-ai-prompt-character-limits",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "On current Suno models (V4.5, V4.5+, V5, V5.5), custom lyrics cap at 5,000 characters and the style prompt caps at 1,000 characters",
+          "On older models (V3.5, V4), those caps drop to 3,000 (lyrics) and 200 (style)",
+          "A dedicated 'negative_tags' API field exists for styles to avoid, with a 200-character limit across all model versions",
+          "Suno does not publish an official limits table; app-side numbers can shift between UI releases",
+          "Simple Mode song description (gpt_description_prompt) is limited to 400 characters on every model version"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Suno Character Limits (2026): 5,000 Lyrics on V4.5+ — Every Field by Model",
+        "publisher": "HookGenius",
+        "url": "https://hookgenius.app/learn/suno-character-limits/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "V4.5/V5/V5.5 style field = 1,000 chars; lyrics = 5,000 chars; title = 100 chars; V4 and older = 200/3,000/80",
+          "Past ~3,000 characters in the lyrics field (~60 lines), Suno tends to rush, skip sections, or shorten output — ~3,000 is described as the quality sweet spot even when the box allows more",
+          "A 'Negative Style' or 'Exclude' field exists where available, accepting entries like 'no vocals,' 'no drums,' 'no autotune'",
+          "Negative phrases like 'no percussion' in the main style prompt sometimes work but are less reliable than using the dedicated Exclude field",
+          "Suno silently truncates content that runs past field caps with no warning to the user"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Suno AI Tutorial: Turn Text Prompts Into Full Songs (Simple, Instrumental, Custom)",
+        "publisher": "Blue Lightning TV",
+        "url": "https://bluelightningtv.com/2025/07/07/suno-ai-tutorial-turn-text-prompts-into-full-songs-simple-instrumental-custom/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Custom Mode is a named feature in the current Suno UI; it lets users outline song parts (verse, bridge, chorus), supply their own lyrics or let Suno write them, and define mood, instrumentation, and vocal style",
+          "Simple Mode takes a plain English description and Suno handles lyrics, melody, instruments, and structure — no chord progressions or BPM settings required",
+          "Users can exclude sounds or genres within Custom Mode to avoid clashes (e.g., 'exclude classical elements and traditional orchestral hits')",
+          "Negative-style direction in Custom Mode is described as working for brand/picture constraints"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Custom style prompts for Suno",
+        "publisher": "HowToPromptSuno.com",
+        "url": "https://howtopromptsuno.com/making-music/custom-prompting",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Custom Mode splits input into two panels: a Lyrics Generator (or custom lyrics box) and a Style of Music prompt",
+          "The Style of Music field encompasses mood, sub-genre descriptions, instruments, and vocal tags",
+          "The Lyrics box accommodates 3,000 characters (note: this may reflect an older model version — see character limit sources for V4.5+ update to 5,000)",
+          "Suno uses an LLM to convert the Style Prompt into music; words can be linked to time periods, cultures, specific song patterns, and emotions",
+          "Musical techniques like 'Polyrhythmic percussion, modal jazz harmonies, with a climactic key change' can be included in style prompts"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Why Suno Ignores Your Prompt (And How to Fix It)",
+        "publisher": "FreeSongwritingTools.com",
+        "url": "https://freesongwritingtools.com/blog/why-suno-ignores-your-prompt/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Suno's Advanced Options include a dedicated Exclude field that functions significantly more reliably for negative prompting than writing negations in the Style prompt",
+          "Genre and mood associations dominate tempo — BPM output may not match a hard number written in the prompt; a BPM range is recommended over a hard number",
+          "Overuse of generic emotion words ('happy,' 'sad,' 'relaxing') maps to the broadest possible distribution of outputs and produces generic results"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Negative Prompting in Suno v5: Complete Guide",
+        "publisher": "Jack Righteous",
+        "url": "https://jackrighteous.com/en-us/blogs/guides-using-suno-ai-music-creation/negative-prompting-suno-v5-guide",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "No official Suno 'negative prompt field' was found that guarantees absolute removal — negative prompting is a prompt-control method that is useful and repeatable but not absolute",
+          "Negative prompts are best treated as steering instructions, not hard bans — they reduce unwanted elements but do not guarantee their complete exclusion",
+          "1–2 clear exclusions work better than a long blacklist; replacing a removed element with a positive instruction improves results"
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Suno AI Prompt Guide 2026: Copy-Paste Templates + The Formula That Actually Works",
+        "publisher": "Roo (roo.beehiiv.com)",
+        "url": "https://roo.beehiiv.com/p/suno-ai-prompt-guide-2026-copy-paste-templates-the-formula-that-actually-works",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Negative prompts ('no autotune,' 'no electric guitar,' 'no drums') in the style field work better in v5.5 than in older versions — implying BPM/negative prompt reliability has improved with newer models",
+          "BPM numbers in prompts: 'Suno ignored BPM' is a known failure mode when tempo is described qualitatively; the fix recommended is to use a number (e.g., '128 BPM' not 'fast-paced') — suggesting BPM numbers do have some effect but are not guaranteed",
+          "Suno weighs earlier tags in the style field more heavily — genre should be placed first",
+          "65–80 BPM for relaxed focus works consistently in lo-fi instrumental prompts (recurring user/tester observation)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      }
+    ],
+    "unverifiable_claims": [
+      "The claim that Suno does NOT reliably respond to BPM numbers is contested and likely outdated: multiple independent sources from 2025–2026 recommend using specific BPM numbers and report improved BPM responsiveness in V4.5+/V5/V5.5. The writer should soften any blanket statement that BPM numbers are ignored, and instead note that BPM reliability has improved but is not guaranteed — genre/mood associations can override numeric tempo input.",
+      "The claim that Suno does not reliably respond to music-theory-specific terms is partially contradicted: independent sources report that specific music-theory language (e.g., 'modal jazz harmonies,' 'polyrhythmic percussion,' named ragas) does influence output, though results vary. The writer should frame this as 'inconsistent' rather than 'does not respond.'",
+      "Any specific labeling of the prompt input field in the current UI beyond 'Style of Music' and 'Lyrics' — Suno's official help pages retrieved do not provide a complete UI field-name glossary; field names may have changed across V4.5/V5/V5.5 releases.",
+      "Whether the 'Exclude Styles' feature (negative prompting via dedicated field) is available to free-tier users cannot be confirmed from sources retrieved — the official Suno announcement states it is available to 'Pro and Premier' subscribers only; free-tier availability is unverified.",
+      "The exact current character limit shown in the Suno app UI (as opposed to via API) is inconsistently reported across independent sources (some say 200, some 1,000 for the style field on V4/V5) — Suno does not publish an official limits table per the API source, so the writer should cite these as third-party-tested figures, not official specs."
+    ]
   }
 ]
