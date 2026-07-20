@@ -230,6 +230,12 @@ function renderPage(job) {
     </div>`;
   }).join("\n");
 
+  // Article-level prompts (a.prompts), distinct from per-section prompts
+  // above -- for when a few "try this" examples belong to the article
+  // as a whole rather than to one specific section. Rendered after every
+  // section but before key takeaways.
+  const articlePrompts = renderPromptsBlock(a.prompts);
+
   const takeaways = (a.key_takeaways || []).length
     ? `<div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul>${(a.key_takeaways || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>`
     : "";
@@ -269,6 +275,7 @@ function renderPage(job) {
     ${sectionsHtml}
     ${renderSafeMarkdown(a.conclusion)}
   </article>
+  ${articlePrompts}
   ${takeaways}
   <div class="subscribe-block" id="subscribe">
     <h3>Enjoyed this? Get the next one.</h3>
@@ -355,6 +362,7 @@ function buildGuidesManifest(guides) {
         hero_image: heroImg ? `/guides/${heroImg.file}` : null,
         published_at: g.published_at || g.article.last_reviewed_date,
         tags: g.article.tags || [],
+        pinned: !!g.pinned,
       };
     })
     .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
@@ -486,7 +494,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:4
   </div>
 </footer>
 <div class="blip-sprite">
-  <button class="blip-sprite-btn" type="button" aria-label="Blip">
+  <button class="blip-sprite-btn" id="blipMain" type="button" aria-label="Back to top">
     <svg viewBox="0 0 140 170" width="72" height="88" aria-hidden="true">
       <ellipse class="blip-glow" cx="70" cy="150" rx="34" ry="6"/>
       <path class="blip-antenna" d="M70 40 Q84 18 90 8"/>
@@ -542,6 +550,7 @@ function renderGrid(){
 
 $("#searchInput").addEventListener("input", e => { searchTerm = e.target.value; renderGrid(); });
 $("#sortSelect").addEventListener("change", e => { sortMode = e.target.value; renderGrid(); });
+$("#blipMain").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
 (async function boot(){
   try {
