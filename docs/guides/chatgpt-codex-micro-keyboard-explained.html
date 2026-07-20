@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChatGPT's New Keyboard Is Not What You Think It Is — dailyblip</title>
+<meta name="description" content="OpenAI's new keyboard isn't a mobile typing app, it's the Codex Micro, a $230 physical macropad built for AI-assisted coding. Here's what it actually is and who it's for.">
+<link rel="canonical" href="https://dailyblip.ai/guides/chatgpt-codex-micro-keyboard-explained.html">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13); --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79; --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:36px 24px 90px}
+.back{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:26px}
+.back a{color:var(--faint)} .back a:hover{color:var(--amber)}
+.guide-tag{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--amber);
+  border:1px solid rgba(255,180,84,.4);border-radius:20px;padding:5px 14px;margin-bottom:20px;
+}
+h1{font-family:var(--display);font-weight:750;font-size:clamp(28px,5vw,40px);letter-spacing:-.02em;line-height:1.14;margin-bottom:16px}
+.dek{color:var(--dim);font-size:18px;line-height:1.55;margin-bottom:22px}
+.meta-row{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:30px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.quick-answer{border:1px solid var(--line-strong);border-radius:10px;padding:18px 20px;margin-bottom:30px;background:rgba(255,180,84,.05)}
+.quick-answer .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--amber-deep);margin-bottom:6px}
+article p{color:var(--dim);margin-bottom:18px}
+article h2{font-family:var(--display);font-weight:650;font-size:24px;letter-spacing:-.01em;color:var(--text);margin:36px 0 14px}
+article h3{font-family:var(--display);font-weight:600;font-size:19px;color:var(--text);margin:26px 0 10px}
+article ul{margin:0 0 18px 20px;color:var(--dim)}
+article li{margin-bottom:6px}
+article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.3)} article a:hover{border-bottom-color:var(--amber)}
+.section-block{margin:38px 0}
+.img-block{margin:26px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.img-block img{display:block;width:100%;height:auto}
+.img-caption{font-family:var(--mono);font-size:11.5px;color:var(--faint);padding:8px 2px}
+.tool-card{border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin:20px 0;background:rgba(158,216,210,.02)}
+.tool-card .name{font-weight:700;font-size:19px;margin-bottom:8px;display:flex;align-items:center;gap:11px}
+.tool-logo{width:28px;height:28px;object-fit:contain;border-radius:6px;flex-shrink:0}
+.tool-card .desc{color:var(--dim);font-size:15.5px;line-height:1.6;margin-bottom:12px}
+.tool-card .sw{font-size:14px;color:var(--faint);line-height:1.7;margin-bottom:6px}
+.takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
+.takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
+.takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.methodology{margin-top:40px;padding:16px 18px;border:1px dashed var(--line-strong);border-radius:10px;font-size:13.5px;color:var(--faint);line-height:1.6}
+.sources{margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.sources h2{margin-top:0}
+.sources li{font-size:13.5px;color:var(--dim);padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.sources .pub{color:var(--faint);font-family:var(--mono);font-size:11px}
+.foot-note{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint);line-height:1.6}
+.item{padding:12px 0;border-top:1px solid var(--line)}
+.top-nudge{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:22px}
+.top-nudge a{color:var(--amber-deep)}
+.subscribe-block{border:1px solid var(--line-strong);border-radius:12px;padding:26px 24px;margin:36px 0;text-align:center}
+.subscribe-block h3{font-family:var(--display);font-size:19px;margin-bottom:8px}
+.subscribe-block p{color:var(--dim);font-size:14px;margin-bottom:16px}
+.sub-form{display:flex;gap:8px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.sub-form input{flex:1;min-width:200px;background:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:11px 13px;color:var(--text);font-family:var(--body);font-size:14px;outline:none}
+.sub-form input:focus{border-color:var(--amber-deep)}
+.sub-form button{background:var(--amber);color:#20160a;border:none;border-radius:8px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--body)}
+.sub-form button:hover{filter:brightness(1.08)}
+.sub-ok{display:none;color:var(--aqua);font-size:13.5px;margin-top:10px}
+</style></head><body>
+<div class="wrap">
+  <div class="back"><a href="/">← dailyblip</a> · <a href="./">guides</a></div>
+  <div class="top-nudge">Get guides like this by email → <a href="#subscribe">subscribe below</a></div>
+  <div class="guide-tag">Guide</div>
+  <h1>ChatGPT's New Keyboard Is Not What You Think It Is</h1>
+  <p class="dek">You probably heard 'ChatGPT has a new keyboard' and pictured a phone app. The reality is weirder and more interesting than that.</p>
+  <div class="meta-row">Last reviewed July 19, 2026</div>
+  <div class="quick-answer"><div class="label">QUICK ANSWER</div><p>There's no official ChatGPT mobile keyboard app. What OpenAI actually released is the Codex Micro, a $230 physical mechanical macropad designed to control AI coding agents on your desktop, not a smartphone typing keyboard.</p></div>
+  <div class="img-block"><img src="/guides/e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-upload-1784437590952.jpg" alt="Image related to this guide" loading="lazy"></div>
+  <article>
+    <p>If you saw headlines about 'ChatGPT's new keyboard' and went looking for a phone app, you're not going to find one. OpenAI hasn't released a software keyboard for iOS or Android. What they actually launched is something much more niche: a physical $230 mechanical macropad called the Codex Micro, built for people who use OpenAI's Codex AI coding tool all day. Here's what it is, what it does, and whether it's remotely relevant to you.</p>
+    <div class="section-block">
+      <h2>What the Codex Micro actually is (and isn't)</h2>
+      <p>The Codex Micro is a small physical keyboard accessory, think a chunky little control pad that sits next to your regular keyboard, not a replacement for it. OpenAI made it in collaboration with Work Louder, a specialty keyboard company, and according to The New Stack it shares hardware roots with Work Louder's existing Creator Micro 2 (though how much is genuinely new versus carried over isn't something OpenAI or Work Louder have spelled out publicly).</p>
+<p>It's built entirely around <b>Codex</b>, OpenAI's AI coding agent, not the general ChatGPT you use for conversation. The point is to give developers a dedicated physical interface for managing AI coding tasks without constantly tabbing back to a browser window.</p>
+<p>The hardware itself is genuinely interesting: six frosted light-up 'Agent Keys' that glow different colors depending on what your AI agents are doing (white for idle, blue for thinking, green for done, red for something went wrong), a rotary dial for adjusting reasoning levels, a joystick for triggering common coding workflows like reviewing a pull request or debugging an error, and a handful of Command Keys for things like accepting or rejecting AI suggestions. All together there are 13 mechanical switches (your choice of clicky or silent). It connects via Bluetooth or USB-C and is configurable through both the ChatGPT desktop app and Work Louder's own Input app, which gives you access to additional layers and customization.</p>
+<p>It is <b>not</b> a mobile keyboard. It doesn't work with your phone. It has nothing to do with typing in apps, rewriting text, or any of the features you'd expect from a smartphone keyboard extension.</p>
+      <div class="img-block"><img src="/guides/e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-img2.jpg" alt="Top-down diagram showing a full-size keyboard beside a smaller amber macropad labeled 'Codex Micro', illustrating that the macropad sits next to, not instead of, a regular keyboard." loading="lazy"><div class="img-caption">The Codex Micro isn't a keyboard — it's a compact macropad that sits alongside your existing keyboard as a dedicated control pad for AI coding agents.</div></div>
+      <div class="tool-card">
+    <div class="name"><img class="tool-logo" src="https://cdn.brandfetch.io/worklouderkeyboards.com?c=1idOMW55F9yEn4yaEWR" alt="" loading="lazy" onerror="this.style.display='none'">Codex Micro by OpenAI × Work Louder <a href="https://worklouderkeyboards.com" rel="noopener">→</a></div>
+    <div class="desc">A $230 physical macropad built to control OpenAI's Codex AI coding agents from your desktop. CNC aluminum body, mechanical switches (clicky or silent), RGB status lights, rotary dial, and joystick. Sold in limited quantities from both OpenAI and Work Louder directly.</div>
+    <div class="sw">Strengths: Gives Codex users tactile, at-a-glance agent status without switching windows · Configurable keys and multiple layers via Work Louder's Input app, usable with other apps too · Includes voice dictation for hands-free interaction</div>
+    <div class="sw">Limitations: Only useful if you're actively using Codex for coding, irrelevant for general ChatGPT users · Limited run with no confirmed international shipping or long-term software support as of July 2026 · Pricey for what is, functionally, a niche productivity accessory</div>
+  </div>
+    </div>
+<div class="section-block">
+      <h2>Who this is actually for (and a note on mobile keyboards)</h2>
+      <p>Honestly? The Codex Micro is for a pretty specific person: a developer who uses Codex heavily, runs multiple AI coding agents in parallel, and finds the context-switching between tasks annoying enough to spend $230 on a physical shortcut pad. Codex has a substantial user base (The New Stack put the number around 9 million, though that figure isn't sourced to an official OpenAI statement), so it's not a tiny audience, but this is still not a general consumer product.</p>
+<p>If you're a writer, designer, musician, or anyone who just wants AI help while typing on your phone, this product isn't for you, and there's no official OpenAI alternative to point you toward. Third-party apps do offer ChatGPT-powered keyboard extensions for iOS and Android via the API, but those aren't OpenAI products. Worth knowing the difference before you hand over your keystrokes to something unofficial.</p>
+<p>For Codex users who are curious: the keyboard is available to order now at $230 from both OpenAI and Work Louder's site, with first units expected to ship later in July 2026. Stock is described as limited. Double-check current availability before you commit, OpenAI framed this as a limited-run collaboration, not a permanent product line.</p>
+      
+      
+    </div>
+    <p>The 'ChatGPT keyboard' story turned out to be a case where the headline traveled further than the actual product deserved. The Codex Micro is a real, interesting piece of hardware, just a very specific one for a very specific workflow. If you're a developer deep in Codex, it might genuinely be useful. If you heard 'keyboard' and hoped for something that helps you write better texts or emails on your phone, that product simply doesn't exist yet from OpenAI.</p>
+  </article>
+  <div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul><li>OpenAI has not released a ChatGPT mobile keyboard app, any 'ChatGPT keyboard' you find in the App Store or Play Store is third-party.</li><li>The actual product is the Codex Micro: a $230 physical macropad for controlling AI coding agents on desktop.</li><li>It's co-made with Work Louder and designed specifically for Codex users, not general ChatGPT use.</li><li>It's a limited-run product, availability isn't guaranteed, and as of July 2026 OpenAI hasn't said anything publicly about long-term support.</li><li>If you want AI help while typing on your phone, you'll need to look at third-party options, not an official OpenAI product.</li></ul></div>
+  <div class="subscribe-block" id="subscribe">
+    <h3>Enjoyed this? Get the next one.</h3>
+    <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>
+    <form class="sub-form" id="subForm" data-buttondown="">
+      <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="sub-ok" id="subOk">✓ You're on the list.</div>
+  </div>
+  <div class="sources"><h2>Sources</h2><ul><li>Amid hardware legal battle, OpenAI releases a $230 keyboard for Codex — TechCrunch<br><span class="pub">independent reporting · primary source · <a href="https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/" rel="noopener">source</a></span></li><li>Meet the Codex Micro: OpenAI's Physical Keyboard for Coders $230 — Geeky Gadgets<br><span class="pub">independent reporting · <a href="https://www.geeky-gadgets.com/openai-work-louder-codex-micro/" rel="noopener">source</a></span></li><li>OpenAI's first gadget is the $230 Codex Micro macropad — The New Stack<br><span class="pub">independent reporting · <a href="https://thenewstack.io/openai-codex-micro-macropad/" rel="noopener">source</a></span></li><li>OpenAI's First Hardware Is a $230 Keypad for Controlling Codex Agents — Technology.org<br><span class="pub">independent reporting · <a href="https://www.technology.org/2026/07/17/openai-codex-micro-keypad-work-louder/" rel="noopener">source</a></span></li><li>OpenAI Launches Codex Micro, a $230 Mechanical Keypad for AI Coding — gHacks Tech News<br><span class="pub">independent reporting · <a href="https://www.ghacks.net/2026/07/18/openai-launches-codex-micro-a-230-mechanical-keypad-for-ai-coding/" rel="noopener">source</a></span></li><li>OpenAI selling $230 Codex Micro hardware product — 9to5Mac<br><span class="pub">independent reporting · <a href="https://9to5mac.com/2026/07/15/openai-selling-230-codex-micro-hardware-product/" rel="noopener">source</a></span></li><li>ChatGPT — Release Notes — OpenAI Help Center<br><span class="pub">official docs · primary source · <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" rel="noopener">source</a></span></li><li>OpenAI Newsroom | Product — OpenAI<br><span class="pub">company announcement · primary source · <a href="https://openai.com/news/product-releases/" rel="noopener">source</a></span></li></ul></div>
+  <div class="methodology"><b style="color:var(--text)">Methodology:</b> This guide was researched using reporting from TechCrunch, The New Stack, gHacks, 9to5Mac, Geeky Gadgets, and Technology.org, cross-referenced against OpenAI's official product release page and ChatGPT Help Center release notes. The original article brief assumed the existence of an official ChatGPT mobile software keyboard, which sources did not support, the guide was reframed accordingly around the actual product launched (Codex Micro). All capability and availability claims are sourced from the publications listed above, which are independent reviews rather than official OpenAI documentation; where OpenAI's own pages confirmed or contradicted claims, that is noted. dailyblip did not test the Codex Micro directly.</div>
+  <div class="foot-note">Last reviewed July 19, 2026. Have a correction? <a href="mailto:hello@dailyblip.ai">Tell us</a>.</div>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+$("#subForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const email = $("#subEmail").value;
+  if (!email || !email.includes("@")) return;
+  const user = $("#subForm").dataset.buttondown;
+  if (user) {
+    try {
+      await fetch(`https://buttondown.com/api/emails/embed-subscribe/${user}`, {
+        method: "POST", mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ email }),
+      });
+    } catch {}
+  }
+  $("#subForm").style.display = "none";
+  $("#subOk").style.display = "block";
+});
+</script>
+</body></html>

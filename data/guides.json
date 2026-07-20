@@ -1068,8 +1068,8 @@
   },
   {
     "id": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "What is ChatGPT's new keyboard?",
       "article_type": "Practical guide",
@@ -1452,6 +1452,8 @@
         "generated_at": "2026-07-19T05:06:32.055Z"
       }
     ],
-    "approved_at": "2026-07-20T00:02:57.255Z"
+    "approved_at": "2026-07-20T00:02:57.255Z",
+    "published_at": "2026-07-20T00:03:29.419Z",
+    "published_url": "https://dailyblip.ai/guides/chatgpt-codex-micro-keyboard-explained.html"
   }
 ]

@@ -1,42 +1,14 @@
 [
   {
-    "title": "OpenAI Codex CLI: What It Actually Does and How to Get Started",
-    "slug": "openai-codex-cli-beginner-guide",
-    "dek": "It's not a chatbot. It's an AI agent that reads your files, writes code, and runs commands, right from your terminal.",
-    "hero_image": "/guides/084e5bb8-c77c-4918-ae78-38b9cfff4e89-img1.jpg",
-    "published_at": "2026-07-19T04:41:35.018Z",
-    "tags": []
-  },
-  {
-    "title": "Why Your AI Content Looks Like AI and How to Fix It",
-    "slug": "why-ai-content-looks-like-ai-how-to-fix-it",
-    "dek": "The tells are more specific than you think, and most of them happen before you hit generate.",
-    "hero_image": "/guides/b403d458-0ff3-40ed-b2bd-608518c03e28-img1.jpg",
-    "published_at": "2026-07-18T04:51:14.819Z",
-    "tags": []
-  },
-  {
-    "title": "The AI Content Creator Tools Actually Worth Your Time in 2026",
-    "slug": "best-ai-content-creator-tools-2026",
-    "dek": "A shortlist of AI tools for people who make things, matched to what you already create, not what sounds impressive.",
-    "hero_image": "/guides/95a0fbff-dc10-4758-b956-5d78a5240198-img1.jpg",
-    "published_at": "2026-07-18T04:08:07.316Z",
-    "tags": []
-  },
-  {
-    "title": "10 Best AI Music Generators for Beginners: Features, Pricing, and Use Cases",
-    "slug": "best-ai-music-generators-beginners",
-    "dek": "You don't need to know anything about music production to make a usable track. Here's where to start.",
-    "hero_image": "/guides/ebed959a-3450-4aed-bf58-6dd9d84d7dc0-img1.jpg",
-    "published_at": "2026-07-18T03:47:56.436Z",
-    "tags": []
-  },
-  {
-    "title": "The 3 AI Video Generators Worth Starting With in 2026",
-    "slug": "top-ai-video-generators-2026",
-    "dek": "Kling and Runway are the two tools actually worth committing to right now. Here's who each one suits, what to expect from them, and the licensing caveats you need to know before publishing anything.",
-    "hero_image": null,
-    "published_at": "2026-07-18T02:06:18.232Z",
-    "tags": []
+    "title": "ChatGPT's New Keyboard Is Not What You Think It Is",
+    "slug": "chatgpt-codex-micro-keyboard-explained",
+    "dek": "You probably heard 'ChatGPT has a new keyboard' and pictured a phone app. The reality is weirder and more interesting than that.",
+    "hero_image": "/guides/e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-upload-1784437590952.jpg",
+    "published_at": "2026-07-20T00:03:29.419Z",
+    "tags": [
+      "Tools & Workflow",
+      "Coding",
+      "Getting Started"
+    ]
   }
 ]
