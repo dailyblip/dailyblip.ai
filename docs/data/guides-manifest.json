@@ -1,5 +1,125 @@
 [
   {
+    "title": "How to Make Midjourney Images Look Less Like AI Art",
+    "slug": "how-to-make-midjourney-images-look-less-like-ai-art",
+    "dek": "The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.",
+    "hero_image": "/guides/20.jpg",
+    "published_at": "2026-07-20T23:56:16.521Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "15 Midjourney Prompts for Editorial Illustrations and Article Hero Images",
+    "slug": "15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images",
+    "dek": "Clean, composed images for blogs, newsletters, and explainer articles.",
+    "hero_image": "/guides/19.jpg",
+    "published_at": "2026-07-20T23:53:35.830Z",
+    "tags": [
+      "Image Generation",
+      "Tools & Workflow"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "How to Create a Consistent Visual Style in Midjourney",
+    "slug": "how-to-create-a-consistent-visual-style-in-midjourney",
+    "dek": "Reuse style references and prompt language across a whole campaign or series.",
+    "hero_image": "/guides/18.jpg",
+    "published_at": "2026-07-20T23:44:36.366Z",
+    "tags": [
+      "Image Generation",
+      "Tools & Workflow"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "20 Midjourney Prompts for Cinematic Images That Do Not Look Generic",
+    "slug": "20-midjourney-prompts-for-cinematic-images-that-dont-look-generic",
+    "dek": "Built around lighting, lens choice, and atmosphere, not just the word cinematic.",
+    "hero_image": "/guides/17.jpg",
+    "published_at": "2026-07-20T23:34:44.907Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "How to Write Better Midjourney Prompts: From Basic Idea to Finished Image",
+    "slug": "how-to-write-better-midjourney-prompts-from-basic-idea-to-finished-image",
+    "dek": "Prompt structure, parameters, and the iteration habit that actually improves results.",
+    "hero_image": "/guides/16.jpg",
+    "published_at": "2026-07-20T23:29:56.768Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "How to Edit AI Images With ChatGPT Without Starting Over",
+    "slug": "how-to-edit-ai-images-with-chatgpt-without-starting-over",
+    "dek": "Change one thing at a time and keep the parts that already work.",
+    "hero_image": "/guides/15.jpg",
+    "published_at": "2026-07-20T23:28:44.026Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "12 ChatGPT Prompts for Professional Product Photography Without a Studio",
+    "slug": "12-chatgpt-prompts-for-professional-product-photography-without-a-studio",
+    "dek": "Clean ecommerce shots, lifestyle scenes, and premium ad images, no photographer required.",
+    "hero_image": "/guides/14.jpg",
+    "published_at": "2026-07-20T23:25:12.928Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "How to Keep Characters Consistent in ChatGPT Image Generation",
+    "slug": "how-to-keep-characters-consistent-in-chatgpt-image-generation",
+    "dek": "Keep the same face, outfit, and style across a whole set of images.",
+    "hero_image": "/guides/13.jpg",
+    "published_at": "2026-07-20T23:24:08.585Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "15 ChatGPT Image Prompts for Scroll-Stopping Social Media Posts",
+    "slug": "15-chatgpt-image-prompts-for-scroll-stopping-social-media-posts",
+    "dek": "Ready-to-use prompts for product shots, announcements, carousels, and branded graphics.",
+    "hero_image": "/guides/12.jpg",
+    "published_at": "2026-07-20T23:23:11.626Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "How to Get Better Images From ChatGPT: A Practical Prompting Guide",
+    "slug": "how-to-get-better-images-from-chatgpt-a-practical-prompting-guide",
+    "dek": "Describe composition, lighting, and style like a creative director, not a search query.",
+    "hero_image": "/guides/11.jpg",
+    "published_at": "2026-07-20T23:22:44.104Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
     "title": "20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks",
     "slug": "20-suno-prompts-for-better-song-structure-bigger-choruses-an",
     "dek": "Fix weak arrangements and forgettable choruses with these structure-focused prompts.",
@@ -70,115 +190,5 @@
       "Getting Started"
     ],
     "pinned": false
-  },
-  {
-    "title": "How to Get Better Images From ChatGPT: A Practical Prompting Guide",
-    "slug": "how-to-get-better-images-from-chatgpt-a-practical-prompting-guide",
-    "dek": "Describe composition, lighting, and style like a creative director, not a search query.",
-    "hero_image": "/guides/11.jpg",
-    "published_at": "2026-07-20T23:22:44.104Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "15 ChatGPT Image Prompts for Scroll-Stopping Social Media Posts",
-    "slug": "15-chatgpt-image-prompts-for-scroll-stopping-social-media-posts",
-    "dek": "Ready-to-use prompts for product shots, announcements, carousels, and branded graphics.",
-    "hero_image": "/guides/12.jpg",
-    "published_at": "2026-07-20T23:23:11.626Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "How to Keep Characters Consistent in ChatGPT Image Generation",
-    "slug": "how-to-keep-characters-consistent-in-chatgpt-image-generation",
-    "dek": "Keep the same face, outfit, and style across a whole set of images.",
-    "hero_image": "/guides/13.jpg",
-    "published_at": "2026-07-20T23:24:08.585Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "12 ChatGPT Prompts for Professional Product Photography Without a Studio",
-    "slug": "12-chatgpt-prompts-for-professional-product-photography-without-a-studio",
-    "dek": "Clean ecommerce shots, lifestyle scenes, and premium ad images, no photographer required.",
-    "hero_image": "/guides/14.jpg",
-    "published_at": "2026-07-20T23:25:12.928Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "How to Edit AI Images With ChatGPT Without Starting Over",
-    "slug": "how-to-edit-ai-images-with-chatgpt-without-starting-over",
-    "dek": "Change one thing at a time and keep the parts that already work.",
-    "hero_image": "/guides/15.jpg",
-    "published_at": "2026-07-20T23:28:44.026Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "How to Write Better Midjourney Prompts: From Basic Idea to Finished Image",
-    "slug": "how-to-write-better-midjourney-prompts-from-basic-idea-to-finished-image",
-    "dek": "Prompt structure, parameters, and the iteration habit that actually improves results.",
-    "hero_image": "/guides/16.jpg",
-    "published_at": "2026-07-20T23:29:56.768Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "20 Midjourney Prompts for Cinematic Images That Do Not Look Generic",
-    "slug": "20-midjourney-prompts-for-cinematic-images-that-dont-look-generic",
-    "dek": "Built around lighting, lens choice, and atmosphere, not just the word cinematic.",
-    "hero_image": "/guides/17.jpg",
-    "published_at": "2026-07-20T23:34:44.907Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
-  },
-  {
-    "title": "How to Create a Consistent Visual Style in Midjourney",
-    "slug": "how-to-create-a-consistent-visual-style-in-midjourney",
-    "dek": "Reuse style references and prompt language across a whole campaign or series.",
-    "hero_image": "/guides/18.jpg",
-    "published_at": "2026-07-20T23:44:36.366Z",
-    "tags": [
-      "Image Generation",
-      "Tools & Workflow"
-    ]
-  },
-  {
-    "title": "15 Midjourney Prompts for Editorial Illustrations and Article Hero Images",
-    "slug": "15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images",
-    "dek": "Clean, composed images for blogs, newsletters, and explainer articles.",
-    "hero_image": "/guides/19.jpg",
-    "published_at": "2026-07-20T23:53:35.830Z",
-    "tags": [
-      "Image Generation",
-      "Tools & Workflow"
-    ]
-  },
-  {
-    "title": "How to Make Midjourney Images Look Less Like AI Art",
-    "slug": "how-to-make-midjourney-images-look-less-like-ai-art",
-    "dek": "The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.",
-    "hero_image": "/guides/20.jpg",
-    "published_at": "2026-07-20T23:56:16.521Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ]
   }
 ]
