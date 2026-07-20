@@ -549,5 +549,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-20-suno-prompts-for-better-song-structure-bigger-choruses-an",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T21:22:07.648Z",
+    "created_at": "2026-07-20T21:22:07.648Z",
+    "published_url": "https://dailyblip.ai/guides/20-suno-prompts-for-better-song-structure-bigger-choruses-an.html",
+    "article": {
+      "title": "20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks",
+      "slug": "20-suno-prompts-for-better-song-structure-bigger-choruses-an",
+      "dek": "Fix weak arrangements and forgettable choruses with these structure-focused prompts.",
+      "tags": [
+        "AI Music",
+        "Tools & Workflow"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "10.jpg",
+        "approved": true,
+        "alt_text": "20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks"
+      }
+    ],
+    "backfilled": true
   }
 ]
