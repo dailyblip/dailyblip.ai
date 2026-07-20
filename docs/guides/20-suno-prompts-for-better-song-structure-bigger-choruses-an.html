@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks — dailyblip</title>
+<meta name="description" content="Fix weak arrangements and forgettable choruses with these structure-focused prompts.">
+<link rel="canonical" href="https://dailyblip.ai/guides/20-suno-prompts-for-better-song-structure-bigger-choruses-an.html">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13); --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79; --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:36px 24px 90px}
+.back{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:26px}
+.back a{color:var(--faint)} .back a:hover{color:var(--amber)}
+.guide-tag{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--amber);
+  border:1px solid rgba(255,180,84,.4);border-radius:20px;padding:5px 14px;margin-bottom:20px;
+}
+h1{font-family:var(--display);font-weight:750;font-size:clamp(28px,5vw,40px);letter-spacing:-.02em;line-height:1.14;margin-bottom:16px}
+.dek{color:var(--dim);font-size:18px;line-height:1.55;margin-bottom:22px}
+.meta-row{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.page-tags{display:flex;gap:6px;flex-wrap:wrap;margin:-8px 0 24px}
+.page-tag-chip{font-family:var(--mono);font-size:10.5px;color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:12px;padding:3px 10px}
+.quick-answer{border:1px solid var(--line-strong);border-radius:10px;padding:18px 20px;margin-bottom:30px;background:rgba(255,180,84,.05)}
+.quick-answer .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--amber-deep);margin-bottom:6px}
+article p{color:var(--dim);margin-bottom:18px}
+article h2{font-family:var(--display);font-weight:650;font-size:24px;letter-spacing:-.01em;color:var(--text);margin:36px 0 14px}
+article h3{font-family:var(--display);font-weight:600;font-size:19px;color:var(--text);margin:26px 0 10px}
+article ul{margin:0 0 18px 20px;color:var(--dim)}
+article li{margin-bottom:6px}
+article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.3)} article a:hover{border-bottom-color:var(--amber)}
+.section-block{margin:38px 0}
+.img-block{margin:26px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.img-block img{display:block;width:100%;height:auto}
+.img-caption{font-family:var(--mono);font-size:11.5px;color:var(--faint);padding:8px 2px}
+.tool-card{border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin:20px 0;background:rgba(158,216,210,.02)}
+.tool-card .name{font-weight:700;font-size:19px;margin-bottom:8px;display:flex;align-items:center;gap:11px}
+.tool-logo{width:28px;height:28px;object-fit:contain;border-radius:6px;flex-shrink:0}
+.tool-card .desc{color:var(--dim);font-size:15.5px;line-height:1.6;margin-bottom:12px}
+.tool-card .sw{font-size:14px;color:var(--faint);line-height:1.7;margin-bottom:6px}
+.takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
+.takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
+.takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
+.prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.prompt-card{margin-bottom:14px}
+.prompt-card:last-child{margin-bottom:0}
+.prompt-label{font-size:13px;color:var(--dim);margin-bottom:6px}
+.prompt-row{display:flex;gap:8px;align-items:flex-start}
+.prompt-text{flex:1;display:block;font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--text);background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;white-space:pre-wrap;word-break:break-word}
+.prompt-copy{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--aqua);border:1px solid rgba(99,216,198,.4);border-radius:6px;padding:6px 12px;background:none;cursor:pointer;transition:all .15s ease;align-self:flex-start}
+.prompt-copy:hover{border-color:var(--aqua);background:rgba(99,216,198,.08)}
+.prompt-copy.copied{color:var(--amber);border-color:var(--amber-deep)}
+.sources{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.sources summary{cursor:pointer;font-family:var(--display);font-weight:650;font-size:16px;color:var(--text);list-style:revert}
+.sources ul{margin-top:12px}
+.sources li{font-size:13.5px;color:var(--dim);padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.sources .pub{color:var(--faint);font-family:var(--mono);font-size:11px}
+.foot-note{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint);line-height:1.6}
+.item{padding:12px 0;border-top:1px solid var(--line)}
+.top-nudge{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:22px}
+.top-nudge a{color:var(--amber-deep)}
+.subscribe-block{border:1px solid var(--line-strong);border-radius:12px;padding:26px 24px;margin:36px 0;text-align:center}
+.subscribe-block h3{font-family:var(--display);font-size:19px;margin-bottom:8px}
+.subscribe-block p{color:var(--dim);font-size:14px;margin-bottom:16px}
+.sub-form{display:flex;gap:8px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.sub-form input{flex:1;min-width:200px;background:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:11px 13px;color:var(--text);font-family:var(--body);font-size:14px;outline:none}
+.sub-form input:focus{border-color:var(--amber-deep)}
+.sub-form button{background:var(--amber);color:#20160a;border:none;border-radius:8px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--body)}
+.sub-form button:hover{filter:brightness(1.08)}
+.sub-ok{display:none;color:var(--aqua);font-size:13.5px;margin-top:10px}
+</style></head><body>
+<div class="wrap">
+  <div class="back"><a href="/">← dailyblip</a> · <a href="./">guides</a></div>
+  <div class="top-nudge">Get guides like this by email → <a href="#subscribe">subscribe below</a></div>
+  <div class="guide-tag">Guide</div>
+  <h1>20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks</h1>
+  <p class="dek">Fix weak arrangements and forgettable choruses with these structure-focused prompts.</p>
+  <div class="meta-row">Last reviewed July 20, 2026</div>
+  <div class="page-tags"><span class="page-tag-chip">AI Music</span><span class="page-tag-chip">Tools &amp; Workflow</span></div>
+  
+  <div class="img-block"><img src="/guides/10.jpg" alt="20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks" loading="lazy"></div>
+  <article>
+    <p>A song can have a great melody and still fall flat if the structure doesn't build anywhere. These prompts target the arrangement itself, not just the sound.</p>
+    <div class="section-block">
+      <h2>Prompts to try</h2>
+      <p>Twenty prompts, each aimed at a different structural problem — pick the one that matches what's actually wrong with your song.</p>
+      
+      
+      <div class="prompts-block">
+    <div class="prompts-label">PROMPTS TO TRY</div>
+    
+      <div class="prompt-card">
+        <div class="prompt-label">Bigger chorus via production contrast</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Verse stripped back, chorus full band, wide stereo, anthemic</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Verse stripped back, chorus full band, wide stereo, anthemic" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Real dynamic build into the chorus</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Quiet intimate verse building to explosive chorus, dynamic contrast, cinematic swell</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Quiet intimate verse building to explosive chorus, dynamic contrast, cinematic swell" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Repeated, memorable hook line</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Hook] repeated hook line, belted and powerful delivery, high energy</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Hook] repeated hook line, belted and powerful delivery, high energy" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Bridge that actually contrasts</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Bridge strips down to vocals and single instrument before final chorus returns full</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Bridge strips down to vocals and single instrument before final chorus returns full" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Second verse that doesn't repeat the first</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Second verse adds one new instrument layer not present in verse one, subtle build</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Second verse adds one new instrument layer not present in verse one, subtle build" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Automatic pre-chorus lift</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Pre-Chorus] rising energy, building tension, drums entering gradually into the drop</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Pre-Chorus] rising energy, building tension, drums entering gradually into the drop" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Cold open with an instrumental hook</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Intro] instrumental hook, melodic riff introduced before vocals enter, memorable motif</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Intro] instrumental hook, melodic riff introduced before vocals enter, memorable motif" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Call-and-response chorus</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Chorus] call and response between lead vocal and backing vocals, layered group energy</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Chorus] call and response between lead vocal and backing vocals, layered group energy" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Key change for the final chorus</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Final chorus modulates up a key, bigger arrangement, more intensity than previous choruses</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Final chorus modulates up a key, bigger arrangement, more intensity than previous choruses" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Breakdown before the last hook</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Break] instrumental breakdown, strips to rhythm section only, tension building back to final hook</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Break] instrumental breakdown, strips to rhythm section only, tension building back to final hook" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Ad-libs to keep a repeated chorus interesting</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Chorus] main vocal line with ad-libs and vocal runs layered on the repeat, not identical to first chorus</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Chorus] main vocal line with ad-libs and vocal runs layered on the repeat, not identical to first chorus" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Stronger outro that doesn't just fade</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Outro] hook line repeats and strips down instrument by instrument to a final solo vocal or instrument</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Outro] hook line repeats and strips down instrument by instrument to a final solo vocal or instrument" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Pre-chorus that sets up the hook lyrically</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Pre-Chorus] lyrics build anticipation directly toward the hook line that follows</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Pre-Chorus] lyrics build anticipation directly toward the hook line that follows" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Bigger drums for the final chorus only</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Final chorus adds double-time drum pattern and extra percussion layer not present earlier</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Final chorus adds double-time drum pattern and extra percussion layer not present earlier" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Instrumental hook that recurs</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Signature instrumental riff from the intro reappears between chorus and final chorus as a recurring motif</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Signature instrumental riff from the intro reappears between chorus and final chorus as a recurring motif" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Vocal harmony stacking for impact</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Chorus] three-part vocal harmony stack on the hook line, wide and full</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Chorus] three-part vocal harmony stack on the hook line, wide and full" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Verse that's deliberately restrained</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Verse: sparse arrangement, single instrument and vocal only, deliberate restraint to make the chorus land harder</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Verse: sparse arrangement, single instrument and vocal only, deliberate restraint to make the chorus land harder" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">A bridge that changes the groove entirely</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Bridge shifts to half-time groove, different rhythmic feel than the rest of the song, before returning to full tempo</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Bridge shifts to half-time groove, different rhythmic feel than the rest of the song, before returning to full tempo" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Tag ending on the hook</div>
+        <div class="prompt-row">
+          <code class="prompt-text">[Outro] repeats final hook line three times, each time with less instrumentation, ending on a cappella vocal</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="[Outro] repeats final hook line three times, each time with less instrumentation, ending on a cappella vocal" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Building energy across three choruses</div>
+        <div class="prompt-row">
+          <code class="prompt-text">Each chorus repeat adds one new layer of instrumentation, first chorus sparsest, final chorus fullest</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="Each chorus repeat adds one new layer of instrumentation, first chorus sparsest, final chorus fullest" type="button">Copy</button>
+        </div>
+      </div>
+  </div>
+    </div>
+<div class="section-block">
+      <h2>What actually controls structure</h2>
+      <p>Structure tags like [Verse], [Pre-Chorus], and [Chorus] in your lyrics field do more for arrangement than any style descriptor.</p>
+<p>Suno treats a [Pre-Chorus] as a transition and builds energy into it automatically, which is an easy way to get a lift you didn't have to describe yourself.</p>
+<p>If a chorus still isn't landing, the fix is usually in the lyrics field, not the style field. Tighten the actual hook line before you touch the production tags.</p>
+      
+      
+      
+    </div>
+    <p>Structure problems rarely get fixed by better sound. They get fixed by better contrast between sections, and Suno responds to that contrast if you actually describe it.</p>
+  </article>
+  
+  <div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul><li>Use [Pre-Chorus] tags to get an automatic energy build into your chorus.</li><li>Describe production contrast directly: "verse stripped back, chorus full band."</li><li>If a hook isn't landing, fix the line itself before touching production tags.</li></ul></div>
+  <div class="subscribe-block" id="subscribe">
+    <h3>Enjoyed this? Get the next one.</h3>
+    <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>
+    <form class="sub-form" id="subForm" data-buttondown="">
+      <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="sub-ok" id="subOk">✓ You're on the list.</div>
+  </div>
+  
+
+  <div class="foot-note">Last reviewed July 20, 2026. Have a correction? <a href="mailto:hello@dailyblip.ai">Tell us</a>.</div>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+function copyPrompt(btn){
+  const text = btn.dataset.prompt;
+  const showCopied = () => {
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    btn.classList.add("copied");
+    setTimeout(() => { btn.textContent = original; btn.classList.remove("copied"); }, 1800);
+  };
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(showCopied).catch(() => { btn.textContent = "Copy failed — select manually"; });
+  } else {
+    // Fallback for contexts without the Clipboard API (older browsers,
+    // non-HTTPS) -- selects the text so the person can copy it manually
+    // with their own keyboard shortcut instead of failing silently.
+    const range = document.createRange();
+    const codeEl = btn.previousElementSibling;
+    if (codeEl) {
+      range.selectNodeContents(codeEl);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    btn.textContent = "Selected — press Ctrl/Cmd+C";
+  }
+}
+$("#subForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const email = $("#subEmail").value;
+  if (!email || !email.includes("@")) return;
+  const user = $("#subForm").dataset.buttondown;
+  if (user) {
+    try {
+      await fetch(`https://buttondown.com/api/emails/embed-subscribe/${user}`, {
+        method: "POST", mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ email }),
+      });
+    } catch {}
+  }
+  $("#subForm").style.display = "none";
+  $("#subOk").style.display = "block";
+});
+</script>
+</body></html>
