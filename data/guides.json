@@ -1,8 +1,8 @@
 [
   {
     "id": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "submitted": {
       "idea": "10 Prompts to make your Suno music better",
       "article_type": "Top tools list",
@@ -438,6 +438,8 @@
     "overridden_warnings": [
       "s1: The article conflates V4.5, V5, and V5.5 under one 1,000-character cap, but the source (aimusicapi.ai) lists V4.5, V4.5+, V5, and V5.5 separately — the article should not imply V5 and V5.5 share the V4.5 limit without noting V5/V5.5 may differ, and 'V4.5 and newer' overgeneralizes across model versions not confirmed to be identical.",
       "s1: The official Suno X announcement source confirms the Exclude feature is Pro/Premier only in Custom Mode, but the article does not clarify that Basic/free-plan users lack access to this field entirely — a material omission for readers on the free tier."
-    ]
+    ],
+    "published_at": "2026-07-20T05:27:22.288Z",
+    "published_url": "https://dailyblip.ai/guides/suno-prompts-that-actually-work.html"
   }
 ]
