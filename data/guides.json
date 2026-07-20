@@ -443,7 +443,7 @@
   {
     "id": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "submitted": {
       "idea": "10 Prompts to make your Suno music better",
       "article_type": "Top tools list",
@@ -455,6 +455,23 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T05:00:17.169Z",
-    "updated_at": "2026-07-20T05:00:17.169Z"
+    "updated_at": "2026-07-20T05:00:49.499Z",
+    "brief": {
+      "target_reader": "Someone who has tried Suno once or twice and gotten okay results, but isn't sure how to write prompts that actually sound like what they're imagining",
+      "reader_outcome": "Feel confident enough to go back to Suno and write a noticeably better prompt today",
+      "structure_plan": [
+        "Why your Suno prompts probably aren't working yet",
+        "10 prompts (and what makes each one tick)"
+      ],
+      "claims_to_verify": [
+        "Suno uses a text prompt (style tags, mood, instrumentation, etc.) to guide music generation — confirm what the prompt input field actually accepts and how it's labeled in the current UI",
+        "Suno supports a 'custom mode' or similar that lets users write lyrics and style descriptions separately — confirm this feature exists and what it's called",
+        "Suno responds to genre, mood, tempo feel (e.g. 'slow,' 'driving'), instrumentation, and vocal style descriptors — confirm which of these actually influence output reliably vs. inconsistently",
+        "Suno does NOT reliably respond to BPM numbers or music-theory-specific terms — confirm whether this is still the case or whether it has improved",
+        "Whether Suno's prompt field has a character limit that affects how detailed a prompt can be",
+        "Whether Suno allows negative prompting (telling it what NOT to include) — confirm if this is supported"
+      ],
+      "research_plan": "Prioritize Suno's own documentation and official help/FAQ pages for UI details and supported prompt features. Supplement with hands-on creator writeups, Reddit threads (r/SunoAI), and YouTube tutorials from active users to understand what prompt patterns actually work in practice. Avoid relying on single blog posts for capability claims — cross-check anything about what Suno 'understands' against multiple user reports. Since this is a prompting guide not a pricing guide, skip plan/quota details entirely."
+    }
   }
 ]
