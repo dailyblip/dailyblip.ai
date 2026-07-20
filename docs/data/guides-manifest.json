@@ -70,5 +70,16 @@
       "Getting Started"
     ],
     "pinned": false
+  },
+  {
+    "title": "How to Get Better Images From ChatGPT: A Practical Prompting Guide",
+    "slug": "how-to-get-better-images-from-chatgpt-a-practical-prompting-guide",
+    "dek": "Describe composition, lighting, and style like a creative director, not a search query.",
+    "hero_image": "/guides/11.jpg",
+    "published_at": "2026-07-20T23:22:44.104Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ]
   }
 ]
