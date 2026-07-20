@@ -1,6 +1,6 @@
 {
   "issue": 241,
-  "generated_at": "2026-07-20T10:25:46.951Z",
+  "generated_at": "2026-07-20T15:33:14.199Z",
   "brief": {
     "items": [
       {
@@ -82,6 +82,74 @@
       "top": true
     },
     {
+      "id": "s_735b682e0d0efd97",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Lightcraft's Spark Story uses iPhone to generate virtual film sets from scripts",
+      "dek": "SIGGRAPH 2026 revealed Spark Story, which converts screenplays into USD/Gaussian Splat environments and enables on-device shot planning before production.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/3d/i-watched-lightcraft-turn-a-screenplay-into-a-virtual-film-set-using-an-iphone",
+      "ts": "2026-07-20T15:30:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 102,
+      "move": 56
+    },
+    {
+      "id": "s_93c83145e8c7884e",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "YouTube clarifies monetization policy for AI-generated and low-quality content",
+      "dek": "YouTube updated policies defining which AI-generated and repetitive videos can't earn ad revenue, adding nuance to existing inauthentic-content rules.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
+      "ts": "2026-07-20T15:23:06.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 54
+    },
+    {
+      "id": "s_90cef26b7e07e68a",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Moonshot and Alibaba release frontier AI models challenging OpenAI and Anthropic",
+      "dek": "Chinese AI companies launched competitive models claimed to match OpenAI/Anthropic capabilities at lower cost, narrowing the US AI lead.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+      "ts": "2026-07-20T10:16:33.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 97,
+      "move": 57
+    },
+    {
+      "id": "s_6dea1640e408017e",
+      "cat": "video",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "DeepMind AI reconstructs Pelé's legendary unfilmed goal using motion synthesis",
+      "dek": "Google DeepMind recreated a famous 1959 goal Pelé claimed was his best but was never captured on video, using AI to synthesize the play from his account.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/20/ai-recreates-the-goal-pele-said-was-his-greatest-ever-but-wasnt-filmed/",
+      "ts": "2026-07-20T08:58:49.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 85,
+      "move": 52
+    },
+    {
       "id": "s_c57b245c362dd255",
       "cat": "writing",
       "badge": "new",
@@ -96,8 +164,8 @@
       "ts": "2026-07-20T04:07:57.883Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 57
+      "heat": 83,
+      "move": -9
     },
     {
       "id": "s_444761f503abeda7",
@@ -114,8 +182,8 @@
       "ts": "2026-07-20T00:31:13.665Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": 53
+      "heat": 79,
+      "move": -6
     },
     {
       "id": "s_90851a797dd057ee",
@@ -131,8 +199,8 @@
       "ts": "2026-07-19T21:16:07.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 81,
-      "move": -7
+      "heat": 74,
+      "move": -18
     },
     {
       "id": "s_c0ef7a87d4b35aa6",
@@ -148,8 +216,8 @@
       "ts": "2026-07-19T17:35:54.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 87,
-      "move": -5
+      "heat": 80,
+      "move": -6
     },
     {
       "id": "s_5767ddd493bb4165",
@@ -165,8 +233,8 @@
       "ts": "2026-07-19T14:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 74,
-      "move": -16
+      "heat": 68,
+      "move": -8
     },
     {
       "id": "s_c60035e6bb3c677d",
@@ -183,7 +251,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_01582b84f95050bc",
@@ -200,7 +268,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_3ad838364711ce9b",
@@ -217,7 +285,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_4e6f73ed1f19a4ce",
@@ -234,7 +302,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_2eed32c959cdf779",
@@ -251,7 +319,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_a49f55bafe0aeb0e",
@@ -268,7 +336,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_133497b699bf0fd6",
@@ -285,7 +353,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_b51b6c107383df8e",
@@ -302,7 +370,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_ac7be8d09d06872b",
@@ -319,7 +387,7 @@
       "read": "5 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_4d76675668887bf8",
@@ -336,7 +404,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_a0bbc2c6e6f2a453",
@@ -353,7 +421,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -370,7 +438,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -387,7 +455,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -404,7 +472,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_252ccc31ca52ec00",
@@ -421,7 +489,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -438,7 +506,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -455,7 +523,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -472,7 +540,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -489,7 +557,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -506,7 +574,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -523,7 +591,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -540,7 +608,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -557,7 +625,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_79ed56faeda92346",
@@ -574,7 +642,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -591,7 +659,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -608,7 +676,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -625,7 +693,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -642,7 +710,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -659,7 +727,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -676,7 +744,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_3090d72b6869197e",
@@ -693,7 +761,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -710,7 +778,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -727,7 +795,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -744,7 +812,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -761,7 +829,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -779,7 +847,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -796,7 +864,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -813,7 +881,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_99a19263a8c15f19",
@@ -830,7 +898,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_976a1a3eff5f1d7b",
@@ -847,7 +915,7 @@
       "read": "4 min",
       "also": [],
       "heat": 95,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_ac1e314b2ff426dc",
@@ -865,7 +933,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_f8bec47bee6c00a0",
@@ -882,7 +950,7 @@
       "read": "5 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_d173222f3e599859",
@@ -900,7 +968,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": -3
     },
     {
       "id": "s_53e3149d2cc17d3e",
@@ -917,7 +985,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_5c8332d4091eee10",
@@ -934,7 +1002,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_264ddc681c98a9a5",
@@ -951,7 +1019,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_8ed791a2a8b1f044",
@@ -968,7 +1036,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_18de27eea197aabe",
@@ -985,7 +1053,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_84777b05d9b25937",
@@ -1002,7 +1070,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -4
     },
     {
       "id": "s_fe6ab2efc212fece",
@@ -1020,74 +1088,6 @@
       "also": [],
       "heat": 85,
       "move": -1
-    },
-    {
-      "id": "s_c0ac8f261d4797a3",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": true,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Concept artist Daniel Porto accelerates 20 years of vision with AI",
-      "dek": "Porto leverages AI to collapse the gap between imagination and production, but emphasizes experienced judgment—not prompting—as the real competitive edge in creative work.",
-      "src": "Creative Bloq AI",
-      "url": "https://www.creativebloq.com/3d/ai-has-amplified-my-20-years-of-experience-believes-concept-artist-daniel-porto",
-      "ts": "2026-07-15T15:00:00.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 70,
-      "move": -2
-    },
-    {
-      "id": "s_a9eaf0c587df10e3",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "Ode with Anthropic embeds forward-deployed AI engineers into enterprise",
-      "dek": "Ode, a joint venture backed by Anthropic and major financial firms, acquired Fractional AI to place specialized engineers inside enterprise organizations, betting AI services will replace traditional consulting.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/video/inside-ode-with-anthropic-the-startup-betting-ai-services-are-the-future-of-enterprise/",
-      "ts": "2026-07-15T15:00:00.000Z",
-      "read": "5 min",
-      "also": [],
-      "heat": 50,
-      "move": -2
-    },
-    {
-      "id": "s_83d5a15310e3a6b6",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "Anthropic launches $1.5B AI implementation venture with Blackstone",
-      "dek": "Ode pairs AI engineers with enterprise customers, betting that hands-on deployment—not just models—is the next trillion-dollar opportunity in AI adoption.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/",
-      "ts": "2026-07-15T13:10:47.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 50,
-      "move": -2
-    },
-    {
-      "id": "s_b4c19111324a67ee",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Reelful automates short-form video creation from camera roll photos",
-      "dek": "New iOS app uses AI to turn photos and clips into polished TikTok and Instagram Reels, targeting users who find traditional editing tools too complex.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/reelfuls-ai-turns-your-camera-roll-into-short-form-videos-for-social-media/",
-      "ts": "2026-07-15T13:00:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 60,
-      "move": -2
     }
   ],
   "models": [
@@ -1155,11 +1155,11 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 23
+      "c": 21
     },
     {
       "n": "The Verge AI",
-      "c": 10
+      "c": 11
     },
     {
       "n": "Hugging Face Blog",
@@ -1170,6 +1170,10 @@
       "c": 5
     },
     {
+      "n": "PetaPixel",
+      "c": 4
+    },
+    {
       "n": "Ars Technica AI",
       "c": 4
     },
@@ -1178,22 +1182,18 @@
       "c": 3
     },
     {
-      "n": "PetaPixel",
-      "c": 3
-    },
-    {
       "n": "80 Level",
       "c": 2
     }
   ],
   "topics": [
-    "#google",
     "#openai",
+    "#google",
+    "#youtube",
     "#suno",
     "#apple",
+    "#alibaba",
     "#gemini",
-    "#youtube",
-    "#anthropic",
     "#hugging"
   ],
   "tooldrop": {
@@ -1204,9 +1204,9 @@
     "date": "2026-07-15T17:45:31.573Z"
   },
   "stats": {
-    "scanned_last_run": 3,
-    "published_today": 5,
+    "scanned_last_run": 23,
+    "published_today": 8,
     "sources_live": 13,
-    "slopped_last_run": 3
+    "slopped_last_run": 19
   }
 }

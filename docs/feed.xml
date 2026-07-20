@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 20 Jul 2026 08:28:36 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2026 15:33:14 GMT</lastBuildDate>
     <item>
       <title>Hugging Face details AI-driven autonomous intrusion into production infrastructure</title>
       <link>https://huggingface.co/blog/security-incident-july-2026</link>
@@ -13,6 +13,38 @@
       <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
       <category>industry</category>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Lightcraft's Spark Story uses iPhone to generate virtual film sets from scripts</title>
+      <link>https://www.creativebloq.com/3d/i-watched-lightcraft-turn-a-screenplay-into-a-virtual-film-set-using-an-iphone</link>
+      <guid isPermaLink="false">s_735b682e0d0efd97</guid>
+      <description>SIGGRAPH 2026 revealed Spark Story, which converts screenplays into USD/Gaussian Splat environments and enables on-device shot planning before production.</description>
+      <category>tools</category>
+      <pubDate>Mon, 20 Jul 2026 15:30:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>YouTube clarifies monetization policy for AI-generated and low-quality content</title>
+      <link>https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/</link>
+      <guid isPermaLink="false">s_93c83145e8c7884e</guid>
+      <description>YouTube updated policies defining which AI-generated and repetitive videos can't earn ad revenue, adding nuance to existing inauthentic-content rules.</description>
+      <category>rights</category>
+      <pubDate>Mon, 20 Jul 2026 15:23:06 GMT</pubDate>
+    </item>
+    <item>
+      <title>Moonshot and Alibaba release frontier AI models challenging OpenAI and Anthropic</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen</link>
+      <guid isPermaLink="false">s_90cef26b7e07e68a</guid>
+      <description>Chinese AI companies launched competitive models claimed to match OpenAI/Anthropic capabilities at lower cost, narrowing the US AI lead.</description>
+      <category>industry</category>
+      <pubDate>Mon, 20 Jul 2026 10:16:33 GMT</pubDate>
+    </item>
+    <item>
+      <title>DeepMind AI reconstructs Pelé's legendary unfilmed goal using motion synthesis</title>
+      <link>https://petapixel.com/2026/07/20/ai-recreates-the-goal-pele-said-was-his-greatest-ever-but-wasnt-filmed/</link>
+      <guid isPermaLink="false">s_6dea1640e408017e</guid>
+      <description>Google DeepMind recreated a famous 1959 goal Pelé claimed was his best but was never captured on video, using AI to synthesize the play from his account.</description>
+      <category>video</category>
+      <pubDate>Mon, 20 Jul 2026 08:58:49 GMT</pubDate>
     </item>
     <item>
       <title>Suno Can Write a Hit. It Still Can't Write a Career.</title>
@@ -133,38 +165,6 @@
       <description>Apple and Google received cease-and-desist letters to remove 13 nudification apps that use AI to create non-consensual explicit images from ordinary photos.</description>
       <category>rights</category>
       <pubDate>Fri, 17 Jul 2026 16:10:05 GMT</pubDate>
-    </item>
-    <item>
-      <title>NVIDIA NeMo Automodel enables large-scale video and image model fine-tuning</title>
-      <link>https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel</link>
-      <guid isPermaLink="false">s_a0bbc2c6e6f2a453</guid>
-      <description>NVIDIA and Hugging Face joint effort adds fine-tuning at scale for video and image diffusion models, including support for FLUX checkpoints and LoRA examples.</description>
-      <category>tools</category>
-      <pubDate>Fri, 17 Jul 2026 15:57:54 GMT</pubDate>
-    </item>
-    <item>
-      <title>Patreon blocks AI scraping with Cloudflare enforcement</title>
-      <link>https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/</link>
-      <guid isPermaLink="false">s_7be29e0c57cbc116</guid>
-      <description>Patreon is actively blocking AI training bots via Cloudflare, shifting from passive robots.txt rules to direct access denial as scraping tactics grow more sophisticated.</description>
-      <category>rights</category>
-      <pubDate>Fri, 17 Jul 2026 15:21:17 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google open-sources GNM Head, parametric 3D human head model</title>
-      <link>https://80.lv/articles/google-open-sources-gnm-head-3d-parametric-human-head-model/</link>
-      <guid isPermaLink="false">s_04f6651476d4c4ae</guid>
-      <description>Google releases generative anthropomorphic 3D head model (170+ controls, expression/pose adjustable) with free Blender add-on; trained on 3D scans, not AI-generated but explicitly generative for facial variation.</description>
-      <category>tools</category>
-      <pubDate>Fri, 17 Jul 2026 11:56:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google Vids adds Gemini Omni conversational editing and personal avatars</title>
-      <link>https://petapixel.com/2026/07/17/google-vids-gets-conversational-editing-tools-and-personal-avatars/</link>
-      <guid isPermaLink="false">s_3ff6c4eb3a8015a3</guid>
-      <description>Google Vids update enables natural-language editing via Gemini Omni and AI-generated personal avatars for video starring, supporting multi-modal input (audio, video, photos, text).</description>
-      <category>video</category>
-      <pubDate>Fri, 17 Jul 2026 10:42:08 GMT</pubDate>
     </item>
   </channel>
 </rss>
