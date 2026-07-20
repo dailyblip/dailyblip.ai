@@ -1896,14 +1896,14 @@
         "aspect_ratio": "1:1"
       },
       {
-        "id": "upload-1784516369498",
-        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-upload-1784516368106.jpg",
+        "id": "upload-1784516448346",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-upload-1784516446975.jpg",
         "placement": "hero",
-        "alt_text": "AI Slop Reflection ",
+        "alt_text": "",
         "caption": "",
         "approved": true,
         "role": "upload",
-        "generated_at": "2026-07-20T02:59:29.498Z"
+        "generated_at": "2026-07-20T03:00:48.346Z"
       }
     ]
   }
