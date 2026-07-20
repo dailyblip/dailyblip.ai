@@ -522,5 +522,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-how-to-turn-a-simple-guitar-or-piano-idea-into-a-full-song-w",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T21:20:54.306Z",
+    "created_at": "2026-07-20T21:20:54.306Z",
+    "published_url": "https://dailyblip.ai/guides/how-to-turn-a-simple-guitar-or-piano-idea-into-a-full-song-w.html",
+    "article": {
+      "title": "How to Turn a Simple Guitar or Piano Idea Into a Full Song With Suno",
+      "slug": "how-to-turn-a-simple-guitar-or-piano-idea-into-a-full-song-w",
+      "dek": "Start with a chord progression or a rough voice memo. End with a full arrangement.",
+      "tags": [
+        "AI Music",
+        "Getting Started"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "09.png",
+        "approved": true,
+        "alt_text": "How to Turn a Simple Guitar or Piano Idea Into a Full Song With Suno"
+      }
+    ],
+    "backfilled": true
   }
 ]
