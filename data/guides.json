@@ -1469,7 +1469,7 @@
   {
     "id": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "10 prompts to un-sloppify your AI images",
       "article_type": "Practical guide",
@@ -1481,7 +1481,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T02:46:24.164Z",
-    "updated_at": "2026-07-20T02:47:09.614Z",
+    "updated_at": "2026-07-20T02:48:28.714Z",
     "brief": {
       "target_reader": "Someone who has tried Midjourney once or twice and gotten results that look obviously AI-generated — muddy details, weird lighting, plastic skin, that unmistakable 'slop' quality — and wants to know which prompt additions actually fix that",
       "reader_outcome": "Walk away with a handful of specific prompt phrases they can drop into their next Midjourney generation right now and immediately see a more polished, convincing result",
@@ -1501,6 +1501,170 @@
         "Whether prompting for specific camera models (e.g. 'shot on Canon 5D') produces measurably different realism vs generic photography prompts — community consensus on this"
       ],
       "research_plan": "Prioritize active Midjourney community sources: the official Midjourney documentation and changelog, the Midjourney subreddit, and well-regarded prompt engineering accounts on X/Twitter or YouTube who test these techniques hands-on. Look for posts from the last 3-6 months specifically, since prompt behavior changes significantly between model versions. Avoid SEO listicles that just repeat the same 10 prompts without showing before/after evidence. Where community consensus conflicts with official docs, flag it. Don't rely on any single blog post for parameter behavior — cross-check at least two sources per claim."
-    }
+    },
+    "sources": [
+      {
+        "title": "Version – Midjourney (Official Documentation)",
+        "publisher": "Midjourney",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "V7 was released April 3, 2025 and became the default on June 17, 2025",
+          "V8.1 released on midjourney.com on April 30, 2026, and became the new default on June 10, 2026 — making V8.1, not V7, the current default as of July 2026",
+          "V7 remains fully selectable via --v 7",
+          "V8.1 features native 2048px HD images without upscaling, via --hd and --sd parameters",
+          "Raw mode is available in V8.1 and described as removing default styling for more prompt adherence",
+          "The --no parameter (negative prompting) remains available in V8.1",
+          "V6.1 was the default until June 16, 2025; article-level version history is clearly documented",
+          "Chaos, stylize, weird, and aspect ratio (--ar) parameters all remain available in V8.1"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Raw – Midjourney (Official Documentation)",
+        "publisher": "Midjourney",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32634113811853-Raw",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Raw mode (--raw or --style raw depending on version) is compatible with Midjourney versions 5.1 and later, including V7 and V8.1",
+          "In Standard mode, Midjourney automatically adds its own creative touch; Raw turns this off",
+          "With simple prompts and Raw enabled, images tend to be more realistic and photo-like",
+          "Raw can be set per-prompt (--raw appended) or globally via the settings panel on both web and Discord",
+          "On V7 the syntax is --style raw; on V8 family the syntax is --raw — both perform the same function of reducing default aesthetic interpretation"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Stylize – Midjourney (Official Documentation)",
+        "publisher": "Midjourney",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32196176868109-Stylize",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "The --stylize (or --s) parameter is confirmed active in current Midjourney versions",
+          "Default stylize value is 100; range is 0–1000",
+          "Can be set per-prompt or globally via the settings panel on web or Discord"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Web vs Discord – Midjourney (Official Documentation)",
+        "publisher": "Midjourney",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32329300781837-Web-vs-Discord",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney officially supports both the web app (midjourney.com) and Discord as active generation platforms",
+          "Both platforms share the same subscription and most features, though some features differ in workflow or naming",
+          "The web interface offers a unified Editor for cropping, panning, and aspect ratio changes in one interface; Discord requires these as separate steps",
+          "Both web and Discord support parameters including Raw, Stylize, Chaos, Aspect Ratio, and the No parameter"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "V7 is now the default model (Official Announcement)",
+        "publisher": "Midjourney",
+        "url": "https://updates.midjourney.com/v7-is-now-the-default-model/",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "V7 became the default model on June 17, 2025 — confirmed by Midjourney's own update post",
+          "V7 introduced Draft Mode (approximately 10x the speed of normal generation), Omni Reference (--oref), and updated sref/moodboard algorithms",
+          "Users can revert to V6.1 via web settings or /settings in Discord, or by appending --v 6.1 to a prompt"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney 8.1 Guide: Prompts, Omni Reference & Parameters",
+        "publisher": "blakecrosley.com",
+        "url": "https://blakecrosley.com/guides/midjourney",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "V8.1 became the default model on June 11, 2026 on midjourney.com, replacing V7 as default — consistent with official docs",
+          "V7 remains fully selectable and is described as 'the safest broad production choice for full feature coverage'",
+          "On V7, --style raw is the correct syntax; on V8 family, --raw is the correct syntax — both reduce Midjourney's default aesthetic interpretation",
+          "The --no parameter remains effective in V8.1 for excluding unwanted elements",
+          "Prompt specificity tips confirmed as practiced technique: specifying 'cinematographic lighting precisely,' '35mm film photograph, grain, Kodak Portra 400 palette,' and referencing photographers/directors by name are cited as prompt strategies that narrow the AI's solution space",
+          "Prompting for specific camera models or photographers (e.g., 'Annie Leibovitz portraiture,' 'Roger Deakins cinematography') is cited as a style-anchoring technique"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney Web Interface vs. Discord: Which Should New Artists Use?",
+        "publisher": "Fornelli By Design (fbd.agency)",
+        "url": "https://fbd.agency/blog/tips-tricks/midjourney-web-vs-discord-comparison/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "As of mid-2025, both Discord and web interfaces use the same underlying AI model and produce identical image quality",
+          "The web interface offers slider-based controls for parameters like Stylize, Chaos, and Aspect Ratio; Discord requires manual text parameter entry",
+          "Raw, Stylize, Chaos, Seed, Tile, Remix, Pan, and Zoom functions confirmed available on both platforms",
+          "The web app offers zero-friction onboarding — no slash-commands required — making it more accessible to beginners",
+          "Discord retains advantages for power users: faster text-based input, API/bot automation, and community learning"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney Web V7 vs. Discord: Is the New Interface Ready for Pros?",
+        "publisher": "Flowith Blog",
+        "url": "https://flowith.io/blog/midjourney-web-v7-vs-discord/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "By the time V7 launched (April 2025), the web interface had become the recommended experience with features that do not exist in Discord",
+          "The web interface is described as 'the primary home for V7,' with exclusive features including the visual editor, inpainting, and organized galleries",
+          "Discord remains active and fully functional, but the web app is now the recommended entry point for new users",
+          "The web interface launched in August 2024 and was initially available only to users with sufficient generation history"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney V6. Part 1 | In-depth Guide",
+        "publisher": "Midlibrary (Andrei Kovalev)",
+        "url": "https://midlibrary.io/midguide/midjourney-v6-in-depth-review-part-1-overview",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "--style raw is described as 'an effective tool for diversifying results, strengthening styles that imply photorealism, or pushing the AI towards a more literal interpretation of your prompt'",
+          "Photorealism in V6 is noted to benefit from 'imperfections': lens aberrations, over-highlighted areas, accidental out-of-focus elements, and various film effects — suggesting these prompt elements have meaningful impact on output realism",
+          "V6 introduced an 'unopinionated' --style raw mode, similar in intent to V5.2's raw mode"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Maximize Midjourney Parameters",
+        "publisher": "Fantasy Interactive AI",
+        "url": "https://ai.fantasy.co/how-to/maximize-midjourney-parameters",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Low --stylize values cause Midjourney to produce results that closely match the prompt without additional artistic flair — confirmed consistent with official docs",
+          "The --chaos parameter has a default value of 0, which means the initial grid of images will look similar to each other; higher values increase variation between outputs",
+          "The --ar parameter changes aspect ratio and affects how the AI composes the image: wider ratios like 16:9 tend to produce more cinematic compositions",
+          "The --no parameter tells Midjourney what not to include in an image — confirmed active"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      }
+    ],
+    "unverifiable_claims": [
+      "Whether --no (negative prompting) is specifically effective at removing 'extra fingers' or 'lens flare' in V7/V8.1 — no current, version-specific community testing or official documentation was found confirming efficacy for those particular artifacts. V7 and V8.1 have both improved anatomical coherence natively (hands/bodies), which may reduce the need for --no fingers specifically, but this was not verified with a dedicated source within the search budget.",
+      "Whether prompt phrases like 'shot on 35mm film,' 'f/1.8 aperture,' 'golden hour lighting,' 'film grain,' and 'kodachrome' produce measurably and consistently different realism in V7/V8.1 via formal community testing — these are widely cited as best practices but no controlled, current-version community study was located. They are referenced as practitioner conventions, not tested benchmarks.",
+      "Whether prompting for specific camera models (e.g., 'shot on Canon 5D') produces measurably different realism vs. generic photography prompts — community consensus on this was not verified by a sourced study in V7 or V8.1. The technique is mentioned anecdotally in practitioner guides (e.g., 'shot on [camera brand] for color science') but without a rigorous side-by-side comparison source confirmed in this research cycle.",
+      "Whether the --chaos parameter's effect on 'output consistency' is relevant specifically to beginners — this is an editorial framing judgment, not a documented product fact.",
+      "Exact claim that 'Kodachrome' as a prompt word produces meaningfully different output realism vs. generic film terms — not verified with a current-version source."
+    ]
   }
 ]
