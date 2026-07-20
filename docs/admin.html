@@ -267,7 +267,7 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
           <select id="gType">
             <option>Practical guide</option><option>Top tools list</option><option>Tool comparison</option>
             <option>Creator workflow</option><option>Monetization guide</option><option>Beginner explainer</option>
-            <option>Rights and platform guide</option>
+            <option>Rights and platform guide</option><option>Prompt list</option>
           </select></div>
         <div><label>Target audience</label><input id="gAudience"></div>
       </div>
@@ -304,6 +304,23 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
         <button class="btn" id="mResync">Resync from manifest</button>
         <button class="btn" id="mRebuild">Rebuild library page</button>
         <button class="btn red" id="mForceDeleteAll">Force-delete ALL listed jobs</button>
+      </div>
+    </div>
+    <div class="panel" style="margin-bottom:16px">
+      <h3>Add a backfilled guide</h3>
+      <p class="tip" style="margin:6px 0 14px">For a guide you wrote and published outside the normal AI pipeline \u2014 upload its HTML page and hero image to <code>docs/guides/</code> yourself first, then use this to register it here so it shows up on the homepage and library. No JSON editing needed.</p>
+      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div><label>Title</label><input id="bfTitle" placeholder="Exact article title"></div>
+        <div><label>Slug</label><input id="bfSlug" placeholder="matches the .html filename, no .html"></div>
+      </div>
+      <label style="margin-top:10px">Dek (one sentence)</label>
+      <input id="bfDek" placeholder="Short one-sentence summary">
+      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+        <div><label>Tags (comma-separated, from the fixed list)</label><input id="bfTags" placeholder="AI Music, Getting Started"></div>
+        <div><label>Hero image filename</label><input id="bfHero" placeholder="e.g. 06.jpg \u2014 must already be in docs/guides/"></div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;margin-top:12px">
+        <button class="btn amber" id="bfAdd">Register this guide</button>
       </div>
     </div>
     <div class="panel">
@@ -868,6 +885,57 @@ async function toggleGuideListing(id){
 
     toast(willUnlist ? "Unlisted." : "Re-listed.");
     await renderGuides();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
+async function toggleGuidePin(id){
+  const g = guides.find(x => x.id === id);
+  if (!g || g.status !== "published") return;
+  const willPin = !g.pinned;
+  const label = g.article?.title || g.article?.slug || "this guide";
+
+  if (willPin) {
+    if (g.unlisted) {
+      toast("This guide is currently unlisted \u2014 re-list it first, then pin it.", "err", 6000);
+      return;
+    }
+    const currentlyPinned = guides.filter(x => x.pinned && x.id !== id).length;
+    if (currentlyPinned >= 3) {
+      toast("Already 3 guides pinned \u2014 unpin one first.", "err", 5000);
+      return;
+    }
+  }
+
+  const msg = willPin
+    ? `Pin "${label}" to the homepage? It'll always show there, regardless of age, until unpinned.`
+    : `Unpin "${label}" from the homepage?`;
+  if (!confirm(msg)) return;
+
+  try {
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      if (i === -1) return gs;
+      const updated = [...gs];
+      updated[i] = { ...updated[i], pinned: willPin };
+      return updated;
+    }, `admin: ${willPin ? "pin" : "unpin"} guide ${id}`);
+
+    // Manifest entry may not exist if the guide is currently unlisted \u2014
+    // guarded against above for the pin direction, but unpinning an
+    // already-unlisted guide should still succeed harmlessly.
+    await writeManifestWithRetry(manifest => {
+      const i = manifest.findIndex(m => m.slug === g.article.slug);
+      if (i === -1) return manifest;
+      const updated = [...manifest];
+      updated[i] = { ...updated[i], pinned: willPin };
+      return updated;
+    }, `admin: ${willPin ? "pin" : "unpin"} guide ${id} in manifest`);
+
+    toast(willPin ? "Pinned." : "Unpinned.");
+    await renderMaintenance();
   } catch (e) {
     toast(e.message, "err", 6000);
   }
@@ -1579,7 +1647,8 @@ function activateTab(name){
 }
 async function renderMaintenance(){
   try { await loadGuidesFile(); } catch (e) { toast(e.message, "err", 5000); return; }
-  $("#mCount").textContent = `(${guides.length})`;
+  const pinnedCount = guides.filter(g => g.pinned).length;
+  $("#mCount").textContent = `(${guides.length}) \u00b7 ${pinnedCount} of 3 pinned`;
   if (!guides.length) {
     $("#mList").innerHTML = `<p class="tip">No guide jobs tracked at all.</p>`;
     return;
@@ -1589,11 +1658,12 @@ async function renderMaintenance(){
     .map(g => `
       <div class="panel" style="margin-bottom:8px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
         <div>
-          <div style="font-weight:600">${esc(g.article?.title || g.submitted?.idea?.slice(0,60) || "Untitled")}</div>
+          <div style="font-weight:600">${esc(g.article?.title || g.submitted?.idea?.slice(0,60) || "Untitled")}${g.pinned ? ' <span title="Pinned to homepage">\ud83d\udccc</span>' : ""}</div>
           <div class="tip">${esc(guideStatusLabel(g))}${g.resynced ? " \u00b7 resynced" : ""} \u00b7 ${esc(ago(g.created_at))} ago</div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
           ${g.status === "published" ? `<button class="btn" onclick="toggleGuideListing('${g.id}')">${g.unlisted ? "Re-list" : "Unlist"}</button>` : ""}
+          ${g.status === "published" ? `<button class="btn" onclick="toggleGuidePin('${g.id}')">${g.pinned ? "Unpin" : "Pin to homepage"}</button>` : ""}
           <button class="btn red" onclick="maintenanceForceDelete('${g.id}')">Force delete</button>
         </div>
       </div>`).join("");
@@ -1687,9 +1757,64 @@ async function rebuildLibraryPage(){
   }
 }
 
+// Registers a guide you wrote and rendered outside the normal AI
+// pipeline (a manual backfill) -- this ONLY adds the tracking record
+// and manifest entry. It does not upload the HTML page or hero image
+// themselves; those need to already be sitting in docs/guides/ before
+// this is clicked, or the published_url and hero_image this creates
+// will point at files that don't exist yet.
+async function addBackfilledGuide(){
+  const title = $("#bfTitle").value.trim();
+  const slug = $("#bfSlug").value.trim();
+  const dek = $("#bfDek").value.trim();
+  const tags = $("#bfTags").value.trim().split(",").map(t => t.trim()).filter(Boolean);
+  const heroFile = $("#bfHero").value.trim();
+
+  if (!title || !slug || !dek || !heroFile) {
+    toast("Title, slug, dek, and hero image filename are all required.", "err", 5000);
+    return;
+  }
+
+  if (!confirm(`Register "${title}" as a published guide?\n\nMake sure you've already uploaded docs/guides/${slug}.html and docs/guides/${heroFile} to your repo \u2014 this only adds the tracking record, it doesn't upload anything itself.`)) return;
+
+  const now = new Date().toISOString();
+  const newJob = {
+    id: `backfill-${slug}`,
+    status: "published", stage: "Published",
+    published_at: now, created_at: now,
+    published_url: `https://dailyblip.ai/guides/${slug}.html`,
+    article: { title, slug, dek, tags },
+    images: [{ id: "hero", placement: "hero", file: heroFile, approved: true, alt_text: title }],
+    backfilled: true,
+  };
+
+  try {
+    await loadGuidesFile();
+    if (guides.some(g => g.article?.slug === slug)) {
+      toast(`A guide with slug "${slug}" is already tracked \u2014 use a different slug, or check the Guides tab.`, "err", 6000);
+      return;
+    }
+    await writeGuidesWithRetry(gs => [...gs, newJob], `admin: register backfilled guide ${slug}`);
+
+    // Also added directly to the manifest so the homepage teaser picks
+    // it up immediately -- "Rebuild library page" is still needed
+    // separately to regenerate the actual library LISTING page's HTML.
+    await writeManifestWithRetry(manifest => [...manifest, {
+      title, slug, dek, hero_image: `/guides/${heroFile}`, published_at: now, tags,
+    }], `admin: add backfilled guide ${slug} to manifest`);
+
+    toast(`Registered. Click "Rebuild library page" above to update the library listing page too.`, "", 6000);
+    $("#bfTitle").value = ""; $("#bfSlug").value = ""; $("#bfDek").value = ""; $("#bfTags").value = ""; $("#bfHero").value = "";
+    await renderMaintenance();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
 $("#mResync")?.addEventListener("click", resyncFromManifest);
 $("#mRebuild")?.addEventListener("click", rebuildLibraryPage);
 $("#mForceDeleteAll")?.addEventListener("click", forceDeleteAllListed);
+$("#bfAdd")?.addEventListener("click", addBackfilledGuide);
 
 $$(".tab").forEach(t => t.addEventListener("click", () => activateTab(t.dataset.tab)));
 
