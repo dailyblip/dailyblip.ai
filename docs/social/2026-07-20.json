@@ -4,67 +4,67 @@
     {
       "index": 1,
       "image": "2026-07-20-1.png",
-      "caption": "Mira Murati's Thinking Machines Lab just dropped Inkling — a 975-billion-parameter open-weight model trained on 45 trillion tokens. It's a mixture-of-experts architecture that reasons natively across text, image, audio, and video in a single model. Open weights, multimodal from the ground up, and it's out now.\n\nFull breakdown in today's brief: link in bio.\n\n#AINews #OpenSource #MultimodalAI #ThinkingMachines #MiraMurati #GenerativeAI",
+      "caption": "Suno's training data just got exposed — and it's a long list. A supply chain hack revealed source code showing the AI music generator scraped audio from YouTube, Deezer, and podcasts. Record labels already suing Suno say this confirms DMCA violations; Suno is holding firm on a fair-use defense.\n\nFull story + today's brief: link in bio.\n\n#AIMusic #Suno #DMCA #AIRights #MusicIndustry #ArtificialIntelligence",
       "story": {
-        "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
-        "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
+        "title": "Hack reveals Suno scraped YouTube, Deezer, and podcasts for AI training",
+        "dek": "A supply chain attack exposed source code showing the AI music generator harvested audio from multiple platforms. Record labels argue this violates the DMCA despite Suno's fair-use defense.",
         "src": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/"
+        "url": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/"
       }
     },
     {
       "index": 2,
       "image": "2026-07-20-2.png",
-      "caption": "Meta has quietly pulled its Muse image generation tool — and the explanation doesn't quite add up. Critics say the company's stated regrets conflict directly with how the product was actually built, deployed, and managed. It's raising real questions about how seriously AI labs mean it when they walk something back.\n\nFull breakdown + today's 6-story brief: link in bio.\n\n#AINews #MetaAI #ImageGeneration #AITools #CreatorTools #AIEthics",
+      "caption": "Patreon just upgraded from politely asking AI bots not to scrape — to actually stopping them. The platform is now using Cloudflare to actively deny access to AI training crawlers, moving past robots.txt guidelines that sophisticated bots increasingly ignore. It's a meaningful shift in how creator platforms defend their content at the infrastructure level.\n\nFull story + today's brief: link in bio\n\n#Patreon #AIRights #CreatorEconomy #AIScraping #AIPolicy",
       "story": {
-        "title": "Meta backtracks on Muse Image AI tool, raising credibility questions",
-        "dek": "Meta scrapped its image generation tool; critics argue the company's stated regrets don't align with how it deployed and managed the product.",
-        "src": "Creative Bloq AI",
-        "url": "https://www.creativebloq.com/design/metas-regret-over-its-scrapped-ai-tool-is-like-a-burglar-apologising-for-the-mess"
+        "title": "Patreon blocks AI scraping with Cloudflare enforcement",
+        "dek": "Patreon is actively blocking AI training bots via Cloudflare, shifting from passive robots.txt rules to direct access denial as scraping tactics grow more sophisticated.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/"
       }
     },
     {
       "index": 3,
       "image": "2026-07-20-3.png",
-      "caption": "Houdini 22 just landed, and native Gaussian Splat support is the headline feature. SideFX built 3DGS creation, editing, and animation directly into the app — no third-party plugins required. VFX artists, game devs, and procedural creators also get a redesigned UI and broader workflow upgrades across the board.\n\nFull story + today's brief: link in bio.\n\n#Houdini #GaussianSplatting #VFX #ProceduralArt #3D #AITools",
+      "caption": "TikTok is testing an opt-in tool that scans for AI-generated likenesses of creators — detecting synthetic impersonation and giving creators a path to report it. The move mirrors YouTube's existing detection capability, signaling that likeness protection is becoming a platform standard. Full brief + story details: link in bio.\n\n#TikTok #AIRights #CreatorEconomy #AIDetection #SyntheticMedia",
       "story": {
-        "title": "Houdini 22 adds native Gaussian Splatting support and redesigned UI",
-        "dek": "SideFX's major release brings native 3D Gaussian Splat creation, editing, and animation without third-party tools, plus workflow upgrades for VFX, game dev, and procedural art.",
-        "src": "80 Level",
-        "url": "https://80.lv/articles/houdini-22-is-out-now-bringing-native-gaussian-splats-new-ui-and-more/"
+        "title": "TikTok testing AI likeness detection tool for creators",
+        "dek": "TikTok is piloting an opt-in tool to detect AI-generated likenesses of creators and enable reporting. The feature mirrors YouTube's similar detection capability, offering creators protection against synthetic impersonation.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool"
       }
     },
     {
       "index": 4,
       "image": "2026-07-20-4.png",
-      "caption": "Artist 1010Benja used Suno AI to make a genuinely compelling track — and The Verge sat down with him to talk about it. His argument: compositional intent and a distinctive voice matter more than the tool you use. It's a real challenge to the reflexive 'AI music is all slop' take.\n\nFull story + today's brief: link in bio.\n\n#AIMusic #Suno #MusicProduction #AICreators #CreativeAI",
+      "caption": "Google just open-sourced GNM Head — a parametric 3D human head model with 170+ controls for expression, pose, and facial variation. Trained on real 3D scans, it ships with a free Blender add-on, making photorealistic head generation accessible to anyone building characters or avatars.\n\nFull story + today's brief: link in bio.\n\n#AI #3D #Blender #GoogleAI #CharacterDesign #AITools",
       "story": {
-        "title": "Artist 1010Benja makes genuinely engaging song with Suno AI",
-        "dek": "A working creator demonstrates compositional intent and distinctive voice using Suno, contradicting the widespread perception that AI music is inherently generic. The Verge profiles the work and artist's unapologetic stance on the tool.",
-        "src": "The Verge AI",
-        "url": "https://www.theverge.com/entertainment/967678/1010benja-semiramis-dream-suno-ai-music"
+        "title": "Google open-sources GNM Head, parametric 3D human head model",
+        "dek": "Google releases generative anthropomorphic 3D head model (170+ controls, expression/pose adjustable) with free Blender add-on; trained on 3D scans, not AI-generated but explicitly generative for facial variation.",
+        "src": "80 Level",
+        "url": "https://80.lv/articles/google-open-sources-gnm-head-3d-parametric-human-head-model/"
       }
     },
     {
       "index": 5,
       "image": "2026-07-20-5.png",
-      "caption": "Google Vids just got a serious upgrade. Gemini Omni is now baked in for conversational editing — describe changes in plain language and the video updates in real time. Plus: AI-generated personal avatars so you can star in your own videos without being on camera.\n\nMulti-modal input (audio, video, photos, text) means the whole editing workflow just got a lot more flexible. Full story + today's brief: link in bio.\n\n#GoogleVids #GeminiAI #AIVideo #VideoEditing #AIAvatars",
+      "caption": "NVIDIA and Hugging Face just dropped NeMo Automodel — a joint framework for fine-tuning video and image diffusion models at scale. It ships with support for FLUX checkpoints and LoRA examples out of the box, making large-scale visual model training meaningfully more accessible. This is infrastructure-level news for anyone building in the image or video generation space.\n\nFull story + today's brief: link in bio.\n\n#AITools #NVIDIA #HuggingFace #DiffusionModels #VideoAI #GenerativeAI",
       "story": {
-        "title": "Google Vids adds Gemini Omni conversational editing and personal avatars",
-        "dek": "Google Vids update enables natural-language editing via Gemini Omni and AI-generated personal avatars for video starring, supporting multi-modal input (audio, video, photos, text).",
-        "src": "PetaPixel",
-        "url": "https://petapixel.com/2026/07/17/google-vids-gets-conversational-editing-tools-and-personal-avatars/"
+        "title": "NVIDIA NeMo Automodel enables large-scale video and image model fine-tuning",
+        "dek": "NVIDIA and Hugging Face joint effort adds fine-tuning at scale for video and image diffusion models, including support for FLUX checkpoints and LoRA examples.",
+        "src": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
       }
     },
     {
       "index": 6,
       "image": "2026-07-20-6.png",
-      "caption": "San Francisco is going after AI nudify apps — directly. The city sent cease-and-desist letters to Apple and Google demanding removal of 13 apps that generate non-consensual explicit images from ordinary photos. It's one of the most direct municipal enforcement actions yet against this category of AI abuse.\n\nFull story + today's brief: link in bio\n\n#AIRights #NonConsensualImageAbuse #AIPolicy #AppStore #AIRegulation #DeepfakeAbuse",
+      "caption": "Moonshot AI just dropped Kimi K3 — an open-source model from China that benchmarks alongside Claude and GPT-4-class systems. Markets moved the moment analysts started paying attention. The geopolitical read on this one is as loud as the technical specs.\n\nFull story + today's brief: link in bio.\n\n#AI #OpenSource #KimiK3 #MoonshotAI #AINews #FrontierAI",
       "story": {
-        "title": "San Francisco orders removal of AI nudify apps from app stores",
-        "dek": "Apple and Google received cease-and-desist letters to remove 13 nudification apps that use AI to create non-consensual explicit images from ordinary photos.",
-        "src": "Ars Technica AI",
-        "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/"
+        "title": "Moonshot AI's Kimi K3 reaches frontier performance, rattles markets",
+        "dek": "Chinese company Moonshot AI released an open-source model rivaling Claude and GPT, drawing competitive analysis and sparking concerns about geopolitical AI dynamics. Market reaction was immediate.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/"
       }
     }
   ]
