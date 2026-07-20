@@ -125,5 +125,16 @@
       "Image Generation",
       "Getting Started"
     ]
+  },
+  {
+    "title": "How to Write Better Midjourney Prompts: From Basic Idea to Finished Image",
+    "slug": "how-to-write-better-midjourney-prompts-from-basic-idea-to-finished-image",
+    "dek": "Prompt structure, parameters, and the iteration habit that actually improves results.",
+    "hero_image": "/guides/16.jpg",
+    "published_at": "2026-07-20T23:29:56.768Z",
+    "tags": [
+      "Image Generation",
+      "Getting Started"
+    ]
   }
 ]
