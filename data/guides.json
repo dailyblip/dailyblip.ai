@@ -738,5 +738,32 @@
       }
     ],
     "backfilled": true
+  },
+  {
+    "id": "backfill-20-midjourney-prompts-for-cinematic-images-that-dont-look-generic",
+    "status": "published",
+    "stage": "Published",
+    "published_at": "2026-07-20T23:34:44.907Z",
+    "created_at": "2026-07-20T23:34:44.907Z",
+    "published_url": "https://dailyblip.ai/guides/20-midjourney-prompts-for-cinematic-images-that-dont-look-generic.html",
+    "article": {
+      "title": "20 Midjourney Prompts for Cinematic Images That Do Not Look Generic",
+      "slug": "20-midjourney-prompts-for-cinematic-images-that-dont-look-generic",
+      "dek": "Built around lighting, lens choice, and atmosphere, not just the word cinematic.",
+      "tags": [
+        "Image Generation",
+        "Getting Started"
+      ]
+    },
+    "images": [
+      {
+        "id": "hero",
+        "placement": "hero",
+        "file": "17.jpg",
+        "approved": true,
+        "alt_text": "20 Midjourney Prompts for Cinematic Images That Do Not Look Generic"
+      }
+    ],
+    "backfilled": true
   }
 ]
