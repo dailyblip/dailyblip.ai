@@ -115,8 +115,12 @@ jobs:
           git add data docs
           git diff --cached --quiet && exit 0
           git commit -m "${{ steps.edition.outputs.value }} blip: $(date -u +'%Y-%m-%d %H:%M') UTC"
-          git pull --rebase --autostash
-          git push
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on shared files (concurrency: only protects against overlapping daily.yml runs, not admin.html's direct API writes) -- falling back to JSON-aware resolution (see pipeline/resolve-daily-conflict.js)"
+            node pipeline/resolve-daily-conflict.js "${{ steps.edition.outputs.value }} blip: $(date -u +'%Y-%m-%d %H:%M') UTC (resolved)"
+          else
+            git push
+          fi
 
       # Runs AFTER commit+push on purpose — by now the image's live URL has
       # actually had a chance to resolve, so the GitHub Issue it creates
