@@ -1469,7 +1469,7 @@
   {
     "id": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "10 prompts to un-sloppify your AI images",
       "article_type": "Practical guide",
@@ -1481,7 +1481,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T02:46:24.164Z",
-    "updated_at": "2026-07-20T02:48:28.714Z",
+    "updated_at": "2026-07-20T02:49:03.439Z",
     "brief": {
       "target_reader": "Someone who has tried Midjourney once or twice and gotten results that look obviously AI-generated — muddy details, weird lighting, plastic skin, that unmistakable 'slop' quality — and wants to know which prompt additions actually fix that",
       "reader_outcome": "Walk away with a handful of specific prompt phrases they can drop into their next Midjourney generation right now and immediately see a more polished, convincing result",
@@ -1665,6 +1665,87 @@
       "Whether prompting for specific camera models (e.g., 'shot on Canon 5D') produces measurably different realism vs. generic photography prompts — community consensus on this was not verified by a sourced study in V7 or V8.1. The technique is mentioned anecdotally in practitioner guides (e.g., 'shot on [camera brand] for color science') but without a rigorous side-by-side comparison source confirmed in this research cycle.",
       "Whether the --chaos parameter's effect on 'output consistency' is relevant specifically to beginners — this is an editorial framing judgment, not a documented product fact.",
       "Exact claim that 'Kodachrome' as a prompt word produces meaningfully different output realism vs. generic film terms — not verified with a current-version source."
-    ]
+    ],
+    "article": {
+      "title": "10 prompt additions that make Midjourney images look less AI-generated",
+      "alternative_titles": [
+        "Stop the slop: prompt tweaks that make Midjourney images look real",
+        "Why your Midjourney images look fake (and the exact phrases that fix it)"
+      ],
+      "slug": "midjourney-prompts-less-ai-looking",
+      "dek": "A handful of specific words and parameters you can drop into your next Midjourney prompt to get rid of that plastic, over-processed AI look.",
+      "meta_description": "Tired of muddy details and that unmistakable AI-generated look? These prompt additions for Midjourney (V7 and V8.1) help produce more polished, convincing images.",
+      "quick_answer": "Add phrases like 'shot on 35mm film,' 'f/1.8 aperture,' and 'film grain' to your prompt, then append --raw and --s 50 to reduce Midjourney's tendency to over-stylize everything.",
+      "tags": [
+        "Image Generation",
+        "Getting Started"
+      ],
+      "introduction": "Most AI images look generated for the same reason: the model is trying to make everything look impressive, all at once. The fix isn't a better prompt from scratch. It's a few specific additions that tell Midjourney to calm down and act more like a camera.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Why your images look like AI (and what's actually causing it)",
+          "body_markdown": "Midjourney's default mode is opinionated. It adds its own artistic interpretation on top of whatever you asked for — extra contrast, saturated colors, that smooth hyper-rendered look. It's trying to be helpful. The result often looks plastic.\n\nTwo parameters fix most of this immediately.\n\n**--raw** (the current syntax in V8.1, the default as of June 2026) turns off Midjourney's default styling so it follows your prompt more literally. On V7, the syntax is **--style raw** — same effect, different spelling. According to official Midjourney docs, raw mode makes images more realistic and photo-like, especially with simple prompts.\n\n**--s 50** lowers the stylize value from its default of 100. The lower you go, the less artistic flair Midjourney adds on its own. Zero is very literal. Fifty is a good starting point.\n\nThose two together already pull a lot of the AI sheen off an image. The prompts below do the rest.",
+          "tools": [],
+          "prompts": []
+        },
+        {
+          "id": "s2",
+          "heading": "10 things to add to your prompt right now",
+          "body_markdown": "These are phrases and parameters you can copy and drop into any Midjourney prompt. They're widely used by practitioners as style-anchoring techniques — not verified by controlled testing, but consistently cited across the community. Try a few at a time rather than stacking all of them at once.",
+          "tools": [],
+          "prompts": [
+            {
+              "label": "Film grain and analog color palette",
+              "prompt": "shot on 35mm film, film grain, Kodak Portra 400 palette, slight color fade"
+            },
+            {
+              "label": "Specific aperture for natural depth of field",
+              "prompt": "f/1.8 aperture, shallow depth of field, soft bokeh background"
+            },
+            {
+              "label": "Golden hour lighting instead of generic 'good lighting'",
+              "prompt": "golden hour lighting, warm side light, long soft shadows"
+            },
+            {
+              "label": "Imperfect lens behavior to signal a real camera",
+              "prompt": "slight lens aberration, natural vignette, minor chromatic aberration"
+            },
+            {
+              "label": "Cinematic framing with a specific aspect ratio",
+              "prompt": "cinematic composition --ar 16:9"
+            },
+            {
+              "label": "Reference a cinematographer to anchor the visual style",
+              "prompt": "cinematography in the style of Roger Deakins, muted tones, naturalistic lighting"
+            },
+            {
+              "label": "Raw mode on V8.1 to strip out default AI styling",
+              "prompt": "your prompt here --raw"
+            },
+            {
+              "label": "Raw mode on V7 (different syntax, same effect)",
+              "prompt": "your prompt here --style raw"
+            },
+            {
+              "label": "Lower stylize value to reduce artistic over-processing",
+              "prompt": "your prompt here --s 30"
+            },
+            {
+              "label": "Exclude common AI artifacts with negative prompting",
+              "prompt": "your prompt here --no oversaturation, lens flare, smooth plastic skin, artificial glow"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "--raw (V8.1) or --style raw (V7) is the single fastest fix for over-processed AI aesthetics",
+        "Film and lens language gives Midjourney a specific visual target instead of letting it invent one",
+        "Lower --s values and --no both help, but stack them gradually rather than all at once"
+      ],
+      "conclusion": "You don't need to rebuild your prompts from scratch. Pick two or three of these additions, drop them into what you're already writing, and regenerate. The difference between a generic AI image and a convincing one is usually just a few specific words telling the model to behave more like a camera and less like a concept renderer.\n\nWe haven't tested these side by side ourselves — these are based on official Midjourney documentation and practitioner guides, not our own controlled runs. For the parameters (--raw, --s, --ar, --no), the official docs are reliable. For the stylistic phrases like film grain and aperture values, community consensus is strong but your results may vary by subject.",
+      "methodology_disclosure": "This guide was researched using official Midjourney documentation (docs.midjourney.com) and the official V7 update announcement as primary sources for parameter behavior and version status. Stylistic prompt techniques (film grain, aperture language, cinematographer references) are drawn from independent practitioner guides including midlibrary.io and blakecrosley.com, which are cited as community observation rather than controlled test results. No original image testing was conducted by dailyblip. Claims about specific artifact removal via --no (e.g., extra fingers) were excluded because no current-version source confirmed efficacy for those specific use cases. Version status reflects official documentation accessed July 2026, with V8.1 confirmed as the current default.",
+      "last_reviewed_date": "July 20, 2026"
+    }
   }
 ]
