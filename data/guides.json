@@ -1450,6 +1450,16 @@
         "approved": true,
         "role": "upload",
         "generated_at": "2026-07-19T05:06:32.055Z"
+      },
+      {
+        "id": "upload-1784515369829",
+        "file": "e9540948-bcf1-4e81-a4dc-0ef7f8012cbd-upload-1784515368611.jpg",
+        "placement": "hero",
+        "alt_text": "",
+        "caption": "",
+        "approved": true,
+        "role": "upload",
+        "generated_at": "2026-07-20T02:42:49.829Z"
       }
     ],
     "approved_at": "2026-07-20T00:02:57.255Z",
