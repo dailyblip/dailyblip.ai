@@ -443,7 +443,7 @@
   {
     "id": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "submitted": {
       "idea": "10 Prompts to make your Suno music better",
       "article_type": "Top tools list",
@@ -455,7 +455,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T05:00:17.169Z",
-    "updated_at": "2026-07-20T05:01:59.738Z",
+    "updated_at": "2026-07-20T05:02:41.030Z",
     "brief": {
       "target_reader": "Someone who has tried Suno once or twice and gotten okay results, but isn't sure how to write prompts that actually sound like what they're imagining",
       "reader_outcome": "Feel confident enough to go back to Suno and write a noticeably better prompt today",
@@ -630,6 +630,87 @@
       "Any specific labeling of the prompt input field in the current UI beyond 'Style of Music' and 'Lyrics' — Suno's official help pages retrieved do not provide a complete UI field-name glossary; field names may have changed across V4.5/V5/V5.5 releases.",
       "Whether the 'Exclude Styles' feature (negative prompting via dedicated field) is available to free-tier users cannot be confirmed from sources retrieved — the official Suno announcement states it is available to 'Pro and Premier' subscribers only; free-tier availability is unverified.",
       "The exact current character limit shown in the Suno app UI (as opposed to via API) is inconsistently reported across independent sources (some say 200, some 1,000 for the style field on V4/V5) — Suno does not publish an official limits table per the API source, so the writer should cite these as third-party-tested figures, not official specs."
-    ]
+    ],
+    "article": {
+      "title": "10 Prompts to Make Your Suno Music Actually Sound Like What You're Imagining",
+      "alternative_titles": [
+        "Why Your Suno Prompts Aren't Working (and 10 That Do)",
+        "Better Suno Prompts: 10 Copy-Paste Examples That Actually Work"
+      ],
+      "slug": "suno-prompts-that-actually-work",
+      "dek": "Most people write Suno prompts the way they'd describe a song to a friend. That's the problem. Here's how to write them the way Suno actually listens.",
+      "meta_description": "Struggling to get Suno to generate the music you're imagining? Here are 10 ready-to-use prompts — plus what makes each one work — so you can get noticeably better results today.",
+      "quick_answer": "Suno responds best to specific genre, mood, instrumentation, and vocal style tags stacked together in the Style field. Vague emotional words like 'happy' or 'sad' tend to produce generic results — the more concrete and layered your description, the closer you'll get to what you're hearing in your head.",
+      "tags": [
+        "AI Music",
+        "Getting Started"
+      ],
+      "introduction": "You typed something like \"upbeat pop song about summer\" and got... fine. Totally listenable, completely forgettable. The issue isn't Suno, it's that the prompt didn't give it much to work with. Suno has two separate input fields — a **Style** field and a **Lyrics** box — and what you put in each one matters differently. Once you understand that, prompts get a lot more useful.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Why vague prompts produce vague music",
+          "body_markdown": "Suno's Style field is where the real steering happens. Genre, mood, tempo feel, instrumentation, vocal style — that's the language it responds to. Words like \"happy\" or \"relaxing\" are so broad that Suno has to guess, and it usually guesses toward the middle of everything.\n\nA few things worth knowing before you start:\n\n- **Put genre first.** Suno weighs the earlier tags more heavily, so lead with the genre and layer specifics after it.\n- **BPM numbers can help, but aren't guaranteed.** Newer model versions (V4.5+) are more responsive to tempo numbers than older ones were, but the genre and mood you pick can still override a hard number. Think of BPM as a nudge, not a command.\n- **Music theory terms are hit-or-miss.** Phrases like \"modal jazz harmonies\" or \"polyrhythmic percussion\" do influence output, but results vary. Worth trying — just don't be surprised if it doesn't land precisely.\n- **Negative prompting exists.** If you're on a Pro or Premier plan, Suno has a dedicated Exclude field (in Custom Mode) where you can list what you *don't* want — specific instruments, vocal styles, genres. According to Suno's official docs, it accepts entries like \"-piano\" or \"-autotune.\" Putting negations in the main Style field is less reliable, though some users report it working in newer versions.\n- **Don't go overboard on length.** The Style field has a character cap (third-party testing puts it around 1,000 characters on current models, though Suno doesn't publish an official limit). Somewhere in the range of 5–10 well-chosen descriptors tends to work better than an exhaustive list.",
+          "tools": [],
+          "prompts": []
+        },
+        {
+          "id": "s2",
+          "heading": "10 prompts worth copying right now",
+          "body_markdown": "These go in Suno's **Style** field unless noted. Each one is built to be specific enough to actually steer the output somewhere interesting.",
+          "tools": [],
+          "prompts": [
+            {
+              "label": "Moody lo-fi study beat",
+              "prompt": "lo-fi hip hop, melancholic, jazzy chords, muffled drums, vinyl crackle, no vocals, 70 BPM, late night bedroom feel"
+            },
+            {
+              "label": "Cinematic trailer build",
+              "prompt": "orchestral, cinematic, building tension, strings and brass, epic percussion, no lyrics, slow to explosive, Hans Zimmer-inspired"
+            },
+            {
+              "label": "Dark 80s synthwave",
+              "prompt": "synthwave, dark, driving, pulsing bassline, analog synths, gated reverb drums, male vocals, cold and neon-lit, 110 BPM"
+            },
+            {
+              "label": "Indie folk with an ache to it",
+              "prompt": "indie folk, bittersweet, fingerpicked acoustic guitar, soft male vocals, sparse arrangement, slight reverb, storytelling, intimate"
+            },
+            {
+              "label": "Upbeat funk for a short-form video",
+              "prompt": "funk, upbeat, punchy brass, slap bass, tight drums, female vocals, playful and confident, radio-ready, 105 BPM"
+            },
+            {
+              "label": "Ambient meditation track",
+              "prompt": "ambient, meditative, drone pads, gentle piano, no drums, no vocals, spacious reverb, slow evolving textures, calming"
+            },
+            {
+              "label": "Trap-soul R&B",
+              "prompt": "R&B, trap-soul, silky female vocals, 808 bass, atmospheric synths, slow and sensual, AutoTune harmonies, late night vibes, 65 BPM"
+            },
+            {
+              "label": "Acoustic pop with a hook",
+              "prompt": "acoustic pop, warm, singalong chorus, strummed guitar, light percussion, female vocals, emotionally earnest, radio-friendly structure"
+            },
+            {
+              "label": "Aggressive metal riff-based",
+              "prompt": "heavy metal, aggressive, drop-tuned guitar riffs, double bass drums, shouted male vocals, raw energy, no synths, fast and relentless"
+            },
+            {
+              "label": "Bossa nova café instrumental",
+              "prompt": "bossa nova, relaxed, nylon-string guitar, brushed drums, upright bass, no vocals, sunny afternoon feel, Brazilian jazz influence"
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Lead the Style field with genre, then layer mood, instruments, and vocal style after it",
+        "BPM numbers nudge tempo but don't override genre — treat them as a hint, not a setting",
+        "The dedicated Exclude field (Pro/Premier only) is more reliable than writing negations in the Style prompt"
+      ],
+      "conclusion": "None of these are magic — Suno still generates two or three variations and you pick the one that clicks. But specific prompts give you something to actually iterate on. Change one tag, regenerate, see what shifts. That's where the real control starts to feel like yours.",
+      "methodology_disclosure": "This guide was researched using Suno's official help documentation and knowledge base, the official Suno X/Twitter account for feature announcements, and a range of independent creator write-ups, tutorials, and community-tested prompt guides from 2025–2026. Where claims about Suno's behavior (like BPM responsiveness or music-theory term handling) were contested or inconsistently reported across sources, the guide reflects that uncertainty rather than stating a clean answer. Prompts were constructed based on patterns consistently recommended across multiple independent sources, not tested directly by dailyblip. Field character limits cited are from third-party testing, since Suno does not publish an official limits table.",
+      "last_reviewed_date": "July 20, 2026"
+    }
   }
 ]
