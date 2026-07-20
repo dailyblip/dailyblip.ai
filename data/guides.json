@@ -439,5 +439,22 @@
         "generated_at": "2026-07-20T04:07:42.420Z"
       }
     ]
+  },
+  {
+    "id": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "10 Prompts to make your Suno music better",
+      "article_type": "Top tools list",
+      "target_audience": "",
+      "target_length": "Quick",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-20T05:00:17.169Z",
+    "updated_at": "2026-07-20T05:00:17.169Z"
   }
 ]
