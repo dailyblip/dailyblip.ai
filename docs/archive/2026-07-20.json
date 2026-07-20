@@ -1,20 +1,20 @@
 {
   "date": "2026-07-20",
-  "issue": 241,
+  "issue": 242,
   "brief": {
     "items": [
       {
-        "story": "s_976a1a3eff5f1d7b",
-        "html": "Mira Murati's Thinking Machines released <b>Inkling, a free 975B open-weight multimodal model</b> reasoning natively across text, image, audio, and video.",
+        "story": "s_93c83145e8c7884e",
+        "html": "YouTube's updated policy now defines which <b>AI-generated and repetitive videos are ineligible for ad revenue</b> — audit your channel before your next upload.",
         "secs": 10,
-        "impact": 8,
+        "impact": 9,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_ac7be8d09d06872b",
-        "html": "Apple's lawsuit alleges OpenAI hired <b>400+ former Apple employees in a trade-secret theft</b> that now threatens the company's 2026 IPO timeline.",
+        "story": "s_735b682e0d0efd97",
+        "html": "Lightcraft's <b>Spark Story converts screenplays into full USD/Gaussian Splat virtual sets on iPhone</b>, enabling shot planning before any production spend.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -22,54 +22,129 @@
         "commentary": false
       },
       {
-        "story": "s_4e6f73ed1f19a4ce",
-        "html": "Meta <b>quietly scrapped its Muse image generation tool</b> — worth checking if it's in your pipeline before you find it gone.",
-        "secs": 9,
-        "impact": 7,
+        "story": "s_6dea1640e408017e",
+        "html": "Google DeepMind <b>reconstructed Pelé's unfilmed 1959 goal using AI motion synthesis</b>, signaling what's now possible for historical or undocumented scene recreation.",
+        "secs": 10,
+        "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_3ff6c4eb3a8015a3",
-        "html": "Google Vids now supports <b>natural-language editing via Gemini Omni plus AI personal avatars</b> for video starring from photos.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_4367c4f1a18b0bbe",
-        "html": "Houdini 22 ships <b>native Gaussian Splatting creation, editing, and animation</b> with no third-party tools required.",
-        "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_c0ef7a87d4b35aa6",
-        "html": "Artist 1010Benja demonstrates <b>genuine compositional intent using Suno AI</b>, challenging the assumption that AI music is inherently generic.",
+        "story": "s_90cef26b7e07e68a",
+        "html": "Moonshot and Alibaba launched <b>frontier models claiming OpenAI/Anthropic parity at lower cost</b>, worth testing if you rely on API-based writing or coding tools.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
+      },
+      {
+        "story": "s_c4923a542f7b6a55",
+        "html": "The music industry's sample-clearance framework <b>was never built for AI training on 40 million complete recordings</b> — and courts are only beginning to reckon with it.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": true
       }
     ],
-    "title": "Monday, July 20 — six things that changed today",
-    "date": "2026-07-20T10:25:46.874Z",
-    "edition": "pm"
+    "title": "Monday, July 20 — six things creators need to know",
+    "date": "2026-07-20T17:12:24.488Z",
+    "edition": "am"
   },
   "tooldrop": {
-    "name": "Review by Eddie AI",
-    "blurb": "AI-powered video review tool that lets editors and clients leave time-stamped feedback directly on footage — cuts the back-and-forth for video creators.",
-    "meta": "video — free tier",
-    "url": "https://www.producthunt.com/products/eddie-your-ai-video-editor",
-    "date": "2026-07-15T17:45:31.573Z"
+    "name": "LayerProof Mylar",
+    "blurb": "Generates social content for creators — turns your ideas into ready-to-post assets without manual design work.",
+    "meta": "image · social — free tier",
+    "url": "https://layerproof.app/mylar?utm_source=producthunt\\u0026utm_medium=organic\\u0026utm_campaign=mylarlaunch",
+    "date": "2026-07-20T17:12:37.495Z"
   },
   "stories": [
+    {
+      "id": "s_c4923a542f7b6a55",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "The Sample Clearance Problem, Except It's the Whole Song Now",
+      "dek": "The music industry spent three decades building a legal framework to stop people from lifting four bars of someone else's record. AI just swallowed 40 million complete recordings and called it research.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/the-sample-clearance-problem-except-it-s-the-whole-song-now-2026-07-20.html",
+      "ts": "2026-07-20T17:12:04.408Z",
+      "read": "3 min",
+      "also": []
+    },
+    {
+      "id": "s_735b682e0d0efd97",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Lightcraft's Spark Story uses iPhone to generate virtual film sets from scripts",
+      "dek": "SIGGRAPH 2026 revealed Spark Story, which converts screenplays into USD/Gaussian Splat environments and enables on-device shot planning before production.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/3d/i-watched-lightcraft-turn-a-screenplay-into-a-virtual-film-set-using-an-iphone",
+      "ts": "2026-07-20T15:30:00.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 102,
+      "move": 56
+    },
+    {
+      "id": "s_93c83145e8c7884e",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "YouTube clarifies monetization policy for AI-generated and low-quality content",
+      "dek": "YouTube updated policies defining which AI-generated and repetitive videos can't earn ad revenue, adding nuance to existing inauthentic-content rules.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
+      "ts": "2026-07-20T15:23:06.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 54
+    },
+    {
+      "id": "s_90cef26b7e07e68a",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Moonshot and Alibaba release frontier AI models challenging OpenAI and Anthropic",
+      "dek": "Chinese AI companies launched competitive models claimed to match OpenAI/Anthropic capabilities at lower cost, narrowing the US AI lead.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
+      "ts": "2026-07-20T10:16:33.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 97,
+      "move": 57
+    },
+    {
+      "id": "s_6dea1640e408017e",
+      "cat": "video",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "DeepMind AI reconstructs Pelé's legendary unfilmed goal using motion synthesis",
+      "dek": "Google DeepMind recreated a famous 1959 goal Pelé claimed was his best but was never captured on video, using AI to synthesize the play from his account.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/20/ai-recreates-the-goal-pele-said-was-his-greatest-ever-but-wasnt-filmed/",
+      "ts": "2026-07-20T08:58:49.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 85,
+      "move": 52
+    },
     {
       "id": "s_c57b245c362dd255",
       "cat": "writing",
@@ -85,8 +160,8 @@
       "ts": "2026-07-20T04:07:57.883Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 57
+      "heat": 83,
+      "move": -9
     },
     {
       "id": "s_444761f503abeda7",
@@ -103,8 +178,8 @@
       "ts": "2026-07-20T00:31:13.665Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": 53
+      "heat": 79,
+      "move": -6
     },
     {
       "id": "s_90851a797dd057ee",
@@ -120,8 +195,8 @@
       "ts": "2026-07-19T21:16:07.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 81,
-      "move": -7
+      "heat": 74,
+      "move": -18
     },
     {
       "id": "s_c0ef7a87d4b35aa6",
@@ -137,31 +212,14 @@
       "ts": "2026-07-19T17:35:54.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 87,
-      "move": -5
-    },
-    {
-      "id": "s_5767ddd493bb4165",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Nonprofit Current AI launches offline multilingual AI device for rural India",
-      "dek": "Current AI released Suno Sutra, an open-source device running AI in 22 Indian languages without internet, addressing AI's linguistic blind spots in the Global South.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
-      "ts": "2026-07-19T14:00:00.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 74,
-      "move": -16
+      "heat": 80,
+      "move": -6
     }
   ],
   "stats": {
-    "scanned_last_run": 3,
-    "published_today": 5,
+    "scanned_last_run": 23,
+    "published_today": 8,
     "sources_live": 13,
-    "slopped_last_run": 3
+    "slopped_last_run": 19
   }
 }

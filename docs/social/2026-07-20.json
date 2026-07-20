@@ -4,67 +4,56 @@
     {
       "index": 1,
       "image": "2026-07-20-1.png",
-      "caption": "Suno's training data just got exposed — and it's a long list. A supply chain hack revealed source code showing the AI music generator scraped audio from YouTube, Deezer, and podcasts. Record labels already suing Suno say this confirms DMCA violations; Suno is holding firm on a fair-use defense.\n\nFull story + today's brief: link in bio.\n\n#AIMusic #Suno #DMCA #AIRights #MusicIndustry #ArtificialIntelligence",
+      "caption": "YouTube just tightened the rules on AI-generated and repetitive content. The updated policy spells out which types of videos — mass-produced, low-effort, or inauthentic — are no longer eligible for ad revenue. It's more nuance added to existing rules, not a total crackdown, but creators leaning on AI content farms should pay attention.\n\nFull story + today's brief: link in bio.\n\n#YouTube #CreatorEconomy #AIContent #ContentMonetization #AIPolicy",
       "story": {
-        "title": "Hack reveals Suno scraped YouTube, Deezer, and podcasts for AI training",
-        "dek": "A supply chain attack exposed source code showing the AI music generator harvested audio from multiple platforms. Record labels argue this violates the DMCA despite Suno's fair-use defense.",
+        "title": "YouTube clarifies monetization policy for AI-generated and low-quality content",
+        "dek": "YouTube updated policies defining which AI-generated and repetitive videos can't earn ad revenue, adding nuance to existing inauthentic-content rules.",
         "src": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/07/15/hack-suggests-ai-music-generator-suno-scraped-youtube-for-training-data/"
+        "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/"
       }
     },
     {
       "index": 2,
       "image": "2026-07-20-2.png",
-      "caption": "Patreon just upgraded from politely asking AI bots not to scrape — to actually stopping them. The platform is now using Cloudflare to actively deny access to AI training crawlers, moving past robots.txt guidelines that sophisticated bots increasingly ignore. It's a meaningful shift in how creator platforms defend their content at the infrastructure level.\n\nFull story + today's brief: link in bio\n\n#Patreon #AIRights #CreatorEconomy #AIScraping #AIPolicy",
+      "caption": "Point an iPhone at a screenplay and walk onto the set — virtually. Lightcraft's Spark Story, revealed at SIGGRAPH 2026, converts scripts directly into USD and Gaussian Splat environments you can scout and storyboard on-device before a single light is rigged.\n\nFull story + today's brief: link in bio\n\n#AIFilmmaking #Lightcraft #SIGGRAPH2026 #GenerativeAI #VirtualProduction #CreativeAI",
       "story": {
-        "title": "Patreon blocks AI scraping with Cloudflare enforcement",
-        "dek": "Patreon is actively blocking AI training bots via Cloudflare, shifting from passive robots.txt rules to direct access denial as scraping tactics grow more sophisticated.",
-        "src": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/"
+        "title": "Lightcraft's Spark Story uses iPhone to generate virtual film sets from scripts",
+        "dek": "SIGGRAPH 2026 revealed Spark Story, which converts screenplays into USD/Gaussian Splat environments and enables on-device shot planning before production.",
+        "src": "Creative Bloq AI",
+        "url": "https://www.creativebloq.com/3d/i-watched-lightcraft-turn-a-screenplay-into-a-virtual-film-set-using-an-iphone"
       }
     },
     {
       "index": 3,
       "image": "2026-07-20-3.png",
-      "caption": "TikTok is testing an opt-in tool that scans for AI-generated likenesses of creators — detecting synthetic impersonation and giving creators a path to report it. The move mirrors YouTube's existing detection capability, signaling that likeness protection is becoming a platform standard. Full brief + story details: link in bio.\n\n#TikTok #AIRights #CreatorEconomy #AIDetection #SyntheticMedia",
+      "caption": "Google DeepMind reconstructed Pelé's 1959 'greatest goal' — one that was never filmed. Using AI motion synthesis and Pelé's own account of the play, they built a moving visual record of something that existed only in memory.\n\nFull story + today's brief: link in bio.\n\n#DeepMind #AIVideo #MotionSynthesis #GoogleAI #Pelé #AICreators",
       "story": {
-        "title": "TikTok testing AI likeness detection tool for creators",
-        "dek": "TikTok is piloting an opt-in tool to detect AI-generated likenesses of creators and enable reporting. The feature mirrors YouTube's similar detection capability, offering creators protection against synthetic impersonation.",
-        "src": "The Verge AI",
-        "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool"
+        "title": "DeepMind AI reconstructs Pelé's legendary unfilmed goal using motion synthesis",
+        "dek": "Google DeepMind recreated a famous 1959 goal Pelé claimed was his best but was never captured on video, using AI to synthesize the play from his account.",
+        "src": "PetaPixel",
+        "url": "https://petapixel.com/2026/07/20/ai-recreates-the-goal-pele-said-was-his-greatest-ever-but-wasnt-filmed/"
       }
     },
     {
       "index": 4,
       "image": "2026-07-20-4.png",
-      "caption": "Google just open-sourced GNM Head — a parametric 3D human head model with 170+ controls for expression, pose, and facial variation. Trained on real 3D scans, it ships with a free Blender add-on, making photorealistic head generation accessible to anyone building characters or avatars.\n\nFull story + today's brief: link in bio.\n\n#AI #3D #Blender #GoogleAI #CharacterDesign #AITools",
+      "caption": "China's AI race is getting serious. Moonshot and Alibaba both dropped new frontier models this week, each claiming performance on par with OpenAI and Anthropic — at a fraction of the cost. The gap between US and Chinese AI labs just got a lot harder to measure.\n\nFull story + today's 6-item brief: link in bio\n\n#ArtificialIntelligence #AINews #Alibaba #MoonshotAI #FrontierAI #AIRace",
       "story": {
-        "title": "Google open-sources GNM Head, parametric 3D human head model",
-        "dek": "Google releases generative anthropomorphic 3D head model (170+ controls, expression/pose adjustable) with free Blender add-on; trained on 3D scans, not AI-generated but explicitly generative for facial variation.",
-        "src": "80 Level",
-        "url": "https://80.lv/articles/google-open-sources-gnm-head-3d-parametric-human-head-model/"
+        "title": "Moonshot and Alibaba release frontier AI models challenging OpenAI and Anthropic",
+        "dek": "Chinese AI companies launched competitive models claimed to match OpenAI/Anthropic capabilities at lower cost, narrowing the US AI lead.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen"
       }
     },
     {
       "index": 5,
       "image": "2026-07-20-5.png",
-      "caption": "NVIDIA and Hugging Face just dropped NeMo Automodel — a joint framework for fine-tuning video and image diffusion models at scale. It ships with support for FLUX checkpoints and LoRA examples out of the box, making large-scale visual model training meaningfully more accessible. This is infrastructure-level news for anyone building in the image or video generation space.\n\nFull story + today's brief: link in bio.\n\n#AITools #NVIDIA #HuggingFace #DiffusionModels #VideoAI #GenerativeAI",
+      "caption": "The music industry spent 30 years building legal guardrails around sampling — a few bars, cleared and licensed. AI training datasets swallowed 40 million complete recordings and classified the whole thing as research.\n\nThe legal framework simply wasn't built for this scale, and now the industry is scrambling to retrofit century-old copyright logic onto a problem that ate the entire catalog.\n\nFull story + today's brief: link in bio.\n\n#AIMusic #CopyrightLaw #MusicIndustry #GenerativeAI #AIPolicy",
       "story": {
-        "title": "NVIDIA NeMo Automodel enables large-scale video and image model fine-tuning",
-        "dek": "NVIDIA and Hugging Face joint effort adds fine-tuning at scale for video and image diffusion models, including support for FLUX checkpoints and LoRA examples.",
-        "src": "Hugging Face Blog",
-        "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel"
-      }
-    },
-    {
-      "index": 6,
-      "image": "2026-07-20-6.png",
-      "caption": "Moonshot AI just dropped Kimi K3 — an open-source model from China that benchmarks alongside Claude and GPT-4-class systems. Markets moved the moment analysts started paying attention. The geopolitical read on this one is as loud as the technical specs.\n\nFull story + today's brief: link in bio.\n\n#AI #OpenSource #KimiK3 #MoonshotAI #AINews #FrontierAI",
-      "story": {
-        "title": "Moonshot AI's Kimi K3 reaches frontier performance, rattles markets",
-        "dek": "Chinese company Moonshot AI released an open-source model rivaling Claude and GPT, drawing competitive analysis and sparking concerns about geopolitical AI dynamics. Market reaction was immediate.",
-        "src": "TechCrunch AI",
-        "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/"
+        "title": "The Sample Clearance Problem, Except It's the Whole Song Now",
+        "dek": "The music industry spent three decades building a legal framework to stop people from lifting four bars of someone else's record. AI just swallowed 40 million complete recordings and called it research.",
+        "src": "dailyblip",
+        "url": "https://dailyblip.ai/commentary/the-sample-clearance-problem-except-it-s-the-whole-song-now-2026-07-20.html"
       }
     }
   ]
