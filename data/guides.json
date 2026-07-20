@@ -1465,5 +1465,22 @@
     "approved_at": "2026-07-20T00:02:57.255Z",
     "published_at": "2026-07-20T00:03:29.419Z",
     "published_url": "https://dailyblip.ai/guides/chatgpt-codex-micro-keyboard-explained.html"
+  },
+  {
+    "id": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "10 prompts to un-sloppify your AI images",
+      "article_type": "Practical guide",
+      "target_audience": "AI content generators ",
+      "target_length": "Quick",
+      "image_count": 3,
+      "keywords": "",
+      "editorial_notes": "A list of AI prompts for Midjourney that will help make your images look more polished and real. Prompts to help fine tune your image creation so it doesn't look like classic AI slop. ",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-20T02:46:24.164Z",
+    "updated_at": "2026-07-20T02:46:24.164Z"
   }
 ]
