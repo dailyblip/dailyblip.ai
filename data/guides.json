@@ -1468,8 +1468,8 @@
   },
   {
     "id": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "submitted": {
       "idea": "10 prompts to un-sloppify your AI images",
       "article_type": "Practical guide",
@@ -1819,7 +1819,7 @@
         "alt_text": "Side-by-side comparison split: left panel showing an over-saturated, smooth AI-processed aesthetic in cool blue tones; right panel showing a warm, grainy, natural-looking result — separated by an amber divider bar representing the --raw parameter.",
         "caption": "The single biggest lever: --raw (V8.1) shifts Midjourney away from its over-processed default and toward something that reads as a real photograph.",
         "generated_at": "2026-07-20T02:52:23.856Z",
-        "approved": true,
+        "approved": false,
         "role": "hero",
         "concept": "A single photograph-like image visually splits into two halves: the left showing the over-stylized, plastic Midjourney default; the right showing a grounded, film-grain result — with '--raw' as the hinge between them.",
         "purpose": "Immediately communicate the transformation this guide delivers: from over-processed AI aesthetic to something that looks like a real photograph, anchored to the article's core quick answer.",
@@ -1833,7 +1833,7 @@
         "alt_text": "Diagram of a Midjourney prompt broken into three color-coded token groups: the subject in amber, film and lens language additions in aqua, and the --raw --s 50 parameter tail in muted amber, each labeled beneath with a bracket.",
         "caption": "Where each addition lives in the prompt: film and lens language (aqua) stacks between your subject and the parameter tail — you can add just these without changing anything else.",
         "generated_at": "2026-07-20T02:52:43.254Z",
-        "approved": true,
+        "approved": false,
         "role": "explainer",
         "concept": "A prompt anatomy diagram showing a single example prompt broken into labeled segments: the subject, the film/lens language additions ('shot on 35mm film', 'f/1.8 aperture'), and the parameter tail ('--raw --s 50').",
         "purpose": "Show exactly how the quick-answer additions slot into a real Midjourney prompt — making the instruction concrete and copy-ready rather than abstract.",
@@ -1847,7 +1847,7 @@
         "alt_text": "A 2×2 comparison grid showing four Midjourney --s stylize values: top-left --s 1000 with saturated cool tones, top-right --s 250 with balanced polished tones, bottom-left --s 100 with muted warm tones, and bottom-right --s 50 with warm amber grain — highlighted with an amber border as the recommended value.",
         "caption": "How --s affects output character: dropping from the default (--s 250) toward --s 50 progressively reduces over-stylization. The guide recommends stacking these changes gradually rather than all at once.",
         "generated_at": "2026-07-20T02:53:01.096Z",
-        "approved": true,
+        "approved": false,
         "role": "comparison",
         "concept": "A 2×2 grid comparing four --s (stylize) value levels — high vs low — showing how the visual character shifts from over-rendered to naturalistic as the number drops, with a clear visual metaphor rather than rendered screenshots.",
         "purpose": "Make the --s parameter's effect tangible: readers see at a glance that lower values move output toward photographic realism, directly supporting the key takeaway about stacking --s values gradually.",
@@ -1861,7 +1861,7 @@
         "alt_text": "A horizontal four-step workflow diagram showing the recommended sequence for reducing AI-generated aesthetics in Midjourney: step 1 --raw (aqua node), step 2 film language, step 3 --s value, step 4 --no, connected by amber arrows.",
         "caption": "The guide's recommended stacking order: start with --raw, then layer in film and lens language, then tune --s downward, then use --no for specific visual elements you want to suppress.",
         "generated_at": "2026-07-20T02:53:22.482Z",
-        "approved": false,
+        "approved": true,
         "role": "workflow",
         "concept": "A four-step linear workflow showing the recommended order for layering the guide's additions: start with --raw, add film language, tune --s, then use --no for cleanup — each step as a numbered node on a horizontal flow.",
         "purpose": "Operationalize the key takeaway that you should 'stack them gradually rather than all at once' — give readers a concrete sequence to follow rather than adding everything at once.",
@@ -1875,7 +1875,7 @@
         "alt_text": "A vertical stack of five cards representing film and lens language additions for Midjourney prompts: focal length (ruler icon), aperture (iris icon), film stock (film strip icon), grain (dot pattern icon), and format (camera outline icon), each with an amber left border accent.",
         "caption": "Five categories of film and lens language the guide covers — adding any of these gives Midjourney a specific visual target rather than letting it invent its own interpretation.",
         "generated_at": "2026-07-20T02:53:50.663Z",
-        "approved": false,
+        "approved": true,
         "role": "list-support",
         "concept": "A tall vertical list of five distinct lens/film language icons in a ranked-card layout, each representing a different type of addition from the guide: focal length, aperture, film stock, grain, and camera format.",
         "purpose": "Give the '10 things to add' section a visual anchor that makes the film/lens language category feel concrete and varied — showing readers the range of specific prompt additions available without rendering text-heavy labels.",
@@ -1901,21 +1901,22 @@
         "placement": "hero",
         "alt_text": "",
         "caption": "",
-        "approved": false,
+        "approved": true,
         "role": "upload",
         "generated_at": "2026-07-20T03:00:48.346Z"
       },
       {
-        "id": "upload-1784516839109",
-        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-upload-1784516837760.jpg",
+        "id": "upload-1784517978245",
+        "file": "cbe0896b-3640-4b2d-963d-dd923e9cdbaf-upload-1784517976971.jpg",
         "placement": "hero",
         "alt_text": "",
         "caption": "",
         "approved": true,
         "role": "upload",
-        "generated_at": "2026-07-20T03:07:19.109Z"
+        "generated_at": "2026-07-20T03:26:18.245Z"
       }
-    ]
+    ],
+    "approved_at": "2026-07-20T03:00:53.907Z"
   },
   {
     "id": "3e4481a4-b898-48fb-9448-2f25dc8db494",
