@@ -175,6 +175,7 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
     <button class="tab" data-tab="tooldrop">Tool drop</button>
     <button class="tab" data-tab="overrides">Overrides</button>
     <button class="tab" data-tab="guides">Guides</button>
+    <button class="tab" data-tab="maintenance">Guide Maintenance</button>
     <button class="tab" data-tab="new">+ Add story</button>
   </div>
 
@@ -293,6 +294,23 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
     </div>
 
     <div class="panel" id="guideReviewPanel" style="display:none"></div>
+  </div>
+
+  <div id="paneMaintenance" style="display:none">
+    <div class="panel" style="margin-bottom:16px">
+      <h3>Library maintenance</h3>
+      <p class="tip" style="margin:6px 0 14px">Fixes for things that fall outside the normal generate/review/publish flow \u2014 recovering guides that lost their tracking record, rebuilding the public library page after a template fix, and cleaning up anything stuck.</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" id="mResync">Resync from manifest</button>
+        <button class="btn" id="mRebuild">Rebuild library page</button>
+        <button class="btn red" id="mForceDeleteAll">Force-delete ALL listed jobs</button>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>All guides <span class="tip" id="mCount"></span></h3>
+      <p class="tip" style="margin:6px 0 14px">Includes guides recovered from the manifest that have no normal job record \u2014 those show "resynced" and can only be Unlisted or Force-deleted here, not opened for editing.</p>
+      <div id="mList"></div>
+    </div>
   </div>
 
   <div id="paneNew" style="display:none">
@@ -1551,13 +1569,128 @@ $("#nwAdd").addEventListener("click", () => {
 /* -------- Tab switching -------- */
 function activateTab(name){
   $$(".tab").forEach(t => t.classList.toggle("active", t.dataset.tab === name));
-  const panes = { stories: "#paneStories", brief: "#paneBrief", tooldrop: "#paneTooldrop", overrides: "#paneOverrides", guides: "#paneGuides", new: "#paneNew" };
+  const panes = { stories: "#paneStories", brief: "#paneBrief", tooldrop: "#paneTooldrop", overrides: "#paneOverrides", guides: "#paneGuides", maintenance: "#paneMaintenance", new: "#paneNew" };
   Object.entries(panes).forEach(([k, sel]) => $(sel).style.display = k === name ? "" : "none");
   if (name === "brief") renderBrief();
   if (name === "tooldrop") renderTooldrop();
   if (name === "overrides") renderOverrides();
   if (name === "guides") renderGuides();
+  if (name === "maintenance") renderMaintenance();
 }
+async function renderMaintenance(){
+  try { await loadGuidesFile(); } catch (e) { toast(e.message, "err", 5000); return; }
+  $("#mCount").textContent = `(${guides.length})`;
+  if (!guides.length) {
+    $("#mList").innerHTML = `<p class="tip">No guide jobs tracked at all.</p>`;
+    return;
+  }
+  $("#mList").innerHTML = guides.slice()
+    .sort((a, b) => new Date(b.created_at || 0) - new Date(a.created_at || 0))
+    .map(g => `
+      <div class="panel" style="margin-bottom:8px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:600">${esc(g.article?.title || g.submitted?.idea?.slice(0,60) || "Untitled")}</div>
+          <div class="tip">${esc(guideStatusLabel(g))}${g.resynced ? " \u00b7 resynced" : ""} \u00b7 ${esc(ago(g.created_at))} ago</div>
+        </div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          ${g.status === "published" ? `<button class="btn" onclick="toggleGuideListing('${g.id}')">${g.unlisted ? "Re-list" : "Unlist"}</button>` : ""}
+          <button class="btn red" onclick="maintenanceForceDelete('${g.id}')">Force delete</button>
+        </div>
+      </div>`).join("");
+}
+
+// Unconditional delete, any status \u2014 deliberately bypasses
+// DELETABLE_STATUSES/isForceDeletable entirely, since this whole tab
+// exists specifically for "let me clean this up regardless." The risk
+// this bypasses (breaking a genuinely still-running Action's next
+// commit) is real, so the confirmation says so plainly rather than
+// hiding it \u2014 the normal Guides tab's more conservative delete is still
+// there unchanged for everyday use.
+async function maintenanceForceDelete(id){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  const label = g.article?.title || g.submitted?.idea?.slice(0, 60) || "this job";
+  const activeWarning = (g.status === "in_progress" || g.status === "queued" || g.status === "approved")
+    ? `\n\n\u26a0 This job's status is "${g.status}" \u2014 if a GitHub Action is genuinely still running for it, deleting this record now will break that Action's next commit step. Only proceed if you've confirmed via the Actions tab that it's actually dead.`
+    : "";
+  if (!confirm(`Force-delete "${label}"? This removes it from this list only \u2014 if it was published, the live page stays up (Unlist first if you also want it off the homepage/library).${activeWarning}`)) return;
+  try {
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => gs.filter(x => x.id !== id), `admin: force-delete guide ${id}`);
+    toast("Deleted.");
+    await renderMaintenance();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
+async function forceDeleteAllListed(){
+  try { await loadGuidesFile(); } catch (e) { toast(e.message, "err", 5000); return; }
+  if (!guides.length) { toast("Nothing to delete."); return; }
+  const activeCount = guides.filter(g => g.status === "in_progress" || g.status === "queued" || g.status === "approved").length;
+  const activeWarning = activeCount
+    ? `\n\n\u26a0 ${activeCount} of these show as still in progress or approved \u2014 if any Action is genuinely still running for them, this WILL break its next commit step.`
+    : "";
+  if (!confirm(`Force-delete ALL ${guides.length} job(s) from this list? Live published pages are not affected \u2014 only this tracking list.${activeWarning}`)) return;
+  try {
+    await writeGuidesWithRetry(() => [], "admin: force-delete all guide jobs");
+    toast("All jobs cleared.");
+    await renderMaintenance();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
+// Recovers guides that are live and in the manifest but have no
+// matching job record \u2014 which is exactly what happens if a published
+// guide's job record gets deleted via the normal Guides tab (that
+// delete only ever touched the tracking record, never the manifest or
+// the live page itself, so the guide keeps existing, just untracked).
+async function resyncFromManifest(){
+  try {
+    const manifest = await loadManifestFile();
+    await loadGuidesFile();
+    const existingSlugs = new Set(guides.map(g => g.article?.slug).filter(Boolean));
+    const missing = manifest.filter(m => !existingSlugs.has(m.slug));
+    if (!missing.length) { toast("Nothing to resync \u2014 every published guide already has a tracked record."); return; }
+    if (!confirm(`Found ${missing.length} published guide(s) with no tracked record. Add them back so they can be managed here?`)) return;
+
+    await writeGuidesWithRetry(gs => [
+      ...gs,
+      ...missing.map(m => ({
+        id: `resynced-${m.slug}`,
+        status: "published",
+        stage: "Published",
+        published_at: m.published_at,
+        published_url: `https://dailyblip.ai/guides/${m.slug}.html`,
+        created_at: m.published_at,
+        article: { title: m.title, slug: m.slug, dek: m.dek, tags: m.tags || [] },
+        images: m.hero_image ? [{ id: "resynced-hero", placement: "hero", file: m.hero_image.replace(/^\/guides\//, ""), approved: true, alt_text: "" }] : [],
+        resynced: true,
+      })),
+    ], `admin: resync ${missing.length} guide(s) from manifest`);
+
+    toast(`Recovered ${missing.length} guide(s).`);
+    await renderMaintenance();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
+async function rebuildLibraryPage(){
+  if (!confirm("Rebuild the public guide library page and manifest now, from whatever's currently tracked? This picks up any template/CSS fixes without needing a new publish.")) return;
+  try {
+    await dispatchWorkflow("rebuild-guide-library.yml", {});
+    toast("Rebuilding\u2026 check the Actions tab, should finish within a minute or two.");
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
+$("#mResync")?.addEventListener("click", resyncFromManifest);
+$("#mRebuild")?.addEventListener("click", rebuildLibraryPage);
+$("#mForceDeleteAll")?.addEventListener("click", forceDeleteAllListed);
+
 $$(".tab").forEach(t => t.addEventListener("click", () => activateTab(t.dataset.tab)));
 
 /* =============================================================
