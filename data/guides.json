@@ -2,7 +2,7 @@
   {
     "id": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773",
     "status": "queued",
-    "stage": "Generating images",
+    "stage": "Formatting",
     "submitted": {
       "idea": "10 Prompts to make your Suno music better",
       "article_type": "Top tools list",
@@ -14,7 +14,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T05:00:17.169Z",
-    "updated_at": "2026-07-20T05:03:51.041Z",
+    "updated_at": "2026-07-20T05:07:12.828Z",
     "brief": {
       "target_reader": "Someone who has tried Suno once or twice and gotten okay results, but isn't sure how to write prompts that actually sound like what they're imagining",
       "reader_outcome": "Feel confident enough to go back to Suno and write a noticeably better prompt today",
@@ -336,6 +336,92 @@
     "warnings": [
       "s1: The article conflates V4.5, V5, and V5.5 under one 1,000-character cap, but the source (aimusicapi.ai) lists V4.5, V4.5+, V5, and V5.5 separately — the article should not imply V5 and V5.5 share the V4.5 limit without noting V5/V5.5 may differ, and 'V4.5 and newer' overgeneralizes across model versions not confirmed to be identical.",
       "s1: The official Suno X announcement source confirms the Exclude feature is Pro/Premier only in Custom Mode, but the article does not clarify that Basic/free-plan users lack access to this field entirely — a material omission for readers on the free tier."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-img1.jpg",
+        "prompt": "Flat vector illustration, 16:9, dark navy gradient background from #071A1F to #0C242B. Dead center of the frame: a single clean rounded-rectangle input bar styled like a software Style field, outlined in warm amber (#FFB454). Inside the bar, four horizontally-wide stacked tag chips arranged top to bottom with even spacing. The topmost chip is filled solid amber (#FFB454) and is the largest — it bears only the short label 'Genre' in dark ink. The three chips below it graduate toward aqua (#63D8C6) and are slightly smaller each step — labeled 'Mood', 'Instruments', 'Vocals' respectively in small clean sans-serif. A soft aqua glow halos the whole stack. The word 'Style' appears in small muted aqua text at the top-left corner of the input bar, inside a safe inset margin. All elements sit comfortably within a generous margin on every side — nothing touches or approaches the frame edge. No gradients on individual chips, flat color fills only. Crisp alignment, even spacing, professional infographic aesthetic, no textures, no painterly rendering, no floating UI windows, no people.",
+        "placement": "hero",
+        "alt_text": "A stylized Suno Style input field showing four stacked prompt tags ordered from Genre at the top in amber, down through Mood, Instruments, and Vocals in aqua — illustrating the layered tagging approach",
+        "caption": "In Suno's Style field, order matters: lead with genre, then stack mood, instrumentation, and vocal style after it for the most steerable results.",
+        "generated_at": "2026-07-20T05:05:51.510Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A single Suno Style field prompt built up in stacked layers — genre at the top, then mood, instruments, vocal style — glowing amber against a deep navy background",
+        "purpose": "Immediately communicate the core mechanic: layering specific tags in order is what makes Suno output match what you're imagining",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-img2.jpg",
+        "prompt": "Flat vector illustration, 1:1 square, deep navy background (#071A1F). Frame is split exactly in half by a thin vertical line in muted teal. Left half: a single audio waveform shape in desaturated amber, edges blurred and soft as if out of focus, suggesting vagueness. Below the waveform, the single word 'Happy' in small muted gray sans-serif, centered in the left panel, well within margin. Right half: the same waveform shape but crisp, sharp-edged, full vivid amber (#FFB454), with defined peaks and troughs. Above this waveform, a small vertical stack of three tiny rounded-rectangle chips in aqua (#63D8C6), no text on them. A soft aqua radial glow behind the right waveform only. All elements have generous padding from the outer frame edges — nothing touches the border. No text other than 'Happy'. Clean even spacing, professional infographic look, flat color fills, no textures, no people, no instruments as decoration.",
+        "placement": "s1",
+        "alt_text": "Side-by-side comparison: a blurry, unfocused waveform labeled 'Happy' on the left versus a sharp, well-defined waveform with a stack of specific prompt tags on the right",
+        "caption": "'Happy' is too broad — Suno averages toward the middle of everything. Stacking genre, mood, instruments, and vocal style gives it something concrete to work toward.",
+        "generated_at": "2026-07-20T05:06:06.750Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "Vague word ('Happy') on the left produces a blurry, unfocused waveform; a specific stacked prompt on the right produces a sharp, defined waveform — showing why specificity closes the gap between imagination and output",
+        "purpose": "Visually explain the article's core thesis from s1: vague emotional words like 'happy' produce generic, middle-of-everything output, while specific layered tags produce a recognizable result",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-img3.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape, deep navy background (#071A1F to #0C242B). Four rounded-square nodes arranged in a single horizontal row across the center of the frame, with at least 10 percent of the total frame width as clear empty margin outside the leftmost node and outside the rightmost node — no element extends near the frame edge. Each node is equal size. Left to right: Node 1 filled solid amber (#FFB454) with a simple flat music-note icon centered inside it and the label 'Genre' in small white sans-serif below the node. Node 2 slightly less amber with a flat dial or sound-wave icon and label 'Mood'. Node 3 aqua-leaning with a flat guitar-silhouette icon and label 'Instruments'. Node 4 full aqua (#63D8C6) with a flat microphone icon and label 'Vocals'. Between each pair of nodes, a clean right-pointing chevron arrow in aqua. All four nodes and all arrows sit on the vertical centerline of the frame with even horizontal spacing. No other text. Crisp edges, flat color fills, consistent icon weight, even spacing, professional slide-deck aesthetic, no textures, no people, no floating UI.",
+        "placement": "s1",
+        "alt_text": "A four-step workflow diagram: Genre → Mood → Instruments → Vocals, showing the recommended order for building a Suno Style field prompt",
+        "caption": "Build every Suno Style prompt in this order: genre first, then mood, instrumentation, and vocal style — earlier tags are reported to carry more weight.",
+        "generated_at": "2026-07-20T05:06:25.133Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "A four-step left-to-right flow showing how to build a Suno Style prompt: Genre → Mood → Instrumentation → Vocal Style, each step a distinct icon-labeled node connected by arrows",
+        "purpose": "Give readers a reusable mental model for constructing any of the 10 prompts in the article — the ordering rule from the key takeaways made visual",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img4",
+        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-img4.jpg",
+        "prompt": "Flat vector illustration, 9:16 portrait, deep navy background (#071A1F). Two equal-width columns arranged vertically in the frame, separated by a thin vertical center line in muted gray. Generous margin on all four outer edges — no element within 8 percent of any frame edge. Left column, aqua theme (#63D8C6): at the top of the column, a flat speedometer or dial icon in aqua, centered. Below it, the label 'BPM' in small aqua sans-serif. Below that, a rounded rectangle with a dashed/dotted border in aqua, suggesting loose or approximate control. Inside the dashed box, a small horizontal right-pointing nudge arrow in aqua. At the bottom of the left column, the word 'Hint' in aqua, slightly larger. Right column, amber theme (#FFB454): at the top, a flat padlock icon in amber, centered. Below it, the label 'Genre' in small amber sans-serif. Below that, a rounded rectangle with a solid bold border in amber, suggesting a firm anchor. Inside the solid box, a small flat anchor icon in amber. At the bottom of the right column, the word 'Anchor' in amber, slightly larger. All elements evenly spaced within their columns, crisp alignment, flat color fills, no textures, no gradients on individual elements, no people, no UI screenshots.",
+        "placement": "s1",
+        "alt_text": "Two-column comparison: BPM on the left as a 'Hint' shown with a dashed border and nudge arrow, Genre on the right as an 'Anchor' shown with a solid border and lock icon",
+        "caption": "BPM numbers nudge Suno's tempo but don't override genre — think of them as a hint. Genre is the real anchor that shapes the output.",
+        "generated_at": "2026-07-20T05:06:43.056Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "A vertical two-column comparison contrasting how BPM numbers work vs. how genre tags work in Suno — BPM as a 'hint' dial on one side, genre as a 'anchor' lock icon on the other",
+        "purpose": "Illustrate the key takeaway that BPM numbers nudge tempo but don't override genre — treat them as a hint, not a setting — so readers understand what each input type actually controls",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img5",
+        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-img5.jpg",
+        "prompt": "Flat vector illustration, 1:1 square, deep navy background (#071A1F to #0C242B). Centered in the frame: a large clean geometric funnel shape pointing downward, filled with warm amber (#FFB454), crisp edges. On the upper-left outside the funnel mouth, three small rounded-square chips each bearing a simple X icon in muted red-amber — representing unwanted prompt elements approaching the funnel. At the top entrance of the funnel, a flat horizontal gate or barrier icon in bright amber with the single label 'Exclude' in tiny white sans-serif on it. Two of the three X-chips are stopped/blocked just outside the gate — visually halted. One X-chip is faded/semi-transparent amber, positioned partially inside the funnel entrance, illustrating that it is reduced but not fully blocked. Below the funnel's lower spout, a small clean horizontal audio waveform in aqua (#63D8C6), representing the output. All elements sit well within the frame with generous padding on all four sides — nothing approaches the frame edge. Flat color fills, no textures, no gradients on individual shapes, no people, no UI screenshots, crisp alignment, professional infographic aesthetic.",
+        "placement": "s2",
+        "alt_text": "A funnel diagram: three unwanted style elements approach the funnel entrance, two are blocked by the Exclude gate, one passes through at reduced opacity — illustrating that the Exclude field reduces but doesn't guarantee removal",
+        "caption": "Suno's Exclude field (Pro/Premier) is more targeted than in-prompt negations — but negative prompting reduces the chance of something appearing, it doesn't guarantee it's gone.",
+        "generated_at": "2026-07-20T05:06:56.913Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "A visual representation of the Exclude field as a targeted filter — a funnel with unwanted elements being stopped at a gate, contrasted with the less-reliable in-prompt negation approach",
+        "purpose": "Support the key takeaway that the dedicated Exclude field (Pro/Premier only) is more targeted than writing negations in the Style prompt, and that negative prompting reduces — not eliminates — unwanted elements",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img6",
+        "file": "1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-img6.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape, deep navy background (#071A1F to #0C242B). Horizontally centered in the middle of the frame: one long rounded-rectangle bar spanning approximately 70 percent of the frame width, with at least 15 percent clear margin on both the left and right sides. The bar is divided into four equal segments with clean vertical dividers. From left to right: Segment 1 solid amber (#FFB454). Segment 2 warm amber-orange, slightly cooler than segment 1. Segment 3 aqua-leaning teal, midway between amber and full aqua. Segment 4 full aqua (#63D8C6). No text inside the bar. Below the bar, four downward-pointing bracket lines each connecting to a short one-word label in clean white sans-serif: 'Genre' below segment 1, 'Mood' below segment 2, 'Instruments' below segment 3, 'Vocals' below segment 4. The bracket lines are thin and clean, the labels are small but legible, all positioned well below the bar with consistent spacing. The bar and all bracket labels sit vertically centered in the frame with generous empty space above and below. Nothing touches or approaches any frame edge. Flat fills, crisp edges, even spacing, professional infographic, no textures, no people, no floating UI windows.",
+        "placement": "s2",
+        "alt_text": "A horizontal bar divided into four color-coded segments — Genre in amber, Mood, Instruments, and Vocals transitioning to aqua — with bracket labels below each segment, showing the anatomy of a Suno Style prompt",
+        "caption": "Every strong Suno Style prompt is built from the same four parts: genre anchors it, mood sets the feel, instrumentation adds texture, and vocal style completes the picture.",
+        "generated_at": "2026-07-20T05:07:12.828Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "A 'prompt anatomy' diagram dissecting one example Suno Style prompt into its four labeled parts — genre, mood, instrumentation, vocal style — each segment color-coded along a single horizontal bar",
+        "purpose": "Show readers exactly how the 10 prompts in the article are constructed, making the abstract advice about layering feel concrete and immediately copyable",
+        "aspect_ratio": "16:9"
+      }
     ]
   }
 ]
