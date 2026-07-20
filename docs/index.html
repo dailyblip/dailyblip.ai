@@ -146,39 +146,18 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
 .guide-tag-chip{color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:2px 8px}
 
 /* ---------- tool drop (premium, full-width — the sponsorship slot) ---------- */
-.tooldrop-feature{margin-top:30px}
-.td-eyebrow{
-  font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;
-  color:var(--amber);display:flex;align-items:center;gap:10px;margin-bottom:12px;
+.panel.tooldrop-panel{
+  border:1px solid rgba(255,180,84,.4);
+  background:linear-gradient(165deg,rgba(255,180,84,.08),var(--ink-2) 60%);
 }
-.td-eyebrow::before{content:"⚡"}
-.td-eyebrow::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(255,180,84,.5),transparent)}
-.td-card{
-  position:relative;overflow:hidden;
-  display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;
-  border:1px solid rgba(255,180,84,.4);border-radius:16px;
-  background:linear-gradient(120deg,rgba(255,180,84,.10),var(--ink-2) 60%);
-  padding:26px 30px;
-  box-shadow:0 0 0 1px rgba(255,180,84,.05), 0 12px 40px -12px rgba(255,180,84,.18);
-  transition:border-color .2s ease, box-shadow .2s ease;
-}
-.td-card:hover{
-  border-color:rgba(255,180,84,.7);
-  box-shadow:0 0 0 1px rgba(255,180,84,.1), 0 16px 48px -10px rgba(255,180,84,.28);
-}
-.td-card::before{
-  content:"";position:absolute;top:-40%;right:-10%;width:60%;height:180%;
-  background:radial-gradient(circle, rgba(255,180,84,.12), transparent 70%);pointer-events:none;
-}
-.td-main{position:relative;z-index:1;flex:1;min-width:240px}
-.td-name{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--text);margin-bottom:8px}
-.td-blurb{font-size:14.5px;line-height:1.55;color:var(--dim);max-width:520px}
-.td-meta{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-top:10px;letter-spacing:.02em}
+.tooldrop-panel h4{color:var(--amber)}
+.td-name{font-family:var(--display);font-weight:650;font-size:16px;letter-spacing:-.005em;color:var(--text);margin-bottom:6px}
+.td-blurb{font-size:13px;line-height:1.55;color:var(--dim)}
+.td-meta{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:8px;letter-spacing:.02em}
 .td-cta{
-  position:relative;z-index:1;flex:0 0 auto;
-  display:inline-flex;align-items:center;gap:8px;
-  background:var(--amber);color:#20160a;font-weight:700;font-size:14.5px;
-  padding:14px 26px;border-radius:10px;white-space:nowrap;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  background:var(--amber);color:#20160a;font-weight:700;font-size:13px;
+  padding:10px 16px;border-radius:8px;white-space:nowrap;margin-top:12px;
   transition:filter .15s ease, transform .15s ease;
 }
 .td-cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
@@ -564,21 +543,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
   .bs-form{flex-direction:column;width:100%}
   .bs-form input{min-width:0;width:100%}
   .bs-form button{width:100%}
-
-  /* tool drop card: the desktop background pairs a 120deg linear-gradient
-     with a radial ::before glow, both tuned for a wide/short box. On
-     mobile the card becomes tall/narrow instead (content stacks), which
-     shifts where the gradient's color stop visually lands and shows up
-     as a hard seam partway down the card. Simplifying to one gentler,
-     mostly-vertical gradient and dropping the glow avoids the seam
-     regardless of how tall the stacked content makes the card. */
-  .td-card{
-    flex-direction:column;align-items:stretch;gap:18px;
-    padding:22px 20px;
-    background:linear-gradient(175deg,rgba(255,180,84,.09),var(--ink-2) 55%);
-  }
-  .td-card::before{display:none}
-  .td-cta{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){
   .ticker-track{animation:none}
@@ -685,21 +649,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
     <div class="guides-grid" id="guidesFeatureGrid"></div>
   </section>
 
-  <!-- TOOL DROP — deliberately a full-width, premium-styled placement.
-       This is the site's clearest future sponsorship slot: one tool,
-       one clear call to action, maximum visual weight. -->
-  <section class="tooldrop-feature" id="tooldropFeature" style="display:none" aria-label="Tool of the day">
-    <div class="td-eyebrow">Tool of the day</div>
-    <div class="td-card">
-      <div class="td-main">
-        <div class="td-name" id="tdName"></div>
-        <div class="td-blurb" id="tdBlurb"></div>
-        <div class="td-meta" id="tdMeta"></div>
-      </div>
-      <a href="#" class="td-cta" id="tdCta" target="_blank" rel="noopener">Try it <span>→</span></a>
-    </div>
-  </section>
-
   <div class="cols">
     <!-- FEED -->
     <main>
@@ -722,6 +671,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 
     <!-- SIDEBAR -->
     <aside>
+      <!-- TOOL DROP — was a full-width, premium-styled placement (the
+           site's clearest future sponsorship slot); moved into the
+           sidebar on request, which trades away most of that visual
+           weight for a more compact, always-visible spot. -->
+      <div class="tooldrop-panel panel" id="tooldropFeature" style="display:none" aria-label="Tool of the day">
+        <h4>tool of the day</h4>
+        <div class="td-name" id="tdName"></div>
+        <div class="td-blurb" id="tdBlurb"></div>
+        <div class="td-meta" id="tdMeta"></div>
+        <a href="#" class="td-cta" id="tdCta" target="_blank" rel="noopener">Try it <span>→</span></a>
+      </div>
       <div class="panel">
         <h4>creative stack radar</h4>
         <div id="modelList"></div>
@@ -1114,23 +1074,38 @@ function renderBlips(){
 // exists on a given day.
 const STALE_HOURS = 36;
 
+// Top Signal is meant to get a LONGER grace period than ordinary stories
+// before staleness rules apply \u2014 it's the day's single biggest story,
+// so it's fine for it to outlast the normal 36-hour cutoff a bit. But
+// that grace period needs an actual upper bound: previously there
+// wasn't one at all, which let a "top" story stay pinned at the very
+// top of the feed for 4+ days, long past the point it was still
+// today's news. Checked in one place so the sort order, the
+// fresh/stale bucketing, and the "TOP SIGNAL" label on the card can
+// never disagree with each other about whether a story still counts.
+const TOP_SIGNAL_MAX_HOURS = 48;
+function isEffectivelyTop(s){ return !!s.top && storyHrs(s) < TOP_SIGNAL_MAX_HOURS; }
+
 function renderFeed(){
   const list = FEED.stories.filter(s =>
     matchCat(s) &&
     (!query || (s.title+" "+s.dek).toLowerCase().includes(query))
   ).sort((a,b) => {
-    // Top signal always leads. After that, strictly chronological — newest
-    // first. Heat (▲/▼ arrows) is still shown per-card but no longer used
-    // to decide order, per an explicit call to keep sorting predictable.
-    if (!!b.top - !!a.top !== 0) return (!!b.top) - (!!a.top);
+    // Top signal leads only while it's still effectively top (see
+    // isEffectivelyTop above) — after that it sorts purely by recency
+    // like everything else. Heat (▲/▼ arrows) is still shown per-card
+    // but no longer used to decide order, per an explicit call to keep
+    // sorting predictable.
+    const aTop = isEffectivelyTop(a), bTop = isEffectivelyTop(b);
+    if (aTop !== bTop) return bTop - aTop;
     return new Date(b.ts) - new Date(a.ts);
   });
 
-  // Split: Top Signal AND any actively-pinned "tracking" story are always
-  // "fresh" regardless of age. Everything else past STALE_HOURS moves to
-  // the older bucket.
-  const fresh = list.filter(s => s.top || s.pinned_brief || storyHrs(s) < STALE_HOURS);
-  const stale = list.filter(s => !s.top && !s.pinned_brief && storyHrs(s) >= STALE_HOURS);
+  // Split: Top Signal (while still within its grace period) AND any
+  // actively-pinned "tracking" story are "fresh" regardless of age.
+  // Everything else past STALE_HOURS moves to the older bucket.
+  const fresh = list.filter(s => isEffectivelyTop(s) || s.pinned_brief || storyHrs(s) < STALE_HOURS);
+  const stale = list.filter(s => !isEffectivelyTop(s) && !s.pinned_brief && storyHrs(s) >= STALE_HOURS);
 
   const shown = fresh.slice(0, visible);
   $("#feedList").innerHTML = shown.map(s => storyCardHtml(s)).join("");
@@ -1169,8 +1144,8 @@ function storyCardHtml(s){
     ? `<img class="story-logo" src="https://cdn.brandfetch.io/${domain}?c=${BRANDFETCH_CLIENT_ID}" alt="" loading="lazy" onerror="this.style.display='none'">`
     : "";
   return `
-  <article class="story${s.top?" top-story":""}" id="${s.id}" tabindex="0">
-    ${s.top?'<div class="top-label">top signal</div>':""}
+  <article class="story${isEffectivelyTop(s)?" top-story":""}" id="${s.id}" tabindex="0">
+    ${isEffectivelyTop(s)?'<div class="top-label">top signal</div>':""}
     <div class="story-meta">
       ${logoHtml}
       <span class="tag c-${s.cat}">${cat.label}</span>
