@@ -1920,7 +1920,7 @@
   {
     "id": "3e4481a4-b898-48fb-9448-2f25dc8db494",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "submitted": {
       "idea": "User guide to make your AI generated images look more realistic and not more AI-slop - cite the ChatGPT and Midjourney methods, and give a list of prompts for both services that will help the user make their images look more real and lifelike, not AI-slop",
       "article_type": "Practical guide",
@@ -1932,7 +1932,7 @@
       "allow_synthesis": true
     },
     "created_at": "2026-07-20T03:11:07.970Z",
-    "updated_at": "2026-07-20T03:11:44.649Z",
+    "updated_at": "2026-07-20T03:13:18.623Z",
     "brief": {
       "target_reader": "Someone who has tried AI image generation once or twice and keeps getting results that look obviously fake or 'AI-ish' — glossy skin, weird hands, too-perfect lighting, that unmistakable synthetic sheen. They've heard of ChatGPT image gen and Midjourney but aren't sure how to use either well. Not a designer or photographer, just a curious creator who wants better results today.",
       "reader_outcome": "Feel confident writing prompts for both ChatGPT and Midjourney that push results toward realistic, grounded images instead of the generic AI-slop aesthetic — and understand why the two tools need to be prompted differently to get there.",
@@ -1953,6 +1953,173 @@
         "Specific prompt elements that are broadly agreed to push realism: e.g. specifying lens type, film grain, natural lighting, imperfections, specific time of day, shallow depth of field"
       ],
       "research_plan": "Prioritize Midjourney's official documentation and changelog for current parameter syntax and model defaults. For ChatGPT image gen, use OpenAI's official feature pages and any current model notes. Supplement with well-regarded prompt engineering community sources (Midjourney subreddit, PromptHero, creator-focused YouTube channels) specifically for the 'what actually works' prompt language — but flag anything that comes only from community sources rather than official docs, since model updates can make community tips stale fast. Avoid relying on any single blog post for parameter specifics. Focus research on the *why* behind realism techniques (imperfection, specificity, photographic language) as much as the exact syntax, since that reasoning is more durable than any particular parameter value."
-    }
+    },
+    "sources": [
+      {
+        "title": "Introducing 4o Image Generation",
+        "publisher": "OpenAI (official)",
+        "url": "https://openai.com/index/introducing-4o-image-generation/",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "ChatGPT image generation is NO LONGER powered by DALL-E 3 — it was replaced by GPT-4o native image generation (also called '4o Image Generation'), which rolled out to Plus, Pro, Team, and Free users as the default image generator in ChatGPT",
+          "GPT-4o image generation excels at accurately rendering text, precisely following prompts, and leveraging 4o's inherent knowledge base and chat context, including uploaded images",
+          "DALL-E 3 is still accessible via a dedicated DALL-E GPT in the GPT store, but is no longer the default",
+          "The model is available to Free users (with limits) and all paid tiers"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Version – Midjourney (Official Documentation)",
+        "publisher": "Midjourney (official docs)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "The current default Midjourney version is V8.1, which was released on midjourney.com on April 30, 2026, and became the default version on June 10, 2026",
+          "V6.1 was the default until June 16, 2025; V7 was default from June 17, 2025 until V8.1 replaced it",
+          "--style raw has a V8 equivalent: on V8 family write --raw (not --style raw); --style raw is still correct syntax when explicitly selecting V7",
+          "The --chaos parameter is confirmed active and documented for V8.1 (listed under Midjourney Controls official docs)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney Controls – Official Documentation (Parameter List, Stylize, Chaos, No, Raw)",
+        "publisher": "Midjourney (official docs)",
+        "url": "https://docs.midjourney.com/hc/en-us/sections/33329522730509-Midjourney-Controls",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "--chaos (or --c) parameter is confirmed active in current Midjourney, including V8.1",
+          "--stylize (or --s) parameter is confirmed active in current Midjourney, including V8.1 — described as controlling 'artistic flair'",
+          "--no parameter (negative prompt) is confirmed active in current Midjourney V8.1 — documented as 'Tell Midjourney what you don't want in your image'",
+          "--ar (aspect ratio) parameter is confirmed active and functional in current versions",
+          "Raw mode is confirmed active for V8.1 — documented as a separate control option (written as --raw for V8 family, --style raw for V7)"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Free Trials – Midjourney (Official Documentation)",
+        "publisher": "Midjourney (official docs)",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/27870399340173-Free-Trials",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "No free trial is currently available in Discord or the midjourney.com website",
+          "A limited trial is available only on the niji·journey app (iOS and Android)",
+          "Midjourney requires a paid subscription to generate images on the main platform"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney 8.1 Guide: Prompts, Omni Reference & Parameters",
+        "publisher": "blakecrosley.com (independent review, well-sourced with official citations)",
+        "url": "https://blakecrosley.com/guides/midjourney",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "V8.1 is confirmed as the default model as of June 11, 2026; V7 remains fully selectable",
+          "--style raw is V7 syntax and still correct when V7 is explicitly selected; on V8 family write --raw",
+          "V7 strengths for realism: natural language understanding, excellent photorealism, strong text rendering, better human anatomy (hands, bodies), improved spatial relationships",
+          "Full V7 parameter surface confirmed: includes Omni Reference, Quality values, multi-prompts, No parameter (negative prompting)",
+          "V8.1-specific parameters confirmed: --hd (native 2048px output), --sd (standard definition), --raw (literal prompt control), --ar (aspect ratio), --chaos still present"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "V7 is now the default model! (Official Midjourney Update Announcement)",
+        "publisher": "Midjourney (official update blog)",
+        "url": "https://updates.midjourney.com/v7-is-now-the-default-model/",
+        "source_type": "company announcement",
+        "is_primary": false,
+        "claims_supported": [
+          "V7 became the default Midjourney model on June 17, 2025 (now superseded by V8.1 as of June 2026)",
+          "V7 introduced Draft Mode (--draft, 10x speed), Omni-reference (--oref), and updated Style Reference (sref) algorithms",
+          "V7 described officially as 'a smarter model with higher image quality, better prompt understanding, and improved image coherence'"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "Midjourney Pricing: Complete Guide to Plans 2026",
+        "publisher": "techjacksolutions.com (independent, fact-checked against vendor docs, verified June 9, 2026)",
+        "url": "https://techjacksolutions.com/ai-tools/midjourney/midjourney-pricing/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney removed its free trial in March 2023 and has been subscription-only since",
+          "There is no free plan and no free trial as of June 2026; the cheapest entry point is $10/month Basic plan",
+          "Midjourney has four monthly plans: Basic ($10), Standard ($30), Pro ($60), Mega ($120); annual billing gives 20% discount",
+          "Midjourney bills by fast GPU time, not by image count",
+          "Basic plan: 3.3 fast GPU hours/month; Standard: 15 hours; Pro: 30 hours; Mega: 60 hours",
+          "All plan tiers produce the same image quality — users pay for speed and privacy (Stealth Mode on Pro/Mega), not quality differences"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "GPT Image Generation Models Prompting Guide (OpenAI Developer Cookbook)",
+        "publisher": "OpenAI (official developer documentation / cookbook)",
+        "url": "https://developers.openai.com/cookbook/examples/multimodal/image-gen-models-prompting-guide",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "OpenAI officially confirms that photography language (lens, lighting, framing) meaningfully steers realism in GPT image generation — this is not ignored",
+          "Officially recommended approach: 'prompt the model as if a real photo is being captured in the moment' — use photography language and explicitly ask for real texture (pores, wrinkles, fabric wear, imperfections)",
+          "Avoid words that imply studio polish or staging",
+          "Camera/lens specs may be interpreted loosely for exact physical simulation, but are useful for high-level look and composition",
+          "'Photorealistic', 'real photograph', 'taken on a real camera', 'professional photography', or 'iPhone photo' all help engage photorealistic mode",
+          "Prompt structure guidance: background/scene → subject → key details → constraints; include intended use to set level of polish",
+          "For photorealism, 'camera/composition terms (lens, aperture feel, lighting) often steer realism more reliably than generic 8K/ultra-detailed'",
+          "ChatGPT image generation does NOT support a formal negative prompt parameter like Midjourney's --no; negative guidance is written inline in natural language"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "ChatGPT image generation: What's changed and why it matters",
+        "publisher": "Jisc National Centre for AI (independent education technology body)",
+        "url": "https://nationalcentreforai.jiscinvolve.org/wp/2025/04/08/chatgpt-image-generation-whats-changed-and-why-it-matters/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "GPT-4o shows noticeably improved photorealism over DALL-E 3; 'many of the usual giveaways, such as facial features and hands, have been significantly improved'",
+          "The level of photorealism in GPT-4o outputs was described as 'remarkable' in direct comparison to DALL-E 3 on identical prompts",
+          "Poses feel more natural, and overall image quality including lighting, shadows, clothing, and textures is noticeably enhanced in GPT-4o vs DALL-E 3",
+          "Free users experience rate limits and queue-based processing (cool-down periods) distinguishing their experience from paid tiers"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      },
+      {
+        "title": "ChatGPT Image Generation Access Model: Free vs Paid Tiers (AI Tool Radar)",
+        "publisher": "aitoolradar.io (independent)",
+        "url": "https://aitoolradar.io/guides/dall-e",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "GPT-4o native image generation replaced DALL-E 3 in the ChatGPT interface in December 2025 (rolled out from March 2025, became full default by December 2025)",
+          "ChatGPT Free tier includes limited GPT-4o image generations with queue-based processing and dynamic usage caps",
+          "ChatGPT Plus ($20/mo) raises limits and adds priority processing, but exact image count per day is not publicly documented and varies with server load",
+          "ChatGPT Pro ($200/mo) offers the highest limits and fastest processing",
+          "OpenAI does not publish a fixed image quota for any tier",
+          "GPT-4o is NOT DALL-E 4 — it is a fundamentally different architecture (omnimodel) where image generation is built natively into the language model"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-20"
+      }
+    ],
+    "unverifiable_claims": [
+      "The claim that ChatGPT 'largely ignores' camera/lens/film-style language compared to Midjourney is NOT verified and should be softened or dropped. OpenAI's own official prompting guide explicitly endorses and recommends using photography language (lens, lighting, framing) for realism, and states it steers results meaningfully. The difference is that ChatGPT interprets camera specs loosely (for composition/look rather than exact physical simulation), and uses natural language rather than CLI-style syntax — but it does not ignore this language.",
+      "Whether Midjourney has a distinct 'photo' or 'photorealistic' style mode as a named toggle in current V8.1 could not be confirmed. V7 and V8.1 support --raw (reduces aesthetic interpretation, increases prompt literalism) and --style raw (V7 syntax), but a specific named 'photorealistic mode' toggle was not confirmed in current documentation. Writers should use 'raw mode' language rather than implying a dedicated 'photorealistic mode' switch.",
+      "Specific numeric stylize values best suited for realism in V8.1 (e.g., exact recommended --stylize range for photorealism) could not be verified from official V8.1 docs directly — the general principle (lower stylize = more literal/prompt-faithful, higher = more artistic) is verified, but specific recommended ranges for V8.1 realism are community/editorial observations, not official specs.",
+      "Whether the --no parameter in Midjourney V8.1 is reliably effective (vs. inconsistent/less predictable) is noted in independent reviews as variable — the parameter exists and is documented, but its reliability for complex exclusions is editorially described as imperfect. Writers should caveat this.",
+      "The claim that Midjourney is accessible for free via Meta AI (meta.ai) was reported by one pricing-focused independent source but could not be cross-verified from official Midjourney or Meta sources within this research pass. Writers should treat this as unverified and not cite it as a confirmed free access path."
+    ]
   }
 ]
