@@ -1916,5 +1916,22 @@
         "generated_at": "2026-07-20T03:07:19.109Z"
       }
     ]
+  },
+  {
+    "id": "3e4481a4-b898-48fb-9448-2f25dc8db494",
+    "status": "queued",
+    "stage": "Queued",
+    "submitted": {
+      "idea": "User guide to make your AI generated images look more realistic and not more AI-slop - cite the ChatGPT and Midjourney methods, and give a list of prompts for both services that will help the user make their images look more real and lifelike, not AI-slop",
+      "article_type": "Practical guide",
+      "target_audience": "",
+      "target_length": "Standard",
+      "image_count": 2,
+      "keywords": "",
+      "editorial_notes": "The article should cover the basics for image prompting, what to do and not do when it comes to trying to create and image that doesn't look like obvious AI. It should cover ChatGPT and Midjourney and have a breakdown and section for both, as well as, explain how the prompts should vary between services to get the best results",
+      "allow_synthesis": true
+    },
+    "created_at": "2026-07-20T03:11:07.970Z",
+    "updated_at": "2026-07-20T03:11:07.970Z"
   }
 ]
