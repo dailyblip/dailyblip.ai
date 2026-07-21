@@ -315,10 +315,13 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
       </div>
       <label style="margin-top:10px">Dek (one sentence)</label>
       <input id="bfDek" placeholder="Short one-sentence summary">
-      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+      <div class="grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px">
         <div><label>Tags (comma-separated, from the fixed list)</label><input id="bfTags" placeholder="AI Music, Getting Started"></div>
         <div><label>Hero image filename</label><input id="bfHero" placeholder="e.g. 06.jpg \u2014 must already be in docs/guides/">
           <div class="tip" style="margin-top:4px">Double-check the extension \u2014 if you cropped/converted the image before uploading, this is often .jpg even if your original file was .png.</div>
+        </div>
+        <div><label>Published date</label><input id="bfDate" type="date">
+          <div class="tip" style="margin-top:4px">Backdate this for a natural-looking publish history \u2014 required, so a batch never silently lands all on today's date.</div>
         </div>
       </div>
       <div style="display:flex;justify-content:flex-end;margin-top:12px">
@@ -1665,6 +1668,7 @@ async function renderMaintenance(){
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
           ${g.status === "published" ? `<button class="btn" onclick="editHeroImage('${g.id}')">Edit hero image</button>` : ""}
+          ${g.status === "published" ? `<button class="btn" onclick="editPublishedDate('${g.id}')">Edit date</button>` : ""}
           ${g.status === "published" ? `<button class="btn" onclick="toggleGuideListing('${g.id}')">${g.unlisted ? "Re-list" : "Unlist"}</button>` : ""}
           ${g.status === "published" ? `<button class="btn" onclick="toggleGuidePin('${g.id}')">${g.pinned ? "Unpin" : "Pin to homepage"}</button>` : ""}
           <button class="btn red" onclick="maintenanceForceDelete('${g.id}')">Force delete</button>
@@ -1714,6 +1718,49 @@ async function editHeroImage(id){
     }, `admin: fix hero image filename for guide ${id} in manifest`);
 
     toast("Hero image filename updated.");
+    await renderMaintenance();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
+// Backdates an already-registered guide's published date, for spreading
+// a batch out so it doesn't all land on the same day. Updates both the
+// job record and manifest entry, same as editHeroImage above -- the
+// manifest is what actually drives homepage/library sort order, so
+// missing it there would silently defeat the whole point.
+async function editPublishedDate(id){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  const current = (g.published_at || "").slice(0, 10);
+  const next = prompt(`Published date for "${g.article?.title}"\n\nFormat: YYYY-MM-DD`, current);
+  if (next === null) return;
+  const trimmed = next.trim();
+  if (!trimmed || !/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+    toast("Enter a date as YYYY-MM-DD.", "err", 5000);
+    return;
+  }
+  const newDate = new Date(trimmed + "T12:00:00.000Z").toISOString();
+
+  try {
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      if (i === -1) return gs;
+      const updated = [...gs];
+      updated[i] = { ...updated[i], published_at: newDate };
+      return updated;
+    }, `admin: update published date for guide ${id}`);
+
+    await writeManifestWithRetry(manifest => {
+      const i = manifest.findIndex(m => m.slug === g.article.slug);
+      if (i === -1) return manifest;
+      const updated = [...manifest];
+      updated[i] = { ...updated[i], published_at: newDate };
+      return updated;
+    }, `admin: update published date for guide ${id} in manifest`);
+
+    toast("Published date updated.");
     await renderMaintenance();
   } catch (e) {
     toast(e.message, "err", 6000);
@@ -1813,19 +1860,25 @@ async function addBackfilledGuide(){
   const dek = $("#bfDek").value.trim();
   const tags = $("#bfTags").value.trim().split(",").map(t => t.trim()).filter(Boolean);
   const heroFile = $("#bfHero").value.trim();
+  const dateInput = $("#bfDate").value; // yyyy-mm-dd from the date input
 
-  if (!title || !slug || !dek || !heroFile) {
-    toast("Title, slug, dek, and hero image filename are all required.", "err", 5000);
+  if (!title || !slug || !dek || !heroFile || !dateInput) {
+    toast("Title, slug, dek, hero image filename, and published date are all required.", "err", 5000);
     return;
   }
 
-  if (!confirm(`Register "${title}" as a published guide?\n\nMake sure you've already uploaded docs/guides/${slug}.html and docs/guides/${heroFile} to your repo \u2014 this only adds the tracking record, it doesn't upload anything itself.`)) return;
+  if (!confirm(`Register "${title}" as a published guide, dated ${dateInput}?\n\nMake sure you've already uploaded docs/guides/${slug}.html and docs/guides/${heroFile} to your repo \u2014 this only adds the tracking record, it doesn't upload anything itself.`)) return;
 
+  // published_at carries the (possibly backdated) date the person chose,
+  // for sorting and display everywhere on the site. created_at reflects
+  // when this record was actually registered here, kept separately as
+  // an honest internal timestamp rather than overwriting it too.
+  const publishedAt = new Date(dateInput + "T12:00:00.000Z").toISOString();
   const now = new Date().toISOString();
   const newJob = {
     id: `backfill-${slug}`,
     status: "published", stage: "Published",
-    published_at: now, created_at: now,
+    published_at: publishedAt, created_at: now,
     published_url: `https://dailyblip.ai/guides/${slug}.html`,
     article: { title, slug, dek, tags },
     images: [{ id: "hero", placement: "hero", file: heroFile, approved: true, alt_text: title }],
@@ -1844,11 +1897,11 @@ async function addBackfilledGuide(){
     // it up immediately -- "Rebuild library page" is still needed
     // separately to regenerate the actual library LISTING page's HTML.
     await writeManifestWithRetry(manifest => [...manifest, {
-      title, slug, dek, hero_image: `/guides/${heroFile}`, published_at: now, tags,
+      title, slug, dek, hero_image: `/guides/${heroFile}`, published_at: publishedAt, tags,
     }], `admin: add backfilled guide ${slug} to manifest`);
 
     toast(`Registered. Click "Rebuild library page" above to update the library listing page too.`, "", 6000);
-    $("#bfTitle").value = ""; $("#bfSlug").value = ""; $("#bfDek").value = ""; $("#bfTags").value = ""; $("#bfHero").value = "";
+    $("#bfTitle").value = ""; $("#bfSlug").value = ""; $("#bfDek").value = ""; $("#bfTags").value = ""; $("#bfHero").value = ""; $("#bfDate").value = "";
     await renderMaintenance();
   } catch (e) {
     toast(e.message, "err", 6000);
