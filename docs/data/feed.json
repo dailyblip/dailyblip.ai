@@ -1,29 +1,38 @@
 {
-  "issue": 244,
-  "generated_at": "2026-07-21T15:57:27.914Z",
+  "issue": 245,
+  "generated_at": "2026-07-21T17:01:14.522Z",
   "brief": {
     "items": [
       {
-        "story": "s_502e6d35fbb7908f",
-        "html": "OpenAI's CEO is <b>lobbying to restrict open-weight AI models</b> — a direct policy signal that could reshape which tools creators are legally allowed to use.",
-        "secs": 9,
+        "story": "s_5479f7ef8f003060",
+        "html": "Google just launched <b>Gemini 3.6 Flash and two new model variants</b> — faster inference options worth testing now if you rely on Gemini for creative generation.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_f09cbf6a0ec2257f",
-        "html": "Sony Music is suing Udio, alleging <b>30,000 copyrighted songs — Elvis to Beyoncé — were ingested without permission</b> to train its AI music generator.",
-        "secs": 9,
+        "story": "s_fcce09c921e58acd",
+        "html": "Deezer says <b>AI-generated tracks now exceed 50% of daily uploads</b> — 90,000 synthetic songs a day — as platforms still can't agree on how to monetize them.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_70097351852cb620",
-        "html": "A federal judge gave final approval to <b>Anthropic's $1.5B copyright settlement</b> — the largest AI training liability deal yet, though broader training questions remain open.",
+        "story": "s_2a32c5e41363369a",
+        "html": "The US Treasury is threatening <b>sanctions on Chinese AI models for IP theft</b>, a move that could abruptly cut off access to tools like Kimi or Qwen.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b4a8b48c0af258dc",
+        "html": "A photographer is suing a coffee shop for creating a <b>cartoon derivative of her image without permission</b> — a test case for AI-era derivative work liability.",
         "secs": 9,
         "impact": 7,
         "hardware": false,
@@ -31,36 +40,27 @@
         "commentary": false
       },
       {
-        "story": "s_d573260cad05ebaa",
-        "html": "Google's new <b>\"Frozen v2\" chip targets 6–10x Gemini inference efficiency</b> — if it ships in 2028, expect faster Veo and Imagen generation limits to follow.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": true,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_c4923a542f7b6a55",
-        "html": "<b>AI ingested 40 million complete recordings</b> where music law only ever grappled with four bars — the scale of the legal gap facing music creators is now undeniable.",
+        "story": "s_ed3452d70ad2061d",
+        "html": "Chinese models <b>Kimi K3 and Qwen3.8 now rival GPT-4-class performance</b>, giving creators more competitive alternatives as US-China AI tensions escalate.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": true
+        "commentary": false
       },
       {
-        "story": "s_17b501c7fe1377af",
-        "html": "The Model Context Protocol shipped a <b>stateless session update simplifying how AI tools connect</b> — if you build or use MCP-based workflows, check your stack now.",
+        "story": "s_7d7edea89fcf1f37",
+        "html": "Google's <b>Gemini 3.5 Flash Cyber delivers security automation at lower cost</b> — relevant if your creative stack includes automated vulnerability scanning or API pipelines.",
         "secs": 9,
-        "impact": 6,
+        "impact": 5,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Tuesday, July 21 — six things that changed today",
-    "date": "2026-07-21T07:57:38.825Z",
-    "edition": "pm"
+    "title": "Tuesday, July 21 — six things creators need to know",
+    "date": "2026-07-21T17:01:06.778Z",
+    "edition": "am"
   },
   "stories": [
     {

@@ -1,29 +1,38 @@
 {
   "date": "2026-07-21",
-  "issue": 244,
+  "issue": 245,
   "brief": {
     "items": [
       {
-        "story": "s_502e6d35fbb7908f",
-        "html": "OpenAI's CEO is <b>lobbying to restrict open-weight AI models</b> — a direct policy signal that could reshape which tools creators are legally allowed to use.",
-        "secs": 9,
+        "story": "s_5479f7ef8f003060",
+        "html": "Google just launched <b>Gemini 3.6 Flash and two new model variants</b> — faster inference options worth testing now if you rely on Gemini for creative generation.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_f09cbf6a0ec2257f",
-        "html": "Sony Music is suing Udio, alleging <b>30,000 copyrighted songs — Elvis to Beyoncé — were ingested without permission</b> to train its AI music generator.",
-        "secs": 9,
+        "story": "s_fcce09c921e58acd",
+        "html": "Deezer says <b>AI-generated tracks now exceed 50% of daily uploads</b> — 90,000 synthetic songs a day — as platforms still can't agree on how to monetize them.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_70097351852cb620",
-        "html": "A federal judge gave final approval to <b>Anthropic's $1.5B copyright settlement</b> — the largest AI training liability deal yet, though broader training questions remain open.",
+        "story": "s_2a32c5e41363369a",
+        "html": "The US Treasury is threatening <b>sanctions on Chinese AI models for IP theft</b>, a move that could abruptly cut off access to tools like Kimi or Qwen.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b4a8b48c0af258dc",
+        "html": "A photographer is suing a coffee shop for creating a <b>cartoon derivative of her image without permission</b> — a test case for AI-era derivative work liability.",
         "secs": 9,
         "impact": 7,
         "hardware": false,
@@ -31,36 +40,27 @@
         "commentary": false
       },
       {
-        "story": "s_d573260cad05ebaa",
-        "html": "Google's new <b>\"Frozen v2\" chip targets 6–10x Gemini inference efficiency</b> — if it ships in 2028, expect faster Veo and Imagen generation limits to follow.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": true,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_c4923a542f7b6a55",
-        "html": "<b>AI ingested 40 million complete recordings</b> where music law only ever grappled with four bars — the scale of the legal gap facing music creators is now undeniable.",
+        "story": "s_ed3452d70ad2061d",
+        "html": "Chinese models <b>Kimi K3 and Qwen3.8 now rival GPT-4-class performance</b>, giving creators more competitive alternatives as US-China AI tensions escalate.",
         "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": true
+        "commentary": false
       },
       {
-        "story": "s_17b501c7fe1377af",
-        "html": "The Model Context Protocol shipped a <b>stateless session update simplifying how AI tools connect</b> — if you build or use MCP-based workflows, check your stack now.",
+        "story": "s_7d7edea89fcf1f37",
+        "html": "Google's <b>Gemini 3.5 Flash Cyber delivers security automation at lower cost</b> — relevant if your creative stack includes automated vulnerability scanning or API pipelines.",
         "secs": 9,
-        "impact": 6,
+        "impact": 5,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Tuesday, July 21 — six things that changed today",
-    "date": "2026-07-21T07:57:38.825Z",
-    "edition": "pm"
+    "title": "Tuesday, July 21 — six things creators need to know",
+    "date": "2026-07-21T17:01:06.778Z",
+    "edition": "am"
   },
   "tooldrop": {
     "name": "LayerProof Mylar",
@@ -70,6 +70,108 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stories": [
+    {
+      "id": "s_2a32c5e41363369a",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "US threatens sanctions on Chinese AI models for IP theft",
+      "dek": "Treasury Secretary Scott Bessent said the administration could sanction Chinese open-source models if evidence of IP theft emerges, expanding the Trump administration's effort to slow China's AI advancement.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/21/us-threatens-sanctions-against-chinese-ai-models-over-ip-theft/",
+      "ts": "2026-07-21T15:37:05.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 92,
+      "move": 50
+    },
+    {
+      "id": "s_5479f7ef8f003060",
+      "cat": "tools",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Google releases Gemini 3.6 Flash, 3.5 Flash-Lite, and 3.5 Flash Cyber",
+      "dek": "New Gemini model lineup including faster inference models and specialized cybersecurity variant. Product announcement with no additional detail in excerpt.",
+      "src": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-36-flash-35-flash-lite-and-35-flash-cyber/",
+      "ts": "2026-07-21T15:16:30.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 98,
+      "move": 52
+    },
+    {
+      "id": "s_7d7edea89fcf1f37",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Google launches Gemini 3.5 Flash Cyber for cost-effective security automation",
+      "dek": "Google released a dedicated AI security model designed to identify and patch vulnerabilities faster than larger, pricier alternatives. Achieves competitive performance at lower cost.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/968572/google-gemini-flash-cyber-ai-security-model",
+      "ts": "2026-07-21T15:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 101,
+      "move": 55
+    },
+    {
+      "id": "s_fcce09c921e58acd",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Deezer reports AI-generated music now exceeds 50% of daily uploads",
+      "dek": "The platform tracked 90,000 AI-generated tracks uploaded daily in June 2026. Streaming services remain split on monetization and platform policies for synthetic audio.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/",
+      "ts": "2026-07-21T13:27:42.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 100,
+      "move": 55
+    },
+    {
+      "id": "s_b4a8b48c0af258dc",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Photographer sues coffee shop over cartoon derivative of her image",
+      "dek": "Copyright case: a shop allegedly created and used a cartoon version of a photographer's work without permission. Directly relevant to AI-era IP and derivative work disputes.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/21/photographer-sues-coffee-shop-for-using-cartoon-version-of-his-image-on-cups-merch/",
+      "ts": "2026-07-21T12:21:08.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 88,
+      "move": 53
+    },
+    {
+      "id": "s_ed3452d70ad2061d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Chinese AI models Kimi K3 and Qwen3.8 challenge OpenAI and Anthropic",
+      "dek": "Analysis of Chinese AI companies releasing models competitive with U.S. systems. Addresses the geopolitical backdrop for the prior sanctions story.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment",
+      "ts": "2026-07-21T11:08:56.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 87,
+      "move": 52
+    },
     {
       "id": "s_70097351852cb620",
       "cat": "rights",
@@ -84,9 +186,25 @@
       "ts": "2026-07-21T00:12:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 102,
-      "move": 56,
-      "top": true
+      "heat": 86,
+      "move": -7
+    },
+    {
+      "id": "s_f07ea0986edc9c35",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Grabette: open-source dataset tool for robot-manipulation training",
+      "dek": "Hugging Face released Grabette, a system for recording and processing robot interaction data to build shared AI training datasets. Browser-based recording and processing.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/grabette",
+      "ts": "2026-07-21T00:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 58,
+      "move": 4
     },
     {
       "id": "s_f09cbf6a0ec2257f",
@@ -102,8 +220,8 @@
       "ts": "2026-07-20T22:19:12.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 100,
-      "move": 56
+      "heat": 84,
+      "move": -8
     },
     {
       "id": "s_d573260cad05ebaa",
@@ -119,8 +237,8 @@
       "ts": "2026-07-20T21:21:15.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 81,
-      "move": 47
+      "heat": 65,
+      "move": -20
     },
     {
       "id": "s_17b501c7fe1377af",
@@ -136,8 +254,8 @@
       "ts": "2026-07-20T20:50:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": 47
+      "heat": 65,
+      "move": -20
     },
     {
       "id": "s_502e6d35fbb7908f",
@@ -153,8 +271,8 @@
       "ts": "2026-07-20T19:33:25.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 97,
-      "move": -2
+      "heat": 82,
+      "move": -8
     },
     {
       "id": "s_c4923a542f7b6a55",
@@ -171,8 +289,8 @@
       "ts": "2026-07-20T17:12:04.408Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -3
+      "heat": 71,
+      "move": -19
     },
     {
       "id": "s_c0f02d7ca9b061c8",
@@ -188,8 +306,8 @@
       "ts": "2026-07-20T16:28:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
-      "move": -2
+      "heat": 79,
+      "move": -7
     },
     {
       "id": "s_43177eeccf608f86",
@@ -205,8 +323,8 @@
       "ts": "2026-07-20T16:00:43.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -18
+      "heat": 60,
+      "move": -6
     },
     {
       "id": "s_a549b2f2489b487f",
@@ -222,8 +340,8 @@
       "ts": "2026-07-20T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -18
+      "heat": 60,
+      "move": -6
     },
     {
       "id": "s_8030c8e0dc091db7",
@@ -239,8 +357,8 @@
       "ts": "2026-07-20T15:58:51.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -18
+      "heat": 60,
+      "move": -6
     },
     {
       "id": "s_cdc3fbd3b50a8a83",
@@ -256,8 +374,8 @@
       "ts": "2026-07-20T15:45:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": -3
+      "heat": 70,
+      "move": -6
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -273,8 +391,8 @@
       "ts": "2026-07-20T15:30:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 93,
-      "move": -2
+      "heat": 78,
+      "move": -6
     },
     {
       "id": "s_93c83145e8c7884e",
@@ -290,65 +408,14 @@
       "ts": "2026-07-20T15:23:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": -3
-    },
-    {
-      "id": "s_90cef26b7e07e68a",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Moonshot and Alibaba release frontier AI models challenging OpenAI and Anthropic",
-      "dek": "Chinese AI companies launched competitive models claimed to match OpenAI/Anthropic capabilities at lower cost, narrowing the US AI lead.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
-      "ts": "2026-07-20T10:16:33.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 88,
-      "move": -2
-    },
-    {
-      "id": "s_d4ff9ec891b78868",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "OpenAI discusses safety lessons from long-horizon AI deployments",
-      "dek": "OpenAI shares findings on safety risks and safeguards from running extended-duration AI models. Policy and research signal.",
-      "src": "OpenAI News",
-      "url": "https://openai.com/index/safety-alignment-long-horizon-models",
-      "ts": "2026-07-20T10:00:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": -4
-    },
-    {
-      "id": "s_6dea1640e408017e",
-      "cat": "video",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "DeepMind AI reconstructs Pelé's legendary unfilmed goal using motion synthesis",
-      "dek": "Google DeepMind recreated a famous 1959 goal Pelé claimed was his best but was never captured on video, using AI to synthesize the play from his account.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/20/ai-recreates-the-goal-pele-said-was-his-greatest-ever-but-wasnt-filmed/",
-      "ts": "2026-07-20T08:58:49.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 77,
-      "move": -18
+      "heat": 68,
+      "move": -9
     }
   ],
   "stats": {
-    "scanned_last_run": 12,
-    "published_today": 18,
+    "scanned_last_run": 25,
+    "published_today": 17,
     "sources_live": 13,
-    "slopped_last_run": 8
+    "slopped_last_run": 18
   }
 }
