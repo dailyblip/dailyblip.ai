@@ -846,33 +846,5 @@
       }
     ],
     "backfilled": true
-  },
-  {
-    "id": "backfill-the-complete-reference-guide-to-midjourney-prompts",
-    "status": "published",
-    "stage": "Published",
-    "published_at": "2026-07-20T12:00:00.000Z",
-    "created_at": "2026-07-21T02:48:43.680Z",
-    "published_url": "https://dailyblip.ai/guides/the-complete-reference-guide-to-midjourney-prompts.html",
-    "article": {
-      "title": "The Complete Reference Guide to Midjourney Prompts",
-      "slug": "the-complete-reference-guide-to-midjourney-prompts",
-      "dek": "Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.",
-      "tags": [
-        "Image Generation",
-        "Tools & Workflow"
-      ]
-    },
-    "images": [
-      {
-        "id": "hero",
-        "placement": "hero",
-        "file": "21.jpg",
-        "approved": true,
-        "alt_text": "The Complete Reference Guide to Midjourney Prompts"
-      }
-    ],
-    "backfilled": true,
-    "unlisted": true
   }
 ]
