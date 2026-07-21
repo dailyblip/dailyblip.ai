@@ -1774,11 +1774,19 @@ async function maintenanceForceDelete(id){
   const activeWarning = (g.status === "in_progress" || g.status === "queued" || g.status === "approved")
     ? `\n\n\u26a0 This job's status is "${g.status}" \u2014 if a GitHub Action is genuinely still running for it, deleting this record now will break that Action's next commit step. Only proceed if you've confirmed via the Actions tab that it's actually dead.`
     : "";
-  if (!confirm(`Force-delete "${label}"? This removes it from this list only \u2014 if it was published, the live page stays up (Unlist first if you also want it off the homepage/library).${activeWarning}`)) return;
+  if (!confirm(`Force-delete "${label}"? This removes it from the tracking list AND the manifest (so it disappears from the homepage/library too) \u2014 the live HTML page itself, if one was ever uploaded, is not deleted.${activeWarning}`)) return;
   try {
     await loadGuidesFile();
     await writeGuidesWithRetry(gs => gs.filter(x => x.id !== id), `admin: force-delete guide ${id}`);
-    toast("Deleted.");
+    // Also remove the manifest entry, if there is one \u2014 a force-delete
+    // that left a dangling manifest entry behind (pointing at a job
+    // record that no longer exists) was the actual gap that caused a
+    // 404 here: the entry kept appearing on the homepage/library with
+    // no way to fix it except hunting it down separately.
+    if (g.article?.slug) {
+      await writeManifestWithRetry(manifest => manifest.filter(m => m.slug !== g.article.slug), `admin: remove guide ${id} from manifest (force-delete)`);
+    }
+    toast("Deleted from tracking and manifest.");
     await renderMaintenance();
   } catch (e) {
     toast(e.message, "err", 6000);
