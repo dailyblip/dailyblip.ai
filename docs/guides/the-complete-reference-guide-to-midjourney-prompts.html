@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Complete Reference Guide to Midjourney Prompts — dailyblip</title>
+<meta name="description" content="A comprehensive reference for Midjourney prompting: prompt structure, every major parameter explained, a full attribute table, and ready-to-use example prompts.">
+<link rel="canonical" href="https://dailyblip.ai/guides/the-complete-reference-guide-to-midjourney-prompts.html">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13); --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79; --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:36px 24px 90px}
+.back{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:26px}
+.back a{color:var(--faint)} .back a:hover{color:var(--amber)}
+.guide-tag{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--amber);
+  border:1px solid rgba(255,180,84,.4);border-radius:20px;padding:5px 14px;margin-bottom:20px;
+}
+h1{font-family:var(--display);font-weight:750;font-size:clamp(28px,5vw,40px);letter-spacing:-.02em;line-height:1.14;margin-bottom:16px}
+.dek{color:var(--dim);font-size:18px;line-height:1.55;margin-bottom:22px}
+.meta-row{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.page-tags{display:flex;gap:6px;flex-wrap:wrap;margin:-8px 0 24px}
+.page-tag-chip{font-family:var(--mono);font-size:10.5px;color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:12px;padding:3px 10px}
+.quick-answer{border:1px solid var(--line-strong);border-radius:10px;padding:18px 20px;margin-bottom:30px;background:rgba(255,180,84,.05)}
+.quick-answer .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--amber-deep);margin-bottom:6px}
+article p{color:var(--dim);margin-bottom:18px}
+article h2{font-family:var(--display);font-weight:650;font-size:24px;letter-spacing:-.01em;color:var(--text);margin:36px 0 14px}
+article h3{font-family:var(--display);font-weight:600;font-size:19px;color:var(--text);margin:26px 0 10px}
+article ul{margin:0 0 18px 20px;color:var(--dim)}
+article li{margin-bottom:6px}
+article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.3)} article a:hover{border-bottom-color:var(--amber)}
+.section-block{margin:38px 0}
+.img-block{margin:26px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.img-block img{display:block;width:100%;height:auto}
+.img-caption{font-family:var(--mono);font-size:11.5px;color:var(--faint);padding:8px 2px}
+.tool-card{border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin:20px 0;background:rgba(158,216,210,.02)}
+.tool-card .name{font-weight:700;font-size:19px;margin-bottom:8px;display:flex;align-items:center;gap:11px}
+.tool-logo{width:28px;height:28px;object-fit:contain;border-radius:6px;flex-shrink:0}
+.tool-card .desc{color:var(--dim);font-size:15.5px;line-height:1.6;margin-bottom:12px}
+.tool-card .sw{font-size:14px;color:var(--faint);line-height:1.7;margin-bottom:6px}
+.takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
+.takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
+.takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
+.ref-table{width:100%;border-collapse:collapse;font-size:13px}
+.ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
+.ref-table td{padding:10px 14px;color:var(--dim);border-bottom:1px solid var(--line);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table td:first-child{font-family:var(--mono);color:var(--aqua);white-space:nowrap;font-weight:600}
+.prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
+.prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.prompt-card{margin-bottom:14px}
+.prompt-card:last-child{margin-bottom:0}
+.prompt-label{font-size:13px;color:var(--dim);margin-bottom:6px}
+.prompt-row{display:flex;gap:8px;align-items:flex-start}
+.prompt-text{flex:1;display:block;font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--text);background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;white-space:pre-wrap;word-break:break-word}
+.prompt-copy{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--aqua);border:1px solid rgba(99,216,198,.4);border-radius:6px;padding:6px 12px;background:none;cursor:pointer;transition:all .15s ease;align-self:flex-start}
+.prompt-copy:hover{border-color:var(--aqua);background:rgba(99,216,198,.08)}
+.prompt-copy.copied{color:var(--amber);border-color:var(--amber-deep)}
+.sources{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.sources summary{cursor:pointer;font-family:var(--display);font-weight:650;font-size:16px;color:var(--text);list-style:revert}
+.sources ul{margin-top:12px}
+.sources li{font-size:13.5px;color:var(--dim);padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.sources .pub{color:var(--faint);font-family:var(--mono);font-size:11px}
+.foot-note{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint);line-height:1.6}
+.item{padding:12px 0;border-top:1px solid var(--line)}
+.top-nudge{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:22px}
+.top-nudge a{color:var(--amber-deep)}
+.subscribe-block{border:1px solid var(--line-strong);border-radius:12px;padding:26px 24px;margin:36px 0;text-align:center}
+.subscribe-block h3{font-family:var(--display);font-size:19px;margin-bottom:8px}
+.subscribe-block p{color:var(--dim);font-size:14px;margin-bottom:16px}
+.sub-form{display:flex;gap:8px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.sub-form input{flex:1;min-width:200px;background:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:11px 13px;color:var(--text);font-family:var(--body);font-size:14px;outline:none}
+.sub-form input:focus{border-color:var(--amber-deep)}
+.sub-form button{background:var(--amber);color:#20160a;border:none;border-radius:8px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--body)}
+.sub-form button:hover{filter:brightness(1.08)}
+.sub-ok{display:none;color:var(--aqua);font-size:13.5px;margin-top:10px}
+</style></head><body>
+<div class="wrap">
+  <div class="back"><a href="/">← dailyblip</a> · <a href="./">guides</a></div>
+  <div class="top-nudge">Get guides like this by email → <a href="#subscribe">subscribe below</a></div>
+  <div class="guide-tag">Guide</div>
+  <h1>The Complete Reference Guide to Midjourney Prompts</h1>
+  <p class="dek">Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.</p>
+  <div class="meta-row">Last reviewed July 20, 2026</div>
+  <div class="page-tags"><span class="page-tag-chip">Image Generation</span><span class="page-tag-chip">Tools &amp; Workflow</span></div>
+  <div class="quick-answer"><div class="label">QUICK ANSWER</div><p>A Midjourney prompt is built in order: optional reference images first, then your subject and scene description, then style and medium, then parameters like --ar and --stylize last. Parameters control technical behavior; the words before them control content.</p></div>
+  
+  <article>
+    <p>Most Midjourney prompts fail for one of two reasons: the description is too vague to give the model anything to work with, or the parameters are fighting each other without the person realizing it.</p>
+<p>This is the reference version. Not a quick list of tips, but the actual structure, every parameter that matters, and what happens when you combine the wrong two. This covers every parameter in current active use across V7 and V8.1 — not retired flags from V1–V4 or the old --testp models, since those aren't usable with the current default.</p>
+    <div class="section-block">
+      <h2>How a prompt is actually structured</h2>
+      <p>A Midjourney prompt has three possible parts, always in this order: reference images (optional), your text description, and parameters (always last).</p>
+<p>Reference images go first if you're using one, just a pasted image URL at the very start of the prompt. This gives Midjourney visual material to draw from before it even reads your words.</p>
+<p>The text description is the actual content: subject, setting, lighting, style, medium, and camera details, in whatever order reads naturally. Midjourney parses this as a whole block, not a strict field-by-field form, but leading with the subject and adding detail after it tends to produce more predictable results than opening with a mood word.</p>
+<p>Parameters come last, always starting with two dashes. Nothing about content should be described in a parameter; parameters are for technical behavior only, like shape, randomness, and version.</p>
+<h2>Multi-prompts and permutations</h2>
+<p>Two advanced structures are worth knowing. A double colon (::) splits a prompt into separately weighted parts: &quot;forest::2 fog::1&quot; tells Midjourney the forest matters twice as much as the fog. Curly braces generate several prompt variations from one line: &quot;a {red, blue, green} car&quot; runs as three separate prompts, one per color, in a single submission.</p>
+      
+      
+      
+      
+    </div>
+<div class="section-block">
+      <h2>Composition and format</h2>
+      <p>Everything that controls the shape and repeatability of the output itself.</p>
+      <div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>Parameter</th><th>Shorthand</th><th>Range / Options</th><th>What it does</th></tr></thead>
+      <tbody><tr><td>--aspect</td><td>--ar</td><td>e.g. 16:9, 1:1, 9:16, 21:9</td><td>Sets the width-to-height shape of the image. Decide this before refining anything else — changing it later usually means redoing the composition.</td></tr><tr><td>--tile</td><td>--tile</td><td>on / off</td><td>Generates a seamless, repeatable pattern, useful for fabric or wallpaper-style textures. Avoid upscaling a tiled image or the seam repeats break.</td></tr></tbody>
+    </table>
+  </div>
+      
+      
+      
+    </div>
+<div class="section-block">
+      <h2>Model and style</h2>
+      <p>Everything that controls which model runs and how it interprets your description.</p>
+      <div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>Parameter</th><th>Shorthand</th><th>Range / Options</th><th>What it does</th></tr></thead>
+      <tbody><tr><td>--version</td><td>--v</td><td>7, 8, 8.1</td><td>Which model generates the image. V8.1 is the current default as of June 2026, replacing V7. Each version has a different default look and feature set.</td></tr><tr><td>--niji</td><td>--niji</td><td>6, 7</td><td>Switches to Midjourney's anime and manga-focused model instead of the standard one. Don't combine with --v; pick one.</td></tr><tr><td>--stylize</td><td>--s</td><td>0–1000</td><td>How much artistic interpretation Midjourney applies versus staying literal. Low values (0–100) suit product and literal work; high values (600+) push toward painterly and expressive.</td></tr><tr><td>--chaos</td><td>--c</td><td>0–100</td><td>How different the four grid images are from each other. Low values give you four similar takes; high values give four wildly different ones.</td></tr><tr><td>--weird</td><td>--w</td><td>0–3000</td><td>How unusual a single image looks, independent of chaos. Experimental — results at the same weird value can shift over time as Midjourney tunes it.</td></tr><tr><td>--raw</td><td>--raw</td><td>on / off</td><td>Reduces Midjourney's default polished “house style” for more literal, photoreal output. Was --style raw in V7; the flag changed to --raw in V8 and V8.1.</td></tr><tr><td>--quality</td><td>--q</td><td>.25 / .5 / 1</td><td>Rendering detail level. Lower values render faster with less fine detail.</td></tr><tr><td>--personalize</td><td>--p</td><td>on, or a code</td><td>Applies your personal trained style profile (built from images you've rated) to the generation.</td></tr><tr><td>--exp</td><td>--exp</td><td>0–100 (V8.1)</td><td>Experimental enhancement mode. Works well at low values alongside stylize; tends to overwhelm other settings above roughly 50.</td></tr></tbody>
+    </table>
+  </div>
+      
+      
+      
+    </div>
+<div class="section-block">
+      <h2>Consistency and references</h2>
+      <p>Everything that keeps a subject, face, or style consistent across separate generations.</p>
+      <div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>Parameter</th><th>Shorthand</th><th>Range / Options</th><th>What it does</th></tr></thead>
+      <tbody><tr><td>--sref</td><td>--sref</td><td>image URL</td><td>Style reference — matches the color, texture, and mood of a reference image without copying its actual subject.</td></tr><tr><td>--sw</td><td>--sw</td><td>0–1000</td><td>Style weight — how strongly the --sref image influences the result. Default is 100.</td></tr><tr><td>--sv</td><td>--sv</td><td>e.g. 7</td><td>Style reference algorithm version, separate from the main model version. Newer values are typically faster and support more features.</td></tr><tr><td>--cref</td><td>--cref</td><td>image URL</td><td>Character reference — keeps the same face and character consistent across separate generations.</td></tr><tr><td>--cw</td><td>--cw</td><td>0–100</td><td>Character weight — how strongly the --cref image's face and features influence the result.</td></tr><tr><td>--oref</td><td>--oref</td><td>image URL (V7+)</td><td>Omni reference — broader than --cref, useful for keeping any consistent subject (not just a face) across a series.</td></tr><tr><td>--iw</td><td>--iw</td><td>0–3</td><td>Image weight — how strongly an uploaded image influences the result relative to your text description. Default is 1.</td></tr><tr><td>--seed</td><td>--seed</td><td>any number</td><td>Locks the starting randomness so you can reproduce a similar result later, or make small controlled variations on one base.</td></tr></tbody>
+    </table>
+  </div>
+      
+      
+      
+    </div>
+<div class="section-block">
+      <h2>Exclusions and control</h2>
+      <p>Everything that removes unwanted elements or gives you fine control over the render.</p>
+      <div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>Parameter</th><th>Shorthand</th><th>Range / Options</th><th>What it does</th></tr></thead>
+      <tbody><tr><td>--no</td><td>--no</td><td>comma-separated list</td><td>Excludes specific things from the image. Each word is read independently, so a precise list works better than a single vague term.</td></tr><tr><td>--stop</td><td>--stop</td><td>10–100</td><td>Ends generation early at a percentage complete, producing a softer, less detailed result on purpose.</td></tr><tr><td>--repeat</td><td>--r</td><td>1–40</td><td>Runs the same prompt multiple times in a single submission instead of resubmitting it manually.</td></tr></tbody>
+    </table>
+  </div>
+      
+      
+      
+    </div>
+<div class="section-block">
+      <h2>Generation speed</h2>
+      <p>Everything that trades speed for cost, or vice versa, for a single job. Worth noting upfront: Turbo mode is not currently supported in V8.1, the current default model — check your model version before relying on it.</p>
+      <div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>Parameter</th><th>Shorthand</th><th>Range / Options</th><th>What it does</th></tr></thead>
+      <tbody><tr><td>--fast</td><td>--fast</td><td>on for this job</td><td>Overrides your default speed setting to use Fast Mode for a single generation.</td></tr><tr><td>--relax</td><td>--relax</td><td>on for this job</td><td>Overrides your default speed setting to use Relax Mode (queued, no GPU time cost) for a single generation.</td></tr><tr><td>--turbo</td><td>--turbo</td><td>on for this job</td><td>Fastest tier, at double the GPU cost of Fast Mode. Not currently supported in V8.1 — check your model version before relying on it.</td></tr></tbody>
+    </table>
+  </div>
+      
+      
+      
+    </div>
+<div class="section-block">
+      <h2>V8.1-specific output options</h2>
+      <p>Output options specific to the current V8.1 model.</p>
+      <div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead><tr><th>Parameter</th><th>Shorthand</th><th>Range / Options</th><th>What it does</th></tr></thead>
+      <tbody><tr><td>--hd</td><td>--hd</td><td>on / off</td><td>Native high-resolution output (2048px). Costs more GPU time than standard generation.</td></tr><tr><td>--sd</td><td>--sd</td><td>on / off</td><td>Standard-definition, lower-cost output — the budget option relative to --hd.</td></tr><tr><td>--draft</td><td>--draft</td><td>on / off</td><td>Fast, lower-fidelity iteration mode for quickly testing an idea before committing to a full-quality render.</td></tr><tr><td>--video</td><td>--video</td><td>on / off</td><td>Generates a short progress video of the image forming, in addition to the static result.</td></tr></tbody>
+    </table>
+  </div>
+      
+      
+      
+    </div>
+<div class="section-block">
+      <h2>How the important ones actually interact</h2>
+      <p>A few combinations matter more than the individual parameter descriptions suggest.</p>
+<p>Stylize and chaos genuinely work well together. --chaos 50 --stylize 500 gives you four genuinely different images that all still look intentional, rather than four random ones.</p>
+<p>Weird and seed do not combine reliably. The same seed with a --weird value attached can still produce a different result each time you run it, since weird affects more than just the starting noise pattern a seed locks in.</p>
+<p>Avoid pairing --raw with a high --stylize value. They're pulling in opposite directions: raw asks for literal accuracy, high stylize asks for artistic interpretation. Use raw with a low stylize value instead if photorealism is the actual goal.</p>
+<p>Don't stack --sref and --cref at full strength on the same generation. Moderate weights on both works; two strong references fighting for control tends to produce a muddier result than either alone.</p>
+<p>If a --no list isn't working, the usual cause is vagueness. &quot;--no clutter&quot; gives Midjourney very little to act on. &quot;--no text, watermark, extra fingers&quot; gives it something concrete to actually exclude.</p>
+      
+      
+      
+      
+    </div>
+    <p>None of this replaces having a clear idea of what you actually want. It just means the gap between that idea and what Midjourney produces gets a lot smaller.</p>
+  </article>
+  <div class="prompts-block">
+    <div class="prompts-label">PROMPTS TO TRY</div>
+    
+      <div class="prompt-card">
+        <div class="prompt-label">Literal, photoreal product shot</div>
+        <div class="prompt-row">
+          <code class="prompt-text">a ceramic coffee mug on a marble countertop, soft window light, shallow depth of field --ar 1:1 --raw --s 50 --v 8.1</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="a ceramic coffee mug on a marble countertop, soft window light, shallow depth of field --ar 1:1 --raw --s 50 --v 8.1" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Balanced editorial portrait</div>
+        <div class="prompt-row">
+          <code class="prompt-text">a contemplative portrait of a woman in her 30s, Rembrandt lighting, medium format photography aesthetic --ar 4:5 --s 200 --v 8.1</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="a contemplative portrait of a woman in her 30s, Rembrandt lighting, medium format photography aesthetic --ar 4:5 --s 200 --v 8.1" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">High chaos plus high stylize, still coherent</div>
+        <div class="prompt-row">
+          <code class="prompt-text">an overgrown greenhouse full of glowing plants, magical realism --ar 16:9 --c 50 --s 500 --v 8.1</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="an overgrown greenhouse full of glowing plants, magical realism --ar 16:9 --c 50 --s 500 --v 8.1" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Consistent character across a series</div>
+        <div class="prompt-row">
+          <code class="prompt-text">the same character from the reference image, now standing in a rainy city street at night --cref [your reference URL] --ar 3:4 --v 8.1</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="the same character from the reference image, now standing in a rainy city street at night --cref [your reference URL] --ar 3:4 --v 8.1" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Seamless tileable pattern</div>
+        <div class="prompt-row">
+          <code class="prompt-text">a repeating pattern of small botanical leaves, flat illustration style, muted earth tones --tile --ar 1:1 --s 100 --v 8.1</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="a repeating pattern of small botanical leaves, flat illustration style, muted earth tones --tile --ar 1:1 --s 100 --v 8.1" type="button">Copy</button>
+        </div>
+      </div>
+  </div>
+  <div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul><li>Structure is fixed: reference images, then description, then parameters, always in that order.</li><li>Stylize and chaos work well together; raw mode and high stylize actively fight each other.</li><li>A precise --no list works far better than a single vague exclusion word.</li></ul></div>
+  <div class="subscribe-block" id="subscribe">
+    <h3>Enjoyed this? Get the next one.</h3>
+    <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>
+    <form class="sub-form" id="subForm" data-buttondown="">
+      <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="sub-ok" id="subOk">✓ You're on the list.</div>
+  </div>
+  
+
+  <div class="foot-note">Last reviewed July 20, 2026. Have a correction? <a href="mailto:hello@dailyblip.ai">Tell us</a>.</div>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+function copyPrompt(btn){
+  const text = btn.dataset.prompt;
+  const showCopied = () => {
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    btn.classList.add("copied");
+    setTimeout(() => { btn.textContent = original; btn.classList.remove("copied"); }, 1800);
+  };
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(showCopied).catch(() => { btn.textContent = "Copy failed — select manually"; });
+  } else {
+    // Fallback for contexts without the Clipboard API (older browsers,
+    // non-HTTPS) -- selects the text so the person can copy it manually
+    // with their own keyboard shortcut instead of failing silently.
+    const range = document.createRange();
+    const codeEl = btn.previousElementSibling;
+    if (codeEl) {
+      range.selectNodeContents(codeEl);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    btn.textContent = "Selected — press Ctrl/Cmd+C";
+  }
+}
+$("#subForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const email = $("#subEmail").value;
+  if (!email || !email.includes("@")) return;
+  const user = $("#subForm").dataset.buttondown;
+  if (user) {
+    try {
+      await fetch(`https://buttondown.com/api/emails/embed-subscribe/${user}`, {
+        method: "POST", mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ email }),
+      });
+    } catch {}
+  }
+  $("#subForm").style.display = "none";
+  $("#subOk").style.display = "block";
+});
+</script>
+</body></html>
