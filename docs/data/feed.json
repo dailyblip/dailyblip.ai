@@ -1,12 +1,12 @@
 {
-  "issue": 243,
-  "generated_at": "2026-07-21T03:19:57.164Z",
+  "issue": 244,
+  "generated_at": "2026-07-21T07:57:38.884Z",
   "brief": {
     "items": [
       {
-        "story": "s_70097351852cb620",
-        "html": "A federal judge gave final approval to <b>Anthropic's $1.5B copyright settlement with authors and publishers</b> — the largest AI training liability deal yet, but broader training questions remain open.",
-        "secs": 10,
+        "story": "s_502e6d35fbb7908f",
+        "html": "OpenAI's CEO is <b>lobbying to restrict open-weight AI models</b> — a direct policy signal that could reshape which tools creators are legally allowed to use.",
+        "secs": 9,
         "impact": 8,
         "hardware": false,
         "tracking": false,
@@ -22,8 +22,8 @@
         "commentary": false
       },
       {
-        "story": "s_502e6d35fbb7908f",
-        "html": "OpenAI's CEO is <b>lobbying US regulators to restrict open-weight AI models</b>, a direct policy signal that could reshape which tools creators are legally allowed to use.",
+        "story": "s_70097351852cb620",
+        "html": "A federal judge gave final approval to <b>Anthropic's $1.5B copyright settlement</b> — the largest AI training liability deal yet, though broader training questions remain open.",
         "secs": 9,
         "impact": 7,
         "hardware": false,
@@ -31,35 +31,35 @@
         "commentary": false
       },
       {
-        "story": "s_cdc3fbd3b50a8a83",
-        "html": "Adobe's experimental iOS app Project Indigo now uses <b>LLMs to critique your photos and adds AI object removal, depth of field, and style transfer</b> — worth testing now.",
+        "story": "s_d573260cad05ebaa",
+        "html": "Google's new <b>\"Frozen v2\" chip targets 6–10x Gemini inference efficiency</b> — if it ships in 2028, expect faster Veo and Imagen generation limits to follow.",
         "secs": 10,
-        "impact": 7,
-        "hardware": false,
+        "impact": 6,
+        "hardware": true,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_17b501c7fe1377af",
-        "html": "The Model Context Protocol just shipped a <b>stateless session update that simplifies how AI tools connect to each other</b> — if you build or use MCP-based workflows, check your stack.",
-        "secs": 10,
+        "story": "s_c4923a542f7b6a55",
+        "html": "<b>AI ingested 40 million complete recordings</b> where music law only ever grappled with four bars — the scale of the legal gap facing music creators is now undeniable.",
+        "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": false
+        "commentary": true
       },
       {
-        "story": "s_c0f02d7ca9b061c8",
-        "html": "Researchers warn that <b>AI-enhanced wildlife photos submitted to iNaturalist and Macaulay Library are corrupting scientific databases</b> — a credibility signal for any creator publishing AI-assisted nature imagery.",
-        "secs": 10,
-        "impact": 5,
+        "story": "s_17b501c7fe1377af",
+        "html": "The Model Context Protocol shipped a <b>stateless session update simplifying how AI tools connect</b> — if you build or use MCP-based workflows, check your stack now.",
+        "secs": 9,
+        "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Monday, July 20 — six things that changed today",
-    "date": "2026-07-21T03:19:57.094Z",
+    "title": "Tuesday, July 21 — six things that changed today",
+    "date": "2026-07-21T07:57:38.825Z",
     "edition": "pm"
   },
   "stories": [
