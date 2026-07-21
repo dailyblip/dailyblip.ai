@@ -657,7 +657,8 @@
         "alt_text": "How to Keep Characters Consistent in ChatGPT Image Generation"
       }
     ],
-    "backfilled": true
+    "backfilled": true,
+    "pinned": true
   },
   {
     "id": "backfill-12-chatgpt-prompts-for-professional-product-photography-without-a-studio",
