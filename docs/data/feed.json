@@ -1,6 +1,6 @@
 {
   "issue": 244,
-  "generated_at": "2026-07-21T07:57:38.884Z",
+  "generated_at": "2026-07-21T09:41:01.503Z",
   "brief": {
     "items": [
       {
@@ -78,7 +78,8 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -1
+      "move": 4,
+      "top": true
     },
     {
       "id": "s_70097351852cb620",
@@ -94,9 +95,8 @@
       "ts": "2026-07-21T00:12:24.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 102,
-      "move": 56,
-      "top": true
+      "heat": 93,
+      "move": 0
     },
     {
       "id": "s_f09cbf6a0ec2257f",
@@ -112,8 +112,8 @@
       "ts": "2026-07-20T22:19:12.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 100,
-      "move": 56
+      "heat": 91,
+      "move": 0
     },
     {
       "id": "s_d573260cad05ebaa",
@@ -129,8 +129,8 @@
       "ts": "2026-07-20T21:21:15.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 81,
-      "move": 47
+      "heat": 72,
+      "move": -14
     },
     {
       "id": "s_17b501c7fe1377af",
@@ -146,8 +146,8 @@
       "ts": "2026-07-20T20:50:40.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": 47
+      "heat": 71,
+      "move": -14
     },
     {
       "id": "s_502e6d35fbb7908f",
@@ -163,8 +163,8 @@
       "ts": "2026-07-20T19:33:25.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 97,
-      "move": -2
+      "heat": 88,
+      "move": 0
     },
     {
       "id": "s_c4923a542f7b6a55",
@@ -181,8 +181,8 @@
       "ts": "2026-07-20T17:12:04.408Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -3
+      "heat": 78,
+      "move": -1
     },
     {
       "id": "s_c0f02d7ca9b061c8",
@@ -198,8 +198,8 @@
       "ts": "2026-07-20T16:28:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 94,
-      "move": -2
+      "heat": 85,
+      "move": -1
     },
     {
       "id": "s_43177eeccf608f86",
@@ -215,8 +215,8 @@
       "ts": "2026-07-20T16:00:43.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -18
+      "heat": 66,
+      "move": -16
     },
     {
       "id": "s_a549b2f2489b487f",
@@ -232,8 +232,8 @@
       "ts": "2026-07-20T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -18
+      "heat": 66,
+      "move": -16
     },
     {
       "id": "s_8030c8e0dc091db7",
@@ -249,8 +249,8 @@
       "ts": "2026-07-20T15:58:51.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -18
+      "heat": 66,
+      "move": -16
     },
     {
       "id": "s_cdc3fbd3b50a8a83",
@@ -266,8 +266,8 @@
       "ts": "2026-07-20T15:45:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": -3
+      "heat": 76,
+      "move": -15
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -283,7 +283,7 @@
       "ts": "2026-07-20T15:30:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 93,
+      "heat": 84,
       "move": -2
     },
     {
@@ -300,8 +300,8 @@
       "ts": "2026-07-20T15:23:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": -3
+      "heat": 74,
+      "move": -14
     },
     {
       "id": "s_90cef26b7e07e68a",
@@ -317,7 +317,7 @@
       "ts": "2026-07-20T10:16:33.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 88,
+      "heat": 79,
       "move": -2
     },
     {
@@ -334,8 +334,8 @@
       "ts": "2026-07-20T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 60,
-      "move": -4
+      "heat": 50,
+      "move": -8
     },
     {
       "id": "s_6dea1640e408017e",
@@ -351,8 +351,8 @@
       "ts": "2026-07-20T08:58:49.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -18
+      "heat": 68,
+      "move": -4
     },
     {
       "id": "s_c57b245c362dd255",
@@ -369,8 +369,8 @@
       "ts": "2026-07-20T04:07:57.883Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": -4
+      "heat": 70,
+      "move": 4
     },
     {
       "id": "s_444761f503abeda7",
@@ -388,7 +388,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": 4
     },
     {
       "id": "s_90851a797dd057ee",
@@ -405,7 +405,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_c0ef7a87d4b35aa6",
@@ -422,7 +422,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_5767ddd493bb4165",
@@ -439,7 +439,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_c60035e6bb3c677d",
@@ -456,7 +456,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_01582b84f95050bc",
@@ -473,7 +473,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_3ad838364711ce9b",
@@ -490,7 +490,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_4e6f73ed1f19a4ce",
@@ -507,7 +507,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_2eed32c959cdf779",
@@ -524,7 +524,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_a49f55bafe0aeb0e",
@@ -541,7 +541,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_133497b699bf0fd6",
@@ -558,7 +558,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_b51b6c107383df8e",
@@ -575,7 +575,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_ac7be8d09d06872b",
@@ -592,7 +592,7 @@
       "read": "5 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_4d76675668887bf8",
@@ -609,7 +609,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_a0bbc2c6e6f2a453",
@@ -626,7 +626,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": 4
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -643,7 +643,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -660,7 +660,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -677,7 +677,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_252ccc31ca52ec00",
@@ -694,7 +694,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -711,7 +711,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -728,7 +728,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -745,7 +745,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -762,7 +762,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": 0
+      "move": 3
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -779,7 +779,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -796,7 +796,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -813,7 +813,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -830,7 +830,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_79ed56faeda92346",
@@ -847,7 +847,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -864,7 +864,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -881,7 +881,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -898,7 +898,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -915,7 +915,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -932,7 +932,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -949,7 +949,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_3090d72b6869197e",
@@ -966,7 +966,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -983,7 +983,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -1000,7 +1000,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -1017,7 +1017,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -4
+      "move": 0
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -1034,7 +1034,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 0
+      "move": 4
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -1052,7 +1052,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -4
+      "move": 4
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -1069,7 +1069,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -4
+      "move": 1
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -1086,7 +1086,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -4
+      "move": 3
     }
   ],
   "models": [
@@ -1203,8 +1203,8 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 12,
-    "published_today": 18,
+    "scanned_last_run": 8,
+    "published_today": 15,
     "sources_live": 13,
     "slopped_last_run": 8
   }
