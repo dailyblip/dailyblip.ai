@@ -1667,6 +1667,7 @@ async function renderMaintenance(){
           <div class="tip">${esc(guideStatusLabel(g))}${g.resynced ? " \u00b7 resynced" : ""} \u00b7 ${esc(ago(g.created_at))} ago</div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap">
+          ${g.status === "published" ? `<button class="btn" onclick="editSlug('${g.id}')">Edit slug</button>` : ""}
           ${g.status === "published" ? `<button class="btn" onclick="editHeroImage('${g.id}')">Edit hero image</button>` : ""}
           ${g.status === "published" ? `<button class="btn" onclick="editPublishedDate('${g.id}')">Edit date</button>` : ""}
           ${g.status === "published" ? `<button class="btn" onclick="toggleGuideListing('${g.id}')">${g.unlisted ? "Re-list" : "Unlist"}</button>` : ""}
@@ -1729,6 +1730,51 @@ async function editHeroImage(id){
 // job record and manifest entry, same as editHeroImage above -- the
 // manifest is what actually drives homepage/library sort order, so
 // missing it there would silently defeat the whole point.
+// Fixes a wrong slug on an already-registered guide -- e.g. a typo that
+// doesn't match the actual uploaded .html filename, which is exactly
+// what causes a 404 through the site while the direct URL somehow
+// still seems related but doesn't quite match. Updates the job
+// record's slug AND published_url together (published_url is built
+// directly from the slug, so they'd silently drift apart otherwise),
+// plus the manifest entry.
+async function editSlug(id){
+  const g = guides.find(x => x.id === id);
+  if (!g) return;
+  const current = g.article?.slug || "";
+  const next = prompt(`Slug for "${g.article?.title}"\n\nMust exactly match the uploaded .html filename in docs/guides/, without .html`, current);
+  if (next === null) return;
+  const newSlug = next.trim();
+  if (!newSlug || newSlug === current) return;
+
+  try {
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      if (i === -1) return gs;
+      const updated = [...gs];
+      updated[i] = {
+        ...updated[i],
+        article: { ...updated[i].article, slug: newSlug },
+        published_url: `https://dailyblip.ai/guides/${newSlug}.html`,
+      };
+      return updated;
+    }, `admin: fix slug for guide ${id}`);
+
+    await writeManifestWithRetry(manifest => {
+      const i = manifest.findIndex(m => m.slug === current);
+      if (i === -1) return manifest;
+      const updated = [...manifest];
+      updated[i] = { ...updated[i], slug: newSlug };
+      return updated;
+    }, `admin: fix slug for guide ${id} in manifest`);
+
+    toast("Slug updated.");
+    await renderMaintenance();
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
 async function editPublishedDate(id){
   const g = guides.find(x => x.id === id);
   if (!g) return;
