@@ -5,14 +5,94 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 15:57:27 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 20:40:36 GMT</lastBuildDate>
     <item>
-      <title>Hugging Face details AI-driven autonomous intrusion into production infrastructure</title>
-      <link>https://huggingface.co/blog/security-incident-july-2026</link>
-      <guid isPermaLink="false">s_d8ed319939f5c0ae</guid>
-      <description>Platform disclosed that attackers used autonomous AI agents to breach infrastructure; the response and detection also leveraged AI systems.</description>
+      <title>Anthropic copyright settlement approved with minimal author opt-outs</title>
+      <link>https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/</link>
+      <guid isPermaLink="false">s_55228da85192241d</guid>
+      <description>Judge approves $1.5B settlement; only 350 authors opted out of the largest copyright class action ever certified, ending major litigation over AI training data.</description>
+      <category>rights</category>
+      <pubDate>Tue, 21 Jul 2026 17:33:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>NVIDIA publishes simulation overview for physical AI and robotics</title>
+      <link>https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai</link>
+      <guid isPermaLink="false">s_eed16821fcdd7ed9</guid>
+      <description>Blog post surveys simulation engines including MuJoCo, Isaac Sim, and Newton for training embodied AI systems, with GPU-accelerated physics tooling.</description>
+      <category>tools</category>
+      <pubDate>Tue, 21 Jul 2026 20:00:27 GMT</pubDate>
+    </item>
+    <item>
+      <title>Jack Dorsey launches Buzz, an open-source AI-native workplace chat</title>
+      <link>https://techcrunch.com/2026/07/21/jack-dorsey-is-taking-on-slack-with-buzz-a-group-chat-platform-for-teams-and-their-ai-agents/</link>
+      <guid isPermaLink="false">s_af59977501275694</guid>
+      <description>Block's new group chat platform integrates human teams and AI agents in a single conversation, positioning itself as a decentralized, model-agnostic alternative to Slack.</description>
+      <category>tools</category>
+      <pubDate>Tue, 21 Jul 2026 19:43:41 GMT</pubDate>
+    </item>
+    <item>
+      <title>Streaming platforms converging into universal apps via AI curation</title>
+      <link>https://techcrunch.com/2026/07/21/ai-and-the-rise-of-the-universal-entertainment-app/</link>
+      <guid isPermaLink="false">s_3dd9888813d83985</guid>
+      <description>Spotify, Netflix, YouTube, and TikTok are blurring format boundaries as AI makes content creation, organization, and recommendation easier, shifting competition from format dominance to time-on-app.</description>
       <category>industry</category>
-      <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
+      <pubDate>Tue, 21 Jul 2026 19:39:30 GMT</pubDate>
+    </item>
+    <item>
+      <title>Substack deploys AI detection tool across posts and comments</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/968855/substack-pangram-ai-detecting-tool</link>
+      <guid isPermaLink="false">s_3a68379c08593a50</guid>
+      <description>Platform now offers users a scanner powered by Pangram to estimate AI-generated or AI-assisted text in posts, notes, replies, and comments.</description>
+      <category>rights</category>
+      <pubDate>Tue, 21 Jul 2026 19:22:28 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI compute surge set to quadruple U.S. data center electricity use by 2035</title>
+      <link>https://techcrunch.com/2026/07/21/data-centers-expected-to-use-4x-more-electricity-by-2035/</link>
+      <guid isPermaLink="false">s_ade7e27dc611eaa3</guid>
+      <description>BloombergNEF forecasts data centers will consume one-fifth of U.S. electricity by 2035, with nearly half devoted to AI training and inference, concentrated in the U.S.</description>
+      <category>industry</category>
+      <pubDate>Tue, 21 Jul 2026 18:06:38 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google ships Gemini 3.6 Flash, 3.5 Flash-Lite, and cybersecurity model</title>
+      <link>https://techcrunch.com/2026/07/21/google-releases-three-new-gemini-models-but-no-3-5-pro/</link>
+      <guid isPermaLink="false">s_01119b73028b4558</guid>
+      <description>New releases focus on efficiency and cost; Gemini 3.6 Flash cuts token usage 17%, while Flash Cyber targets vulnerability detection. Still no 3.5 Pro.</description>
+      <category>industry</category>
+      <pubDate>Tue, 21 Jul 2026 17:11:50 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI launches ChatGPT for small business training program</title>
+      <link>https://openai.com/index/introducing-chatgpt-small-business-program</link>
+      <guid isPermaLink="false">s_d42362617c640879</guid>
+      <description>Program helps entrepreneurs build AI skills, automate workflows, and grow using ChatGPT Work, but details are minimal.</description>
+      <category>tools</category>
+      <pubDate>Tue, 21 Jul 2026 17:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google reveals Gemini 3.6 Flash and cybersecurity AI, teases Gemini 4</title>
+      <link>https://arstechnica.com/google/2026/07/google-reveals-faster-and-cheaper-gemini-3-6-flash-says-3-5-pro-is-still-in-testing/</link>
+      <guid isPermaLink="false">s_08ae2218969a5903</guid>
+      <description>Three new models ship today with improved efficiency; Google signals Gemini 4 already in training despite absence of delayed 3.5 Pro.</description>
+      <category>industry</category>
+      <pubDate>Tue, 21 Jul 2026 16:58:25 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple pilots AI-summarized Genius Bar conversation recordings</title>
+      <link>https://petapixel.com/2026/07/21/conversations-between-apple-store-workers-and-customers-can-now-be-recorded/</link>
+      <guid isPermaLink="false">s_0e4d77c4bfc2f390</guid>
+      <description>Apple's Live Notes system records and transcribes in-store customer service conversations, then AI-summarizes them for store staff.</description>
+      <category>industry</category>
+      <pubDate>Tue, 21 Jul 2026 16:58:02 GMT</pubDate>
+    </item>
+    <item>
+      <title>Judge approves Anthropic's $1.5B book copyright settlement with authors</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved</link>
+      <guid isPermaLink="false">s_0bd50127700baaab</guid>
+      <description>Federal court signs off on largest copyright class action settlement ever, offering authors ~$3,000 per allegedly pirated title used in model training.</description>
+      <category>rights</category>
+      <pubDate>Tue, 21 Jul 2026 16:53:37 GMT</pubDate>
     </item>
     <item>
       <title>US threatens sanctions on Chinese AI models for IP theft</title>
@@ -35,6 +115,14 @@
       <link>https://www.theverge.com/tech/968572/google-gemini-flash-cyber-ai-security-model</link>
       <guid isPermaLink="false">s_7d7edea89fcf1f37</guid>
       <description>Google released a dedicated AI security model designed to identify and patch vulnerabilities faster than larger, pricier alternatives. Achieves competitive performance at lower cost.</description>
+      <category>tools</category>
+      <pubDate>Tue, 21 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Meshy launches conversational 3D Agent for iterative asset creation</title>
+      <link>https://80.lv/articles/meshy-wants-ai-to-feel-less-like-a-prompt-and-more-like-a-creative-partner/</link>
+      <guid isPermaLink="false">s_cdd021c25350f21e</guid>
+      <description>New tool brings dialogue-based AI brainstorming to 3D modeling, letting artists maintain style consistency and export to pipelines without single-prompt friction.</description>
       <category>tools</category>
       <pubDate>Tue, 21 Jul 2026 15:00:00 GMT</pubDate>
     </item>
@@ -63,108 +151,20 @@
       <pubDate>Tue, 21 Jul 2026 11:08:56 GMT</pubDate>
     </item>
     <item>
+      <title>OpenAI and Hugging Face detail security incident in model evaluation</title>
+      <link>https://openai.com/index/hugging-face-model-evaluation-security-incident</link>
+      <guid isPermaLink="false">s_20b0eb2d5c149974</guid>
+      <description>Partners share early findings on cyber incident discovered during AI model evaluation, highlighting advanced attack capabilities and defense lessons.</description>
+      <category>industry</category>
+      <pubDate>Tue, 21 Jul 2026 07:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Anthropic's $1.5B copyright settlement approved by federal judge</title>
       <link>https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/</link>
       <guid isPermaLink="false">s_70097351852cb620</guid>
       <description>A federal judge gave final approval to Anthropic's landmark settlement with authors and publishers over illegal training on copyrighted books. The ruling doesn't resolve the broader question of AI training on copyrighted works.</description>
       <category>rights</category>
       <pubDate>Tue, 21 Jul 2026 00:12:24 GMT</pubDate>
-    </item>
-    <item>
-      <title>Grabette: open-source dataset tool for robot-manipulation training</title>
-      <link>https://huggingface.co/blog/grabette</link>
-      <guid isPermaLink="false">s_f07ea0986edc9c35</guid>
-      <description>Hugging Face released Grabette, a system for recording and processing robot interaction data to build shared AI training datasets. Browser-based recording and processing.</description>
-      <category>tools</category>
-      <pubDate>Tue, 21 Jul 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Sony sues Udio over 30,000 copyrighted songs in AI music generator</title>
-      <link>https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright</link>
-      <guid isPermaLink="false">s_f09cbf6a0ec2257f</guid>
-      <description>Sony Music filed a copyright lawsuit alleging Udio ingested over 30,000 of its songs without permission, from Elvis to Beyoncé.</description>
-      <category>rights</category>
-      <pubDate>Mon, 20 Jul 2026 22:19:12 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google developing new AI chip for more efficient Gemini models</title>
-      <link>https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/</link>
-      <guid isPermaLink="false">s_d573260cad05ebaa</guid>
-      <description>Alphabet is designing &quot;Frozen v2,&quot; a server chip targeting 6–10x efficiency gains in token generation per watt, expected 2028.</description>
-      <category>industry</category>
-      <pubDate>Mon, 20 Jul 2026 21:21:15 GMT</pubDate>
-    </item>
-    <item>
-      <title>Model Context Protocol gets stateless session update for easier integration</title>
-      <link>https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/</link>
-      <guid isPermaLink="false">s_17b501c7fe1377af</guid>
-      <description>The MCP, core infrastructure for AI model interoperability, is shipping a significant update making server-side session management simpler, similar to standard web architecture.</description>
-      <category>tools</category>
-      <pubDate>Mon, 20 Jul 2026 20:50:40 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI head pushes for US regulation against open-weight models</title>
-      <link>https://techcrunch.com/2026/07/20/openai-is-scared-of-open-weight-models-should-the-us-be/</link>
-      <guid isPermaLink="false">s_502e6d35fbb7908f</guid>
-      <description>Strategic debate over Chinese open-weight LLMs, OpenAI's regulatory concerns, and pushback from industry figures on innovation. Direct policy signal for AI creators.</description>
-      <category>industry</category>
-      <pubDate>Mon, 20 Jul 2026 19:33:25 GMT</pubDate>
-    </item>
-    <item>
-      <title>The Sample Clearance Problem, Except It's the Whole Song Now</title>
-      <link>https://dailyblip.ai/commentary/the-sample-clearance-problem-except-it-s-the-whole-song-now-2026-07-20.html</link>
-      <guid isPermaLink="false">s_c4923a542f7b6a55</guid>
-      <description>The music industry spent three decades building a legal framework to stop people from lifting four bars of someone else's record. AI just swallowed 40 million complete recordings and called it research.</description>
-      <category>writing</category>
-      <pubDate>Mon, 20 Jul 2026 17:12:04 GMT</pubDate>
-    </item>
-    <item>
-      <title>Scientists warn AI-edited wildlife photos could compromise research databases</title>
-      <link>https://petapixel.com/2026/07/20/scientists-warn-wildlife-photographers-ai-enhanced-bird-photos-could-threaten-research/</link>
-      <guid isPermaLink="false">s_c0f02d7ca9b061c8</guid>
-      <description>Researchers caution that AI-enhanced bird photos shared on citizen science platforms may undermine credibility of iNaturalist and Macaulay Library. Policy/ethics signal.</description>
-      <category>rights</category>
-      <pubDate>Mon, 20 Jul 2026 16:28:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Adobe Project Indigo launches AI Playground for mobile photography</title>
-      <link>https://petapixel.com/2026/07/20/adobes-project-indigo-iphone-camera-app-now-offers-photography-advice/</link>
-      <guid isPermaLink="false">s_43177eeccf608f86</guid>
-      <description>Project Indigo now includes generative AI for photo critiques, object removal, depth of field, and style transfer. Overlaps with items 2 and 3; PetaPixel version.</description>
-      <category>image</category>
-      <pubDate>Mon, 20 Jul 2026 16:00:43 GMT</pubDate>
-    </item>
-    <item>
-      <title>Adobe's Project Indigo integrates generative AI into iPhone photography</title>
-      <link>https://www.theverge.com/tech/967791/adobe-indigo-camera-app-ai-playground-update</link>
-      <guid isPermaLink="false">s_a549b2f2489b487f</guid>
-      <description>Project Indigo now includes generative AI tools powered by Google's Nano model for editing, removal, and style application. Overlaps with item 2; uses different framing.</description>
-      <category>image</category>
-      <pubDate>Mon, 20 Jul 2026 16:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>NVIDIA releases Cosmos 3 Edge for edge-based world modeling</title>
-      <link>https://huggingface.co/blog/nvidia/cosmos3edge</link>
-      <guid isPermaLink="false">s_8030c8e0dc091db7</guid>
-      <description>NVIDIA shipped Cosmos 3 Edge, an AI model for physical systems to understand scene changes and anticipate outcomes on memory-constrained hardware. Released tool.</description>
-      <category>tools</category>
-      <pubDate>Mon, 20 Jul 2026 15:58:51 GMT</pubDate>
-    </item>
-    <item>
-      <title>Adobe Project Indigo adds LLM photo critique and generative features</title>
-      <link>https://techcrunch.com/2026/07/20/adobe-camera-apps-new-feature-will-critique-your-photos-using-ai/</link>
-      <guid isPermaLink="false">s_cdc3fbd3b50a8a83</guid>
-      <description>Adobe's experimental iOS camera app now uses LLMs to critique photos and includes AI-powered object removal, depth of field, and style transfer. Shipped feature.</description>
-      <category>tools</category>
-      <pubDate>Mon, 20 Jul 2026 15:45:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Lightcraft's Spark Story uses iPhone to generate virtual film sets from scripts</title>
-      <link>https://www.creativebloq.com/3d/i-watched-lightcraft-turn-a-screenplay-into-a-virtual-film-set-using-an-iphone</link>
-      <guid isPermaLink="false">s_735b682e0d0efd97</guid>
-      <description>SIGGRAPH 2026 revealed Spark Story, which converts screenplays into USD/Gaussian Splat environments and enables on-device shot planning before production.</description>
-      <category>tools</category>
-      <pubDate>Mon, 20 Jul 2026 15:30:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
