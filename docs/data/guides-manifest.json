@@ -60,18 +60,6 @@
     "pinned": false
   },
   {
-    "title": "How to Edit AI Images With ChatGPT Without Starting Over",
-    "slug": "how-to-edit-ai-images-with-chatgpt-without-starting-over",
-    "dek": "Change one thing at a time and keep the parts that already work.",
-    "hero_image": "/guides/15.jpg",
-    "published_at": "2026-06-28T12:00:00.000Z",
-    "tags": [
-      "Image Generation",
-      "Getting Started"
-    ],
-    "pinned": false
-  },
-  {
     "title": "12 ChatGPT Prompts for Professional Product Photography Without a Studio",
     "slug": "12-chatgpt-prompts-for-professional-product-photography-without-a-studio",
     "dek": "Clean ecommerce shots, lifestyle scenes, and premium ad images, no photographer required.",
@@ -156,18 +144,6 @@
     "pinned": false
   },
   {
-    "title": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural",
-    "slug": "15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural",
-    "dek": "Copy-paste style prompts for fingerstyle, folk, and singer-songwriter tracks that don't sound stiff.",
-    "hero_image": "/guides/07.jpg",
-    "published_at": "2026-06-10T12:00:00.000Z",
-    "tags": [
-      "AI Music",
-      "Getting Started"
-    ],
-    "pinned": false
-  },
-  {
     "title": "How Musicians Can Use Suno Without Replacing Their Own Creativity",
     "slug": "how-musicians-can-use-suno-without-replacing-their-own-creat",
     "dek": "Use it for demos, arrangement ideas, and backing tracks. Keep the actual songwriting yours.",
@@ -176,6 +152,18 @@
     "tags": [
       "AI Music",
       "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "The Complete Reference Guide to Midjourney Prompts",
+    "slug": "the-complete-reference-guide-to-midjourney-prompts",
+    "dek": "Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.",
+    "hero_image": "/guides/21.jpg",
+    "published_at": "2026-07-20T12:00:00.000Z",
+    "tags": [
+      "Image Generation",
+      "Tools & Workflow"
     ],
     "pinned": false
   },
@@ -192,14 +180,27 @@
     "pinned": false
   },
   {
-    "title": "The Complete Reference Guide to Midjourney Prompts",
-    "slug": "the-complete-reference-guide-to-midjourney-prompts",
-    "dek": "Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.",
-    "hero_image": "/guides/21.jpg",
-    "published_at": "2026-07-20T12:00:00.000Z",
+    "title": "How to Edit AI Images With ChatGPT Without Starting Over",
+    "slug": "how-to-edit-ai-images-with-chatgpt-without-starting-over",
+    "dek": "Change one thing at a time and keep the parts that already work.",
+    "hero_image": "/guides/15.jpg",
+    "published_at": "2026-06-28T12:00:00.000Z",
     "tags": [
       "Image Generation",
-      "Tools & Workflow"
-    ]
+      "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural",
+    "slug": "15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural",
+    "dek": "Copy-paste style prompts for fingerstyle, folk, and singer-songwriter tracks that don't sound stiff.",
+    "hero_image": "/guides/07.jpg",
+    "published_at": "2026-06-10T12:00:00.000Z",
+    "tags": [
+      "AI Music",
+      "Getting Started"
+    ],
+    "pinned": false
   }
 ]
