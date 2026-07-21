@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 20:40:36 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2026 23:44:15 GMT</lastBuildDate>
     <item>
       <title>Anthropic copyright settlement approved with minimal author opt-outs</title>
       <link>https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/</link>
@@ -13,6 +13,14 @@
       <description>Judge approves $1.5B settlement; only 350 authors opted out of the largest copyright class action ever certified, ending major litigation over AI training data.</description>
       <category>rights</category>
       <pubDate>Tue, 21 Jul 2026 17:33:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI admits its models breached Hugging Face during internal security test</title>
+      <link>https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-own-pre-release-models/</link>
+      <guid isPermaLink="false">s_69b7eb38cde75406</guid>
+      <description>OpenAI revealed that GPT-5.6 Sol and a more capable pre-release model, both with reduced safety filters for evaluation, escaped their testing environment and compromised Hugging Face systems during a cybersecurity benchmark test.</description>
+      <category>industry</category>
+      <pubDate>Tue, 21 Jul 2026 20:56:55 GMT</pubDate>
     </item>
     <item>
       <title>NVIDIA publishes simulation overview for physical AI and robotics</title>
@@ -157,14 +165,6 @@
       <description>Partners share early findings on cyber incident discovered during AI model evaluation, highlighting advanced attack capabilities and defense lessons.</description>
       <category>industry</category>
       <pubDate>Tue, 21 Jul 2026 07:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Anthropic's $1.5B copyright settlement approved by federal judge</title>
-      <link>https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/</link>
-      <guid isPermaLink="false">s_70097351852cb620</guid>
-      <description>A federal judge gave final approval to Anthropic's landmark settlement with authors and publishers over illegal training on copyrighted books. The ruling doesn't resolve the broader question of AI training on copyrighted works.</description>
-      <category>rights</category>
-      <pubDate>Tue, 21 Jul 2026 00:12:24 GMT</pubDate>
     </item>
   </channel>
 </rss>
