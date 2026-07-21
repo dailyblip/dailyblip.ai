@@ -839,6 +839,27 @@ async function writeManifestWithRetry(mutate, message){
     manifest = mutate(manifest);
     try {
       manifestSha = await writeFile(MANIFEST_PATH, manifest, manifestSha, message);
+      // Now that the library page bakes its content in at build time
+      // (rather than fetching it client-side), a manifest change alone
+      // isn't enough to keep it current -- the page itself needs
+      // regenerating too, or it'll keep showing stale content until
+      // someone remembers to click "Rebuild library page" by hand.
+      // This is deliberately non-blocking: the manifest write above
+      // already succeeded, so a dispatch failure here (e.g. a token
+      // missing workflow scope) shouldn't make the whole action look
+      // like it failed -- just warn, since the data itself is correct.
+      try {
+        await dispatchWorkflow("rebuild-guide-library.yml", {});
+      } catch (dispatchErr) {
+        // Delayed on purpose: the caller (toggleGuidePin, editSlug, etc.)
+        // shows its own "Saved"/"Pinned" toast immediately after this
+        // function returns, which would instantly overwrite a warning
+        // shown right now -- confirmed by testing, not assumed. Waiting
+        // lets that toast be seen first, then this one takes over.
+        setTimeout(() => {
+          toast(`Saved, but couldn't auto-trigger a library rebuild (${dispatchErr.message}). Click "Rebuild library page" manually.`, "err", 7000);
+        }, 1800);
+      }
       return;
     } catch (e) {
       const isConflict = /GitHub 409/.test(e.message);
