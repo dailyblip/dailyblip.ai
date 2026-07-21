@@ -391,12 +391,58 @@ function writeGuidesManifest(manifest) {
   fs.writeFileSync("docs/data/guides-manifest.json", JSON.stringify(manifest, null, 2) + "\n");
 }
 
-// The real, full library page \u2014 search, tag filtering, sort \u2014 fetching
-// the shared manifest at load time rather than having its data baked in
-// at rebuild time, so it never goes stale between publishes and matches
-// the exact same fetch pattern docs/index.html already uses for
-// data/feed.json.
-function rebuildGuidesIndex(dir) {
+// The real, full library page \u2014 search, tag filtering, sort. Guide
+// cards, tag pills, and the result count are rendered server-side at
+// build time (using the manifest passed in below) so they're present
+// and crawlable in the raw HTML without JavaScript running at all. The
+// manifest data itself is also embedded as a JS constant for the
+// client-side search/filter/sort logic to work against, rather than
+// fetched \u2014 removing a network round-trip and the staleness window
+// that came with it.
+// Server-side equivalents of the client-side renderGuideCard/tag markup
+// below -- deliberately duplicated rather than shared, since one runs in
+// Node at build time and the other runs in the browser; keeping them
+// separate keeps each side simple rather than engineering a shared
+// module for two small template functions. If the card markup ever
+// changes, both copies need updating together.
+function renderGuideCardSSR(g) {
+  return `<a class="guide-card" href="${esc(g.slug)}.html">
+      <div class="guide-thumb">${g.hero_image ? `<img src="${esc(g.hero_image)}" alt="" loading="lazy" onerror="this.parentElement.textContent='no image'">` : "no image"}</div>
+      <div class="guide-body">
+        <div class="guide-title">${esc(g.title)}</div>
+        <div class="guide-dek">${esc(g.dek)}</div>
+        <div class="guide-meta-row">
+          <div class="guide-date">${g.published_at ? new Date(g.published_at).toLocaleDateString("en-US", { month: "short", day: "numeric" }) : ""}</div>
+          <div class="guide-tags">${(g.tags || []).slice(0, 2).map((t) => `<span class="guide-tag-chip">${esc(t)}</span>`).join("")}</div>
+        </div>
+      </div>
+    </a>`;
+}
+
+function rebuildGuidesIndex(dir, manifest) {
+  const guides = manifest || [];
+  // Default view: newest first, no tag filter, no search -- exactly
+  // what the client-side boot() used to produce after its fetch
+  // resolved. Pre-computing this here is what makes the page crawlable
+  // without JavaScript running at all.
+  const sorted = guides.slice().sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+  const allTags = ["All", ...new Set(guides.flatMap((g) => g.tags || []))];
+  const tagsHtml = allTags.map((tag) => `<button class="tag-pill ${tag === "All" ? "active" : ""}" data-tag="${esc(tag)}">${esc(tag)}</button>`).join("");
+  const cardsHtml = sorted.map(renderGuideCardSSR).join("");
+  const countText = `${sorted.length} guide${sorted.length === 1 ? "" : "s"}`;
+  // Guards against a guide's title/dek containing text like "</script>"
+  // (which would prematurely close the tag and break the page) or the
+  // U+2028/U+2029 line/paragraph separators (which some JS parsing
+  // contexts treat as line terminators inside what should be one
+  // unbroken string). Unlikely in practice, but embedding raw JSON.
+  // stringify output directly into a script tag is a known, avoidable
+  // footgun, so guard it properly rather than assume guide content
+  // will never contain these.
+  const embeddedGuides = JSON.stringify(guides)
+    .replace(/</g, "\\u003c")
+    .replace(/\u2028/g, "\\u2028")
+    .replace(/\u2029/g, "\\u2029");
+
   fs.writeFileSync(path.join(dir, "index.html"), `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -500,10 +546,10 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:4
       <option value="az">A \u2192 Z</option>
     </select>
   </div>
-  <div class="tags-row" id="tagsRow"></div>
-  <div class="result-count" id="resultCount"></div>
-  <div class="guide-grid" id="guideGrid"></div>
-  <div class="empty-state" id="emptyState" style="display:none">No guides match that search or filter.</div>
+  <div class="tags-row" id="tagsRow">${tagsHtml}</div>
+  <div class="result-count" id="resultCount">${countText}</div>
+  <div class="guide-grid" id="guideGrid">${cardsHtml}</div>
+  <div class="empty-state" id="emptyState" style="display:${sorted.length ? "none" : "block"}">No guides match that search or filter.</div>
 </div>
 <footer>
   <div class="foot-in">
@@ -528,7 +574,11 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:4
 <script>
 const $ = s => document.querySelector(s);
 function esc(t){ const d=document.createElement("div"); d.textContent=t??""; return d.innerHTML; }
-let GUIDES = [], activeTag = "All", searchTerm = "", sortMode = "newest";
+// Embedded directly at build time instead of fetched -- removes the
+// network round-trip client-side rendering depended on, and means the
+// page works even if guides-manifest.json is briefly unreachable.
+const GUIDES = ${embeddedGuides};
+let activeTag = "All", searchTerm = "", sortMode = "newest";
 
 function renderTags(){
   const allTags = ["All", ...new Set(GUIDES.flatMap(g => g.tags || []))];
@@ -570,14 +620,12 @@ $("#searchInput").addEventListener("input", e => { searchTerm = e.target.value; 
 $("#sortSelect").addEventListener("change", e => { sortMode = e.target.value; renderGrid(); });
 $("#blipMain").addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-(async function boot(){
-  try {
-    const res = await fetch("../data/guides-manifest.json", { cache: "no-store" });
-    if (res.ok) GUIDES = await res.json();
-  } catch { /* no manifest yet (first guide never published) -- empty state handles it */ }
-  renderTags();
-  renderGrid();
-})();
+// No fetch, no boot() needed anymore -- GUIDES is already embedded above.
+// Re-running these once on load re-derives the identical default view
+// (harmless, since it's the same data) and, importantly, wires up the
+// tag-pill click listeners, which the server-rendered pills don't have
+// until this runs.
+renderTags();
 </script>
 </body>
 </html>
@@ -608,8 +656,9 @@ async function main() {
   job.published_url = `${SITE_URL}/guides/${job.article.slug}.html`;
   const updated = guides.map((g) => (g.id === jobId ? job : g));
   saveGuides(updated);
-  writeGuidesManifest(buildGuidesManifest(updated));
-  rebuildGuidesIndex(GUIDES_DIR);
+  const manifest = buildGuidesManifest(updated);
+  writeGuidesManifest(manifest);
+  rebuildGuidesIndex(GUIDES_DIR, manifest);
 
   console.log(`guide-publish: published ${job.article.slug} \u2014 ${job.published_url}`);
 }
