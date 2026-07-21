@@ -20,6 +20,6 @@ fs.mkdirSync(GUIDES_DIR, { recursive: true });
 const guides = loadGuides();
 const manifest = buildGuidesManifest(guides);
 writeGuidesManifest(manifest);
-rebuildGuidesIndex(GUIDES_DIR);
+rebuildGuidesIndex(GUIDES_DIR, manifest);
 
 console.log(`rebuild-guide-library: rebuilt manifest (${manifest.length} published guide(s)) and ${GUIDES_DIR}/index.html`);
