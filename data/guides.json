@@ -494,7 +494,8 @@
         "alt_text": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural"
       }
     ],
-    "backfilled": true
+    "backfilled": true,
+    "pinned": true
   },
   {
     "id": "backfill-how-to-use-ai-to-brainstorm-better-song-lyrics-without-sound",
