@@ -1,6 +1,6 @@
 {
   "issue": 242,
-  "generated_at": "2026-07-20T20:46:15.873Z",
+  "generated_at": "2026-07-21T00:15:46.797Z",
   "brief": {
     "items": [
       {
@@ -69,8 +69,76 @@
       "read": "4 min",
       "also": [],
       "heat": 85,
-      "move": -3,
+      "move": -1,
       "top": true
+    },
+    {
+      "id": "s_70097351852cb620",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Anthropic's $1.5B copyright settlement approved by federal judge",
+      "dek": "A federal judge gave final approval to Anthropic's landmark settlement with authors and publishers over illegal training on copyrighted books. The ruling doesn't resolve the broader question of AI training on copyrighted works.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/anthropics-landmark-1-5b-copyright-settlement-is-approved/",
+      "ts": "2026-07-21T00:12:24.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 102,
+      "move": 56
+    },
+    {
+      "id": "s_f09cbf6a0ec2257f",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Sony sues Udio over 30,000 copyrighted songs in AI music generator",
+      "dek": "Sony Music filed a copyright lawsuit alleging Udio ingested over 30,000 of its songs without permission, from Elvis to Beyoncé.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/968375/sony-udio-lawsuit-songs-ai-copyright",
+      "ts": "2026-07-20T22:19:12.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 100,
+      "move": 56
+    },
+    {
+      "id": "s_d573260cad05ebaa",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Google developing new AI chip for more efficient Gemini models",
+      "dek": "Alphabet is designing \"Frozen v2,\" a server chip targeting 6–10x efficiency gains in token generation per watt, expected 2028.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
+      "ts": "2026-07-20T21:21:15.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 81,
+      "move": 47
+    },
+    {
+      "id": "s_17b501c7fe1377af",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Model Context Protocol gets stateless session update for easier integration",
+      "dek": "The MCP, core infrastructure for AI model interoperability, is shipping a significant update making server-side session management simpler, similar to standard web architecture.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/",
+      "ts": "2026-07-20T20:50:40.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 81,
+      "move": 47
     },
     {
       "id": "s_502e6d35fbb7908f",
@@ -86,8 +154,8 @@
       "ts": "2026-07-20T19:33:25.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 101,
-      "move": 52
+      "heat": 97,
+      "move": -2
     },
     {
       "id": "s_c4923a542f7b6a55",
@@ -104,8 +172,8 @@
       "ts": "2026-07-20T17:12:04.408Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 48
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_c0f02d7ca9b061c8",
@@ -121,8 +189,8 @@
       "ts": "2026-07-20T16:28:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 98,
-      "move": 53
+      "heat": 94,
+      "move": -2
     },
     {
       "id": "s_43177eeccf608f86",
@@ -138,8 +206,8 @@
       "ts": "2026-07-20T16:00:43.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": 43
+      "heat": 76,
+      "move": -18
     },
     {
       "id": "s_a549b2f2489b487f",
@@ -155,8 +223,8 @@
       "ts": "2026-07-20T16:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": 43
+      "heat": 76,
+      "move": -18
     },
     {
       "id": "s_8030c8e0dc091db7",
@@ -172,8 +240,8 @@
       "ts": "2026-07-20T15:58:51.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": 43
+      "heat": 76,
+      "move": -18
     },
     {
       "id": "s_cdc3fbd3b50a8a83",
@@ -189,8 +257,8 @@
       "ts": "2026-07-20T15:45:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": 52
+      "heat": 85,
+      "move": -3
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -206,7 +274,7 @@
       "ts": "2026-07-20T15:30:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 97,
+      "heat": 93,
       "move": -2
     },
     {
@@ -223,8 +291,8 @@
       "ts": "2026-07-20T15:23:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -6
+      "heat": 83,
+      "move": -3
     },
     {
       "id": "s_90cef26b7e07e68a",
@@ -240,8 +308,8 @@
       "ts": "2026-07-20T10:16:33.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 92,
-      "move": -3
+      "heat": 88,
+      "move": -2
     },
     {
       "id": "s_d4ff9ec891b78868",
@@ -257,8 +325,8 @@
       "ts": "2026-07-20T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 63,
-      "move": 12
+      "heat": 60,
+      "move": -4
     },
     {
       "id": "s_6dea1640e408017e",
@@ -274,8 +342,8 @@
       "ts": "2026-07-20T08:58:49.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": -5
+      "heat": 77,
+      "move": -18
     },
     {
       "id": "s_c57b245c362dd255",
@@ -292,8 +360,8 @@
       "ts": "2026-07-20T04:07:57.883Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -22
+      "heat": 74,
+      "move": -4
     },
     {
       "id": "s_444761f503abeda7",
@@ -310,8 +378,8 @@
       "ts": "2026-07-20T00:31:13.665Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": -21
+      "heat": 70,
+      "move": -4
     },
     {
       "id": "s_90851a797dd057ee",
@@ -328,7 +396,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -10
+      "move": -4
     },
     {
       "id": "s_c0ef7a87d4b35aa6",
@@ -345,7 +413,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -6
+      "move": 0
     },
     {
       "id": "s_5767ddd493bb4165",
@@ -362,7 +430,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_c60035e6bb3c677d",
@@ -379,7 +447,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_01582b84f95050bc",
@@ -396,7 +464,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_3ad838364711ce9b",
@@ -413,7 +481,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_4e6f73ed1f19a4ce",
@@ -430,7 +498,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_2eed32c959cdf779",
@@ -447,7 +515,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_a49f55bafe0aeb0e",
@@ -464,7 +532,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_133497b699bf0fd6",
@@ -481,7 +549,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_b51b6c107383df8e",
@@ -498,7 +566,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_ac7be8d09d06872b",
@@ -515,7 +583,7 @@
       "read": "5 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_4d76675668887bf8",
@@ -532,7 +600,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_a0bbc2c6e6f2a453",
@@ -549,7 +617,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -566,7 +634,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -583,7 +651,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -600,7 +668,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_252ccc31ca52ec00",
@@ -617,7 +685,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_6d307adecd0de02e",
@@ -634,7 +702,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_ba15284a70a8e23c",
@@ -651,7 +719,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_09e86f1db1bc975b",
@@ -668,7 +736,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_d4ca69cf5d377e30",
@@ -685,7 +753,7 @@
       "read": "3 min",
       "also": [],
       "heat": 88,
-      "move": -3
+      "move": 0
     },
     {
       "id": "s_e5756d56cbcffa7c",
@@ -702,7 +770,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_e3176d1ee3b1cf6b",
@@ -719,7 +787,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_ff8c14b3821e60f1",
@@ -736,7 +804,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_4ccf42e2190c31a2",
@@ -753,7 +821,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_79ed56faeda92346",
@@ -770,7 +838,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_5f22dfb9fcfeed7c",
@@ -787,7 +855,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_652c69cdeba831cd",
@@ -804,7 +872,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_c599c61e0255f9ca",
@@ -821,7 +889,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_e9a82b74f6f50ff2",
@@ -838,7 +906,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_f2d4f0d12d3b252f",
@@ -855,7 +923,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_dcfae8f4e1fdc1b1",
@@ -872,7 +940,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_3090d72b6869197e",
@@ -889,7 +957,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_6f16a999c8ddd889",
@@ -906,7 +974,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_cce1dcce4c530f32",
@@ -923,7 +991,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
+      "move": -4
     },
     {
       "id": "s_89c9f7f3ade42756",
@@ -940,7 +1008,7 @@
       "read": "4 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_36b2bbf599ed87e0",
@@ -957,7 +1025,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -5
+      "move": 0
     },
     {
       "id": "s_230cdabf888d5a7c",
@@ -975,7 +1043,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": -4
     },
     {
       "id": "s_4367c4f1a18b0bbe",
@@ -992,7 +1060,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -4
     },
     {
       "id": "s_aa32e1edecf76be3",
@@ -1009,76 +1077,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -7
-    },
-    {
-      "id": "s_99a19263a8c15f19",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "OpenAI releases $230 Codex keyboard with AI agent status lights",
-      "dek": "OpenAI entered hardware with a specialty keyboard co-designed with Work Louder, featuring customizable keys and a reasoning-level dial for managing AI coding agents.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/",
-      "ts": "2026-07-15T19:41:38.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -5
-    },
-    {
-      "id": "s_976a1a3eff5f1d7b",
-      "cat": "tools",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 8,
-      "tier": "journalism",
-      "title": "Mira Murati's Thinking Machines releases Inkling, an open 975B-param multimodal model",
-      "dek": "Thinking Machines Lab released Inkling, an open-weight mixture-of-experts model trained on 45 trillion tokens across text, image, audio, and video—reasoning natively across all modalities.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/15/thinking-machines-amps-up-its-bet-against-one-size-fits-all-ai-with-its-first-open-model-inkling/",
-      "ts": "2026-07-15T18:04:06.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 95,
-      "move": -1
-    },
-    {
-      "id": "s_ac1e314b2ff426dc",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "Style Transfer Isn't Theft, Except When It Obviously Is",
-      "dek": "Artists complaining that AI was trained on their work fall into two very different camps: those with a genuinely serious legal grievance, and those who are mostly upset that the market got harder. Lumping them together helps nobody.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/style-transfer-isn-t-theft-except-when-it-obviously-is-2026-07-15.html",
-      "ts": "2026-07-15T18:01:46.915Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 70,
-      "move": -6
-    },
-    {
-      "id": "s_f8bec47bee6c00a0",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 8,
-      "tier": "journalism",
-      "title": "Suno trained on millions of scraped songs from YouTube, Deezer, Genius",
-      "dek": "Leaked data reveals the AI music generator sourced training material from major platforms without disclosed consent, raising fair use questions for creators and platforms.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/966072/suno-ai-music-training-scraping-youtube-hack",
-      "ts": "2026-07-15T17:48:01.000Z",
-      "read": "5 min",
-      "also": [],
-      "heat": 88,
-      "move": -3
+      "move": -4
     }
   ],
   "models": [
@@ -1146,7 +1145,7 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 20
+      "c": 21
     },
     {
       "n": "The Verge AI",
@@ -1162,7 +1161,7 @@
     },
     {
       "n": "dailyblip",
-      "c": 5
+      "c": 4
     },
     {
       "n": "Ars Technica AI",
@@ -1178,14 +1177,14 @@
     }
   ],
   "topics": [
-    "#openai",
     "#google",
+    "#openai",
+    "#gemini",
     "#project",
     "#indigo",
     "#nvidia",
-    "#youtube",
-    "#suno",
-    "#apple"
+    "#apple",
+    "#anthropic's"
   ],
   "tooldrop": {
     "name": "LayerProof Mylar",
@@ -1195,9 +1194,9 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 25,
-    "published_today": 15,
+    "scanned_last_run": 12,
+    "published_today": 18,
     "sources_live": 13,
-    "slopped_last_run": 18
+    "slopped_last_run": 8
   }
 }
