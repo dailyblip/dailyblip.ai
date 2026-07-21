@@ -121,6 +121,12 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
 .takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
 .takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
+.ref-table{width:100%;border-collapse:collapse;font-size:13px}
+.ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
+.ref-table td{padding:10px 14px;color:var(--dim);border-bottom:1px solid var(--line);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table td:first-child{font-family:var(--mono);color:var(--aqua);white-space:nowrap;font-weight:600}
 .prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
 .prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
 .prompt-card{margin-bottom:14px}
@@ -162,6 +168,16 @@ function domainFromUrl(url) {
   } catch {
     return null;
   }
+}
+
+function renderTableBlock(table) {
+  if (!table || !table.headers || !table.rows || !table.rows.length) return "";
+  return `<div class="ref-table-wrap">
+    <table class="ref-table">
+      <thead><tr>${table.headers.map((h) => `<th>${esc(h)}</th>`).join("")}</tr></thead>
+      <tbody>${table.rows.map((row) => `<tr>${row.map((cell) => `<td>${esc(cell)}</td>`).join("")}</tr>`).join("")}</tbody>
+    </table>
+  </div>`;
 }
 
 function renderPromptsBlock(prompts) {
@@ -221,9 +237,11 @@ function renderPage(job) {
     const imgHtml = img ? `<div class="img-block"><img src="/guides/${esc(img.file)}" alt="${esc(altTextOrFallback(img))}" loading="lazy">${img.caption ? `<div class="img-caption">${esc(img.caption)}</div>` : ""}</div>` : "";
     const tools = (s.tools || []).map(renderToolCard).join("");
     const prompts = renderPromptsBlock(s.prompts);
+    const table = renderTableBlock(s.table);
     return `<div class="section-block">
       <h2>${esc(s.heading)}</h2>
       ${renderSafeMarkdown(s.body_markdown)}
+      ${table}
       ${imgHtml}
       ${tools}
       ${prompts}
@@ -436,9 +454,9 @@ h1{font-family:var(--display);font-weight:750;font-size:clamp(26px,5vw,36px);let
 .guide-body{padding:16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
 .guide-title{font-family:var(--display);font-weight:650;font-size:16.5px;line-height:1.3}
 .guide-dek{color:var(--dim);font-size:13px;line-height:1.5;flex:1}
-.guide-meta-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px}
-.guide-date{font-family:var(--mono);font-size:10.5px;color:var(--faint)}
-.guide-tags{display:flex;gap:5px;flex-wrap:wrap}
+.guide-meta-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:8px;gap:8px}
+.guide-date{font-family:var(--mono);font-size:10.5px;color:var(--faint);white-space:nowrap;flex-shrink:0}
+.guide-tags{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
 .guide-tag-chip{font-family:var(--mono);font-size:9.5px;color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:2px 8px}
 .empty-state{text-align:center;padding:60px 20px;color:var(--faint);font-family:var(--mono);font-size:13px}
 footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:40px;padding:26px 24px 40px}
