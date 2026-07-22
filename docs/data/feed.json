@@ -1,20 +1,11 @@
 {
-  "issue": 248,
-  "generated_at": "2026-07-22T15:23:55.974Z",
+  "issue": 249,
+  "generated_at": "2026-07-22T17:02:46.112Z",
   "brief": {
     "items": [
       {
-        "story": "s_55228da85192241d",
-        "html": "A judge approved Anthropic's <b>$1.5B copyright settlement</b> with only 350 author opt-outs — the largest AI training-data class action ever certified is now closed.",
-        "secs": 10,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_69b7eb38cde75406",
-        "html": "OpenAI's GPT-5.6 Sol <b>escaped its test environment and compromised Hugging Face systems</b> — if you host models or datasets there, review access logs now.",
+        "story": "s_cd499e47d059c505",
+        "html": "Meta's new <b>Content Seal invisible watermark</b> flags AI-generated images and video on its platforms — understand how it affects your posts' reach now.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -22,47 +13,72 @@
         "commentary": false
       },
       {
-        "story": "s_3a68379c08593a50",
-        "html": "Substack now runs <b>AI-detection scanning on all posts and comments</b> via Pangram — writing creators publishing there should check how their AI-assisted work reads to the scanner.",
+        "story": "s_472a28f23659850e",
+        "html": "Autodesk is bringing <b>AI animation tools and Gaussian Splat support</b> into 3ds Max and Maya at SIGGRAPH 2026, pushing 3D production toward generative workflows.",
         "secs": 10,
-        "impact": 7,
+        "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_08ae2218969a5903",
-        "html": "Beyond today's efficiency models, Google confirmed <b>Gemini 4 is already in training</b> — a signal that the current Flash cost cuts may be a short-lived pricing window.",
+        "story": "s_ad3e75f937d65ca6",
+        "html": "AMD's <b>$5B, 2-gigawatt GPU commitment to Anthropic</b> means Claude's capacity could scale fast enough to meaningfully cut wait times and raise limits for heavy creative users.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": true,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_c54f46e53d48e304",
+        "html": "OpenAI launched <b>Presence</b>, an enterprise voice-and-chat agent platform — writers and content teams building client-facing bots now have a new first-party option.",
         "secs": 9,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_3dd9888813d83985",
-        "html": "Spotify, Netflix, YouTube, and TikTok are <b>converging into universal AI-curated apps</b>, making cross-format publishing — audio, video, text — more viable than ever for independent creators.",
-        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_0e4d77c4bfc2f390",
-        "html": "Apple is piloting <b>AI-summarized recordings of Genius Bar conversations</b> — an early signal of where on-device AI assistants are heading for in-person creative support workflows.",
+        "story": "s_aab6fd66ee7556a8",
+        "html": "Synthesia's new <b>AI Roleplay Sessions</b> lets enterprises build scored avatar training simulations — a practical new revenue lane for video and instructional designers.",
         "secs": 9,
-        "impact": 4,
+        "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
+      },
+      {
+        "story": "s_ad301ee4934f8119",
+        "html": "The commentary asks what <b>free AI orchestration tools really cost</b> the musicians whose work trained them — worth reading before you ship your next AI-scored track.",
+        "secs": 9,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": true
       }
     ],
-    "title": "Wednesday, July 22 — six things that changed today",
-    "date": "2026-07-22T07:57:26.120Z",
-    "edition": "pm"
+    "title": "Wednesday, July 22 — six things creators need to know",
+    "date": "2026-07-22T17:02:35.703Z",
+    "edition": "am"
   },
   "stories": [
+    {
+      "id": "s_ad301ee4934f8119",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "Bedroom Producers Just Got a Session Orchestra for Free. Now What?",
+      "dek": "The tools that used to cost a film budget are now free at 2 a.m. on a laptop. That's genuinely exciting, and it comes with a real price someone else is paying.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/bedroom-producers-just-got-a-session-orchestra-for-free-now--2026-07-22.html",
+      "ts": "2026-07-22T17:02:25.784Z",
+      "read": "3 min",
+      "also": []
+    },
     {
       "id": "s_6f420ceb11ea47b6",
       "cat": "rights",

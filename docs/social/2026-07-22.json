@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-22",
+  "posts": [
+    {
+      "index": 1,
+      "image": "2026-07-22-1.png",
+      "caption": "Meta just rolled out Content Seal, an invisible watermarking system designed to flag AI-generated content across its platforms. The move follows direct pressure from Meta's Oversight Board, which had been pushing the company to build detection tools. The watermarks are embedded at creation — silent, invisible, and meant to survive sharing.\n\nFull story + today's brief: link in bio\n\n#AIwatermarking #MetaAI #ContentAuthenticity #AIdetection #AIpolicy",
+      "story": {
+        "title": "Meta's Content Seal watermarking tool targets AI-generated content detection",
+        "dek": "Meta deployed invisible watermarking technology to flag AI-generated content on its platforms, following pressure from its Oversight Board to implement detection tools.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid"
+      }
+    },
+    {
+      "index": 2,
+      "image": "2026-07-22-2.png",
+      "caption": "Autodesk just previewed its SIGGRAPH 2026 roadmap — and it's a hard pivot toward generative 3D. AI animation tools are coming to Maya and 3ds Max, alongside Gaussian Splat support and deeper Flow integration across the suite. The throughline: less manual keyframing, more AI-assisted production at every stage.\n\nFull story + today's brief: link in bio.\n\n#Autodesk #Maya #3dsMax #AIAnimation #GaussianSplatting #3DProduction",
+      "story": {
+        "title": "Autodesk SIGGRAPH 2026: AI animation, Gaussian Splats in 3ds Max and Maya",
+        "dek": "Autodesk announced AI animation tools and Flow integration across 3ds Max and Maya, signaling shift toward generative workflows in 3D production.",
+        "src": "Creative Bloq AI",
+        "url": "https://www.creativebloq.com/3d/autodesks-siggraph-announcements-look-unrelated-but-they-all-solve-the-same-huge-problem"
+      }
+    },
+    {
+      "index": 3,
+      "image": "2026-07-22-3.png",
+      "caption": "AMD just made a massive bet on Anthropic — up to $5 billion and 2 gigawatts of AI GPU capacity committed to powering Anthropic's large-scale model deployment. The deal centers on AMD's MI450 GPUs, signaling a serious infrastructure play as the compute race for frontier AI intensifies. This is what the hardware layer of the AI arms race actually looks like.\n\nFull story + today's brief: link in bio.\n\n#AMD #Anthropic #AIInfrastructure #GPUs #AINews #GenerativeAI",
+      "story": {
+        "title": "AMD invests $5B in Anthropic, deploys MI450 GPUs at scale",
+        "dek": "AMD commits up to $5 billion and 2 gigawatts of AI GPU capacity to Anthropic, expanding compute infrastructure for large-scale model deployment.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal"
+      }
+    },
+    {
+      "index": 4,
+      "image": "2026-07-22-4.png",
+      "caption": "OpenAI just launched Presence, an enterprise platform for deploying AI agents across both voice and chat channels. It's built for businesses running customer-facing and internal workflows — think call handling, support routing, and employee tools, all under one trusted system. This is OpenAI moving deeper into the enterprise infrastructure layer.\n\nFull story + today's brief: link in bio\n\n#OpenAI #AIAgents #EnterpriseAI #VoiceAI #AITools #Presence",
+      "story": {
+        "title": "OpenAI launches Presence enterprise voice and chat agent platform",
+        "dek": "New AI agent platform designed for enterprises to deploy trusted voice and chat systems for customer and internal workflows.",
+        "src": "OpenAI News",
+        "url": "https://openai.com/index/introducing-openai-presence"
+      }
+    },
+    {
+      "index": 5,
+      "image": "2026-07-22-5.png",
+      "caption": "Synthesia just launched AI Roleplay Sessions — an enterprise training platform where employees practice real workplace conversations with AI avatars. The avatars score your performance and spit out analytics so companies can actually measure whether training is landing.\n\nFull story + today's brief: link in bio.\n\n#AITraining #Synthesia #EnterpriseAI #AIAvatars #WorkplaceLearning",
+      "story": {
+        "title": "Synthesia launches AI roleplay platform for enterprise training simulations",
+        "dek": "Synthesia released AI Roleplay Sessions, letting employees practice workplace conversations with AI avatars that score performance and provide analytics for training measurement.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/"
+      }
+    },
+    {
+      "index": 6,
+      "image": "2026-07-22-6.png",
+      "caption": "AI orchestral tools that once cost a film budget are now free, available at 2 a.m., on any laptop. Bedroom producers can conjure strings, brass, and full arrangements overnight — no session musicians, no studio fees. But the dek is honest: someone else is paying that price, and the story doesn't look away from it.\n\nFull story + today's brief: link in bio.\n\n#MusicProduction #AIMusic #BedroomProducer #AITools #MusicTech #CreatorEconomy",
+      "story": {
+        "title": "Bedroom Producers Just Got a Session Orchestra for Free. Now What?",
+        "dek": "The tools that used to cost a film budget are now free at 2 a.m. on a laptop. That's genuinely exciting, and it comes with a real price someone else is paying.",
+        "src": "dailyblip",
+        "url": "https://dailyblip.ai/commentary/bedroom-producers-just-got-a-session-orchestra-for-free-now--2026-07-22.html"
+      }
+    }
+  ]
+}
