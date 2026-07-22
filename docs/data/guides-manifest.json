@@ -132,18 +132,6 @@
     "pinned": false
   },
   {
-    "title": "How Musicians Can Use Suno Without Replacing Their Own Creativity",
-    "slug": "how-musicians-can-use-suno-without-replacing-their-own-creat",
-    "dek": "Use it for demos, arrangement ideas, and backing tracks. Keep the actual songwriting yours.",
-    "hero_image": "/guides/06.jpg",
-    "published_at": "2026-07-13T12:00:00.000Z",
-    "tags": [
-      "AI Music",
-      "Getting Started"
-    ],
-    "pinned": false
-  },
-  {
     "title": "The Complete Reference Guide to Midjourney Prompts",
     "slug": "the-complete-reference-guide-to-midjourney-prompts",
     "dek": "Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.",
@@ -176,6 +164,18 @@
     "tags": [
       "Image Generation",
       "Tools & Workflow"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "How Musicians Can Use Suno Without Replacing Their Own Creativity",
+    "slug": "how-musicians-can-use-suno-without-replacing-their-own-creat",
+    "dek": "Use it for demos, arrangement ideas, and backing tracks. Keep the actual songwriting yours.",
+    "hero_image": "/guides/06.jpg",
+    "published_at": "2026-07-13T12:00:00.000Z",
+    "tags": [
+      "AI Music",
+      "Getting Started"
     ],
     "pinned": false
   },
