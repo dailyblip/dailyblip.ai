@@ -46,6 +46,19 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
 .takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
 .takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.related-guides{margin:32px 0}
+.related-guides .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.related-card{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:border-color .15s ease,transform .15s ease}
+.related-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.related-title{font-family:var(--display);font-weight:640;font-size:14.5px;line-height:1.35;margin-bottom:6px;color:var(--text)}
+.related-dek{color:var(--dim);font-size:12.5px;line-height:1.5}
+.ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
+.ref-table{width:100%;border-collapse:collapse;font-size:13px}
+.ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
+.ref-table td{padding:10px 14px;color:var(--dim);border-bottom:1px solid var(--line);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table td:first-child{font-family:var(--mono);color:var(--aqua);white-space:nowrap;font-weight:600}
 .prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
 .prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
 .prompt-card{margin-bottom:14px}
@@ -90,6 +103,7 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
     <div class="section-block">
       <h2>Style prompts to try</h2>
       <p>Fifteen style prompts, ready to copy straight into Suno's Style field.</p>
+      
       
       
       <div class="prompts-block">
@@ -210,11 +224,41 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
       
       
       
+      
     </div>
     <p>None of these prompts are complicated. They just get very specific about three things: technique, tempo, and restraint on production.</p>
   </article>
   
   <div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul><li>Specific technique words like "fingerpicked" beat generic "acoustic guitar" every time.</li><li>Keep style prompts to 5-7 descriptors so Suno doesn't start ignoring the later ones.</li><li>A real BPM number does more for acoustic feel than almost any other tag.</li></ul></div>
+  <div class="related-guides">
+        <div class="label">RELATED GUIDES</div>
+        <div class="related-grid">
+          <a class="related-card" href="how-to-turn-a-simple-guitar-or-piano-idea-into-a-full-song-w.html">
+            <div class="related-title">How to Turn a Simple Guitar or Piano Idea Into a Full Song With Suno</div>
+            <div class="related-dek">Start with a chord progression or a rough voice memo. End with a full arrangement.</div>
+          </a>
+          <a class="related-card" href="suno-prompts-that-actually-work.html">
+            <div class="related-title">10 Prompts to Make Your Suno Music Actually Sound Like What You're Imagining</div>
+            <div class="related-dek">Most people write Suno prompts the way they'd describe a song to a friend. That's the problem. Here's how to write them the way Suno actually listens.</div>
+          </a>
+          <a class="related-card" href="how-musicians-can-use-suno-without-replacing-their-own-creat.html">
+            <div class="related-title">How Musicians Can Use Suno Without Replacing Their Own Creativity</div>
+            <div class="related-dek">Use it for demos, arrangement ideas, and backing tracks. Keep the actual songwriting yours.</div>
+          </a>
+          <a class="related-card" href="how-to-make-midjourney-images-look-less-like-ai-art.html">
+            <div class="related-title">How to Make Midjourney Images Look Less Like AI Art</div>
+            <div class="related-dek">The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.</div>
+          </a>
+          <a class="related-card" href="20-midjourney-prompts-for-cinematic-images-that-dont-look-generic.html">
+            <div class="related-title">20 Midjourney Prompts for Cinematic Images That Do Not Look Generic</div>
+            <div class="related-dek">Built around lighting, lens choice, and atmosphere, not just the word cinematic.</div>
+          </a>
+          <a class="related-card" href="how-to-write-better-midjourney-prompts-from-basic-idea-to-finished-image.html">
+            <div class="related-title">How to Write Better Midjourney Prompts: From Basic Idea to Finished Image</div>
+            <div class="related-dek">Prompt structure, parameters, and the iteration habit that actually improves results.</div>
+          </a>
+        </div>
+      </div>
   <div class="subscribe-block" id="subscribe">
     <h3>Enjoyed this? Get the next one.</h3>
     <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>

@@ -47,6 +47,19 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
 .takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
 .takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.related-guides{margin:32px 0}
+.related-guides .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.related-card{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:border-color .15s ease,transform .15s ease}
+.related-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.related-title{font-family:var(--display);font-weight:640;font-size:14.5px;line-height:1.35;margin-bottom:6px;color:var(--text)}
+.related-dek{color:var(--dim);font-size:12.5px;line-height:1.5}
+.ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
+.ref-table{width:100%;border-collapse:collapse;font-size:13px}
+.ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
+.ref-table td{padding:10px 14px;color:var(--dim);border-bottom:1px solid var(--line);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table td:first-child{font-family:var(--mono);color:var(--aqua);white-space:nowrap;font-weight:600}
 .prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
 .prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
 .prompt-card{margin-bottom:14px}
@@ -93,6 +106,7 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
       <p>Suno's Style field is where the real steering happens. Genre, mood, tempo feel, instrumentation, vocal style, that's the language it responds to. Words like &quot;happy&quot; or &quot;relaxing&quot; are so broad that Suno has to guess, and it usually guesses toward the middle of everything.</p>
 <p>A few things worth knowing before you start:</p>
 <ul><li><b>Put genre first.</b> Based on community testing (not official Suno docs), earlier tags in the Style field seem to carry more weight, so lead with genre and layer specifics after it. Worth trying, and widely reported, but no official confirmation.</li><li><b>BPM numbers can help, but aren't guaranteed.</b> Sources suggest BPM responsiveness has improved notably in V5.5 specifically, but the genre and mood you pick can still override a hard number regardless of version. Think of BPM as a nudge, not a command.</li><li><b>Music theory terms are hit-or-miss.</b> Phrases like &quot;modal jazz harmonies&quot; or &quot;polyrhythmic percussion&quot; do influence output, but results vary. Worth trying, just don't be surprised if it doesn't land precisely.</li><li><b>Negative prompting exists.</b> If you're on a Pro or Premier plan, Suno has a dedicated Exclude field (in Custom Mode) where you can list what you <i>don't</i> want, specific instruments, vocal styles, genres. Heads up: negative prompting in Suno isn't absolute, so treat it as a way to nudge things, not a hard filter. The exact input format may also vary depending on your model version, so check Suno's current help docs for syntax details. Putting negations in the main Style field is less reliable, though some users report it working in newer versions.</li><li><b>Don't go overboard on length.</b> The Style field has a character cap that varies by model version, roughly 1,000 characters on V4.5 and newer (per third-party testing), but older models like V3.5 and V4 cap out much lower, around 200 characters. If you're not sure which version you're on, keep your prompt tight just in case. A handful of well-chosen descriptors tends to work better than an exhaustive list anyway.</li></ul>
+      
       <div class="img-block"><img src="/guides/1df4d5fc-0a83-47cd-8d9b-cbd13fc74773-img2.jpg" alt="Side-by-side comparison: a blurry, unfocused waveform labeled 'Happy' on the left versus a sharp, well-defined waveform with a stack of specific prompt tags on the right" loading="lazy"><div class="img-caption">'Happy' is too broad — Suno averages toward the middle of everything. Stacking genre, mood, instruments, and vocal style gives it something concrete to work toward.</div></div>
       
       
@@ -100,6 +114,7 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 <div class="section-block">
       <h2>10 prompts worth copying right now</h2>
       <p>These go in Suno's <b>Style</b> field unless noted. Each one is built to be specific enough to actually steer the output somewhere interesting.</p>
+      
       
       
       <div class="prompts-block">
@@ -179,7 +194,37 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
     </div>
     <p>None of these are magic, Suno still generates two or three variations and you pick the one that clicks. But specific prompts give you something to actually iterate on. Change one tag, regenerate, see what shifts. That's where the real control starts to feel like yours.</p>
   </article>
+  
   <div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul><li>Lead the Style field with genre, then layer mood, instruments, and vocal style after it, community testing suggests earlier tags carry more weight, though Suno hasn't confirmed this officially</li><li>BPM numbers nudge tempo but don't override genre, treat them as a hint, not a setting, and note that responsiveness varies by model version</li><li>The dedicated Exclude field (Pro/Premier only) is generally more targeted than writing negations in the Style prompt, but negative prompting in Suno isn't absolute, it reduces the chance of something showing up, not guarantees it</li></ul></div>
+  <div class="related-guides">
+        <div class="label">RELATED GUIDES</div>
+        <div class="related-grid">
+          <a class="related-card" href="how-to-turn-a-simple-guitar-or-piano-idea-into-a-full-song-w.html">
+            <div class="related-title">How to Turn a Simple Guitar or Piano Idea Into a Full Song With Suno</div>
+            <div class="related-dek">Start with a chord progression or a rough voice memo. End with a full arrangement.</div>
+          </a>
+          <a class="related-card" href="how-musicians-can-use-suno-without-replacing-their-own-creat.html">
+            <div class="related-title">How Musicians Can Use Suno Without Replacing Their Own Creativity</div>
+            <div class="related-dek">Use it for demos, arrangement ideas, and backing tracks. Keep the actual songwriting yours.</div>
+          </a>
+          <a class="related-card" href="15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural.html">
+            <div class="related-title">15 Suno Prompts for Acoustic Guitar Songs That Sound Natural</div>
+            <div class="related-dek">Copy-paste style prompts for fingerstyle, folk, and singer-songwriter tracks that don't sound stiff.</div>
+          </a>
+          <a class="related-card" href="how-to-make-midjourney-images-look-less-like-ai-art.html">
+            <div class="related-title">How to Make Midjourney Images Look Less Like AI Art</div>
+            <div class="related-dek">The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.</div>
+          </a>
+          <a class="related-card" href="20-midjourney-prompts-for-cinematic-images-that-dont-look-generic.html">
+            <div class="related-title">20 Midjourney Prompts for Cinematic Images That Do Not Look Generic</div>
+            <div class="related-dek">Built around lighting, lens choice, and atmosphere, not just the word cinematic.</div>
+          </a>
+          <a class="related-card" href="how-to-write-better-midjourney-prompts-from-basic-idea-to-finished-image.html">
+            <div class="related-title">How to Write Better Midjourney Prompts: From Basic Idea to Finished Image</div>
+            <div class="related-dek">Prompt structure, parameters, and the iteration habit that actually improves results.</div>
+          </a>
+        </div>
+      </div>
   <div class="subscribe-block" id="subscribe">
     <h3>Enjoyed this? Get the next one.</h3>
     <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>

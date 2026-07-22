@@ -1,0 +1,109 @@
+{
+  "ran_at": "2026-07-22T18:07:04.541Z",
+  "library_rebuild_error": null,
+  "rebuilt": [
+    {
+      "slug": "suno-prompts-that-actually-work",
+      "source": "stored data",
+      "originalWords": 1524,
+      "newWords": 1711
+    },
+    {
+      "slug": "15-suno-prompts-for-acoustic-guitar-songs-that-sound-natural",
+      "source": "reconstructed from HTML",
+      "originalWords": 906,
+      "newWords": 1110
+    },
+    {
+      "slug": "how-to-use-ai-to-brainstorm-better-song-lyrics-without-sound",
+      "source": "reconstructed from HTML",
+      "originalWords": 775,
+      "newWords": 952
+    },
+    {
+      "slug": "how-to-turn-a-simple-guitar-or-piano-idea-into-a-full-song-w",
+      "source": "reconstructed from HTML",
+      "originalWords": 822,
+      "newWords": 1019
+    },
+    {
+      "slug": "20-suno-prompts-for-better-song-structure-bigger-choruses-an",
+      "source": "reconstructed from HTML",
+      "originalWords": 1046,
+      "newWords": 1244
+    },
+    {
+      "slug": "how-to-get-better-images-from-chatgpt-a-practical-prompting-guide",
+      "source": "reconstructed from HTML",
+      "originalWords": 751,
+      "newWords": 924
+    },
+    {
+      "slug": "15-chatgpt-image-prompts-for-scroll-stopping-social-media-posts",
+      "source": "reconstructed from HTML",
+      "originalWords": 914,
+      "newWords": 1092
+    },
+    {
+      "slug": "how-to-keep-characters-consistent-in-chatgpt-image-generation",
+      "source": "reconstructed from HTML",
+      "originalWords": 744,
+      "newWords": 919
+    },
+    {
+      "slug": "12-chatgpt-prompts-for-professional-product-photography-without-a-studio",
+      "source": "reconstructed from HTML",
+      "originalWords": 828,
+      "newWords": 1003
+    },
+    {
+      "slug": "how-to-edit-ai-images-with-chatgpt-without-starting-over",
+      "source": "reconstructed from HTML",
+      "originalWords": 720,
+      "newWords": 893
+    },
+    {
+      "slug": "how-to-write-better-midjourney-prompts-from-basic-idea-to-finished-image",
+      "source": "reconstructed from HTML",
+      "originalWords": 733,
+      "newWords": 907
+    },
+    {
+      "slug": "20-midjourney-prompts-for-cinematic-images-that-dont-look-generic",
+      "source": "reconstructed from HTML",
+      "originalWords": 1040,
+      "newWords": 1214
+    },
+    {
+      "slug": "how-to-create-a-consistent-visual-style-in-midjourney",
+      "source": "reconstructed from HTML",
+      "originalWords": 737,
+      "newWords": 912
+    },
+    {
+      "slug": "15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images",
+      "source": "reconstructed from HTML",
+      "originalWords": 912,
+      "newWords": 1089
+    },
+    {
+      "slug": "how-to-make-midjourney-images-look-less-like-ai-art",
+      "source": "reconstructed from HTML",
+      "originalWords": 753,
+      "newWords": 924
+    },
+    {
+      "slug": "the-complete-reference-guide-to-midjourney-prompts",
+      "source": "reconstructed from HTML",
+      "originalWords": 2005,
+      "newWords": 2157
+    }
+  ],
+  "skipped": [
+    {
+      "slug": "how-musicians-can-use-suno-without-replacing-their-own-creat",
+      "reason": "word count changed by 26% (767 -> 970) -- too large a swing to trust automatically"
+    }
+  ],
+  "failed": []
+}

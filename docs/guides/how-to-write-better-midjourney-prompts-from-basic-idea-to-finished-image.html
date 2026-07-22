@@ -46,6 +46,19 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
 .takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
 .takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.related-guides{margin:32px 0}
+.related-guides .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.related-card{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:border-color .15s ease,transform .15s ease}
+.related-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.related-title{font-family:var(--display);font-weight:640;font-size:14.5px;line-height:1.35;margin-bottom:6px;color:var(--text)}
+.related-dek{color:var(--dim);font-size:12.5px;line-height:1.5}
+.ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
+.ref-table{width:100%;border-collapse:collapse;font-size:13px}
+.ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
+.ref-table td{padding:10px 14px;color:var(--dim);border-bottom:1px solid var(--line);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table td:first-child{font-family:var(--mono);color:var(--aqua);white-space:nowrap;font-weight:600}
 .prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
 .prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
 .prompt-card{margin-bottom:14px}
@@ -84,7 +97,7 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
   <div class="meta-row">Last reviewed July 20, 2026</div>
   <div class="page-tags"><span class="page-tag-chip">Image Generation</span><span class="page-tag-chip">Getting Started</span></div>
   
-  <div class="img-block"><img src="16.jpg" alt="How to Write Better Midjourney Prompts: From Basic Idea to Finished Image" loading="lazy"></div>
+  
   <article>
     <p>Midjourney does not want a sentence. It wants a list of specific, stacked details, ending with a few short parameters.</p>
     <div class="section-block">
@@ -95,12 +108,14 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
       
       
       
+      
     </div>
 <div class="section-block">
       <h2>Parameters do the precise work</h2>
       <p>Set --ar for aspect ratio before you start refining style. Changing it later usually means redoing the composition.</p>
 <p>The --stylize value controls how literal versus artistic the result is, on a scale of roughly 0 to 1000. Lower for product-style accuracy, higher for expressive interpretation.</p>
 <p>Expect to iterate. Most strong results take several rounds of small adjustments, not one perfect first attempt.</p>
+      
       
       
       
@@ -133,6 +148,35 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
       </div>
   </div>
   <div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul><li>Write noun-phrase lists, not full sentences, in this order: subject, setting, lighting, style, camera.</li><li>Set your aspect ratio first, since changing it later usually means redoing the whole composition.</li><li>Plan for several iterations. A strong first attempt is the exception, not the rule.</li></ul></div>
+  <div class="related-guides">
+        <div class="label">RELATED GUIDES</div>
+        <div class="related-grid">
+          <a class="related-card" href="how-to-make-midjourney-images-look-less-like-ai-art.html">
+            <div class="related-title">How to Make Midjourney Images Look Less Like AI Art</div>
+            <div class="related-dek">The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.</div>
+          </a>
+          <a class="related-card" href="20-midjourney-prompts-for-cinematic-images-that-dont-look-generic.html">
+            <div class="related-title">20 Midjourney Prompts for Cinematic Images That Do Not Look Generic</div>
+            <div class="related-dek">Built around lighting, lens choice, and atmosphere, not just the word cinematic.</div>
+          </a>
+          <a class="related-card" href="12-chatgpt-prompts-for-professional-product-photography-without-a-studio.html">
+            <div class="related-title">12 ChatGPT Prompts for Professional Product Photography Without a Studio</div>
+            <div class="related-dek">Clean ecommerce shots, lifestyle scenes, and premium ad images, no photographer required.</div>
+          </a>
+          <a class="related-card" href="how-to-keep-characters-consistent-in-chatgpt-image-generation.html">
+            <div class="related-title">How to Keep Characters Consistent in ChatGPT Image Generation</div>
+            <div class="related-dek">Keep the same face, outfit, and style across a whole set of images.</div>
+          </a>
+          <a class="related-card" href="15-chatgpt-image-prompts-for-scroll-stopping-social-media-posts.html">
+            <div class="related-title">15 ChatGPT Image Prompts for Scroll-Stopping Social Media Posts</div>
+            <div class="related-dek">Ready-to-use prompts for product shots, announcements, carousels, and branded graphics.</div>
+          </a>
+          <a class="related-card" href="how-to-get-better-images-from-chatgpt-a-practical-prompting-guide.html">
+            <div class="related-title">How to Get Better Images From ChatGPT: A Practical Prompting Guide</div>
+            <div class="related-dek">Describe composition, lighting, and style like a creative director, not a search query.</div>
+          </a>
+        </div>
+      </div>
   <div class="subscribe-block" id="subscribe">
     <h3>Enjoyed this? Get the next one.</h3>
     <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>
