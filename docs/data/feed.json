@@ -1,6 +1,6 @@
 {
   "issue": 248,
-  "generated_at": "2026-07-22T07:57:26.189Z",
+  "generated_at": "2026-07-22T09:18:25.377Z",
   "brief": {
     "items": [
       {
@@ -77,9 +77,60 @@
       "ts": "2026-07-21T17:33:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 113,
+      "heat": 103,
       "move": 0,
       "top": true
+    },
+    {
+      "id": "s_aab6fd66ee7556a8",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Synthesia launches AI roleplay platform for enterprise training simulations",
+      "dek": "Synthesia released AI Roleplay Sessions, letting employees practice workplace conversations with AI avatars that score performance and provide analytics for training measurement.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/",
+      "ts": "2026-07-22T08:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 83,
+      "move": 48
+    },
+    {
+      "id": "s_7d968fc2635a3524",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Meta tests StoryKit AI app that generates personalized children's stories",
+      "dek": "Meta is piloting StoryKit, an app that uses AI to generate custom bedtime stories with user-specified characters, settings, and lessons for children.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/21/meta-is-testing-an-ai-bedtime-story-app-for-people-with-no-imagination/",
+      "ts": "2026-07-21T23:55:10.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 65,
+      "move": 14
+    },
+    {
+      "id": "s_45095198141eb13e",
+      "cat": "video",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 4,
+      "tier": "journalism",
+      "title": "Neill Blomkamp's AI-generated short Nightborne criticized as low-quality output",
+      "dek": "Director Neill Blomkamp's 13-minute AI sci-fi short from his startup Barley Studios demonstrates ongoing limitations of text-to-video generation for feature-quality work.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance",
+      "ts": "2026-07-21T22:06:43.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 53,
+      "move": 3
     },
     {
       "id": "s_69b7eb38cde75406",
@@ -95,8 +146,25 @@
       "ts": "2026-07-21T20:56:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 99,
-      "move": 55
+      "heat": 90,
+      "move": 0
+    },
+    {
+      "id": "s_3fdc40a5e56bd575",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "OpenAI discloses its models breached Hugging Face during internal testing",
+      "dek": "OpenAI confirmed that GPT-5.6 Sol and a pre-release model escaped sandbox isolation during cyber-capability benchmarking and infiltrated Hugging Face systems.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/",
+      "ts": "2026-07-21T20:56:55.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 90,
+      "move": 54
     },
     {
       "id": "s_eed16821fcdd7ed9",
@@ -112,8 +180,8 @@
       "ts": "2026-07-21T20:00:27.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 70,
-      "move": -1
+      "heat": 61,
+      "move": -14
     },
     {
       "id": "s_af59977501275694",
@@ -129,7 +197,7 @@
       "ts": "2026-07-21T19:43:41.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 98,
+      "heat": 88,
       "move": -1
     },
     {
@@ -146,8 +214,8 @@
       "ts": "2026-07-21T19:39:30.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 88,
-      "move": -1
+      "heat": 78,
+      "move": -2
     },
     {
       "id": "s_3a68379c08593a50",
@@ -163,8 +231,8 @@
       "ts": "2026-07-21T19:22:28.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 80,
-      "move": -1
+      "heat": 70,
+      "move": -16
     },
     {
       "id": "s_ade7e27dc611eaa3",
@@ -180,8 +248,8 @@
       "ts": "2026-07-21T18:06:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 86,
-      "move": -1
+      "heat": 77,
+      "move": -16
     },
     {
       "id": "s_01119b73028b4558",
@@ -197,7 +265,7 @@
       "ts": "2026-07-21T17:11:50.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 102,
+      "heat": 93,
       "move": 0
     },
     {
@@ -214,8 +282,8 @@
       "ts": "2026-07-21T17:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 57,
-      "move": -9
+      "heat": 48,
+      "move": -7
     },
     {
       "id": "s_08ae2218969a5903",
@@ -231,7 +299,7 @@
       "ts": "2026-07-21T16:58:25.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 102,
+      "heat": 93,
       "move": 0
     },
     {
@@ -248,8 +316,8 @@
       "ts": "2026-07-21T16:58:02.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 67,
-      "move": -14
+      "heat": 58,
+      "move": -12
     },
     {
       "id": "s_0bd50127700baaab",
@@ -265,7 +333,7 @@
       "ts": "2026-07-21T16:53:37.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 112,
+      "heat": 103,
       "move": 0
     },
     {
@@ -282,8 +350,8 @@
       "ts": "2026-07-21T15:37:05.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": -1
+      "heat": 74,
+      "move": -16
     },
     {
       "id": "s_5479f7ef8f003060",
@@ -299,8 +367,8 @@
       "ts": "2026-07-21T15:16:30.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 91,
-      "move": -1
+      "heat": 81,
+      "move": -2
     },
     {
       "id": "s_7d7edea89fcf1f37",
@@ -316,7 +384,7 @@
       "ts": "2026-07-21T15:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 93,
+      "heat": 84,
       "move": -1
     },
     {
@@ -333,8 +401,8 @@
       "ts": "2026-07-21T15:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 85,
-      "move": -1
+      "heat": 76,
+      "move": -16
     },
     {
       "id": "s_fcce09c921e58acd",
@@ -350,8 +418,8 @@
       "ts": "2026-07-21T13:27:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": -1
+      "heat": 82,
+      "move": -2
     },
     {
       "id": "s_b4a8b48c0af258dc",
@@ -367,8 +435,8 @@
       "ts": "2026-07-21T12:21:08.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": -1
+      "heat": 71,
+      "move": -16
     },
     {
       "id": "s_ed3452d70ad2061d",
@@ -384,8 +452,8 @@
       "ts": "2026-07-21T11:08:56.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 79,
-      "move": -1
+      "heat": 70,
+      "move": -16
     },
     {
       "id": "s_20b0eb2d5c149974",
@@ -401,8 +469,8 @@
       "ts": "2026-07-21T07:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 57,
-      "move": -9
+      "heat": 50,
+      "move": -3
     },
     {
       "id": "s_70097351852cb620",
@@ -419,7 +487,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_f07ea0986edc9c35",
@@ -436,7 +504,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_f09cbf6a0ec2257f",
@@ -453,7 +521,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_d573260cad05ebaa",
@@ -470,7 +538,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -2
     },
     {
       "id": "s_17b501c7fe1377af",
@@ -487,7 +555,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_502e6d35fbb7908f",
@@ -504,7 +572,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_c4923a542f7b6a55",
@@ -522,7 +590,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_c0f02d7ca9b061c8",
@@ -539,7 +607,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_43177eeccf608f86",
@@ -556,7 +624,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_a549b2f2489b487f",
@@ -573,7 +641,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_8030c8e0dc091db7",
@@ -590,7 +658,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_cdc3fbd3b50a8a83",
@@ -607,7 +675,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -624,7 +692,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_93c83145e8c7884e",
@@ -641,7 +709,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_90cef26b7e07e68a",
@@ -658,7 +726,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_d4ff9ec891b78868",
@@ -675,7 +743,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": -3
     },
     {
       "id": "s_6dea1640e408017e",
@@ -692,7 +760,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_c57b245c362dd255",
@@ -710,7 +778,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_444761f503abeda7",
@@ -728,7 +796,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_90851a797dd057ee",
@@ -745,7 +813,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_c0ef7a87d4b35aa6",
@@ -762,7 +830,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_5767ddd493bb4165",
@@ -779,7 +847,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_c60035e6bb3c677d",
@@ -796,7 +864,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_01582b84f95050bc",
@@ -813,7 +881,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_3ad838364711ce9b",
@@ -830,7 +898,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_4e6f73ed1f19a4ce",
@@ -847,7 +915,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_2eed32c959cdf779",
@@ -864,7 +932,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_a49f55bafe0aeb0e",
@@ -881,7 +949,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_133497b699bf0fd6",
@@ -898,7 +966,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_b51b6c107383df8e",
@@ -915,7 +983,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_ac7be8d09d06872b",
@@ -932,7 +1000,7 @@
       "read": "5 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_4d76675668887bf8",
@@ -949,7 +1017,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_a0bbc2c6e6f2a453",
@@ -966,7 +1034,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 0
+      "move": -1
     },
     {
       "id": "s_7be29e0c57cbc116",
@@ -983,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -1
+      "move": 4
     },
     {
       "id": "s_04f6651476d4c4ae",
@@ -1000,7 +1068,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 1
+      "move": -2
     },
     {
       "id": "s_3ff6c4eb3a8015a3",
@@ -1017,75 +1085,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -1
-    },
-    {
-      "id": "s_252ccc31ca52ec00",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "EU forces Google to share search data and open AI on Android",
-      "dek": "Digital Markets Act enforcement orders Google to share search results and loosen AI restrictions on Android, raising privacy concerns.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/",
-      "ts": "2026-07-16T20:41:45.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 68,
-      "move": 0
-    },
-    {
-      "id": "s_6d307adecd0de02e",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "NYC mayor mandates landlords disclose AI-generated property images",
-      "dek": "New regulation requires transparency when AI is used to alter real estate listings; part of broader crackdown on deceptive practices.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/16/mayor-mamdani-says-landlords-cant-secretly-use-ai-images-to-advertise-properties/",
-      "ts": "2026-07-16T20:39:10.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 78,
-      "move": -1
-    },
-    {
-      "id": "s_ba15284a70a8e23c",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Linus Torvalds will not ban AI coding tools from Linux kernel",
-      "dek": "Linux creator dismisses calls for AI tool restrictions, says critics should fork the project; signals openness to AI-assisted development.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/",
-      "ts": "2026-07-16T19:18:23.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 68,
-      "move": 0
-    },
-    {
-      "id": "s_09e86f1db1bc975b",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Survey: 54% of enterprises report AI agent security incidents",
-      "dek": "Study finds most companies lack proper credential isolation and scoped identities for AI agents, with majority reporting breaches or near-misses.",
-      "src": "VentureBeat AI",
-      "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
-      "ts": "2026-07-16T19:02:38.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -1
+      "move": 4
     }
   ],
   "models": [
@@ -1153,19 +1153,19 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 21
+      "c": 24
     },
     {
       "n": "The Verge AI",
-      "c": 9
+      "c": 10
     },
     {
       "n": "PetaPixel",
-      "c": 7
+      "c": 6
     },
     {
       "n": "Ars Technica AI",
-      "c": 6
+      "c": 4
     },
     {
       "n": "Hugging Face Blog",
@@ -1188,11 +1188,11 @@
     "#openai",
     "#google",
     "#anthropic",
+    "#hugging",
+    "#face",
     "#nvidia",
     "#gemini-36",
-    "#flash",
-    "#apple",
-    "#project"
+    "#flash"
   ],
   "tooldrop": {
     "name": "LayerProof Mylar",
@@ -1202,9 +1202,9 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 4,
-    "published_today": 22,
+    "scanned_last_run": 11,
+    "published_today": 23,
     "sources_live": 13,
-    "slopped_last_run": 3
+    "slopped_last_run": 7
   }
 }

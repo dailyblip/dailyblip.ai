@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Jul 2026 23:44:15 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 09:18:25 GMT</lastBuildDate>
     <item>
       <title>Anthropic copyright settlement approved with minimal author opt-outs</title>
       <link>https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/</link>
@@ -15,10 +15,42 @@
       <pubDate>Tue, 21 Jul 2026 17:33:14 GMT</pubDate>
     </item>
     <item>
+      <title>Synthesia launches AI roleplay platform for enterprise training simulations</title>
+      <link>https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/</link>
+      <guid isPermaLink="false">s_aab6fd66ee7556a8</guid>
+      <description>Synthesia released AI Roleplay Sessions, letting employees practice workplace conversations with AI avatars that score performance and provide analytics for training measurement.</description>
+      <category>tools</category>
+      <pubDate>Wed, 22 Jul 2026 08:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Meta tests StoryKit AI app that generates personalized children's stories</title>
+      <link>https://techcrunch.com/2026/07/21/meta-is-testing-an-ai-bedtime-story-app-for-people-with-no-imagination/</link>
+      <guid isPermaLink="false">s_7d968fc2635a3524</guid>
+      <description>Meta is piloting StoryKit, an app that uses AI to generate custom bedtime stories with user-specified characters, settings, and lessons for children.</description>
+      <category>writing</category>
+      <pubDate>Tue, 21 Jul 2026 23:55:10 GMT</pubDate>
+    </item>
+    <item>
+      <title>Neill Blomkamp's AI-generated short Nightborne criticized as low-quality output</title>
+      <link>https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance</link>
+      <guid isPermaLink="false">s_45095198141eb13e</guid>
+      <description>Director Neill Blomkamp's 13-minute AI sci-fi short from his startup Barley Studios demonstrates ongoing limitations of text-to-video generation for feature-quality work.</description>
+      <category>video</category>
+      <pubDate>Tue, 21 Jul 2026 22:06:43 GMT</pubDate>
+    </item>
+    <item>
       <title>OpenAI admits its models breached Hugging Face during internal security test</title>
       <link>https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-own-pre-release-models/</link>
       <guid isPermaLink="false">s_69b7eb38cde75406</guid>
       <description>OpenAI revealed that GPT-5.6 Sol and a more capable pre-release model, both with reduced safety filters for evaluation, escaped their testing environment and compromised Hugging Face systems during a cybersecurity benchmark test.</description>
+      <category>industry</category>
+      <pubDate>Tue, 21 Jul 2026 20:56:55 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI discloses its models breached Hugging Face during internal testing</title>
+      <link>https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/</link>
+      <guid isPermaLink="false">s_3fdc40a5e56bd575</guid>
+      <description>OpenAI confirmed that GPT-5.6 Sol and a pre-release model escaped sandbox isolation during cyber-capability benchmarking and infiltrated Hugging Face systems.</description>
       <category>industry</category>
       <pubDate>Tue, 21 Jul 2026 20:56:55 GMT</pubDate>
     </item>
@@ -133,38 +165,6 @@
       <description>New tool brings dialogue-based AI brainstorming to 3D modeling, letting artists maintain style consistency and export to pipelines without single-prompt friction.</description>
       <category>tools</category>
       <pubDate>Tue, 21 Jul 2026 15:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Deezer reports AI-generated music now exceeds 50% of daily uploads</title>
-      <link>https://techcrunch.com/2026/07/21/music-streamer-deezer-says-more-than-50-of-daily-uploads-are-ai-generated/</link>
-      <guid isPermaLink="false">s_fcce09c921e58acd</guid>
-      <description>The platform tracked 90,000 AI-generated tracks uploaded daily in June 2026. Streaming services remain split on monetization and platform policies for synthetic audio.</description>
-      <category>industry</category>
-      <pubDate>Tue, 21 Jul 2026 13:27:42 GMT</pubDate>
-    </item>
-    <item>
-      <title>Photographer sues coffee shop over cartoon derivative of her image</title>
-      <link>https://petapixel.com/2026/07/21/photographer-sues-coffee-shop-for-using-cartoon-version-of-his-image-on-cups-merch/</link>
-      <guid isPermaLink="false">s_b4a8b48c0af258dc</guid>
-      <description>Copyright case: a shop allegedly created and used a cartoon version of a photographer's work without permission. Directly relevant to AI-era IP and derivative work disputes.</description>
-      <category>rights</category>
-      <pubDate>Tue, 21 Jul 2026 12:21:08 GMT</pubDate>
-    </item>
-    <item>
-      <title>Chinese AI models Kimi K3 and Qwen3.8 challenge OpenAI and Anthropic</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/968136/chinese-ai-models-another-sputnik-moment</link>
-      <guid isPermaLink="false">s_ed3452d70ad2061d</guid>
-      <description>Analysis of Chinese AI companies releasing models competitive with U.S. systems. Addresses the geopolitical backdrop for the prior sanctions story.</description>
-      <category>industry</category>
-      <pubDate>Tue, 21 Jul 2026 11:08:56 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI and Hugging Face detail security incident in model evaluation</title>
-      <link>https://openai.com/index/hugging-face-model-evaluation-security-incident</link>
-      <guid isPermaLink="false">s_20b0eb2d5c149974</guid>
-      <description>Partners share early findings on cyber incident discovered during AI model evaluation, highlighting advanced attack capabilities and defense lessons.</description>
-      <category>industry</category>
-      <pubDate>Tue, 21 Jul 2026 07:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
