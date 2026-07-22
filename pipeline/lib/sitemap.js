@@ -11,7 +11,7 @@
 import fs from "node:fs";
 import path from "node:path";
 
-export function buildSitemap({ archiveDir, guidesDir, siteUrl }) {
+export function buildSitemap({ archiveDir, guidesDir, siteUrl, populatedHubs }) {
   const site = siteUrl || process.env.SITE_URL || "https://dailyblip.ai";
   const days = fs.existsSync(archiveDir)
     ? fs.readdirSync(archiveDir).filter((f) => /^\d{4}-\d{2}-\d{2}\.html$/.test(f))
@@ -23,11 +23,19 @@ export function buildSitemap({ archiveDir, guidesDir, siteUrl }) {
     `${site}/`, `${site}/showcase.html`, `${site}/standards.html`, `${site}/archive/`, `${site}/guides/`,
     ...days.map((d) => `${site}/archive/${d}`),
     ...guides.map((g) => `${site}/guides/${g}`),
+    // Only ever included once populated -- an empty hub already carries
+    // its own noindex tag, but leaving it out of the sitemap too is a
+    // second, belt-and-suspenders guard against a thin page getting
+    // found and judged before it has real content. Caller computes this
+    // list via topic-hubs.js's rebuildTopicHubs() and passes it straight
+    // in, rather than this function triggering hub generation itself as
+    // a hidden side effect.
+    ...(populatedHubs || []).map((h) => `${site}/guides/topics/${h.slug}.html`),
   ].map((u) => `  <url><loc>${u}</loc></url>`).join("\n");
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
-export function writeSitemap({ archiveDir, guidesDir, siteUrl, outDir }) {
-  const xml = buildSitemap({ archiveDir, guidesDir, siteUrl });
+export function writeSitemap({ archiveDir, guidesDir, siteUrl, outDir, populatedHubs }) {
+  const xml = buildSitemap({ archiveDir, guidesDir, siteUrl, populatedHubs });
   fs.writeFileSync(path.join(outDir, "sitemap.xml"), xml);
 }
