@@ -13,6 +13,8 @@
 // checks again server-side. See validatePrePublish() below.
 import { loadGuides, saveGuides } from "./lib/store.js";
 import { renderSafeMarkdown } from "./lib/sanitize.js";
+import { writeSitemap } from "./lib/sitemap.js";
+import { rebuildTopicHubs } from "./lib/topic-hubs.js";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -24,6 +26,7 @@ const SITE_URL = process.env.SITE_URL || "https://dailyblip.ai";
 // OPENAI_API_KEY/BUTTONDOWN_API_KEY being optional elsewhere.
 const BRANDFETCH_CLIENT_ID = process.env.BRANDFETCH_CLIENT_ID || "";
 const GUIDES_DIR = "docs/guides";
+const ARCHIVE_DIR = "docs/archive";
 
 function getJob(jobId) {
   const guides = loadGuides();
@@ -452,8 +455,11 @@ function renderGuideCardSSR(g) {
     </a>`;
 }
 
-function rebuildGuidesIndex(dir, manifest) {
+function rebuildGuidesIndex(dir, manifest, populatedHubs) {
   const guides = manifest || [];
+  const hubsHtml = (populatedHubs || []).length
+    ? `<div class="topics-row">${populatedHubs.map((h) => `<a class="topic-pill" href="topics/${esc(h.slug)}.html">${esc(h.tag)}</a>`).join("")}</div>`
+    : "";
   // Default view: newest first, no tag filter, no search -- exactly
   // what the client-side boot() used to produce after its fetch
   // resolved. Pre-computing this here is what makes the page crawlable
@@ -519,6 +525,10 @@ h1{font-family:var(--display);font-weight:750;font-size:clamp(26px,5vw,36px);let
 .search-box svg{opacity:.5;flex-shrink:0}
 .sort-select{background:var(--ink-2);border:1px solid var(--line-strong);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:12.5px;padding:0 12px;cursor:pointer}
 .tags-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.topics-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.topic-pill{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--amber);
+  border:1px solid rgba(255,180,84,.4);border-radius:20px;padding:7px 14px;transition:all .15s ease}
+.topic-pill:hover{background:rgba(255,180,84,.12);border-color:var(--amber)}
 .tag-pill{font-family:var(--mono);font-size:11.5px;letter-spacing:.02em;color:var(--dim);
   border:1px solid var(--line-strong);border-radius:20px;padding:7px 14px;cursor:pointer;transition:all .15s ease;background:none}
 .tag-pill:hover{border-color:var(--aqua);color:var(--aqua)}
@@ -568,6 +578,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--line);margin-top:4
 <div class="wrap">
   <h1>The Guide Library</h1>
   <p class="sub">Every quick-start guide dailyblip has published, in one place. Search by name, or filter by what you're actually trying to do.</p>
+  ${hubsHtml}
   <div class="controls">
     <div class="search-box">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
@@ -697,7 +708,12 @@ async function main() {
   saveGuides(updated);
   const manifest = buildGuidesManifest(updated);
   writeGuidesManifest(manifest);
-  rebuildGuidesIndex(GUIDES_DIR, manifest);
+  const populatedHubs = rebuildTopicHubs(GUIDES_DIR, manifest, SITE_URL);
+  rebuildGuidesIndex(GUIDES_DIR, manifest, populatedHubs);
+  // Same reasoning as the admin-triggered rebuild path: a real publish
+  // shouldn't have to wait for the next daily.yml run just to show up
+  // in the sitemap or its topic hub.
+  writeSitemap({ archiveDir: ARCHIVE_DIR, guidesDir: GUIDES_DIR, siteUrl: SITE_URL, outDir: "docs", populatedHubs });
 
   console.log(`guide-publish: published ${job.article.slug} \u2014 ${job.published_url}`);
 }
@@ -706,7 +722,7 @@ async function main() {
 // manifest/page-template logic rather than duplicating this large
 // template in a second place, which would mean fixing bugs in it twice
 // forever.
-export { buildGuidesManifest, writeGuidesManifest, rebuildGuidesIndex };
+export { buildGuidesManifest, writeGuidesManifest, rebuildGuidesIndex, renderPage };
 
 // Only runs main() when this file is invoked directly as a CLI script
 // (node pipeline/guide-publish.js <jobId>), not when imported by
