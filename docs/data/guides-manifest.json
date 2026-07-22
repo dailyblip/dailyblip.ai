@@ -1,5 +1,17 @@
 [
   {
+    "title": "The Complete Reference Guide to Midjourney Prompts",
+    "slug": "the-complete-reference-guide-to-midjourney-prompts",
+    "dek": "Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.",
+    "hero_image": "/guides/21.jpg",
+    "published_at": "2026-07-21T12:00:00.000Z",
+    "tags": [
+      "Image Generation",
+      "Tools & Workflow"
+    ],
+    "pinned": true
+  },
+  {
     "title": "How to Make Midjourney Images Look Less Like AI Art",
     "slug": "how-to-make-midjourney-images-look-less-like-ai-art",
     "dek": "The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.",
@@ -130,18 +142,6 @@
       "AI Music"
     ],
     "pinned": false
-  },
-  {
-    "title": "The Complete Reference Guide to Midjourney Prompts",
-    "slug": "the-complete-reference-guide-to-midjourney-prompts",
-    "dek": "Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.",
-    "hero_image": "/guides/21.jpg",
-    "published_at": "2026-07-21T12:00:00.000Z",
-    "tags": [
-      "Image Generation",
-      "Tools & Workflow"
-    ],
-    "pinned": true
   },
   {
     "title": "10 Prompts to Make Your Suno Music Actually Sound Like What You're Imagining",
