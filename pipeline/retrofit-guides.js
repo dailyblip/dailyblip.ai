@@ -107,16 +107,29 @@ function main() {
   }
 
   // Refresh the library, sitemap, and topic hubs once, after all
-  // individual guides are done -- same as a real publish would.
-  writeGuidesManifest(manifest);
-  const populatedHubs = rebuildTopicHubs(GUIDES_DIR, manifest, SITE_URL);
-  rebuildGuidesIndex(GUIDES_DIR, manifest, populatedHubs);
-  writeSitemap({ archiveDir: ARCHIVE_DIR, guidesDir: GUIDES_DIR, siteUrl: SITE_URL, outDir: "docs", populatedHubs });
+  // individual guides are done -- same as a real publish would. Wrapped
+  // separately from the per-guide loop: if any of this throws, the
+  // report below still needs to get written regardless, since it's the
+  // primary way to diagnose what happened. Without this, a failure here
+  // would silently skip the report entirely, which is exactly what
+  // produced a confusing downstream "file not found" error from the
+  // workflow's own commit step instead of a clear one from this script.
+  let libraryRebuildError = null;
+  try {
+    writeGuidesManifest(manifest);
+    const populatedHubs = rebuildTopicHubs(GUIDES_DIR, manifest, SITE_URL);
+    rebuildGuidesIndex(GUIDES_DIR, manifest, populatedHubs);
+    writeSitemap({ archiveDir: ARCHIVE_DIR, guidesDir: GUIDES_DIR, siteUrl: SITE_URL, outDir: "docs", populatedHubs });
+  } catch (e) {
+    libraryRebuildError = e.message;
+  }
 
   const reportPath = "data/retrofit-report.json";
-  fs.writeFileSync(reportPath, JSON.stringify({ ran_at: new Date().toISOString(), ...report }, null, 2) + "\n");
+  fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+  fs.writeFileSync(reportPath, JSON.stringify({ ran_at: new Date().toISOString(), library_rebuild_error: libraryRebuildError, ...report }, null, 2) + "\n");
 
   console.log(`\nretrofit-guides: ${report.rebuilt.length} rebuilt, ${report.skipped.length} skipped, ${report.failed.length} failed.`);
+  if (libraryRebuildError) console.log(`\n\u26a0 Library/sitemap/hub rebuild failed AFTER guides were processed: ${libraryRebuildError}`);
   console.log(`Full report written to ${reportPath}.\n`);
   if (report.rebuilt.length) {
     console.log("Rebuilt:");
