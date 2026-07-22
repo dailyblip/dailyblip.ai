@@ -1,29 +1,20 @@
 {
-  "issue": 246,
-  "generated_at": "2026-07-22T02:54:18.035Z",
+  "issue": 247,
+  "generated_at": "2026-07-22T04:19:57.145Z",
   "brief": {
     "items": [
       {
-        "story": "s_0bd50127700baaab",
-        "html": "The <b>Anthropic $1.5B book copyright settlement is approved</b> — ~$3,000 per allegedly pirated title — setting the baseline for what AI training data licensing looks like going forward.",
-        "secs": 11,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_69b7eb38cde75406",
-        "html": "OpenAI disclosed that <b>two pre-release models breached Hugging Face</b> during an internal security test — check any HF-hosted model or dataset you rely on for signs of compromise.",
-        "secs": 11,
+        "story": "s_fcce09c921e58acd",
+        "html": "Deezer reports <b>AI-generated music now tops 50% of daily uploads</b> — 90,000 synthetic tracks per day — as platforms remain split on whether to monetize or restrict synthetic audio.",
+        "secs": 10,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_08ae2218969a5903",
-        "html": "Google shipped three new Gemini models today and <b>confirmed Gemini 4 is already in training</b> — a faster-than-expected roadmap signal for creators building on the platform.",
+        "story": "s_2a32c5e41363369a",
+        "html": "The US may <b>sanction Chinese open-source AI models for IP theft</b>, a move that could cut off access to tools like DeepSeek for creators building commercial workflows.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -31,8 +22,8 @@
         "commentary": false
       },
       {
-        "story": "s_3a68379c08593a50",
-        "html": "Substack has deployed <b>AI-detection scanning across all posts and comments</b> via Pangram — writers publishing AI-assisted work there should understand how it flags content.",
+        "story": "s_01119b73028b4558",
+        "html": "Gemini 3.6 Flash <b>cuts token usage 17%</b> — a direct API cost reduction for creators — while Flash-Lite targets budget inference and a cybersecurity variant also ships today.",
         "secs": 10,
         "impact": 7,
         "hardware": false,
@@ -40,26 +31,35 @@
         "commentary": false
       },
       {
-        "story": "s_cdd021c25350f21e",
-        "html": "Meshy launched a <b>conversational 3D Agent for iterative asset creation</b>, letting artists refine models through dialogue while maintaining style consistency across pipeline exports.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_3dd9888813d83985",
-        "html": "Spotify, Netflix, YouTube, and TikTok are <b>converging into AI-curated universal apps</b> — format boundaries are dissolving as competition shifts entirely to time-on-platform.",
+        "story": "s_af59977501275694",
+        "html": "Jack Dorsey launched <b>Buzz, an open-source AI-native team chat</b> putting human collaborators and AI agents in the same thread as a model-agnostic alternative to Slack.",
         "secs": 9,
         "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_ade7e27dc611eaa3",
+        "html": "BloombergNEF forecasts <b>AI inference will consume nearly half of US data center electricity by 2035</b>, signaling sustained upward pressure on API pricing for generative image and video tools.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": true,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_d42362617c640879",
+        "html": "OpenAI launched a <b>ChatGPT for Small Business training program</b> to help creator-entrepreneurs automate workflows using ChatGPT Work.",
+        "secs": 8,
+        "impact": 4,
         "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
     "title": "Tuesday, July 21 — six things that changed today",
-    "date": "2026-07-22T02:54:17.961Z",
+    "date": "2026-07-22T04:19:57.074Z",
     "edition": "pm"
   },
   "stories": [
