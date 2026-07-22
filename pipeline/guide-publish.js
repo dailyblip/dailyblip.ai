@@ -121,6 +121,13 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
 .takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
 .takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.related-guides{margin:32px 0}
+.related-guides .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.related-card{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:border-color .15s ease,transform .15s ease}
+.related-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.related-title{font-family:var(--display);font-weight:640;font-size:14.5px;line-height:1.35;margin-bottom:6px;color:var(--text)}
+.related-dek{color:var(--dim);font-size:12.5px;line-height:1.5}
 .ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
 .ref-table{width:100%;border-collapse:collapse;font-size:13px}
 .ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
@@ -221,13 +228,26 @@ function altTextOrFallback(img) {
   return img.alt_text || img.caption || "Image related to this guide";
 }
 
-function renderPage(job) {
+function renderPage(job, manifest) {
   const a = job.article;
   // Only images explicitly selected via admin.html's checkboxes ever
   // reach the published page \u2014 job.images may hold up to 6 generated
   // candidates, most of which were never meant to be included.
   const images = (job.images || []).filter((img) => img.approved);
   const imageFor = (placement) => images.find((img) => img.placement === placement);
+
+  // Related guides: other published guides sharing at least one tag,
+  // ranked by how many tags overlap (more shared tags = more relevant),
+  // newest first as a tiebreak. manifest is optional so this file still
+  // works standalone (e.g. tests, or an older caller not yet updated) --
+  // no manifest just means no related-guides section renders, not a crash.
+  const ownTags = new Set(a.tags || []);
+  const relatedGuides = (manifest || [])
+    .filter((g) => g.slug !== a.slug)
+    .map((g) => ({ ...g, _overlap: (g.tags || []).filter((t) => ownTags.has(t)).length }))
+    .filter((g) => g._overlap > 0)
+    .sort((x, y) => y._overlap - x._overlap || new Date(y.published_at) - new Date(x.published_at))
+    .slice(0, 6);
 
   const heroImg = imageFor("hero");
   const heroHtml = heroImg ? `<div class="img-block"><img src="/guides/${esc(heroImg.file)}" alt="${esc(altTextOrFallback(heroImg))}" loading="lazy">${heroImg.caption ? `<div class="img-caption">${esc(heroImg.caption)}</div>` : ""}</div>` : "";
@@ -256,6 +276,18 @@ function renderPage(job) {
 
   const takeaways = (a.key_takeaways || []).length
     ? `<div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul>${(a.key_takeaways || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>`
+    : "";
+
+  const relatedGuidesHtml = relatedGuides.length
+    ? `<div class="related-guides">
+        <div class="label">RELATED GUIDES</div>
+        <div class="related-grid">${relatedGuides.map((g) => `
+          <a class="related-card" href="${esc(g.slug)}.html">
+            <div class="related-title">${esc(g.title)}</div>
+            <div class="related-dek">${esc(g.dek)}</div>
+          </a>`).join("")}
+        </div>
+      </div>`
     : "";
 
   const sourcesHtml = (job.sources || []).length
@@ -295,6 +327,7 @@ function renderPage(job) {
   </article>
   ${articlePrompts}
   ${takeaways}
+  ${relatedGuidesHtml}
   <div class="subscribe-block" id="subscribe">
     <h3>Enjoyed this? Get the next one.</h3>
     <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>
@@ -648,7 +681,13 @@ async function main() {
     throw new Error(job.error.message);
   }
 
-  fs.writeFileSync(path.join(GUIDES_DIR, `${job.article.slug}.html`), renderPage(job));
+  // Built from the guides array as it stands right now -- this job's own
+  // status is still "approved" at this point, not yet "published", so
+  // buildGuidesManifest naturally excludes it. Exactly what's wanted:
+  // "other already-published guides" for related-guide links, not a
+  // guide linking to itself.
+  const existingManifest = buildGuidesManifest(guides);
+  fs.writeFileSync(path.join(GUIDES_DIR, `${job.article.slug}.html`), renderPage(job, existingManifest));
 
   job.status = "published";
   job.stage = "Published";
