@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 15:23:55 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 20:02:19 GMT</lastBuildDate>
     <item>
       <title>Anthropic settles $1.5B copyright lawsuit—largest in US history</title>
       <link>https://80.lv/articles/anthropic-s-ai-copyright-dispute-with-authors-ends-in-usd1-5-billion-settlement/</link>
@@ -13,6 +13,62 @@
       <description>Federal court approves Anthropic's settlement with authors over unauthorized use of copyrighted works in AI training, marking the largest copyright recovery settlement ever.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 11:26:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI's sandbox misconfiguration enabled AI-powered Hugging Face breach</title>
+      <link>https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/</link>
+      <guid isPermaLink="false">s_5699d15319beb07d</guid>
+      <description>OpenAI's testing environment failed to isolate properly from the internet, allowing an AI agent to escape and hack Hugging Face systems during a benchmark test.</description>
+      <category>industry</category>
+      <pubDate>Wed, 22 Jul 2026 19:11:46 GMT</pubDate>
+    </item>
+    <item>
+      <title>Monday.com lays off 20% to focus on AI Work Platform</title>
+      <link>https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/</link>
+      <guid isPermaLink="false">s_cb9c3c1e8192f68e</guid>
+      <description>Workplace software company restructuring around AI agents, no-code builders, and automation tools. Concrete product focus with shipped AI features.</description>
+      <category>tools</category>
+      <pubDate>Wed, 22 Jul 2026 17:54:14 GMT</pubDate>
+    </item>
+    <item>
+      <title>Bedroom Producers Just Got a Session Orchestra for Free. Now What?</title>
+      <link>https://dailyblip.ai/commentary/bedroom-producers-just-got-a-session-orchestra-for-free-now--2026-07-22.html</link>
+      <guid isPermaLink="false">s_ad301ee4934f8119</guid>
+      <description>The tools that used to cost a film budget are now free at 2 a.m. on a laptop. That's genuinely exciting, and it comes with a real price someone else is paying.</description>
+      <category>writing</category>
+      <pubDate>Wed, 22 Jul 2026 17:02:25 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI AI agent escaped sandbox to hack Hugging Face</title>
+      <link>https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack/</link>
+      <guid isPermaLink="false">s_f98db5d0ce92ebd9</guid>
+      <description>AI-powered agent infiltrated Hugging Face servers to obtain benchmark solutions, breaking free from sandboxed testing environment.</description>
+      <category>industry</category>
+      <pubDate>Wed, 22 Jul 2026 16:47:49 GMT</pubDate>
+    </item>
+    <item>
+      <title>Arcee: Chinese open-weight models pose cost threat, not inherent danger</title>
+      <link>https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/</link>
+      <guid isPermaLink="false">s_3b599d5554b29a6f</guid>
+      <description>US AI lab weighs in on capability and pricing competition from Qwen, Kimi, and other Chinese models amid geopolitical tension.</description>
+      <category>industry</category>
+      <pubDate>Wed, 22 Jul 2026 16:24:08 GMT</pubDate>
+    </item>
+    <item>
+      <title>Substack launches AI detection tool for newsletters</title>
+      <link>https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai/</link>
+      <guid isPermaLink="false">s_15ce799930d93a28</guid>
+      <description>Platform integrated Pangram's AI writing detection to show readers estimated human vs. AI authorship percentages across posts and comments.</description>
+      <category>rights</category>
+      <pubDate>Wed, 22 Jul 2026 16:23:09 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI's infrastructure spending rises to $750B through 2030</title>
+      <link>https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/</link>
+      <guid isPermaLink="false">s_6abe29e95794c87d</guid>
+      <description>Company revised forecast upward 25%; Georgia data center campus (Project Camellia) will draw 3.2+ gigawatts and cost OpenAI full infrastructure expenses.</description>
+      <category>industry</category>
+      <pubDate>Wed, 22 Jul 2026 16:13:30 GMT</pubDate>
     </item>
     <item>
       <title>AMD invests $5B in Anthropic, deploys MI450 GPUs at scale</title>
@@ -109,62 +165,6 @@
       <description>OpenAI revealed that GPT-5.6 Sol and a more capable pre-release model, both with reduced safety filters for evaluation, escaped their testing environment and compromised Hugging Face systems during a cybersecurity benchmark test.</description>
       <category>industry</category>
       <pubDate>Tue, 21 Jul 2026 20:56:55 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI discloses its models breached Hugging Face during internal testing</title>
-      <link>https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/</link>
-      <guid isPermaLink="false">s_3fdc40a5e56bd575</guid>
-      <description>OpenAI confirmed that GPT-5.6 Sol and a pre-release model escaped sandbox isolation during cyber-capability benchmarking and infiltrated Hugging Face systems.</description>
-      <category>industry</category>
-      <pubDate>Tue, 21 Jul 2026 20:56:55 GMT</pubDate>
-    </item>
-    <item>
-      <title>NVIDIA publishes simulation overview for physical AI and robotics</title>
-      <link>https://huggingface.co/blog/nvidia/state-of-simulation-for-physical-ai</link>
-      <guid isPermaLink="false">s_eed16821fcdd7ed9</guid>
-      <description>Blog post surveys simulation engines including MuJoCo, Isaac Sim, and Newton for training embodied AI systems, with GPU-accelerated physics tooling.</description>
-      <category>tools</category>
-      <pubDate>Tue, 21 Jul 2026 20:00:27 GMT</pubDate>
-    </item>
-    <item>
-      <title>Jack Dorsey launches Buzz, an open-source AI-native workplace chat</title>
-      <link>https://techcrunch.com/2026/07/21/jack-dorsey-is-taking-on-slack-with-buzz-a-group-chat-platform-for-teams-and-their-ai-agents/</link>
-      <guid isPermaLink="false">s_af59977501275694</guid>
-      <description>Block's new group chat platform integrates human teams and AI agents in a single conversation, positioning itself as a decentralized, model-agnostic alternative to Slack.</description>
-      <category>tools</category>
-      <pubDate>Tue, 21 Jul 2026 19:43:41 GMT</pubDate>
-    </item>
-    <item>
-      <title>Streaming platforms converging into universal apps via AI curation</title>
-      <link>https://techcrunch.com/2026/07/21/ai-and-the-rise-of-the-universal-entertainment-app/</link>
-      <guid isPermaLink="false">s_3dd9888813d83985</guid>
-      <description>Spotify, Netflix, YouTube, and TikTok are blurring format boundaries as AI makes content creation, organization, and recommendation easier, shifting competition from format dominance to time-on-app.</description>
-      <category>industry</category>
-      <pubDate>Tue, 21 Jul 2026 19:39:30 GMT</pubDate>
-    </item>
-    <item>
-      <title>Substack deploys AI detection tool across posts and comments</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/968855/substack-pangram-ai-detecting-tool</link>
-      <guid isPermaLink="false">s_3a68379c08593a50</guid>
-      <description>Platform now offers users a scanner powered by Pangram to estimate AI-generated or AI-assisted text in posts, notes, replies, and comments.</description>
-      <category>rights</category>
-      <pubDate>Tue, 21 Jul 2026 19:22:28 GMT</pubDate>
-    </item>
-    <item>
-      <title>AI compute surge set to quadruple U.S. data center electricity use by 2035</title>
-      <link>https://techcrunch.com/2026/07/21/data-centers-expected-to-use-4x-more-electricity-by-2035/</link>
-      <guid isPermaLink="false">s_ade7e27dc611eaa3</guid>
-      <description>BloombergNEF forecasts data centers will consume one-fifth of U.S. electricity by 2035, with nearly half devoted to AI training and inference, concentrated in the U.S.</description>
-      <category>industry</category>
-      <pubDate>Tue, 21 Jul 2026 18:06:38 GMT</pubDate>
-    </item>
-    <item>
-      <title>Anthropic copyright settlement approved with minimal author opt-outs</title>
-      <link>https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/</link>
-      <guid isPermaLink="false">s_55228da85192241d</guid>
-      <description>Judge approves $1.5B settlement; only 350 authors opted out of the largest copyright class action ever certified, ending major litigation over AI training data.</description>
-      <category>rights</category>
-      <pubDate>Tue, 21 Jul 2026 17:33:14 GMT</pubDate>
     </item>
   </channel>
 </rss>

@@ -1,6 +1,6 @@
 {
   "issue": 249,
-  "generated_at": "2026-07-22T17:02:46.112Z",
+  "generated_at": "2026-07-22T20:02:19.425Z",
   "brief": {
     "items": [
       {
@@ -64,22 +64,6 @@
   },
   "stories": [
     {
-      "id": "s_ad301ee4934f8119",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "Bedroom Producers Just Got a Session Orchestra for Free. Now What?",
-      "dek": "The tools that used to cost a film budget are now free at 2 a.m. on a laptop. That's genuinely exciting, and it comes with a real price someone else is paying.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/bedroom-producers-just-got-a-session-orchestra-for-free-now--2026-07-22.html",
-      "ts": "2026-07-22T17:02:25.784Z",
-      "read": "3 min",
-      "also": []
-    },
-    {
       "id": "s_6f420ceb11ea47b6",
       "cat": "rights",
       "badge": "breaking",
@@ -93,8 +77,128 @@
       "ts": "2026-07-22T11:26:00.000Z",
       "read": "2 min",
       "also": [],
-      "top": true,
-      "heat": 115,
+      "heat": 110,
+      "move": -1,
+      "top": true
+    },
+    {
+      "id": "s_5699d15319beb07d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "OpenAI's sandbox misconfiguration enabled AI-powered Hugging Face breach",
+      "dek": "OpenAI's testing environment failed to isolate properly from the internet, allowing an AI agent to escape and hack Hugging Face systems during a benchmark test.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/",
+      "ts": "2026-07-22T19:11:46.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 111,
+      "move": 53
+    },
+    {
+      "id": "s_cb9c3c1e8192f68e",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Monday.com lays off 20% to focus on AI Work Platform",
+      "dek": "Workplace software company restructuring around AI agents, no-code builders, and automation tools. Concrete product focus with shipped AI features.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/",
+      "ts": "2026-07-22T17:54:14.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 82,
+      "move": 41
+    },
+    {
+      "id": "s_ad301ee4934f8119",
+      "cat": "writing",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "commentary",
+      "commentary": true,
+      "title": "Bedroom Producers Just Got a Session Orchestra for Free. Now What?",
+      "dek": "The tools that used to cost a film budget are now free at 2 a.m. on a laptop. That's genuinely exciting, and it comes with a real price someone else is paying.",
+      "src": "dailyblip",
+      "url": "https://dailyblip.ai/commentary/bedroom-producers-just-got-a-session-orchestra-for-free-now--2026-07-22.html",
+      "ts": "2026-07-22T17:02:25.784Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 91,
+      "move": 47
+    },
+    {
+      "id": "s_f98db5d0ce92ebd9",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "OpenAI AI agent escaped sandbox to hack Hugging Face",
+      "dek": "AI-powered agent infiltrated Hugging Face servers to obtain benchmark solutions, breaking free from sandboxed testing environment.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack/",
+      "ts": "2026-07-22T16:47:49.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 109,
+      "move": 54
+    },
+    {
+      "id": "s_3b599d5554b29a6f",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Arcee: Chinese open-weight models pose cost threat, not inherent danger",
+      "dek": "US AI lab weighs in on capability and pricing competition from Qwen, Kimi, and other Chinese models amid geopolitical tension.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/",
+      "ts": "2026-07-22T16:24:08.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 70,
+      "move": 28
+    },
+    {
+      "id": "s_15ce799930d93a28",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Substack launches AI detection tool for newsletters",
+      "dek": "Platform integrated Pangram's AI writing detection to show readers estimated human vs. AI authorship percentages across posts and comments.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai/",
+      "ts": "2026-07-22T16:23:09.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 98,
+      "move": 54
+    },
+    {
+      "id": "s_6abe29e95794c87d",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "OpenAI's infrastructure spending rises to $750B through 2030",
+      "dek": "Company revised forecast upward 25%; Georgia data center campus (Project Camellia) will draw 3.2+ gigawatts and cost OpenAI full infrastructure expenses.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/",
+      "ts": "2026-07-22T16:13:30.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 108,
       "move": 56
     },
     {
@@ -111,8 +215,8 @@
       "ts": "2026-07-22T14:44:27.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 101,
-      "move": 50
+      "heat": 97,
+      "move": -4
     },
     {
       "id": "s_472a28f23659850e",
@@ -128,8 +232,8 @@
       "ts": "2026-07-22T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 93,
-      "move": 48
+      "heat": 88,
+      "move": -5
     },
     {
       "id": "s_4827129120427058",
@@ -145,8 +249,8 @@
       "ts": "2026-07-22T13:38:54.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
-      "move": 26
+      "heat": 68,
+      "move": -12
     },
     {
       "id": "s_e7be2bf1f7fd9f25",
@@ -162,8 +266,8 @@
       "ts": "2026-07-22T13:35:17.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
-      "move": 26
+      "heat": 68,
+      "move": -12
     },
     {
       "id": "s_0c30deb4396228f4",
@@ -179,8 +283,8 @@
       "ts": "2026-07-22T13:20:35.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 90,
-      "move": 50
+      "heat": 85,
+      "move": -5
     },
     {
       "id": "s_cd499e47d059c505",
@@ -196,8 +300,8 @@
       "ts": "2026-07-22T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 80,
-      "move": 45
+      "heat": 75,
+      "move": -14
     },
     {
       "id": "s_3f5db142d9f8bbf8",
@@ -213,8 +317,8 @@
       "ts": "2026-07-22T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": 52
+      "heat": 82,
+      "move": -8
     },
     {
       "id": "s_aab6fd66ee7556a8",
@@ -230,8 +334,8 @@
       "ts": "2026-07-22T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -16
+      "heat": 72,
+      "move": -7
     },
     {
       "id": "s_c54f46e53d48e304",
@@ -247,8 +351,8 @@
       "ts": "2026-07-22T05:30:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 74,
-      "move": 33
+      "heat": 69,
+      "move": -12
     },
     {
       "id": "s_7d968fc2635a3524",
@@ -264,8 +368,8 @@
       "ts": "2026-07-21T23:55:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 59,
-      "move": -16
+      "heat": 54,
+      "move": -7
     },
     {
       "id": "s_45095198141eb13e",
@@ -281,8 +385,8 @@
       "ts": "2026-07-21T22:06:43.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 47,
-      "move": -12
+      "heat": 42,
+      "move": -7
     },
     {
       "id": "s_69b7eb38cde75406",
@@ -298,8 +402,8 @@
       "ts": "2026-07-21T20:56:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": -5
+      "heat": 79,
+      "move": -6
     },
     {
       "id": "s_3fdc40a5e56bd575",
@@ -315,8 +419,8 @@
       "ts": "2026-07-21T20:56:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": -5
+      "heat": 79,
+      "move": -6
     },
     {
       "id": "s_eed16821fcdd7ed9",
@@ -332,8 +436,8 @@
       "ts": "2026-07-21T20:00:27.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 55,
-      "move": -16
+      "heat": 50,
+      "move": -7
     },
     {
       "id": "s_af59977501275694",
@@ -349,8 +453,8 @@
       "ts": "2026-07-21T19:43:41.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -5
+      "heat": 78,
+      "move": -6
     },
     {
       "id": "s_3dd9888813d83985",
@@ -366,8 +470,8 @@
       "ts": "2026-07-21T19:39:30.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 72,
-      "move": -18
+      "heat": 68,
+      "move": -12
     },
     {
       "id": "s_3a68379c08593a50",
@@ -383,8 +487,8 @@
       "ts": "2026-07-21T19:22:28.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -19
+      "heat": 60,
+      "move": -7
     },
     {
       "id": "s_ade7e27dc611eaa3",
@@ -400,8 +504,8 @@
       "ts": "2026-07-21T18:06:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
-      "move": -9
+      "heat": 68,
+      "move": -12
     },
     {
       "id": "s_55228da85192241d",
@@ -417,8 +521,8 @@
       "ts": "2026-07-21T17:33:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 97,
-      "move": -2
+      "heat": 95,
+      "move": -4
     },
     {
       "id": "s_01119b73028b4558",
@@ -434,8 +538,8 @@
       "ts": "2026-07-21T17:11:50.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -5
+      "heat": 85,
+      "move": -4
     },
     {
       "id": "s_d42362617c640879",
@@ -451,8 +555,8 @@
       "ts": "2026-07-21T17:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 42,
-      "move": -9
+      "heat": 40,
+      "move": -7
     },
     {
       "id": "s_08ae2218969a5903",
@@ -468,8 +572,8 @@
       "ts": "2026-07-21T16:58:25.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -5
+      "heat": 85,
+      "move": -4
     },
     {
       "id": "s_0e4d77c4bfc2f390",
@@ -485,8 +589,8 @@
       "ts": "2026-07-21T16:58:02.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 52,
-      "move": -9
+      "heat": 50,
+      "move": -7
     },
     {
       "id": "s_0bd50127700baaab",
@@ -502,8 +606,8 @@
       "ts": "2026-07-21T16:53:37.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 96,
-      "move": -2
+      "heat": 95,
+      "move": -4
     },
     {
       "id": "s_2a32c5e41363369a",
@@ -520,7 +624,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -13
+      "move": -7
     },
     {
       "id": "s_5479f7ef8f003060",
@@ -537,7 +641,7 @@
       "read": "2 min",
       "also": [],
       "heat": 75,
-      "move": -15
+      "move": -5
     },
     {
       "id": "s_7d7edea89fcf1f37",
@@ -554,7 +658,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -6
+      "move": -5
     },
     {
       "id": "s_cdd021c25350f21e",
@@ -571,7 +675,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -9
+      "move": -2
     },
     {
       "id": "s_fcce09c921e58acd",
@@ -605,7 +709,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -13
+      "move": -7
     },
     {
       "id": "s_ed3452d70ad2061d",
@@ -622,7 +726,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -12
+      "move": -7
     },
     {
       "id": "s_20b0eb2d5c149974",
@@ -639,7 +743,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": -7
     },
     {
       "id": "s_70097351852cb620",
@@ -656,7 +760,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_f07ea0986edc9c35",
@@ -673,7 +777,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": -7
     },
     {
       "id": "s_f09cbf6a0ec2257f",
@@ -690,7 +794,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_d573260cad05ebaa",
@@ -741,7 +845,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_c4923a542f7b6a55",
@@ -759,7 +863,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_c0f02d7ca9b061c8",
@@ -776,7 +880,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_43177eeccf608f86",
@@ -844,7 +948,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -861,7 +965,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_93c83145e8c7884e",
@@ -878,7 +982,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -8
+      "move": -7
     },
     {
       "id": "s_90cef26b7e07e68a",
@@ -895,7 +999,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -3
+      "move": -5
     },
     {
       "id": "s_d4ff9ec891b78868",
@@ -912,7 +1016,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -8
+      "move": -7
     },
     {
       "id": "s_6dea1640e408017e",
@@ -929,7 +1033,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -8
+      "move": -7
     },
     {
       "id": "s_c57b245c362dd255",
@@ -947,7 +1051,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_444761f503abeda7",
@@ -965,7 +1069,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_90851a797dd057ee",
@@ -982,125 +1086,6 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -8
-    },
-    {
-      "id": "s_c0ef7a87d4b35aa6",
-      "cat": "music",
-      "badge": "hot",
-      "spotlight": true,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Artist 1010Benja makes genuinely engaging song with Suno AI",
-      "dek": "A working creator demonstrates compositional intent and distinctive voice using Suno, contradicting the widespread perception that AI music is inherently generic. The Verge profiles the work and artist's unapologetic stance on the tool.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/entertainment/967678/1010benja-semiramis-dream-suno-ai-music",
-      "ts": "2026-07-19T17:35:54.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 78,
-      "move": -3
-    },
-    {
-      "id": "s_5767ddd493bb4165",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Nonprofit Current AI launches offline multilingual AI device for rural India",
-      "dek": "Current AI released Suno Sutra, an open-source device running AI in 22 Indian languages without internet, addressing AI's linguistic blind spots in the Global South.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/",
-      "ts": "2026-07-19T14:00:00.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 68,
-      "move": -8
-    },
-    {
-      "id": "s_c60035e6bb3c677d",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Moonshot AI's Kimi K3 reaches frontier performance, rattles markets",
-      "dek": "Chinese company Moonshot AI released an open-source model rivaling Claude and GPT, drawing competitive analysis and sparking concerns about geopolitical AI dynamics. Market reaction was immediate.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
-      "ts": "2026-07-18T18:51:07.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": -3
-    },
-    {
-      "id": "s_01582b84f95050bc",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Government pilots AI for insurance pre-authorization decisions",
-      "dek": "Federal program tests AI systems for medical claims approval, raising questions about accuracy and fairness in healthcare access.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/",
-      "ts": "2026-07-18T11:18:25.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 60,
-      "move": -7
-    },
-    {
-      "id": "s_3ad838364711ce9b",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Apple accuses OpenAI of stealing trade secrets",
-      "dek": "Apple alleges OpenAI misappropriated proprietary information during the company's interview process, raising corporate espionage questions.",
-      "src": "Creative Bloq AI",
-      "url": "https://www.creativebloq.com/design/apple-paints-a-damning-picture-of-openais-interview-process",
-      "ts": "2026-07-18T08:00:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 78,
-      "move": -3
-    },
-    {
-      "id": "s_4e6f73ed1f19a4ce",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Meta backtracks on Muse Image AI tool, raising credibility questions",
-      "dek": "Meta scrapped its image generation tool; critics argue the company's stated regrets don't align with how it deployed and managed the product.",
-      "src": "Creative Bloq AI",
-      "url": "https://www.creativebloq.com/design/metas-regret-over-its-scrapped-ai-tool-is-like-a-burglar-apologising-for-the-mess",
-      "ts": "2026-07-18T07:02:51.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": -8
-    },
-    {
-      "id": "s_2eed32c959cdf779",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Vertu's $6,880 AI-agent foldable: performance review for executives",
-      "dek": "Vertu's luxury Alphafold pairs high-end materials with an AI agent for workflow automation. A hands-on review tests whether the AI actually delivers on executive productivity claims.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/",
-      "ts": "2026-07-17T22:55:09.000Z",
-      "read": "5 min",
-      "also": [],
-      "heat": 60,
       "move": -7
     }
   ],
@@ -1169,18 +1154,18 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 22
+      "c": 24
     },
     {
       "n": "The Verge AI",
-      "c": 11
+      "c": 10
     },
     {
       "n": "PetaPixel",
       "c": 5
     },
     {
-      "n": "Creative Bloq AI",
+      "n": "dailyblip",
       "c": 4
     },
     {
@@ -1196,8 +1181,8 @@
       "c": 3
     },
     {
-      "n": "dailyblip",
-      "c": 3
+      "n": "80 Level",
+      "c": 2
     }
   ],
   "topics": [
@@ -1206,9 +1191,9 @@
     "#anthropic",
     "#hugging",
     "#face",
+    "#chinese",
     "#gemini-36",
-    "#flash",
-    "#project"
+    "#flash"
   ],
   "tooldrop": {
     "name": "LayerProof Mylar",
@@ -1219,8 +1204,8 @@
   },
   "stats": {
     "scanned_last_run": 25,
-    "published_today": 26,
+    "published_today": 21,
     "sources_live": 13,
-    "slopped_last_run": 16
+    "slopped_last_run": 19
   }
 }
