@@ -5,6 +5,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { loadFeed, saveFeed, PATHS } from "./lib/store.js";
 import { sanitizeInlineB } from "./lib/sanitize.js";
+import { writeSitemap } from "./lib/sitemap.js";
 
 const esc = (t) => String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const dayKey = (d = new Date()) =>
@@ -109,22 +110,13 @@ async function main() {
 
   // SEO: sitemap listing everything Google should index. Guide pages are
   // discovered here too (not written by guide-publish.js itself) so
-  // there's exactly one place that owns sitemap.xml — guide-publish.js
-  // publishing a new guide mid-day just means it shows up here on the
-  // next daily run, same as any other day's changes would.
-  const site = process.env.SITE_URL || "https://dailyblip.ai";
-  const days = fs.readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}\.html$/.test(f));
+  // there's exactly one PLACE THAT OWNS THE LOGIC (pipeline/lib/sitemap.js) —
+  // guide-publish.js publishing a new guide mid-day just means it shows
+  // up here on the next daily run at the latest; admin.html-triggered
+  // rebuilds (see rebuild-guide-library.js) also call this same logic
+  // immediately, so most of the time it's current well before that.
   const guidesDir = path.join(dir, "..", "guides");
-  const guides = fs.existsSync(guidesDir)
-    ? fs.readdirSync(guidesDir).filter((f) => f.endsWith(".html") && f !== "index.html")
-    : [];
-  const urls = [
-    `${site}/`, `${site}/showcase.html`, `${site}/standards.html`, `${site}/archive/`, `${site}/guides/`,
-    ...days.map((d) => `${site}/archive/${d}`),
-    ...guides.map((g) => `${site}/guides/${g}`),
-  ].map((u) => `  <url><loc>${u}</loc></url>`).join("\n");
-  fs.writeFileSync(path.join(dir, "..", "sitemap.xml"),
-    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`);
+  writeSitemap({ archiveDir: dir, guidesDir, siteUrl: process.env.SITE_URL, outDir: path.join(dir, "..") });
 
   saveFeed(feed);
   console.log(`archive: wrote ${today}, index + sitemap rebuilt${feed.yearago ? ", year-ago panel set" : ""}.`);
