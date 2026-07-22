@@ -1,0 +1,51 @@
+name: Retrofit Guides
+# workflow_dispatch only. Regenerates every already-published guide
+# through the current template — picking up whatever's been added since
+# each guide was first published (article-level prompts, related-guide
+# links, and any future template changes) without hand-editing each
+# file. Safe by design: retrofit-guides.js never overwrites a guide it
+# isn't confident it reconstructed correctly — see data/retrofit-report.json
+# after this runs for exactly what changed, what got skipped, and why.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Same shared group as every other guide-writing workflow, for the
+  # same reason: this can touch nearly every file under docs/guides/,
+  # so it must never run concurrently with a real publish or another
+  # rebuild.
+  group: guide-pipeline-writes
+  cancel-in-progress: false
+
+jobs:
+  retrofit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+
+      - name: Retrofit all published guides
+        run: node pipeline/retrofit-guides.js
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/guides docs/data/guides-manifest.json docs/sitemap.xml data/retrofit-report.json
+          git diff --cached --quiet && exit 0
+          git commit -m "admin: retrofit guides through current template"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict -- falling back to conflict resolution (see pipeline/resolve-daily-conflict.js)"
+            node pipeline/resolve-daily-conflict.js "admin: retrofit guides (resolved)"
+          else
+            git push
+          fi
