@@ -96,6 +96,16 @@ jobs:
         env:
           SITE_URL: https://dailyblip.ai
 
+      # Bakes real, crawlable content (today's H1, brief items, top
+      # stories, featured guides) directly into docs/index.html --
+      # everything else about the page (personalization, streak
+      # tracking, radar, search/filter) stays exactly as-is, untouched.
+      # See pipeline/lib/homepage.js for the full reasoning.
+      - name: Rebuild homepage
+        run: node pipeline/rebuild-homepage.js
+        env:
+          SITE_URL: https://dailyblip.ai
+
       # Instagram card + caption — AM only, same once-daily cadence as Tool
       # Drop and the newsletter. Runs BEFORE Commit so the generated image
       # lands in the same push as everything else. Skips cleanly if
