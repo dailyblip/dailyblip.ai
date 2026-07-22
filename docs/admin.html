@@ -304,6 +304,7 @@ label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12e
       <div style="display:flex;gap:10px;flex-wrap:wrap">
         <button class="btn" id="mResync">Resync from manifest</button>
         <button class="btn" id="mRebuild">Rebuild library page</button>
+        <button class="btn" id="mRebuildHomepage">Rebuild homepage</button>
         <button class="btn amber" id="mRetrofit">Retrofit all guides through current template</button>
         <button class="btn red" id="mForceDeleteAll">Force-delete ALL listed jobs</button>
       </div>
@@ -1925,6 +1926,17 @@ async function rebuildLibraryPage(){
   }
 }
 
+async function rebuildHomepage(){
+  if (!confirm("Rebuild the homepage now, baking in whatever's currently in feed.json and the guide manifest? Use this after editing a story or pinning a guide, if you don't want to wait for the next scheduled Daily Blip run."))
+    return;
+  try {
+    await dispatchWorkflow("rebuild-homepage.yml", {});
+    toast("Rebuilding homepage\u2026 check the Actions tab, should finish within a minute or two.");
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  }
+}
+
 async function retrofitGuides(){
   if (!confirm("Regenerate EVERY published guide through the current template? This picks up article-level prompts, related-guide links, and any other template changes since each guide was first published.\n\nThis is safe by design \u2014 it never overwrites a guide it isn't confident it reconstructed correctly, and produces a report of exactly what changed, what got skipped, and why. Still, this can touch nearly every file under docs/guides/ in one commit \u2014 check the Actions log and data/retrofit-report.json afterward."))
     return;
@@ -1998,6 +2010,7 @@ async function addBackfilledGuide(){
 
 $("#mResync")?.addEventListener("click", resyncFromManifest);
 $("#mRebuild")?.addEventListener("click", rebuildLibraryPage);
+$("#mRebuildHomepage")?.addEventListener("click", rebuildHomepage);
 $("#mRetrofit")?.addEventListener("click", retrofitGuides);
 $("#mForceDeleteAll")?.addEventListener("click", forceDeleteAllListed);
 $("#bfAdd")?.addEventListener("click", addBackfilledGuide);
