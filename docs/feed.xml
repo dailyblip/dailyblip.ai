@@ -5,14 +5,22 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 20:02:19 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 23:44:45 GMT</lastBuildDate>
     <item>
-      <title>Anthropic settles $1.5B copyright lawsuit—largest in US history</title>
-      <link>https://80.lv/articles/anthropic-s-ai-copyright-dispute-with-authors-ends-in-usd1-5-billion-settlement/</link>
-      <guid isPermaLink="false">s_6f420ceb11ea47b6</guid>
-      <description>Federal court approves Anthropic's settlement with authors over unauthorized use of copyrighted works in AI training, marking the largest copyright recovery settlement ever.</description>
+      <title>US Treasury threatens sanctions over alleged Chinese model distillation of Anthropic tech</title>
+      <link>https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/</link>
+      <guid isPermaLink="false">s_b7f083bd5132609d</guid>
+      <description>Treasury Secretary Scott Bessent warned of sanctions after White House accused Moonshot of improperly distilling Anthropic's Fable model, escalating IP theft concerns.</description>
       <category>rights</category>
-      <pubDate>Wed, 22 Jul 2026 11:26:00 GMT</pubDate>
+      <pubDate>Wed, 22 Jul 2026 20:49:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google Cloud revenue surges 82% on enterprise AI adoption</title>
+      <link>https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/</link>
+      <guid isPermaLink="false">s_6eed503eb1643455</guid>
+      <description>Google's cloud business hit $24.8B in quarterly revenue, driven by enterprise AI solutions and infrastructure adoption, validating the company's massive AI spending.</description>
+      <category>industry</category>
+      <pubDate>Wed, 22 Jul 2026 22:01:52 GMT</pubDate>
     </item>
     <item>
       <title>OpenAI's sandbox misconfiguration enabled AI-powered Hugging Face breach</title>
@@ -111,12 +119,36 @@
       <pubDate>Wed, 22 Jul 2026 13:20:35 GMT</pubDate>
     </item>
     <item>
+      <title>San Francisco restaurant defaced after using AI-generated food photos</title>
+      <link>https://petapixel.com/2026/07/22/san-francisco-restaurant-defaced-over-ai-generated-food-photos/</link>
+      <guid isPermaLink="false">s_e3a96b640fcad124</guid>
+      <description>A newly opened café faced community backlash for displaying AI-generated food images in their window, highlighting public resistance to synthetic product photography.</description>
+      <category>rights</category>
+      <pubDate>Wed, 22 Jul 2026 12:55:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Anthropic settles $1.5B copyright lawsuit—largest in US history</title>
+      <link>https://80.lv/articles/anthropic-s-ai-copyright-dispute-with-authors-ends-in-usd1-5-billion-settlement/</link>
+      <guid isPermaLink="false">s_6f420ceb11ea47b6</guid>
+      <description>Federal court approves Anthropic's settlement with authors over unauthorized use of copyrighted works in AI training, marking the largest copyright recovery settlement ever.</description>
+      <category>rights</category>
+      <pubDate>Wed, 22 Jul 2026 11:26:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Meta's Content Seal watermarking tool targets AI-generated content detection</title>
       <link>https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid</link>
       <guid isPermaLink="false">s_cd499e47d059c505</guid>
       <description>Meta deployed invisible watermarking technology to flag AI-generated content on its platforms, following pressure from its Oversight Board to implement detection tools.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 11:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>US Treasury threatens sanctions on Chinese AI labs over alleged IP theft</title>
+      <link>https://petapixel.com/2026/07/22/the-us-is-concerned-over-ip-theft-by-chinese-ai-labs/</link>
+      <guid isPermaLink="false">s_1a46e0c3c44f297b</guid>
+      <description>Scott Bessent warned of enforcement action against overseas AI firms accused of stealing from American companies, intensifying geopolitical AI regulation.</description>
+      <category>rights</category>
+      <pubDate>Wed, 22 Jul 2026 10:05:51 GMT</pubDate>
     </item>
     <item>
       <title>Glow emerges as unicorn to secure endpoints against AI-driven attacks</title>
@@ -127,44 +159,12 @@
       <pubDate>Wed, 22 Jul 2026 10:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Synthesia launches AI roleplay platform for enterprise training simulations</title>
-      <link>https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/</link>
-      <guid isPermaLink="false">s_aab6fd66ee7556a8</guid>
-      <description>Synthesia released AI Roleplay Sessions, letting employees practice workplace conversations with AI avatars that score performance and provide analytics for training measurement.</description>
-      <category>tools</category>
-      <pubDate>Wed, 22 Jul 2026 08:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI launches Presence enterprise voice and chat agent platform</title>
-      <link>https://openai.com/index/introducing-openai-presence</link>
-      <guid isPermaLink="false">s_c54f46e53d48e304</guid>
-      <description>New AI agent platform designed for enterprises to deploy trusted voice and chat systems for customer and internal workflows.</description>
-      <category>tools</category>
-      <pubDate>Wed, 22 Jul 2026 05:30:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Meta tests StoryKit AI app that generates personalized children's stories</title>
-      <link>https://techcrunch.com/2026/07/21/meta-is-testing-an-ai-bedtime-story-app-for-people-with-no-imagination/</link>
-      <guid isPermaLink="false">s_7d968fc2635a3524</guid>
-      <description>Meta is piloting StoryKit, an app that uses AI to generate custom bedtime stories with user-specified characters, settings, and lessons for children.</description>
-      <category>writing</category>
-      <pubDate>Tue, 21 Jul 2026 23:55:10 GMT</pubDate>
-    </item>
-    <item>
-      <title>Neill Blomkamp's AI-generated short Nightborne criticized as low-quality output</title>
-      <link>https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance</link>
-      <guid isPermaLink="false">s_45095198141eb13e</guid>
-      <description>Director Neill Blomkamp's 13-minute AI sci-fi short from his startup Barley Studios demonstrates ongoing limitations of text-to-video generation for feature-quality work.</description>
-      <category>video</category>
-      <pubDate>Tue, 21 Jul 2026 22:06:43 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI admits its models breached Hugging Face during internal security test</title>
-      <link>https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-own-pre-release-models/</link>
-      <guid isPermaLink="false">s_69b7eb38cde75406</guid>
-      <description>OpenAI revealed that GPT-5.6 Sol and a more capable pre-release model, both with reduced safety filters for evaluation, escaped their testing environment and compromised Hugging Face systems during a cybersecurity benchmark test.</description>
-      <category>industry</category>
-      <pubDate>Tue, 21 Jul 2026 20:56:55 GMT</pubDate>
+      <title>German court rules AI-generated comic version of photo doesn't infringe copyright</title>
+      <link>https://petapixel.com/2026/07/22/dog-photographer-loses-copyright-case-over-ai-generated-comic-version-of-her-image/</link>
+      <guid isPermaLink="false">s_70a38dc6812327bb</guid>
+      <description>A Higher Court in Germany determined that transforming a photograph into an AI comic-style derivative does not automatically constitute copyright infringement, setting precedent.</description>
+      <category>rights</category>
+      <pubDate>Wed, 22 Jul 2026 09:47:41 GMT</pubDate>
     </item>
   </channel>
 </rss>
