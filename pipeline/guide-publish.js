@@ -167,7 +167,7 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .sub-ok{display:none;color:var(--aqua);font-size:13.5px;margin-top:10px}
 `;
 
-function esc(t) { return String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+function esc(t) { return String(t ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
 
 // Extracts a bare domain from a tool's URL for the logo lookup. Returns
 // null on anything malformed rather than throwing \u2014 a bad/missing URL
@@ -306,11 +306,54 @@ function renderPage(job, manifest) {
     ? `<!-- Published with ${(job.overridden_warnings || []).length} unresolved high-severity fact-check warning(s), explicitly overridden via admin.html on ${esc(job.approved_at || "")}. See data/guides.json job id ${esc(job.id)} for details. -->\n`
     : "";
 
+  // Absolute URL required for og:image/twitter:image -- root-relative
+  // paths (how hero images are stored everywhere else on the site)
+  // aren't valid here. Falls back to the site's default social image
+  // for the rare guide with no hero at all, rather than omitting the
+  // tag and getting a blank preview card.
+  const heroImageUrl = heroImg ? `${SITE_URL}/guides/${esc(heroImg.file)}` : `${SITE_URL}/og-image.png`;
+
+  // job.published_at isn't set yet at render time for a brand-new
+  // publish (main() sets it AFTER calling renderPage, so related-guide
+  // computation has the pre-publish manifest to work from) -- but it
+  // IS already set for an already-published guide going through
+  // retrofit-guides.js. last_reviewed_date is always present either
+  // way, so it's the reliable fallback for a fresh publish specifically.
+  const isoDateSource = job.published_at || a.last_reviewed_date;
+  let isoDate;
+  try { isoDate = new Date(isoDateSource).toISOString(); } catch { isoDate = new Date().toISOString(); }
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: a.title,
+    description: a.dek,
+    image: heroImageUrl,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    author: { "@type": "Organization", name: "dailyblip" },
+    publisher: { "@type": "Organization", name: "dailyblip", logo: { "@type": "ImageObject", url: `${SITE_URL}/og-image.png` } },
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE_URL}/guides/${a.slug}.html` },
+  };
+
   return `${overrideComment}<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${esc(a.title)} \u2014 dailyblip</title>
 <meta name="description" content="${esc(a.meta_description)}">
 <link rel="canonical" href="${SITE_URL}/guides/${esc(a.slug)}.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="dailyblip">
+<meta property="og:title" content="${esc(a.title)}">
+<meta property="og:description" content="${esc(a.dek)}">
+<meta property="og:url" content="${SITE_URL}/guides/${esc(a.slug)}.html">
+<meta property="og:image" content="${heroImageUrl}">
+<meta property="article:published_time" content="${isoDate}">
+${(a.tags || []).map((t) => `<meta property="article:tag" content="${esc(t)}">`).join("\n")}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(a.title)}">
+<meta name="twitter:description" content="${esc(a.dek)}">
+<meta name="twitter:image" content="${heroImageUrl}">
+<script type="application/ld+json">${JSON.stringify(articleSchema)}</script>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
 <style>${PAGE_CSS}</style></head><body>
 <div class="wrap">
