@@ -1,0 +1,49 @@
+name: Rebuild Homepage
+# workflow_dispatch only. Regenerates docs/index.html's baked-in content
+# (H1, brief items, top stories, featured guides) from whatever's
+# currently in feed.json and the guides manifest, without waiting for
+# the next daily.yml run — for when admin.html's Publish button saves a
+# story edit directly, or a guide gets pinned/registered, and the
+# homepage should reflect that right away rather than up to 12 hours
+# later.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-pipeline
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+
+      - name: Rebuild homepage
+        run: node pipeline/rebuild-homepage.js
+        env:
+          SITE_URL: https://dailyblip.ai
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/index.html
+          git diff --cached --quiet && exit 0
+          git commit -m "admin: rebuild homepage"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict -- falling back to conflict resolution (see pipeline/resolve-daily-conflict.js)"
+            node pipeline/resolve-daily-conflict.js "admin: rebuild homepage (resolved)"
+          else
+            git push
+          fi
