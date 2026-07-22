@@ -1,6 +1,6 @@
 {
   "issue": 248,
-  "generated_at": "2026-07-22T09:18:25.377Z",
+  "generated_at": "2026-07-22T15:23:55.974Z",
   "brief": {
     "items": [
       {
@@ -64,22 +64,141 @@
   },
   "stories": [
     {
-      "id": "s_55228da85192241d",
+      "id": "s_6f420ceb11ea47b6",
       "cat": "rights",
       "badge": "breaking",
       "spotlight": false,
       "quality": 8,
       "tier": "journalism",
-      "title": "Anthropic copyright settlement approved with minimal author opt-outs",
-      "dek": "Judge approves $1.5B settlement; only 350 authors opted out of the largest copyright class action ever certified, ending major litigation over AI training data.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/",
-      "ts": "2026-07-21T17:33:14.000Z",
+      "title": "Anthropic settles $1.5B copyright lawsuit—largest in US history",
+      "dek": "Federal court approves Anthropic's settlement with authors over unauthorized use of copyrighted works in AI training, marking the largest copyright recovery settlement ever.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/anthropic-s-ai-copyright-dispute-with-authors-ends-in-usd1-5-billion-settlement/",
+      "ts": "2026-07-22T11:26:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "top": true,
+      "heat": 115,
+      "move": 56
+    },
+    {
+      "id": "s_ad3e75f937d65ca6",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "AMD invests $5B in Anthropic, deploys MI450 GPUs at scale",
+      "dek": "AMD commits up to $5 billion and 2 gigawatts of AI GPU capacity to Anthropic, expanding compute infrastructure for large-scale model deployment.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal",
+      "ts": "2026-07-22T14:44:27.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 101,
+      "move": 50
+    },
+    {
+      "id": "s_472a28f23659850e",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Autodesk SIGGRAPH 2026: AI animation, Gaussian Splats in 3ds Max and Maya",
+      "dek": "Autodesk announced AI animation tools and Flow integration across 3ds Max and Maya, signaling shift toward generative workflows in 3D production.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/3d/autodesks-siggraph-announcements-look-unrelated-but-they-all-solve-the-same-huge-problem",
+      "ts": "2026-07-22T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 103,
-      "move": 0,
-      "top": true
+      "heat": 93,
+      "move": 48
+    },
+    {
+      "id": "s_4827129120427058",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Google commits $40M in AI compute to DOE's Genesis Mission",
+      "dek": "Google pledges AI tokens and cloud credits to support the Department of Energy's scientific discovery initiative.",
+      "src": "Google DeepMind",
+      "url": "https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/",
+      "ts": "2026-07-22T13:38:54.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 72,
+      "move": 26
+    },
+    {
+      "id": "s_e7be2bf1f7fd9f25",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "US Army runs out of AI tokens as adoption surges",
+      "dek": "After reporting half its workforce uses AI tools, the Army discovered token depletion forcing limits on usage across the department.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/us-army-faces-ai-use-limits-after-exhausting-years-supply-of-ai-tokens/",
+      "ts": "2026-07-22T13:35:17.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 72,
+      "move": 26
+    },
+    {
+      "id": "s_0c30deb4396228f4",
+      "cat": "tools",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Browser wars shift to AI: new alternatives challenge Chrome and Safari",
+      "dek": "As AI becomes integral to browser functionality, startups and Big Tech are launching alternatives that position browsers as AI-powered assistants rather than just windows onto the web.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/",
+      "ts": "2026-07-22T13:20:35.000Z",
+      "read": "4 min",
+      "also": [],
+      "heat": 90,
+      "move": 50
+    },
+    {
+      "id": "s_cd499e47d059c505",
+      "cat": "rights",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Meta's Content Seal watermarking tool targets AI-generated content detection",
+      "dek": "Meta deployed invisible watermarking technology to flag AI-generated content on its platforms, following pressure from its Oversight Board to implement detection tools.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid",
+      "ts": "2026-07-22T11:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 80,
+      "move": 45
+    },
+    {
+      "id": "s_3f5db142d9f8bbf8",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Glow emerges as unicorn to secure endpoints against AI-driven attacks",
+      "dek": "New cybersecurity startup targets enterprise risks from AI agents and developer tools, raising $180M as attackers increasingly automate phishing and malware with generative AI.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/",
+      "ts": "2026-07-22T10:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 87,
+      "move": 52
     },
     {
       "id": "s_aab6fd66ee7556a8",
@@ -95,8 +214,25 @@
       "ts": "2026-07-22T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": 48
+      "heat": 77,
+      "move": -16
+    },
+    {
+      "id": "s_c54f46e53d48e304",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "OpenAI launches Presence enterprise voice and chat agent platform",
+      "dek": "New AI agent platform designed for enterprises to deploy trusted voice and chat systems for customer and internal workflows.",
+      "src": "OpenAI News",
+      "url": "https://openai.com/index/introducing-openai-presence",
+      "ts": "2026-07-22T05:30:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 74,
+      "move": 33
     },
     {
       "id": "s_7d968fc2635a3524",
@@ -112,8 +248,8 @@
       "ts": "2026-07-21T23:55:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 65,
-      "move": 14
+      "heat": 59,
+      "move": -16
     },
     {
       "id": "s_45095198141eb13e",
@@ -129,8 +265,8 @@
       "ts": "2026-07-21T22:06:43.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
-      "move": 3
+      "heat": 47,
+      "move": -12
     },
     {
       "id": "s_69b7eb38cde75406",
@@ -146,8 +282,8 @@
       "ts": "2026-07-21T20:56:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 0
+      "heat": 84,
+      "move": -5
     },
     {
       "id": "s_3fdc40a5e56bd575",
@@ -163,8 +299,8 @@
       "ts": "2026-07-21T20:56:55.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 54
+      "heat": 84,
+      "move": -5
     },
     {
       "id": "s_eed16821fcdd7ed9",
@@ -180,8 +316,8 @@
       "ts": "2026-07-21T20:00:27.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 61,
-      "move": -14
+      "heat": 55,
+      "move": -16
     },
     {
       "id": "s_af59977501275694",
@@ -197,8 +333,8 @@
       "ts": "2026-07-21T19:43:41.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
-      "move": -1
+      "heat": 82,
+      "move": -5
     },
     {
       "id": "s_3dd9888813d83985",
@@ -214,8 +350,8 @@
       "ts": "2026-07-21T19:39:30.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 78,
-      "move": -2
+      "heat": 72,
+      "move": -18
     },
     {
       "id": "s_3a68379c08593a50",
@@ -231,8 +367,8 @@
       "ts": "2026-07-21T19:22:28.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 70,
-      "move": -16
+      "heat": 64,
+      "move": -19
     },
     {
       "id": "s_ade7e27dc611eaa3",
@@ -248,8 +384,25 @@
       "ts": "2026-07-21T18:06:38.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -16
+      "heat": 71,
+      "move": -9
+    },
+    {
+      "id": "s_55228da85192241d",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Anthropic copyright settlement approved with minimal author opt-outs",
+      "dek": "Judge approves $1.5B settlement; only 350 authors opted out of the largest copyright class action ever certified, ending major litigation over AI training data.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/tech-policy/2026/07/judge-approves-anthropics-1-5-billion-copyright-settlement-with-authors/",
+      "ts": "2026-07-21T17:33:14.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 97,
+      "move": -2
     },
     {
       "id": "s_01119b73028b4558",
@@ -265,8 +418,8 @@
       "ts": "2026-07-21T17:11:50.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 93,
-      "move": 0
+      "heat": 87,
+      "move": -5
     },
     {
       "id": "s_d42362617c640879",
@@ -282,8 +435,8 @@
       "ts": "2026-07-21T17:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 48,
-      "move": -7
+      "heat": 42,
+      "move": -9
     },
     {
       "id": "s_08ae2218969a5903",
@@ -299,8 +452,8 @@
       "ts": "2026-07-21T16:58:25.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 93,
-      "move": 0
+      "heat": 87,
+      "move": -5
     },
     {
       "id": "s_0e4d77c4bfc2f390",
@@ -316,8 +469,8 @@
       "ts": "2026-07-21T16:58:02.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 58,
-      "move": -12
+      "heat": 52,
+      "move": -9
     },
     {
       "id": "s_0bd50127700baaab",
@@ -333,8 +486,8 @@
       "ts": "2026-07-21T16:53:37.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 103,
-      "move": 0
+      "heat": 96,
+      "move": -2
     },
     {
       "id": "s_2a32c5e41363369a",
@@ -350,8 +503,8 @@
       "ts": "2026-07-21T15:37:05.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": -16
+      "heat": 68,
+      "move": -13
     },
     {
       "id": "s_5479f7ef8f003060",
@@ -367,8 +520,8 @@
       "ts": "2026-07-21T15:16:30.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 81,
-      "move": -2
+      "heat": 75,
+      "move": -15
     },
     {
       "id": "s_7d7edea89fcf1f37",
@@ -384,8 +537,8 @@
       "ts": "2026-07-21T15:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": -1
+      "heat": 78,
+      "move": -6
     },
     {
       "id": "s_cdd021c25350f21e",
@@ -401,8 +554,8 @@
       "ts": "2026-07-21T15:00:00.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 76,
-      "move": -16
+      "heat": 70,
+      "move": -9
     },
     {
       "id": "s_fcce09c921e58acd",
@@ -418,8 +571,8 @@
       "ts": "2026-07-21T13:27:42.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -2
+      "heat": 78,
+      "move": -5
     },
     {
       "id": "s_b4a8b48c0af258dc",
@@ -435,8 +588,8 @@
       "ts": "2026-07-21T12:21:08.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
-      "move": -16
+      "heat": 68,
+      "move": -13
     },
     {
       "id": "s_ed3452d70ad2061d",
@@ -452,8 +605,8 @@
       "ts": "2026-07-21T11:08:56.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 70,
-      "move": -16
+      "heat": 68,
+      "move": -12
     },
     {
       "id": "s_20b0eb2d5c149974",
@@ -470,7 +623,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -8
     },
     {
       "id": "s_70097351852cb620",
@@ -487,7 +640,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_f07ea0986edc9c35",
@@ -504,7 +657,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -8
     },
     {
       "id": "s_f09cbf6a0ec2257f",
@@ -521,7 +674,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_d573260cad05ebaa",
@@ -538,7 +691,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_17b501c7fe1377af",
@@ -555,7 +708,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_502e6d35fbb7908f",
@@ -572,7 +725,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_c4923a542f7b6a55",
@@ -590,7 +743,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_c0f02d7ca9b061c8",
@@ -607,7 +760,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_43177eeccf608f86",
@@ -624,7 +777,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_a549b2f2489b487f",
@@ -641,7 +794,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_8030c8e0dc091db7",
@@ -658,7 +811,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_cdc3fbd3b50a8a83",
@@ -675,7 +828,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -692,7 +845,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_93c83145e8c7884e",
@@ -709,7 +862,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -8
     },
     {
       "id": "s_90cef26b7e07e68a",
@@ -726,7 +879,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_d4ff9ec891b78868",
@@ -743,7 +896,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -3
+      "move": -8
     },
     {
       "id": "s_6dea1640e408017e",
@@ -760,7 +913,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -8
     },
     {
       "id": "s_c57b245c362dd255",
@@ -778,7 +931,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_444761f503abeda7",
@@ -796,7 +949,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": -5
     },
     {
       "id": "s_90851a797dd057ee",
@@ -813,7 +966,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -8
     },
     {
       "id": "s_c0ef7a87d4b35aa6",
@@ -830,7 +983,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_5767ddd493bb4165",
@@ -847,7 +1000,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -8
     },
     {
       "id": "s_c60035e6bb3c677d",
@@ -864,7 +1017,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_01582b84f95050bc",
@@ -881,7 +1034,7 @@
       "read": "4 min",
       "also": [],
       "heat": 60,
-      "move": -2
+      "move": -7
     },
     {
       "id": "s_3ad838364711ce9b",
@@ -898,7 +1051,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 4
+      "move": -3
     },
     {
       "id": "s_4e6f73ed1f19a4ce",
@@ -915,7 +1068,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -1
+      "move": -8
     },
     {
       "id": "s_2eed32c959cdf779",
@@ -932,160 +1085,7 @@
       "read": "5 min",
       "also": [],
       "heat": 60,
-      "move": -2
-    },
-    {
-      "id": "s_a49f55bafe0aeb0e",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Always-on AI transcription: the backlash and workarounds",
-      "dek": "AI note-taking apps are fueling ubiquitous meeting recording, sparking pushback. The piece explores how creators and professionals are responding to widespread automated transcription.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/17/the-zoom-hack-that-says-dont-record-me/",
-      "ts": "2026-07-17T21:20:47.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 60,
-      "move": -2
-    },
-    {
-      "id": "s_133497b699bf0fd6",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "AI chip demand reshapes smartphone market, driving prices up in India",
-      "dek": "Memory manufacturers are diverting RAM and storage capacity toward AI accelerators, leaving less supply and raising costs for consumer devices. India's 10% smartphone shipment drop signals the disruption has arrived.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/",
-      "ts": "2026-07-17T20:09:27.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 78,
-      "move": 4
-    },
-    {
-      "id": "s_b51b6c107383df8e",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "TikTok testing AI likeness detection tool for creators",
-      "dek": "TikTok is piloting an opt-in tool to detect AI-generated likenesses of creators and enable reporting. The feature mirrors YouTube's similar detection capability, offering creators protection against synthetic impersonation.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/967486/tiktok-ai-likeness-detection-tool",
-      "ts": "2026-07-17T19:34:30.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": 4
-    },
-    {
-      "id": "s_ac7be8d09d06872b",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Apple trade secrets lawsuit against OpenAI threatens IPO timeline",
-      "dek": "Apple alleges OpenAI hired over 400 former employees and engaged in misconduct reaching executive level. The timing complicates OpenAI's reported 2026 IPO plans and raises questions about data trust at AI companies.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/",
-      "ts": "2026-07-17T17:45:46.000Z",
-      "read": "5 min",
-      "also": [],
-      "heat": 68,
-      "move": -1
-    },
-    {
-      "id": "s_4d76675668887bf8",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "San Francisco orders removal of AI nudify apps from app stores",
-      "dek": "Apple and Google received cease-and-desist letters to remove 13 nudification apps that use AI to create non-consensual explicit images from ordinary photos.",
-      "src": "Ars Technica AI",
-      "url": "https://arstechnica.com/tech-policy/2026/07/apple-google-must-stop-profiting-off-ai-nudify-apps-san-francisco-ag-says/",
-      "ts": "2026-07-17T16:10:05.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 78,
-      "move": 4
-    },
-    {
-      "id": "s_a0bbc2c6e6f2a453",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "NVIDIA NeMo Automodel enables large-scale video and image model fine-tuning",
-      "dek": "NVIDIA and Hugging Face joint effort adds fine-tuning at scale for video and image diffusion models, including support for FLUX checkpoints and LoRA examples.",
-      "src": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/nvidia/scale-diffusers-finetuning-nemo-automodel",
-      "ts": "2026-07-17T15:57:54.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 70,
-      "move": -1
-    },
-    {
-      "id": "s_7be29e0c57cbc116",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Patreon blocks AI scraping with Cloudflare enforcement",
-      "dek": "Patreon is actively blocking AI training bots via Cloudflare, shifting from passive robots.txt rules to direct access denial as scraping tactics grow more sophisticated.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/",
-      "ts": "2026-07-17T15:21:17.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": 4
-    },
-    {
-      "id": "s_04f6651476d4c4ae",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Google open-sources GNM Head, parametric 3D human head model",
-      "dek": "Google releases generative anthropomorphic 3D head model (170+ controls, expression/pose adjustable) with free Blender add-on; trained on 3D scans, not AI-generated but explicitly generative for facial variation.",
-      "src": "80 Level",
-      "url": "https://80.lv/articles/google-open-sources-gnm-head-3d-parametric-human-head-model/",
-      "ts": "2026-07-17T11:56:00.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 60,
-      "move": -2
-    },
-    {
-      "id": "s_3ff6c4eb3a8015a3",
-      "cat": "video",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Google Vids adds Gemini Omni conversational editing and personal avatars",
-      "dek": "Google Vids update enables natural-language editing via Gemini Omni and AI-generated personal avatars for video starring, supporting multi-modal input (audio, video, photos, text).",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/17/google-vids-gets-conversational-editing-tools-and-personal-avatars/",
-      "ts": "2026-07-17T10:42:08.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 78,
-      "move": 4
+      "move": -7
     }
   ],
   "models": [
@@ -1153,34 +1153,34 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 24
+      "c": 22
     },
     {
       "n": "The Verge AI",
-      "c": 10
+      "c": 11
     },
     {
       "n": "PetaPixel",
-      "c": 6
+      "c": 5
+    },
+    {
+      "n": "Creative Bloq AI",
+      "c": 4
     },
     {
       "n": "Ars Technica AI",
       "c": 4
     },
     {
-      "n": "Hugging Face Blog",
+      "n": "OpenAI News",
       "c": 4
     },
     {
-      "n": "OpenAI News",
+      "n": "Hugging Face Blog",
       "c": 3
     },
     {
       "n": "dailyblip",
-      "c": 3
-    },
-    {
-      "n": "Creative Bloq AI",
       "c": 3
     }
   ],
@@ -1190,9 +1190,9 @@
     "#anthropic",
     "#hugging",
     "#face",
-    "#nvidia",
     "#gemini-36",
-    "#flash"
+    "#flash",
+    "#project"
   ],
   "tooldrop": {
     "name": "LayerProof Mylar",
@@ -1202,9 +1202,9 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 11,
-    "published_today": 23,
+    "scanned_last_run": 25,
+    "published_today": 26,
     "sources_live": 13,
-    "slopped_last_run": 7
+    "slopped_last_run": 16
   }
 }
