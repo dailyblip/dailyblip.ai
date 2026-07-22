@@ -142,7 +142,8 @@ button{font-family:inherit;color:inherit;background:none;border:none;cursor:poin
 .guide-card h3{font-family:var(--display);font-weight:640;font-size:16px;line-height:1.35}
 .guide-card h3 a:hover{color:var(--amber)}
 .guide-card p{color:var(--dim);font-size:13px;line-height:1.5;flex:1}
-.guide-card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:4px;font-family:var(--mono);font-size:11px;color:var(--faint)}
+.guide-card .foot{display:flex;justify-content:space-between;align-items:center;margin-top:4px;font-family:var(--mono);font-size:11px;color:var(--faint);gap:8px}
+.guide-card .foot>span:first-child{white-space:nowrap;flex-shrink:0}
 .guide-tag-chip{color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:2px 8px}
 
 /* ---------- tool drop (premium, full-width — the sponsorship slot) ---------- */
@@ -1219,13 +1220,20 @@ async function renderGuidesFeature(){
     // (with nothing here to catch it if it ever didn't) is exactly the
     // kind of fragile assumption this pipeline has been burned by
     // before. Cheap to just verify locally instead of trusting it.
-    const featured = guides.slice().sort((a, b) => new Date(b.published_at) - new Date(a.published_at)).slice(0, 3);
+    const sorted = guides.slice().sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
+    // Pinned guides always show, regardless of age (up to 3, enforced
+    // at pin-time in admin.html) \u2014 remaining slots fill newest-first
+    // from whatever's left, same as before pins existed.
+    const pinned = sorted.filter(g => g.pinned).slice(0, 3);
+    const pinnedSlugs = new Set(pinned.map(g => g.slug));
+    const fillCount = Math.max(0, 3 - pinned.length);
+    const featured = [...pinned, ...sorted.filter(g => !pinnedSlugs.has(g.slug)).slice(0, fillCount)];
     wrap.style.display = "block";
     $("#guidesFeatureGrid").innerHTML = featured.map(g => `
       <div class="guide-card">
         <div class="guide-card-thumb">${g.hero_image ? `<img src="${esc(g.hero_image)}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">` : ""}</div>
         <div class="guide-card-body">
-          <h3><a href="guides/${esc(g.slug)}.html">${esc(g.title)}</a></h3>
+          <h3><a href="guides/${esc(g.slug)}.html">${esc(g.title)}${g.pinned ? ' <span class="pin-badge" title="Pinned">\ud83d\udccc</span>' : ""}</a></h3>
           <p>${esc(g.dek)}</p>
           <div class="foot">
             <span>${g.published_at ? new Date(g.published_at).toLocaleDateString("en-US",{month:"short",day:"numeric"}) : ""}</span>
