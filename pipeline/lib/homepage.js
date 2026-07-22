@@ -102,11 +102,40 @@ function guideCardHtmlSSR(g) {
 // string, not a browser. Only ever replaces what's between the opening
 // and closing tag of that exact element; everything outside it, and
 // everything about the opening tag's own attributes, is left untouched.
+// Finds the CLOSING tag that actually matches the opening tag, tracking
+// nesting depth rather than just grabbing the first occurrence of
+// closeTag. This matters specifically for div-based containers: on a
+// second bake, the container already has nested divs inside it (guide
+// cards, story cards each have their own internal divs), so a naive
+// "first </div> after the opening tag" search would match an INNER
+// div's closing tag instead of the container's own -- truncating the
+// replacement in the wrong spot and leaving old content stranded
+// outside the new content. This is exactly what caused the duplicated,
+// fragmented output on a second run.
+function findMatchingClose(html, startOfContent, openTagName, closeTag) {
+  if (openTagName !== "div") {
+    // h1/ul don't nest within themselves in this content, so the first
+    // occurrence is always the right one.
+    const idx = html.indexOf(closeTag, startOfContent);
+    return idx === -1 ? -1 : idx;
+  }
+  let depth = 1, pos = startOfContent;
+  const tagRe = /<div[^>]*>|<\/div>/g;
+  tagRe.lastIndex = startOfContent;
+  let m;
+  while ((m = tagRe.exec(html))) {
+    if (m[0] === "</div>") { depth--; if (depth === 0) return m.index; }
+    else depth++;
+  }
+  return -1;
+}
+
 function replaceElementContent(html, tagOpenRegex, closeTag, newInner) {
   const openMatch = html.match(tagOpenRegex);
   if (!openMatch) return { html, found: false };
   const startOfContent = openMatch.index + openMatch[0].length;
-  const closeIdx = html.indexOf(closeTag, startOfContent);
+  const openTagName = closeTag.replace(/^<\/|>$/g, "");
+  const closeIdx = findMatchingClose(html, startOfContent, openTagName, closeTag);
   if (closeIdx === -1) return { html, found: false };
   const updated = html.slice(0, startOfContent) + newInner + html.slice(closeIdx);
   return { html: updated, found: true };
@@ -177,11 +206,25 @@ export function bakeHomepage(currentHtml, feed, guidesManifest) {
   // real data even before boot()'s own fetch resolves, same reasoning
   // as the library page embedding its manifest directly.
   const feedJson = JSON.stringify(feed).replace(/</g, "\\u003c").replace(/\u2028/g, "\\u2028").replace(/\u2029/g, "\\u2029");
-  const feedVarMatch = html.match(/let FEED = \{[\s\S]*?\n\};/);
-  if (feedVarMatch) {
-    html = html.replace(feedVarMatch[0], `let FEED = ${feedJson};`);
+  const feedStart = html.indexOf("let FEED = {");
+  if (feedStart !== -1) {
+    // Depth-tracked scan for the matching closing brace, rather than a
+    // regex assuming a specific formatting (multi-line original vs.
+    // single-line JSON from a previous bake) -- the same class of bug
+    // as replaceElementContent above, fixed the same way.
+    const objStart = feedStart + "let FEED = ".length;
+    let depth = 0, end = -1;
+    for (let i = objStart; i < html.length; i++) {
+      if (html[i] === "{") depth++;
+      else if (html[i] === "}") { depth--; if (depth === 0) { end = i + 1; break; } }
+    }
+    if (end !== -1 && html[end] === ";") {
+      html = html.slice(0, feedStart) + `let FEED = ${feedJson};` + html.slice(end + 1);
+    } else {
+      notes.push("found `let FEED = {` but could not locate its matching closing brace + semicolon");
+    }
   } else {
-    notes.push("could not find the `let FEED = {...}` block to replace with real data");
+    notes.push("could not find `let FEED = {` to replace with real data");
   }
 
   return { html, notes };
