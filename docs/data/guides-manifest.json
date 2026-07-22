@@ -12,18 +12,6 @@
     "pinned": false
   },
   {
-    "title": "15 Midjourney Prompts for Editorial Illustrations and Article Hero Images",
-    "slug": "15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images",
-    "dek": "Clean, composed images for blogs, newsletters, and explainer articles.",
-    "hero_image": "/guides/19.jpg",
-    "published_at": "2026-07-14T12:00:00.000Z",
-    "tags": [
-      "Image Generation",
-      "Tools & Workflow"
-    ],
-    "pinned": false
-  },
-  {
     "title": "How to Create a Consistent Visual Style in Midjourney",
     "slug": "how-to-create-a-consistent-visual-style-in-midjourney",
     "dek": "Reuse style references and prompt language across a whole campaign or series.",
@@ -176,6 +164,18 @@
     "tags": [
       "AI Music",
       "Getting Started"
+    ],
+    "pinned": false
+  },
+  {
+    "title": "15 Midjourney Prompts for Editorial Illustrations and Article Hero Images",
+    "slug": "15-midjourney-prompts-for-editorial-illustrations-and-article-hero-images",
+    "dek": "Clean, composed images for blogs, newsletters, and explainer articles.",
+    "hero_image": "/guides/19.jpg",
+    "published_at": "2026-07-14T12:00:00.000Z",
+    "tags": [
+      "Image Generation",
+      "Tools & Workflow"
     ],
     "pinned": false
   },
