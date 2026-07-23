@@ -880,7 +880,7 @@
   {
     "id": "agent-1784787139935-82p09z",
     "status": "ready_for_review",
-    "stage": "Ready for review",
+    "stage": "Formatting",
     "created_at": "2026-07-23T06:12:19.936Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 1 -- Concept and Design",
@@ -915,7 +915,7 @@
       ],
       "research_plan": "Prioritize indie game dev communities and solo developer writing (itch.io devlogs, game jam postmortems, r/gamedev, Mastodon/Substack indie dev voices) over big studio methodology — these will reflect realistic solo scope. Look for practical one-page GDD templates that are actually used, not enterprise design doc formats. For the AI-assisted design angle, look at how creators are currently using conversational AI (ChatGPT, Claude) as a brainstorming and doc-drafting partner at the concept stage, not just for asset generation. Avoid sources that are either too academic (formal game design theory) or too hype-driven (AI will build your game for you). Confirm framework names and browser-game basics from official or well-maintained community sources."
     },
-    "updated_at": "2026-07-23T06:17:01.257Z",
+    "updated_at": "2026-07-23T06:20:20.446Z",
     "sources": [
       {
         "title": "Browser game",
@@ -1218,6 +1218,92 @@
     "warnings": [
       "s2: The source states Phaser 4 stable ('Caladan') shipped April 10, 2026, which is spring 2026 — but the article's vague 'spring 2026' framing combined with calling it a 'stable new major version' is accurate; however, the article does not name it as Phaser 4, leaving readers unable to search for it, and 'spring 2026' could mislead readers about recency given the article's own review date of July 23, 2026 makes this only ~3 months old, which is fine — the real issue is the unnamed version creates a verification dead-end for readers.",
       "s2: The GDevelop tool card in the same section lists 'Mostly 2D — not the right pick if you want even lightweight 3D' as a limitation, directly contradicting the body text's claim that GDevelop 'has some lightweight 3D capability.'"
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "agent-1784787139935-82p09z-img1.jpg",
+        "prompt": "Flat vector illustration, 16:9 format, deep navy gradient background from #071A1F to #0C242B. Dead center of the frame: one thick, bold horizontal amber bar (#FFB454), clean geometric rectangle, clearly the structural anchor of the composition. Surrounding it at comfortable distance — above, below, and to the sides — are 4 to 5 smaller geometric shapes (circles, diamonds, hexagons) in muted aqua (#63D8C6) at roughly 40% opacity, visually deferring to the central bar. The overall feel is architectural — the amber bar is the keystone, everything else is secondary. No text labels in the image. Generous safe margin: all elements stay at least 10% away from every frame edge. No interfaces, no characters, no screens, no photorealistic rendering, no glowing brains, no gradients other than the background. Clean, even spacing, professional infographic quality.",
+        "placement": "hero",
+        "alt_text": "A bold amber structural bar at the center of a dark navy background, surrounded by faint geometric shapes in aqua, representing the core loop as the foundation of a browser game design.",
+        "caption": "Everything — art, mechanics, story, progression — wraps around the core loop. Get that one sentence right before touching any tool.",
+        "generated_at": "2026-07-23T06:18:53.929Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A single glowing amber sentence — the core loop — as the foundation everything else is built on, rendered as a bold architectural keystone on a dark navy background.",
+        "purpose": "Immediately communicate the guide's central argument: one sentence is the whole job before any tool gets opened.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "agent-1784787139935-82p09z-img2.jpg",
+        "prompt": "Flat vector illustration, 1:1 square format, dark navy background (#071A1F). A circular arrow path rendered in warm amber (#FFB454) forms a clockwise loop that occupies roughly the central 60% of the frame. At 12 o'clock, 3 o'clock, 6 o'clock, and 9 o'clock on the loop, place four small flat icon nodes inside navy-bordered circles: a simple playing card shape at top, a hand-over-surface icon at right, a small grid or three-bar change icon at bottom, and a forking arrow icon at left. Beneath each node, one single short label in clean sans-serif white text. The node at 9 o'clock (decision) is highlighted in aqua (#63D8C6) instead of amber to distinguish it. Center of the circle is empty. All elements stay at least 12% from every frame edge. No decorative backgrounds, no textures, no photorealism, no more than 4 text labels, clean even spacing throughout.",
+        "placement": "s1",
+        "alt_text": "A circular diagram showing the four steps of a card game core loop: draw, play, see what changes, and decide — with the decision step highlighted in aqua.",
+        "caption": "The core loop for a card game: draw a card, play it, see what changes, decide your next move. If there's no real decision at the end of each cycle, the loop isn't working yet.",
+        "generated_at": "2026-07-23T06:19:08.445Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "The core loop cycle shown as a clean 4-step circular diagram: draw → play → see what changes → decide next move — using the card game example the article actually gives.",
+        "purpose": "Make the abstract idea of a 'repeatable core loop' concrete by showing the specific card-game example from the article as a visual cycle.",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "agent-1784787139935-82p09z-img3.jpg",
+        "prompt": "Flat vector illustration, 9:16 portrait format, dark navy background (#0C242B). Six evenly spaced horizontal rounded rectangles stacked vertically, occupying the central 70% of the canvas height, with at least 15% margin at top and bottom. Each rectangle is approximately the same height and width. Five of the six rows have a muted dark teal fill (#0C242B with a lighter border); one row — the fifth, labeled 'Out of Scope' — has a solid warm amber fill (#FFB454) to distinguish it as most important. On the left side of each row, a simple flat geometric icon (pencil, loop arrow, puzzle piece, monitor, X-circle, star). On the right side of each row, one short label in clean white sans-serif text. A thin aqua (#63D8C6) vertical line connects all rows on the left margin. All elements stay well within the frame — minimum 8% side margin, 15% top and bottom margin. No shadows, no gradients on the rows, no decorative background texture, no more than 6 short text labels total.",
+        "placement": "s2",
+        "alt_text": "A stacked list of six sections in a one-page game design doc, with the Out of Scope section highlighted in amber as the most critical entry.",
+        "caption": "The micro-GDD structure: six sections, one page. The Out of Scope row gets the amber highlight for a reason — write it early and mean it.",
+        "generated_at": "2026-07-23T06:19:27.464Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "The one-page design doc's six sections stacked vertically as a clean list-style visual, with 'Out of Scope' visually emphasized as the most important section.",
+        "purpose": "Show readers the exact structure of the micro-GDD the article prescribes — elevator pitch, core loop, primary mechanic, platform, out of scope — so the format feels approachable and concrete.",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img4",
+        "file": "agent-1784787139935-82p09z-img4.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape format, dark navy background (#071A1F). The canvas is divided vertically into two equal panels by a thin aqua (#63D8C6) center line. Left panel title at top: 'No loop yet' in small muted white sans-serif text, centered. Left panel contents: 5 to 6 small geometric shapes (circles, rectangles, triangles) scattered loosely in the panel, no alignment, connected by faint grey dotted lines — visually unsettled. Right panel title at top: 'Loop defined' in small bright white sans-serif text, centered. Right panel contents: the same shapes now orbiting a central bold amber (#FFB454) horizontal bar, connected by solid amber lines — visually organized. Both panels have at least 10% breathing room from the outer frame edges — the leftmost element in the left panel and the rightmost element in the right panel each have explicit clear margin from the frame edge. No more than 2 short text labels in the image. No textures, no shadows, no photorealism, no additional decorative elements.",
+        "placement": "s1",
+        "alt_text": "A side-by-side comparison showing scattered unconnected shapes representing a concept without a core loop sentence on the left, versus the same shapes organized around a central amber bar on the right once the loop is defined.",
+        "caption": "Can't write the core loop in one sentence? The concept isn't ready. Once you can, everything else has something to organize around.",
+        "generated_at": "2026-07-23T06:19:49.516Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "Side-by-side contrast between 'concept not ready' (no core loop sentence) and 'concept ready' (one sentence written) — showing the visual difference between open/indefinite options versus a committed decision.",
+        "purpose": "Illustrate the article's key argument that you can't tell if a concept is ready until you can write the core loop in one sentence — and show what 'not ready' actually looks like versus 'ready.'",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img5",
+        "file": "agent-1784787139935-82p09z-img5.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape format, dark navy background (#0C242B). Three large flat circles arranged horizontally across the center of the canvas, evenly spaced. The leftmost circle has an amber border (#FFB454) and contains a flat pencil icon. The center circle has an aqua fill (#63D8C6) and contains a flat document/page icon. The rightmost circle has an amber border and contains a flat X-circle icon. The three circles are connected by bold amber right-pointing arrow connectors between them. Beneath each circle, a short two-word white sans-serif label. The leftmost circle's outer edge is at least 15% from the left frame edge. The rightmost circle's outer edge is at least 15% from the right frame edge. All elements are vertically centered in the frame with comfortable top and bottom space. No more than 3 short text labels. No gradients on the nodes, no shadows, no photorealism, no tool logos or brand names rendered as image text, no crowding.",
+        "placement": "s2",
+        "alt_text": "A three-step workflow diagram: write the core loop sentence, fill the one-page design doc, define what's out of scope — all before opening any tool.",
+        "caption": "The pre-build sequence: core loop sentence first, one-page doc second, Out of Scope list last. Only then does any tool get opened.",
+        "generated_at": "2026-07-23T06:20:07.222Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "A three-step linear workflow showing the exact pre-build sequence the article prescribes: write the one-sentence loop → fill the one-page doc → mark what's out of scope — before any tool is opened.",
+        "purpose": "Give readers a concrete visual sequence for the process the guide describes, making it feel like a repeatable workflow rather than just advice.",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img6",
+        "file": "agent-1784787139935-82p09z-img6.jpg",
+        "prompt": "Flat vector illustration, 1:1 square format, dark navy background (#071A1F). Dead center of the canvas: one flat amber-bordered rectangle (#FFB454 border, 3px thick, no fill or very dark navy fill) occupying approximately 55% of the canvas width and 50% of the canvas height. Inside the rectangle: four evenly spaced horizontal rows, each containing a small flat X icon in amber on the left and a short horizontal grey bar (representing a struck-through item) on the right — no text inside the box. Outside the rectangle, drifting away at comfortable distance (top-left, top-right, and bottom-right of the box, not near the frame edge): three small geometric shapes in muted aqua (#63D8C6 at 50% opacity), representing excluded features floating away. No text labels anywhere in the image. All elements stay at least 10% from every frame edge. No shadows, no photorealism, no gradients other than the background, no cluttered layout. Clean, decisive, minimal.",
+        "placement": "s2",
+        "alt_text": "A centered amber-bordered box containing four crossed-out rows, with three muted aqua shapes floating outside it, representing features deliberately excluded from the game's scope.",
+        "caption": "The Out of Scope section is a boundary, not an afterthought. Writing it early — and meaning it — is what keeps a solo game project from quietly expanding until it never ships.",
+        "generated_at": "2026-07-23T06:20:20.446Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "The 'Out of Scope' section as a visual spotlight — a single list of crossed-out items inside a bounded box, with amber emphasis on the box itself as a 'container that protects the project.'",
+        "purpose": "Reinforce the article's strongest takeaway: the Out of Scope section is the most important part of the design doc, and visually show what it looks like — a deliberate list of things you've decided not to build.",
+        "aspect_ratio": "1:1"
+      }
     ]
   }
 ]
