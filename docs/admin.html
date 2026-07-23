@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1314,6 +1313,28 @@ function openGuide(id){
         ${g.warnings.map(w => `<div style="font-size:12.5px;color:var(--dim);padding:4px 0">${esc(w)}</div>`).join("")}
       </div>` : "";
 
+  // Evergreen scan results (pipeline/lib/evergreen-scan.js) -- flags
+  // only, nothing here was auto-edited. Same visual treatment as the
+  // fact-check warnings above, but amber rather than red since this is
+  // a "worth a look" signal, not a confirmed problem the way a fact-
+  // check issue is.
+  const evergreenHtml = (g.evergreen_flags || []).length
+    ? `<div class="panel" style="border-color:rgba(255,180,84,.4);background:rgba(255,180,84,.05);margin-bottom:14px">
+        <div class="tip" style="color:var(--amber);margin-bottom:6px">\u25a1 ${g.evergreen_flags.length} version/date-specific mention(s) to review</div>
+        ${g.evergreen_flags.map(f => `<div style="font-size:12px;color:var(--dim);padding:4px 0;border-top:1px solid var(--line)">
+          <span style="color:var(--amber)">${esc(f.category)}</span> in ${esc(f.field)}: <span style="font-family:var(--mono)">${esc(f.context)}</span>
+        </div>`).join("")}
+      </div>` : "";
+
+  // Series context -- purely informational, shown whenever this guide
+  // was generated as part of a multi-part series (see
+  // pipeline/guide-agent.js), so the reviewer has the same context a
+  // reader would get from the published page's own series nav.
+  const seriesHtml = a.series
+    ? `<div class="panel" style="border-color:rgba(99,216,198,.4);background:rgba(99,216,198,.04);margin-bottom:14px">
+        <div class="tip" style="color:var(--aqua)">\ud83d\udd17 Part ${a.series_part} of ${a.series_total} \u2014 ${esc(a.series_title)}</div>
+      </div>` : "";
+
   const sectionsHtml = (a.sections || []).map((s, i) => `
     <div class="panel" style="margin-bottom:10px">
       <label>Section ${i+1} heading</label>
@@ -1327,14 +1348,41 @@ function openGuide(id){
     ...(g.article?.sections || []).map(s => `<option value="${esc(s.id)}">${esc(s.heading || s.id)}</option>`)].join("");
   const imagesGridHtml = (g.images || []).length
     ? `<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:10px">
-        ${g.images.map((img, i) => `
+        ${g.images.map((img, i) => {
+          if (img.needs_upload) {
+            // Comparison slot needing a manual Midjourney upload -- no
+            // official Midjourney API exists (see project notes), so
+            // this is a deliberate human-in-the-loop step, not a
+            // generation that's still pending. Shows the exact prompt
+            // to run through Midjourney so the comparison stays
+            // apples-to-apples with the other models.
+            return `<div style="border:1px dashed var(--line-strong);border-radius:8px;padding:10px">
+              <div class="tip" style="color:var(--amber);margin-bottom:6px">\u25a1 Midjourney \u2014 needs manual upload</div>
+              <div style="font-size:11.5px;color:var(--dim);background:var(--ink-2);border-radius:6px;padding:8px;margin-bottom:8px;word-break:break-word">${esc(img.prompt)}</div>
+              <input type="file" class="gMjUploadFile" data-img-index="${i}" accept="image/*" style="width:100%;font-size:11px">
+              <button class="btn amber gMjUploadBtn" data-img-index="${i}" style="width:100%;margin-top:6px;font-size:12px">Upload Midjourney image</button>
+            </div>`;
+          }
+          if (img.generation_failed) {
+            // Genuinely attempted and failed (bad key, rate limit,
+            // content-policy rejection, etc.) -- distinct from the
+            // upload slot above specifically so a reviewer can tell
+            // "this broke" apart from "this is waiting on a manual
+            // step," rather than both just showing up as an empty gap.
+            return `<div style="border:1px dashed rgba(255,122,107,.4);border-radius:8px;padding:10px">
+              <div class="tip" style="color:var(--red);margin-bottom:6px">\u26a0 ${esc(img.model || img.caption)} \u2014 generation failed</div>
+              <div style="font-size:11.5px;color:var(--dim)">${esc(img.error || "Unknown error")}</div>
+            </div>`;
+          }
+          return `
           <div style="border:1px solid ${img.approved ? "var(--amber)" : "var(--line-2)"};border-radius:8px;padding:8px;transition:border-color .15s ease">
             <img src="/guides/${esc(img.file)}" style="width:100%;border-radius:6px;display:block" alt="${esc(img.alt_text)}">
             <label style="display:flex;align-items:center;gap:6px;margin-top:8px;cursor:pointer">
               <input type="checkbox" class="gImgSelect" data-img-index="${i}" ${img.approved ? "checked" : ""} style="width:auto">
-              <span class="tip">${esc(img.role || img.placement)}</span>
+              <span class="tip">${esc(img.model ? `${img.model} (${img.role || img.placement})` : (img.role || img.placement))}</span>
             </label>
-          </div>`).join("")}
+          </div>`;
+        }).join("")}
       </div>` : `<p class="tip" style="margin-top:10px">No images yet.</p>`;
   const imagesHtml = `<div class="panel"><h3>Images (${selectedCount} of ${(g.images||[]).length} selected)</h3>
       <p class="tip" style="margin:0 0 10px">Check the ones to include in the published guide \u2014 uncheck any you don't want.</p>
@@ -1365,7 +1413,9 @@ function openGuide(id){
     <h3>Review draft</h3>
     <p class="tip" style="margin:0 0 12px">Nothing publishes until you click Publish below.</p>
     ${publishErrorHtml}
+    ${seriesHtml}
     ${warnHtml}
+    ${evergreenHtml}
     <label>Title</label><input id="gaTitle" value="${esc(a.title)}">
     <label style="margin-top:10px">Dek</label><textarea id="gaDek" rows="2">${esc(a.dek)}</textarea>
     <label style="margin-top:10px">Meta description</label><input id="gaMeta" value="${esc(a.meta_description)}">
@@ -1396,6 +1446,7 @@ function openGuide(id){
     // full panel re-render for something this small.
     e.target.closest("div[style*='border']").style.borderColor = e.target.checked ? "var(--amber)" : "var(--line-2)";
   }));
+  $$(".gMjUploadBtn").forEach(btn => btn.addEventListener("click", () => uploadMidjourneyImage(id, Number(btn.dataset.imgIndex))));
   $("#gApprovePublish")?.addEventListener("click", () => saveGuideEdits(id, true));
   $("#gPhotoAdd")?.addEventListener("click", () => uploadGuidePhoto(id));
   $("#gRecheck")?.addEventListener("click", () => rerunFactCheck(id));
@@ -1540,6 +1591,46 @@ async function uploadGuidePhoto(id) {
 
     toast("Photo added.");
     openGuide(id); // re-render so the new photo shows up in the grid immediately
+  } catch (e) {
+    toast(e.message, "err", 6000);
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+async function uploadMidjourneyImage(id, imgIndex) {
+  const g = guides.find(x => x.id === id);
+  const fileInput = document.querySelector(`.gMjUploadFile[data-img-index="${imgIndex}"]`);
+  const file = fileInput?.files?.[0];
+  if (!g || !file) { toast("Choose a Midjourney image file first.", "err"); return; }
+
+  const btn = document.querySelector(`.gMjUploadBtn[data-img-index="${imgIndex}"]`);
+  btn.disabled = true;
+  try {
+    const base64 = await resizeImageForUpload(file);
+    const filename = `${id}-cmp-midjourney-${Date.now()}.jpg`;
+    await writeBinaryFile(`docs/guides/${filename}`, base64, `admin: upload Midjourney comparison image for guide ${id}`);
+
+    // Replace the existing placeholder entry in place (same index),
+    // rather than appending a new one -- this slot already exists in
+    // the comparison set, just waiting on this one manual step.
+    const existing = g.images[imgIndex];
+    g.images[imgIndex] = {
+      ...existing, file: filename, needs_upload: false,
+      alt_text: `Midjourney output for the prompt: ${existing.prompt}`,
+      approved: true, generated_at: new Date().toISOString(),
+    };
+
+    await loadGuidesFile();
+    await writeGuidesWithRetry(gs => {
+      const i = gs.findIndex(x => x.id === id);
+      const updated = [...gs];
+      if (i === -1) updated.push(g); else updated[i] = g;
+      return updated;
+    }, `admin: add Midjourney comparison image to guide ${id}`);
+
+    toast("Midjourney image added.");
+    openGuide(id); // re-render so the slot now shows the real image
   } catch (e) {
     toast(e.message, "err", 6000);
   } finally {
