@@ -1,22 +1,28 @@
 // pipeline/guide-agent.js — the weekly, mostly-autonomous guide
-// generation agent. Ties together the topic queue (lib/guide-topics.js),
-// the existing on-demand guide pipeline (guide.js, driven via its CLI,
-// unchanged), the multi-model image comparison (lib/image-comparison.js),
-// series linking metadata, and the evergreen language scan
-// (lib/evergreen-scan.js).
+// generation agent. Split into two CLI commands, "start" and "finish",
+// rather than one long-running script -- this matters for the same
+// reason guide.yml commits after every individual stage rather than
+// once at the end: if a stage partway through fails (a flaky API call,
+// a rate limit), everything committed so far survives, and a retry
+// resumes from there instead of re-running (and re-paying for) stages
+// that already succeeded. A single all-in-one script would lose that
+// resilience entirely -- a failure on, say, the factcheck stage would
+// silently discard the brief/research/draft work already paid for.
 //
-// Deliberately reuses guide.js's stage functions via its existing CLI
-// rather than importing/refactoring them directly -- guide.js already
-// owns job persistence (getJob/saveJob) and is a proven, working
-// pipeline; shelling out to it stage by stage means this agent adds
-// zero risk of subtly changing behavior that's already correct.
+// The actual pipeline stages themselves (brief/research/draft/
+// factcheck/recheck/images/format) are NOT run from here at all -- the
+// workflow calls guide.js directly for each one, exactly like guide.yml
+// already does for on-demand guides, with its own commit-and-conflict-
+// resolve step between each. This file only handles what's genuinely
+// new: picking the topic and creating the job ("start"), and the
+// post-pipeline work of image comparison, the evergreen scan, and
+// series metadata ("finish").
 //
-// Ends with the job at status "ready_for_review", same as a normal
-// on-demand guide -- this NEVER auto-publishes. That's an explicit,
-// deliberate choice: guides make concrete technical claims that can be
-// wrong or go stale, unlike commentary's opinion pieces, so a human
-// still approves every guide before it goes live, agent-generated or not.
-import { execSync } from "node:child_process";
+// Ends every job at status "ready_for_review", same as a normal
+// on-demand guide -- this NEVER auto-publishes. Deliberate: guides make
+// concrete technical claims that can be wrong or go stale, unlike
+// commentary's opinion pieces, so a human still approves every guide
+// before it goes live, agent-generated or not.
 import fs from "node:fs";
 import { loadGuides, saveGuides } from "./lib/store.js";
 import { pickNextTopic, refillTopicsIfNeeded } from "./lib/guide-topics.js";
@@ -25,7 +31,6 @@ import { scanForVersionLanguage } from "./lib/evergreen-scan.js";
 import { askJSON } from "./lib/claude.js";
 
 const AGENT_LOG_PATH = "data/guide-agent-log.json";
-const STAGES = ["brief", "research", "draft", "factcheck", "recheck", "images", "format"];
 
 function loadAgentLog() {
   try {
@@ -42,6 +47,60 @@ function saveAgentLog(log) {
 
 function newJobId() {
   return `agent-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+// Writes a value the calling GitHub Actions workflow can read in later
+// steps (e.g. "echo jobId=... >> $GITHUB_OUTPUT" isn't available from
+// inside a script directly -- this appends to the file GITHUB_OUTPUT
+// itself points at, which is the actual underlying mechanism). Falls
+// back to a plain console line when run outside Actions (local testing).
+function setActionOutput(name, value) {
+  if (process.env.GITHUB_OUTPUT) {
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, `${name}=${value}\n`);
+  } else {
+    console.log(`[output] ${name}=${value}`);
+  }
+}
+
+async function cmdStart() {
+  const log = loadAgentLog();
+  const refillResult = await refillTopicsIfNeeded(log);
+  if (refillResult.generated) console.log(`guide-agent: topic queue refilled with ${refillResult.generated} new topic(s).`);
+  saveAgentLog(log); // persist any newly-generated topics immediately, independent of whether this job later succeeds
+
+  const topic = pickNextTopic(log);
+  console.log(`guide-agent: this week's topic -- "${topic.title}"`);
+
+  const jobId = newJobId();
+  const guides = loadGuides();
+  guides.push({
+    id: jobId,
+    status: "queued",
+    stage: "Queued",
+    created_at: new Date().toISOString(),
+    submitted: {
+      idea: topic.title,
+      article_type: "Practical guide",
+      target_length: "Deep dive",
+      editorial_notes: topic.angle,
+      image_count: topic.needs_image_comparison ? 2 : 3, // fewer normal candidates when the comparison set is doing separate visual work
+    },
+    // Carried alongside the job, read back by "finish" below -- every
+    // stage function in guide.js only ever sets its own specific field
+    // (job.article, job.brief, etc.) on the job it's handed, never
+    // replaces the object wholesale, so this survives untouched through
+    // all seven stages without needing any separate state-passing
+    // mechanism between workflow steps beyond the jobId itself.
+    agent_topic: {
+      id: topic.id, needs_image_comparison: topic.needs_image_comparison,
+      series: topic.series, series_part: topic.series_part,
+      series_total: topic.series_total, series_title: topic.series_title,
+    },
+  });
+  saveGuides(guides);
+
+  setActionOutput("jobId", jobId);
+  console.log(`guide-agent: created job ${jobId}, ready for the pipeline stages to run.`);
 }
 
 // Derives one concrete, triable image prompt from the article's actual
@@ -65,48 +124,20 @@ async function deriveComparisonPrompt(article) {
   return result?.prompt || article.title;
 }
 
-async function main() {
-  const log = loadAgentLog();
-  const refillResult = await refillTopicsIfNeeded(log);
-  if (refillResult.generated) console.log(`guide-agent: topic queue refilled with ${refillResult.generated} new topic(s).`);
-
-  const topic = pickNextTopic(log);
-  console.log(`guide-agent: this week's topic -- "${topic.title}"`);
-
-  const jobId = newJobId();
+async function cmdFinish(jobId) {
+  if (!jobId) throw new Error("usage: node pipeline/guide-agent.js finish <jobId>");
   const guides = loadGuides();
-  guides.push({
-    id: jobId,
-    status: "queued",
-    stage: "Queued",
-    created_at: new Date().toISOString(),
-    submitted: {
-      idea: topic.title,
-      article_type: "Practical guide",
-      target_length: "Deep dive",
-      editorial_notes: topic.angle,
-      image_count: topic.needs_image_comparison ? 2 : 3, // fewer normal candidates when the comparison set is doing separate visual work
-    },
-  });
-  saveGuides(guides);
-
-  // Run the existing, proven pipeline stage by stage via its own CLI --
-  // see module comment for why this reuses guide.js as-is rather than
-  // importing its internals.
-  for (const stage of STAGES) {
-    console.log(`guide-agent: running stage "${stage}"...`);
-    execSync(`node pipeline/guide.js ${stage} ${jobId}`, { stdio: "inherit" });
-  }
-
-  // Re-load the job now that all stages have written their results.
-  const finishedGuides = loadGuides();
-  const job = finishedGuides.find((g) => g.id === jobId);
-  if (!job) throw new Error(`guide-agent: job ${jobId} vanished after pipeline stages -- this should never happen.`);
+  const job = guides.find((g) => g.id === jobId);
+  if (!job) throw new Error(`guide-agent: job ${jobId} not found -- did the pipeline stages actually run first?`);
+  const topic = job.agent_topic;
+  if (!topic) throw new Error(`guide-agent: job ${jobId} has no agent_topic -- was this actually created by "start"?`);
 
   // Multi-model image comparison -- appended AFTER stageImages() has
   // already run and populated job.images, since that stage resets
   // job.images to an empty array at its own start; anything added
-  // before that point would be silently wiped out.
+  // before that point would be silently wiped out. By the time "finish"
+  // runs (after all 7 pipeline stages, each its own workflow step),
+  // that's already long done.
   if (topic.needs_image_comparison) {
     const comparisonPrompt = await deriveComparisonPrompt(job.article);
     console.log(`guide-agent: generating comparison images for prompt: "${comparisonPrompt}"`);
@@ -167,17 +198,27 @@ async function main() {
     job.article.series_title = topic.series_title;
   }
 
-  const finalGuides = loadGuides().map((g) => (g.id === jobId ? job : g));
-  saveGuides(finalGuides);
+  saveGuides(guides.map((g) => (g.id === jobId ? job : g)));
 
-  // Mark the topic used only now, after everything succeeded -- if
-  // anything above threw, the topic stays unused and will simply be
-  // picked again next run rather than being silently lost.
+  // Mark the topic used only now, after everything in "finish" has
+  // succeeded -- if this throws partway through, the topic stays
+  // unmarked and a retry of "finish" (not a whole new job) is the
+  // right recovery, so it's deliberately not marked used any earlier
+  // than this.
+  const log = loadAgentLog();
   log.used_topic_ids = log.used_topic_ids || [];
-  log.used_topic_ids.push(topic.id);
+  if (!log.used_topic_ids.includes(topic.id)) log.used_topic_ids.push(topic.id);
   saveAgentLog(log);
 
-  console.log(`guide-agent: job ${jobId} ready for review -- "${topic.title}".`);
+  console.log(`guide-agent: job ${jobId} ready for review.`);
+}
+
+async function main() {
+  const [, , command, arg] = process.argv;
+  if (command === "start") return cmdStart();
+  if (command === "finish") return cmdFinish(arg);
+  console.error('usage: node pipeline/guide-agent.js <start|finish> [jobId]');
+  process.exit(1);
 }
 
 main().then(() => process.exit(0)).catch((e) => { console.error(e); process.exit(1); });
