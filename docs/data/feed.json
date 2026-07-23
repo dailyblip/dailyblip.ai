@@ -1,6 +1,6 @@
 {
   "issue": 252,
-  "generated_at": "2026-07-23T09:15:25.116Z",
+  "generated_at": "2026-07-23T16:03:48.877Z",
   "brief": {
     "items": [
       {
@@ -77,9 +77,179 @@
       "ts": "2026-07-22T20:49:03.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 97,
-      "move": 1,
+      "heat": 90,
+      "move": -3,
       "top": true
+    },
+    {
+      "id": "s_d15a0dad264d18d8",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Nvidia sending Jetson chips to the moon for lunar rover",
+      "dek": "Lunar Outpost will use Nvidia Jetson GPUs to control lidar systems on its next moon rover, likely the first GPU on the lunar surface.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/23/nvidia-is-sending-gpus-to-the-moon/",
+      "ts": "2026-07-23T15:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 73,
+      "move": 21
+    },
+    {
+      "id": "s_d9ffdf3634eb5912",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Etched hits $10.3B valuation on AI inference chip breakthrough",
+      "dek": "The chip startup closed a $300M Series C from Sequoia and others, doubling its valuation in seven months with $1B in pre-booked orders.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+      "ts": "2026-07-23T15:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 81,
+      "move": 39
+    },
+    {
+      "id": "s_085548e5aa000238",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 4,
+      "tier": "journalism",
+      "title": "Google's Gemini nears 1 billion monthly active users",
+      "dek": "Gemini surpassed 950 million monthly users in Q2 2026, having tripled over a year, positioning it closer to ChatGPT's 1B-user milestone.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/",
+      "ts": "2026-07-23T14:52:44.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 63,
+      "move": 10
+    },
+    {
+      "id": "s_2568e67aa59be85d",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "AI arms race pushes aggressive training tactics, risking model safety",
+      "dek": "Industry competition to deploy larger, faster models is increasing reliance on risky training techniques that could amplify harmful AI behavior.",
+      "src": "Ars Technica AI",
+      "url": "https://arstechnica.com/ai/2026/07/ai-arms-race-in-line-for-a-reckoning-after-openai-hacking-incident/",
+      "ts": "2026-07-23T14:45:05.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 73,
+      "move": 23
+    },
+    {
+      "id": "s_01d83a6818a93909",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Lawmakers prepare AI 'kill switch' bill for DHS control",
+      "dek": "Bipartisan legislation would require AI companies to shut down or throttle systems on Department of Homeland Security orders, following OpenAI's security incident.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal",
+      "ts": "2026-07-23T14:13:35.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 80,
+      "move": 40
+    },
+    {
+      "id": "s_9ae095cbc6ee0617",
+      "cat": "rights",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Apple sues OpenAI over alleged trade secret theft by ex-employees",
+      "dek": "Apple alleges former employees now at OpenAI targeted confidential company information during hiring and job interviews, raising questions about AI company hiring practices.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive",
+      "ts": "2026-07-23T14:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 82,
+      "move": 44
+    },
+    {
+      "id": "s_4e9820704ada1498",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "3ds Max 2027.2 adds native Gaussian Splat import and editing",
+      "dek": "Autodesk release enables importing, rendering, and editing Gaussian Splats directly in 3ds Max via Point modifiers.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/3ds-max-2027-2-released-with-native-gaussian-splat-support/",
+      "ts": "2026-07-23T12:41:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 81,
+      "move": 43
+    },
+    {
+      "id": "s_5becd4f5ac8e00f8",
+      "cat": "industry",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 4,
+      "tier": "journalism",
+      "title": "Right-wing and left-wing coalitions unite against AI data center expansion",
+      "dek": "Bipartisan grassroots opposition to hyperscale data center construction in Florida signals emerging political consensus on AI infrastructure costs.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/policy/969667/humans-first-data-center-protest-hernando-county-florida-republicans",
+      "ts": "2026-07-23T12:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 60,
+      "move": 13
+    },
+    {
+      "id": "s_1f97c93f772d588e",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "White House disputes distillation claim in Kimi K3 model controversy",
+      "dek": "White House science advisor alleges Moonshot used covert techniques beyond distillation to build Kimi K3 using unauthorized export chips, echoing broader concerns over Chinese model training.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/",
+      "ts": "2026-07-23T11:00:00.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 87,
+      "move": 50
+    },
+    {
+      "id": "s_45ad686cbb592c4f",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Chaos V-Ray adds relighting support for Gaussian Splats",
+      "dek": "Major V-Ray update solves relighting limitation in Gaussian Splats, expanding their practical utility for production work.",
+      "src": "Creative Bloq AI",
+      "url": "https://www.creativebloq.com/3d/chaos-just-fixed-one-of-the-biggest-problems-with-gaussian-splats-you-can-finally-relight-them",
+      "ts": "2026-07-23T11:00:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 89,
+      "move": 54
     },
     {
       "id": "s_37c9890bc32e7cee",
@@ -95,8 +265,8 @@
       "ts": "2026-07-23T00:00:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 85,
-      "move": 51
+      "heat": 78,
+      "move": -8
     },
     {
       "id": "s_2b0ee14bcadb36d9",
@@ -112,8 +282,8 @@
       "ts": "2026-07-22T23:47:54.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 83,
-      "move": 48
+      "heat": 76,
+      "move": -15
     },
     {
       "id": "s_6eed503eb1643455",
@@ -129,8 +299,8 @@
       "ts": "2026-07-22T22:01:52.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": -4
+      "heat": 74,
+      "move": -15
     },
     {
       "id": "s_5699d15319beb07d",
@@ -146,8 +316,8 @@
       "ts": "2026-07-22T19:11:46.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 98,
-      "move": 0
+      "heat": 91,
+      "move": -3
     },
     {
       "id": "s_cb9c3c1e8192f68e",
@@ -163,7 +333,7 @@
       "ts": "2026-07-22T17:54:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
+      "heat": 62,
       "move": -16
     },
     {
@@ -181,8 +351,8 @@
       "ts": "2026-07-22T17:02:25.784Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -4
+      "heat": 71,
+      "move": -16
     },
     {
       "id": "s_f98db5d0ce92ebd9",
@@ -198,8 +368,8 @@
       "ts": "2026-07-22T16:47:49.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 96,
-      "move": 0
+      "heat": 89,
+      "move": -3
     },
     {
       "id": "s_3b599d5554b29a6f",
@@ -215,8 +385,8 @@
       "ts": "2026-07-22T16:24:08.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 57,
-      "move": -9
+      "heat": 50,
+      "move": -10
     },
     {
       "id": "s_15ce799930d93a28",
@@ -232,8 +402,8 @@
       "ts": "2026-07-22T16:23:09.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 85,
-      "move": -3
+      "heat": 78,
+      "move": -8
     },
     {
       "id": "s_6abe29e95794c87d",
@@ -249,8 +419,8 @@
       "ts": "2026-07-22T16:13:30.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 95,
-      "move": 0
+      "heat": 88,
+      "move": -3
     },
     {
       "id": "s_ad3e75f937d65ca6",
@@ -266,8 +436,8 @@
       "ts": "2026-07-22T14:44:27.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 83,
-      "move": -4
+      "heat": 78,
+      "move": -5
     },
     {
       "id": "s_472a28f23659850e",
@@ -283,8 +453,8 @@
       "ts": "2026-07-22T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -12
+      "heat": 70,
+      "move": -9
     },
     {
       "id": "s_4827129120427058",
@@ -300,8 +470,8 @@
       "ts": "2026-07-22T13:38:54.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
-      "move": -8
+      "heat": 50,
+      "move": -10
     },
     {
       "id": "s_e7be2bf1f7fd9f25",
@@ -317,8 +487,8 @@
       "ts": "2026-07-22T13:35:17.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
-      "move": -8
+      "heat": 50,
+      "move": -10
     },
     {
       "id": "s_0c30deb4396228f4",
@@ -334,8 +504,8 @@
       "ts": "2026-07-22T13:20:35.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 72,
-      "move": -13
+      "heat": 68,
+      "move": -9
     },
     {
       "id": "s_e3a96b640fcad124",
@@ -351,8 +521,8 @@
       "ts": "2026-07-22T12:55:03.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
-      "move": -8
+      "heat": 50,
+      "move": -10
     },
     {
       "id": "s_6f420ceb11ea47b6",
@@ -368,8 +538,8 @@
       "ts": "2026-07-22T11:26:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 97,
-      "move": -1
+      "heat": 95,
+      "move": 2
     },
     {
       "id": "s_cd499e47d059c505",
@@ -385,7 +555,7 @@
       "ts": "2026-07-22T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 62,
+      "heat": 60,
       "move": -10
     },
     {
@@ -402,8 +572,8 @@
       "ts": "2026-07-22T10:05:51.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 69,
-      "move": -16
+      "heat": 68,
+      "move": -7
     },
     {
       "id": "s_3f5db142d9f8bbf8",
@@ -419,8 +589,8 @@
       "ts": "2026-07-22T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -16
+      "heat": 68,
+      "move": -7
     },
     {
       "id": "s_70a38dc6812327bb",
@@ -436,7 +606,7 @@
       "ts": "2026-07-22T09:47:41.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 79,
+      "heat": 78,
       "move": -4
     },
     {
@@ -454,7 +624,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -10
     },
     {
       "id": "s_c54f46e53d48e304",
@@ -471,7 +641,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": -10
     },
     {
       "id": "s_7d968fc2635a3524",
@@ -488,7 +658,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -10
     },
     {
       "id": "s_45095198141eb13e",
@@ -505,7 +675,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -2
+      "move": -10
     },
     {
       "id": "s_69b7eb38cde75406",
@@ -522,7 +692,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 3
+      "move": -3
     },
     {
       "id": "s_3fdc40a5e56bd575",
@@ -539,7 +709,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 3
+      "move": -3
     },
     {
       "id": "s_eed16821fcdd7ed9",
@@ -556,7 +726,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -10
     },
     {
       "id": "s_af59977501275694",
@@ -573,7 +743,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 3
+      "move": -3
     },
     {
       "id": "s_3dd9888813d83985",
@@ -590,7 +760,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -7
     },
     {
       "id": "s_3a68379c08593a50",
@@ -607,7 +777,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": 2
+      "move": -10
     },
     {
       "id": "s_ade7e27dc611eaa3",
@@ -624,7 +794,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -7
     },
     {
       "id": "s_55228da85192241d",
@@ -641,7 +811,7 @@
       "read": "3 min",
       "also": [],
       "heat": 95,
-      "move": 1
+      "move": 4
     },
     {
       "id": "s_01119b73028b4558",
@@ -658,7 +828,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_d42362617c640879",
@@ -675,7 +845,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -2
+      "move": -10
     },
     {
       "id": "s_08ae2218969a5903",
@@ -692,7 +862,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 3
+      "move": 0
     },
     {
       "id": "s_0e4d77c4bfc2f390",
@@ -709,7 +879,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -10
     },
     {
       "id": "s_0bd50127700baaab",
@@ -726,7 +896,7 @@
       "read": "3 min",
       "also": [],
       "heat": 95,
-      "move": 1
+      "move": 4
     },
     {
       "id": "s_2a32c5e41363369a",
@@ -743,7 +913,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -7
     },
     {
       "id": "s_5479f7ef8f003060",
@@ -760,7 +930,7 @@
       "read": "2 min",
       "also": [],
       "heat": 75,
-      "move": 2
+      "move": -3
     },
     {
       "id": "s_7d7edea89fcf1f37",
@@ -777,7 +947,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 3
+      "move": -3
     },
     {
       "id": "s_cdd021c25350f21e",
@@ -794,7 +964,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": -7
     },
     {
       "id": "s_fcce09c921e58acd",
@@ -811,7 +981,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 3
+      "move": -3
     },
     {
       "id": "s_b4a8b48c0af258dc",
@@ -828,7 +998,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -7
     },
     {
       "id": "s_ed3452d70ad2061d",
@@ -845,7 +1015,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": -7
     },
     {
       "id": "s_20b0eb2d5c149974",
@@ -862,7 +1032,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -10
     },
     {
       "id": "s_70097351852cb620",
@@ -879,7 +1049,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": 3
+      "move": -3
     },
     {
       "id": "s_f07ea0986edc9c35",
@@ -896,7 +1066,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -2
+      "move": -10
     },
     {
       "id": "s_f09cbf6a0ec2257f",
@@ -913,178 +1083,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": 3
-    },
-    {
-      "id": "s_d573260cad05ebaa",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Google developing new AI chip for more efficient Gemini models",
-      "dek": "Alphabet is designing \"Frozen v2,\" a server chip targeting 6–10x efficiency gains in token generation per watt, expected 2028.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/",
-      "ts": "2026-07-20T21:21:15.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 60,
-      "move": 2
-    },
-    {
-      "id": "s_17b501c7fe1377af",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Model Context Protocol gets stateless session update for easier integration",
-      "dek": "The MCP, core infrastructure for AI model interoperability, is shipping a significant update making server-side session management simpler, similar to standard web architecture.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/20/ais-most-important-protocol-is-getting-a-little-bit-easier-to-use/",
-      "ts": "2026-07-20T20:50:40.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": 2
-    },
-    {
-      "id": "s_502e6d35fbb7908f",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "OpenAI head pushes for US regulation against open-weight models",
-      "dek": "Strategic debate over Chinese open-weight LLMs, OpenAI's regulatory concerns, and pushback from industry figures on innovation. Direct policy signal for AI creators.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/20/openai-is-scared-of-open-weight-models-should-the-us-be/",
-      "ts": "2026-07-20T19:33:25.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 78,
-      "move": 3
-    },
-    {
-      "id": "s_c4923a542f7b6a55",
-      "cat": "writing",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "commentary",
-      "commentary": true,
-      "title": "The Sample Clearance Problem, Except It's the Whole Song Now",
-      "dek": "The music industry spent three decades building a legal framework to stop people from lifting four bars of someone else's record. AI just swallowed 40 million complete recordings and called it research.",
-      "src": "dailyblip",
-      "url": "https://dailyblip.ai/commentary/the-sample-clearance-problem-except-it-s-the-whole-song-now-2026-07-20.html",
-      "ts": "2026-07-20T17:12:04.408Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 70,
-      "move": 2
-    },
-    {
-      "id": "s_c0f02d7ca9b061c8",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Scientists warn AI-edited wildlife photos could compromise research databases",
-      "dek": "Researchers caution that AI-enhanced bird photos shared on citizen science platforms may undermine credibility of iNaturalist and Macaulay Library. Policy/ethics signal.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/20/scientists-warn-wildlife-photographers-ai-enhanced-bird-photos-could-threaten-research/",
-      "ts": "2026-07-20T16:28:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 78,
-      "move": 3
-    },
-    {
-      "id": "s_43177eeccf608f86",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Adobe Project Indigo launches AI Playground for mobile photography",
-      "dek": "Project Indigo now includes generative AI for photo critiques, object removal, depth of field, and style transfer. Overlaps with items 2 and 3; PetaPixel version.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/20/adobes-project-indigo-iphone-camera-app-now-offers-photography-advice/",
-      "ts": "2026-07-20T16:00:43.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": 2
-    },
-    {
-      "id": "s_a549b2f2489b487f",
-      "cat": "image",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "Adobe's Project Indigo integrates generative AI into iPhone photography",
-      "dek": "Project Indigo now includes generative AI tools powered by Google's Nano model for editing, removal, and style application. Overlaps with item 2; uses different framing.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/tech/967791/adobe-indigo-camera-app-ai-playground-update",
-      "ts": "2026-07-20T16:00:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": 2
-    },
-    {
-      "id": "s_8030c8e0dc091db7",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "NVIDIA releases Cosmos 3 Edge for edge-based world modeling",
-      "dek": "NVIDIA shipped Cosmos 3 Edge, an AI model for physical systems to understand scene changes and anticipate outcomes on memory-constrained hardware. Released tool.",
-      "src": "Hugging Face Blog",
-      "url": "https://huggingface.co/blog/nvidia/cosmos3edge",
-      "ts": "2026-07-20T15:58:51.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 60,
-      "move": 2
-    },
-    {
-      "id": "s_cdc3fbd3b50a8a83",
-      "cat": "tools",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Adobe Project Indigo adds LLM photo critique and generative features",
-      "dek": "Adobe's experimental iOS camera app now uses LLMs to critique photos and includes AI-powered object removal, depth of field, and style transfer. Shipped feature.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/20/adobe-camera-apps-new-feature-will-critique-your-photos-using-ai/",
-      "ts": "2026-07-20T15:45:00.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 70,
-      "move": 2
-    },
-    {
-      "id": "s_735b682e0d0efd97",
-      "cat": "tools",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Lightcraft's Spark Story uses iPhone to generate virtual film sets from scripts",
-      "dek": "SIGGRAPH 2026 revealed Spark Story, which converts screenplays into USD/Gaussian Splat environments and enables on-device shot planning before production.",
-      "src": "Creative Bloq AI",
-      "url": "https://www.creativebloq.com/3d/i-watched-lightcraft-turn-a-screenplay-into-a-virtual-film-set-using-an-iphone",
-      "ts": "2026-07-20T15:30:00.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 78,
-      "move": 3
+      "move": -3
     }
   ],
   "models": [
@@ -1156,27 +1155,27 @@
     },
     {
       "n": "The Verge AI",
-      "c": 9
-    },
-    {
-      "n": "PetaPixel",
-      "c": 7
-    },
-    {
-      "n": "Hugging Face Blog",
-      "c": 4
+      "c": 11
     },
     {
       "n": "Ars Technica AI",
-      "c": 4
+      "c": 5
+    },
+    {
+      "n": "PetaPixel",
+      "c": 5
+    },
+    {
+      "n": "80 Level",
+      "c": 3
+    },
+    {
+      "n": "Hugging Face Blog",
+      "c": 3
     },
     {
       "n": "OpenAI News",
       "c": 3
-    },
-    {
-      "n": "dailyblip",
-      "c": 2
     },
     {
       "n": "Creative Bloq AI",
@@ -1185,13 +1184,13 @@
   ],
   "topics": [
     "#openai",
-    "#google",
     "#hugging",
     "#face",
+    "#google",
     "#chinese",
     "#anthropic",
-    "#gemini-36",
-    "#flash"
+    "#gaussian",
+    "#gemini-36"
   ],
   "tooldrop": {
     "name": "LayerProof Mylar",
@@ -1201,9 +1200,9 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 8,
-    "published_today": 22,
+    "scanned_last_run": 25,
+    "published_today": 21,
     "sources_live": 13,
-    "slopped_last_run": 6
+    "slopped_last_run": 15
   }
 }

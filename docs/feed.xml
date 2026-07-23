@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 09:15:25 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 16:03:48 GMT</lastBuildDate>
     <item>
       <title>US Treasury threatens sanctions over alleged Chinese model distillation of Anthropic tech</title>
       <link>https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/</link>
@@ -13,6 +13,86 @@
       <description>Treasury Secretary Scott Bessent warned of sanctions after White House accused Moonshot of improperly distilling Anthropic's Fable model, escalating IP theft concerns.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 20:49:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Nvidia sending Jetson chips to the moon for lunar rover</title>
+      <link>https://techcrunch.com/2026/07/23/nvidia-is-sending-gpus-to-the-moon/</link>
+      <guid isPermaLink="false">s_d15a0dad264d18d8</guid>
+      <description>Lunar Outpost will use Nvidia Jetson GPUs to control lidar systems on its next moon rover, likely the first GPU on the lunar surface.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Etched hits $10.3B valuation on AI inference chip breakthrough</title>
+      <link>https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/</link>
+      <guid isPermaLink="false">s_d9ffdf3634eb5912</guid>
+      <description>The chip startup closed a $300M Series C from Sequoia and others, doubling its valuation in seven months with $1B in pre-booked orders.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 15:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google's Gemini nears 1 billion monthly active users</title>
+      <link>https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/</link>
+      <guid isPermaLink="false">s_085548e5aa000238</guid>
+      <description>Gemini surpassed 950 million monthly users in Q2 2026, having tripled over a year, positioning it closer to ChatGPT's 1B-user milestone.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 14:52:44 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI arms race pushes aggressive training tactics, risking model safety</title>
+      <link>https://arstechnica.com/ai/2026/07/ai-arms-race-in-line-for-a-reckoning-after-openai-hacking-incident/</link>
+      <guid isPermaLink="false">s_2568e67aa59be85d</guid>
+      <description>Industry competition to deploy larger, faster models is increasing reliance on risky training techniques that could amplify harmful AI behavior.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 14:45:05 GMT</pubDate>
+    </item>
+    <item>
+      <title>Lawmakers prepare AI 'kill switch' bill for DHS control</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal</link>
+      <guid isPermaLink="false">s_01d83a6818a93909</guid>
+      <description>Bipartisan legislation would require AI companies to shut down or throttle systems on Department of Homeland Security orders, following OpenAI's security incident.</description>
+      <category>rights</category>
+      <pubDate>Thu, 23 Jul 2026 14:13:35 GMT</pubDate>
+    </item>
+    <item>
+      <title>Apple sues OpenAI over alleged trade secret theft by ex-employees</title>
+      <link>https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive</link>
+      <guid isPermaLink="false">s_9ae095cbc6ee0617</guid>
+      <description>Apple alleges former employees now at OpenAI targeted confidential company information during hiring and job interviews, raising questions about AI company hiring practices.</description>
+      <category>rights</category>
+      <pubDate>Thu, 23 Jul 2026 14:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>3ds Max 2027.2 adds native Gaussian Splat import and editing</title>
+      <link>https://80.lv/articles/3ds-max-2027-2-released-with-native-gaussian-splat-support/</link>
+      <guid isPermaLink="false">s_4e9820704ada1498</guid>
+      <description>Autodesk release enables importing, rendering, and editing Gaussian Splats directly in 3ds Max via Point modifiers.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 12:41:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Right-wing and left-wing coalitions unite against AI data center expansion</title>
+      <link>https://www.theverge.com/policy/969667/humans-first-data-center-protest-hernando-county-florida-republicans</link>
+      <guid isPermaLink="false">s_5becd4f5ac8e00f8</guid>
+      <description>Bipartisan grassroots opposition to hyperscale data center construction in Florida signals emerging political consensus on AI infrastructure costs.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>White House disputes distillation claim in Kimi K3 model controversy</title>
+      <link>https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/</link>
+      <guid isPermaLink="false">s_1f97c93f772d588e</guid>
+      <description>White House science advisor alleges Moonshot used covert techniques beyond distillation to build Kimi K3 using unauthorized export chips, echoing broader concerns over Chinese model training.</description>
+      <category>rights</category>
+      <pubDate>Thu, 23 Jul 2026 11:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Chaos V-Ray adds relighting support for Gaussian Splats</title>
+      <link>https://www.creativebloq.com/3d/chaos-just-fixed-one-of-the-biggest-problems-with-gaussian-splats-you-can-finally-relight-them</link>
+      <guid isPermaLink="false">s_45ad686cbb592c4f</guid>
+      <description>Major V-Ray update solves relighting limitation in Gaussian Splats, expanding their practical utility for production work.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 11:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Hugging Face releases Nunchaku 4-bit Diffusion Inference for Diffusers</title>
@@ -85,86 +165,6 @@
       <description>Platform integrated Pangram's AI writing detection to show readers estimated human vs. AI authorship percentages across posts and comments.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 16:23:09 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI's infrastructure spending rises to $750B through 2030</title>
-      <link>https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/</link>
-      <guid isPermaLink="false">s_6abe29e95794c87d</guid>
-      <description>Company revised forecast upward 25%; Georgia data center campus (Project Camellia) will draw 3.2+ gigawatts and cost OpenAI full infrastructure expenses.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 16:13:30 GMT</pubDate>
-    </item>
-    <item>
-      <title>AMD invests $5B in Anthropic, deploys MI450 GPUs at scale</title>
-      <link>https://www.theverge.com/ai-artificial-intelligence/969285/amd-anthropic-ai-infrastructure-deal</link>
-      <guid isPermaLink="false">s_ad3e75f937d65ca6</guid>
-      <description>AMD commits up to $5 billion and 2 gigawatts of AI GPU capacity to Anthropic, expanding compute infrastructure for large-scale model deployment.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 14:44:27 GMT</pubDate>
-    </item>
-    <item>
-      <title>Autodesk SIGGRAPH 2026: AI animation, Gaussian Splats in 3ds Max and Maya</title>
-      <link>https://www.creativebloq.com/3d/autodesks-siggraph-announcements-look-unrelated-but-they-all-solve-the-same-huge-problem</link>
-      <guid isPermaLink="false">s_472a28f23659850e</guid>
-      <description>Autodesk announced AI animation tools and Flow integration across 3ds Max and Maya, signaling shift toward generative workflows in 3D production.</description>
-      <category>tools</category>
-      <pubDate>Wed, 22 Jul 2026 14:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google commits $40M in AI compute to DOE's Genesis Mission</title>
-      <link>https://deepmind.google/blog/accelerating-the-frontiers-of-scientific-discovery-googles-40m-commitment-to-the-genesis-mission/</link>
-      <guid isPermaLink="false">s_4827129120427058</guid>
-      <description>Google pledges AI tokens and cloud credits to support the Department of Energy's scientific discovery initiative.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 13:38:54 GMT</pubDate>
-    </item>
-    <item>
-      <title>US Army runs out of AI tokens as adoption surges</title>
-      <link>https://arstechnica.com/ai/2026/07/us-army-faces-ai-use-limits-after-exhausting-years-supply-of-ai-tokens/</link>
-      <guid isPermaLink="false">s_e7be2bf1f7fd9f25</guid>
-      <description>After reporting half its workforce uses AI tools, the Army discovered token depletion forcing limits on usage across the department.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 13:35:17 GMT</pubDate>
-    </item>
-    <item>
-      <title>Browser wars shift to AI: new alternatives challenge Chrome and Safari</title>
-      <link>https://techcrunch.com/2026/07/22/as-the-browser-wars-heat-up-here-are-the-hottest-alternatives-to-chrome-and-safari-in-2026/</link>
-      <guid isPermaLink="false">s_0c30deb4396228f4</guid>
-      <description>As AI becomes integral to browser functionality, startups and Big Tech are launching alternatives that position browsers as AI-powered assistants rather than just windows onto the web.</description>
-      <category>tools</category>
-      <pubDate>Wed, 22 Jul 2026 13:20:35 GMT</pubDate>
-    </item>
-    <item>
-      <title>San Francisco restaurant defaced after using AI-generated food photos</title>
-      <link>https://petapixel.com/2026/07/22/san-francisco-restaurant-defaced-over-ai-generated-food-photos/</link>
-      <guid isPermaLink="false">s_e3a96b640fcad124</guid>
-      <description>A newly opened café faced community backlash for displaying AI-generated food images in their window, highlighting public resistance to synthetic product photography.</description>
-      <category>rights</category>
-      <pubDate>Wed, 22 Jul 2026 12:55:03 GMT</pubDate>
-    </item>
-    <item>
-      <title>Anthropic settles $1.5B copyright lawsuit—largest in US history</title>
-      <link>https://80.lv/articles/anthropic-s-ai-copyright-dispute-with-authors-ends-in-usd1-5-billion-settlement/</link>
-      <guid isPermaLink="false">s_6f420ceb11ea47b6</guid>
-      <description>Federal court approves Anthropic's settlement with authors over unauthorized use of copyrighted works in AI training, marking the largest copyright recovery settlement ever.</description>
-      <category>rights</category>
-      <pubDate>Wed, 22 Jul 2026 11:26:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Meta's Content Seal watermarking tool targets AI-generated content detection</title>
-      <link>https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid</link>
-      <guid isPermaLink="false">s_cd499e47d059c505</guid>
-      <description>Meta deployed invisible watermarking technology to flag AI-generated content on its platforms, following pressure from its Oversight Board to implement detection tools.</description>
-      <category>rights</category>
-      <pubDate>Wed, 22 Jul 2026 11:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>US Treasury threatens sanctions on Chinese AI labs over alleged IP theft</title>
-      <link>https://petapixel.com/2026/07/22/the-us-is-concerned-over-ip-theft-by-chinese-ai-labs/</link>
-      <guid isPermaLink="false">s_1a46e0c3c44f297b</guid>
-      <description>Scott Bessent warned of enforcement action against overseas AI firms accused of stealing from American companies, intensifying geopolitical AI regulation.</description>
-      <category>rights</category>
-      <pubDate>Wed, 22 Jul 2026 10:05:51 GMT</pubDate>
     </item>
   </channel>
 </rss>
