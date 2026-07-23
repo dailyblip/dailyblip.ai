@@ -131,6 +131,14 @@ article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.
 .related-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
 .related-title{font-family:var(--display);font-weight:640;font-size:14.5px;line-height:1.35;margin-bottom:6px;color:var(--text)}
 .related-dek{color:var(--dim);font-size:12.5px;line-height:1.5}
+.series-nav{border:1px solid var(--line-strong);border-radius:10px;padding:16px 18px;margin:20px 0}
+.series-nav .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.series-nav-list{display:flex;flex-direction:column;gap:6px}
+.series-nav-item{font-size:13.5px;padding:6px 10px;border-radius:6px}
+a.series-nav-item{color:var(--text);transition:background .15s ease}
+a.series-nav-item:hover{background:rgba(99,216,198,.08)}
+.series-nav-current{background:rgba(255,180,84,.1);color:var(--amber);font-weight:600}
+.series-nav-pending{color:var(--faint);font-style:italic}
 .ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
 .ref-table{width:100%;border-collapse:collapse;font-size:13px}
 .ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
@@ -277,6 +285,32 @@ function renderPage(job, manifest) {
   // section but before key takeaways.
   const articlePrompts = renderPromptsBlock(a.prompts);
 
+  // Series nav: only rendered when this guide is part of a multi-part
+  // series (a.series set). Siblings not yet published show as inert
+  // placeholders rather than being omitted entirely, so a reader
+  // landing on Part 1 knows a Part 3 is coming, not just that Part 2
+  // exists. Re-rendered on every sibling whenever a NEW part of the
+  // same series publishes -- see rebuildSeriesSiblings() -- so Part 1's
+  // placeholder for Part 2 turns into a real link the moment Part 2
+  // goes live, without anyone needing to manually edit Part 1 again.
+  const seriesNavHtml = a.series
+    ? (() => {
+        const siblings = (manifest || []).filter((g) => g.series === a.series);
+        const items = [];
+        for (let p = 1; p <= (a.series_total || 1); p++) {
+          if (p === a.series_part) {
+            items.push(`<span class="series-nav-item series-nav-current">Part ${p}: ${esc(a.title)}</span>`);
+          } else {
+            const sibling = siblings.find((g) => g.series_part === p);
+            items.push(sibling
+              ? `<a class="series-nav-item" href="${esc(sibling.slug)}.html">Part ${p}: ${esc(sibling.title)}</a>`
+              : `<span class="series-nav-item series-nav-pending">Part ${p}: coming soon</span>`);
+          }
+        }
+        return `<div class="series-nav"><div class="label">${esc(a.series_title)} \u2014 Part ${a.series_part} of ${a.series_total}</div><div class="series-nav-list">${items.join("")}</div></div>`;
+      })()
+    : "";
+
   const takeaways = (a.key_takeaways || []).length
     ? `<div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul>${(a.key_takeaways || []).map((t) => `<li>${esc(t)}</li>`).join("")}</ul></div>`
     : "";
@@ -364,6 +398,7 @@ ${(a.tags || []).map((t) => `<meta property="article:tag" content="${esc(t)}">`)
   <p class="dek">${esc(a.dek)}</p>
   <div class="meta-row">Last reviewed ${esc(a.last_reviewed_date)}</div>
   ${(a.tags || []).length ? `<div class="page-tags">${a.tags.map((t) => `<span class="page-tag-chip">${esc(t)}</span>`).join("")}</div>` : ""}
+  ${seriesNavHtml}
   ${a.quick_answer ? `<div class="quick-answer"><div class="label">QUICK ANSWER</div>${renderSafeMarkdown(a.quick_answer)}</div>` : ""}
   ${heroHtml}
   <article>
@@ -460,6 +495,15 @@ function buildGuidesManifest(guides) {
         published_at: g.published_at || g.article.last_reviewed_date,
         tags: g.article.tags || [],
         pinned: !!g.pinned,
+        // Series fields are all null for a standalone guide -- only
+        // populated when a guide is one part of a multi-part series
+        // (see pipeline/guide-agent.js). series_title is the human-
+        // readable series name (e.g. "Building a Browser Game With
+        // AI"), separate from this specific part's own title.
+        series: g.article.series || null,
+        series_part: g.article.series_part || null,
+        series_total: g.article.series_total || null,
+        series_title: g.article.series_title || null,
       };
     })
     .sort((a, b) => new Date(b.published_at) - new Date(a.published_at));
@@ -751,6 +795,20 @@ async function main() {
   saveGuides(updated);
   const manifest = buildGuidesManifest(updated);
   writeGuidesManifest(manifest);
+  // If this guide is part of a series, every already-published sibling
+  // needs re-rendering too -- their series-nav block's placeholder for
+  // THIS part should now become a real link. Safe to do since
+  // renderPage() fully re-renders from stored article data every time,
+  // rather than patching existing HTML (unlike the homepage-baking
+  // approach, which is why idempotence was a real risk there and isn't
+  // one here).
+  if (job.article.series) {
+    const siblingJobs = updated.filter((g) => g.status === "published" && g.article?.series === job.article.series && g.id !== job.id);
+    for (const siblingJob of siblingJobs) {
+      fs.writeFileSync(path.join(GUIDES_DIR, `${siblingJob.article.slug}.html`), renderPage(siblingJob, manifest));
+    }
+    if (siblingJobs.length) console.log(`guide-publish: re-rendered ${siblingJobs.length} sibling part(s) of series "${job.article.series}" to update their nav links.`);
+  }
   const populatedHubs = rebuildTopicHubs(GUIDES_DIR, manifest, SITE_URL);
   rebuildGuidesIndex(GUIDES_DIR, manifest, populatedHubs);
   // Same reasoning as the admin-triggered rebuild path: a real publish
