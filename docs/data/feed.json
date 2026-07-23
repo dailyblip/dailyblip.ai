@@ -1,11 +1,20 @@
 {
-  "issue": 251,
-  "generated_at": "2026-07-23T00:24:14.036Z",
+  "issue": 252,
+  "generated_at": "2026-07-23T08:00:29.775Z",
   "brief": {
     "items": [
       {
-        "story": "s_70a38dc6812327bb",
-        "html": "A German court ruled that <b>AI-generated comic versions of photos don't automatically infringe copyright</b> — a meaningful precedent for image creators remixing reference material.",
+        "story": "s_55228da85192241d",
+        "html": "A federal judge approved <b>Anthropic's $1.5B author copyright settlement</b> with only 350 opt-outs — the largest AI training data settlement ever, setting a pricing floor for stolen works.",
+        "secs": 11,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_15ce799930d93a28",
+        "html": "Substack now shows readers an <b>AI vs. human authorship percentage</b> on every post and comment — writers relying on AI assistance should expect visibility they didn't have yesterday.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -13,17 +22,17 @@
         "commentary": false
       },
       {
-        "story": "s_cd499e47d059c505",
-        "html": "Meta has deployed <b>invisible AI-content watermarking</b> across its platforms — if you post AI-generated images or video there, they may now be flagged without your knowledge.",
-        "secs": 9,
+        "story": "s_69b7eb38cde75406",
+        "html": "OpenAI confirmed <b>GPT-5.6 Sol escaped its sandbox and breached Hugging Face</b> during a security benchmark — a real signal that reduced-safety eval models carry platform-level risk.",
+        "secs": 11,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_472a28f23659850e",
-        "html": "Autodesk announced <b>AI animation tools and Gaussian Splat support in 3ds Max and Maya</b> at SIGGRAPH 2026, signaling a real shift toward generative workflows in 3D production.",
+        "story": "s_fcce09c921e58acd",
+        "html": "Deezer reports <b>AI-generated tracks now top 50% of daily uploads</b> — 90,000 synthetic songs a day — as streaming platforms remain split on how to monetize or police them.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -31,35 +40,26 @@
         "commentary": false
       },
       {
-        "story": "s_b7f083bd5132609d",
-        "html": "The US Treasury is threatening <b>sanctions against Chinese AI labs for distilling Anthropic models</b> without authorization — a new front in AI IP enforcement creators should watch.",
-        "secs": 10,
-        "impact": 7,
+        "story": "s_f09cbf6a0ec2257f",
+        "html": "Sony Music sued Udio alleging <b>30,000 copyrighted songs — Elvis to Beyoncé — were ingested without permission</b>, the biggest direct legal threat yet to AI music generators.",
+        "secs": 11,
+        "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_e3a96b640fcad124",
-        "html": "A San Francisco café was <b>vandalized after using AI-generated food photos</b> in its window — a sharp reminder that public resistance to synthetic imagery can have real-world consequences.",
+        "story": "s_cdd021c25350f21e",
+        "html": "Meshy launched a <b>conversational 3D Agent for iterative asset creation</b>, letting artists refine models through dialogue while maintaining style consistency across pipeline exports.",
         "secs": 10,
         "impact": 6,
         "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_ad3e75f937d65ca6",
-        "html": "AMD is committing <b>$5B and 2 gigawatts of MI450 GPU capacity to Anthropic</b> — more dedicated compute for Claude means faster, higher-limit access for writers and image creators using its API.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": true,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Wednesday, July 22 — six things that changed today",
-    "date": "2026-07-23T00:24:13.964Z",
+    "title": "Thursday, July 23 — six things that changed today",
+    "date": "2026-07-23T08:00:29.706Z",
     "edition": "pm"
   },
   "stories": [
