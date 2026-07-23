@@ -880,7 +880,7 @@
   {
     "id": "agent-1784787139935-82p09z",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "created_at": "2026-07-23T06:12:19.936Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 1 -- Concept and Design",
@@ -915,6 +915,164 @@
       ],
       "research_plan": "Prioritize indie game dev communities and solo developer writing (itch.io devlogs, game jam postmortems, r/gamedev, Mastodon/Substack indie dev voices) over big studio methodology — these will reflect realistic solo scope. Look for practical one-page GDD templates that are actually used, not enterprise design doc formats. For the AI-assisted design angle, look at how creators are currently using conversational AI (ChatGPT, Claude) as a brainstorming and doc-drafting partner at the concept stage, not just for asset generation. Avoid sources that are either too academic (formal game design theory) or too hype-driven (AI will build your game for you). Confirm framework names and browser-game basics from official or well-maintained community sources."
     },
-    "updated_at": "2026-07-23T06:12:40.418Z"
+    "updated_at": "2026-07-23T06:14:06.210Z",
+    "sources": [
+      {
+        "title": "Browser game",
+        "publisher": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Browser_game",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "A browser game is a video game played over the internet using a web browser, typically without the need for dedicated hardware or software installation.",
+          "It is not necessary to install a browser game; simply visiting the webpage will run the title in a browser.",
+          "Browser games may have fewer features or inferior graphics compared to native app versions.",
+          "The front end is implemented with standard web technologies: HTML, CSS, JavaScript, and WebAssembly; WebGL and WebGPU enable more sophisticated graphics.",
+          "Flash games were the dominant format until Adobe Flash was shut down on December 31, 2020."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "Browser games: what they are and how they work",
+        "publisher": "Guul Games",
+        "url": "https://guul.games/blog/what-are-browser-games-a-guide-to-html-5-games-for-apps",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Unlike native apps, which must be downloaded from an app store and installed on a device, browser games are accessed through a URL and run entirely within the browser window.",
+          "HTML5 games are cross-platform by default: the same game runs on mobile, desktop, and tablet without separate development for each.",
+          "JavaScript handles everything that happens during gameplay: player input, physics, collision detection, scoring. It runs natively in every browser.",
+          "WebGL is a JavaScript API that gives browser games access to the GPU, enabling 3D graphics and high-performance 2D rendering directly in the browser."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "How to Write a Game Design Document (GDD) That You Will Actually Use (2026)",
+        "publisher": "Generalist Programmer",
+        "url": "https://generalistprogrammer.com/tutorials/how-to-write-a-game-design-document",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "A one-page GDD condenses the whole game onto a single sheet: elevator pitch, design pillars, core loop, key mechanic, look and feel, and platform.",
+          "A one-page GDD is often enough for a solo dev or a game jam; 5–15 focused pages suits a small indie team.",
+          "The 100-page up-front document is an anti-pattern — it goes stale immediately and buries the decisions that matter.",
+          "GDDs most often fail in one of two ways: a 100-page tome written before anything is playable that immediately goes stale, or no document at all and the project balloons until it never ships."
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "How to Create a Game Design Document",
+        "publisher": "GameDesigning.org",
+        "url": "https://gamedesigning.org/learn/game-design-document/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "One-page GDDs are recognized as appropriate for game jams and rapid prototypes.",
+          "Common GDD sections include: game title and tagline, high-level summary/elevator pitch, design pillars, target audience, core gameplay loop, primary mechanics, secondary systems, and progression systems.",
+          "Even solo developers benefit by externalizing their vision and catching potential scope creep early.",
+          "Modern GDDs have evolved from 100-page Word files into wikis, Notion boards, and Confluence docs."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "Designing The Core Gameplay Loop: A Beginner's Guide",
+        "publisher": "Game Design Skills",
+        "url": "https://gamedesignskills.com/game-design/core-loops-in-gameplay/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "A gameplay loop is a repeatable sequence of actions the players engage in that makes up the primary flow of the player's experience and keeps them playing over and over again.",
+          "The core loop is the primary game system or mechanic that defines your game — the element players remember most frequently or engage with most often."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "Understanding a Gameplay Loop: Types of a Game Loop",
+        "publisher": "GameDesigning.org",
+        "url": "https://gamedesigning.org/learn/game-loop/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "A core gameplay loop is a highly specified set of actions undertaken by the player, most often the main actions defining the game.",
+          "Concrete browser-game-appropriate example: Slay the Spire's micro loop is 'pick a card → play it → see the effect'; meso loop is 'finish combat → choose a reward card → pick a path → next encounter'; macro loop is 'beat the boss → unlock new cards → start again'.",
+          "If your player isn't making a real decision at the end of each cycle, the loop is broken.",
+          "The best way to utilize a core game loop is to give players objectives — the fewer goals at once, the better."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "Scope Creep: The Silent Killer of Solo Indie Game Development",
+        "publisher": "Wayline",
+        "url": "https://www.wayline.io/blog/scope-creep-solo-indie-game-development",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Scope creep can lead to burnout, project failure, and abandonment of the indie project.",
+          "Perfectionism is a key failure mode: the pursuit of perfection leads to endless tweaking, while the rest of the game languishes.",
+          "As a project grows more complex, bugs proliferate, performance suffers, and the game becomes increasingly difficult to manage.",
+          "Common failure modes include: undefined scope (features multiply, release date recedes), perfectionism, and failure to ruthlessly prioritize."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "Solo Game Dev: Avoiding Scope Creep and Staying on Track",
+        "publisher": "Wayline",
+        "url": "https://www.wayline.io/blog/solo-game-dev-scope-creep-stay-on-track",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Many aspiring developers start with grand visions that quickly become unmanageable — 'solo game development often leads to project paralysis.'",
+          "Student/first-time developers often fall into the trap of feature bloat, driven by a desire to impress or a fear of their game being too simple.",
+          "Simple, polished games often outperform complex, unfinished ones; a single well-executed mechanic is more valuable than a dozen half-baked ones.",
+          "Identifying a minimum viable product (MVP) that delivers a complete, enjoyable loop is the core antidote to scope creep."
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "Best HTML5 Game Frameworks: Complete Comparison Guide",
+        "publisher": "Generalist Programmer",
+        "url": "https://generalistprogrammer.com/tutorials/best-html5-game-frameworks-2025",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Phaser is the most popular and feature-complete HTML5 game framework, providing WebGL rendering (with Canvas fallback), two physics systems (Arcade and Matter.js), audio, input, scene management, tilemaps, cameras, tweens, particles, and asset loading.",
+          "Phaser has been actively maintained since 2013; Phaser 4 stable ('Caladan') shipped April 10, 2026.",
+          "GDevelop is a free, open-source no-code game engine ideal for 2D and lightweight 3D games, with a visual editor, asset store, and export to web, desktop, Android, and iOS.",
+          "For non-coders, Construct and GDevelop build 2D games visually with no programming required.",
+          "With WebGL, WebGPU, and modern JavaScript engines, the performance gap between browser and native games has nearly closed for 2D games."
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-23"
+      },
+      {
+        "title": "11 Best Web Game Engines for 2026, Ranked and Compared",
+        "publisher": "Cinevva",
+        "url": "https://app.cinevva.com/guides/web-game-engines-comparison",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Phaser is best for code-first 2D development with the biggest HTML5 community.",
+          "Godot is best for a free, open-source engine that handles both 2D and 3D.",
+          "For non-coders, Construct and GDevelop build 2D games visually with no programming.",
+          "Godot, Phaser, PixiJS, Defold, and Excalibur.js are all free and open-source with no license fees or revenue thresholds."
+        ],
+        "claim_type": "editorial judgment",
+        "accessed_date": "2026-07-23"
+      }
+    ],
+    "unverifiable_claims": [
+      "That 'browser-native' is a formally defined or widely-used industry term with a crisp technical distinction from 'runs in a browser' — no authoritative source uses this specific phrase as a category. The practical distinction (built for the web stack from the ground up vs. ported/embedded from a native engine) is real but is not codified in any standard or official documentation found.",
+      "That AI tools (ChatGPT, Claude, Gemini) are specifically and comparatively better at the concept/design-doc stage versus asset or code generation — no independent study or authoritative source directly benchmarks this stage-specific advantage. The claim that Claude is best for GDD writing comes from a single non-peer-reviewed AI comparison site (sneos.com) and should be treated as editorial/user-feedback rather than verified fact. The broader claim that LLMs are useful at the ideation/design-doc stage is supported, but a comparative 'particularly useful' ranking across tools and stages cannot be verified from available sources.",
+      "Any specific statistics cited about scope creep failure rates (e.g., the '70% of indie devs cited scope too large' figure attributed to Gamasutra) — the original Gamasutra/GDC source could not be independently located and verified; the figure circulates as secondary citation only.",
+      "The claim that solo dev Toby Fox began Undertale with a two-page GDD — this appears in one SEO-oriented game design guide without a primary source citation and could not be verified against an authoritative Toby Fox interview or official record."
+    ]
   }
 ]
