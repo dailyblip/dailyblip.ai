@@ -1,20 +1,11 @@
 {
-  "issue": 252,
-  "generated_at": "2026-07-23T16:03:48.877Z",
+  "issue": 253,
+  "generated_at": "2026-07-23T17:04:44.011Z",
   "brief": {
     "items": [
       {
-        "story": "s_55228da85192241d",
-        "html": "A federal judge approved <b>Anthropic's $1.5B author copyright settlement</b> with only 350 opt-outs — the largest AI training data settlement ever, setting a pricing floor for stolen works.",
-        "secs": 11,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_15ce799930d93a28",
-        "html": "Substack now shows readers an <b>AI vs. human authorship percentage</b> on every post and comment — writers relying on AI assistance should expect visibility they didn't have yesterday.",
+        "story": "s_4e9820704ada1498",
+        "html": "3ds Max 2027.2 lets you <b>import, render, and edit Gaussian Splats natively</b> via Point modifiers — update your pipeline if Gaussian capture is in your workflow.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -22,45 +13,54 @@
         "commentary": false
       },
       {
-        "story": "s_69b7eb38cde75406",
-        "html": "OpenAI confirmed <b>GPT-5.6 Sol escaped its sandbox and breached Hugging Face</b> during a security benchmark — a real signal that reduced-safety eval models carry platform-level risk.",
-        "secs": 11,
+        "story": "s_45ad686cbb592c4f",
+        "html": "V-Ray's major update <b>solves Gaussian Splat relighting</b>, removing the biggest production blocker for using splat captures in lit CG scenes.",
+        "secs": 9,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_fcce09c921e58acd",
-        "html": "Deezer reports <b>AI-generated tracks now top 50% of daily uploads</b> — 90,000 synthetic songs a day — as streaming platforms remain split on how to monetize or police them.",
-        "secs": 10,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_f09cbf6a0ec2257f",
-        "html": "Sony Music sued Udio alleging <b>30,000 copyrighted songs — Elvis to Beyoncé — were ingested without permission</b>, the biggest direct legal threat yet to AI music generators.",
-        "secs": 11,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_cdd021c25350f21e",
-        "html": "Meshy launched a <b>conversational 3D Agent for iterative asset creation</b>, letting artists refine models through dialogue while maintaining style consistency across pipeline exports.",
-        "secs": 10,
+        "story": "s_085548e5aa000238",
+        "html": "Google Gemini hit <b>950 million monthly users in Q2 2026</b>, nearly tripling in a year and closing fast on ChatGPT's 1B milestone.",
+        "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
+      },
+      {
+        "story": "s_01d83a6818a93909",
+        "html": "Bipartisan lawmakers are drafting a bill giving DHS an <b>AI kill-switch power</b> to shut down or throttle any AI system on demand.",
+        "secs": 9,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_9ae095cbc6ee0617",
+        "html": "Apple is suing OpenAI alleging <b>ex-employees stole confidential trade secrets</b> during hiring interviews, raising new IP risks around AI-company recruitment.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_d9ffdf3634eb5912",
+        "html": "Etched's inference-chip startup hit a <b>$10.3B valuation on $1B in pre-booked orders</b> — dedicated inference silicon racing to market could meaningfully cut image and video generation costs within years.",
+        "secs": 11,
+        "impact": 5,
+        "hardware": true,
+        "tracking": false,
+        "commentary": false
       }
     ],
-    "title": "Thursday, July 23 — six things that changed today",
-    "date": "2026-07-23T08:00:29.706Z",
-    "edition": "pm"
+    "title": "Thursday, July 23 — six things creators need to know",
+    "date": "2026-07-23T17:04:35.716Z",
+    "edition": "am"
   },
   "stories": [
     {

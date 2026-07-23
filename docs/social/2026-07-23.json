@@ -1,0 +1,71 @@
+{
+  "date": "2026-07-23",
+  "posts": [
+    {
+      "index": 1,
+      "image": "2026-07-23-1.png",
+      "caption": "Autodesk just landed native Gaussian Splat support in 3ds Max 2027.2 — no plugins, no workarounds. You can now import, render, and edit Gaussian Splats directly inside Max using Point modifiers. Real integration, not a bolt-on.\n\nFull story + today's brief: link in bio.\n\n#3dsMax #Autodesk #GaussianSplats #3D #AITools #VFX",
+      "story": {
+        "title": "3ds Max 2027.2 adds native Gaussian Splat import and editing",
+        "dek": "Autodesk release enables importing, rendering, and editing Gaussian Splats directly in 3ds Max via Point modifiers.",
+        "src": "80 Level",
+        "url": "https://80.lv/articles/3ds-max-2027-2-released-with-native-gaussian-splat-support/"
+      }
+    },
+    {
+      "index": 2,
+      "image": "2026-07-23-2.png",
+      "caption": "Gaussian Splats just got a major production unlock. Chaos V-Ray's latest update adds relighting support for Splats — solving one of the biggest practical blockers for using them in real production pipelines. Full story + today's brief: link in bio.\n\n#VRay #GaussianSplats #3DRendering #AITools #ChaosGroup",
+      "story": {
+        "title": "Chaos V-Ray adds relighting support for Gaussian Splats",
+        "dek": "Major V-Ray update solves relighting limitation in Gaussian Splats, expanding their practical utility for production work.",
+        "src": "Creative Bloq AI",
+        "url": "https://www.creativebloq.com/3d/chaos-just-fixed-one-of-the-biggest-problems-with-gaussian-splats-you-can-finally-relight-them"
+      }
+    },
+    {
+      "index": 3,
+      "image": "2026-07-23-3.png",
+      "caption": "Google's Gemini just crossed 950 million monthly active users in Q2 2026 — tripling its user base in a single year. It's closing fast on ChatGPT's 1B milestone, and the race for AI's first billion-user product is basically a photo finish.\n\nFull story + today's brief: link in bio\n\n#Gemini #GoogleAI #ChatGPT #AINews #ArtificialIntelligence",
+      "story": {
+        "title": "Google's Gemini nears 1 billion monthly active users",
+        "dek": "Gemini surpassed 950 million monthly users in Q2 2026, having tripled over a year, positioning it closer to ChatGPT's 1B-user milestone.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/"
+      }
+    },
+    {
+      "index": 4,
+      "image": "2026-07-23-4.png",
+      "caption": "A bipartisan bill in Congress would give the Department of Homeland Security the power to order AI companies to shut down or throttle their systems — think a literal kill switch baked into law. The push follows a recent security incident at OpenAI and signals growing appetite in Washington for hard emergency controls over AI infrastructure. This one's moving fast and the implications for every major AI lab are significant.\n\nFull story + today's brief: link in bio.\n\n#AIPolicy #AIRegulation #DHS #OpenAI #ArtificialIntelligence",
+      "story": {
+        "title": "Lawmakers prepare AI 'kill switch' bill for DHS control",
+        "dek": "Bipartisan legislation would require AI companies to shut down or throttle systems on Department of Homeland Security orders, following OpenAI's security incident.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/969939/lawmakers-ai-kill-switch-proposal"
+      }
+    },
+    {
+      "index": 5,
+      "image": "2026-07-23-5.png",
+      "caption": "Apple is suing OpenAI, alleging former Apple employees leaked confidential company information during their hiring process and job interviews at OpenAI. The lawsuit puts a sharp spotlight on how AI labs recruit talent — and what walks out the door with new hires. Full story + today's brief: link in bio.\n\n#Apple #OpenAI #AINews #TechLaw #TradeSecrets #ArtificialIntelligence",
+      "story": {
+        "title": "Apple sues OpenAI over alleged trade secret theft by ex-employees",
+        "dek": "Apple alleges former employees now at OpenAI targeted confidential company information during hiring and job interviews, raising questions about AI company hiring practices.",
+        "src": "The Verge AI",
+        "url": "https://www.theverge.com/podcast/968787/apple-openai-trade-secrets-lawsuit-ai-hardware-smartphone-jony-ive"
+      }
+    },
+    {
+      "index": 6,
+      "image": "2026-07-23-6.png",
+      "caption": "Etched just closed a $300M Series C, vaulting its valuation to $10.3B — double what it was seven months ago. The AI inference chip startup is riding $1B in pre-booked orders, with Sequoia leading the charge. In the race to build faster, cheaper inference hardware, the field just got a serious new contender.\n\nFull story + today's 6-item brief: link in bio\n\n#AIChips #ArtificialIntelligence #Inference #AIInvestment #Semiconductors #TechStartups",
+      "story": {
+        "title": "Etched hits $10.3B valuation on AI inference chip breakthrough",
+        "dek": "The chip startup closed a $300M Series C from Sequoia and others, doubling its valuation in seven months with $1B in pre-booked orders.",
+        "src": "TechCrunch AI",
+        "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/"
+      }
+    }
+  ]
+}
