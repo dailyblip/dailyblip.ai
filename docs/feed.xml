@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 22 Jul 2026 23:44:45 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 09:15:25 GMT</lastBuildDate>
     <item>
       <title>US Treasury threatens sanctions over alleged Chinese model distillation of Anthropic tech</title>
       <link>https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/</link>
@@ -13,6 +13,22 @@
       <description>Treasury Secretary Scott Bessent warned of sanctions after White House accused Moonshot of improperly distilling Anthropic's Fable model, escalating IP theft concerns.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 20:49:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Hugging Face releases Nunchaku 4-bit Diffusion Inference for Diffusers</title>
+      <link>https://huggingface.co/blog/nunchaku-diffusers</link>
+      <guid isPermaLink="false">s_37c9890bc32e7cee</guid>
+      <description>New quantization technique reduces memory and latency for diffusion model inference. Includes ready-to-use checkpoints and integration with the Diffusers library.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>IBM reports poor mainframe sales as AI spending diverts hardware budgets</title>
+      <link>https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/</link>
+      <guid isPermaLink="false">s_2b0ee14bcadb36d9</guid>
+      <description>IBM's quarterly earnings fell short of expectations; the CEO attributes weak mainframe sales to enterprises prioritizing AI infrastructure investments, calling it temporary.</description>
+      <category>industry</category>
+      <pubDate>Wed, 22 Jul 2026 23:47:54 GMT</pubDate>
     </item>
     <item>
       <title>Google Cloud revenue surges 82% on enterprise AI adoption</title>
@@ -149,22 +165,6 @@
       <description>Scott Bessent warned of enforcement action against overseas AI firms accused of stealing from American companies, intensifying geopolitical AI regulation.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 10:05:51 GMT</pubDate>
-    </item>
-    <item>
-      <title>Glow emerges as unicorn to secure endpoints against AI-driven attacks</title>
-      <link>https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/</link>
-      <guid isPermaLink="false">s_3f5db142d9f8bbf8</guid>
-      <description>New cybersecurity startup targets enterprise risks from AI agents and developer tools, raising $180M as attackers increasingly automate phishing and malware with generative AI.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 10:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>German court rules AI-generated comic version of photo doesn't infringe copyright</title>
-      <link>https://petapixel.com/2026/07/22/dog-photographer-loses-copyright-case-over-ai-generated-comic-version-of-her-image/</link>
-      <guid isPermaLink="false">s_70a38dc6812327bb</guid>
-      <description>A Higher Court in Germany determined that transforming a photograph into an AI comic-style derivative does not automatically constitute copyright infringement, setting precedent.</description>
-      <category>rights</category>
-      <pubDate>Wed, 22 Jul 2026 09:47:41 GMT</pubDate>
     </item>
   </channel>
 </rss>

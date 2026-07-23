@@ -1,6 +1,6 @@
 {
   "issue": 252,
-  "generated_at": "2026-07-23T08:00:29.775Z",
+  "generated_at": "2026-07-23T09:15:25.116Z",
   "brief": {
     "items": [
       {
@@ -77,9 +77,43 @@
       "ts": "2026-07-22T20:49:03.000Z",
       "read": "3 min",
       "also": [],
-      "top": true,
-      "heat": 106,
-      "move": 54
+      "heat": 97,
+      "move": 1,
+      "top": true
+    },
+    {
+      "id": "s_37c9890bc32e7cee",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "Hugging Face releases Nunchaku 4-bit Diffusion Inference for Diffusers",
+      "dek": "New quantization technique reduces memory and latency for diffusion model inference. Includes ready-to-use checkpoints and integration with the Diffusers library.",
+      "src": "Hugging Face Blog",
+      "url": "https://huggingface.co/blog/nunchaku-diffusers",
+      "ts": "2026-07-23T00:00:00.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 85,
+      "move": 51
+    },
+    {
+      "id": "s_2b0ee14bcadb36d9",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "IBM reports poor mainframe sales as AI spending diverts hardware budgets",
+      "dek": "IBM's quarterly earnings fell short of expectations; the CEO attributes weak mainframe sales to enterprises prioritizing AI infrastructure investments, calling it temporary.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/",
+      "ts": "2026-07-22T23:47:54.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 83,
+      "move": 48
     },
     {
       "id": "s_6eed503eb1643455",
@@ -95,8 +129,8 @@
       "ts": "2026-07-22T22:01:52.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 46
+      "heat": 81,
+      "move": -4
     },
     {
       "id": "s_5699d15319beb07d",
@@ -112,7 +146,7 @@
       "ts": "2026-07-22T19:11:46.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 107,
+      "heat": 98,
       "move": 0
     },
     {
@@ -129,8 +163,8 @@
       "ts": "2026-07-22T17:54:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -3
+      "heat": 69,
+      "move": -16
     },
     {
       "id": "s_ad301ee4934f8119",
@@ -147,8 +181,8 @@
       "ts": "2026-07-22T17:02:25.784Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -3
+      "heat": 78,
+      "move": -4
     },
     {
       "id": "s_f98db5d0ce92ebd9",
@@ -164,8 +198,8 @@
       "ts": "2026-07-22T16:47:49.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 105,
-      "move": -1
+      "heat": 96,
+      "move": 0
     },
     {
       "id": "s_3b599d5554b29a6f",
@@ -181,8 +215,8 @@
       "ts": "2026-07-22T16:24:08.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 67,
-      "move": -13
+      "heat": 57,
+      "move": -9
     },
     {
       "id": "s_15ce799930d93a28",
@@ -198,8 +232,8 @@
       "ts": "2026-07-22T16:23:09.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 95,
-      "move": -1
+      "heat": 85,
+      "move": -3
     },
     {
       "id": "s_6abe29e95794c87d",
@@ -215,8 +249,8 @@
       "ts": "2026-07-22T16:13:30.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 104,
-      "move": -1
+      "heat": 95,
+      "move": 0
     },
     {
       "id": "s_ad3e75f937d65ca6",
@@ -232,8 +266,8 @@
       "ts": "2026-07-22T14:44:27.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 93,
-      "move": -3
+      "heat": 83,
+      "move": -4
     },
     {
       "id": "s_472a28f23659850e",
@@ -249,8 +283,8 @@
       "ts": "2026-07-22T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": -5
+      "heat": 75,
+      "move": -12
     },
     {
       "id": "s_4827129120427058",
@@ -266,8 +300,8 @@
       "ts": "2026-07-22T13:38:54.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -10
+      "heat": 54,
+      "move": -8
     },
     {
       "id": "s_e7be2bf1f7fd9f25",
@@ -283,8 +317,8 @@
       "ts": "2026-07-22T13:35:17.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 64,
-      "move": -10
+      "heat": 54,
+      "move": -8
     },
     {
       "id": "s_0c30deb4396228f4",
@@ -300,8 +334,8 @@
       "ts": "2026-07-22T13:20:35.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 82,
-      "move": -5
+      "heat": 72,
+      "move": -13
     },
     {
       "id": "s_e3a96b640fcad124",
@@ -317,8 +351,8 @@
       "ts": "2026-07-22T12:55:03.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 63,
-      "move": 11
+      "heat": 54,
+      "move": -8
     },
     {
       "id": "s_6f420ceb11ea47b6",
@@ -334,8 +368,8 @@
       "ts": "2026-07-22T11:26:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 107,
-      "move": 0
+      "heat": 97,
+      "move": -1
     },
     {
       "id": "s_cd499e47d059c505",
@@ -351,8 +385,8 @@
       "ts": "2026-07-22T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
-      "move": -5
+      "heat": 62,
+      "move": -10
     },
     {
       "id": "s_1a46e0c3c44f297b",
@@ -368,8 +402,8 @@
       "ts": "2026-07-22T10:05:51.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 78,
-      "move": 41
+      "heat": 69,
+      "move": -16
     },
     {
       "id": "s_3f5db142d9f8bbf8",
@@ -385,8 +419,8 @@
       "ts": "2026-07-22T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": -4
+      "heat": 69,
+      "move": -16
     },
     {
       "id": "s_70a38dc6812327bb",
@@ -402,8 +436,8 @@
       "ts": "2026-07-22T09:47:41.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 88,
-      "move": 49
+      "heat": 79,
+      "move": -4
     },
     {
       "id": "s_aab6fd66ee7556a8",
@@ -419,7 +453,7 @@
       "ts": "2026-07-22T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
+      "heat": 60,
       "move": -7
     },
     {
@@ -436,8 +470,8 @@
       "ts": "2026-07-22T05:30:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 66,
-      "move": -10
+      "heat": 60,
+      "move": -1
     },
     {
       "id": "s_7d968fc2635a3524",
@@ -454,7 +488,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_45095198141eb13e",
@@ -471,7 +505,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_69b7eb38cde75406",
@@ -488,7 +522,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_3fdc40a5e56bd575",
@@ -505,7 +539,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_eed16821fcdd7ed9",
@@ -522,7 +556,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_af59977501275694",
@@ -539,7 +573,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_3dd9888813d83985",
@@ -573,7 +607,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": 2
     },
     {
       "id": "s_ade7e27dc611eaa3",
@@ -607,7 +641,7 @@
       "read": "3 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_01119b73028b4558",
@@ -624,7 +658,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -1
+      "move": 3
     },
     {
       "id": "s_d42362617c640879",
@@ -641,7 +675,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_08ae2218969a5903",
@@ -658,7 +692,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -1
+      "move": 3
     },
     {
       "id": "s_0e4d77c4bfc2f390",
@@ -675,7 +709,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_0bd50127700baaab",
@@ -692,7 +726,7 @@
       "read": "3 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_2a32c5e41363369a",
@@ -726,7 +760,7 @@
       "read": "2 min",
       "also": [],
       "heat": 75,
-      "move": -3
+      "move": 2
     },
     {
       "id": "s_7d7edea89fcf1f37",
@@ -743,7 +777,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_cdd021c25350f21e",
@@ -760,7 +794,7 @@
       "read": "4 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_fcce09c921e58acd",
@@ -777,7 +811,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_b4a8b48c0af258dc",
@@ -828,7 +862,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_70097351852cb620",
@@ -845,7 +879,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_f07ea0986edc9c35",
@@ -862,7 +896,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -5
+      "move": -2
     },
     {
       "id": "s_f09cbf6a0ec2257f",
@@ -879,7 +913,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_d573260cad05ebaa",
@@ -896,7 +930,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": 2
     },
     {
       "id": "s_17b501c7fe1377af",
@@ -913,7 +947,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": 2
     },
     {
       "id": "s_502e6d35fbb7908f",
@@ -930,7 +964,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_c4923a542f7b6a55",
@@ -948,7 +982,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_c0f02d7ca9b061c8",
@@ -965,7 +999,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -4
+      "move": 3
     },
     {
       "id": "s_43177eeccf608f86",
@@ -982,7 +1016,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": 2
     },
     {
       "id": "s_a549b2f2489b487f",
@@ -999,7 +1033,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": 2
     },
     {
       "id": "s_8030c8e0dc091db7",
@@ -1016,7 +1050,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -5
+      "move": 2
     },
     {
       "id": "s_cdc3fbd3b50a8a83",
@@ -1033,7 +1067,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_735b682e0d0efd97",
@@ -1050,41 +1084,7 @@
       "read": "4 min",
       "also": [],
       "heat": 78,
-      "move": -4
-    },
-    {
-      "id": "s_93c83145e8c7884e",
-      "cat": "rights",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 6,
-      "tier": "journalism",
-      "title": "YouTube clarifies monetization policy for AI-generated and low-quality content",
-      "dek": "YouTube updated policies defining which AI-generated and repetitive videos can't earn ad revenue, adding nuance to existing inauthentic-content rules.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/",
-      "ts": "2026-07-20T15:23:06.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 68,
-      "move": 0
-    },
-    {
-      "id": "s_90cef26b7e07e68a",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "Moonshot and Alibaba release frontier AI models challenging OpenAI and Anthropic",
-      "dek": "Chinese AI companies launched competitive models claimed to match OpenAI/Anthropic capabilities at lower cost, narrowing the US AI lead.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/967781/chinese-ai-models-open-source-moonshot-kimi-k3-alibaba-qwen",
-      "ts": "2026-07-20T10:16:33.000Z",
-      "read": "4 min",
-      "also": [],
-      "heat": 78,
-      "move": -4
+      "move": 3
     }
   ],
   "models": [
@@ -1156,11 +1156,15 @@
     },
     {
       "n": "The Verge AI",
-      "c": 10
+      "c": 9
     },
     {
       "n": "PetaPixel",
       "c": 7
+    },
+    {
+      "n": "Hugging Face Blog",
+      "c": 4
     },
     {
       "n": "Ars Technica AI",
@@ -1168,10 +1172,6 @@
     },
     {
       "n": "OpenAI News",
-      "c": 3
-    },
-    {
-      "n": "Hugging Face Blog",
       "c": 3
     },
     {
@@ -1186,10 +1186,10 @@
   "topics": [
     "#openai",
     "#google",
-    "#anthropic",
-    "#chinese",
     "#hugging",
     "#face",
+    "#chinese",
+    "#anthropic",
     "#gemini-36",
     "#flash"
   ],
@@ -1201,8 +1201,8 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 11,
-    "published_today": 23,
+    "scanned_last_run": 8,
+    "published_today": 22,
     "sources_live": 13,
     "slopped_last_run": 6
   }
