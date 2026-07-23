@@ -1,30 +1,37 @@
-name: Publish Guide
-# workflow_dispatch only. Deliberately its own tiny workflow, separate
-# from guide.yml — this is the ONLY thing that runs when admin.html's
-# Publish button is clicked, and it does no AI calls at all, just
-# deterministic rendering (see guide-publish.js), so it finishes in
-# under a minute rather than making a human wait through another
-# multi-stage AI run just to flip a status flag.
+name: Weekly Guide Agent
+# Runs Monday 12:00 UTC. Picks the next topic from the queue (see
+# pipeline/lib/guide-topics.js), then runs it through the exact same
+# stage-by-stage pipeline an on-demand guide goes through -- each stage
+# its own step with its own commit, matching guide.yml exactly, so a
+# mid-run failure never loses already-completed, already-paid-for work.
+# Ends at "ready for review" in admin.html -- this NEVER auto-publishes.
 
 on:
-  workflow_dispatch:
-    inputs:
-      job_id:
-        description: "Guide job id to publish (must already be status: approved)"
-        required: true
-        type: string
+  workflow_dispatch: # also runnable on demand, e.g. to catch up after a missed week
+  schedule:
+    - cron: "0 12 * * 1"
 
 permissions:
   contents: write
 
 concurrency:
-  group: guide-publish-${{ inputs.job_id }}
+  # Same shared group as every other guide-writing workflow (guide.yml,
+  # guide-publish.yml, retrofit-guides.js, etc.) -- this touches
+  # data/guides.json and docs/guides/*.jpg same as they do, so it must
+  # never run concurrently with any of them.
+  group: guide-pipeline-writes
   cancel-in-progress: false
 
 jobs:
-  publish:
+  agent:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 30
+    env:
+      SITE_URL: https://dailyblip.ai
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      BFL_API_KEY: ${{ secrets.BFL_API_KEY }}
+      IDEOGRAM_API_KEY: ${{ secrets.IDEOGRAM_API_KEY }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -32,18 +39,162 @@ jobs:
           node-version: 20
       - run: npm install
 
-      - name: Render and publish
-        run: node pipeline/guide-publish.js "${{ inputs.job_id }}"
-        env:
-          SITE_URL: https://dailyblip.ai
+      - name: Pick topic, create job
+        id: start
+        run: node pipeline/guide-agent.js start
 
-      - name: Commit
+      - name: "Commit: job created"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent: created job ${{ steps.start.outputs.jobId }}"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent: created job ${{ steps.start.outputs.jobId }}"
+          else
+            git push
+          fi
+
+      - name: "Stage: brief"
+        run: node pipeline/guide.js brief ${{ steps.start.outputs.jobId }}
+      - name: "Commit: brief"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: brief"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: brief"
+          else
+            git push
+          fi
+
+      - name: "Stage: research"
+        run: node pipeline/guide.js research ${{ steps.start.outputs.jobId }}
+      - name: "Commit: research"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: research"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: research"
+          else
+            git push
+          fi
+
+      - name: "Stage: draft"
+        run: node pipeline/guide.js draft ${{ steps.start.outputs.jobId }}
+      - name: "Commit: draft"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: draft"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: draft"
+          else
+            git push
+          fi
+
+      - name: "Stage: factcheck"
+        run: node pipeline/guide.js factcheck ${{ steps.start.outputs.jobId }}
+      - name: "Commit: factcheck"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: factcheck"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: factcheck"
+          else
+            git push
+          fi
+
+      - name: "Stage: recheck"
+        run: node pipeline/guide.js recheck ${{ steps.start.outputs.jobId }}
+      - name: "Commit: recheck"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: recheck"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: recheck"
+          else
+            git push
+          fi
+
+      # Images write real files under docs/guides/, not just data/, so
+      # both need to be staged here.
+      - name: "Stage: images"
+        run: node pipeline/guide.js images ${{ steps.start.outputs.jobId }}
+      - name: "Commit: images"
         if: always()
         run: |
           git config user.name "dailyblip-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data docs
           git diff --cached --quiet && exit 0
-          git commit -m "guide ${{ inputs.job_id }}: published"
-          git pull --rebase --autostash
-          git push
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: images"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: images"
+          else
+            git push
+          fi
+
+      - name: "Stage: format"
+        run: node pipeline/guide.js format ${{ steps.start.outputs.jobId }}
+      - name: "Commit: format"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: format"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: format"
+          else
+            git push
+          fi
+
+      # Comparison images, the evergreen scan, and series metadata --
+      # the genuinely new post-pipeline work this agent adds on top of
+      # the standard on-demand flow.
+      - name: Comparison images, evergreen scan, series metadata
+        run: node pipeline/guide-agent.js finish ${{ steps.start.outputs.jobId }}
+      - name: "Commit: finish (ready for review)"
+        if: always()
+        run: |
+          git config user.name "dailyblip-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet && exit 0
+          git commit -m "guide-agent ${{ steps.start.outputs.jobId }}: ready for review"
+          if ! git pull --rebase --autostash; then
+            echo "Rebase conflict on data/guides.json -- falling back to JSON-aware merge (see pipeline/resolve-guides-conflict.js)"
+            node pipeline/resolve-guides-conflict.js "${{ steps.start.outputs.jobId }}" "guide-agent ${{ steps.start.outputs.jobId }}: ready for review"
+          else
+            git push
+          fi
