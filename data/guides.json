@@ -880,7 +880,7 @@
   {
     "id": "agent-1784787139935-82p09z",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "created_at": "2026-07-23T06:12:19.936Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 1 -- Concept and Design",
@@ -896,6 +896,25 @@
       "series_part": 1,
       "series_total": 5,
       "series_title": "Building a Browser Game With AI"
-    }
+    },
+    "brief": {
+      "target_reader": "A solo creator or hobbyist who wants to build a small browser game and has maybe dabbled with AI tools before, but has never shipped a game and tends to jump straight into making assets or writing code before thinking through what the game actually is — they need to slow down and plan first",
+      "reader_outcome": "Walk away with a simple, scoped concept for a browser game and a one-page design doc they actually wrote, so they can go into Part 2 (generation/building) knowing exactly what they need to make",
+      "structure_plan": [
+        "Why planning first saves you from AI-assisted chaos",
+        "Nailing your core loop in one sentence",
+        "Writing a one-page design doc that keeps scope honest"
+      ],
+      "claims_to_verify": [
+        "What makes a game 'browser-native' versus one that just happens to run in a browser — any meaningful distinction worth flagging for beginners",
+        "Whether one-page game design documents (sometimes called a GDD lite or micro-GDD) are a recognized practice in indie/solo dev communities, and what they typically contain",
+        "What 'core loop' means in game design — confirm the standard definition and a couple of concrete simple examples suitable for browser games a solo dev could actually finish",
+        "Common scope-creep failure modes for solo first-time game developers — what typically kills a first project",
+        "Whether any widely-used AI tools (ChatGPT, Claude, Gemini) are particularly useful at the concept/design-doc stage specifically, versus the asset or code generation stage",
+        "Any commonly recommended frameworks or no-code/low-code tools for browser games that a beginner might want to know they're planning toward (Phaser, GDevelop, etc.) — just enough to inform scoping, not a full comparison"
+      ],
+      "research_plan": "Prioritize indie game dev communities and solo developer writing (itch.io devlogs, game jam postmortems, r/gamedev, Mastodon/Substack indie dev voices) over big studio methodology — these will reflect realistic solo scope. Look for practical one-page GDD templates that are actually used, not enterprise design doc formats. For the AI-assisted design angle, look at how creators are currently using conversational AI (ChatGPT, Claude) as a brainstorming and doc-drafting partner at the concept stage, not just for asset generation. Avoid sources that are either too academic (formal game design theory) or too hype-driven (AI will build your game for you). Confirm framework names and browser-game basics from official or well-maintained community sources."
+    },
+    "updated_at": "2026-07-23T06:12:40.418Z"
   }
 ]
