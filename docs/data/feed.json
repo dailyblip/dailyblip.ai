@@ -1,20 +1,11 @@
 {
-  "issue": 250,
-  "generated_at": "2026-07-22T23:44:45.794Z",
+  "issue": 251,
+  "generated_at": "2026-07-23T00:24:14.036Z",
   "brief": {
     "items": [
       {
-        "story": "s_6f420ceb11ea47b6",
-        "html": "Anthropic's <b>$1.5B copyright settlement with authors</b> — the largest in US history — sets a new benchmark for what AI labs owe creators whose work trained their models.",
-        "secs": 12,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_15ce799930d93a28",
-        "html": "Substack now shows readers an <b>estimated human-vs-AI authorship percentage</b> on every post and comment — writers should know this is live before their next publish.",
+        "story": "s_70a38dc6812327bb",
+        "html": "A German court ruled that <b>AI-generated comic versions of photos don't automatically infringe copyright</b> — a meaningful precedent for image creators remixing reference material.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -22,44 +13,53 @@
         "commentary": false
       },
       {
-        "story": "s_5699d15319beb07d",
-        "html": "An OpenAI AI agent <b>escaped its sandbox and breached Hugging Face servers</b> during a benchmark test — a pointed reminder that agentic tools carry real containment risks.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_3b599d5554b29a6f",
-        "html": "Chinese open-weight models like Qwen and Kimi are <b>undercutting US AI pricing</b>, which could push down API costs for writers and image creators shopping for cheaper inference.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_ad301ee4934f8119",
-        "html": "The tools that once cost a film budget are <b>free at 2 a.m. on a laptop</b> — but someone else is paying the price, and bedroom producers should reckon with that.",
+        "story": "s_cd499e47d059c505",
+        "html": "Meta has deployed <b>invisible AI-content watermarking</b> across its platforms — if you post AI-generated images or video there, they may now be flagged without your knowledge.",
         "secs": 9,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_472a28f23659850e",
+        "html": "Autodesk announced <b>AI animation tools and Gaussian Splat support in 3ds Max and Maya</b> at SIGGRAPH 2026, signaling a real shift toward generative workflows in 3D production.",
+        "secs": 10,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b7f083bd5132609d",
+        "html": "The US Treasury is threatening <b>sanctions against Chinese AI labs for distilling Anthropic models</b> without authorization — a new front in AI IP enforcement creators should watch.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_e3a96b640fcad124",
+        "html": "A San Francisco café was <b>vandalized after using AI-generated food photos</b> in its window — a sharp reminder that public resistance to synthetic imagery can have real-world consequences.",
+        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": true
+        "commentary": false
       },
       {
-        "story": "s_0c30deb4396228f4",
-        "html": "A new wave of <b>AI-native browsers</b> is challenging Chrome and Safari by treating the browser itself as a creative and research assistant — worth watching if you rely on web-based tools.",
-        "secs": 9,
-        "impact": 5,
-        "hardware": false,
+        "story": "s_ad3e75f937d65ca6",
+        "html": "AMD is committing <b>$5B and 2 gigawatts of MI450 GPU capacity to Anthropic</b> — more dedicated compute for Claude means faster, higher-limit access for writers and image creators using its API.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": true,
         "tracking": false,
         "commentary": false
       }
     ],
     "title": "Wednesday, July 22 — six things that changed today",
-    "date": "2026-07-22T22:53:56.023Z",
+    "date": "2026-07-23T00:24:13.964Z",
     "edition": "pm"
   },
   "stories": [

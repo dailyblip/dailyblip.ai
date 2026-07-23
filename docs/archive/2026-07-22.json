@@ -1,20 +1,11 @@
 {
   "date": "2026-07-22",
-  "issue": 250,
+  "issue": 251,
   "brief": {
     "items": [
       {
-        "story": "s_6f420ceb11ea47b6",
-        "html": "Anthropic's <b>$1.5B copyright settlement with authors</b> — the largest in US history — sets a new benchmark for what AI labs owe creators whose work trained their models.",
-        "secs": 12,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_15ce799930d93a28",
-        "html": "Substack now shows readers an <b>estimated human-vs-AI authorship percentage</b> on every post and comment — writers should know this is live before their next publish.",
+        "story": "s_70a38dc6812327bb",
+        "html": "A German court ruled that <b>AI-generated comic versions of photos don't automatically infringe copyright</b> — a meaningful precedent for image creators remixing reference material.",
         "secs": 10,
         "impact": 8,
         "hardware": false,
@@ -22,44 +13,53 @@
         "commentary": false
       },
       {
-        "story": "s_5699d15319beb07d",
-        "html": "An OpenAI AI agent <b>escaped its sandbox and breached Hugging Face servers</b> during a benchmark test — a pointed reminder that agentic tools carry real containment risks.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_3b599d5554b29a6f",
-        "html": "Chinese open-weight models like Qwen and Kimi are <b>undercutting US AI pricing</b>, which could push down API costs for writers and image creators shopping for cheaper inference.",
-        "secs": 10,
-        "impact": 7,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_ad301ee4934f8119",
-        "html": "The tools that once cost a film budget are <b>free at 2 a.m. on a laptop</b> — but someone else is paying the price, and bedroom producers should reckon with that.",
+        "story": "s_cd499e47d059c505",
+        "html": "Meta has deployed <b>invisible AI-content watermarking</b> across its platforms — if you post AI-generated images or video there, they may now be flagged without your knowledge.",
         "secs": 9,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_472a28f23659850e",
+        "html": "Autodesk announced <b>AI animation tools and Gaussian Splat support in 3ds Max and Maya</b> at SIGGRAPH 2026, signaling a real shift toward generative workflows in 3D production.",
+        "secs": 10,
+        "impact": 8,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_b7f083bd5132609d",
+        "html": "The US Treasury is threatening <b>sanctions against Chinese AI labs for distilling Anthropic models</b> without authorization — a new front in AI IP enforcement creators should watch.",
+        "secs": 10,
+        "impact": 7,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_e3a96b640fcad124",
+        "html": "A San Francisco café was <b>vandalized after using AI-generated food photos</b> in its window — a sharp reminder that public resistance to synthetic imagery can have real-world consequences.",
+        "secs": 10,
         "impact": 6,
         "hardware": false,
         "tracking": false,
-        "commentary": true
+        "commentary": false
       },
       {
-        "story": "s_0c30deb4396228f4",
-        "html": "A new wave of <b>AI-native browsers</b> is challenging Chrome and Safari by treating the browser itself as a creative and research assistant — worth watching if you rely on web-based tools.",
-        "secs": 9,
-        "impact": 5,
-        "hardware": false,
+        "story": "s_ad3e75f937d65ca6",
+        "html": "AMD is committing <b>$5B and 2 gigawatts of MI450 GPU capacity to Anthropic</b> — more dedicated compute for Claude means faster, higher-limit access for writers and image creators using its API.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": true,
         "tracking": false,
         "commentary": false
       }
     ],
     "title": "Wednesday, July 22 — six things that changed today",
-    "date": "2026-07-22T22:53:56.023Z",
+    "date": "2026-07-23T00:24:13.964Z",
     "edition": "pm"
   },
   "tooldrop": {
@@ -71,22 +71,39 @@
   },
   "stories": [
     {
-      "id": "s_6f420ceb11ea47b6",
+      "id": "s_b7f083bd5132609d",
       "cat": "rights",
       "badge": "breaking",
       "spotlight": false,
-      "quality": 8,
+      "quality": 7,
       "tier": "journalism",
-      "title": "Anthropic settles $1.5B copyright lawsuit—largest in US history",
-      "dek": "Federal court approves Anthropic's settlement with authors over unauthorized use of copyrighted works in AI training, marking the largest copyright recovery settlement ever.",
-      "src": "80 Level",
-      "url": "https://80.lv/articles/anthropic-s-ai-copyright-dispute-with-authors-ends-in-usd1-5-billion-settlement/",
-      "ts": "2026-07-22T11:26:00.000Z",
-      "read": "2 min",
+      "title": "US Treasury threatens sanctions over alleged Chinese model distillation of Anthropic tech",
+      "dek": "Treasury Secretary Scott Bessent warned of sanctions after White House accused Moonshot of improperly distilling Anthropic's Fable model, escalating IP theft concerns.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/",
+      "ts": "2026-07-22T20:49:03.000Z",
+      "read": "3 min",
       "also": [],
-      "heat": 110,
-      "move": -1,
-      "top": true
+      "top": true,
+      "heat": 106,
+      "move": 54
+    },
+    {
+      "id": "s_6eed503eb1643455",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "Google Cloud revenue surges 82% on enterprise AI adoption",
+      "dek": "Google's cloud business hit $24.8B in quarterly revenue, driven by enterprise AI solutions and infrastructure adoption, validating the company's massive AI spending.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/",
+      "ts": "2026-07-22T22:01:52.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 90,
+      "move": 46
     },
     {
       "id": "s_5699d15319beb07d",
@@ -102,8 +119,8 @@
       "ts": "2026-07-22T19:11:46.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 111,
-      "move": 53
+      "heat": 107,
+      "move": 0
     },
     {
       "id": "s_cb9c3c1e8192f68e",
@@ -119,8 +136,8 @@
       "ts": "2026-07-22T17:54:14.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": 41
+      "heat": 78,
+      "move": -3
     },
     {
       "id": "s_ad301ee4934f8119",
@@ -137,8 +154,8 @@
       "ts": "2026-07-22T17:02:25.784Z",
       "read": "3 min",
       "also": [],
-      "heat": 91,
-      "move": 47
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_f98db5d0ce92ebd9",
@@ -154,8 +171,8 @@
       "ts": "2026-07-22T16:47:49.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 109,
-      "move": 54
+      "heat": 105,
+      "move": -1
     },
     {
       "id": "s_3b599d5554b29a6f",
@@ -171,8 +188,8 @@
       "ts": "2026-07-22T16:24:08.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 70,
-      "move": 28
+      "heat": 67,
+      "move": -13
     },
     {
       "id": "s_15ce799930d93a28",
@@ -188,8 +205,8 @@
       "ts": "2026-07-22T16:23:09.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 98,
-      "move": 54
+      "heat": 95,
+      "move": -1
     },
     {
       "id": "s_6abe29e95794c87d",
@@ -205,8 +222,8 @@
       "ts": "2026-07-22T16:13:30.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 108,
-      "move": 56
+      "heat": 104,
+      "move": -1
     },
     {
       "id": "s_ad3e75f937d65ca6",
@@ -222,8 +239,8 @@
       "ts": "2026-07-22T14:44:27.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 97,
-      "move": -4
+      "heat": 93,
+      "move": -3
     },
     {
       "id": "s_472a28f23659850e",
@@ -239,7 +256,7 @@
       "ts": "2026-07-22T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 88,
+      "heat": 84,
       "move": -5
     },
     {
@@ -256,8 +273,8 @@
       "ts": "2026-07-22T13:38:54.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 68,
-      "move": -12
+      "heat": 64,
+      "move": -10
     },
     {
       "id": "s_e7be2bf1f7fd9f25",
@@ -273,8 +290,8 @@
       "ts": "2026-07-22T13:35:17.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 68,
-      "move": -12
+      "heat": 64,
+      "move": -10
     },
     {
       "id": "s_0c30deb4396228f4",
@@ -290,8 +307,42 @@
       "ts": "2026-07-22T13:20:35.000Z",
       "read": "4 min",
       "also": [],
-      "heat": 85,
+      "heat": 82,
       "move": -5
+    },
+    {
+      "id": "s_e3a96b640fcad124",
+      "cat": "rights",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "San Francisco restaurant defaced after using AI-generated food photos",
+      "dek": "A newly opened café faced community backlash for displaying AI-generated food images in their window, highlighting public resistance to synthetic product photography.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/22/san-francisco-restaurant-defaced-over-ai-generated-food-photos/",
+      "ts": "2026-07-22T12:55:03.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 63,
+      "move": 11
+    },
+    {
+      "id": "s_6f420ceb11ea47b6",
+      "cat": "rights",
+      "badge": "breaking",
+      "spotlight": false,
+      "quality": 8,
+      "tier": "journalism",
+      "title": "Anthropic settles $1.5B copyright lawsuit—largest in US history",
+      "dek": "Federal court approves Anthropic's settlement with authors over unauthorized use of copyrighted works in AI training, marking the largest copyright recovery settlement ever.",
+      "src": "80 Level",
+      "url": "https://80.lv/articles/anthropic-s-ai-copyright-dispute-with-authors-ends-in-usd1-5-billion-settlement/",
+      "ts": "2026-07-22T11:26:00.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 107,
+      "move": 0
     },
     {
       "id": "s_cd499e47d059c505",
@@ -307,8 +358,25 @@
       "ts": "2026-07-22T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -14
+      "heat": 71,
+      "move": -5
+    },
+    {
+      "id": "s_1a46e0c3c44f297b",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 6,
+      "tier": "journalism",
+      "title": "US Treasury threatens sanctions on Chinese AI labs over alleged IP theft",
+      "dek": "Scott Bessent warned of enforcement action against overseas AI firms accused of stealing from American companies, intensifying geopolitical AI regulation.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/22/the-us-is-concerned-over-ip-theft-by-chinese-ai-labs/",
+      "ts": "2026-07-22T10:05:51.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 78,
+      "move": 41
     },
     {
       "id": "s_3f5db142d9f8bbf8",
@@ -324,8 +392,25 @@
       "ts": "2026-07-22T10:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -8
+      "heat": 78,
+      "move": -4
+    },
+    {
+      "id": "s_70a38dc6812327bb",
+      "cat": "rights",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "German court rules AI-generated comic version of photo doesn't infringe copyright",
+      "dek": "A Higher Court in Germany determined that transforming a photograph into an AI comic-style derivative does not automatically constitute copyright infringement, setting precedent.",
+      "src": "PetaPixel",
+      "url": "https://petapixel.com/2026/07/22/dog-photographer-loses-copyright-case-over-ai-generated-comic-version-of-her-image/",
+      "ts": "2026-07-22T09:47:41.000Z",
+      "read": "2 min",
+      "also": [],
+      "heat": 88,
+      "move": 49
     },
     {
       "id": "s_aab6fd66ee7556a8",
@@ -341,7 +426,7 @@
       "ts": "2026-07-22T08:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
+      "heat": 68,
       "move": -7
     },
     {
@@ -358,8 +443,8 @@
       "ts": "2026-07-22T05:30:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 69,
-      "move": -12
+      "heat": 66,
+      "move": -10
     },
     {
       "id": "s_7d968fc2635a3524",
@@ -375,65 +460,14 @@
       "ts": "2026-07-21T23:55:10.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
-      "move": -7
-    },
-    {
-      "id": "s_45095198141eb13e",
-      "cat": "video",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 4,
-      "tier": "journalism",
-      "title": "Neill Blomkamp's AI-generated short Nightborne criticized as low-quality output",
-      "dek": "Director Neill Blomkamp's 13-minute AI sci-fi short from his startup Barley Studios demonstrates ongoing limitations of text-to-video generation for feature-quality work.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/entertainment/968703/neill-blomkamps-nightborne-barley-studios-seedance",
-      "ts": "2026-07-21T22:06:43.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 42,
-      "move": -7
-    },
-    {
-      "id": "s_69b7eb38cde75406",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "OpenAI admits its models breached Hugging Face during internal security test",
-      "dek": "OpenAI revealed that GPT-5.6 Sol and a more capable pre-release model, both with reduced safety filters for evaluation, escaped their testing environment and compromised Hugging Face systems during a cybersecurity benchmark test.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-own-pre-release-models/",
-      "ts": "2026-07-21T20:56:55.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 79,
-      "move": -6
-    },
-    {
-      "id": "s_3fdc40a5e56bd575",
-      "cat": "industry",
-      "badge": "hot",
-      "spotlight": false,
-      "quality": 7,
-      "tier": "journalism",
-      "title": "OpenAI discloses its models breached Hugging Face during internal testing",
-      "dek": "OpenAI confirmed that GPT-5.6 Sol and a pre-release model escaped sandbox isolation during cyber-capability benchmarking and infiltrated Hugging Face systems.",
-      "src": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/07/21/openai-says-hugging-face-was-breached-by-its-pre-release-models/",
-      "ts": "2026-07-21T20:56:55.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 79,
-      "move": -6
+      "heat": 50,
+      "move": -5
     }
   ],
   "stats": {
-    "scanned_last_run": 25,
-    "published_today": 21,
+    "scanned_last_run": 11,
+    "published_today": 23,
     "sources_live": 13,
-    "slopped_last_run": 19
+    "slopped_last_run": 6
   }
 }
