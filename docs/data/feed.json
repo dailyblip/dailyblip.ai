@@ -1,6 +1,6 @@
 {
   "issue": 253,
-  "generated_at": "2026-07-23T20:34:23.028Z",
+  "generated_at": "2026-07-23T23:44:17.932Z",
   "brief": {
     "items": [
       {
@@ -78,8 +78,25 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -7,
+      "move": 1,
       "top": true
+    },
+    {
+      "id": "s_c6bad60c590297fa",
+      "cat": "tools",
+      "badge": "new",
+      "spotlight": false,
+      "quality": 5,
+      "tier": "journalism",
+      "title": "Alexa Plus update adds multi-device routing and third-party integrations",
+      "dek": "Amazon's Alexa Plus preview now connects smart home devices from Bosch, iRobot, Yale, and others, automatically routing requests to the correct device. Integration coming for Canva, Priceline, Lyft.",
+      "src": "The Verge AI",
+      "url": "https://www.theverge.com/tech/970399/amazon-alexa-plus-ai-update-smart-home-devices",
+      "ts": "2026-07-23T21:15:06.000Z",
+      "read": "3 min",
+      "also": [],
+      "heat": 72,
+      "move": 33
     },
     {
       "id": "s_b4d4584e10a95e95",
@@ -95,8 +112,8 @@
       "ts": "2026-07-23T20:33:02.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 92,
-      "move": 45
+      "heat": 89,
+      "move": 0
     },
     {
       "id": "s_0b843e577a7e8d34",
@@ -112,8 +129,8 @@
       "ts": "2026-07-23T19:08:01.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 81,
-      "move": 34
+      "heat": 77,
+      "move": -6
     },
     {
       "id": "s_c6a17a386bdb2727",
@@ -129,8 +146,8 @@
       "ts": "2026-07-23T19:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 90,
-      "move": 46
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_77885ca812d6bc37",
@@ -146,8 +163,8 @@
       "ts": "2026-07-23T19:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 90,
-      "move": 46
+      "heat": 87,
+      "move": -3
     },
     {
       "id": "s_84bd7cfa0701efb0",
@@ -163,8 +180,8 @@
       "ts": "2026-07-23T18:38:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": 24
+      "heat": 69,
+      "move": -3
     },
     {
       "id": "s_00359069d44fdf51",
@@ -180,8 +197,8 @@
       "ts": "2026-07-23T17:07:35.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 99,
-      "move": 54
+      "heat": 95,
+      "move": 0
     },
     {
       "id": "s_03ca48c266f77a57",
@@ -197,8 +214,8 @@
       "ts": "2026-07-23T17:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 70,
-      "move": 24
+      "heat": 67,
+      "move": -9
     },
     {
       "id": "s_cb3c46e4e7150457",
@@ -214,8 +231,8 @@
       "ts": "2026-07-23T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 78,
-      "move": 39
+      "heat": 75,
+      "move": -6
     },
     {
       "id": "s_3cafe2ee039e8f59",
@@ -231,8 +248,8 @@
       "ts": "2026-07-23T16:04:19.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": 47
+      "heat": 84,
+      "move": -3
     },
     {
       "id": "s_d15a0dad264d18d8",
@@ -248,8 +265,8 @@
       "ts": "2026-07-23T15:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 68,
-      "move": -11
+      "heat": 65,
+      "move": -6
     },
     {
       "id": "s_d9ffdf3634eb5912",
@@ -265,8 +282,8 @@
       "ts": "2026-07-23T15:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 76,
-      "move": -13
+      "heat": 73,
+      "move": 0
     },
     {
       "id": "s_085548e5aa000238",
@@ -282,8 +299,8 @@
       "ts": "2026-07-23T14:52:44.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 58,
-      "move": -14
+      "heat": 55,
+      "move": -1
     },
     {
       "id": "s_2568e67aa59be85d",
@@ -299,8 +316,8 @@
       "ts": "2026-07-23T14:45:05.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 68,
-      "move": -11
+      "heat": 65,
+      "move": -6
     },
     {
       "id": "s_01d83a6818a93909",
@@ -316,8 +333,8 @@
       "ts": "2026-07-23T14:13:35.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 76,
-      "move": -12
+      "heat": 72,
+      "move": -2
     },
     {
       "id": "s_9ae095cbc6ee0617",
@@ -333,8 +350,8 @@
       "ts": "2026-07-23T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -13
+      "heat": 74,
+      "move": 0
     },
     {
       "id": "s_7e61ca37fbbd0ef1",
@@ -350,8 +367,8 @@
       "ts": "2026-07-23T13:36:50.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 57,
-      "move": 10
+      "heat": 54,
+      "move": -1
     },
     {
       "id": "s_4e9820704ada1498",
@@ -367,8 +384,8 @@
       "ts": "2026-07-23T12:41:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 76,
-      "move": -14
+      "heat": 73,
+      "move": 1
     },
     {
       "id": "s_5becd4f5ac8e00f8",
@@ -384,8 +401,8 @@
       "ts": "2026-07-23T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 55,
-      "move": -14
+      "heat": 52,
+      "move": -1
     },
     {
       "id": "s_1f97c93f772d588e",
@@ -401,8 +418,8 @@
       "ts": "2026-07-23T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 82,
-      "move": -7
+      "heat": 79,
+      "move": 0
     },
     {
       "id": "s_45ad686cbb592c4f",
@@ -418,8 +435,8 @@
       "ts": "2026-07-23T11:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 84,
-      "move": -9
+      "heat": 81,
+      "move": 0
     },
     {
       "id": "s_37c9890bc32e7cee",
@@ -435,8 +452,8 @@
       "ts": "2026-07-23T00:00:00.000Z",
       "read": "5 min",
       "also": [],
-      "heat": 73,
-      "move": -13
+      "heat": 70,
+      "move": -1
     },
     {
       "id": "s_7569338ee0d35289",
@@ -452,8 +469,8 @@
       "ts": "2026-07-23T00:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 53,
-      "move": 9
+      "heat": 50,
+      "move": -1
     },
     {
       "id": "s_2b0ee14bcadb36d9",
@@ -469,8 +486,8 @@
       "ts": "2026-07-22T23:47:54.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 71,
-      "move": -8
+      "heat": 68,
+      "move": -3
     },
     {
       "id": "s_6eed503eb1643455",
@@ -486,8 +503,8 @@
       "ts": "2026-07-22T22:01:52.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -11
+      "heat": 68,
+      "move": 0
     },
     {
       "id": "s_5699d15319beb07d",
@@ -504,7 +521,7 @@
       "read": "4 min",
       "also": [],
       "heat": 88,
-      "move": -4
+      "move": 2
     },
     {
       "id": "s_cb9c3c1e8192f68e",
@@ -521,7 +538,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -8
+      "move": -1
     },
     {
       "id": "s_ad301ee4934f8119",
@@ -539,7 +556,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": 2
     },
     {
       "id": "s_f98db5d0ce92ebd9",
@@ -556,7 +573,7 @@
       "read": "4 min",
       "also": [],
       "heat": 88,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_3b599d5554b29a6f",
@@ -573,7 +590,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_15ce799930d93a28",
@@ -590,7 +607,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_6abe29e95794c87d",
@@ -607,7 +624,7 @@
       "read": "4 min",
       "also": [],
       "heat": 88,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_ad3e75f937d65ca6",
@@ -624,7 +641,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_472a28f23659850e",
@@ -641,7 +658,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": -6
+      "move": 2
     },
     {
       "id": "s_4827129120427058",
@@ -658,7 +675,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_e7be2bf1f7fd9f25",
@@ -675,7 +692,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_0c30deb4396228f4",
@@ -692,7 +709,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -9
+      "move": 2
     },
     {
       "id": "s_e3a96b640fcad124",
@@ -709,7 +726,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_6f420ceb11ea47b6",
@@ -726,7 +743,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_cd499e47d059c505",
@@ -743,7 +760,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -1
     },
     {
       "id": "s_1a46e0c3c44f297b",
@@ -760,7 +777,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": -9
+      "move": 2
     },
     {
       "id": "s_3f5db142d9f8bbf8",
@@ -777,7 +794,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -9
+      "move": 2
     },
     {
       "id": "s_70a38dc6812327bb",
@@ -794,7 +811,7 @@
       "read": "2 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_aab6fd66ee7556a8",
@@ -811,7 +828,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -1
     },
     {
       "id": "s_c54f46e53d48e304",
@@ -828,7 +845,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -1
     },
     {
       "id": "s_7d968fc2635a3524",
@@ -845,7 +862,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_45095198141eb13e",
@@ -862,7 +879,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_69b7eb38cde75406",
@@ -879,7 +896,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_3fdc40a5e56bd575",
@@ -896,7 +913,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_eed16821fcdd7ed9",
@@ -913,7 +930,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_af59977501275694",
@@ -930,7 +947,7 @@
       "read": "3 min",
       "also": [],
       "heat": 78,
-      "move": -2
+      "move": 2
     },
     {
       "id": "s_3dd9888813d83985",
@@ -947,7 +964,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": -9
+      "move": 2
     },
     {
       "id": "s_3a68379c08593a50",
@@ -964,7 +981,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -7
+      "move": -1
     },
     {
       "id": "s_ade7e27dc611eaa3",
@@ -981,7 +998,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -9
+      "move": 2
     },
     {
       "id": "s_55228da85192241d",
@@ -998,7 +1015,7 @@
       "read": "3 min",
       "also": [],
       "heat": 95,
-      "move": -1
+      "move": 0
     },
     {
       "id": "s_01119b73028b4558",
@@ -1015,7 +1032,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_d42362617c640879",
@@ -1032,7 +1049,7 @@
       "read": "2 min",
       "also": [],
       "heat": 40,
-      "move": -11
+      "move": -1
     },
     {
       "id": "s_08ae2218969a5903",
@@ -1049,7 +1066,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": -3
+      "move": 1
     },
     {
       "id": "s_0e4d77c4bfc2f390",
@@ -1066,23 +1083,6 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -11
-    },
-    {
-      "id": "s_0bd50127700baaab",
-      "cat": "rights",
-      "badge": "breaking",
-      "spotlight": false,
-      "quality": 8,
-      "tier": "journalism",
-      "title": "Judge approves Anthropic's $1.5B book copyright settlement with authors",
-      "dek": "Federal court signs off on largest copyright class action settlement ever, offering authors ~$3,000 per allegedly pirated title used in model training.",
-      "src": "The Verge AI",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved",
-      "ts": "2026-07-21T16:53:37.000Z",
-      "read": "3 min",
-      "also": [],
-      "heat": 95,
       "move": -1
     }
   ],
@@ -1200,9 +1200,9 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 25,
-    "published_today": 25,
+    "scanned_last_run": 6,
+    "published_today": 24,
     "sources_live": 13,
-    "slopped_last_run": 14
+    "slopped_last_run": 5
   }
 }

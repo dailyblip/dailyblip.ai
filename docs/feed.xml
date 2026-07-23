@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 20:34:23 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 23:44:17 GMT</lastBuildDate>
     <item>
       <title>US Treasury threatens sanctions over alleged Chinese model distillation of Anthropic tech</title>
       <link>https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/</link>
@@ -13,6 +13,14 @@
       <description>Treasury Secretary Scott Bessent warned of sanctions after White House accused Moonshot of improperly distilling Anthropic's Fable model, escalating IP theft concerns.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 20:49:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>Alexa Plus update adds multi-device routing and third-party integrations</title>
+      <link>https://www.theverge.com/tech/970399/amazon-alexa-plus-ai-update-smart-home-devices</link>
+      <guid isPermaLink="false">s_c6bad60c590297fa</guid>
+      <description>Amazon's Alexa Plus preview now connects smart home devices from Bosch, iRobot, Yale, and others, automatically routing requests to the correct device. Integration coming for Canva, Priceline, Lyft.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 21:15:06 GMT</pubDate>
     </item>
     <item>
       <title>AMD launches Helios AI rack system to challenge Nvidia</title>
@@ -157,14 +165,6 @@
       <description>Bipartisan grassroots opposition to hyperscale data center construction in Florida signals emerging political consensus on AI infrastructure costs.</description>
       <category>industry</category>
       <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>White House disputes distillation claim in Kimi K3 model controversy</title>
-      <link>https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/</link>
-      <guid isPermaLink="false">s_1f97c93f772d588e</guid>
-      <description>White House science advisor alleges Moonshot used covert techniques beyond distillation to build Kimi K3 using unauthorized export chips, echoing broader concerns over Chinese model training.</description>
-      <category>rights</category>
-      <pubDate>Thu, 23 Jul 2026 11:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
