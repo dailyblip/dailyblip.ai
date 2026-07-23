@@ -1151,7 +1151,11 @@
       ],
       "conclusion": "Once you have a one-sentence loop and a filled-out one-pager, you're not just someone with a game idea anymore. You have a spec. Part 2 of this series is where you take that doc and start actually building, generating assets, writing or scaffolding code, and turning the design into something that runs in a browser. But none of that works without this part done first.",
       "methodology_disclosure": "This guide was researched using a combination of indie game development community resources, game design educational sites, and framework documentation. Sources include writing from Generalist Programmer, GameDesigning.org, Game Design Skills, Wayline, and framework sites for Phaser and GDevelop, as well as Wikipedia's overview of browser games. Claims about scope creep failure modes and one-page GDD practices are drawn from independent editorial sources in the solo dev community, not formal academic research. No hands-on testing of the tools or workflows described was conducted by dailyblip for this guide. AI tool recommendations at the concept stage are based on general-purpose conversational AI capabilities as understood editorially, no independent benchmark comparing stage-specific AI performance was available to support a ranked comparison.",
-      "last_reviewed_date": "July 23, 2026"
+      "last_reviewed_date": "July 23, 2026",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 1,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI"
     },
     "fact_check": {
       "issues": [
@@ -1303,6 +1307,32 @@
         "concept": "The 'Out of Scope' section as a visual spotlight — a single list of crossed-out items inside a bounded box, with amber emphasis on the box itself as a 'container that protects the project.'",
         "purpose": "Reinforce the article's strongest takeaway: the Out of Scope section is the most important part of the design doc, and visually show what it looks like — a deliberate list of things you've decided not to build.",
         "aspect_ratio": "1:1"
+      }
+    ],
+    "evergreen_flags": [
+      {
+        "category": "version number",
+        "match": "v1",
+        "context": "...ings you are explicitly NOT building in [v1]\n\nThat last one is the most important se...",
+        "field": "section 2 (The one-page design doc: just enough to keep yourself honest)"
+      },
+      {
+        "category": "version number",
+        "match": "v1",
+        "context": "...e? If it's not on the page, it's not in [v1]....",
+        "field": "section 2 (The one-page design doc: just enough to keep yourself honest)"
+      },
+      {
+        "category": "temporal phrase",
+        "match": "right now",
+        "context": "...rd*, not because you need to choose one [right now], but because the choice affects scope. ...",
+        "field": "section 2 (The one-page design doc: just enough to keep yourself honest)"
+      },
+      {
+        "category": "year mention",
+        "match": "2026",
+        "context": "...ble new major version shipped in spring [2026], so it's worth checking that the tutori...",
+        "field": "section 2 (The one-page design doc: just enough to keep yourself honest)"
       }
     ]
   }
