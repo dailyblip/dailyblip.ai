@@ -880,7 +880,7 @@
   {
     "id": "agent-1784787139935-82p09z",
     "status": "queued",
-    "stage": "Drafting",
+    "stage": "Fact-checking",
     "created_at": "2026-07-23T06:12:19.936Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 1 -- Concept and Design",
@@ -915,7 +915,7 @@
       ],
       "research_plan": "Prioritize indie game dev communities and solo developer writing (itch.io devlogs, game jam postmortems, r/gamedev, Mastodon/Substack indie dev voices) over big studio methodology — these will reflect realistic solo scope. Look for practical one-page GDD templates that are actually used, not enterprise design doc formats. For the AI-assisted design angle, look at how creators are currently using conversational AI (ChatGPT, Claude) as a brainstorming and doc-drafting partner at the concept stage, not just for asset generation. Avoid sources that are either too academic (formal game design theory) or too hype-driven (AI will build your game for you). Confirm framework names and browser-game basics from official or well-maintained community sources."
     },
-    "updated_at": "2026-07-23T06:14:06.210Z",
+    "updated_at": "2026-07-23T06:14:55.667Z",
     "sources": [
       {
         "title": "Browser game",
@@ -1073,6 +1073,85 @@
       "That AI tools (ChatGPT, Claude, Gemini) are specifically and comparatively better at the concept/design-doc stage versus asset or code generation — no independent study or authoritative source directly benchmarks this stage-specific advantage. The claim that Claude is best for GDD writing comes from a single non-peer-reviewed AI comparison site (sneos.com) and should be treated as editorial/user-feedback rather than verified fact. The broader claim that LLMs are useful at the ideation/design-doc stage is supported, but a comparative 'particularly useful' ranking across tools and stages cannot be verified from available sources.",
       "Any specific statistics cited about scope creep failure rates (e.g., the '70% of indie devs cited scope too large' figure attributed to Gamasutra) — the original Gamasutra/GDC source could not be independently located and verified; the figure circulates as secondary citation only.",
       "The claim that solo dev Toby Fox began Undertale with a two-page GDD — this appears in one SEO-oriented game design guide without a primary source citation and could not be verified against an authoritative Toby Fox interview or official record."
-    ]
+    ],
+    "article": {
+      "title": "Build a Browser Game With AI: Start Here (Concept and Design)",
+      "alternative_titles": [
+        "Plan Your Browser Game Before You Touch Any AI Tool",
+        "The One-Page Game Design Doc That Keeps Solo Projects From Falling Apart"
+      ],
+      "slug": "browser-game-ai-concept-design",
+      "dek": "Before you generate a single asset or write a line of code, you need to know what game you're actually building. Here's how to nail that down fast.",
+      "meta_description": "A practical guide for solo creators who want to build a browser game with AI help — starting with the concept, core loop, and a one-page design doc that keeps scope honest.",
+      "quick_answer": "Start by writing a one-sentence core loop and a one-page design doc before touching any tool. It sounds slow, but it's the single thing that keeps solo game projects from dying halfway through.",
+      "tags": [
+        "Getting Started",
+        "Coding",
+        "Tools & Workflow"
+      ],
+      "introduction": "Most solo game projects die the same way: someone starts making assets or writing code before they know what the game actually *is*. Three weeks later, there are 40 sprites, no working game, and a folder named 'final_final_v3.' AI tools make this worse, not better — they're so fast at producing *stuff* that you can get completely buried before you've made a single real decision. This guide is about slowing down just enough to avoid that.",
+      "sections": [
+        {
+          "id": "s1",
+          "heading": "Your core loop in one sentence (and why that's the whole job)",
+          "body_markdown": "A core loop is the repeatable action that defines what your game *is*. Not the story, not the art style — the thing the player does over and over. If your player isn't making a real decision at the end of each cycle, the loop isn't working yet.\n\nFor something like a card game: draw a card, play it, see what changes, decide your next move. That's it. Everything else (art, music, progression, story) wraps around that loop — it doesn't replace it.\n\nFor a first browser game, your loop should fit in one sentence. Something like: *\"The player shoots incoming shapes, earns points for combos, and spends them on upgrades between waves.\"* If you can't write it in one sentence, the concept isn't clear yet.\n\nThis is also where AI tools actually earn their keep at the design stage. Paste your rough idea into ChatGPT or Claude and ask it to poke holes: *\"What decision is the player making each cycle? What makes them want to repeat it?\"* You're not asking it to design your game — you're using it as a sounding board to stress-test your own thinking. That's a genuinely good use of a conversational AI, and it costs you ten minutes, not three weeks.",
+          "tools": [],
+          "prompts": [
+            {
+              "label": "Stress-test your core loop idea with an AI brainstorming partner",
+              "prompt": "I'm designing a small browser game as a solo developer. Here's my core loop idea: [describe your loop in 2-3 sentences]. Can you tell me: What real decision is the player making each cycle? What would make them want to repeat it? What's the simplest version of this I could actually finish and ship? Point out anything that feels vague or scope-creepy."
+            }
+          ]
+        },
+        {
+          "id": "s2",
+          "heading": "The one-page design doc: just enough to keep yourself honest",
+          "body_markdown": "A one-page game design doc (sometimes called a micro-GDD) is a recognized practice in solo dev and game jam circles — not a corporate formality. The point isn't completeness. It's commitment. Writing it down forces you to make decisions instead of keeping options open indefinitely, which is where scope creep lives.\n\nHere's what belongs on that one page:\n\n- **Elevator pitch** — one sentence: what is this game?\n- **Core loop** — what does the player do, over and over?\n- **One primary mechanic** — the thing that makes your game yours\n- **Platform** — browser, played on desktop, mobile, or both\n- **Look and feel** — three words max (pixel art, minimal, chaotic, cozy — pick yours)\n- **Out of scope** — a short list of things you are explicitly NOT building in v1\n\nThat last one is the most important section on the page. Write it before you feel the urge to add a crafting system.\n\nFor the platform piece: a browser game runs directly in a web browser at a URL, no install needed. HTML, CSS, and JavaScript are what make it go. If you're not writing code yourself, tools like **GDevelop** (visual, no-code) and **Phaser** (code-first, the most popular HTML5 game framework) are worth knowing you're planning *toward* — not because you need to choose one right now, but because the choice affects scope. A GDevelop project is a different commitment than a from-scratch Phaser build.\n\nOnce your doc exists — even as a messy Google Doc — you have something to come back to when you start feeling the pull to add features. Ask yourself: is this in scope? If it's not on the page, it's not in v1.\n\nWe didn't test every tool mentioned here firsthand, so treat the framework suggestions as starting points and check their docs for what's current.",
+          "tools": [
+            {
+              "name": "GDevelop",
+              "url": "https://gdevelop.io",
+              "description": "Free, open-source no-code game engine for 2D browser games. Build with a visual editor, no programming required. Good fit if you want to focus on design and gameplay rather than writing JavaScript.",
+              "strengths": [
+                "No coding required — visual event-based logic",
+                "Exports directly to web/browser",
+                "Free with an asset store and active community"
+              ],
+              "limitations": [
+                "Less flexibility than code-first tools for anything unusual or custom",
+                "Mostly 2D — not the right pick if you want even lightweight 3D"
+              ]
+            },
+            {
+              "name": "Phaser",
+              "url": "https://phaser.io",
+              "description": "The most widely used HTML5 game framework, code-first. If you're comfortable with JavaScript (or want to learn), this is the standard choice for browser game development.",
+              "strengths": [
+                "Massive community and documentation",
+                "Full-featured: physics, audio, tilemaps, cameras — it handles a lot out of the box"
+              ],
+              "limitations": [
+                "Requires JavaScript — not a great starting point if you've never coded",
+                "More setup and learning curve than no-code tools"
+              ]
+            }
+          ],
+          "prompts": [
+            {
+              "label": "Draft a one-page game design doc from your concept",
+              "prompt": "I'm a solo developer building a small browser game. Help me write a one-page game design document. Here's my concept: [describe your game idea, core loop, and rough visual vibe]. Format it with these sections: Elevator Pitch (one sentence), Core Loop (what the player does repeatedly), Primary Mechanic (the one thing that makes this game unique), Platform (browser, desktop/mobile), Look and Feel (3 words), Out of Scope (a short list of features explicitly cut from v1). Keep it honest and tight — push back if anything sounds too ambitious for one developer."
+            }
+          ]
+        }
+      ],
+      "key_takeaways": [
+        "Write your core loop in one sentence before touching any tool — if you can't, the concept isn't ready yet",
+        "A one-page design doc isn't bureaucracy, it's the thing that stops your project from quietly expanding until it never ships",
+        "The 'Out of Scope' section of your doc is the most important part — write it early and mean it"
+      ],
+      "conclusion": "Once you have a one-sentence loop and a filled-out one-pager, you're not just someone with a game idea anymore. You have a spec. Part 2 of this series is where you take that doc and start actually building — generating assets, writing or scaffolding code, and turning the design into something that runs in a browser. But none of that works without this part done first.",
+      "methodology_disclosure": "This guide was researched using a combination of indie game development community resources, game design educational sites, and framework documentation. Sources include writing from Generalist Programmer, GameDesigning.org, Game Design Skills, Wayline, and framework sites for Phaser and GDevelop, as well as Wikipedia's overview of browser games. Claims about scope creep failure modes and one-page GDD practices are drawn from independent editorial sources in the solo dev community, not formal academic research. No hands-on testing of the tools or workflows described was conducted by dailyblip for this guide. AI tool recommendations at the concept stage are based on general-purpose conversational AI capabilities as understood editorially — no independent benchmark comparing stage-specific AI performance was available to support a ranked comparison.",
+      "last_reviewed_date": "July 23, 2026"
+    }
   }
 ]
