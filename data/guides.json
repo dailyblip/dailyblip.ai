@@ -876,5 +876,26 @@
     ],
     "backfilled": true,
     "pinned": true
+  },
+  {
+    "id": "agent-1784787139935-82p09z",
+    "status": "queued",
+    "stage": "Queued",
+    "created_at": "2026-07-23T06:12:19.936Z",
+    "submitted": {
+      "idea": "Building a Browser Game With AI: Part 1 -- Concept and Design",
+      "article_type": "Practical guide",
+      "target_length": "Deep dive",
+      "editorial_notes": "planning a small browser game before touching any generation tool -- core loop, a one-page design doc, scope discipline for a solo/small project",
+      "image_count": 3
+    },
+    "agent_topic": {
+      "id": "browser-game-1",
+      "needs_image_comparison": false,
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 1,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI"
+    }
   }
 ]

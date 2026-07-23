@@ -1,0 +1,125 @@
+{
+  "used_topic_ids": [],
+  "topics": [
+    {
+      "id": "browser-game-1",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 1,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI",
+      "title": "Building a Browser Game With AI: Part 1 -- Concept and Design",
+      "angle": "planning a small browser game before touching any generation tool -- core loop, a one-page design doc, scope discipline for a solo/small project",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "browser-game-2",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 2,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI",
+      "title": "Building a Browser Game With AI: Part 2 -- Sprite and Character Asset Generation",
+      "angle": "turning a design doc into real character and sprite art, keeping a consistent style across many generated assets",
+      "needs_image_comparison": true
+    },
+    {
+      "id": "browser-game-3",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 3,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI",
+      "title": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
+      "angle": "generating backgrounds, tilesets, and environment art that actually matches the character style from part 2",
+      "needs_image_comparison": true
+    },
+    {
+      "id": "browser-game-4",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 4,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI",
+      "title": "Building a Browser Game With AI: Part 4 -- Bringing It Together",
+      "angle": "engine choice for a small browser game and the practical integration work of getting generated assets into it",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "browser-game-5",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 5,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI",
+      "title": "Building a Browser Game With AI: Part 5 -- Playtesting, Polish, and What to Fix First",
+      "angle": "what actually matters once a first playable build exists -- prioritizing polish, common first-build mistakes",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "image-model-comparison",
+      "series": null,
+      "series_part": null,
+      "series_total": null,
+      "series_title": null,
+      "title": "ChatGPT Image vs Flux vs Ideogram: Which AI Image Generator Should You Actually Use",
+      "angle": "a direct, same-prompt comparison across officially-API-available image models, honest about where each one wins",
+      "needs_image_comparison": true
+    },
+    {
+      "id": "video-prompts",
+      "series": null,
+      "series_part": null,
+      "series_total": null,
+      "series_title": null,
+      "title": "How to Write AI Video Prompts That Actually Get You What You Meant",
+      "angle": "prompt structure specific to video generation -- camera direction, motion, pacing -- not just reusing image-prompt habits",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "video-character-consistency",
+      "series": null,
+      "series_part": null,
+      "series_total": null,
+      "series_title": null,
+      "title": "Keeping Characters Consistent Across AI-Generated Video",
+      "angle": "the specific techniques for holding a character's appearance steady across multiple video generations or shots",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "one-idea-ten-posts",
+      "series": null,
+      "series_part": null,
+      "series_total": null,
+      "series_title": null,
+      "title": "Turning One Idea Into Ten Social Posts With AI",
+      "angle": "a repeatable workflow for multiplying a single piece of content across formats without it feeling recycled",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "content-month-1",
+      "series": "building-a-month-of-content-with-ai",
+      "series_part": 1,
+      "series_total": 2,
+      "series_title": "Building a Month of Content With AI",
+      "title": "Building a Month of Content With AI: Part 1 -- Planning and Batching",
+      "angle": "planning and batching a full month of content in one sitting, the actual planning artifacts worth keeping",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "content-month-2",
+      "series": "building-a-month-of-content-with-ai",
+      "series_part": 2,
+      "series_total": 2,
+      "series_title": "Building a Month of Content With AI",
+      "title": "Building a Month of Content With AI: Part 2 -- The Production Workflow",
+      "angle": "turning a month's plan into finished, published content -- the actual week-to-week production rhythm",
+      "needs_image_comparison": false
+    },
+    {
+      "id": "faceless-youtube",
+      "series": null,
+      "series_part": null,
+      "series_total": null,
+      "series_title": null,
+      "title": "The Best AI Workflow for Faceless YouTube Channels",
+      "angle": "a realistic, end-to-end workflow for a faceless channel -- scripting, voice, visuals, and what actually takes the most time",
+      "needs_image_comparison": false
+    }
+  ]
+}
