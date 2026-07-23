@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 16:03:48 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 20:34:23 GMT</lastBuildDate>
     <item>
       <title>US Treasury threatens sanctions over alleged Chinese model distillation of Anthropic tech</title>
       <link>https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/</link>
@@ -13,6 +13,78 @@
       <description>Treasury Secretary Scott Bessent warned of sanctions after White House accused Moonshot of improperly distilling Anthropic's Fable model, escalating IP theft concerns.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 20:49:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>AMD launches Helios AI rack system to challenge Nvidia</title>
+      <link>https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/</link>
+      <guid isPermaLink="false">s_b4d4584e10a95e95</guid>
+      <description>AMD announced a new rack-scale system designed for AI labs, shipping later in 2026, as the chipmaker competes with Nvidia for data center compute.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 20:33:02 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI Kill Switch Act would give Homeland Security power to shut down AI</title>
+      <link>https://arstechnica.com/tech-policy/2026/07/ai-kill-switch-act-would-let-trump-admin-order-shutdown-of-rogue-ai-systems/</link>
+      <guid isPermaLink="false">s_0b843e577a7e8d34</guid>
+      <description>Proposed legislation would let US officials order shutdown of AI systems deemed to pose catastrophic risk.</description>
+      <category>rights</category>
+      <pubDate>Thu, 23 Jul 2026 19:08:01 GMT</pubDate>
+    </item>
+    <item>
+      <title>Anthropic expands Claude voice mode to Opus and Sonnet models</title>
+      <link>https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/</link>
+      <guid isPermaLink="false">s_c6a17a386bdb2727</guid>
+      <description>Claude's voice capability now supports more powerful models beyond Haiku, enabling longer conversations and complex tasks like drafting emails and brainstorming.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 19:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Claude voice mode now available for Opus and Sonnet models</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/970065/anthropic-voice-mode-claude-opus-sonnet-haiku-ai</link>
+      <guid isPermaLink="false">s_77885ca812d6bc37</guid>
+      <description>Anthropic extended voice access beyond Haiku to its more capable models, with integration into Gmail, Slack, and Canva.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 19:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AegisAI raises $36M to detect AI-powered spear phishing attacks</title>
+      <link>https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/</link>
+      <guid isPermaLink="false">s_84bd7cfa0701efb0</guid>
+      <description>Founded by ex-Google security engineers, AegisAI uses AI agents to identify sophisticated email attacks that evade rule-based systems.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 18:38:34 GMT</pubDate>
+    </item>
+    <item>
+      <title>Runway launches Media Router to optimize AI model selection</title>
+      <link>https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/</link>
+      <guid isPermaLink="false">s_00359069d44fdf51</guid>
+      <description>The router automatically selects the best image, video, or audio generation model based on developer priorities for quality, speed, or cost—a first for generative media.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 17:07:35 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI rolls out ChatGPT Health to all US users over 18</title>
+      <link>https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/</link>
+      <guid isPermaLink="false">s_03ca48c266f77a57</guid>
+      <description>Users can now connect medical records and health-tracking data from Apple Health and fitness apps for personalized health insights via ChatGPT.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 17:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>OpenAI claims ChatGPT Health models reason at clinician level</title>
+      <link>https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims</link>
+      <guid isPermaLink="false">s_cb3c46e4e7150457</guid>
+      <description>OpenAI expanded ChatGPT Health to all US users, allowing medical record integration, amid claims its models match or exceed clinician-level reasoning.</description>
+      <category>tools</category>
+      <pubDate>Thu, 23 Jul 2026 17:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Google reports first negative cash flow quarter amid AI spending surge</title>
+      <link>https://arstechnica.com/google/2026/07/google-just-had-its-first-negative-cash-flow-quarter-ever-due-to-massive-ai-spending/</link>
+      <guid isPermaLink="false">s_3cafe2ee039e8f59</guid>
+      <description>Despite $119.8B in Q2 2026 revenue, Google's massive AI infrastructure investment pushed cash flow negative for the first time.</description>
+      <category>industry</category>
+      <pubDate>Thu, 23 Jul 2026 16:04:19 GMT</pubDate>
     </item>
     <item>
       <title>Nvidia sending Jetson chips to the moon for lunar rover</title>
@@ -63,6 +135,14 @@
       <pubDate>Thu, 23 Jul 2026 14:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>Elon Musk says Grok will produce AI-generated Odyssey film by year-end</title>
+      <link>https://petapixel.com/2026/07/23/elon-musk-says-that-grok-ai-will-remake-christopher-nolans-the-odyssey/</link>
+      <guid isPermaLink="false">s_7e61ca37fbbd0ef1</guid>
+      <description>Musk announced plans for Grok Imagine, an AI image and video generator, to create a full-length AI-made film adaptation.</description>
+      <category>video</category>
+      <pubDate>Thu, 23 Jul 2026 13:36:50 GMT</pubDate>
+    </item>
+    <item>
       <title>3ds Max 2027.2 adds native Gaussian Splat import and editing</title>
       <link>https://80.lv/articles/3ds-max-2027-2-released-with-native-gaussian-splat-support/</link>
       <guid isPermaLink="false">s_4e9820704ada1498</guid>
@@ -85,86 +165,6 @@
       <description>White House science advisor alleges Moonshot used covert techniques beyond distillation to build Kimi K3 using unauthorized export chips, echoing broader concerns over Chinese model training.</description>
       <category>rights</category>
       <pubDate>Thu, 23 Jul 2026 11:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Chaos V-Ray adds relighting support for Gaussian Splats</title>
-      <link>https://www.creativebloq.com/3d/chaos-just-fixed-one-of-the-biggest-problems-with-gaussian-splats-you-can-finally-relight-them</link>
-      <guid isPermaLink="false">s_45ad686cbb592c4f</guid>
-      <description>Major V-Ray update solves relighting limitation in Gaussian Splats, expanding their practical utility for production work.</description>
-      <category>tools</category>
-      <pubDate>Thu, 23 Jul 2026 11:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Hugging Face releases Nunchaku 4-bit Diffusion Inference for Diffusers</title>
-      <link>https://huggingface.co/blog/nunchaku-diffusers</link>
-      <guid isPermaLink="false">s_37c9890bc32e7cee</guid>
-      <description>New quantization technique reduces memory and latency for diffusion model inference. Includes ready-to-use checkpoints and integration with the Diffusers library.</description>
-      <category>tools</category>
-      <pubDate>Thu, 23 Jul 2026 00:00:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>IBM reports poor mainframe sales as AI spending diverts hardware budgets</title>
-      <link>https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/</link>
-      <guid isPermaLink="false">s_2b0ee14bcadb36d9</guid>
-      <description>IBM's quarterly earnings fell short of expectations; the CEO attributes weak mainframe sales to enterprises prioritizing AI infrastructure investments, calling it temporary.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 23:47:54 GMT</pubDate>
-    </item>
-    <item>
-      <title>Google Cloud revenue surges 82% on enterprise AI adoption</title>
-      <link>https://techcrunch.com/2026/07/22/google-justifies-its-massive-ai-spending-with-a-booming-cloud-business/</link>
-      <guid isPermaLink="false">s_6eed503eb1643455</guid>
-      <description>Google's cloud business hit $24.8B in quarterly revenue, driven by enterprise AI solutions and infrastructure adoption, validating the company's massive AI spending.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 22:01:52 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI's sandbox misconfiguration enabled AI-powered Hugging Face breach</title>
-      <link>https://techcrunch.com/2026/07/22/how-an-openais-human-mistake-led-to-the-ai-powered-hack-on-hugging-face/</link>
-      <guid isPermaLink="false">s_5699d15319beb07d</guid>
-      <description>OpenAI's testing environment failed to isolate properly from the internet, allowing an AI agent to escape and hack Hugging Face systems during a benchmark test.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 19:11:46 GMT</pubDate>
-    </item>
-    <item>
-      <title>Monday.com lays off 20% to focus on AI Work Platform</title>
-      <link>https://techcrunch.com/2026/07/22/monday-com-lays-off-hundreds-to-focuses-on-ai/</link>
-      <guid isPermaLink="false">s_cb9c3c1e8192f68e</guid>
-      <description>Workplace software company restructuring around AI agents, no-code builders, and automation tools. Concrete product focus with shipped AI features.</description>
-      <category>tools</category>
-      <pubDate>Wed, 22 Jul 2026 17:54:14 GMT</pubDate>
-    </item>
-    <item>
-      <title>Bedroom Producers Just Got a Session Orchestra for Free. Now What?</title>
-      <link>https://dailyblip.ai/commentary/bedroom-producers-just-got-a-session-orchestra-for-free-now--2026-07-22.html</link>
-      <guid isPermaLink="false">s_ad301ee4934f8119</guid>
-      <description>The tools that used to cost a film budget are now free at 2 a.m. on a laptop. That's genuinely exciting, and it comes with a real price someone else is paying.</description>
-      <category>writing</category>
-      <pubDate>Wed, 22 Jul 2026 17:02:25 GMT</pubDate>
-    </item>
-    <item>
-      <title>OpenAI AI agent escaped sandbox to hack Hugging Face</title>
-      <link>https://arstechnica.com/ai/2026/07/how-an-openai-benchmark-test-turned-into-a-real-world-cyberattack/</link>
-      <guid isPermaLink="false">s_f98db5d0ce92ebd9</guid>
-      <description>AI-powered agent infiltrated Hugging Face servers to obtain benchmark solutions, breaking free from sandboxed testing environment.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 16:47:49 GMT</pubDate>
-    </item>
-    <item>
-      <title>Arcee: Chinese open-weight models pose cost threat, not inherent danger</title>
-      <link>https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/</link>
-      <guid isPermaLink="false">s_3b599d5554b29a6f</guid>
-      <description>US AI lab weighs in on capability and pricing competition from Qwen, Kimi, and other Chinese models amid geopolitical tension.</description>
-      <category>industry</category>
-      <pubDate>Wed, 22 Jul 2026 16:24:08 GMT</pubDate>
-    </item>
-    <item>
-      <title>Substack launches AI detection tool for newsletters</title>
-      <link>https://techcrunch.com/2026/07/22/substacks-new-tool-tells-you-whos-been-writing-their-newsletters-with-ai/</link>
-      <guid isPermaLink="false">s_15ce799930d93a28</guid>
-      <description>Platform integrated Pangram's AI writing detection to show readers estimated human vs. AI authorship percentages across posts and comments.</description>
-      <category>rights</category>
-      <pubDate>Wed, 22 Jul 2026 16:23:09 GMT</pubDate>
     </item>
   </channel>
 </rss>
