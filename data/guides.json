@@ -1339,7 +1339,7 @@
   {
     "id": "agent-1784867241758-ptztoq",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "created_at": "2026-07-24T04:27:21.759Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 2 -- Sprite and Character Asset Generation",
@@ -1378,6 +1378,175 @@
       ],
       "research_plan": "Prioritize official documentation and feature pages for Midjourney, Leonardo.ai, and Adobe Firefly to confirm current capabilities around style reference and character consistency. Check community sources like Reddit (r/gamedev, r/StableDiffusion, r/midjourney) for practical user experience with sprite generation — these will be more honest about what actually works than marketing copy. Look for any indie dev blogs or YouTube walkthroughs that cover AI sprite workflows end-to-end, as these tend to surface the real friction points. For commercial use rights, go directly to each platform's terms of service — don't rely on third-party summaries. Flag any capability that's been added or changed in the last 6 months as potentially unverified and note it as such in the draft."
     },
-    "updated_at": "2026-07-24T04:27:42.253Z"
+    "updated_at": "2026-07-24T04:29:10.994Z",
+    "sources": [
+      {
+        "title": "Style Reference – Midjourney (Official Docs)",
+        "publisher": "Midjourney",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney's --sref (Style Reference) parameter is officially documented and currently available; it copies style elements (colors, medium, textures, lighting) without copying objects or people",
+          "--sref is compatible with Midjourney v6 and later (including v7 and v8.1)",
+          "The --sv parameter controls which style reference algorithm version is used; --sv 6 is the current default as of June 2025, replacing --sv 4",
+          "There is no mention of plan-tier restrictions on --sref access in the official docs — it is available to all paid subscribers"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "The Ultimate Guide to Midjourney Character Reference (--cref)",
+        "publisher": "ImaginePro Blog",
+        "url": "https://www.imaginepro.ai/blog/2025/7/midjourney-character-reference-guide",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Midjourney offers both --sref (style reference) and --cref (character reference) parameters, introduced in v6, which can be used together",
+          "--cref targets a character's physical features, facial structure, hair, and colors across new prompts; --sref targets artistic style, color palette, and overall aesthetic",
+          "The --cw (character weight) parameter ranges from 0–100; lower values focus on face only, higher values include hair and clothing (default is 100)",
+          "Character consistency via --cref is described as a major improvement but not perfectly reliable — results vary by pose, angle, and complexity of the character"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Leonardo AI Review (2026): Features, Pricing & Is It Worth It?",
+        "publisher": "Amrytt (independent review site)",
+        "url": "https://amrytt.com/leonardo-ai-review/",
+        "source_type": "independent review",
+        "is_primary": true,
+        "claims_supported": [
+          "Leonardo.ai offers custom LoRA fine-tuning (called 'custom model training') allowing users to train a private AI model on 10–20 reference images to generate style-consistent outputs",
+          "LoRA fine-tuning on Leonardo is a paid feature, available from the Artisan plan ($30/month) — it is not accessible on the free tier",
+          "Leonardo was acquired by Canva in July 2024 (acquisition finalized May 2025 per PitchBook), and continues to operate as a standalone product",
+          "The interface is described as a web app with left-sidebar navigation, considered accessible to non-technical users for basic generation; LoRA training has a steeper learning curve"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Character Consistency Made Easy with Leonardo's Character Reference",
+        "publisher": "Leonardo.ai (official blog)",
+        "url": "https://leonardo.ai/news/character-consistency-with-leonardo-character-reference-6-examples",
+        "source_type": "company announcement",
+        "is_primary": true,
+        "claims_supported": [
+          "Leonardo.ai has a Character Reference feature for maintaining visual character consistency across generations",
+          "At time of publication, Character Reference was only compatible with SDXL models",
+          "Leonardo officially states the feature was 'available on all plans for a limited time' — current plan-tier gating should be independently verified before publication",
+          "Leonardo also offers Style Reference and Multi-style Reference features alongside Character Reference"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Style Image Reference and Structure Image Reference – Adobe Firefly APIs",
+        "publisher": "Adobe (official developer docs)",
+        "url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/structure-image-reference/",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly has both a Structure Reference feature (applies layout/outline/depth from a reference image) and a Style Reference feature (applies colors, lighting, textures from a reference image)",
+          "Both features work via adjustable strength sliders (values 1–100, default 50) to control how closely the generated image follows the reference",
+          "Structure Reference and Style Reference are available in the web UI (firefly.adobe.com) and via the Firefly API",
+          "Users need a free or premium Firefly plan, or an active Creative Cloud subscription, to access these features",
+          "Adobe Firefly's style/structure reference features are not specifically documented for game sprite use cases — applying them to sprite generation is a user-driven editorial judgment, not a verified product use case"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Adobe Firefly vs Midjourney vs DALL-E vs Stable Diffusion: AI Image Generator Comparison 2026",
+        "publisher": "AI Business Weekly (independent)",
+        "url": "https://aibusinessweekly.net/p/ai-image-generators-compared",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe Firefly is the only major AI image generator that provides explicit commercial indemnification for enterprise users",
+          "Adobe trained Firefly exclusively on Adobe Stock images, openly licensed content, and public domain material — not scraped web images",
+          "Midjourney has no free tier; Basic plan starts at approximately $10/month",
+          "Stable Diffusion is free to run locally but requires hardware investment",
+          "Midjourney v7 (released April 2025) improved character consistency via the --cref parameter"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "10 Free AI Image Generators That Actually Work (2026 Tested)",
+        "publisher": "PhotoAI Studio (independent review)",
+        "url": "https://www.photoaistudio.com/blog/best-ai-image-generators-2026",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Leonardo.ai has a meaningful free tier with approximately 100 credits per day (enough for roughly 20 images)",
+          "Adobe Firefly has a free plan with a limited monthly generative credit allocation",
+          "Midjourney does not currently offer a permanent free trial",
+          "Stable Diffusion is the only truly unlimited free option, but requires running locally on a GPU (8GB+ VRAM recommended)",
+          "Adobe Firefly is described as the safest for commercial use due to its licensed training data; Midjourney allows commercial use on paid plans; Stable Diffusion outputs are 'generally considered unencumbered, but the legal landscape is still evolving'",
+          "Free tiers of cloud tools often restrict commercial use or require attribution — always verify current ToS"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Open Source AI Sprite Generation Guide 2025",
+        "publisher": "Apatero (independent technical blog)",
+        "url": "https://apatero.com/blog/open-source-sprite-generation-ai-complete-guide-2025",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Stable Diffusion (SD 1.5 or SDXL) is the established foundation for open-source sprite generation, used with specialized LoRA models and ControlNet for pose/composition consistency",
+          "ComfyUI is the preferred frontend for sprite batch workflows due to its node-based pipeline system; Automatic1111 (A1111) also works and is widely used",
+          "Specialized pixel art and sprite-focused checkpoint models are available free on CivitAI and Hugging Face and outperform generic models for this use case",
+          "Kohya SS is the established tool for training custom LoRAs for character identity across sprite variations",
+          "ControlNet variants (OpenPose for positioning, Depth for spatial layout, Canny for edge guidance) are used to maintain consistency across sprite sets",
+          "The full open-source stack runs locally on 12GB+ VRAM GPUs, with no licensing restrictions or ongoing costs"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Itch.io Generative AI Disclosure Tagging (Developer Updates + Game Developer reporting)",
+        "publisher": "Game Developer / Itch.io official forum",
+        "url": "https://www.gamedeveloper.com/production/itch-wants-asset-creators-to-disclose-when-they-ve-used-generative-ai",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Itch.io mandates that all asset creators disclose use of generative AI tools (including Midjourney, Stable Diffusion, etc.), even if the AI output was subsequently hand-edited",
+          "Asset pages on itch.io that use AI content without the required tag are ineligible for indexing on the platform's browse pages",
+          "The disclosure covers specific elements: graphics, sound, text, dialogue, and code",
+          "Itch.io provides a searchable 'AI Generated' tag but (as of early 2026 reporting) does not require disclosure on game pages — the mandatory policy applies specifically to asset packs",
+          "Itch.io enforcement relies partly on user reports; exact policing mechanisms remain unclear"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Steam AI Policy: What Every Game Developer Needs to Know",
+        "publisher": "Legal Moves Law Firm (legal/independent reporting)",
+        "url": "https://legalmoveslawfirm.com/steam-ai-policy/",
+        "source_type": "legal",
+        "is_primary": true,
+        "claims_supported": [
+          "Steam's AI disclosure policy launched January 2024 and was updated January 17, 2026; the Steamworks Content Survey includes a mandatory 'Generative AI Content' section",
+          "Valve has narrowed disclosure rules to require disclosure only when AI output is directly experienced by players — AI used for coding or behind-the-scenes processes does not require disclosure",
+          "Valve's attestation mechanism shifts copyright liability for AI-generated content entirely onto the developer",
+          "The US Copyright Office's March 2025 guidance confirmed that works must 'ultimately be the product of human authorship' to qualify for copyright protection — purely AI-generated sprites with no substantial human creative input may have no IP protection",
+          "By first half of 2025, approximately 8,000 games had disclosed AI use on Steam"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      }
+    ],
+    "unverifiable_claims": [
+      "Specific prompt elements like 'sprite sheet,' 'transparent background,' 'top-down view,' or 'idle animation frames' reliably improve sprite output quality across Midjourney, Firefly, Leonardo, and Stable Diffusion tools — no authoritative cross-tool study or official documentation verifies this; it is widely circulated as practitioner advice but should be framed as user-reported best practice, not a verified product fact",
+      "Whether Midjourney's --sref or --cref parameters are restricted to specific plan tiers — the official docs do not specify per-tier availability, and third-party sources are inconsistent; the writer should verify against current Midjourney pricing/plan pages directly before claiming any tier restriction",
+      "Whether Adobe Firefly, Midjourney, or Leonardo.ai can natively export images with transparent (PNG alpha channel) backgrounds — no official documentation was found confirming this for any of the three cloud tools in a sprite context; Stable Diffusion can output transparent backgrounds via inpainting or specific workflows but this also was not confirmed via a primary source. Writer should test or check current help docs before claiming transparent export capability",
+      "Exact free-tier credit quotas for any tool — these change frequently and the numbers found across sources (e.g., '150 credits/day' for Leonardo, 'limited monthly credits' for Firefly) may be outdated; writer should link to current pricing pages and avoid quoting specific numbers",
+      "Whether Adobe Firefly's structure/style reference features work specifically and reliably for game sprite contexts — Firefly's official docs confirm the features exist for general image generation, but no official or independent source specifically validated sprite/pixel art use cases; this should be framed as an inference or editorial judgment",
+      "Whether Midjourney supports pixel art or sprite-style outputs with 'reasonable fidelity' — no official Midjourney documentation addresses pixel art or sprite generation as a supported use case; this is an editorial judgment based on user experimentation and should be framed as such",
+      "Commercial use rights for Leonardo.ai's free tier specifically — sources note 'free = public' (images are public by default on free tier) but exact commercial use rights language was not confirmed from Leonardo's official ToS; writer should check leonardo.ai/terms directly"
+    ]
   }
 ]
