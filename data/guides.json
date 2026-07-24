@@ -1785,7 +1785,7 @@
   {
     "id": "agent-1784869911789-82ktly",
     "status": "ready_for_review",
-    "stage": "Ready for review",
+    "stage": "Formatting",
     "created_at": "2026-07-24T05:11:51.790Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
@@ -1822,7 +1822,7 @@
       ],
       "research_plan": "Prioritize official documentation and feature pages for the AI image tools most likely used in Part 2 of this series (Midjourney, Leonardo.ai, Adobe Firefly, Stable Diffusion via Automatic1111 or ComfyUI) — specifically looking for style-reference, image-to-image, and seamless/tileable generation capabilities. Check community resources like Reddit (r/StableDiffusion, r/midjourney) and YouTube tutorials for practical workflows beginners actually use to match art styles across assets. Look for any game dev-specific guides on integrating AI art into Phaser or similar browser game frameworks. For the tileset section, prioritize sources that show what post-processing is actually needed (and in what tools) to make AI output tile cleanly. Avoid content farms and listicles — favor hands-on walkthroughs and official feature announcements."
     },
-    "updated_at": "2026-07-24T05:17:46.939Z",
+    "updated_at": "2026-07-24T05:21:01.982Z",
     "sources": [
       {
         "title": "Style Reference – Midjourney Official Docs",
@@ -2141,6 +2141,92 @@
     "warnings": [
       "s1: The CC BY-NC-SA license claim for Midjourney free-tier outputs is sourced from a third-party comparison blog (pxz.ai), not Midjourney's own ToS, and Midjourney has no meaningful free tier to generate outputs from — making this claim about free-tier license terms largely untestable and potentially inaccurate or outdated.",
       "s1: The sourced Leonardo.Ai policy states free users CAN use outputs commercially; the tool card's claim that 'Leonardo retains ownership' contradicts the platform's own stated terms and will mislead readers about commercial viability."
+    ],
+    "images": [
+      {
+        "id": "img1",
+        "file": "agent-1784869911789-82ktly-img1.jpg",
+        "prompt": "Flat vector illustration, 16:9 aspect ratio, dark navy gradient background from #071A1F to #0C242B. Centered composition: a small crisp pixel-art character sprite at lower center, surrounded by a warm amber (#FFB454) radial glow. Behind the character, a stylized flat-vector forest background panel fans out symmetrically — trees rendered as simple geometric shapes in muted greens, deep shadows. A thin aqua (#63D8C6) arc connects the character sprite to the background panel, suggesting a style-reference relationship. No text in the image. Bold, high-contrast focal point readable at thumbnail size. All elements kept well within safe margins — nothing within 10% of any frame edge. Professional infographic quality, not painterly, not photorealistic, no floating UI widgets, no glow effects beyond the amber halo.",
+        "placement": "hero",
+        "alt_text": "A pixel-art game character sprite at center, surrounded by an amber glow, with a stylized forest background panel fanning out behind it and a thin aqua arc connecting the two — illustrating how style reference links character and background art.",
+        "caption": "Part 3 of Building a Browser Game With AI focuses on getting your backgrounds to feel like they belong in the same world as your existing character art.",
+        "generated_at": "2026-07-24T05:19:37.214Z",
+        "approved": true,
+        "role": "hero",
+        "concept": "A pixel-art game character and a forest background emerging from the same style-reference source, visually unified by amber light — emphasizing that the background belongs to the same world as the character",
+        "purpose": "Grab attention and immediately communicate the core promise of Part 3: making your background art look like it belongs in the same game as your existing character art",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img2",
+        "file": "agent-1784869911789-82ktly-img2.jpg",
+        "prompt": "Flat vector infographic, 1:1 square aspect ratio, deep navy background (#071A1F). Top center: a small clean pixel-art character sprite (amber #FFB454 accent). One short label below it reading '--sref' in small sans-serif text. Three short downward arrows fan out to three distinct geometric icons centered in the middle zone: an amber diamond shape, an aqua (#63D8C6) circle, and a muted sage-green hexagon — evenly spaced, identical size, clearly separated. Three more short arrows converge downward from those three icons to a single flat stylized forest tile panel at the bottom center. All arrows are thin, light aqua. No brand names rendered as text in the image. All elements strictly within a safe inset margin on all four sides — nothing cropped or touching edges. Professional infographic quality, flat fills, no texture.",
+        "placement": "s1",
+        "alt_text": "Diagram showing a pixel-art character sprite at top feeding via three paths — representing Midjourney's --sref, Leonardo.Ai, and Adobe Firefly — into a single matching forest background tile at the bottom.",
+        "caption": "Midjourney's --sref flag, Leonardo.Ai's Style Reference, and Adobe Firefly's Style Reference all take your existing character art as an input and generate backgrounds that match its visual feel.",
+        "generated_at": "2026-07-24T05:19:50.631Z",
+        "approved": true,
+        "role": "explainer",
+        "concept": "The style-reference workflow: one source character sprite feeds into three tool icons (Midjourney's --sref, Leonardo.Ai Style Reference, Adobe Firefly Style Reference), all outputting a visually consistent background panel",
+        "purpose": "Show readers at a glance how style reference works across the three specific tools named in the article — one input, three paths, one cohesive output",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img3",
+        "file": "agent-1784869911789-82ktly-img3.jpg",
+        "prompt": "Flat vector workflow diagram, 16:9 landscape, deep navy background (#071A1F). Three equal square tile panels arranged horizontally across the center of the frame, with wide margins on both the left and right outer edges (at least 10% inset from each side) and clear even gaps between panels. Left panel: a flat stylized forest texture tile with a bright amber (#FFB454) vertical seam line on its right edge, making the seam obvious. Center panel: same forest tile, seam shifted to the horizontal and vertical center, with a small amber double-arrow icon labeled 'Offset' in minimal text just below the panel. Right panel: same forest tile, no visible seam, clean and uniform. Below all three panels: a thin aqua (#63D8C6) horizontal arrow running left to right. No brand names rendered as image text. All elements well within safe margins. Flat fills, no texture, no UI chrome.",
+        "placement": "s2",
+        "alt_text": "Three-step workflow showing an AI forest tile with a visible seam (left), the seam shifted to center using the Offset filter (middle), and the seam painted out for a clean seamless result (right).",
+        "caption": "The Offset-and-paint workflow: shift the seam to the center of the canvas so you can see and fix it, then export a tile that repeats cleanly in Phaser or PixiJS.",
+        "generated_at": "2026-07-24T05:20:09.861Z",
+        "approved": false,
+        "role": "workflow",
+        "concept": "The seam-fixing workflow: an AI-generated tile with a visible seam on the right, the Offset filter moving the seam to center, then a painted-out seamless result — shown as three steps left to right",
+        "purpose": "Visually explain the specific fix the article describes: use Aseprite's tile mode or Photoshop's Offset filter to shift seams to center and paint them out",
+        "aspect_ratio": "16:9"
+      },
+      {
+        "id": "img4",
+        "file": "agent-1784869911789-82ktly-img4.jpg",
+        "prompt": "Flat vector comparison diagram, 1:1 square, deep navy background (#071A1F). A thin aqua (#63D8C6) vertical line divides the canvas exactly in half, with generous margin on all four outer edges (at least 10% inset from each frame edge). Left half: a small stylized flat forest tile at the upper portion of the half with a bright amber (#FFB454) vertical seam line running through it; below it, a compact 2x2 grid of that tile repeated, the seam visibly breaking the pattern. Small amber X icon in the lower portion of the left half. Right half: same flat forest tile without any seam line; below it, a compact 2x2 grid of that tile repeated cleanly with no visible seams. Small aqua checkmark icon in the lower portion of the right half. No text rendered in the image. Flat fills, crisp geometric tile shapes, professional infographic quality.",
+        "placement": "s2",
+        "alt_text": "Left half shows an AI-generated forest tile with a visible seam and its ugly 2×2 repeat; right half shows the same tile after seam correction with a clean seamless 2×2 repeat.",
+        "caption": "AI-generated tilesets almost always need post-processing — Aseprite's tile mode or Photoshop's Offset filter lets you see and fix seams before your tiles go into Phaser or PixiJS.",
+        "generated_at": "2026-07-24T05:20:25.930Z",
+        "approved": false,
+        "role": "comparison",
+        "concept": "Side-by-side tile comparison: a tile with a visible seam on the left versus a seamlessly tiling version on the right, with the repeated tile grid shown beneath each to make the problem and fix immediately legible",
+        "purpose": "Show the before/after difference of the seam-fix process in the most concrete visual way — a tile that breaks the repeat versus one that doesn't",
+        "aspect_ratio": "1:1"
+      },
+      {
+        "id": "img5",
+        "file": "agent-1784869911789-82ktly-img5.jpg",
+        "prompt": "Flat vector portrait infographic, 9:16 aspect ratio, deep navy background (#071A1F). Three equally sized horizontal card bands stacked vertically, each with a slightly lighter navy card fill (#0C242B), evenly spaced with clear gaps between them, and generous margin on all four outer frame edges (at least 10% inset). Left side of each card: a bold amber (#FFB454) numeral — '1', '2', '3' — in a clean sans-serif style. Card 1 content: a small pixel-art character sprite connected by a thin amber arc to a small background panel icon (stylized trees). Card 2 content: a flat tile icon with an amber seam line, a small wrench/tool icon, and a clean tile icon in sequence left to right. Card 3 content: a flat shield icon with an aqua (#63D8C6) checkmark inside. All icons crisp, geometric, flat-filled. No text rendered in the image other than the numerals '1', '2', '3'. All elements strictly within safe margins, nothing touching frame edges. Professional infographic quality.",
+        "placement": "s1",
+        "alt_text": "Three stacked cards summarizing the article's key takeaways: 1) use style reference to link character and background art, 2) fix tile seams with Aseprite or Photoshop's Offset filter, 3) check commercial rights on your chosen platform before publishing.",
+        "caption": "The three things to remember from Part 3: match styles with a reference, fix your seams, and verify your commercial rights before you ship.",
+        "generated_at": "2026-07-24T05:20:43.273Z",
+        "approved": false,
+        "role": "list-support",
+        "concept": "Three vertically stacked key-takeaway icons: a style-reference link between character and background, a seam-fix tool indicator, and a license-check shield — one per key takeaway from the article",
+        "purpose": "Give readers a fast visual anchor for the article's three concrete takeaways: use style reference, fix seams, check commercial rights",
+        "aspect_ratio": "9:16"
+      },
+      {
+        "id": "img6",
+        "file": "agent-1784869911789-82ktly-img6.jpg",
+        "prompt": "Flat vector illustration, 16:9 landscape, deep navy background (#071A1F) with generous margin on all sides. Centered: a large rounded-rectangle representing a browser game viewport, with a thin aqua (#63D8C6) border and aqua corner bracket accents outside it. Inside the viewport: a flat stylized forest game scene — a seamless repeating tile floor in muted greens fills the lower third, with simple geometric flat-vector trees in the background upper portion. A small pixel-art character sprite stands on the tile floor, center-left, with a warm amber (#FFB454) highlight suggesting the same lighting as the background. The character's color palette visibly matches the background tones. No browser chrome, no address bars, no floating UI. No text rendered in the image. All elements within safe inset margins — the viewport itself does not touch any frame edge. Flat fills, crisp geometry, professional infographic quality.",
+        "placement": "s2",
+        "alt_text": "A stylized browser game viewport showing a pixel-art character standing on seamless forest tiles, with the character's color palette and lighting visually matching the background — the end result of using style reference and seam-fixing techniques.",
+        "caption": "The finished state: a game scene where AI-generated background tiles and your existing character art look like they were always meant to be in the same world.",
+        "generated_at": "2026-07-24T05:21:01.982Z",
+        "approved": false,
+        "role": "explainer",
+        "concept": "A repeating tile grid inside a stylized browser game viewport, with a pixel-art character standing on it — showing the end goal: character art and background art looking unified inside an actual game frame",
+        "purpose": "Show readers the finished-state payoff of the whole workflow: a game scene where background tiles and character art look like they belong to the same visual world",
+        "aspect_ratio": "16:9"
+      }
     ]
   }
 ]
