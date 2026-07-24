@@ -1,65 +1,65 @@
 {
-  "issue": 254,
-  "generated_at": "2026-07-24T03:59:54.715Z",
+  "issue": 255,
+  "generated_at": "2026-07-24T07:57:26.913Z",
   "brief": {
     "items": [
       {
-        "story": "s_00359069d44fdf51",
-        "html": "Runway's new <b>Media Router automatically picks the best image, video, or audio model</b> for your quality, speed, or cost priority — a first for generative media pipelines.",
+        "story": "s_0b843e577a7e8d34",
+        "html": "Proposed <b>AI Kill Switch Act would let Homeland Security shut down AI systems</b> deemed catastrophic — meaning every tool in your stack could face a sudden forced outage.",
         "secs": 10,
-        "impact": 9,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_77885ca812d6bc37",
-        "html": "Claude voice now runs on <b>Opus and Sonnet with Canva and Gmail integration</b> — useful for drafting briefs, creative direction, and long brainstorming sessions.",
-        "secs": 9,
-        "impact": 8,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_7e61ca37fbbd0ef1",
-        "html": "Elon Musk says <b>Grok will produce a full-length AI-generated Odyssey film by year-end</b>, the most high-profile bet yet on long-form AI video.",
-        "secs": 9,
         "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_b4d4584e10a95e95",
-        "html": "AMD's <b>Helios rack-scale AI system ships later in 2026</b>, giving hosted creative platforms like Runway a second inference option that could pressure Nvidia-dependent pricing.",
-        "secs": 10,
-        "impact": 6,
-        "hardware": true,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_3cafe2ee039e8f59",
-        "html": "Google posted its <b>first negative cash flow quarter despite $119.8B in revenue</b>, showing how hard it's betting on the AI infrastructure that powers creator tools.",
-        "secs": 10,
+        "story": "s_03ca48c266f77a57",
+        "html": "<b>ChatGPT Health is now live for all US users over 18</b>, letting you connect Apple Health and medical records directly to ChatGPT for personalized insights.",
+        "secs": 9,
         "impact": 6,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_2568e67aa59be85d",
-        "html": "An industry report warns <b>competitive pressure is pushing risky AI training shortcuts</b> that could make the creative models you rely on less predictable and less safe.",
+        "story": "s_c6bad60c590297fa",
+        "html": "<b>Alexa Plus now integrates with Canva</b> alongside Bosch, Yale, and iRobot devices, letting voice commands feed directly into your design workflow.",
         "secs": 9,
         "impact": 5,
         "hardware": false,
         "tracking": false,
         "commentary": false
+      },
+      {
+        "story": "s_cb3c46e4e7150457",
+        "html": "OpenAI claims <b>ChatGPT Health matches clinician-level reasoning</b> as it opens medical-record integration to all US adults — a signal of how far reasoning models have come.",
+        "secs": 10,
+        "impact": 5,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_84bd7cfa0701efb0",
+        "html": "<b>AegisAI raises $36M</b> to catch AI-powered spear-phishing attacks that slip past rule-based filters — relevant if your creative business runs on email.",
+        "secs": 9,
+        "impact": 4,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_c6a17a386bdb2727",
+        "html": "Claude voice on <b>Opus and Sonnet now supports longer creative brainstorming sessions</b> with Gmail and Canva integration for hands-free drafting.",
+        "secs": 9,
+        "impact": 4,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
       }
     ],
-    "title": "Thursday, July 23 — six things that changed today",
-    "date": "2026-07-24T03:59:54.641Z",
+    "title": "Friday, July 24 — six things that changed today",
+    "date": "2026-07-24T07:57:26.843Z",
     "edition": "pm"
   },
   "stories": [
