@@ -1781,5 +1781,26 @@
       }
     ],
     "evergreen_flags": []
+  },
+  {
+    "id": "agent-1784869911789-82ktly",
+    "status": "queued",
+    "stage": "Queued",
+    "created_at": "2026-07-24T05:11:51.790Z",
+    "submitted": {
+      "idea": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
+      "article_type": "Practical guide",
+      "target_length": "Deep dive",
+      "editorial_notes": "generating backgrounds, tilesets, and environment art that actually matches the character style from part 2",
+      "image_count": 2
+    },
+    "agent_topic": {
+      "id": "browser-game-3",
+      "needs_image_comparison": true,
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 3,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI"
+    }
   }
 ]
