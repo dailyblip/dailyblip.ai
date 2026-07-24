@@ -5,7 +5,7 @@
     <link>https://dailyblip.ai</link>
     <description>A ruthlessly curated AI-creator brief. Only the signal.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2026 23:44:17 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jul 2026 09:12:00 GMT</lastBuildDate>
     <item>
       <title>US Treasury threatens sanctions over alleged Chinese model distillation of Anthropic tech</title>
       <link>https://techcrunch.com/2026/07/22/treasury-threatens-sanctions-after-white-house-claims-moonshot-distilled-anthropics-fable/</link>
@@ -13,6 +13,14 @@
       <description>Treasury Secretary Scott Bessent warned of sanctions after White House accused Moonshot of improperly distilling Anthropic's Fable model, escalating IP theft concerns.</description>
       <category>rights</category>
       <pubDate>Wed, 22 Jul 2026 20:49:03 GMT</pubDate>
+    </item>
+    <item>
+      <title>AI guardrails are blocking legitimate cybersecurity researchers</title>
+      <link>https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/</link>
+      <guid isPermaLink="false">s_bbe4c3fea4dc27ea</guid>
+      <description>OpenAI and Anthropic's safety restrictions, designed to prevent misuse, are now hampering offensive security work and vulnerability research. Export controls on models like Anthropic's Mythos add pressure.</description>
+      <category>industry</category>
+      <pubDate>Fri, 24 Jul 2026 01:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Alexa Plus update adds multi-device routing and third-party integrations</title>
@@ -157,14 +165,6 @@
       <description>Autodesk release enables importing, rendering, and editing Gaussian Splats directly in 3ds Max via Point modifiers.</description>
       <category>tools</category>
       <pubDate>Thu, 23 Jul 2026 12:41:00 GMT</pubDate>
-    </item>
-    <item>
-      <title>Right-wing and left-wing coalitions unite against AI data center expansion</title>
-      <link>https://www.theverge.com/policy/969667/humans-first-data-center-protest-hernando-county-florida-republicans</link>
-      <guid isPermaLink="false">s_5becd4f5ac8e00f8</guid>
-      <description>Bipartisan grassroots opposition to hyperscale data center construction in Florida signals emerging political consensus on AI infrastructure costs.</description>
-      <category>industry</category>
-      <pubDate>Thu, 23 Jul 2026 12:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>

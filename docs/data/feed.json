@@ -1,6 +1,6 @@
 {
   "issue": 255,
-  "generated_at": "2026-07-24T07:57:26.913Z",
+  "generated_at": "2026-07-24T09:12:00.117Z",
   "brief": {
     "items": [
       {
@@ -78,8 +78,25 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 1,
+      "move": 2,
       "top": true
+    },
+    {
+      "id": "s_bbe4c3fea4dc27ea",
+      "cat": "industry",
+      "badge": "hot",
+      "spotlight": false,
+      "quality": 7,
+      "tier": "journalism",
+      "title": "AI guardrails are blocking legitimate cybersecurity researchers",
+      "dek": "OpenAI and Anthropic's safety restrictions, designed to prevent misuse, are now hampering offensive security work and vulnerability research. Export controls on models like Anthropic's Mythos add pressure.",
+      "src": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/07/23/how-ai-guardrails-are-impeding-the-work-of-offensive-cybersecurity-researchers/",
+      "ts": "2026-07-24T01:00:00.000Z",
+      "read": "5 min",
+      "also": [],
+      "heat": 94,
+      "move": 57
     },
     {
       "id": "s_c6bad60c590297fa",
@@ -95,8 +112,8 @@
       "ts": "2026-07-23T21:15:06.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 72,
-      "move": 33
+      "heat": 62,
+      "move": -12
     },
     {
       "id": "s_b4d4584e10a95e95",
@@ -112,8 +129,8 @@
       "ts": "2026-07-23T20:33:02.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 89,
-      "move": 0
+      "heat": 79,
+      "move": -7
     },
     {
       "id": "s_0b843e577a7e8d34",
@@ -129,8 +146,8 @@
       "ts": "2026-07-23T19:08:01.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 77,
-      "move": -6
+      "heat": 68,
+      "move": -4
     },
     {
       "id": "s_c6a17a386bdb2727",
@@ -146,8 +163,8 @@
       "ts": "2026-07-23T19:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 87,
-      "move": -3
+      "heat": 78,
+      "move": -4
     },
     {
       "id": "s_77885ca812d6bc37",
@@ -163,8 +180,8 @@
       "ts": "2026-07-23T19:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 87,
-      "move": -3
+      "heat": 78,
+      "move": -4
     },
     {
       "id": "s_84bd7cfa0701efb0",
@@ -180,8 +197,8 @@
       "ts": "2026-07-23T18:38:34.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 69,
-      "move": -3
+      "heat": 59,
+      "move": -13
     },
     {
       "id": "s_00359069d44fdf51",
@@ -197,8 +214,8 @@
       "ts": "2026-07-23T17:07:35.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 95,
-      "move": 0
+      "heat": 86,
+      "move": -6
     },
     {
       "id": "s_03ca48c266f77a57",
@@ -214,8 +231,8 @@
       "ts": "2026-07-23T17:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 67,
-      "move": -9
+      "heat": 58,
+      "move": -6
     },
     {
       "id": "s_cb3c46e4e7150457",
@@ -231,8 +248,8 @@
       "ts": "2026-07-23T17:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 75,
-      "move": -6
+      "heat": 66,
+      "move": -11
     },
     {
       "id": "s_3cafe2ee039e8f59",
@@ -248,8 +265,8 @@
       "ts": "2026-07-23T16:04:19.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 84,
-      "move": -3
+      "heat": 75,
+      "move": -7
     },
     {
       "id": "s_d15a0dad264d18d8",
@@ -265,7 +282,7 @@
       "ts": "2026-07-23T15:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 65,
+      "heat": 56,
       "move": -6
     },
     {
@@ -282,8 +299,8 @@
       "ts": "2026-07-23T15:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 73,
-      "move": 0
+      "heat": 64,
+      "move": -11
     },
     {
       "id": "s_085548e5aa000238",
@@ -299,8 +316,8 @@
       "ts": "2026-07-23T14:52:44.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 55,
-      "move": -1
+      "heat": 46,
+      "move": -8
     },
     {
       "id": "s_2568e67aa59be85d",
@@ -316,7 +333,7 @@
       "ts": "2026-07-23T14:45:05.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 65,
+      "heat": 56,
       "move": -6
     },
     {
@@ -333,8 +350,8 @@
       "ts": "2026-07-23T14:13:35.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 72,
-      "move": -2
+      "heat": 63,
+      "move": -9
     },
     {
       "id": "s_9ae095cbc6ee0617",
@@ -350,8 +367,8 @@
       "ts": "2026-07-23T14:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 74,
-      "move": 0
+      "heat": 65,
+      "move": -11
     },
     {
       "id": "s_7e61ca37fbbd0ef1",
@@ -367,8 +384,8 @@
       "ts": "2026-07-23T13:36:50.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 54,
-      "move": -1
+      "heat": 44,
+      "move": -8
     },
     {
       "id": "s_4e9820704ada1498",
@@ -384,8 +401,8 @@
       "ts": "2026-07-23T12:41:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 73,
-      "move": 1
+      "heat": 63,
+      "move": -12
     },
     {
       "id": "s_5becd4f5ac8e00f8",
@@ -401,8 +418,8 @@
       "ts": "2026-07-23T12:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 52,
-      "move": -1
+      "heat": 43,
+      "move": -8
     },
     {
       "id": "s_1f97c93f772d588e",
@@ -418,8 +435,8 @@
       "ts": "2026-07-23T11:00:00.000Z",
       "read": "3 min",
       "also": [],
-      "heat": 79,
-      "move": 0
+      "heat": 70,
+      "move": -7
     },
     {
       "id": "s_45ad686cbb592c4f",
@@ -435,8 +452,8 @@
       "ts": "2026-07-23T11:00:00.000Z",
       "read": "2 min",
       "also": [],
-      "heat": 81,
-      "move": 0
+      "heat": 72,
+      "move": -7
     },
     {
       "id": "s_37c9890bc32e7cee",
@@ -453,7 +470,7 @@
       "read": "5 min",
       "also": [],
       "heat": 70,
-      "move": -1
+      "move": 6
     },
     {
       "id": "s_7569338ee0d35289",
@@ -470,7 +487,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_2b0ee14bcadb36d9",
@@ -487,7 +504,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": -3
+      "move": 6
     },
     {
       "id": "s_6eed503eb1643455",
@@ -504,7 +521,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 0
+      "move": 6
     },
     {
       "id": "s_5699d15319beb07d",
@@ -521,7 +538,7 @@
       "read": "4 min",
       "also": [],
       "heat": 88,
-      "move": 2
+      "move": 1
     },
     {
       "id": "s_cb9c3c1e8192f68e",
@@ -538,7 +555,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 3
     },
     {
       "id": "s_ad301ee4934f8119",
@@ -556,7 +573,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": 6
     },
     {
       "id": "s_f98db5d0ce92ebd9",
@@ -573,7 +590,7 @@
       "read": "4 min",
       "also": [],
       "heat": 88,
-      "move": 2
+      "move": 1
     },
     {
       "id": "s_3b599d5554b29a6f",
@@ -590,7 +607,7 @@
       "read": "3 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_15ce799930d93a28",
@@ -624,7 +641,7 @@
       "read": "4 min",
       "also": [],
       "heat": 88,
-      "move": 2
+      "move": 1
     },
     {
       "id": "s_ad3e75f937d65ca6",
@@ -658,7 +675,7 @@
       "read": "3 min",
       "also": [],
       "heat": 70,
-      "move": 2
+      "move": 6
     },
     {
       "id": "s_4827129120427058",
@@ -675,7 +692,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_e7be2bf1f7fd9f25",
@@ -692,7 +709,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_0c30deb4396228f4",
@@ -709,7 +726,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 2
+      "move": 6
     },
     {
       "id": "s_e3a96b640fcad124",
@@ -726,7 +743,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_6f420ceb11ea47b6",
@@ -743,7 +760,7 @@
       "read": "2 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_cd499e47d059c505",
@@ -760,7 +777,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 3
     },
     {
       "id": "s_1a46e0c3c44f297b",
@@ -777,7 +794,7 @@
       "read": "2 min",
       "also": [],
       "heat": 68,
-      "move": 2
+      "move": 6
     },
     {
       "id": "s_3f5db142d9f8bbf8",
@@ -794,7 +811,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 2
+      "move": 6
     },
     {
       "id": "s_70a38dc6812327bb",
@@ -828,7 +845,7 @@
       "read": "3 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 3
     },
     {
       "id": "s_c54f46e53d48e304",
@@ -845,7 +862,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 3
     },
     {
       "id": "s_7d968fc2635a3524",
@@ -862,7 +879,7 @@
       "read": "2 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_45095198141eb13e",
@@ -930,7 +947,7 @@
       "read": "5 min",
       "also": [],
       "heat": 50,
-      "move": -1
+      "move": 2
     },
     {
       "id": "s_af59977501275694",
@@ -964,7 +981,7 @@
       "read": "4 min",
       "also": [],
       "heat": 68,
-      "move": 2
+      "move": 6
     },
     {
       "id": "s_3a68379c08593a50",
@@ -981,7 +998,7 @@
       "read": "2 min",
       "also": [],
       "heat": 60,
-      "move": -1
+      "move": 3
     },
     {
       "id": "s_ade7e27dc611eaa3",
@@ -998,7 +1015,7 @@
       "read": "3 min",
       "also": [],
       "heat": 68,
-      "move": 2
+      "move": 6
     },
     {
       "id": "s_55228da85192241d",
@@ -1015,7 +1032,7 @@
       "read": "3 min",
       "also": [],
       "heat": 95,
-      "move": 0
+      "move": 1
     },
     {
       "id": "s_01119b73028b4558",
@@ -1032,7 +1049,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 1
+      "move": 2
     },
     {
       "id": "s_d42362617c640879",
@@ -1066,24 +1083,7 @@
       "read": "3 min",
       "also": [],
       "heat": 85,
-      "move": 1
-    },
-    {
-      "id": "s_0e4d77c4bfc2f390",
-      "cat": "industry",
-      "badge": "new",
-      "spotlight": false,
-      "quality": 5,
-      "tier": "journalism",
-      "title": "Apple pilots AI-summarized Genius Bar conversation recordings",
-      "dek": "Apple's Live Notes system records and transcribes in-store customer service conversations, then AI-summarizes them for store staff.",
-      "src": "PetaPixel",
-      "url": "https://petapixel.com/2026/07/21/conversations-between-apple-store-workers-and-customers-can-now-be-recorded/",
-      "ts": "2026-07-21T16:58:02.000Z",
-      "read": "2 min",
-      "also": [],
-      "heat": 50,
-      "move": -1
+      "move": 2
     }
   ],
   "models": [
@@ -1151,7 +1151,7 @@
   "sources": [
     {
       "n": "TechCrunch AI",
-      "c": 27
+      "c": 28
     },
     {
       "n": "The Verge AI",
@@ -1163,7 +1163,7 @@
     },
     {
       "n": "PetaPixel",
-      "c": 5
+      "c": 4
     },
     {
       "n": "OpenAI News",
@@ -1200,9 +1200,9 @@
     "date": "2026-07-20T17:12:37.495Z"
   },
   "stats": {
-    "scanned_last_run": 6,
-    "published_today": 24,
+    "scanned_last_run": 10,
+    "published_today": 22,
     "sources_live": 13,
-    "slopped_last_run": 5
+    "slopped_last_run": 9
   }
 }
