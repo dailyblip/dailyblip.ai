@@ -1657,7 +1657,11 @@
       ],
       "conclusion": "Getting your first batch of sprites out of an AI tool feels awkward at first. The prompts are weird, the results surprise you, nothing quite looks like what you pictured. That's normal. The style anchor and reference image system is what eventually makes it click, once your first character looks right and you've locked the style, everything generated after that starts feeling like it's from the same world. Start with one character, get them looking good, then use that image as the reference for everything else.",
       "methodology_disclosure": "This guide was researched using official documentation from Midjourney, Leonardo.ai, and Adobe Firefly; independent reviews and community reporting from sources including Amrytt, PhotoAI Studio, AI Business Weekly, and Apatero; platform policy pages from Itch.io and Steam (via Legal Moves Law Firm reporting); and community-sourced practitioner experience. Claims about tool capabilities were cross-referenced against primary sources where available and attributed to independent review when not. Dailyblip did not independently test any of the tools described. Prompt examples are editorial constructions based on documented prompting conventions and community-reported best practices, not verified test outputs. Pricing, plan tiers, and feature availability can change, readers should verify current specifics directly with each tool before making purchasing or commercial decisions.",
-      "last_reviewed_date": "July 24, 2026"
+      "last_reviewed_date": "July 24, 2026",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 2,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI"
     },
     "fact_check": {
       "issues": [
@@ -1724,6 +1728,58 @@
     "warnings": [
       "s1: The tool card lists 12GB+ VRAM as the requirement, but the body text of the same section says '8GB VRAM is roughly the practical floor,' contradicting the source (Apatero) which supports the 12GB figure. One of these claims is wrong or the hedging is inconsistent."
     ],
-    "images": []
+    "images": [
+      {
+        "id": "cmp-OpenAI (GPT Image)",
+        "file": null,
+        "prompt": "A deep ink navy (#071A1F) flat lay workspace showing two identical cartoon warrior character sprites side by side — one labeled as the 'reference' and one as the 'generated match' — with a sticky note containing a five-word style anchor phrase, warm amber (#FFB454) accent lines connecting the two sprites to illustrate the --cref consistency link, and a small aqua teal (#63D8C6) checkmark beside a transparent PNG file icon to indicate successful background removal, all rendered in a clean cel-shaded game-asset aesthetic.",
+        "placement": "comparison",
+        "alt_text": "",
+        "caption": "OpenAI (GPT Image)",
+        "approved": false,
+        "role": "comparison",
+        "model": "OpenAI (GPT Image)",
+        "generation_failed": true,
+        "error": "OpenAI image API 400: {\n  \"error\": {\n    \"message\": \"Billing hard limit has been reached.\",\n    \"type\": \"billing_limit_user_error\",\n    \"param\": null,\n    \"code\": \"billing_hard_limit_reached\"\n  }\n}"
+      },
+      {
+        "id": "cmp-Flux (Black Forest Labs)",
+        "file": "agent-1784867241758-ptztoq-cmp-flux-black-forest-labs-.jpg",
+        "prompt": "A deep ink navy (#071A1F) flat lay workspace showing two identical cartoon warrior character sprites side by side — one labeled as the 'reference' and one as the 'generated match' — with a sticky note containing a five-word style anchor phrase, warm amber (#FFB454) accent lines connecting the two sprites to illustrate the --cref consistency link, and a small aqua teal (#63D8C6) checkmark beside a transparent PNG file icon to indicate successful background removal, all rendered in a clean cel-shaded game-asset aesthetic.",
+        "placement": "comparison",
+        "alt_text": "Flux (Black Forest Labs) output for the prompt: A deep ink navy (#071A1F) flat lay workspace showing two identical cartoon warrior character sprites side by side — one labeled as the 'reference' and one as the 'generated match' — with a sticky note containing a five-word style anchor phrase, warm amber (#FFB454) accent lines connecting the two sprites to illustrate the --cref consistency link, and a small aqua teal (#63D8C6) checkmark beside a transparent PNG file icon to indicate successful background removal, all rendered in a clean cel-shaded game-asset aesthetic.",
+        "caption": "Flux (Black Forest Labs)",
+        "generated_at": "2026-07-24T04:35:11.858Z",
+        "approved": false,
+        "role": "comparison",
+        "model": "Flux (Black Forest Labs)"
+      },
+      {
+        "id": "cmp-Ideogram",
+        "file": null,
+        "prompt": "A deep ink navy (#071A1F) flat lay workspace showing two identical cartoon warrior character sprites side by side — one labeled as the 'reference' and one as the 'generated match' — with a sticky note containing a five-word style anchor phrase, warm amber (#FFB454) accent lines connecting the two sprites to illustrate the --cref consistency link, and a small aqua teal (#63D8C6) checkmark beside a transparent PNG file icon to indicate successful background removal, all rendered in a clean cel-shaded game-asset aesthetic.",
+        "placement": "comparison",
+        "alt_text": "",
+        "caption": "Ideogram",
+        "approved": false,
+        "role": "comparison",
+        "model": "Ideogram",
+        "generation_failed": true,
+        "error": "Ideogram API 402: {\"error\": \"You do not have sufficient balance to perform this operation!\"}"
+      },
+      {
+        "id": "cmp-midjourney",
+        "file": null,
+        "prompt": "A deep ink navy (#071A1F) flat lay workspace showing two identical cartoon warrior character sprites side by side — one labeled as the 'reference' and one as the 'generated match' — with a sticky note containing a five-word style anchor phrase, warm amber (#FFB454) accent lines connecting the two sprites to illustrate the --cref consistency link, and a small aqua teal (#63D8C6) checkmark beside a transparent PNG file icon to indicate successful background removal, all rendered in a clean cel-shaded game-asset aesthetic.",
+        "placement": "comparison",
+        "alt_text": "",
+        "caption": "Midjourney",
+        "approved": false,
+        "role": "comparison",
+        "model": "Midjourney",
+        "needs_upload": true
+      }
+    ],
+    "evergreen_flags": []
   }
 ]
