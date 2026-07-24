@@ -1338,8 +1338,8 @@
   },
   {
     "id": "agent-1784867241758-ptztoq",
-    "status": "queued",
-    "stage": "Generating images",
+    "status": "ready_for_review",
+    "stage": "Ready for review",
     "created_at": "2026-07-24T04:27:21.759Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 2 -- Sprite and Character Asset Generation",
@@ -1378,7 +1378,7 @@
       ],
       "research_plan": "Prioritize official documentation and feature pages for Midjourney, Leonardo.ai, and Adobe Firefly to confirm current capabilities around style reference and character consistency. Check community sources like Reddit (r/gamedev, r/StableDiffusion, r/midjourney) for practical user experience with sprite generation — these will be more honest about what actually works than marketing copy. Look for any indie dev blogs or YouTube walkthroughs that cover AI sprite workflows end-to-end, as these tend to surface the real friction points. For commercial use rights, go directly to each platform's terms of service — don't rely on third-party summaries. Flag any capability that's been added or changed in the last 6 months as potentially unverified and note it as such in the draft."
     },
-    "updated_at": "2026-07-24T04:31:46.161Z",
+    "updated_at": "2026-07-24T04:33:16.523Z",
     "sources": [
       {
         "title": "Style Reference – Midjourney (Official Docs)",
@@ -1568,7 +1568,7 @@
         {
           "id": "s1",
           "heading": "Which tools are actually worth trying for sprite art",
-          "body_markdown": "The honest answer is: none of them are great at pixel art out of the box. But a few are genuinely useful for non-pixel sprite art and character illustration, which is what most browser games need anyway.\n\n**Midjourney** tends toward the more consistent end for stylized character art, based on independent community observations — though results do vary by pose and angle, and complex characters are harder to hold together. It doesn't have a sprite-specific mode, but it handles illustrative styles well and its `--sref` (style reference) and `--cref` (character reference) parameters are the closest thing to a consistency system any cloud tool offers right now. `--cref` lets you point at a character image and carry their look into new prompts — face, hair, colors. `--sref` locks down the visual style across your whole asset set. They work best together. No free tier — you'll need a paid plan.\n\n**Leonardo.ai** has two different consistency features worth knowing about, and they're not the same thing. The simpler one is **Character Reference**: upload a reference image, and it tries to carry that character's look into new generations. The more involved option is **custom LoRA training**, where you feed the tool 10–20 of your own reference images to build a tighter, more persistent style model. LoRA training has a steeper learning curve and requires a paid plan — one independent review (Amrytt) put the relevant paid tier at around $30/month, but pricing can change, so check leonardo.ai directly before committing. The Character Reference feature has also shifted plan availability over time, so it's worth confirming current access before you rely on it. There's a free tier with enough daily credits to experiment.\n\n**Adobe Firefly** is the safest pick if commercial use is your first concern. Its training data is licensed, not scraped, and enterprise users get explicit indemnification. The style and structure reference features exist and work — applying them to sprites is a reasonable inference, not an officially documented use case, but community feedback suggests it holds up for illustration-style assets. Free plan available.\n\n**Stable Diffusion** (via ComfyUI or Automatic1111) is in a different category entirely. It's free, runs locally, and has a real ecosystem of pixel-art and sprite-focused LoRA models on CivitAI and Hugging Face that genuinely outperform generic models for this use case. ControlNet gives you pose and composition control that cloud tools can't match. The tradeoff is setup time and hardware — 8GB+ VRAM is the practical floor, though more headroom helps. If you have the machine and the patience, it's the most powerful option by a lot. If you don't, start with Midjourney or Leonardo and come back to this later.",
+          "body_markdown": "The honest answer is: none of them are great at pixel art out of the box. But a few are genuinely useful for non-pixel sprite art and character illustration, which is what most browser games need anyway.\n\n**Midjourney** tends toward the more consistent end for stylized character art, based on independent community observations — though results do vary by pose and angle, and complex characters are harder to hold together. It doesn't have a sprite-specific mode, but it handles illustrative styles well and its `--sref` (style reference) and `--cref` (character reference) parameters give you a real consistency system that cloud tools generally don't match. `--cref` lets you point at a character image and carry their look into new prompts — face, hair, colors. `--sref` locks down the visual style across your whole asset set. They work best together. No free tier — you'll need a paid plan.\n\n**Leonardo.ai** has two different consistency features worth knowing about, and they're not the same thing. The simpler one is **Character Reference**: upload a reference image, and it tries to carry that character's look into new generations. The more involved option is **custom LoRA training**, where you feed the tool 10–20 of your own reference images to build a tighter, more persistent style model. LoRA training has a steeper learning curve and requires a paid plan — one independent review (Amrytt) mentions the Artisan plan at around $30/month, but that's a third-party source, not Leonardo's own pricing page, so check leonardo.ai directly before committing. The Character Reference feature has also shifted plan availability over time, so it's worth confirming current access before you rely on it. There's a free tier with enough daily credits to experiment.\n\n**Adobe Firefly** is a strong pick if commercial use is your first concern, with one important caveat: the explicit indemnification is an enterprise-tier feature, not something you get on a free or standard paid plan. That said, its training data is licensed rather than scraped, which puts it in a different category from most competitors for commercial work. The style and structure reference features exist and work — applying them to sprites is a reasonable inference, not an officially documented use case, but community feedback suggests it holds up for illustration-style assets. Free plan available.\n\n**Stable Diffusion** (via ComfyUI or Automatic1111) is in a different category entirely. It's free, runs locally, and has a real ecosystem of pixel-art and sprite-focused LoRA models on CivitAI and Hugging Face that genuinely outperform generic models for this use case. ControlNet gives you pose and composition control that cloud tools can't match. The tradeoff is setup time and hardware — 8GB VRAM is roughly the practical floor to get started, though more headroom helps with quality and speed. If you have the machine and the patience, it's the most powerful option by a lot. If you don't, start with Midjourney or Leonardo and come back to this later.",
           "tools": [
             {
               "name": "Midjourney",
@@ -1631,7 +1631,7 @@
         {
           "id": "s2",
           "heading": "From design doc to first sprite: prompts and style consistency",
-          "body_markdown": "Your design doc is already most of a prompt brief — you just need to pull the right parts out of it.\n\nStart by writing a short **style anchor**: three to five phrases that describe your game's visual identity. Something like: *16-bit RPG, warm earthy palette, top-down perspective, flat cel shading, no gradients*. This goes into every single prompt you write. Every one. That's the simplest consistency trick there is.\n\nFor character prompts, add your character's specifics on top of the style anchor — don't swap the anchor out, stack on top of it. A working prompt structure looks roughly like:\n\n`[style anchor] + [character description] + [what they're doing/pose] + [technical needs]`\n\nThe \"technical needs\" part is where a lot of first attempts fall flat. Worth including phrases like **transparent background**, **game sprite**, **full body**, and the view angle your game actually uses (top-down, side view, isometric). These are widely used practitioner tips rather than officially verified product features — no one has run a controlled study — but they show up consistently enough in community workflows that they're a reasonable starting point. Try them and adjust.\n\nOnce your first character looks right, that's your reference image. From there:\n- In **Midjourney**, paste that image URL as `--cref [url]` and add `--sref [url]` to lock the style too.\n- In **Leonardo.ai**, upload it to the Character Reference field before generating.\n- In **Firefly**, upload it to the Style Reference input.\n\nGenerate your second character using the first as a reference — even if they're completely different characters. The goal is that both were generated under the same style constraints, so they'll look like they're from the same game.\n\nFor things like environment tiles and UI elements, drop `--cref` (that's for characters) and use only `--sref` with your first character or an early environment piece as the reference. Same visual logic, different asset type.\n\nOne thing worth flagging: **transparent backgrounds** can be inconsistent with cloud tools. We didn't test this ourselves, and no single source has documented it exhaustively, but it comes up often enough in community reports that it's worth planning for a background-removal step — something like Photoshop, Canva, or a free tool like remove.bg — rather than assuming you'll get clean PNGs straight out of the generator. Stable Diffusion can handle transparency via specific workflows, but again, that's a later-stage upgrade.\n\n**Before you publish or monetize anything:** Midjourney allows commercial use on paid plans. Adobe Firefly's licensed training data makes it the safest for commercial work. Leonardo.ai's commercial use terms on the free tier weren't fully clear from the sources we reviewed — check leonardo.ai/terms directly before shipping anything. If you're putting assets on **itch.io**, their policy requires AI disclosure on asset packs specifically. Game pages don't have a mandatory AI disclosure policy under the current rules — so the requirement is narrower than it might sound, but it's real for asset packs. **Steam** requires disclosure when AI-generated content is directly visible to players, and puts IP liability on you as the developer. Both platforms' policies are worth reading before you're in production.",
+          "body_markdown": "Your design doc is already most of a prompt brief — you just need to pull the right parts out of it.\n\nStart by writing a short **style anchor**: three to five phrases that describe your game's visual identity. Something like: *16-bit RPG, warm earthy palette, top-down perspective, flat cel shading, no gradients*. This goes into every single prompt you write. Every one. That's the simplest consistency trick there is.\n\nFor character prompts, add your character's specifics on top of the style anchor — don't swap the anchor out, stack on top of it. A working prompt structure looks roughly like:\n\n`[style anchor] + [character description] + [what they're doing/pose] + [technical needs]`\n\nThe \"technical needs\" part is where a lot of first attempts fall flat. Worth including phrases like **transparent background**, **game sprite**, **full body**, and the view angle your game actually uses (top-down, side view, isometric). These are widely used practitioner tips rather than officially verified product features — no one has run a controlled study — but they show up consistently enough in community workflows that they're a reasonable starting point. Try them and adjust.\n\nOnce your first character looks right, that's your reference image. From there:\n- In **Midjourney**, paste that image URL as `--cref [url]` and add `--sref [url]` to lock the style too.\n- In **Leonardo.ai**, upload it to the Character Reference field before generating.\n- In **Firefly**, you can use the Style Reference input to carry over colors, lighting, and texture — but Firefly doesn't have a character reference equivalent, so don't expect it to preserve a specific character's face or details the way Midjourney's `--cref` does.\n\nGenerate your second character using the first as a reference — even if they're completely different characters. The goal is that both were generated under the same style constraints, so they'll look like they're from the same game.\n\nFor things like environment tiles and UI elements, drop `--cref` (that's for characters) and use only `--sref` with your first character or an early environment piece as the reference. Same visual logic, different asset type.\n\nOne thing worth flagging: **transparent backgrounds** can be inconsistent with cloud tools. We didn't test this ourselves, and no single source has documented it exhaustively, but it comes up often enough in community reports that it's worth planning for a background-removal step — something like Photoshop, Canva, or a free tool like remove.bg — rather than assuming you'll get clean PNGs straight out of the generator. Stable Diffusion can handle transparency via specific workflows, but again, that's a later-stage upgrade.\n\n**Before you publish or monetize anything:** Midjourney allows commercial use on paid plans. Adobe Firefly's licensed training data makes it the safer option for commercial work on standard plans, though the full indemnification only kicks in at the enterprise tier. Leonardo.ai's commercial use terms on the free tier weren't fully clear from the sources we reviewed — check leonardo.ai/terms directly before shipping anything. If you're putting assets on **itch.io**, their policy requires AI disclosure on asset packs specifically, and undisclosed AI asset packs get blocked from browse-page indexing — so it's not just a labeling rule, it has a real visibility consequence. Game pages don't have a mandatory AI disclosure policy under the current rules, so the requirement is specifically about asset packs, not your game listing itself. **Steam** requires disclosure when AI-generated content is directly visible to players, and puts IP liability on you as the developer. Both platforms' policies are worth reading before you're in production.",
           "tools": [],
           "prompts": [
             {
@@ -1652,7 +1652,8 @@
       "key_takeaways": [
         "Use Midjourney's --cref and --sref together (or Leonardo's Character Reference) to keep characters consistent across your asset library",
         "Write a short style anchor from your design doc and paste it into every single prompt, no exceptions",
-        "Plan for background removal as a separate step — cloud tools can be inconsistent about transparent PNG output, so don't count on it"
+        "Plan for background removal as a separate step — cloud tools can be inconsistent about transparent PNG output, so don't count on it",
+        "Check commercial use terms directly with each tool before you ship anything — free tiers especially tend to have restrictions that aren't obvious upfront"
       ],
       "conclusion": "Getting your first batch of sprites out of an AI tool feels awkward at first. The prompts are weird, the results surprise you, nothing quite looks like what you pictured. That's normal. The style anchor and reference image system is what eventually makes it click — once your first character looks right and you've locked the style, everything generated after that starts feeling like it's from the same world. Start with one character, get them looking good, then use that image as the reference for everything else.",
       "methodology_disclosure": "This guide was researched using official documentation from Midjourney, Leonardo.ai, and Adobe Firefly; independent reviews and community reporting from sources including Amrytt, PhotoAI Studio, AI Business Weekly, and Apatero; platform policy pages from Itch.io and Steam (via Legal Moves Law Firm reporting); and community-sourced practitioner experience. Claims about tool capabilities were cross-referenced against primary sources where available and attributed to independent review when not. Dailyblip did not independently test any of the tools described. Prompt examples are editorial constructions based on documented prompting conventions and community-reported best practices, not verified test outputs. Pricing, plan tiers, and feature availability can change — readers should verify current specifics directly with each tool before making purchasing or commercial decisions.",
@@ -1664,64 +1665,64 @@
           "severity": "high",
           "section_id": "s1",
           "original_text": "Requires 12GB+ VRAM GPU",
-          "issue": "The body text says '8GB+ VRAM is the practical floor' for Stable Diffusion, but the tool card lists '12GB+ VRAM GPU' as a limitation — these two figures directly contradict each other within the same section.",
+          "issue": "The tool card lists 12GB+ VRAM as the requirement, but the body text of the same section says '8GB VRAM is roughly the practical floor,' contradicting the source (Apatero) which supports the 12GB figure. One of these claims is wrong or the hedging is inconsistent.",
           "supporting_source_url": "https://apatero.com/blog/open-source-sprite-generation-ai-complete-guide-2025"
         },
         {
           "severity": "medium",
           "section_id": "s1",
-          "original_text": "one independent review (Amrytt) put the relevant paid tier at around $30/month",
-          "issue": "The article hedges this as a single-source figure but presents it as a current price point without noting the review's publication date or that Leonardo's pricing has changed since the Canva acquisition; readers may rely on a stale figure.",
-          "supporting_source_url": "https://amrytt.com/leonardo-ai-review/"
-        },
-        {
-          "severity": "medium",
-          "section_id": "s1",
-          "original_text": "There's a free tier with enough daily credits to experiment",
-          "issue": "The source notes Character Reference was 'available on all plans for a limited time,' meaning free-tier access to this specific consistency feature may no longer exist, making the free-tier claim misleading in context.",
-          "supporting_source_url": "https://leonardo.ai/news/character-consistency-with-leonardo-character-reference-6-examples"
-        },
-        {
-          "severity": "medium",
-          "section_id": "s1",
-          "original_text": "Adobe Firefly... Free plan available",
-          "issue": "The official docs state users need 'a free or premium Firefly plan, or an active Creative Cloud subscription' — the free plan has a limited monthly generative credit allocation, but the tool card implies broader free access without noting the credit cap.",
-          "supporting_source_url": "https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/structure-image-reference/"
+          "original_text": "Stable Diffusion (via ComfyUI or Automatic1111)...url: https://civitai.com",
+          "issue": "The canonical URL for Stable Diffusion is listed as civitai.com (a model-sharing community), not the actual Stable Diffusion project or its frontends — this will mislead readers looking for the tool itself.",
+          "supporting_source_url": ""
         },
         {
           "severity": "medium",
           "section_id": "s2",
-          "original_text": "Midjourney allows commercial use on paid plans. Adobe Firefly's licensed training data makes it the safest",
-          "issue": "The article conflates training-data licensing (Firefly) with commercial-use licensing (Midjourney) as if they address the same risk; these are distinct legal considerations and presenting them as parallel safety comparisons is misleading.",
+          "original_text": "Midjourney allows commercial use on paid plans",
+          "issue": "The article states this as settled fact, but the source (AI Business Weekly, an independent review) is not Midjourney's own Terms of Service; commercial-use terms should be verified against Midjourney's primary ToS documentation.",
           "supporting_source_url": "https://aibusinessweekly.net/p/ai-image-generators-compared"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Adobe Firefly's licensed training data makes it the safer option...though the full indemnification only kicks in at the enterprise tier",
+          "issue": "The article conflates two distinct claims — licensed training data (available on all plans) and commercial indemnification (enterprise only) — in a way that could mislead readers into believing standard-plan Firefly provides stronger commercial protection than it actually does.",
+          "supporting_source_url": "https://aibusinessweekly.net/p/ai-image-generators-compared"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s1",
+          "original_text": "one independent review (Amrytt) mentions the Artisan plan at around $30/month",
+          "issue": "The article sources Leonardo.ai's Artisan plan pricing solely from a third-party review site rather than Leonardo's own pricing page, and explicitly flags this uncertainty — yet the specific price figure ($30/month) still appears in the body text, which may anchor readers to a potentially stale number.",
+          "supporting_source_url": "https://amrytt.com/leonardo-ai-review/"
         },
         {
           "severity": "low",
           "section_id": "s2",
-          "original_text": "if you're putting assets on itch.io, their policy requires AI disclosure on asset packs specifically. Game pages don't have a mandatory AI disclosure policy",
-          "issue": "The body text accurately states the narrower rule, but the framing 'if you're putting assets on itch.io' could imply game pages are fully exempt, when the current policy scope could expand — the article would benefit from noting this is the policy as of the review date.",
+          "original_text": "itch.io, their policy requires AI disclosure on asset packs specifically",
+          "issue": "The article says 'their policy requires AI disclosure on asset packs specifically' and that 'game pages don't have a mandatory AI disclosure policy under the current rules' — this is accurately caveated, but the source is a Game Developer article reporting on itch.io policy, not itch.io's own policy page, so the 'current rules' framing could become stale without a direct primary link.",
           "supporting_source_url": "https://www.gamedeveloper.com/production/itch-wants-asset-creators-to-disclose-when-they-ve-used-generative-ai"
         },
         {
           "severity": "low",
           "section_id": "key_takeaways",
-          "original_text": "cloud tools can be inconsistent about transparent PNG output, so don't count on it",
-          "issue": "The methodology disclosure notes dailyblip did not test any tools, but 'can be inconsistent' in the key takeaways reads as an observed finding rather than a community-reported pattern — the hedging present in the body text is absent here.",
-          "supporting_source_url": ""
+          "original_text": "free tiers especially tend to have restrictions that aren't obvious upfront",
+          "issue": "This takeaway implies Midjourney has a free tier with restrictions, but Midjourney has no free tier at all — the framing is misleading in this context.",
+          "supporting_source_url": "https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference"
         },
         {
           "severity": "low",
-          "section_id": "s1",
-          "original_text": "Stable Diffusion (via ComfyUI or Automatic1111)... url: https://civitai.com",
-          "issue": "The tool URL points to CivitAI (a model-hosting site), not to Stable Diffusion's own project page or either of the named frontends (ComfyUI, Automatic1111) — it is a functional but misleading canonical link for this tool entry.",
+          "section_id": "s2",
+          "original_text": "We didn't test this ourselves, and no single source has documented it exhaustively",
+          "issue": "The phrase 'we didn't test this ourselves' attributes agency to dailyblip/the publication in a way that implies an editorial 'we,' which could read as dailyblip making a first-person claim about its own testing practices; the methodology disclosure already covers this and the inline language is redundant and potentially confusing.",
           "supporting_source_url": ""
         }
       ],
-      "checked_at": "2026-07-24T04:31:46.161Z",
+      "checked_at": "2026-07-24T04:33:16.523Z",
       "revised": true
     },
     "warnings": [
-      "s1: The body text says '8GB+ VRAM is the practical floor' for Stable Diffusion, but the tool card lists '12GB+ VRAM GPU' as a limitation — these two figures directly contradict each other within the same section."
+      "s1: The tool card lists 12GB+ VRAM as the requirement, but the body text of the same section says '8GB VRAM is roughly the practical floor,' contradicting the source (Apatero) which supports the 12GB figure. One of these claims is wrong or the hedging is inconsistent."
     ]
   }
 ]
