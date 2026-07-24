@@ -1784,8 +1784,8 @@
   },
   {
     "id": "agent-1784869911789-82ktly",
-    "status": "ready_for_review",
-    "stage": "Ready for review",
+    "status": "approved",
+    "stage": "Approved",
     "created_at": "2026-07-24T05:11:51.790Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
@@ -2197,7 +2197,7 @@
         "alt_text": "Left half shows an AI-generated forest tile with a visible seam and its ugly 2×2 repeat; right half shows the same tile after seam correction with a clean seamless 2×2 repeat.",
         "caption": "AI-generated tilesets almost always need post-processing — Aseprite's tile mode or Photoshop's Offset filter lets you see and fix seams before your tiles go into Phaser or PixiJS.",
         "generated_at": "2026-07-24T05:20:25.930Z",
-        "approved": false,
+        "approved": true,
         "role": "comparison",
         "concept": "Side-by-side tile comparison: a tile with a visible seam on the left versus a seamlessly tiling version on the right, with the repeated tile grid shown beneath each to make the problem and fix immediately legible",
         "purpose": "Show the before/after difference of the seam-fix process in the most concrete visual way — a tile that breaks the repeat versus one that doesn't",
@@ -2211,7 +2211,7 @@
         "alt_text": "Three stacked cards summarizing the article's key takeaways: 1) use style reference to link character and background art, 2) fix tile seams with Aseprite or Photoshop's Offset filter, 3) check commercial rights on your chosen platform before publishing.",
         "caption": "The three things to remember from Part 3: match styles with a reference, fix your seams, and verify your commercial rights before you ship.",
         "generated_at": "2026-07-24T05:20:43.273Z",
-        "approved": false,
+        "approved": true,
         "role": "list-support",
         "concept": "Three vertically stacked key-takeaway icons: a style-reference link between character and background, a seam-fix tool indicator, and a license-check shield — one per key takeaway from the article",
         "purpose": "Give readers a fast visual anchor for the article's three concrete takeaways: use style reference, fix seams, check commercial rights",
@@ -2225,7 +2225,7 @@
         "alt_text": "A stylized browser game viewport showing a pixel-art character standing on seamless forest tiles, with the character's color palette and lighting visually matching the background — the end result of using style reference and seam-fixing techniques.",
         "caption": "The finished state: a game scene where AI-generated background tiles and your existing character art look like they were always meant to be in the same world.",
         "generated_at": "2026-07-24T05:21:01.982Z",
-        "approved": false,
+        "approved": true,
         "role": "explainer",
         "concept": "A repeating tile grid inside a stylized browser game viewport, with a pixel-art character standing on it — showing the end goal: character art and background art looking unified inside an actual game frame",
         "purpose": "Show readers the finished-state payoff of the whole workflow: a game scene where background tiles and character art look like they belong to the same visual world",
@@ -2239,7 +2239,7 @@
         "alt_text": "OpenAI (GPT Image) output for the prompt: A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
         "caption": "OpenAI (GPT Image)",
         "generated_at": "2026-07-24T05:21:31.690Z",
-        "approved": false,
+        "approved": true,
         "role": "comparison",
         "model": "OpenAI (GPT Image)"
       },
@@ -2251,7 +2251,7 @@
         "alt_text": "Flux (Black Forest Labs) output for the prompt: A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
         "caption": "Flux (Black Forest Labs)",
         "generated_at": "2026-07-24T05:21:31.690Z",
-        "approved": false,
+        "approved": true,
         "role": "comparison",
         "model": "Flux (Black Forest Labs)"
       },
@@ -2263,7 +2263,7 @@
         "alt_text": "Ideogram output for the prompt: A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
         "caption": "Ideogram",
         "generated_at": "2026-07-24T05:21:31.690Z",
-        "approved": false,
+        "approved": true,
         "role": "comparison",
         "model": "Ideogram"
       },
@@ -2281,6 +2281,12 @@
         "generated_at": "2026-07-24T05:25:21.718Z"
       }
     ],
-    "evergreen_flags": []
+    "evergreen_flags": [],
+    "approved_at": "2026-07-24T05:26:34.338Z",
+    "published_despite_warnings": true,
+    "overridden_warnings": [
+      "s1: The CC BY-NC-SA license claim for Midjourney free-tier outputs is sourced from a third-party comparison blog (pxz.ai), not Midjourney's own ToS, and Midjourney has no meaningful free tier to generate outputs from — making this claim about free-tier license terms largely untestable and potentially inaccurate or outdated.",
+      "s1: The sourced Leonardo.Ai policy states free users CAN use outputs commercially; the tool card's claim that 'Leonardo retains ownership' contradicts the platform's own stated terms and will mislead readers about commercial viability."
+    ]
   }
 ]
