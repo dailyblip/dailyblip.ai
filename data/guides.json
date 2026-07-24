@@ -1339,7 +1339,7 @@
   {
     "id": "agent-1784867241758-ptztoq",
     "status": "ready_for_review",
-    "stage": "Ready for review",
+    "stage": "Formatting",
     "created_at": "2026-07-24T04:27:21.759Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 2 -- Sprite and Character Asset Generation",
@@ -1378,7 +1378,7 @@
       ],
       "research_plan": "Prioritize official documentation and feature pages for Midjourney, Leonardo.ai, and Adobe Firefly to confirm current capabilities around style reference and character consistency. Check community sources like Reddit (r/gamedev, r/StableDiffusion, r/midjourney) for practical user experience with sprite generation — these will be more honest about what actually works than marketing copy. Look for any indie dev blogs or YouTube walkthroughs that cover AI sprite workflows end-to-end, as these tend to surface the real friction points. For commercial use rights, go directly to each platform's terms of service — don't rely on third-party summaries. Flag any capability that's been added or changed in the last 6 months as potentially unverified and note it as such in the draft."
     },
-    "updated_at": "2026-07-24T04:33:16.523Z",
+    "updated_at": "2026-07-24T04:34:51.674Z",
     "sources": [
       {
         "title": "Style Reference – Midjourney (Official Docs)",
@@ -1723,6 +1723,7 @@
     },
     "warnings": [
       "s1: The tool card lists 12GB+ VRAM as the requirement, but the body text of the same section says '8GB VRAM is roughly the practical floor,' contradicting the source (Apatero) which supports the 12GB figure. One of these claims is wrong or the hedging is inconsistent."
-    ]
+    ],
+    "images": []
   }
 ]
