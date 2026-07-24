@@ -108,7 +108,25 @@ async function cmdStart() {
 // real article content, not a generic reading of the topic) -- the
 // whole point of the comparison is showing a REAL example a reader
 // could reproduce, not an arbitrary illustration.
-const COMPARISON_PROMPT_SYSTEM = `Given a guide's title, dek, and section content, write ONE specific, concrete image-generation prompt that this guide's readers could actually copy and try themselves. It should represent a real, characteristic example of what the guide is teaching -- not a generic illustration of the general topic. Keep it to 1-2 sentences, phrased as an actual image-generation prompt (not a description of one).
+//
+// This deliberately ports the same genericness test guide.js's own
+// IMAGE_BRIEF_SYSTEM already uses for hero/section images, rather than
+// a thinner, independently-written version of "be specific" -- the
+// original version of this prompt only said that, without the concrete
+// test to check against, without ever seeing key_takeaways or
+// quick_answer (an article's most concrete, specific content, more so
+// than section headings), and without any brand-style guidance at all.
+// That gap is the most likely explanation for comparison images reading
+// as generic even when the individual models executed the prompt fine.
+const COMPARISON_PROMPT_SYSTEM = `Given a guide's title, dek, key takeaways, quick answer, and section content, write ONE specific, concrete image-generation prompt that this guide's readers could actually copy and try themselves. It should represent a real, characteristic example of what the guide is teaching, grounded in the article's actual content -- never something that could apply to any other article on this general topic.
+
+Concrete test: if you could swap in a different article on a similar general subject and this prompt would still make sense unchanged, it's too generic -- rewrite it to reference something this SPECIFIC article actually says (a specific tool, technique, or step it actually names). The key takeaways and quick answer are the most concrete, specific things this article says -- lean on them rather than a generic reading of the section headings alone.
+
+Ground the image in dailyblip's actual brand colors: deep ink/navy (#071A1F, #0C242B) as the dominant background, warm amber (#FFB454) as the main accent, aqua/teal (#63D8C6) as a secondary accent -- not a generic tech-blog palette.
+
+Avoid: generic futuristic aesthetics, glowing AI brains, holograms, random floating interfaces, people staring at screens unless essential to the concept, watermarks, any text or labels in the image.
+
+Keep the prompt itself to 1-2 sentences, phrased as an actual image-generation prompt (not a description of one).
 
 Return JSON: {"prompt": "..."}
 JSON only.`;
@@ -118,7 +136,10 @@ async function deriveComparisonPrompt(article) {
   const result = await askJSON({
     role: "write",
     system: COMPARISON_PROMPT_SYSTEM,
-    prompt: JSON.stringify({ title: article.title, dek: article.dek, sections: sectionPreviews }),
+    prompt: JSON.stringify({
+      title: article.title, dek: article.dek, sections: sectionPreviews,
+      key_takeaways: article.key_takeaways || [], quick_answer: article.quick_answer || "",
+    }),
     maxTokens: 300,
   });
   return result?.prompt || article.title;
