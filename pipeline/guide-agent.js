@@ -124,6 +124,8 @@ Concrete test: if you could swap in a different article on a similar general sub
 
 Ground the image in dailyblip's actual brand colors: deep ink/navy (#071A1F, #0C242B) as the dominant background, warm amber (#FFB454) as the main accent, aqua/teal (#63D8C6) as a secondary accent -- not a generic tech-blog palette.
 
+Critical: the prompt must describe ONE direct, standalone visual subject a reader could generate and actually use -- not a diagram, comparison graphic, or illustration ABOUT a technique or process. No side-by-side "before/after" or "reference vs. generated" layouts, no labels like "reference" or "match," no checkmarks or icons indicating success/failure, no annotations explaining how something works. If the guide is about keeping a character consistent across generations, the prompt should just BE that character (e.g. "a cartoon warrior character sprite, cel-shaded game-asset style, T-pose, transparent background") -- not a graphic explaining the consistency technique itself.
+
 Avoid: generic futuristic aesthetics, glowing AI brains, holograms, random floating interfaces, people staring at screens unless essential to the concept, watermarks, any text or labels in the image.
 
 Keep the prompt itself to 1-2 sentences, phrased as an actual image-generation prompt (not a description of one).
