@@ -2074,7 +2074,11 @@
       ],
       "conclusion": "The style reference workflow is genuinely the unlock here, once you're feeding your character art back into the generator as a reference, the gap between \"characters\" and \"backgrounds\" gets a lot smaller. The tileset step takes a little patience the first time, but the Offset-and-paint approach is fast once you've done it once. No hands-on testing was done for this guide; everything here is sourced from official docs and independent walkthroughs, so your mileage may vary slightly depending on current feature availability. Part 4 will cover animation and sprite sheets.",
       "methodology_disclosure": "This guide was researched using official documentation from Midjourney, Leonardo.Ai, and Adobe Firefly for style reference and image-to-image feature availability, supplemented by independent game development blogs (BorisTheBrave.Com, Sprite-AI, Apatero) and a peer-reviewed research paper (Tiled Diffusion, CVPR 2025) for tileset generation workflows. Commercial rights claims were cross-referenced against Leonardo.Ai's official commercial use policy and an independent comparison of AI art platform licensing terms. No hands-on testing was conducted by dailyblip for this guide, practical observations about seam artifacts and post-processing needs are drawn from independent community sources, not original experimentation. Readers should verify current feature availability and tier restrictions directly with each platform before committing to a workflow.",
-      "last_reviewed_date": "July 24, 2026"
+      "last_reviewed_date": "July 24, 2026",
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 3,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI"
     },
     "fact_check": {
       "issues": [
@@ -2226,7 +2230,56 @@
         "concept": "A repeating tile grid inside a stylized browser game viewport, with a pixel-art character standing on it — showing the end goal: character art and background art looking unified inside an actual game frame",
         "purpose": "Show readers the finished-state payoff of the whole workflow: a game scene where background tiles and character art look like they belong to the same visual world",
         "aspect_ratio": "16:9"
+      },
+      {
+        "id": "cmp-OpenAI (GPT Image)",
+        "file": "agent-1784869911789-82ktly-cmp-openai-gpt-image-.jpg",
+        "prompt": "A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
+        "placement": "comparison",
+        "alt_text": "OpenAI (GPT Image) output for the prompt: A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
+        "caption": "OpenAI (GPT Image)",
+        "generated_at": "2026-07-24T05:21:31.690Z",
+        "approved": false,
+        "role": "comparison",
+        "model": "OpenAI (GPT Image)"
+      },
+      {
+        "id": "cmp-Flux (Black Forest Labs)",
+        "file": "agent-1784869911789-82ktly-cmp-flux-black-forest-labs-.jpg",
+        "prompt": "A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
+        "placement": "comparison",
+        "alt_text": "Flux (Black Forest Labs) output for the prompt: A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
+        "caption": "Flux (Black Forest Labs)",
+        "generated_at": "2026-07-24T05:21:31.690Z",
+        "approved": false,
+        "role": "comparison",
+        "model": "Flux (Black Forest Labs)"
+      },
+      {
+        "id": "cmp-Ideogram",
+        "file": "agent-1784869911789-82ktly-cmp-ideogram.jpg",
+        "prompt": "A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
+        "placement": "comparison",
+        "alt_text": "Ideogram output for the prompt: A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
+        "caption": "Ideogram",
+        "generated_at": "2026-07-24T05:21:31.690Z",
+        "approved": false,
+        "role": "comparison",
+        "model": "Ideogram"
+      },
+      {
+        "id": "cmp-midjourney",
+        "file": null,
+        "prompt": "A seamless pixel-art forest tileset panel — mossy stone ground tiles, gnarled tree trunks, and leafy canopy segments arranged in a grid, styled to match a hand-painted 2D side-scroller, deep ink navy (#071A1F) night-sky atmosphere with warm amber (#FFB454) torch-light glowing between the trees and aqua (#63D8C6) mist curling at ground level, no visible seams at tile edges, flat game-asset style ready for Phaser or PixiJS.",
+        "placement": "comparison",
+        "alt_text": "",
+        "caption": "Midjourney",
+        "approved": false,
+        "role": "comparison",
+        "model": "Midjourney",
+        "needs_upload": true
       }
-    ]
+    ],
+    "evergreen_flags": []
   }
 ]
