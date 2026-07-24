@@ -1785,7 +1785,7 @@
   {
     "id": "agent-1784869911789-82ktly",
     "status": "queued",
-    "stage": "Queued",
+    "stage": "Researching",
     "created_at": "2026-07-24T05:11:51.790Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
@@ -1801,6 +1801,27 @@
       "series_part": 3,
       "series_total": 5,
       "series_title": "Building a Browser Game With AI"
-    }
+    },
+    "brief": {
+      "target_reader": "Someone who has followed along with Parts 1 and 2 of this series — they have a basic browser game in progress and some AI-generated character art already, but have never used AI tools to create background or environment art before",
+      "reader_outcome": "Feel confident enough to generate background scenes, tilesets, and environment assets that visually match their existing character art — and understand how to handle the tricky consistency problem that trips most beginners up",
+      "structure_plan": [
+        "Why backgrounds are harder than characters (and what to do about it)",
+        "Getting your environment art to actually match your characters",
+        "From single image to tileset: making it repeat without looking weird",
+        "Dropping it into your game without breaking everything"
+      ],
+      "claims_to_verify": [
+        "Whether Midjourney, Leonardo.ai, or Adobe Firefly support style-reference or image-to-image workflows that help match existing character art",
+        "Whether tools like Stable Diffusion or Leonardo.ai have specific tileset or seamless texture generation modes or ControlNet-based approaches that work for game backgrounds",
+        "Whether any of these tools allow uploading a reference image to extract a visual style or palette for new generations",
+        "Whether AI-generated seamless tilesets actually tile cleanly out of the box or require post-processing in tools like Aseprite, Photoshop, or GIMP",
+        "Whether any free-tier plans on these tools support the image-to-image or style-reference features needed for this workflow",
+        "What file formats and typical resolutions work best for browser game backgrounds and tilesets",
+        "Whether the commercial use rights for AI-generated art on the tools recommended in Part 2 extend to background/environment assets generated the same way"
+      ],
+      "research_plan": "Prioritize official documentation and feature pages for the AI image tools most likely used in Part 2 of this series (Midjourney, Leonardo.ai, Adobe Firefly, Stable Diffusion via Automatic1111 or ComfyUI) — specifically looking for style-reference, image-to-image, and seamless/tileable generation capabilities. Check community resources like Reddit (r/StableDiffusion, r/midjourney) and YouTube tutorials for practical workflows beginners actually use to match art styles across assets. Look for any game dev-specific guides on integrating AI art into Phaser or similar browser game frameworks. For the tileset section, prioritize sources that show what post-processing is actually needed (and in what tools) to make AI output tile cleanly. Avoid content farms and listicles — favor hands-on walkthroughs and official feature announcements."
+    },
+    "updated_at": "2026-07-24T05:12:08.639Z"
   }
 ]
