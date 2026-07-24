@@ -1784,8 +1784,8 @@
   },
   {
     "id": "agent-1784869911789-82ktly",
-    "status": "approved",
-    "stage": "Approved",
+    "status": "published",
+    "stage": "Published",
     "created_at": "2026-07-24T05:11:51.790Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
@@ -2287,6 +2287,8 @@
     "overridden_warnings": [
       "s1: The CC BY-NC-SA license claim for Midjourney free-tier outputs is sourced from a third-party comparison blog (pxz.ai), not Midjourney's own ToS, and Midjourney has no meaningful free tier to generate outputs from — making this claim about free-tier license terms largely untestable and potentially inaccurate or outdated.",
       "s1: The sourced Leonardo.Ai policy states free users CAN use outputs commercially; the tool card's claim that 'Leonardo retains ownership' contradicts the platform's own stated terms and will mislead readers about commercial viability."
-    ]
+    ],
+    "published_at": "2026-07-24T05:26:55.632Z",
+    "published_url": "https://dailyblip.ai/guides/browser-game-ai-part-3-environment-background-art.html"
   }
 ]

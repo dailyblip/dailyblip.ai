@@ -1,5 +1,22 @@
 [
   {
+    "title": "Building a Browser Game With AI: Part 3, Environment and Background Art",
+    "slug": "browser-game-ai-part-3-environment-background-art",
+    "dek": "Your characters are done. Now comes the part that trips most people up: getting backgrounds and tilesets to look like they belong in the same game.",
+    "hero_image": "/guides/agent-1784869911789-82ktly-img1.jpg",
+    "published_at": "2026-07-24T05:26:55.632Z",
+    "tags": [
+      "Image Generation",
+      "Coding",
+      "Getting Started"
+    ],
+    "pinned": false,
+    "series": "building-a-browser-game-with-ai",
+    "series_part": 3,
+    "series_total": 5,
+    "series_title": "Building a Browser Game With AI"
+  },
+  {
     "title": "The Complete Reference Guide to Midjourney Prompts",
     "slug": "the-complete-reference-guide-to-midjourney-prompts",
     "dek": "Every attribute, every parameter, and how to actually structure a prompt that gets you what you meant.",
@@ -9,7 +26,11 @@
       "Image Generation",
       "Tools & Workflow"
     ],
-    "pinned": true
+    "pinned": true,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Make Midjourney Images Look Less Like AI Art",
@@ -21,7 +42,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Create a Consistent Visual Style in Midjourney",
@@ -33,7 +58,11 @@
       "Image Generation",
       "Tools & Workflow"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "20 Midjourney Prompts for Cinematic Images That Do Not Look Generic",
@@ -45,7 +74,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Write Better Midjourney Prompts: From Basic Idea to Finished Image",
@@ -57,7 +90,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "12 ChatGPT Prompts for Professional Product Photography Without a Studio",
@@ -69,7 +106,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Keep Characters Consistent in ChatGPT Image Generation",
@@ -81,7 +122,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": true
+    "pinned": true,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "15 ChatGPT Image Prompts for Scroll-Stopping Social Media Posts",
@@ -93,7 +138,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Get Better Images From ChatGPT: A Practical Prompting Guide",
@@ -105,7 +154,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "20 Suno Prompts for Better Song Structure, Bigger Choruses, and Stronger Hooks",
@@ -117,7 +170,11 @@
       "AI Music",
       "Tools & Workflow"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Turn a Simple Guitar or Piano Idea Into a Full Song With Suno",
@@ -129,7 +186,11 @@
       "AI Music",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Use AI to Brainstorm Better Song Lyrics Without Sounding Generic",
@@ -141,7 +202,11 @@
       "Writing",
       "AI Music"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "10 Prompts to Make Your Suno Music Actually Sound Like What You're Imagining",
@@ -153,7 +218,11 @@
       "AI Music",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "15 Midjourney Prompts for Editorial Illustrations and Article Hero Images",
@@ -165,7 +234,11 @@
       "Image Generation",
       "Tools & Workflow"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How Musicians Can Use Suno Without Replacing Their Own Creativity",
@@ -177,7 +250,11 @@
       "AI Music",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "How to Edit AI Images With ChatGPT Without Starting Over",
@@ -189,7 +266,11 @@
       "Image Generation",
       "Getting Started"
     ],
-    "pinned": false
+    "pinned": false,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   },
   {
     "title": "15 Suno Prompts for Acoustic Guitar Songs That Sound Natural",
@@ -201,6 +282,10 @@
       "AI Music",
       "Getting Started"
     ],
-    "pinned": true
+    "pinned": true,
+    "series": null,
+    "series_part": null,
+    "series_total": null,
+    "series_title": null
   }
 ]

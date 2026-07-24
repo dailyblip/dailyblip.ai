@@ -1,0 +1,289 @@
+<!-- Published with 2 unresolved high-severity fact-check warning(s), explicitly overridden via admin.html on 2026-07-24T05:26:34.338Z. See data/guides.json job id agent-1784869911789-82ktly for details. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Building a Browser Game With AI: Part 3, Environment and Background Art — dailyblip</title>
+<meta name="description" content="Learn how to generate AI background art, tilesets, and environment assets that visually match your existing character art, and how to make them actually tile cleanly in your browser game.">
+<link rel="canonical" href="https://dailyblip.ai/guides/browser-game-ai-part-3-environment-background-art.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="dailyblip">
+<meta property="og:title" content="Building a Browser Game With AI: Part 3, Environment and Background Art">
+<meta property="og:description" content="Your characters are done. Now comes the part that trips most people up: getting backgrounds and tilesets to look like they belong in the same game.">
+<meta property="og:url" content="https://dailyblip.ai/guides/browser-game-ai-part-3-environment-background-art.html">
+<meta property="og:image" content="https://dailyblip.ai/guides/agent-1784869911789-82ktly-img1.jpg">
+<meta property="article:published_time" content="2026-07-24T00:00:00.000Z">
+<meta property="article:tag" content="Image Generation">
+<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="Getting Started">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Building a Browser Game With AI: Part 3, Environment and Background Art">
+<meta name="twitter:description" content="Your characters are done. Now comes the part that trips most people up: getting backgrounds and tilesets to look like they belong in the same game.">
+<meta name="twitter:image" content="https://dailyblip.ai/guides/agent-1784869911789-82ktly-img1.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Building a Browser Game With AI: Part 3, Environment and Background Art","description":"Your characters are done. Now comes the part that trips most people up: getting backgrounds and tilesets to look like they belong in the same game.","image":"https://dailyblip.ai/guides/agent-1784869911789-82ktly-img1.jpg","datePublished":"2026-07-24T00:00:00.000Z","dateModified":"2026-07-24T00:00:00.000Z","author":{"@type":"Organization","name":"dailyblip"},"publisher":{"@type":"Organization","name":"dailyblip","logo":{"@type":"ImageObject","url":"https://dailyblip.ai/og-image.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dailyblip.ai/guides/browser-game-ai-part-3-environment-background-art.html"}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@300..700&family=Spline+Sans+Mono:wght@300..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#071A1F; --ink-2:#0C242B; --line:rgba(158,216,210,.13); --line-strong:rgba(158,216,210,.28);
+  --text:#E9F4F1; --dim:#9AB7B2; --faint:#5E7D79; --amber:#FFB454; --amber-deep:#E58E2B; --aqua:#63D8C6;
+  --display:"Bricolage Grotesque",sans-serif; --body:"Spline Sans",sans-serif; --mono:"Spline Sans Mono",monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--ink);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--amber);text-decoration:none} a:hover{text-decoration:underline}
+.wrap{max-width:720px;margin:0 auto;padding:36px 24px 90px}
+.back{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:26px}
+.back a{color:var(--faint)} .back a:hover{color:var(--amber)}
+.guide-tag{
+  display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--amber);
+  border:1px solid rgba(255,180,84,.4);border-radius:20px;padding:5px 14px;margin-bottom:20px;
+}
+h1{font-family:var(--display);font-weight:750;font-size:clamp(28px,5vw,40px);letter-spacing:-.02em;line-height:1.14;margin-bottom:16px}
+.dek{color:var(--dim);font-size:18px;line-height:1.55;margin-bottom:22px}
+.meta-row{font-family:var(--mono);font-size:12px;color:var(--faint);margin-bottom:14px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.page-tags{display:flex;gap:6px;flex-wrap:wrap;margin:-8px 0 24px}
+.page-tag-chip{font-family:var(--mono);font-size:10.5px;color:var(--aqua);border:1px solid rgba(99,216,198,.35);border-radius:12px;padding:3px 10px}
+.quick-answer{border:1px solid var(--line-strong);border-radius:10px;padding:18px 20px;margin-bottom:30px;background:rgba(255,180,84,.05)}
+.quick-answer .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--amber-deep);margin-bottom:6px}
+article p{color:var(--dim);margin-bottom:18px}
+article h2{font-family:var(--display);font-weight:650;font-size:24px;letter-spacing:-.01em;color:var(--text);margin:36px 0 14px}
+article h3{font-family:var(--display);font-weight:600;font-size:19px;color:var(--text);margin:26px 0 10px}
+article ul{margin:0 0 18px 20px;color:var(--dim)}
+article li{margin-bottom:6px}
+article b{color:var(--text)} article a{border-bottom:1px solid rgba(255,180,84,.3)} article a:hover{border-bottom-color:var(--amber)}
+.section-block{margin:38px 0}
+.img-block{margin:26px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.img-block img{display:block;width:100%;height:auto}
+.img-caption{font-family:var(--mono);font-size:11.5px;color:var(--faint);padding:8px 2px}
+.tool-card{border:1px solid var(--line);border-radius:12px;padding:24px 26px;margin:20px 0;background:rgba(158,216,210,.02)}
+.tool-card .name{font-weight:700;font-size:19px;margin-bottom:8px;display:flex;align-items:center;gap:11px}
+.tool-logo{width:28px;height:28px;object-fit:contain;border-radius:6px;flex-shrink:0}
+.tool-card .desc{color:var(--dim);font-size:15.5px;line-height:1.6;margin-bottom:12px}
+.tool-card .sw{font-size:14px;color:var(--faint);line-height:1.7;margin-bottom:6px}
+.takeaways{border:1px solid var(--line-strong);border-radius:10px;padding:20px 22px;margin:32px 0}
+.takeaways .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:10px}
+.takeaways ul{margin:0 0 0 18px;color:var(--dim)}
+.related-guides{margin:32px 0}
+.related-guides .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.related-card{display:block;border:1px solid var(--line);border-radius:10px;padding:14px 16px;transition:border-color .15s ease,transform .15s ease}
+.related-card:hover{border-color:var(--line-strong);transform:translateY(-2px)}
+.related-title{font-family:var(--display);font-weight:640;font-size:14.5px;line-height:1.35;margin-bottom:6px;color:var(--text)}
+.related-dek{color:var(--dim);font-size:12.5px;line-height:1.5}
+.series-nav{border:1px solid var(--line-strong);border-radius:10px;padding:16px 18px;margin:20px 0}
+.series-nav .label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.series-nav-list{display:flex;flex-direction:column;gap:6px}
+.series-nav-item{font-size:13.5px;padding:6px 10px;border-radius:6px}
+a.series-nav-item{color:var(--text);transition:background .15s ease}
+a.series-nav-item:hover{background:rgba(99,216,198,.08)}
+.series-nav-current{background:rgba(255,180,84,.1);color:var(--amber);font-weight:600}
+.series-nav-pending{color:var(--faint);font-style:italic}
+.ref-table-wrap{overflow-x:auto;margin:22px 0;border:1px solid var(--line-strong);border-radius:10px}
+.ref-table{width:100%;border-collapse:collapse;font-size:13px}
+.ref-table th{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);text-align:left;padding:10px 14px;background:rgba(255,180,84,.06);border-bottom:1px solid var(--line-strong);white-space:nowrap}
+.ref-table td{padding:10px 14px;color:var(--dim);border-bottom:1px solid var(--line);vertical-align:top}
+.ref-table tr:last-child td{border-bottom:none}
+.ref-table td:first-child{font-family:var(--mono);color:var(--aqua);white-space:nowrap;font-weight:600}
+.prompts-block{border:1px solid rgba(99,216,198,.35);border-radius:10px;padding:18px 20px;margin:22px 0;background:rgba(99,216,198,.04)}
+.prompts-label{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--aqua);margin-bottom:12px}
+.prompt-card{margin-bottom:14px}
+.prompt-card:last-child{margin-bottom:0}
+.prompt-label{font-size:13px;color:var(--dim);margin-bottom:6px}
+.prompt-row{display:flex;gap:8px;align-items:flex-start}
+.prompt-text{flex:1;display:block;font-family:var(--mono);font-size:12.5px;line-height:1.6;color:var(--text);background:var(--ink);border:1px solid var(--line);border-radius:8px;padding:10px 12px;white-space:pre-wrap;word-break:break-word}
+.prompt-copy{flex:0 0 auto;font-family:var(--mono);font-size:11px;color:var(--aqua);border:1px solid rgba(99,216,198,.4);border-radius:6px;padding:6px 12px;background:none;cursor:pointer;transition:all .15s ease;align-self:flex-start}
+.prompt-copy:hover{border-color:var(--aqua);background:rgba(99,216,198,.08)}
+.prompt-copy.copied{color:var(--amber);border-color:var(--amber-deep)}
+.sources{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.sources summary{cursor:pointer;font-family:var(--display);font-weight:650;font-size:16px;color:var(--text);list-style:revert}
+.sources ul{margin-top:12px}
+.sources li{font-size:13.5px;color:var(--dim);padding:8px 0;border-bottom:1px solid var(--line);list-style:none}
+.sources .pub{color:var(--faint);font-family:var(--mono);font-size:11px}
+.foot-note{margin-top:32px;padding-top:24px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;color:var(--faint);line-height:1.6}
+.item{padding:12px 0;border-top:1px solid var(--line)}
+.top-nudge{font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:22px}
+.top-nudge a{color:var(--amber-deep)}
+.subscribe-block{border:1px solid var(--line-strong);border-radius:12px;padding:26px 24px;margin:36px 0;text-align:center}
+.subscribe-block h3{font-family:var(--display);font-size:19px;margin-bottom:8px}
+.subscribe-block p{color:var(--dim);font-size:14px;margin-bottom:16px}
+.sub-form{display:flex;gap:8px;max-width:380px;margin:0 auto;flex-wrap:wrap;justify-content:center}
+.sub-form input{flex:1;min-width:200px;background:var(--ink);border:1px solid var(--line-strong);border-radius:8px;padding:11px 13px;color:var(--text);font-family:var(--body);font-size:14px;outline:none}
+.sub-form input:focus{border-color:var(--amber-deep)}
+.sub-form button{background:var(--amber);color:#20160a;border:none;border-radius:8px;padding:11px 18px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--body)}
+.sub-form button:hover{filter:brightness(1.08)}
+.sub-ok{display:none;color:var(--aqua);font-size:13.5px;margin-top:10px}
+</style></head><body>
+<div class="wrap">
+  <div class="back"><a href="/">← dailyblip</a> · <a href="./">guides</a></div>
+  <div class="top-nudge">Get guides like this by email → <a href="#subscribe">subscribe below</a></div>
+  <div class="guide-tag">Guide</div>
+  <h1>Building a Browser Game With AI: Part 3, Environment and Background Art</h1>
+  <p class="dek">Your characters are done. Now comes the part that trips most people up: getting backgrounds and tilesets to look like they belong in the same game.</p>
+  <div class="meta-row">Last reviewed July 24, 2026</div>
+  <div class="page-tags"><span class="page-tag-chip">Image Generation</span><span class="page-tag-chip">Coding</span><span class="page-tag-chip">Getting Started</span></div>
+  <div class="series-nav"><div class="label">Building a Browser Game With AI — Part 3 of 5</div><div class="series-nav-list"><span class="series-nav-item series-nav-pending">Part 1: coming soon</span><span class="series-nav-item series-nav-pending">Part 2: coming soon</span><span class="series-nav-item series-nav-current">Part 3: Building a Browser Game With AI: Part 3, Environment and Background Art</span><span class="series-nav-item series-nav-pending">Part 4: coming soon</span><span class="series-nav-item series-nav-pending">Part 5: coming soon</span></div></div>
+  <div class="quick-answer"><div class="label">QUICK ANSWER</div><p>Use your existing character art as a style reference in Midjourney (--sref), Leonardo.Ai, or Adobe Firefly to generate matching backgrounds. Tilesets almost always need minor post-processing in Aseprite or GIMP before they tile cleanly.</p></div>
+  <div class="img-block"><img src="/guides/agent-1784869911789-82ktly-img1.jpg" alt="A pixel-art game character sprite at center, surrounded by an amber glow, with a stylized forest background panel fanning out behind it and a thin aqua arc connecting the two — illustrating how style reference links character and background art." loading="lazy"><div class="img-caption">Part 3 of Building a Browser Game With AI focuses on getting your backgrounds to feel like they belong in the same world as your existing character art.</div></div>
+  <article>
+    <p>Characters were the easy part. Backgrounds are harder because you're not just making one pretty image, you need it to <i>match</i> what you already have, tile without visible seams, and not break your game layout when you drop it in. The good news (and the actual point of this guide) is that the tools you already used in Part 2 can do most of this work. You just need to use them a little differently.</p>
+    <div class="section-block">
+      <h2>Getting your backgrounds to look like they belong in the same game</h2>
+      <p>The reason backgrounds feel harder isn't technical, it's that you're now generating assets that have to <i>relate</i> to something that already exists. A character you made in isolation can look however it wants. A forest background has to feel like it lives in the same world as that character.</p>
+<p>The fix is style reference. Every major tool supports some version of this:</p>
+<ul><li><b>Midjourney</b> has `--sref` (style reference). You paste the URL of your existing character art after that flag, and Midjourney pulls the colors, textures, lighting, and mood from it, not the subject, just the visual feel. You can push or pull how strongly it applies with `--sw` (range 0 to 1000, default 100). This is probably the most direct route if you're already a Midjourney subscriber.</li><li><b>Leonardo.Ai</b> has a dedicated Style Reference upload in its image generation panel, plus a separate Content Reference option if you want to match structure instead of just vibe. Image-to-image is also available. Style reference and image-to-image are accessible on the free tier, though token limits apply, check their current feature page before you count on it.</li><li><b>Adobe Firefly</b> has a Style Reference option, you upload your character art under Styles &gt; Reference and it applies that look to new text-to-image generations. (You may also see it referred to as Generative Match depending on which version of the UI you're in, if you can't find it by one name, try the other.) Firefly also has a Structure Reference if you want to control composition. Adobe's help docs suggest this feature is available broadly, but whether your specific account tier includes it is worth a quick check on Adobe's pricing page before you rely on it.</li></ul>
+<p>For any of these, the workflow is the same: open the tool you used in Part 2, upload or link your character sprite, and use it as a style reference when generating your first background scene. Start with a single establishing shot, something like the main environment your character will move through, before you worry about tilesets.</p>
+<p>A useful prompt structure to get started:</p>
+      
+      <div class="img-block"><img src="/guides/agent-1784869911789-82ktly-img2.jpg" alt="Diagram showing a pixel-art character sprite at top feeding via three paths — representing Midjourney's --sref, Leonardo.Ai, and Adobe Firefly — into a single matching forest background tile at the bottom." loading="lazy"><div class="img-caption">Midjourney's --sref flag, Leonardo.Ai's Style Reference, and Adobe Firefly's Style Reference all take your existing character art as an input and generate backgrounds that match its visual feel.</div></div>
+      <div class="tool-card">
+    <div class="name"><img class="tool-logo" src="https://cdn.brandfetch.io/midjourney.com?c=1idOMW55F9yEn4yaEWR" alt="" loading="lazy" onerror="this.style.display='none'">Midjourney <a href="https://www.midjourney.com" rel="noopener">→</a></div>
+    <div class="desc">AI image generator with a --sref (style reference) flag that applies the visual style of an uploaded image to new generations.</div>
+    <div class="sw">Strengths: --sref flag directly transfers color palette, texture, and mood from your character art to new images · Adjustable style weight (--sw) gives you control over how strongly the reference applies</div>
+    <div class="sw">Limitations: No meaningful free tier, all generation requires a paid subscription · Commercial rights are stronger on paid plans; free-tier outputs are CC BY-NC-SA, which rules out commercial use</div>
+  </div><div class="tool-card">
+    <div class="name"><img class="tool-logo" src="https://cdn.brandfetch.io/leonardo.ai?c=1idOMW55F9yEn4yaEWR" alt="" loading="lazy" onerror="this.style.display='none'">Leonardo.Ai <a href="https://leonardo.ai" rel="noopener">→</a></div>
+    <div class="desc">AI image platform with Style Reference, Content Reference, and image-to-image features, all accessible on the free tier with token limits.</div>
+    <div class="sw">Strengths: Style Reference and image-to-image available without a paid plan (check current token limits) · Separate Content Reference feature for matching shapes and structure, not just visual style</div>
+    <div class="sw">Limitations: Custom model training (LoRA) for deeper style consistency is a paid feature · Free-tier generations are public and Leonardo retains ownership, not ideal for commercial projects</div>
+  </div><div class="tool-card">
+    <div class="name"><img class="tool-logo" src="https://cdn.brandfetch.io/firefly.adobe.com?c=1idOMW55F9yEn4yaEWR" alt="" loading="lazy" onerror="this.style.display='none'">Adobe Firefly <a href="https://firefly.adobe.com" rel="noopener">→</a></div>
+    <div class="desc">Adobe's image generator with Generative Match for style transfer and Structure Reference for composition matching.</div>
+    <div class="sw">Strengths: Trained on licensed content; paid Creative Cloud subscribers get IP indemnification for commercial use · Style and Structure Reference work together, so you can match both look and layout</div>
+    <div class="sw">Limitations: Free-tier access to Generative Match is not clearly documented, verify on Adobe's pricing page · Indemnification doesn't cover free-tier users or beta features</div>
+  </div>
+      <div class="prompts-block">
+    <div class="prompts-label">PROMPTS TO TRY</div>
+    
+      <div class="prompt-card">
+        <div class="prompt-label">Forest background matching a pixel-art character style</div>
+        <div class="prompt-row">
+          <code class="prompt-text">side-scrolling forest background, ancient trees, dappled light, pixel art style, warm earthy color palette, no characters, game environment, seamless horizontal composition --sref [YOUR_CHARACTER_IMAGE_URL] --sw 120</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="side-scrolling forest background, ancient trees, dappled light, pixel art style, warm earthy color palette, no characters, game environment, seamless horizontal composition --sref [YOUR_CHARACTER_IMAGE_URL] --sw 120" type="button">Copy</button>
+        </div>
+      </div>
+      <div class="prompt-card">
+        <div class="prompt-label">Dungeon background matching an existing hand-drawn style</div>
+        <div class="prompt-row">
+          <code class="prompt-text">dungeon interior background, stone walls, torchlight, hand-drawn illustration style, muted desaturated colors, side-scrolling game scene, no UI elements, no characters --sref [YOUR_CHARACTER_IMAGE_URL] --sw 100</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="dungeon interior background, stone walls, torchlight, hand-drawn illustration style, muted desaturated colors, side-scrolling game scene, no UI elements, no characters --sref [YOUR_CHARACTER_IMAGE_URL] --sw 100" type="button">Copy</button>
+        </div>
+      </div>
+  </div>
+    </div>
+<div class="section-block">
+      <h2>Making tilesets that actually tile, and dropping them into your game</h2>
+      <p>Here's the thing about tilesets that catches almost everyone: AI-generated tiles usually don't tile cleanly out of the box. The seams show. You'll see it immediately the first time you place them in Phaser or PixiJS.</p>
+<p>The cleanest path to seamless tiles depends on which tool you're using:</p>
+<ul><li><b>Stable Diffusion (AUTOMATIC1111)</b> has a built-in Tiling checkbox in the img2img and txt2img panels, this is documented in third-party guides rather than AUTOMATIC1111's own docs, so if you can't find it exactly where described, poke around a bit. Enable it, then add words like &quot;seamless texture, symmetrical pattern&quot; to your prompt. Even with this on, seams can appear, it helps a lot, but it's not perfect.</li><li>For anything else, you'll need a quick manual fix. The standard workflow: generate your tile, then open it in <b>Aseprite</b> (use tile mode) or <b>Photoshop</b> (Filter &gt; Other &gt; Offset, shift by half the tile's width and height). That moves the seams to the center of the image where you can paint over them. <b>GIMP</b> has a GEGL seamless blend that does something similar automatically.</li></ul>
+<p>A couple of things worth knowing before you start:</p>
+<p>Organic textures, grass, dirt, sand, water, lava, are forgiving and usually only need minor fixes. Structured surfaces like brick walls or cobblestone are much harder, and directional tiles (roads, rivers) are genuinely tricky even for experienced artists. Start with the organic stuff.</p>
+<p>Also: bigger tiles are easier. A 64×64 tile has enough edge pixels to smooth out seams. A 16×16 tile is a much harder problem, there's almost no room to work with.</p>
+<p>One thing to flag from the research: game &quot;tiles&quot; (distinct assets placed in combinations) and the ML concept of &quot;tiles&quot; (slices of a larger image) mean different things to AI tools. If you're generating a tileset and the results look like slices of one image rather than individual reusable pieces, that's why. Prompt for &quot;individual seamless ground tile&quot; rather than &quot;tileset&quot; to get closer to what you actually need.</p>
+<p><b>Dropping it into your game:</b> browser game frameworks like Phaser expect either a single background image or a tilemap with individual tile images. PNG is the safest format for both, wide support, lossless, handles transparency. Your engine's own docs will tell you what resolution to target; there's no universal answer, and the specifics vary enough that guessing here would just send you in the wrong direction.</p>
+<p>Before you publish anything: the commercial rights situation for your backgrounds follows the same plan-level rules as your character art from Part 2. Midjourney's commercial use terms vary by subscription tier, check their current terms of service directly, since the details aren't something to rely on a third-party summary for. Adobe Firefly's IP indemnification covers paid Creative Cloud subscribers, not free accounts. Leonardo.Ai's official policy says free-tier users can use outputs commercially, but your generations are public and other users may also be able to use them, so read their terms carefully and decide whether that arrangement works for what you're building before you publish.</p>
+      
+      <div class="img-block"><img src="/guides/agent-1784869911789-82ktly-img4.jpg" alt="Left half shows an AI-generated forest tile with a visible seam and its ugly 2×2 repeat; right half shows the same tile after seam correction with a clean seamless 2×2 repeat." loading="lazy"><div class="img-caption">AI-generated tilesets almost always need post-processing — Aseprite's tile mode or Photoshop's Offset filter lets you see and fix seams before your tiles go into Phaser or PixiJS.</div></div>
+      
+      <div class="prompts-block">
+    <div class="prompts-label">PROMPTS TO TRY</div>
+    
+      <div class="prompt-card">
+        <div class="prompt-label">Seamless grass tile for a top-down or side-scrolling game</div>
+        <div class="prompt-row">
+          <code class="prompt-text">seamless tileable grass texture, individual ground tile, top-down view, organic variation, pixel art style, no seams, 64x64, game asset, flat lighting</code>
+          <button class="prompt-copy" onclick="copyPrompt(this)" data-prompt="seamless tileable grass texture, individual ground tile, top-down view, organic variation, pixel art style, no seams, 64x64, game asset, flat lighting" type="button">Copy</button>
+        </div>
+      </div>
+  </div>
+    </div>
+    <p>The style reference workflow is genuinely the unlock here, once you're feeding your character art back into the generator as a reference, the gap between &quot;characters&quot; and &quot;backgrounds&quot; gets a lot smaller. The tileset step takes a little patience the first time, but the Offset-and-paint approach is fast once you've done it once. No hands-on testing was done for this guide; everything here is sourced from official docs and independent walkthroughs, so your mileage may vary slightly depending on current feature availability. Part 4 will cover animation and sprite sheets.</p>
+  </article>
+  
+  <div class="takeaways"><div class="label">KEY TAKEAWAYS</div><ul><li>Use your existing character art as a style reference (--sref in Midjourney, Style Reference in Leonardo.Ai or Firefly) so backgrounds and characters look like they belong together</li><li>AI tilesets often don't tile cleanly without a quick fix, use Aseprite's tile mode or Photoshop's Offset filter to move seams to the center and paint them out (Stable Diffusion's built-in Tiling checkbox, documented in community guides, helps but isn't perfect either)</li><li>Commercial rights for backgrounds follow the same plan-level rules as your character art, check each platform's current terms directly before you publish, since the details shift and third-party summaries aren't always current</li></ul></div>
+  <div class="related-guides">
+        <div class="label">RELATED GUIDES</div>
+        <div class="related-grid">
+          <a class="related-card" href="how-to-make-midjourney-images-look-less-like-ai-art.html">
+            <div class="related-title">How to Make Midjourney Images Look Less Like AI Art</div>
+            <div class="related-dek">The prompt choices that cut down on glossy skin, clutter, and the overly polished AI look.</div>
+          </a>
+          <a class="related-card" href="20-midjourney-prompts-for-cinematic-images-that-dont-look-generic.html">
+            <div class="related-title">20 Midjourney Prompts for Cinematic Images That Do Not Look Generic</div>
+            <div class="related-dek">Built around lighting, lens choice, and atmosphere, not just the word cinematic.</div>
+          </a>
+          <a class="related-card" href="how-to-write-better-midjourney-prompts-from-basic-idea-to-finished-image.html">
+            <div class="related-title">How to Write Better Midjourney Prompts: From Basic Idea to Finished Image</div>
+            <div class="related-dek">Prompt structure, parameters, and the iteration habit that actually improves results.</div>
+          </a>
+          <a class="related-card" href="12-chatgpt-prompts-for-professional-product-photography-without-a-studio.html">
+            <div class="related-title">12 ChatGPT Prompts for Professional Product Photography Without a Studio</div>
+            <div class="related-dek">Clean ecommerce shots, lifestyle scenes, and premium ad images, no photographer required.</div>
+          </a>
+          <a class="related-card" href="how-to-keep-characters-consistent-in-chatgpt-image-generation.html">
+            <div class="related-title">How to Keep Characters Consistent in ChatGPT Image Generation</div>
+            <div class="related-dek">Keep the same face, outfit, and style across a whole set of images.</div>
+          </a>
+          <a class="related-card" href="15-chatgpt-image-prompts-for-scroll-stopping-social-media-posts.html">
+            <div class="related-title">15 ChatGPT Image Prompts for Scroll-Stopping Social Media Posts</div>
+            <div class="related-dek">Ready-to-use prompts for product shots, announcements, carousels, and branded graphics.</div>
+          </a>
+        </div>
+      </div>
+  <div class="subscribe-block" id="subscribe">
+    <h3>Enjoyed this? Get the next one.</h3>
+    <p>One email, 6am daily. What changed in your creative stack, nothing else.</p>
+    <form class="sub-form" id="subForm" data-buttondown="">
+      <input type="email" id="subEmail" name="email" placeholder="you@work.com" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="sub-ok" id="subOk">✓ You're on the list.</div>
+  </div>
+  <details class="sources"><summary>Sources (10)</summary><ul><li>Style Reference – Midjourney Official Docs — Midjourney<br><span class="pub">official docs · primary source · <a href="https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference" rel="noopener">source</a></span></li><li>How to Use Leonardo.Ai's Style Reference Feature — Leonardo.Ai (official learn portal)<br><span class="pub">official docs · primary source · <a href="https://leonardo.ai/learn/core-feature/how-to-use-leonardo-ais-style-reference-feature" rel="noopener">source</a></span></li><li>Style Reference Images in Adobe Firefly — Adobe (official help documentation)<br><span class="pub">official docs · primary source · <a href="https://helpx.adobe.com/firefly/web/generate-images-with-text-to-image/customize-generated-images/reference-images-for-styling.html" rel="noopener">source</a></span></li><li>Stable Diffusion Tiling Guide | How to Generate Seamless Textures — Aiarty<br><span class="pub">independent reporting · primary source · <a href="https://www.aiarty.com/stable-diffusion-guide/stable-diffusion-tiling.htm" rel="noopener">source</a></span></li><li>Tiled Diffusion – CVPR 2025 (official paper/project page) — CVPR 2025 / Reichman University<br><span class="pub">independent reporting · <a href="https://madaror.github.io/tiled-diffusion.github.io/" rel="noopener">source</a></span></li><li>Generating Tilesets with Stable Diffusion — BorisTheBrave.Com (independent game dev blog)<br><span class="pub">independent review · <a href="https://www.boristhebrave.com/2025/02/04/generating-tilesets-with-stable-diffusion/" rel="noopener">source</a></span></li><li>Pixel Art Tiles That Don't Look Terrible (2026 Guide) | Sprite-AI — Sprite-AI<br><span class="pub">independent review · <a href="https://www.sprite-ai.art/blog/seamless-pixel-art-tiles" rel="noopener">source</a></span></li><li>AI Game Art Generator: Sprites, Textures &amp; More | Apatero — Apatero<br><span class="pub">independent review · <a href="https://www.apatero.com/blog/ai-game-art-generator-sprites-textures-2026" rel="noopener">source</a></span></li><li>Can You Use AI-Generated Images Commercially? | Leonardo.Ai — Leonardo.Ai (official company page)<br><span class="pub">platform policy · primary source · <a href="https://leonardo.ai/news/can-you-use-ai-generated-images-commercially" rel="noopener">source</a></span></li><li>Adobe Firefly vs Midjourney 2026 / AI Art Commercial Rights Comparison — pxz.ai / tensoria.fr / xpiksapp.com (cross-referenced independent reporting)<br><span class="pub">independent reporting · <a href="https://pxz.ai/blog/adobe-firefly-vs-midjourney-2026" rel="noopener">source</a></span></li></ul></details>
+
+  <div class="foot-note">Last reviewed July 24, 2026. Have a correction? <a href="mailto:hello@dailyblip.ai">Tell us</a>.</div>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+function copyPrompt(btn){
+  const text = btn.dataset.prompt;
+  const showCopied = () => {
+    const original = btn.textContent;
+    btn.textContent = "Copied!";
+    btn.classList.add("copied");
+    setTimeout(() => { btn.textContent = original; btn.classList.remove("copied"); }, 1800);
+  };
+  if (navigator.clipboard?.writeText) {
+    navigator.clipboard.writeText(text).then(showCopied).catch(() => { btn.textContent = "Copy failed — select manually"; });
+  } else {
+    // Fallback for contexts without the Clipboard API (older browsers,
+    // non-HTTPS) -- selects the text so the person can copy it manually
+    // with their own keyboard shortcut instead of failing silently.
+    const range = document.createRange();
+    const codeEl = btn.previousElementSibling;
+    if (codeEl) {
+      range.selectNodeContents(codeEl);
+      const sel = window.getSelection();
+      sel.removeAllRanges();
+      sel.addRange(range);
+    }
+    btn.textContent = "Selected — press Ctrl/Cmd+C";
+  }
+}
+$("#subForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const email = $("#subEmail").value;
+  if (!email || !email.includes("@")) return;
+  const user = $("#subForm").dataset.buttondown;
+  if (user) {
+    try {
+      await fetch(`https://buttondown.com/api/emails/embed-subscribe/${user}`, {
+        method: "POST", mode: "no-cors",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ email }),
+      });
+    } catch {}
+  }
+  $("#subForm").style.display = "none";
+  $("#subOk").style.display = "block";
+});
+</script>
+</body></html>
