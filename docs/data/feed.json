@@ -1,66 +1,66 @@
 {
-  "issue": 253,
-  "generated_at": "2026-07-23T23:44:17.932Z",
+  "issue": 254,
+  "generated_at": "2026-07-24T03:59:54.715Z",
   "brief": {
     "items": [
       {
-        "story": "s_4e9820704ada1498",
-        "html": "3ds Max 2027.2 lets you <b>import, render, and edit Gaussian Splats natively</b> via Point modifiers — update your pipeline if Gaussian capture is in your workflow.",
+        "story": "s_00359069d44fdf51",
+        "html": "Runway's new <b>Media Router automatically picks the best image, video, or audio model</b> for your quality, speed, or cost priority — a first for generative media pipelines.",
         "secs": 10,
+        "impact": 9,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_77885ca812d6bc37",
+        "html": "Claude voice now runs on <b>Opus and Sonnet with Canva and Gmail integration</b> — useful for drafting briefs, creative direction, and long brainstorming sessions.",
+        "secs": 9,
         "impact": 8,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_45ad686cbb592c4f",
-        "html": "V-Ray's major update <b>solves Gaussian Splat relighting</b>, removing the biggest production blocker for using splat captures in lit CG scenes.",
+        "story": "s_7e61ca37fbbd0ef1",
+        "html": "Elon Musk says <b>Grok will produce a full-length AI-generated Odyssey film by year-end</b>, the most high-profile bet yet on long-form AI video.",
         "secs": 9,
-        "impact": 8,
+        "impact": 7,
         "hardware": false,
         "tracking": false,
         "commentary": false
       },
       {
-        "story": "s_085548e5aa000238",
-        "html": "Google Gemini hit <b>950 million monthly users in Q2 2026</b>, nearly tripling in a year and closing fast on ChatGPT's 1B milestone.",
-        "secs": 9,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_01d83a6818a93909",
-        "html": "Bipartisan lawmakers are drafting a bill giving DHS an <b>AI kill-switch power</b> to shut down or throttle any AI system on demand.",
-        "secs": 9,
-        "impact": 6,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_9ae095cbc6ee0617",
-        "html": "Apple is suing OpenAI alleging <b>ex-employees stole confidential trade secrets</b> during hiring interviews, raising new IP risks around AI-company recruitment.",
+        "story": "s_b4d4584e10a95e95",
+        "html": "AMD's <b>Helios rack-scale AI system ships later in 2026</b>, giving hosted creative platforms like Runway a second inference option that could pressure Nvidia-dependent pricing.",
         "secs": 10,
-        "impact": 5,
-        "hardware": false,
-        "tracking": false,
-        "commentary": false
-      },
-      {
-        "story": "s_d9ffdf3634eb5912",
-        "html": "Etched's inference-chip startup hit a <b>$10.3B valuation on $1B in pre-booked orders</b> — dedicated inference silicon racing to market could meaningfully cut image and video generation costs within years.",
-        "secs": 11,
-        "impact": 5,
+        "impact": 6,
         "hardware": true,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_3cafe2ee039e8f59",
+        "html": "Google posted its <b>first negative cash flow quarter despite $119.8B in revenue</b>, showing how hard it's betting on the AI infrastructure that powers creator tools.",
+        "secs": 10,
+        "impact": 6,
+        "hardware": false,
+        "tracking": false,
+        "commentary": false
+      },
+      {
+        "story": "s_2568e67aa59be85d",
+        "html": "An industry report warns <b>competitive pressure is pushing risky AI training shortcuts</b> that could make the creative models you rely on less predictable and less safe.",
+        "secs": 9,
+        "impact": 5,
+        "hardware": false,
         "tracking": false,
         "commentary": false
       }
     ],
-    "title": "Thursday, July 23 — six things creators need to know",
-    "date": "2026-07-23T17:04:35.716Z",
-    "edition": "am"
+    "title": "Thursday, July 23 — six things that changed today",
+    "date": "2026-07-24T03:59:54.641Z",
+    "edition": "pm"
   },
   "stories": [
     {
