@@ -1785,7 +1785,7 @@
   {
     "id": "agent-1784869911789-82ktly",
     "status": "queued",
-    "stage": "Researching",
+    "stage": "Drafting",
     "created_at": "2026-07-24T05:11:51.790Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
@@ -1822,6 +1822,164 @@
       ],
       "research_plan": "Prioritize official documentation and feature pages for the AI image tools most likely used in Part 2 of this series (Midjourney, Leonardo.ai, Adobe Firefly, Stable Diffusion via Automatic1111 or ComfyUI) — specifically looking for style-reference, image-to-image, and seamless/tileable generation capabilities. Check community resources like Reddit (r/StableDiffusion, r/midjourney) and YouTube tutorials for practical workflows beginners actually use to match art styles across assets. Look for any game dev-specific guides on integrating AI art into Phaser or similar browser game frameworks. For the tileset section, prioritize sources that show what post-processing is actually needed (and in what tools) to make AI output tile cleanly. Avoid content farms and listicles — favor hands-on walkthroughs and official feature announcements."
     },
-    "updated_at": "2026-07-24T05:12:08.639Z"
+    "updated_at": "2026-07-24T05:13:39.212Z",
+    "sources": [
+      {
+        "title": "Style Reference – Midjourney Official Docs",
+        "publisher": "Midjourney",
+        "url": "https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Midjourney supports style-reference (--sref) workflows: you supply an image URL after --sref and Midjourney applies that image's visual style, colors, textures, lighting, and mood to new generations",
+          "The --sref parameter works with Midjourney V6+ and Niji V6 models; multiple style versions are selectable via --sv",
+          "Stylization strength is adjustable via --sw (0–1000, default 100)",
+          "Style references capture overall mood, colors, textures, and medium — not the actual objects or subjects of the reference image"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "How to Use Leonardo.Ai's Style Reference Feature",
+        "publisher": "Leonardo.Ai (official learn portal)",
+        "url": "https://leonardo.ai/learn/core-feature/how-to-use-leonardo-ais-style-reference-feature",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Leonardo.Ai has a dedicated Style Reference feature for transferring visual style from an uploaded image to new generations",
+          "Leonardo.Ai also offers a separate Content Reference feature for transferring shapes and structures from one image to another",
+          "Leonardo.Ai supports image-to-image prompting alongside style and character reference features"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Style Reference Images in Adobe Firefly",
+        "publisher": "Adobe (official help documentation)",
+        "url": "https://helpx.adobe.com/firefly/web/generate-images-with-text-to-image/customize-generated-images/reference-images-for-styling.html",
+        "source_type": "official docs",
+        "is_primary": true,
+        "claims_supported": [
+          "Adobe Firefly supports uploading your own image as a style reference in its Text to Image module, under the Styles > Reference section",
+          "Firefly's Generative Match (also called Style Match) feature lets you upload a style reference image — including other AI-generated art — and Firefly will apply that look to new generations",
+          "Style reference categories in Firefly include 3D, Landscapes, Lighting Effects, Texture, and more",
+          "Adobe Firefly also supports a Structure Reference (Structure Match) feature that matches image composition/depth from a reference, separate from style matching"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Stable Diffusion Tiling Guide | How to Generate Seamless Textures",
+        "publisher": "Aiarty",
+        "url": "https://www.aiarty.com/stable-diffusion-guide/stable-diffusion-tiling.htm",
+        "source_type": "independent reporting",
+        "is_primary": true,
+        "claims_supported": [
+          "Stable Diffusion has a built-in 'Tiling' checkbox (available in AUTOMATIC1111) that forces the AI to generate images that seamlessly repeat across horizontal and vertical edges",
+          "ControlNet Tile is a separate guidance tool that controls layout/structure but does not inherently produce seamless tileable textures unless combined with the Tiling setting",
+          "ControlNet's Depth and Canny edge models can guide the AI to follow a specific structural pattern for texture generation",
+          "Even with tiling enabled, seams can appear; higher resolutions and structured prompts like 'symmetrical' or 'even pattern' are recommended to reduce artifacts"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Tiled Diffusion – CVPR 2025 (official paper/project page)",
+        "publisher": "CVPR 2025 / Reichman University",
+        "url": "https://madaror.github.io/tiled-diffusion.github.io/",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "A peer-reviewed research method called Tiled Diffusion (accepted at CVPR 2025) generates seamlessly tileable images directly using diffusion models including Stable Diffusion XL, SD3, and ControlNet",
+          "Tiled Diffusion supports self-tiling, one-to-one, and many-to-many tiling scenarios — the many-to-many capability is unique to this method among compared approaches",
+          "The method supports texture creation, video game assets, and 360° panorama synthesis",
+          "The approach enforces tiling constraints throughout the diffusion process rather than as a post-processing step"
+        ],
+        "claim_type": "verified fact",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Generating Tilesets with Stable Diffusion",
+        "publisher": "BorisTheBrave.Com (independent game dev blog)",
+        "url": "https://www.boristhebrave.com/2025/02/04/generating-tilesets-with-stable-diffusion/",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Ensuring AI-generated tiles are actually seamless with each other (not just internally tileable) is a non-trivial additional step beyond basic tiling generation",
+          "Gamedev 'tiles' (distinct images placed adjacently in combinations) are a different concept from the ML-world 'tiles' (slices of a larger image), and AI tools conflate these",
+          "Wrapping/circular padding approaches can be used to bootstrap seamless edges in tileset generation pipelines"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Pixel Art Tiles That Don't Look Terrible (2026 Guide) | Sprite-AI",
+        "publisher": "Sprite-AI",
+        "url": "https://www.sprite-ai.art/blog/seamless-pixel-art-tiles",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "AI-generated tilesets do not tile cleanly out of the box in most cases and require post-processing; organic/noisy textures (grass, dirt, sand, lava, water) get the best results and may only need minor fixes",
+          "The standard manual fix workflow in Aseprite and Photoshop involves offsetting the tile by half its width and height (Aseprite 'tile mode'; Photoshop: Filter > Other > Offset) so seams appear in the center and can be painted over",
+          "GIMP's GEGL seamless blend algorithm can also be applied to fix tile edges",
+          "Directional tiles (roads, rivers) and highly structured surfaces are much harder to make seamless with AI generation",
+          "Bigger tiles (e.g., 64×64) are easier to make seamless than smaller ones (e.g., 16×16) because there are more edge pixels to work with"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "AI Game Art Generator: Sprites, Textures & More | Apatero",
+        "publisher": "Apatero",
+        "url": "https://www.apatero.com/blog/ai-game-art-generator-sprites-textures-2026",
+        "source_type": "independent review",
+        "is_primary": false,
+        "claims_supported": [
+          "Seamless textures require either a tiling-aware workflow (e.g., ComfyUI custom nodes) or manual post-processing in tools like GIMP, Aseprite, or LibreSprite",
+          "AI-generated assets generally need cleanup, palette reduction, and format adaptation before they are game-ready",
+          "Texture generation is considered the strongest AI use case for game assets because requirements are more forgiving than character sprites (no specific pose/expression needed)",
+          "Post-processing time for AI-generated sprites/textures is estimated at roughly 2–5 minutes per asset vs. 30–60 minutes to draw from scratch (editorial/user estimate)"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Can You Use AI-Generated Images Commercially? | Leonardo.Ai",
+        "publisher": "Leonardo.Ai (official company page)",
+        "url": "https://leonardo.ai/news/can-you-use-ai-generated-images-commercially",
+        "source_type": "platform policy",
+        "is_primary": true,
+        "claims_supported": [
+          "Leonardo.Ai free-tier users can use generated images commercially, but generated assets are public and Leonardo.Ai retains ownership; other users may also see and use them",
+          "Leonardo.Ai custom model training (LoRA fine-tuning) — which enables style-consistent generation from a set of 10–20 reference images — is a paid-tier feature (Artisan plan and above)",
+          "Free-tier Leonardo.Ai generations lack private generation and custom model training; the style reference and image-to-image features are available on free tier but with token limits"
+        ],
+        "claim_type": "company claim",
+        "accessed_date": "2026-07-24"
+      },
+      {
+        "title": "Adobe Firefly vs Midjourney 2026 / AI Art Commercial Rights Comparison",
+        "publisher": "pxz.ai / tensoria.fr / xpiksapp.com (cross-referenced independent reporting)",
+        "url": "https://pxz.ai/blog/adobe-firefly-vs-midjourney-2026",
+        "source_type": "independent reporting",
+        "is_primary": false,
+        "claims_supported": [
+          "Adobe Firefly is trained on Adobe Stock licensed imagery, openly licensed content, and public domain material, and Adobe offers IP indemnification for commercial use to paying subscribers (Creative Cloud / Firefly Premium); indemnification does not cover beta features or free-tier users",
+          "Midjourney's Terms of Service (updated 2025–2026) state that paid subscribers own their generated outputs; free users' creations are licensed under CC BY-NC-SA 4.0, making them unsuitable for commercial resale",
+          "Midjourney does not disclose its training data and faces ongoing lawsuits from artists; its commercial legal protections are generally considered weaker than Firefly's, though millions of users generate commercial content daily",
+          "Stable Diffusion (open source, self-hosted) does not offer any indemnification or ownership guarantees; commercial rights depend on the specific model weights and their licenses",
+          "Most platforms grant a license to use outputs per their terms — not always full copyright assignment; copyright for AI art remains legally unsettled by jurisdiction"
+        ],
+        "claim_type": "independent observation",
+        "accessed_date": "2026-07-24"
+      }
+    ],
+    "unverifiable_claims": [
+      "Specific free-tier feature availability for image-to-image and style-reference on Leonardo.Ai (token limits and gated features change frequently; official pricing/feature pages should be checked at time of publication)",
+      "Specific file format recommendations (e.g., PNG vs. WebP) and exact pixel resolutions best suited for browser game backgrounds and tilesets — no authoritative, current source was found; this is usually engine-specific (Phaser, PixiJS, etc.) and the writer should verify against the target engine's documentation",
+      "Whether Midjourney's --sref or image-to-image is accessible on the free/basic tier — Midjourney has no meaningful free tier as of 2025; all generation requires a paid subscription, making the 'free tier' angle moot for Midjourney specifically",
+      "Whether Adobe Firefly's Generative Match / Style Reference is available on the free Adobe account tier or requires a paid Creative Cloud plan — the official docs do not clearly gate this feature by tier; the writer should verify on Adobe's current pricing page",
+      "Exact claim that AI tilesets 'tile cleanly out of the box' — research consistently contradicts this for most tools; the claim should be framed as requiring post-processing in almost all cases except dedicated tiling-aware pipelines"
+    ]
   }
 ]
