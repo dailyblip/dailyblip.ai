@@ -1785,7 +1785,7 @@
   {
     "id": "agent-1784869911789-82ktly",
     "status": "queued",
-    "stage": "Fact-checking",
+    "stage": "Generating images",
     "created_at": "2026-07-24T05:11:51.790Z",
     "submitted": {
       "idea": "Building a Browser Game With AI: Part 3 -- Environment and Background Art",
@@ -1822,7 +1822,7 @@
       ],
       "research_plan": "Prioritize official documentation and feature pages for the AI image tools most likely used in Part 2 of this series (Midjourney, Leonardo.ai, Adobe Firefly, Stable Diffusion via Automatic1111 or ComfyUI) — specifically looking for style-reference, image-to-image, and seamless/tileable generation capabilities. Check community resources like Reddit (r/StableDiffusion, r/midjourney) and YouTube tutorials for practical workflows beginners actually use to match art styles across assets. Look for any game dev-specific guides on integrating AI art into Phaser or similar browser game frameworks. For the tileset section, prioritize sources that show what post-processing is actually needed (and in what tools) to make AI output tile cleanly. Avoid content farms and listicles — favor hands-on walkthroughs and official feature announcements."
     },
-    "updated_at": "2026-07-24T05:14:43.385Z",
+    "updated_at": "2026-07-24T05:16:06.228Z",
     "sources": [
       {
         "title": "Style Reference – Midjourney Official Docs",
@@ -2001,7 +2001,7 @@
         {
           "id": "s1",
           "heading": "Getting your backgrounds to look like they belong in the same game",
-          "body_markdown": "The reason backgrounds feel harder isn't technical — it's that you're now generating assets that have to *relate* to something that already exists. A character you made in isolation can look however it wants. A forest background has to feel like it lives in the same world as that character.\n\nThe fix is style reference. Every major tool supports some version of this:\n\n- **Midjourney** has `--sref` (style reference). You paste the URL of your existing character art after that flag, and Midjourney pulls the colors, textures, lighting, and mood from it — not the subject, just the visual feel. You can push or pull how strongly it applies with `--sw` (0 to 1000, default 100). This is probably the most direct route if you're already a Midjourney subscriber.\n- **Leonardo.Ai** has a dedicated Style Reference upload in its image generation panel, plus a separate Content Reference option if you want to match structure instead of just vibe. Image-to-image is also available. Style reference and image-to-image are accessible on the free tier, though token limits apply — check their current feature page before you count on it.\n- **Adobe Firefly** calls it Generative Match (or Style Reference) — you upload your character art under Styles > Reference and it applies that look to new text-to-image generations. Firefly also has a Structure Reference if you want to control composition. Whether this is available on a free Adobe account vs. a paid Creative Cloud plan isn't clearly documented, so verify that on Adobe's pricing page before you rely on it.\n\nFor any of these, the workflow is the same: open the tool you used in Part 2, upload or link your character sprite, and use it as a style reference when generating your first background scene. Start with a single establishing shot — something like the main environment your character will move through — before you worry about tilesets.\n\nA useful prompt structure to get started:",
+          "body_markdown": "The reason backgrounds feel harder isn't technical — it's that you're now generating assets that have to *relate* to something that already exists. A character you made in isolation can look however it wants. A forest background has to feel like it lives in the same world as that character.\n\nThe fix is style reference. Every major tool supports some version of this:\n\n- **Midjourney** has `--sref` (style reference). You paste the URL of your existing character art after that flag, and Midjourney pulls the colors, textures, lighting, and mood from it — not the subject, just the visual feel. You can push or pull how strongly it applies with `--sw` (range 0 to 1000, default 100 — though double-check that this holds for whatever model version you're on, since Midjourney docs note it across V6+ and Niji V6 but things shift). This is probably the most direct route if you're already a Midjourney subscriber.\n- **Leonardo.Ai** has a dedicated Style Reference upload in its image generation panel, plus a separate Content Reference option if you want to match structure instead of just vibe. Image-to-image is also available. Style reference and image-to-image are accessible on the free tier, though token limits apply — check their current feature page before you count on it.\n- **Adobe Firefly** has a Style Reference option — you upload your character art under Styles > Reference and it applies that look to new text-to-image generations. (You may also see it referred to as Generative Match depending on which version of the UI you're in — if you can't find it by one name, try the other.) Firefly also has a Structure Reference if you want to control composition. Whether this is available on a free Adobe account vs. a paid Creative Cloud plan isn't clearly documented, so verify that on Adobe's pricing page before you rely on it.\n\nFor any of these, the workflow is the same: open the tool you used in Part 2, upload or link your character sprite, and use it as a style reference when generating your first background scene. Start with a single establishing shot — something like the main environment your character will move through — before you worry about tilesets.\n\nA useful prompt structure to get started:",
           "tools": [
             {
               "name": "Midjourney",
@@ -2057,7 +2057,7 @@
         {
           "id": "s2",
           "heading": "Making tilesets that actually tile — and dropping them into your game",
-          "body_markdown": "Here's the thing about tilesets that catches almost everyone: AI-generated tiles do not tile cleanly out of the box. The seams show. You'll see it immediately the first time you place them in Phaser or PixiJS.\n\nThe cleanest path to seamless tiles depends on which tool you're using:\n\n- **Stable Diffusion (AUTOMATIC1111)** has a built-in Tiling checkbox in the img2img and txt2img panels. Enable it, then add words like \"seamless texture, symmetrical pattern\" to your prompt. Even with this on, seams can appear — it helps a lot, but it's not perfect.\n- For anything else, you'll need a quick manual fix. The standard workflow: generate your tile, then open it in **Aseprite** (use tile mode) or **Photoshop** (Filter > Other > Offset, shift by half the tile's width and height). That moves the seams to the center of the image where you can paint over them. **GIMP** has a GEGL seamless blend that does something similar automatically.\n\nA couple of things worth knowing before you start:\n\nOrganic textures — grass, dirt, sand, water, lava — are forgiving and usually only need minor fixes. Structured surfaces like brick walls or cobblestone are much harder, and directional tiles (roads, rivers) are genuinely tricky even for experienced artists. Start with the organic stuff.\n\nAlso: bigger tiles are easier. A 64×64 tile has enough edge pixels to smooth out seams. A 16×16 tile is a much harder problem — there's almost no room to work with.\n\nOne thing to flag from the research: game \"tiles\" (distinct assets placed in combinations) and the ML concept of \"tiles\" (slices of a larger image) mean different things to AI tools. If you're generating a tileset and the results look like slices of one image rather than individual reusable pieces, that's why. Prompt for \"individual seamless ground tile\" rather than \"tileset\" to get closer to what you actually need.\n\n**Dropping it into your game:** browser game frameworks like Phaser expect either a single background image or a tilemap with individual tile images. PNG is the safest format for both — wide support, lossless, handles transparency. Your engine's own docs will tell you what resolution to target; there's no universal answer, and the specifics vary enough that guessing here would just send you in the wrong direction.\n\nBefore you publish anything: the commercial rights situation for your backgrounds is the same as it was for your characters in Part 2 — it depends on which tool and which plan. Leonardo.Ai free tier allows commercial use but outputs are public. Midjourney free tier does not allow commercial use (CC BY-NC-SA). Adobe Firefly's IP indemnification covers paid Creative Cloud subscribers, not free accounts. Same tool, same plan, same rules — nothing changes just because you're generating a background instead of a character.",
+          "body_markdown": "Here's the thing about tilesets that catches almost everyone: AI-generated tiles usually don't tile cleanly out of the box. The seams show. You'll see it immediately the first time you place them in Phaser or PixiJS.\n\nThe cleanest path to seamless tiles depends on which tool you're using:\n\n- **Stable Diffusion (AUTOMATIC1111)** reportedly has a built-in Tiling checkbox in the img2img and txt2img panels — heads up, that's sourced from third-party guides rather than AUTOMATIC1111's own docs, so navigate around a bit if you can't find it exactly where described. Enable it, then add words like \"seamless texture, symmetrical pattern\" to your prompt. Even with this on, seams can appear — it helps a lot, but it's not perfect.\n- For anything else, you'll need a quick manual fix. The standard workflow: generate your tile, then open it in **Aseprite** (use tile mode) or **Photoshop** (Filter > Other > Offset, shift by half the tile's width and height). That moves the seams to the center of the image where you can paint over them. **GIMP** has a GEGL seamless blend that does something similar automatically.\n\nA couple of things worth knowing before you start:\n\nOrganic textures — grass, dirt, sand, water, lava — are forgiving and usually only need minor fixes. Structured surfaces like brick walls or cobblestone are much harder, and directional tiles (roads, rivers) are genuinely tricky even for experienced artists. Start with the organic stuff.\n\nAlso: bigger tiles are easier. A 64×64 tile has enough edge pixels to smooth out seams. A 16×16 tile is a much harder problem — there's almost no room to work with.\n\nOne thing to flag from the research: game \"tiles\" (distinct assets placed in combinations) and the ML concept of \"tiles\" (slices of a larger image) mean different things to AI tools. If you're generating a tileset and the results look like slices of one image rather than individual reusable pieces, that's why. Prompt for \"individual seamless ground tile\" rather than \"tileset\" to get closer to what you actually need.\n\n**Dropping it into your game:** browser game frameworks like Phaser expect either a single background image or a tilemap with individual tile images. PNG is the safest format for both — wide support, lossless, handles transparency. Your engine's own docs will tell you what resolution to target; there's no universal answer, and the specifics vary enough that guessing here would just send you in the wrong direction.\n\nBefore you publish anything: the commercial rights situation for your backgrounds follows the same plan-level rules as your character art from Part 2. Midjourney's free tier restricts commercial use — verify this against their current terms of service since that claim comes from a third-party comparison rather than Midjourney's own documentation. Adobe Firefly's IP indemnification covers paid Creative Cloud subscribers, not free accounts. Leonardo.Ai's official policy says free-tier users can use outputs commercially, but your generations are public and Leonardo retains ownership of them — so read their terms carefully and decide whether that arrangement works for what you're building before you publish.",
           "tools": [],
           "prompts": [
             {
@@ -2069,12 +2069,78 @@
       ],
       "key_takeaways": [
         "Use your existing character art as a style reference (--sref in Midjourney, Style Reference in Leonardo.Ai or Firefly) so backgrounds and characters look like they belong together",
-        "AI tilesets almost never tile cleanly without a quick fix — use Aseprite's tile mode or Photoshop's Offset filter to move seams to the center and paint them out",
-        "Commercial rights for backgrounds follow the same plan-level rules as your character art — check which tier you're on before you publish"
+        "AI tilesets often don't tile cleanly without a quick fix — use Aseprite's tile mode or Photoshop's Offset filter to move seams to the center and paint them out (Stable Diffusion's built-in Tiling checkbox helps but isn't perfect either)",
+        "Commercial rights for backgrounds follow the same plan-level rules as your character art — check which tier you're on and read each platform's current terms before you publish"
       ],
-      "conclusion": "The style reference workflow is genuinely the unlock here — once you're feeding your character art back into the generator as a reference, the gap between \"characters\" and \"backgrounds\" gets a lot smaller. The tileset step takes a little patience the first time, but the Offset-and-paint approach is fast once you've done it once. We didn't test these tools hands-on for this guide; everything here is sourced from official docs and independent walkthroughs, so your mileage may vary slightly depending on current feature availability. Part 4 will cover animation and sprite sheets — that's where things get genuinely interesting.",
+      "conclusion": "The style reference workflow is genuinely the unlock here — once you're feeding your character art back into the generator as a reference, the gap between \"characters\" and \"backgrounds\" gets a lot smaller. The tileset step takes a little patience the first time, but the Offset-and-paint approach is fast once you've done it once. No hands-on testing was done for this guide; everything here is sourced from official docs and independent walkthroughs, so your mileage may vary slightly depending on current feature availability. Part 4 will cover animation and sprite sheets.",
       "methodology_disclosure": "This guide was researched using official documentation from Midjourney, Leonardo.Ai, and Adobe Firefly for style reference and image-to-image feature availability, supplemented by independent game development blogs (BorisTheBrave.Com, Sprite-AI, Apatero) and a peer-reviewed research paper (Tiled Diffusion, CVPR 2025) for tileset generation workflows. Commercial rights claims were cross-referenced against Leonardo.Ai's official commercial use policy and an independent comparison of AI art platform licensing terms. No hands-on testing was conducted by dailyblip for this guide — practical observations about seam artifacts and post-processing needs are drawn from independent community sources, not original experimentation. Readers should verify current feature availability and tier restrictions directly with each platform before committing to a workflow.",
       "last_reviewed_date": "July 24, 2026"
-    }
+    },
+    "fact_check": {
+      "issues": [
+        {
+          "severity": "high",
+          "section_id": "s1",
+          "original_text": "free-tier outputs are CC BY-NC-SA, which rules out commercial use",
+          "issue": "The CC BY-NC-SA claim for Midjourney free-tier outputs is sourced from a third-party comparison, not Midjourney's own ToS — the article itself flags this uncertainty in s2 but states it as fact in the s1 tools table, which is misleading.",
+          "supporting_source_url": "https://pxz.ai/blog/adobe-firefly-vs-midjourney-2026"
+        },
+        {
+          "severity": "high",
+          "section_id": "s1",
+          "original_text": "Leonardo retains ownership — not ideal for commercial projects",
+          "issue": "Leonardo.Ai's official policy states free-tier users CAN use outputs commercially; calling it 'not ideal for commercial projects' without that clarification misrepresents the actual policy and could discourage legitimate commercial use.",
+          "supporting_source_url": "https://leonardo.ai/news/can-you-use-ai-generated-images-commercially"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Midjourney's free tier restricts commercial use — verify this against their current terms",
+          "issue": "The article hedges this claim in s2 but states it as fact in the s1 tools table and key_takeaways, creating internal inconsistency; the sourcing is a third-party blog, not Midjourney's own documentation.",
+          "supporting_source_url": "https://pxz.ai/blog/adobe-firefly-vs-midjourney-2026"
+        },
+        {
+          "severity": "medium",
+          "section_id": "key_takeaways",
+          "original_text": "Commercial rights for backgrounds follow the same plan-level rules as your character art",
+          "issue": "This references Part 2 conclusions that are not visible in this article, making the claim unverifiable in context; it also implicitly validates the unverified CC BY-NC-SA claim for Midjourney free tiers.",
+          "supporting_source_url": ""
+        },
+        {
+          "severity": "medium",
+          "section_id": "s1",
+          "original_text": "free-tier generations are public and Leonardo retains ownership",
+          "issue": "'Leonardo retains ownership' conflicts with Leonardo.Ai's own official policy page, which grants commercial use rights to free-tier users while making generations public — the ownership framing is inaccurate.",
+          "supporting_source_url": "https://leonardo.ai/news/can-you-use-ai-generated-images-commercially"
+        },
+        {
+          "severity": "medium",
+          "section_id": "s2",
+          "original_text": "Stable Diffusion (AUTOMATIC1111) reportedly has a built-in Tiling checkbox",
+          "issue": "The word 'reportedly' and the caveat that this comes from third-party guides rather than AUTOMATIC1111's own docs signals unverified information being presented as a usable workflow step; AUTOMATIC1111's own documentation should be the source.",
+          "supporting_source_url": "https://www.aiarty.com/stable-diffusion-guide/stable-diffusion-tiling.htm"
+        },
+        {
+          "severity": "low",
+          "section_id": "s1",
+          "original_text": "You may also see it referred to as Generative Match depending on which version",
+          "issue": "Adobe's official docs list 'Generative Match' and 'Style Match' as the feature names, not 'Style Reference' as the primary name — the article's naming could confuse users trying to locate the feature in the UI.",
+          "supporting_source_url": "https://helpx.adobe.com/firefly/web/generate-images-with-text-to-image/customize-generated-images/reference-images-for-styling.html"
+        },
+        {
+          "severity": "low",
+          "section_id": "s2",
+          "original_text": "PNG is the safest format for both — wide support, lossless, handles transparency",
+          "issue": "While broadly accurate, recommending PNG without mentioning WebP (which Phaser and PixiJS both support and which offers smaller file sizes) is an oversimplification that may not reflect current best practices for browser games.",
+          "supporting_source_url": ""
+        }
+      ],
+      "checked_at": "2026-07-24T05:16:06.228Z",
+      "revised": true
+    },
+    "warnings": [
+      "s1: The CC BY-NC-SA claim for Midjourney free-tier outputs is sourced from a third-party comparison, not Midjourney's own ToS — the article itself flags this uncertainty in s2 but states it as fact in the s1 tools table, which is misleading.",
+      "s1: Leonardo.Ai's official policy states free-tier users CAN use outputs commercially; calling it 'not ideal for commercial projects' without that clarification misrepresents the actual policy and could discourage legitimate commercial use."
+    ]
   }
 ]
