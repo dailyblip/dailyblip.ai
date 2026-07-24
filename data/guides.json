@@ -1335,5 +1335,26 @@
         "field": "section 2 (The one-page design doc: just enough to keep yourself honest)"
       }
     ]
+  },
+  {
+    "id": "agent-1784867241758-ptztoq",
+    "status": "queued",
+    "stage": "Queued",
+    "created_at": "2026-07-24T04:27:21.759Z",
+    "submitted": {
+      "idea": "Building a Browser Game With AI: Part 2 -- Sprite and Character Asset Generation",
+      "article_type": "Practical guide",
+      "target_length": "Deep dive",
+      "editorial_notes": "turning a design doc into real character and sprite art, keeping a consistent style across many generated assets",
+      "image_count": 2
+    },
+    "agent_topic": {
+      "id": "browser-game-2",
+      "needs_image_comparison": true,
+      "series": "building-a-browser-game-with-ai",
+      "series_part": 2,
+      "series_total": 5,
+      "series_title": "Building a Browser Game With AI"
+    }
   }
 ]
